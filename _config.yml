@@ -1,0 +1,13 @@
+title: SpaceFinder
+email: p.l.edwards@leeds.ac.uk
+description: >-
+  Map-driven application originally developed by
+  the University of Cambridge
+  https://spacefinder.lib.cam.ac.uk/
+baseurl: ""
+url: ""
+google_maps_api_key: ""
+google_analytics: ""
+plugins:
+  - jekyll-feed
+
