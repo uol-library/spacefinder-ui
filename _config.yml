@@ -6,7 +6,7 @@ description: >-
   https://spacefinder.lib.cam.ac.uk/
 baseurl: ""
 url: ""
-google_maps_api_key: "AIzaSyBrAkYSJYjm6k9ultU71meFVsvxWR--97o"
+google_maps_api_key: ""
 google_analytics: ""
 plugins:
   - jekyll-feed
