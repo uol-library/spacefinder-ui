@@ -1,40 +1,10 @@
----
----
 var templates = {
-    list: {
-        url: '{{ "/assets/templates/list-space.html" | absolute_url }}',
-        template: ''
-    },
-    mapSingle: {
-        url: '{{ "/assets/templates/map-single-space.html" | absolute_url }}',
-        template: ''
-    },
-    mapMulti: {
-        url: '{{ "/assets/templates/map-multi-space.html" | absolute_url }}',
-        template: ''
-    },
-    spaceDetail: {
-        url: '{{ "/assets/templates/space-detail.html" | absolute_url }}',
-        template: ''
-    },
-    search: {
-        url: '{{ "/assets/templates/search.html" | absolute_url }}',
-        template: ''
-    },
-    addTip: {
-        url: '{{ "/assets/templates/add-tip.html" | absolute_url }}',
-        template: ''
-    },
-    addTag: {
-        url: '{{ "/assets/templates/add-tag.html" | absolute_url }}',
-        template: ''
-    },
-    spaceTip: {
-        url: '{{ "/assets/templates/space-tip.html" | absolute_url }}',
-        template: ''
-    },
-    login: {
-        url: '{{ "/assets/templates/login.html" | absolute_url }}',
-        template: ''
-    }
+    list: { id: 'list-space', template: ''},
+    mapSingle: { id: 'map-single-space', template: ''},
+    mapMulti: { id: 'map-multi-space', template: ''},
+    spaceDetail: { id: 'space-detail.html', template: ''},
+    search: { id: 'search', template: ''},
+    addTip: { id: 'add-tip', template: ''},
+    addTag: { id: 'add-tag', template: ''},
+    spaceTip: { id: 'space-tip', template: ''}
 };

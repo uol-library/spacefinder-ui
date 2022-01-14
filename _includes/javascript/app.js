@@ -557,7 +557,41 @@ function resetViews() {
     });
 }
 
+function getSpaces(options, callback) {
+    if ( storageAvailable('localStorage') && getWithExpiry('spaces') ) {
+        console.log("getting space data from localstorage");
+        callback(JSON.parse(getWithExpiry('spaces')));
+    } else {
+        var spacesURL = window.location.protocol+'//'+window.location.host+'/spaces.json';
+        console.log("getting data from API at "+spacesURL);
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", function(){
+            if ( storageAvailable('localStorage') ) {
+                var expires = new Date().getTime() + (24*60*60*1000)
+                console.log('storing spaces data - expires '+expires);
+                setWithExpiry('spaces', this.responseText, 24);
+            }
+            callback(JSON.parse(this.responseText));
+        });
+        oReq.open("GET", spacesURL);
+        oReq.send();
+    }
+}
+getSpaces({}, function(data){
+    console.log(data);
+    getSpaces({}, function(data){
+        console.log(data);
+    });
+});
+
+
 function loadSpaces(options) {
+    var resultsContainer = document.getElementById('list');
+    uol_show_loader(resultsContainer);
+    getSpaces(options, function(data){
+        uol_hide_loader();
+    });
+
     $('.current-status').html('load spaces');
     if (loadSpacesInProgress) {
         return;
@@ -1181,28 +1215,15 @@ function loadList(options) {
 }
 
 function loadTemplates(options) {
-    var defaults = {},
-        loadCount = 0;
+    var defaults = {};
     $.extend(defaults, options);
 
     $.each(templates, function (key) {
-        loadCount++;
-        $.ajax({
-            url: templates[key].url,
-            dataType: 'html'
-        })
-            .done(function (d) {
-                templates[key].template = d;
-                loadCount--;
-            });
+        templates[key].template = $('#'+templates[key].id).html();
+        
     });
-    var check = setInterval(function () {
-        if (typeof (defaults.callback) == 'function' && loadCount <= 0) {
-            clearInterval(check)
-            defaults.callback();
-        }
-    }, 10)
-
+    console.log(templates);
+    defaults.callback();
 }
 
 function parseTemplate(t, data, partial) {

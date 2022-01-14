@@ -1,0 +1,24 @@
+<div class="accordion">
+	<h3>
+		<button type="button" aria-expanded="true" class="accordion-trigger" aria-controls="sect1" id="accordion1id">
+			<span class="accordion-title">
+				{{ title }}
+				<span class="accordion-icon"></span>
+			</span>
+		</button>
+	</h3>
+	<div id="sect1" role="region" aria-labelledby="accordion1id" class="accordion-panel">
+		{{ content }}
+	</div>
+	<h3>
+		<button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect2" id="accordion2id">
+			<span class="accordion-title">
+				{{ title }}
+				<span class="accordion-icon"></span>
+			</span>
+		</button>
+	</h3>
+	<div id="sect2" role="region" aria-labelledby="accordion2id" class="accordion-panel" hidden="">
+		{{ content }}
+	</div>
+</div>
