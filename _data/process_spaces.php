@@ -24,5 +24,15 @@ for( $i = 0; $i < count( $spaces ); $i++ ) {
 	// rename properties
 	$spaces[$i]->building = $spaces[$i]->library;
 	unset($spaces[$i]->library);
+	// GeoJSON
+	$geojson = new stdClass();
+	$geojson->type = 'Point';
+	$geojson->coordinates = array(
+		$spaces[$i]->lng,
+		$spaces[$i]->lat
+	);
+	$spaces[$i]->location = json_encode($geojson);
+	unset($spaces[$i]->lng);
+	unset($spaces[$i]->lat);
 }
 file_put_contents( "spaces_new.json", json_encode( $spaces, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT ) );

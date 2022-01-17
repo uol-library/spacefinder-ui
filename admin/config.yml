@@ -10,7 +10,6 @@ collections:
     label: 'Spaces'
     label_singular: 'Space'
     folder: 'spaces/'
-    filter: {field: 'layout', value: 'page'}
     create: true
     editor:
       preview: false
