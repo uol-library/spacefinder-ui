@@ -99,11 +99,11 @@ collections:
           - { value: 'outdoor_seating', label: 'Outdoor seating' }
           - { value: 'bookable', label: 'Bookable' }
           - { value: 'toilets', label: 'Toilets nearby' }
-          - { value: 'accessible_toilets', 'Accessible toilets' }
-          - { value: 'gender_neutral_toilets', 'Gender-neutral toilets' }
+          - { value: 'accessible_toilets', label: 'Accessible toilets' }
+          - { value: 'gender_neutral_toilets', label: 'Gender-neutral toilets' }
           - { value: 'refreshments', label: 'Close to refreshments' }
           - { value: 'break', label: 'Close to a place to take a break' }
-          - { value: 'wheelchair_accessible', 'Wheelchair accessible' }
+          - { value: 'wheelchair_accessible', label: 'Wheelchair accessible' }
       - label: 'Work environment'
         name: 'work'
         widget: 'select'
