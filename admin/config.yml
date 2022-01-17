@@ -8,11 +8,14 @@ media_folder: 'assets/photos'
 
 collections:
   - name: 'spaces'
-    label: 'Spaces Directory'
+    label: 'Spaces'
+    label_singular: 'Space'
     folder: 'spaces/'
     filter: {field: 'layout', value: 'page'}
     create: true
-    preview: false
+    editor:
+      preview: false
+    show_preview_links: false
     slug: '{{name}}'
     extension: 'json'
     format: 'json'
