@@ -100,7 +100,7 @@ collections:
           - { value: 'bookable', label: 'Bookable' }
           - { value: 'toilets', label: 'Toilets nearby' }
           - { value: 'accessible_toilets', 'Accessible toilets' }
-          - { value: 'gender_neutral_toilets, 'Gender-neutral toilets' }
+          - { value: 'gender_neutral_toilets', 'Gender-neutral toilets' }
           - { value: 'refreshments', label: 'Close to refreshments' }
           - { value: 'break', label: 'Close to a place to take a break' }
           - { value: 'wheelchair_accessible', 'Wheelchair accessible' }
