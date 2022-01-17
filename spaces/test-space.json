@@ -1,0 +1,40 @@
+{
+  "facilities": [
+    "food_drink",
+    "large_desks",
+    "computers",
+    "printers_copiers",
+    "break"
+  ],
+  "atmosphere": [
+    "social",
+    "friendly"
+  ],
+  "access": "Anyone (public)",
+  "disabled_access": true,
+  "booking_url": "https://headrow.org/booking",
+  "name": "Test space",
+  "floor": "2nd Floor",
+  "restriction": "Members only",
+  "url": "https://headrow.org",
+  "email_address": "admin@headrow.org",
+  "work": [
+    "close"
+  ],
+  "twitter_screen_name": "theheadrow",
+  "space_type": "Café",
+  "address": "15 The Headrow\nLeeds",
+  "location": "{\"type\":\"Point\",\"coordinates\":[-1.541763,53.7990926]}",
+  "facebook_url": "headrowy",
+  "images": "/assets/photos/dsc00177.jpg",
+  "tags": [
+    "shit",
+    "bastard",
+    "twat"
+  ],
+  "noise": "Music playing",
+  "phone_number": "+44778899665544",
+  "restricted": true,
+  "library": "Test building",
+  "description": "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing."
+}
