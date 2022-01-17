@@ -3,9 +3,8 @@ backend:
   repo: 'uol-library/spacefinder-ui'
   branch: 'main'
   site_domain: 'spacefinder-netlify.netlify.app'
-
 media_folder: 'assets/photos'
-
+public_folder: '/assets/photos'
 collections:
   - name: 'spaces'
     label: 'Spaces'
@@ -133,6 +132,7 @@ collections:
       - label: 'Tags'
         name: 'tags'
         widget: 'list'
+        hint: 'Add tags separated by a comma'
       - label: 'Photohraphs'
         name: 'images'
         widget: 'image'
