@@ -44,6 +44,7 @@ collections:
         name: 'location'
         widget: 'map'
         type: 'Point'
+        default: '{"type":"Point","coordinates":[-1.541763,53.7990926]}'
       - label: 'Access type'
         name: 'access'
         widget: 'select'
