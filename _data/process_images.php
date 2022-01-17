@@ -21,6 +21,38 @@ if (is_dir($dir)) {
 	if ($dh = opendir($dir)) {
 		while (($file = readdir($dh)) !== false) {
 			// numbered folders
+			if ( $file !== '.' && $file !== '..' && is_dir( $dir . '/' . $file ) ) {
+				deleteDir($dir . '/' . $file);
+			}
+		}
+		closedir($dh);
+	}
+}
+
+/*
+if (is_dir($dir)) {
+	if ($dh = opendir($dir)) {
+		while (($file = readdir($dh)) !== false) {
+			// numbered folders
+			if ( $file !== '.' && $file !== '..' ) {
+				if ($sdh = opendir($dir . '/' . $file)) {
+					while (($sfile = readdir($sdh)) !== false) {
+						if ( ! is_dir( $sfile ) ) {
+							//copy( $dir . '/' . $file . '/' . $sfile, $dir . '/' . $file . '-' . $sfile );
+						}
+					}
+					closedir($sdh);
+				}
+				deleteDir($dir . '/' . $file);
+			}
+		}
+		closedir($dh);
+	}
+}
+if (is_dir($dir)) {
+	if ($dh = opendir($dir)) {
+		while (($file = readdir($dh)) !== false) {
+			// numbered folders
 			if ( $file !== '.' && $file !== '..' ) {
 				if ($sdh = opendir($dir . '/' . $file)) {
 					while (($sfile = readdir($sdh)) !== false) {
@@ -46,4 +78,4 @@ if (is_dir($dir)) {
 		}
 		closedir($dh);
 	}
-}
+}*/

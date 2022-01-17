@@ -1,0 +1,138 @@
+backend:
+  name: 'github'
+  repo: 'uol-library/spacefinder-ui'
+  branch: 'main'
+  site_domain: 'spacefinder-netlify.netlify.app'
+
+media_folder: 'assets/photos'
+
+collections:
+  - name: 'spaces'
+    label: 'Spaces Directory'
+    folder: 'spaces/'
+    filter: {field: 'layout', value: 'page'}
+    create: true
+    preview: false
+    slug: '{{name}}'
+    extension: 'json'
+    format: 'json'
+    identifier_field: 'name'
+    fields:
+      - label: 'Space name'
+        name: 'name'
+        widget: 'string'
+      - label: 'Building name'
+        name: 'library'
+        widget: 'string'
+      - label: 'Floor'
+        name: 'floor'
+        widget: 'string'
+      - label: 'Description'
+        name: 'description'
+        widget: 'markdown'
+      - label: 'Type'
+        name: 'space_type'
+        widget: 'select'
+        options: ['Bar','Café','Lab','Lecture room','Library space','Meeting room','Restaurant','Seminar room','Other']
+      - label: 'Address'
+        name: 'address'
+        widget: 'text'
+      - label: 'Location'
+        name: 'location'
+        widget: 'map'
+        type: 'Point'
+      - label: 'Access type'
+        name: 'access'
+        widget: 'select'
+        options: ['Anyone (public)','Members of the University','Faculty','College']
+      - label: 'Restricted access?'
+        name: 'restricted'
+        widget: 'boolean'
+        hint: 'If there are any restrictions on access, please outline them below'
+      - label: 'Restriction'
+        name: 'restriction'
+        widget: 'string'
+      - label: 'Disabled access?'
+        name: 'disabled_access'
+        widget: 'boolean'
+      - label: 'Website URL'
+        name: 'url'
+        widget: 'string'
+      - label: 'Booking URL'
+        name: 'booking_url'
+        widget: 'string'
+      - label: 'Phone number'
+        name: 'phone_number'
+        widget: 'string'
+      - label: 'Email address'
+        name: 'email_address'
+        widget: 'string'
+      - label: 'Twitter screen name'
+        name: 'twitter_screen_name'
+        widget: 'string'
+      - label: 'Facebook URL'
+        name: 'facebook_url'
+        widget: 'string'
+      - label: 'Noise level'
+        name: 'noise'
+        widget: 'select'
+        options: ['Strictly silent','Whispers','Background chatter','Animated discussion','Music playing']
+        hint: 'Which best describes the typical noise level in this space?'
+      - label: 'Facilities'
+        name: 'facilities'
+        widget: 'select'
+        multiple: true
+        options:
+          - { value: 'food_drink', label: 'Food and drink allowed' }
+          - { value: 'daylight', label: 'Natural daylight' }
+          - { value: 'views', label: 'Attractive views out of the window' }
+          - { value: 'large_desks', label: 'Large desks' }
+          - { value: 'free_wifi', label: 'Free Wifi' }
+          - { value: 'no_wifi', label: 'No WiFi' }
+          - { value: 'computers', label: 'Computers' }
+          - { value: 'laptops_allowed', label: 'Laptops allowed' }
+          - { value: 'sockets', label: 'Plug sockets' }
+          - { value: 'signal', label: 'Phone signal' }
+          - { value: 'printers_copiers', label: 'Printers and copiers' }
+          - { value: 'whiteboards', label: 'Whiteboards' }
+          - { value: 'projector', label: 'Projector' }
+          - { value: 'outdoor_seating', label: 'Outdoor seating' }
+          - { value: 'bookable', label: 'Bookable' }
+          - { value: 'toilets', label: 'Toilets nearby' }
+          - { value: 'accessible_toilets', 'Accessible toilets' }
+          - { value: 'gender_neutral_toilets, 'Gender-neutral toilets' }
+          - { value: 'refreshments', label: 'Close to refreshments' }
+          - { value: 'break', label: 'Close to a place to take a break' }
+          - { value: 'wheelchair_accessible', 'Wheelchair accessible' }
+      - label: 'Work environment'
+        name: 'work'
+        widget: 'select'
+        multiple: true
+        options:
+          - { value: 'private', label: 'Alone, in private' }
+          - { value: 'close', label: 'Where others are working' }
+          - { value: 'friends', label: 'With friends' }
+          - { value: 'group', label: 'On a group project' }
+      - label: 'Atmosphere'
+        name: 'atmosphere'
+        widget: 'select'
+        multiple: true
+        options:
+          - { value: 'disciplined', label: 'Disciplined?' }
+          - { value: 'relaxed', label: 'Relaxed or informal?' }
+          - { value: 'historic', label: 'Historic?' }
+          - { value: 'modern', label: 'Modern?' }
+          - { value: 'inspiring', label: 'Inspiring or thought provoking?' }
+          - { value: 'cosy', label: 'Cosy?' }
+          - { value: 'social', label: 'Social?' }
+          - { value: 'friendly', label: 'Friendly or welcoming?' }
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'list'
+      - label: 'Photohraphs'
+        name: 'images'
+        widget: 'image'
+        choose_url: false
+        media_library:
+          config:
+            multiple: true

@@ -17,5 +17,12 @@ for( $i = 0; $i < count( $spaces ); $i++ ) {
 		}
 	}
 	$spaces[$i]->tags = $newtags;
+	// remove properties not needed
+	unset($spaces[$i]->created_at);
+	unset($spaces[$i]->updated_at);
+	unset($spaces[$i]->expensive);
+	// rename properties
+	$spaces[$i]->building = $spaces[$i]->library;
+	unset($spaces[$i]->library);
 }
-file_put_contents( "spaces_new.json", json_encode( $spaces, JSON_UNESCAPED_SLASHES ) );
+file_put_contents( "spaces_new.json", json_encode( $spaces, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT ) );

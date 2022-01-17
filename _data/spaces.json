@@ -41,7 +41,7 @@
         "created_at": "2015-08-24T13:52:05.232Z",
         "updated_at": "2020-10-04T09:16:37.023Z",
         "images": [
-            "039/snug.jpg"
+            "039-snug.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -111,7 +111,7 @@
         "created_at": "2015-08-24T13:52:05.425Z",
         "updated_at": "2020-10-04T09:03:21.673Z",
         "images": [
-            "229/Starbucks_Grand_Arcade.jpg"
+            "229-Starbucks_Grand_Arcade.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -266,12 +266,12 @@
         "created_at": "2015-08-24T13:52:05.655Z",
         "updated_at": "2021-08-17T18:26:28.218Z",
         "images": [
-            "100/PH-LIBRARY-MAP-READING-ROOM-000-00006.jpg",
-            "101/PH-LIBRARY-MAP-READING-ROOM-000-00007.jpg",
-            "292/PH-LIBRARY-MAP-READING-ROOM-000-00001.jpg",
-            "293/PH-LIBRARY-MAP-READING-ROOM-000-00003.jpg",
-            "294/PH-LIBRARY-MAP-READING-ROOM-000-00004.jpg",
-            "295/PH-LIBRARY-MAP-READING-ROOM-000-00009.jpg"
+            "100-PH-LIBRARY-MAP-READING-ROOM-000-00006.jpg",
+            "101-PH-LIBRARY-MAP-READING-ROOM-000-00007.jpg",
+            "292-PH-LIBRARY-MAP-READING-ROOM-000-00001.jpg",
+            "293-PH-LIBRARY-MAP-READING-ROOM-000-00003.jpg",
+            "294-PH-LIBRARY-MAP-READING-ROOM-000-00004.jpg",
+            "295-PH-LIBRARY-MAP-READING-ROOM-000-00009.jpg"
         ],
         "facilities": [
             "daylight",
@@ -345,8 +345,8 @@
         "created_at": "2015-08-24T13:52:05.773Z",
         "updated_at": "2021-08-17T18:34:24.351Z",
         "images": [
-            "081/PH-LIBRARY-FRONT-CORRIDORS-000-00002.jpg",
-            "082/PH-LIBRARY-FRONT-CORRIDORS-000-00005.jpg"
+            "081-PH-LIBRARY-FRONT-CORRIDORS-000-00002.jpg",
+            "082-PH-LIBRARY-FRONT-CORRIDORS-000-00005.jpg"
         ],
         "facilities": [
             "daylight",
@@ -439,9 +439,9 @@
         "created_at": "2015-08-24T13:52:05.853Z",
         "updated_at": "2021-11-12T15:11:57.093Z",
         "images": [
-            "110/PH-LIBRARY-MAP-NORTH-FOUR-000-00001.jpg",
-            "111/PH-LIBRARY-MAP-NORTH-FOUR-000-00003.jpg",
-            "297/PH-LIBRARY-MAP-NORTH-FOUR-000-00002.jpg"
+            "110-PH-LIBRARY-MAP-NORTH-FOUR-000-00001.jpg",
+            "111-PH-LIBRARY-MAP-NORTH-FOUR-000-00003.jpg",
+            "297-PH-LIBRARY-MAP-NORTH-FOUR-000-00002.jpg"
         ],
         "facilities": [
             "daylight",
@@ -524,8 +524,8 @@
         "created_at": "2015-08-24T13:52:06.147Z",
         "updated_at": "2021-08-17T18:35:33.506Z",
         "images": [
-            "235/DSCN0103.JPG?1444066057",
-            "236/DSCN0107.JPG?1444066058"
+            "235-DSCN0103.JPG",
+            "236-DSCN0107.JPG"
         ],
         "facilities": [
             "daylight",
@@ -665,19 +665,19 @@
         "created_at": "2015-08-24T13:52:06.238Z",
         "updated_at": "2021-04-26T08:44:56.867Z",
         "images": [
-            "070/4.jpg",
-            "071/7.jpg",
-            "072/4.jpg",
-            "073/7.jpg",
-            "299/IMG_0101.JPG?1450795298",
-            "300/IMG_0102.JPG?1450795397",
-            "465/IMG_3346.JPG?1465220371",
-            "471/IMG_3674.JPG?1465222569",
-            "472/IMG_3675.JPG?1465222569",
-            "473/IMG_3676.JPG?1465222570",
-            "474/IMG_3677.JPG?1465222570",
-            "476/IMG_1290.JPG?1465296508",
-            "477/IMG_1290.JPG?1465296509"
+            "070-4.jpg",
+            "071-7.jpg",
+            "072-4.jpg",
+            "073-7.jpg",
+            "299-IMG_0101.JPG",
+            "300-IMG_0102.JPG",
+            "465-IMG_3346.JPG",
+            "471-IMG_3674.JPG",
+            "472-IMG_3675.JPG",
+            "473-IMG_3676.JPG",
+            "474-IMG_3677.JPG",
+            "476-IMG_1290.JPG",
+            "477-IMG_1290.JPG"
         ],
         "facilities": [
             "food_drink",
@@ -802,10 +802,10 @@
         "created_at": "2015-08-24T13:52:06.376Z",
         "updated_at": "2021-04-26T08:44:25.405Z",
         "images": [
-            "066/2.jpg",
-            "078/3.jpg",
-            "466/IMG_1635.JPG?1465220826",
-            "467/IMG_2510.JPG?1465220826"
+            "066-2.jpg",
+            "078-3.jpg",
+            "466-IMG_1635.JPG",
+            "467-IMG_2510.JPG"
         ],
         "facilities": [
             "food_drink",
@@ -924,9 +924,9 @@
         "created_at": "2015-08-24T13:52:06.494Z",
         "updated_at": "2021-04-26T08:43:20.728Z",
         "images": [
-            "058/9.jpg",
-            "469/IMG_3671.JPG?1465222472",
-            "470/IMG_3670.JPG?1465222472"
+            "058-9.jpg",
+            "469-IMG_3671.JPG",
+            "470-IMG_3670.JPG"
         ],
         "facilities": [
             "food_drink",
@@ -1043,10 +1043,10 @@
         "created_at": "2015-08-24T13:52:06.612Z",
         "updated_at": "2021-04-26T08:43:51.452Z",
         "images": [
-            "061/11.jpg",
-            "062/12.jpg",
-            "468/FullSizeRender4.jpg",
-            "475/IMG_1594.JPG?1465222717"
+            "061-11.jpg",
+            "062-12.jpg",
+            "468-FullSizeRender4.jpg",
+            "475-IMG_1594.JPG"
         ],
         "facilities": [
             "food_drink",
@@ -1132,8 +1132,8 @@
         "created_at": "2015-08-24T13:52:06.727Z",
         "updated_at": "2021-04-26T08:00:29.820Z",
         "images": [
-            "210/Central_Library_non-fiction_and_reference_2nd_floor.jpg",
-            "211/Central_Library_desks.png?1443793930"
+            "210-Central_Library_non-fiction_and_reference_2nd_floor.jpg",
+            "211-Central_Library_desks.png?1443793930"
         ],
         "facilities": [
             "daylight",
@@ -1201,8 +1201,8 @@
         "created_at": "2015-08-24T13:52:06.806Z",
         "updated_at": "2021-04-26T08:01:41.169Z",
         "images": [
-            "212/Central_Library_3rd_floor.jpg",
-            "213/Cafe--Central-Library-Article_4.jpg"
+            "212-Central_Library_3rd_floor.jpg",
+            "213-Cafe--Central-Library-Article_4.jpg"
         ],
         "facilities": [
             "large_desks",
@@ -1259,9 +1259,9 @@
         "created_at": "2015-08-24T13:52:06.874Z",
         "updated_at": "2021-04-26T07:59:48.855Z",
         "images": [
-            "206/Central_Library_fiction.png?1443792934",
-            "214/Central_Library_1st_floor.jpg",
-            "215/Central_Library_1st_floor_2.jpg"
+            "206-Central_Library_fiction.png?1443792934",
+            "214-Central_Library_1st_floor.jpg",
+            "215-Central_Library_1st_floor_2.jpg"
         ],
         "facilities": [
             "free_wifi",
@@ -1309,8 +1309,8 @@
         "created_at": "2015-08-24T13:52:06.934Z",
         "updated_at": "2020-10-04T08:53:35.701Z",
         "images": [
-            "227/livingstones.jpg",
-            "228/livingstones.jpg"
+            "227-livingstones.jpg",
+            "228-livingstones.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -1379,7 +1379,7 @@
         "created_at": "2015-08-24T13:52:07.036Z",
         "updated_at": "2020-10-04T08:22:45.738Z",
         "images": [
-            "223/caffe_nero_fitzroy_st.jpg"
+            "223-caffe_nero_fitzroy_st.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -1448,7 +1448,7 @@
         "created_at": "2015-08-24T13:52:07.117Z",
         "updated_at": "2020-10-04T08:20:27.703Z",
         "images": [
-            "220/cafe_de_paris.jpg"
+            "220-cafe_de_paris.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -1522,7 +1522,7 @@
         "created_at": "2015-08-24T13:52:07.194Z",
         "updated_at": "2020-10-04T08:23:54.736Z",
         "images": [
-            "224/caffe_nero_market_st.jpg"
+            "224-caffe_nero_market_st.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -1591,7 +1591,7 @@
         "created_at": "2015-08-24T13:52:07.269Z",
         "updated_at": "2020-10-04T08:17:13.048Z",
         "images": [
-            "216/black_cat_cafe?1443799892"
+            "216-black_cat_cafe?1443799892"
         ],
         "facilities": [
             "food_drink",
@@ -1666,8 +1666,8 @@
         "created_at": "2015-08-24T13:52:07.334Z",
         "updated_at": "2020-10-04T08:50:01.811Z",
         "images": [
-            "225/jamaica-blue.jpg",
-            "226/jamaica-blue1.jpg"
+            "225-jamaica-blue.jpg",
+            "226-jamaica-blue1.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -1853,11 +1853,11 @@
         "created_at": "2015-08-24T13:52:07.963Z",
         "updated_at": "2021-04-26T08:38:15.865Z",
         "images": [
-            "160/LowerGround_4.jpg",
-            "161/LowerGround_2.jpg",
-            "162/LowerGround_3.jpg",
-            "314/gf%281%29.jpg",
-            "315/gf2.jpg"
+            "160-LowerGround_4.jpg",
+            "161-LowerGround_2.jpg",
+            "162-LowerGround_3.jpg",
+            "314-gf%281%29.jpg",
+            "315-gf2.jpg"
         ],
         "facilities": [
             "daylight",
@@ -1947,12 +1947,12 @@
         "created_at": "2015-08-24T13:52:08.072Z",
         "updated_at": "2021-04-26T08:37:49.116Z",
         "images": [
-            "163/Lily_Pad_1_-_1.jpg",
-            "164/Lily_Pad_1.jpg",
-            "165/Lily_Pad_1_-_3.jpg",
-            "166/Lily_Pad_1_-_2.jpg",
-            "309/lilypad1%282%29.jpg",
-            "311/lilypad1%281%29.jpg"
+            "163-Lily_Pad_1_-_1.jpg",
+            "164-Lily_Pad_1.jpg",
+            "165-Lily_Pad_1_-_3.jpg",
+            "166-Lily_Pad_1_-_2.jpg",
+            "309-lilypad1%282%29.jpg",
+            "311-lilypad1%281%29.jpg"
         ],
         "facilities": [
             "daylight",
@@ -2048,8 +2048,8 @@
         "created_at": "2015-08-24T13:52:08.161Z",
         "updated_at": "2021-04-26T08:38:02.983Z",
         "images": [
-            "167/Lily_Pad_2_-_1.jpg",
-            "307/lilypad2.jpg"
+            "167-Lily_Pad_2_-_1.jpg",
+            "307-lilypad2.jpg"
         ],
         "facilities": [
             "daylight",
@@ -2136,7 +2136,7 @@
         "created_at": "2015-08-24T13:52:08.260Z",
         "updated_at": "2021-04-26T08:14:16.257Z",
         "images": [
-            "063/Top_Floor_Computer_Room.jpg"
+            "063-Top_Floor_Computer_Room.jpg"
         ],
         "facilities": [
             "daylight",
@@ -2220,7 +2220,7 @@
         "created_at": "2015-08-24T13:52:08.363Z",
         "updated_at": "2020-10-04T08:13:28.832Z",
         "images": [
-            "037/arc_cafe.jpg"
+            "037-arc_cafe.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -2310,8 +2310,8 @@
         "created_at": "2015-08-24T13:52:08.460Z",
         "updated_at": "2020-10-04T09:08:19.688Z",
         "images": [
-            "267/buttery1.jpg",
-            "268/buttery2.jpg"
+            "267-buttery1.jpg",
+            "268-buttery2.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -2378,8 +2378,8 @@
         "created_at": "2015-08-24T13:52:08.567Z",
         "updated_at": "2020-10-03T15:15:46.254Z",
         "images": [
-            "265/lawcafe1.jpg",
-            "266/lawcafe2.jpg"
+            "265-lawcafe1.jpg",
+            "266-lawcafe2.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -2447,7 +2447,7 @@
         "created_at": "2015-08-24T13:52:08.636Z",
         "updated_at": "2020-10-04T09:00:33.610Z",
         "images": [
-            "127/image.jpg"
+            "127-image.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -2568,7 +2568,7 @@
         "created_at": "2015-08-24T13:52:08.711Z",
         "updated_at": "2020-10-03T14:33:26.848Z",
         "images": [
-            "026/Common_Room.jpg"
+            "026-Common_Room.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -2707,10 +2707,10 @@
         "created_at": "2015-08-24T13:52:08.891Z",
         "updated_at": "2020-10-03T14:35:21.755Z",
         "images": [
-            "022/CJBS_Ground_Floor.jpg",
-            "023/CJBS_Ground_Floor_4.jpg",
-            "024/CJBS_Ground_Floor_2.jpg",
-            "025/CJBS_Ground_Floor_3.jpg"
+            "022-CJBS_Ground_Floor.jpg",
+            "023-CJBS_Ground_Floor_4.jpg",
+            "024-CJBS_Ground_Floor_2.jpg",
+            "025-CJBS_Ground_Floor_3.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -2842,9 +2842,9 @@
         "created_at": "2015-08-24T13:52:09.070Z",
         "updated_at": "2020-10-03T14:36:23.147Z",
         "images": [
-            "027/CJBS_Mezzanine_1.jpg",
-            "028/CJBS_Mezzanine_2.jpg",
-            "029/CJBS_Mezzanine_3.jpg"
+            "027-CJBS_Mezzanine_1.jpg",
+            "028-CJBS_Mezzanine_2.jpg",
+            "029-CJBS_Mezzanine_3.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -2912,7 +2912,7 @@
         "created_at": "2015-08-24T13:52:09.216Z",
         "updated_at": "2020-10-04T08:54:16.322Z",
         "images": [
-            "125/image.jpg"
+            "125-image.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -2976,7 +2976,7 @@
         "created_at": "2015-08-24T13:52:09.268Z",
         "updated_at": "2020-10-04T09:22:30.932Z",
         "images": [
-            "146/Screen_Shot_2015-10-01_at_14.39.22.png?1443706808"
+            "146-Screen_Shot_2015-10-01_at_14.39.22.png?1443706808"
         ],
         "facilities": [
             "food_drink",
@@ -3036,7 +3036,7 @@
         "created_at": "2015-08-24T13:52:09.339Z",
         "updated_at": "2020-10-04T08:30:16.482Z",
         "images": [
-            "142/complabcafe.jpg"
+            "142-complabcafe.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -3135,8 +3135,8 @@
         "created_at": "2015-08-24T13:52:09.400Z",
         "updated_at": "2020-10-04T08:36:34.073Z",
         "images": [
-            "089/image.jpg",
-            "090/image.jpg"
+            "089-image.jpg",
+            "090-image.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -3234,8 +3234,8 @@
         "created_at": "2015-08-24T13:52:09.527Z",
         "updated_at": "2020-10-04T08:43:07.439Z",
         "images": [
-            "099/image.jpg",
-            "140/image.jpg"
+            "099-image.jpg",
+            "140-image.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -3334,7 +3334,7 @@
         "created_at": "2015-08-24T13:52:09.643Z",
         "updated_at": "2020-10-04T09:06:12.762Z",
         "images": [
-            "136/image.jpg"
+            "136-image.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -3423,7 +3423,7 @@
         "created_at": "2015-08-24T13:52:09.750Z",
         "updated_at": "2020-10-04T09:09:04.832Z",
         "images": [
-            "035/agora.jpg"
+            "035-agora.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -3510,7 +3510,7 @@
         "created_at": "2015-08-24T13:52:09.967Z",
         "updated_at": "2020-10-04T08:16:42.057Z",
         "images": [
-            "046/benets.jpg"
+            "046-benets.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -3579,8 +3579,8 @@
         "created_at": "2015-08-24T13:52:10.059Z",
         "updated_at": "2020-10-04T08:46:43.300Z",
         "images": [
-            "014/hotnumbers.jpg",
-            "015/hotnumbers.jpg"
+            "014-hotnumbers.jpg",
+            "015-hotnumbers.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -3643,7 +3643,7 @@
         "created_at": "2015-08-24T13:52:10.126Z",
         "updated_at": "2020-10-04T08:34:19.856Z",
         "images": [
-            "065/image.jpg"
+            "065-image.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -3716,7 +3716,7 @@
         "created_at": "2015-08-24T13:52:10.199Z",
         "updated_at": "2020-10-04T08:52:41.814Z",
         "images": [
-            "121/image.jpg"
+            "121-image.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -3786,7 +3786,7 @@
         "created_at": "2015-08-24T13:52:10.288Z",
         "updated_at": "2020-10-04T08:23:18.304Z",
         "images": [
-            "036/caffe_nero.jpg"
+            "036-caffe_nero.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -3859,7 +3859,7 @@
         "created_at": "2015-08-24T13:52:10.362Z",
         "updated_at": "2020-10-04T09:18:05.151Z",
         "images": [
-            "145/trockel.png?1443706507"
+            "145-trockel.png?1443706507"
         ],
         "facilities": [
             "food_drink",
@@ -3961,9 +3961,9 @@
         "created_at": "2015-08-24T13:52:10.434Z",
         "updated_at": "2020-10-04T08:19:03.839Z",
         "images": [
-            "130/image.jpg",
-            "510/IMG_20180203_115459701.jpg",
-            "511/IMG_20180203_115524002.jpg"
+            "130-image.jpg",
+            "510-IMG_20180203_115459701.jpg",
+            "511-IMG_20180203_115524002.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -4079,10 +4079,10 @@
         "created_at": "2015-08-24T13:52:10.574Z",
         "updated_at": "2020-10-04T09:04:26.494Z",
         "images": [
-            "512/IMG_20171126_125925804.jpg",
-            "513/IMG_20171126_131918947.jpg",
-            "514/IMG_20171126_132531706.jpg",
-            "515/IMG_20171126_132838690.jpg"
+            "512-IMG_20171126_125925804.jpg",
+            "513-IMG_20171126_131918947.jpg",
+            "514-IMG_20171126_132531706.jpg",
+            "515-IMG_20171126_132838690.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -4168,7 +4168,7 @@
         "created_at": "2015-08-24T13:52:10.692Z",
         "updated_at": "2020-10-04T09:05:20.747Z",
         "images": [
-            "133/image.jpg"
+            "133-image.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -4259,7 +4259,7 @@
         "created_at": "2015-08-24T13:52:10.784Z",
         "updated_at": "2020-10-04T08:24:52.001Z",
         "images": [
-            "047/brew_house.jpg"
+            "047-brew_house.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -4333,7 +4333,7 @@
         "created_at": "2015-08-24T13:52:10.890Z",
         "updated_at": "2020-10-04T09:15:27.701Z",
         "images": [
-            "144/Screen_Shot_2015-10-01_at_14.31.16.png?1443706313"
+            "144-Screen_Shot_2015-10-01_at_14.31.16.png?1443706313"
         ],
         "facilities": [
             "food_drink",
@@ -4406,7 +4406,7 @@
         "created_at": "2015-08-24T13:52:10.960Z",
         "updated_at": "2020-10-04T08:09:59.612Z",
         "images": [
-            "042/waterstones.JPG?1443685879"
+            "042-waterstones.JPG"
         ],
         "facilities": [
             "food_drink",
@@ -4516,7 +4516,7 @@
         "created_at": "2015-08-24T13:52:11.035Z",
         "updated_at": "2020-10-04T08:35:49.797Z",
         "images": [
-            "041/espresso.jpeg?1443685758"
+            "041-espresso.jpeg"
         ],
         "facilities": [
             "food_drink",
@@ -4599,8 +4599,8 @@
         "created_at": "2015-09-02T15:58:55.366Z",
         "updated_at": "2021-04-26T07:54:58.773Z",
         "images": [
-            "183/4.jpg",
-            "321/Astronomy_Reference.jpg"
+            "183-4.jpg",
+            "321-Astronomy_Reference.jpg"
         ],
         "facilities": [
             "views",
@@ -4669,9 +4669,9 @@
         "created_at": "2015-09-03T08:20:03.362Z",
         "updated_at": "2021-04-26T08:03:04.472Z",
         "images": [
-            "149/1.jpg",
-            "150/2.jpg",
-            "151/3.jpg"
+            "149-1.jpg",
+            "150-2.jpg",
+            "151-3.jpg"
         ],
         "facilities": [
             "daylight",
@@ -4750,9 +4750,9 @@
         "created_at": "2015-09-03T08:25:07.082Z",
         "updated_at": "2021-04-26T10:55:41.887Z",
         "images": [
-            "096/1.jpg",
-            "097/2.jpg",
-            "098/3.jpg"
+            "096-1.jpg",
+            "097-2.jpg",
+            "098-3.jpg"
         ],
         "facilities": [
             "daylight",
@@ -4835,7 +4835,7 @@
         "created_at": "2015-09-03T08:30:28.436Z",
         "updated_at": "2021-04-26T10:55:19.501Z",
         "images": [
-            "276/philcomparea.jpg"
+            "276-philcomparea.jpg"
         ],
         "facilities": [
             "daylight",
@@ -4911,8 +4911,8 @@
         "created_at": "2015-09-03T13:05:07.084Z",
         "updated_at": "2021-04-26T11:12:59.990Z",
         "images": [
-            "193/10.jpg",
-            "194/9.jpg"
+            "193-10.jpg",
+            "194-9.jpg"
         ],
         "facilities": [
             "daylight",
@@ -4976,7 +4976,7 @@
         "created_at": "2015-09-03T14:06:04.987Z",
         "updated_at": "2021-04-26T10:51:37.000Z",
         "images": [
-            "157/1.jpg"
+            "157-1.jpg"
         ],
         "facilities": [
             "daylight",
@@ -5054,7 +5054,7 @@
         "created_at": "2015-09-03T14:15:19.954Z",
         "updated_at": "2021-04-26T10:50:13.128Z",
         "images": [
-            "159/2.jpg"
+            "159-2.jpg"
         ],
         "facilities": [
             "free_wifi",
@@ -5185,7 +5185,7 @@
         "created_at": "2015-09-03T14:31:20.649Z",
         "updated_at": "2021-04-26T10:50:37.881Z",
         "images": [
-            "158/4.jpg"
+            "158-4.jpg"
         ],
         "facilities": [
             "free_wifi",
@@ -5275,9 +5275,9 @@
         "created_at": "2015-09-03T15:19:01.233Z",
         "updated_at": "2021-04-26T07:55:11.796Z",
         "images": [
-            "184/1.jpg",
-            "317/Astronomy_Room_A1.jpg",
-            "318/Astronomy_Room_A2.jpg"
+            "184-1.jpg",
+            "317-Astronomy_Room_A1.jpg",
+            "318-Astronomy_Room_A2.jpg"
         ],
         "facilities": [
             "daylight",
@@ -5358,7 +5358,7 @@
         "created_at": "2015-09-03T15:21:21.981Z",
         "updated_at": "2021-04-26T08:07:43.446Z",
         "images": [
-            "134/5.jpg"
+            "134-5.jpg"
         ],
         "facilities": [
             "daylight",
@@ -5456,7 +5456,7 @@
         "created_at": "2015-09-03T15:27:04.967Z",
         "updated_at": "2021-04-26T07:55:23.379Z",
         "images": [
-            "185/2.jpg"
+            "185-2.jpg"
         ],
         "facilities": [
             "computers",
@@ -5544,8 +5544,8 @@
         "created_at": "2015-09-03T15:28:44.771Z",
         "updated_at": "2021-04-26T08:06:55.331Z",
         "images": [
-            "120/1.jpg",
-            "128/2.jpg"
+            "120-1.jpg",
+            "128-2.jpg"
         ],
         "facilities": [
             "daylight",
@@ -5637,10 +5637,10 @@
         "created_at": "2015-09-03T15:33:54.457Z",
         "updated_at": "2021-04-26T07:55:35.031Z",
         "images": [
-            "186/3.jpg",
-            "306/Astronomy.jpg",
-            "308/Astronomy_Room_C.jpg",
-            "313/Astronomy_Room_C2.jpg"
+            "186-3.jpg",
+            "306-Astronomy.jpg",
+            "308-Astronomy_Room_C.jpg",
+            "313-Astronomy_Room_C2.jpg"
         ],
         "facilities": [
             "daylight",
@@ -5724,9 +5724,9 @@
         "created_at": "2015-09-03T15:36:20.048Z",
         "updated_at": "2021-04-26T08:07:20.310Z",
         "images": [
-            "132/4.jpg",
-            "135/3.jpg",
-            "305/Criminology_chairs.jpg"
+            "132-4.jpg",
+            "135-3.jpg",
+            "305-Criminology_chairs.jpg"
         ],
         "facilities": [
             "daylight",
@@ -5812,8 +5812,8 @@
         "created_at": "2015-09-03T15:47:31.595Z",
         "updated_at": "2021-04-26T08:06:43.498Z",
         "images": [
-            "122/6.jpg",
-            "123/8.jpg"
+            "122-6.jpg",
+            "123-8.jpg"
         ],
         "facilities": [
             "daylight",
@@ -5880,8 +5880,8 @@
         "created_at": "2015-09-03T16:05:58.053Z",
         "updated_at": "2021-04-26T11:12:13.607Z",
         "images": [
-            "195/6.jpg",
-            "196/8.jpg"
+            "195-6.jpg",
+            "196-8.jpg"
         ],
         "facilities": [
             "daylight",
@@ -5938,10 +5938,10 @@
         "created_at": "2015-09-03T16:08:30.704Z",
         "updated_at": "2021-04-26T11:12:35.164Z",
         "images": [
-            "197/1.jpg",
-            "198/2.jpg",
-            "199/3.jpg",
-            "200/4.jpg"
+            "197-1.jpg",
+            "198-2.jpg",
+            "199-3.jpg",
+            "200-4.jpg"
         ],
         "facilities": [
             "daylight",
@@ -5999,10 +5999,10 @@
         "created_at": "2015-09-04T08:23:16.673Z",
         "updated_at": "2021-04-26T08:09:40.018Z",
         "images": [
-            "152/1.jpg",
-            "153/2.jpg",
-            "154/3.jpg",
-            "155/4.jpg"
+            "152-1.jpg",
+            "153-2.jpg",
+            "154-3.jpg",
+            "155-4.jpg"
         ],
         "facilities": [
             "daylight",
@@ -6061,11 +6061,11 @@
         "created_at": "2015-09-04T10:56:33.763Z",
         "updated_at": "2021-04-26T08:08:31.040Z",
         "images": [
-            "016/Divinity_Ground.jpg",
-            "017/Divinity_Ground_2.jpg",
-            "018/Divinity_Ground.jpg",
-            "019/Divinity_Ground_2.jpg",
-            "334/divmain.jpg"
+            "016-Divinity_Ground.jpg",
+            "017-Divinity_Ground_2.jpg",
+            "018-Divinity_Ground.jpg",
+            "019-Divinity_Ground_2.jpg",
+            "334-divmain.jpg"
         ],
         "facilities": [
             "daylight",
@@ -6118,10 +6118,10 @@
         "created_at": "2015-09-04T11:02:09.715Z",
         "updated_at": "2021-04-26T08:08:54.785Z",
         "images": [
-            "020/Divinity_Mezzanine.jpg",
-            "021/Divinity_Mezzanine_2.jpg",
-            "336/divmezz.jpg",
-            "337/divmezz2.jpg"
+            "020-Divinity_Mezzanine.jpg",
+            "021-Divinity_Mezzanine_2.jpg",
+            "336-divmezz.jpg",
+            "337-divmezz2.jpg"
         ],
         "facilities": [
             "daylight",
@@ -6213,7 +6213,7 @@
         "created_at": "2015-09-07T11:02:03.102Z",
         "updated_at": "2020-10-04T08:58:29.688Z",
         "images": [
-            "034/Cambridge-Picturehouse-007.jpg"
+            "034-Cambridge-Picturehouse-007.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -6297,8 +6297,8 @@
         "created_at": "2015-09-07T11:21:57.781Z",
         "updated_at": "2021-04-26T08:29:13.834Z",
         "images": [
-            "102/10.jpg",
-            "103/8.jpg"
+            "102-10.jpg",
+            "103-8.jpg"
         ],
         "facilities": [
             "daylight",
@@ -6398,9 +6398,9 @@
         "created_at": "2015-09-07T11:23:10.575Z",
         "updated_at": "2020-10-04T08:46:16.515Z",
         "images": [
-            "031/hot-numbers-coffee-Gwydir.jpg",
-            "419/DSCF3652.JPG?1457105062",
-            "420/DSCF3654.JPG?1457105063"
+            "031-hot-numbers-coffee-Gwydir.jpg",
+            "419-DSCF3652.JPG",
+            "420-DSCF3654.JPG"
         ],
         "facilities": [
             "food_drink",
@@ -6474,10 +6474,10 @@
         "created_at": "2015-09-07T11:29:42.472Z",
         "updated_at": "2021-04-26T11:04:08.045Z",
         "images": [
-            "169/1.jpg",
-            "170/2.jpg",
-            "171/3.jpg",
-            "172/4.jpg"
+            "169-1.jpg",
+            "170-2.jpg",
+            "171-3.jpg",
+            "172-4.jpg"
         ],
         "facilities": [
             "large_desks",
@@ -6551,7 +6551,7 @@
         "created_at": "2015-09-07T11:31:52.853Z",
         "updated_at": "2021-04-26T08:29:25.731Z",
         "images": [
-            "108/4.jpg"
+            "108-4.jpg"
         ],
         "facilities": [
             "daylight",
@@ -6634,7 +6634,7 @@
         "created_at": "2015-09-07T11:32:56.504Z",
         "updated_at": "2020-10-04T08:52:13.337Z",
         "images": [
-            "038/gros.jpg"
+            "038-gros.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -6712,8 +6712,8 @@
         "created_at": "2015-09-07T11:35:51.105Z",
         "updated_at": "2021-04-26T08:28:56.740Z",
         "images": [
-            "221/1.jpg",
-            "222/2.jpg"
+            "221-1.jpg",
+            "222-2.jpg"
         ],
         "facilities": [
             "free_wifi",
@@ -6787,8 +6787,8 @@
         "created_at": "2015-09-07T11:37:02.260Z",
         "updated_at": "2020-10-04T08:50:21.553Z",
         "images": [
-            "118/image.jpg",
-            "119/image.jpg"
+            "118-image.jpg",
+            "119-image.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -6866,7 +6866,7 @@
         "created_at": "2015-09-07T11:39:26.545Z",
         "updated_at": "2020-10-04T08:56:12.319Z",
         "images": [
-            "040/pp.jpg"
+            "040-pp.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -6955,7 +6955,7 @@
         "created_at": "2015-09-07T11:48:11.836Z",
         "updated_at": "2020-08-12T14:08:56.848Z",
         "images": [
-            "053/image.jpg"
+            "053-image.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -7031,7 +7031,7 @@
         "created_at": "2015-09-08T09:53:22.464Z",
         "updated_at": "2020-10-03T15:48:42.201Z",
         "images": [
-            "182/1.jpg"
+            "182-1.jpg"
         ],
         "facilities": [
             "daylight",
@@ -7119,8 +7119,8 @@
         "created_at": "2015-09-10T16:30:44.059Z",
         "updated_at": "2020-10-04T09:11:44.247Z",
         "images": [
-            "143/press1.jpg",
-            "426/DSCF3666.JPG?1457105267"
+            "143-press1.jpg",
+            "426-DSCF3666.JPG"
         ],
         "facilities": [
             "food_drink",
@@ -7233,7 +7233,7 @@
         "created_at": "2015-09-10T16:35:23.966Z",
         "updated_at": "2020-10-04T08:43:37.914Z",
         "images": [
-            "109/image.jpg"
+            "109-image.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -7273,7 +7273,7 @@
         "access": "Anyone (public)",
         "space_type": "Café",
         "library": null,
-        "address": "5/7 Norfolk Street, Cambridge, CB1 2LD\r\n",
+        "address": "5-7 Norfolk Street, Cambridge, CB1 2LD\r\n",
         "floor": "Ground",
         "lat": "52.205",
         "lng": "0.134405",
@@ -7328,7 +7328,7 @@
         "created_at": "2015-09-10T16:40:21.896Z",
         "updated_at": "2020-10-04T08:26:59.138Z",
         "images": [
-            "048/image.jpg"
+            "048-image.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -7412,8 +7412,8 @@
         "created_at": "2015-09-10T16:47:28.834Z",
         "updated_at": "2020-10-04T08:40:40.628Z",
         "images": [
-            "012/FitzwilliamMuseum.jpg",
-            "013/FitzwilliamMuseum.jpg"
+            "012-FitzwilliamMuseum.jpg",
+            "013-FitzwilliamMuseum.jpg"
         ],
         "facilities": [
             "daylight",
@@ -7508,7 +7508,7 @@
         "created_at": "2015-09-10T16:52:12.442Z",
         "updated_at": "2020-10-04T08:42:13.363Z",
         "images": [
-            "011/fitzwilliam-museum-cafe.jpg"
+            "011-fitzwilliam-museum-cafe.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -7576,10 +7576,10 @@
         "created_at": "2015-09-12T17:23:45.795Z",
         "updated_at": "2021-04-26T08:26:11.758Z",
         "images": [
-            "187/6.jpg",
-            "188/1.jpg",
-            "189/7.jpg",
-            "190/5.jpg"
+            "187-6.jpg",
+            "188-1.jpg",
+            "189-7.jpg",
+            "190-5.jpg"
         ],
         "facilities": [
             "daylight",
@@ -7655,7 +7655,7 @@
         "created_at": "2015-09-12T17:29:40.587Z",
         "updated_at": "2021-04-26T08:26:30.622Z",
         "images": [
-            "192/3.jpg"
+            "192-3.jpg"
         ],
         "facilities": [
             "daylight",
@@ -7758,8 +7758,8 @@
         "created_at": "2015-09-15T13:53:14.856Z",
         "updated_at": "2021-09-07T14:35:59.246Z",
         "images": [
-            "489/1237552_10100654596480570_1917270310_n.jpg",
-            "491/IMAG1006.jpg"
+            "489-1237552_10100654596480570_1917270310_n.jpg",
+            "491-IMAG1006.jpg"
         ],
         "facilities": [
             "daylight",
@@ -7882,10 +7882,10 @@
         "created_at": "2015-09-17T07:52:10.971Z",
         "updated_at": "2021-04-26T08:28:04.984Z",
         "images": [
-            "217/seeley.jpg",
-            "219/4.jpg",
-            "330/seeley1.jpg",
-            "331/seeley2.jpg"
+            "217-seeley.jpg",
+            "219-4.jpg",
+            "330-seeley1.jpg",
+            "331-seeley2.jpg"
         ],
         "facilities": [
             "daylight",
@@ -7968,7 +7968,7 @@
         "created_at": "2015-09-17T09:47:29.596Z",
         "updated_at": "2021-04-26T08:23:50.446Z",
         "images": [
-            "260/geogcomputer.jpg"
+            "260-geogcomputer.jpg"
         ],
         "facilities": [
             "daylight",
@@ -8048,8 +8048,8 @@
         "created_at": "2015-09-17T09:59:42.533Z",
         "updated_at": "2021-04-26T08:24:14.559Z",
         "images": [
-            "263/geogmain.jpg",
-            "264/geogmain2.jpg"
+            "263-geogmain.jpg",
+            "264-geogmain2.jpg"
         ],
         "facilities": [
             "daylight",
@@ -8127,8 +8127,8 @@
         "created_at": "2015-09-17T10:17:12.452Z",
         "updated_at": "2021-04-26T08:24:01.980Z",
         "images": [
-            "261/geogper1.jpg",
-            "262/geogper2.jpg"
+            "261-geogper1.jpg",
+            "262-geogper2.jpg"
         ],
         "facilities": [
             "daylight",
@@ -8200,11 +8200,11 @@
         "created_at": "2015-09-18T13:08:42.919Z",
         "updated_at": "2020-10-03T17:04:01.998Z",
         "images": [
-            "086/5.jpg",
-            "087/4.jpg",
-            "088/_DSC0692.jpg",
-            "327/zoology1.jpg",
-            "328/zoology2.jpg"
+            "086-5.jpg",
+            "087-4.jpg",
+            "088-_DSC0692.jpg",
+            "327-zoology1.jpg",
+            "328-zoology2.jpg"
         ],
         "facilities": [
             "daylight",
@@ -8281,10 +8281,10 @@
         "created_at": "2015-09-18T13:23:49.881Z",
         "updated_at": "2021-04-26T08:21:59.627Z",
         "images": [
-            "201/1.jpg",
-            "202/2.jpg",
-            "203/3.jpg",
-            "204/4.jpg"
+            "201-1.jpg",
+            "202-2.jpg",
+            "203-3.jpg",
+            "204-4.jpg"
         ],
         "facilities": [
             "daylight",
@@ -8359,11 +8359,11 @@
         "created_at": "2015-09-18T14:39:04.963Z",
         "updated_at": "2020-10-03T17:04:18.713Z",
         "images": [
-            "083/1.jpg",
-            "084/2.jpg",
-            "085/3.jpg",
-            "322/newton1.jpg",
-            "324/newton2.jpg"
+            "083-1.jpg",
+            "084-2.jpg",
+            "085-3.jpg",
+            "322-newton1.jpg",
+            "324-newton2.jpg"
         ],
         "facilities": [
             "daylight",
@@ -8469,14 +8469,14 @@
         "created_at": "2015-09-22T10:32:29.446Z",
         "updated_at": "2021-08-17T18:30:21.623Z",
         "images": [
-            "355/IMG_4809.JPG?1453886684",
-            "356/IMG_4810.JPG?1453886685",
-            "365/1.JPG?1454585434",
-            "366/2.JPG?1454585434",
-            "367/3.JPG?1454585435",
-            "368/4.JPG?1454585436",
-            "369/5.JPG?1454585436",
-            "370/6.JPG?1454585437"
+            "355-IMG_4809.JPG",
+            "356-IMG_4810.JPG",
+            "365-1.JPG",
+            "366-2.JPG",
+            "367-3.JPG",
+            "368-4.JPG",
+            "369-5.JPG",
+            "370-6.JPG"
         ],
         "facilities": [
             "daylight",
@@ -8571,9 +8571,9 @@
         "created_at": "2015-09-22T10:40:14.480Z",
         "updated_at": "2021-08-17T18:33:53.833Z",
         "images": [
-            "391/20160217_090829.jpg",
-            "392/20160217_090836.jpg",
-            "393/20160217_090851.jpg"
+            "391-20160217_090829.jpg",
+            "392-20160217_090836.jpg",
+            "393-20160217_090851.jpg"
         ],
         "facilities": [
             "daylight",
@@ -8663,10 +8663,10 @@
         "created_at": "2015-09-22T10:52:23.103Z",
         "updated_at": "2021-08-17T18:31:14.953Z",
         "images": [
-            "231/DSCN0114.JPG?1444065981",
-            "232/DSCN0117.JPG?1444065983",
-            "233/DSCN0114.JPG?1444065985",
-            "234/DSCN0117.JPG?1444065986"
+            "231-DSCN0114.JPG",
+            "232-DSCN0117.JPG",
+            "233-DSCN0114.JPG",
+            "234-DSCN0117.JPG"
         ],
         "facilities": [
             "daylight",
@@ -8777,10 +8777,10 @@
         "created_at": "2015-09-25T14:20:09.619Z",
         "updated_at": "2021-08-17T18:32:58.175Z",
         "images": [
-            "094/PH-LIBRARY-MAP-RARE-BOOKS-000-00003.jpg",
-            "095/PH-LIBRARY-MAP-RARE-BOOKS-000-00004.jpg",
-            "290/PH-LIBRARY-MAP-RARE-BOOKS-000-00001.jpg",
-            "291/PH-LIBRARY-MAP-RARE-BOOKS-000-00002.jpg"
+            "094-PH-LIBRARY-MAP-RARE-BOOKS-000-00003.jpg",
+            "095-PH-LIBRARY-MAP-RARE-BOOKS-000-00004.jpg",
+            "290-PH-LIBRARY-MAP-RARE-BOOKS-000-00001.jpg",
+            "291-PH-LIBRARY-MAP-RARE-BOOKS-000-00002.jpg"
         ],
         "facilities": [
             "daylight",
@@ -8903,11 +8903,11 @@
         "created_at": "2015-09-25T14:20:51.095Z",
         "updated_at": "2020-10-03T17:15:56.977Z",
         "images": [
-            "075/PH-LIBRARY-MAP-MANUSCRIPTS-000-00001.jpg",
-            "076/PH-LIBRARY-MAP-MANUSCRIPTS-000-00002.jpg",
-            "286/PH-LIBRARY-MAP-MANUSCRIPTS-000-00003.jpg",
-            "287/PH-LIBRARY-MAP-MANUSCRIPTS-000-00005.jpg",
-            "288/PH-LIBRARY-MAP-MANUSCRIPTS-000-00006.jpg"
+            "075-PH-LIBRARY-MAP-MANUSCRIPTS-000-00001.jpg",
+            "076-PH-LIBRARY-MAP-MANUSCRIPTS-000-00002.jpg",
+            "286-PH-LIBRARY-MAP-MANUSCRIPTS-000-00003.jpg",
+            "287-PH-LIBRARY-MAP-MANUSCRIPTS-000-00005.jpg",
+            "288-PH-LIBRARY-MAP-MANUSCRIPTS-000-00006.jpg"
         ],
         "facilities": [
             "daylight",
@@ -9021,22 +9021,22 @@
         "created_at": "2015-09-25T15:49:29.901Z",
         "updated_at": "2020-10-03T17:12:32.178Z",
         "images": [
-            "049/PH-LIBRARY-MAP-AOI-000-00006.jpg",
-            "051/PH-LIBRARY-MAP-AOI-000-00005.jpg",
-            "281/PH-LIBRARY-MAP-AOI-000-00004.jpg",
-            "282/PH-LIBRARY-MAP-AOI-000-00007.jpg",
-            "395/DSCN0272.JPG?1457103828",
-            "396/DSCN0278.JPG?1457103829",
-            "397/DSCN0276.JPG?1457103830",
-            "398/DSCN0279.JPG?1457104416",
-            "399/DSCN0280.JPG?1457104418",
-            "400/DSCN0282.JPG?1457104419",
-            "401/DSCN0283.JPG?1457104420",
-            "402/DSCN0285.JPG?1457104422",
-            "403/DSCN0286.JPG?1457104423",
-            "404/DSCN0287.JPG?1457104424",
-            "405/DSCN0289.JPG?1457104425",
-            "406/DSCN0290.JPG?1457104426"
+            "049-PH-LIBRARY-MAP-AOI-000-00006.jpg",
+            "051-PH-LIBRARY-MAP-AOI-000-00005.jpg",
+            "281-PH-LIBRARY-MAP-AOI-000-00004.jpg",
+            "282-PH-LIBRARY-MAP-AOI-000-00007.jpg",
+            "395-DSCN0272.JPG",
+            "396-DSCN0278.JPG",
+            "397-DSCN0276.JPG",
+            "398-DSCN0279.JPG",
+            "399-DSCN0280.JPG",
+            "400-DSCN0282.JPG",
+            "401-DSCN0283.JPG",
+            "402-DSCN0285.JPG",
+            "403-DSCN0286.JPG",
+            "404-DSCN0287.JPG",
+            "405-DSCN0289.JPG",
+            "406-DSCN0290.JPG"
         ],
         "facilities": [
             "daylight",
@@ -9116,11 +9116,11 @@
         "created_at": "2015-09-25T15:56:11.003Z",
         "updated_at": "2020-10-03T17:13:16.873Z",
         "images": [
-            "056/PH-LIBRARY-MAP-AOI-000-00002.jpg",
-            "057/PH-LIBRARY-MAP-AOI-000-00003.jpg",
-            "283/PH-LIBRARY-MAP-AOI-000-00001.jpg",
-            "284/PH-LIBRARY-MAP-AOI-000-00004.jpg",
-            "427/DSCN0273.JPG?1457105362"
+            "056-PH-LIBRARY-MAP-AOI-000-00002.jpg",
+            "057-PH-LIBRARY-MAP-AOI-000-00003.jpg",
+            "283-PH-LIBRARY-MAP-AOI-000-00001.jpg",
+            "284-PH-LIBRARY-MAP-AOI-000-00004.jpg",
+            "427-DSCN0273.JPG"
         ],
         "facilities": [
             "daylight",
@@ -9197,8 +9197,8 @@
         "created_at": "2015-09-25T16:04:41.212Z",
         "updated_at": "2021-08-17T18:31:56.798Z",
         "images": [
-            "115/RRSW.JPG?1443695690",
-            "116/RRSW1%281%29.JPG?1443695691"
+            "115-RRSW.JPG",
+            "116-RRSW1%281%29.JPG"
         ],
         "facilities": [
             "daylight",
@@ -9276,7 +9276,7 @@
         "created_at": "2015-09-25T16:10:38.360Z",
         "updated_at": "2021-08-17T18:33:30.143Z",
         "images": [
-            "124/PH-LIBRARY-MAP-NORTH-CORRIDOR-000-00002.jpg"
+            "124-PH-LIBRARY-MAP-NORTH-CORRIDOR-000-00002.jpg"
         ],
         "facilities": [
             "daylight",
@@ -9352,7 +9352,7 @@
         "created_at": "2015-09-25T16:13:36.858Z",
         "updated_at": "2021-08-17T18:29:34.600Z",
         "images": [
-            "126/PH-LIBRARY-MAP-SOUTH-WING-000-00001.jpg"
+            "126-PH-LIBRARY-MAP-SOUTH-WING-000-00001.jpg"
         ],
         "facilities": [
             "daylight",
@@ -9423,17 +9423,17 @@
         "created_at": "2015-09-25T16:17:17.044Z",
         "updated_at": "2021-08-17T18:30:40.401Z",
         "images": [
-            "105/PH-LIBRARY-FRONT-CORRIDORS-000-00004.jpg",
-            "106/PH-LIBRARY-FRONT-CORRIDORS-000-00005.jpg",
-            "428/DSCN0259.JPG?1457105546",
-            "429/DSCN0260.JPG?1457105547",
-            "430/DSCN0261.JPG?1457105548",
-            "431/DSCN0264.JPG?1457105549",
-            "432/DSCN0265.JPG?1457105551",
-            "433/DSCN0266.JPG?1457105552",
-            "434/DSCN0267.JPG?1457105553",
-            "435/DSCN0269.JPG?1457105554",
-            "436/DSCN0270.JPG?1457105556"
+            "105-PH-LIBRARY-FRONT-CORRIDORS-000-00004.jpg",
+            "106-PH-LIBRARY-FRONT-CORRIDORS-000-00005.jpg",
+            "428-DSCN0259.JPG",
+            "429-DSCN0260.JPG",
+            "430-DSCN0261.JPG",
+            "431-DSCN0264.JPG",
+            "432-DSCN0265.JPG",
+            "433-DSCN0266.JPG",
+            "434-DSCN0267.JPG",
+            "435-DSCN0269.JPG",
+            "436-DSCN0270.JPG"
         ],
         "facilities": [
             "daylight",
@@ -9520,7 +9520,7 @@
         "created_at": "2015-09-28T12:41:39.452Z",
         "updated_at": "2020-10-03T17:16:18.226Z",
         "images": [
-            "080/PH-LIBRARY-MAP-MAPROOM-000-00002.jpg"
+            "080-PH-LIBRARY-MAP-MAPROOM-000-00002.jpg"
         ],
         "facilities": [
             "daylight",
@@ -9619,7 +9619,7 @@
         "created_at": "2015-10-01T11:02:46.635Z",
         "updated_at": "2021-05-05T14:07:12.620Z",
         "images": [
-            "138/PH-LIBRARY-MAP-TEA-ROOM-000-00001.jpg"
+            "138-PH-LIBRARY-MAP-TEA-ROOM-000-00001.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -9682,7 +9682,7 @@
         "created_at": "2015-10-01T13:51:52.454Z",
         "updated_at": "2020-10-04T08:33:08.786Z",
         "images": [
-            "148/Costa_-_corner_of_Sussex_Street_and_Sidney_Street_-_geograph.org.uk_-_713002.jpg"
+            "148-Costa_-_corner_of_Sussex_Street_and_Sidney_Street_-_geograph.org.uk_-_713002.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -9731,7 +9731,7 @@
         "created_at": "2015-10-01T20:35:01.730Z",
         "updated_at": "2021-04-26T11:04:42.370Z",
         "images": [
-            "173/5.jpg"
+            "173-5.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -9784,7 +9784,7 @@
         "created_at": "2015-10-06T17:21:25.343Z",
         "updated_at": "2020-10-04T08:31:33.124Z",
         "images": [
-            "237/image.jpg"
+            "237-image.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -9835,9 +9835,9 @@
         "created_at": "2015-10-07T10:14:11.103Z",
         "updated_at": "2020-10-04T09:14:27.667Z",
         "images": [
-            "238/mill0.jpg",
-            "239/mill2.jpg",
-            "240/mill1.jpg"
+            "238-mill0.jpg",
+            "239-mill2.jpg",
+            "240-mill1.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -9889,7 +9889,7 @@
         "created_at": "2015-10-07T10:29:08.572Z",
         "updated_at": "2020-10-04T08:51:42.760Z",
         "images": [
-            "241/laundress_green.jpg"
+            "241-laundress_green.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -9956,8 +9956,8 @@
         "created_at": "2015-10-08T18:03:29.266Z",
         "updated_at": "2020-10-04T09:13:47.092Z",
         "images": [
-            "245/maypole2.jpg",
-            "246/maypole.jpg"
+            "245-maypole2.jpg",
+            "246-maypole.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -10046,7 +10046,7 @@
         "created_at": "2015-10-13T15:09:46.344Z",
         "updated_at": "2020-10-03T15:41:25.320Z",
         "images": [
-            "247/JCR.jpg"
+            "247-JCR.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -10114,7 +10114,7 @@
         "created_at": "2015-10-15T16:45:16.093Z",
         "updated_at": "2021-04-26T11:06:17.512Z",
         "images": [
-            "248/IMG_3644.JPG?1444927644"
+            "248-IMG_3644.JPG"
         ],
         "facilities": [
             "free_wifi",
@@ -10175,7 +10175,7 @@
         "created_at": "2015-10-15T16:58:00.515Z",
         "updated_at": "2021-04-26T11:07:04.956Z",
         "images": [
-            "249/IMG_3642.JPG?1444928279"
+            "249-IMG_3642.JPG"
         ],
         "facilities": [
             "large_desks",
@@ -10230,10 +10230,10 @@
         "created_at": "2015-10-15T17:13:15.640Z",
         "updated_at": "2021-04-26T11:06:40.677Z",
         "images": [
-            "254/IMG_3649.JPG?1444929498",
-            "255/IMG_3658.JPG?1444929499",
-            "256/IMG_3648.JPG?1444929500",
-            "257/IMG_3651.JPG?1444929501"
+            "254-IMG_3649.JPG",
+            "255-IMG_3658.JPG",
+            "256-IMG_3648.JPG",
+            "257-IMG_3651.JPG"
         ],
         "facilities": [
             "daylight",
@@ -10296,7 +10296,7 @@
         "created_at": "2015-10-15T17:13:48.983Z",
         "updated_at": "2021-04-26T11:06:53.176Z",
         "images": [
-            "258/IMG_3645.JPG?1444929735"
+            "258-IMG_3645.JPG"
         ],
         "facilities": [
             "large_desks",
@@ -10358,7 +10358,7 @@
         "created_at": "2015-10-15T17:30:08.326Z",
         "updated_at": "2021-04-26T11:06:28.442Z",
         "images": [
-            "259/IMG_3660.JPG?1444930207"
+            "259-IMG_3660.JPG"
         ],
         "facilities": [
             "daylight",
@@ -10439,10 +10439,10 @@
         "created_at": "2016-01-08T10:06:29.070Z",
         "updated_at": "2021-04-26T11:10:43.940Z",
         "images": [
-            "302/Study_area.JPG?1452247704",
-            "303/Study_area_2.JPG?1452247705",
-            "304/Terminals_display_case.JPG?1452247707",
-            "351/SPRI.jpg"
+            "302-Study_area.JPG",
+            "303-Study_area_2.JPG",
+            "304-Terminals_display_case.JPG",
+            "351-SPRI.jpg"
         ],
         "facilities": [
             "free_wifi",
@@ -10593,7 +10593,7 @@
         "created_at": "2016-01-18T15:20:41.791Z",
         "updated_at": "2020-10-04T08:47:18.208Z",
         "images": [
-            "319/hotel_chocolat.jpg"
+            "319-hotel_chocolat.jpg"
         ],
         "facilities": [
             "toilets",
@@ -10637,7 +10637,7 @@
         "created_at": "2016-01-18T15:20:55.482Z",
         "updated_at": "2020-10-04T08:24:20.371Z",
         "images": [
-            "320/Gwydir-Street-Cambridge-Blue-Matt.jpg"
+            "320-Gwydir-Street-Cambridge-Blue-Matt.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -10701,7 +10701,7 @@
         "created_at": "2016-01-18T15:23:07.967Z",
         "updated_at": "2020-10-04T09:11:17.198Z",
         "images": [
-            "323/830381_486232178081230_1407903979_o.jpg"
+            "323-830381_486232178081230_1407903979_o.jpg"
         ],
         "facilities": [
             "toilets"
@@ -10857,7 +10857,7 @@
         "created_at": "2016-01-18T15:26:04.054Z",
         "updated_at": "2020-10-04T09:02:33.563Z",
         "images": [
-            "325/christs_lane_cambridge.jpg"
+            "325-christs_lane_cambridge.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -10915,7 +10915,7 @@
         "created_at": "2016-01-18T15:26:18.205Z",
         "updated_at": "2020-10-04T09:09:32.274Z",
         "images": [
-            "326/front-bar.jpg"
+            "326-front-bar.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -10981,7 +10981,7 @@
         "created_at": "2016-01-18T15:29:07.314Z",
         "updated_at": "2020-10-04T08:27:31.826Z",
         "images": [
-            "329/Charlie's.jpg"
+            "329-Charlie's.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -11202,7 +11202,7 @@
         "created_at": "2016-01-18T15:39:32.709Z",
         "updated_at": "2020-10-04T08:26:28.709Z",
         "images": [
-            "332/catesbys.jpg"
+            "332-catesbys.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -11267,7 +11267,7 @@
         "created_at": "2016-01-18T15:41:10.253Z",
         "updated_at": "2020-10-04T09:12:45.418Z",
         "images": [
-            "333/12508721_785696788207020_2368513550188574683_n.jpg"
+            "333-12508721_785696788207020_2368513550188574683_n.jpg"
         ],
         "facilities": [
             "views",
@@ -11320,7 +11320,7 @@
         "created_at": "2016-01-18T15:45:33.661Z",
         "updated_at": "2020-10-04T08:59:55.164Z",
         "images": [
-            "335/prince-regent-2.jpg"
+            "335-prince-regent-2.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -11400,10 +11400,10 @@
         "created_at": "2016-01-18T15:46:01.976Z",
         "updated_at": "2020-10-04T09:06:38.103Z",
         "images": [
-            "346/Blue_Moon.jpg",
-            "421/DSCF3656.JPG?1457105154",
-            "422/DSCF3658.JPG?1457105155",
-            "423/DSCF3659.JPG?1457105156"
+            "346-Blue_Moon.jpg",
+            "421-DSCF3656.JPG",
+            "422-DSCF3658.JPG",
+            "423-DSCF3659.JPG"
         ],
         "facilities": [
             "food_drink",
@@ -11558,8 +11558,8 @@
         "created_at": "2016-01-18T15:48:35.626Z",
         "updated_at": "2020-10-04T09:01:05.934Z",
         "images": [
-            "338/relevantrecordcafe-009.jpg",
-            "339/relevantrecordcafe-019.jpg"
+            "338-relevantrecordcafe-009.jpg",
+            "339-relevantrecordcafe-019.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -11616,7 +11616,7 @@
         "created_at": "2016-01-18T15:49:42.166Z",
         "updated_at": "2020-10-04T08:16:13.449Z",
         "images": [
-            "340/balzano-s-delicatessen.jpg"
+            "340-balzano-s-delicatessen.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -11753,7 +11753,7 @@
         "created_at": "2016-01-18T16:01:12.588Z",
         "updated_at": "2020-10-04T08:54:57.638Z",
         "images": [
-            "344/banner-images-8.jpg"
+            "344-banner-images-8.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -11820,7 +11820,7 @@
         "created_at": "2016-01-18T16:01:54.225Z",
         "updated_at": "2020-10-04T08:14:41.809Z",
         "images": [
-            "345/aromi1.jpg"
+            "345-aromi1.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -11884,7 +11884,7 @@
         "created_at": "2016-01-18T16:06:12.338Z",
         "updated_at": "2020-10-04T09:19:26.599Z",
         "images": [
-            "348/2be4a322-4b66-4b41-a1fa-932e58f755c6.jpeg?1453133172"
+            "348-2be4a322-4b66-4b41-a1fa-932e58f755c6.jpeg"
         ],
         "facilities": [
             "large_desks",
@@ -11951,7 +11951,7 @@
         "created_at": "2016-01-18T16:08:35.625Z",
         "updated_at": "2020-10-04T08:21:34.373Z",
         "images": [
-            "349/cafemilano.jpg"
+            "349-cafemilano.jpg"
         ],
         "facilities": [
             "food_drink"
@@ -11996,7 +11996,7 @@
         "created_at": "2016-01-18T16:09:45.992Z",
         "updated_at": "2020-10-04T09:05:46.873Z",
         "images": [
-            "350/almapub.JPG?1453133385"
+            "350-almapub.JPG"
         ],
         "facilities": [
             "food_drink",
@@ -12138,7 +12138,7 @@
         "created_at": "2016-01-18T16:12:23.202Z",
         "updated_at": "2020-10-04T08:56:39.976Z",
         "images": [
-            "352/090ee3fe6737c8925433e3cde7aabf5b_640x478.jpg"
+            "352-090ee3fe6737c8925433e3cde7aabf5b_640x478.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -12215,7 +12215,7 @@
         "created_at": "2016-01-18T16:18:51.617Z",
         "updated_at": "2020-10-04T09:10:50.739Z",
         "images": [
-            "353/Elm_Tree.jpg"
+            "353-Elm_Tree.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -12287,7 +12287,7 @@
         "created_at": "2016-01-18T16:21:33.152Z",
         "updated_at": "2020-10-04T08:57:14.573Z",
         "images": [
-            "354/patisserie-valerie.jpg"
+            "354-patisserie-valerie.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -12391,8 +12391,8 @@
         "created_at": "2016-01-29T18:40:52.232Z",
         "updated_at": "2021-04-26T08:30:31.225Z",
         "images": [
-            "363/image1_%281%29.JPG?1454177591",
-            "364/image3.JPG?1454177591"
+            "363-image1_%281%29.JPG",
+            "364-image3.JPG"
         ],
         "facilities": [
             "daylight",
@@ -12515,8 +12515,8 @@
         "created_at": "2016-01-29T18:48:24.276Z",
         "updated_at": "2021-04-26T08:30:18.033Z",
         "images": [
-            "361/image1.JPG?1454176765",
-            "362/image2.JPG?1454176766"
+            "361-image1.JPG",
+            "362-image2.JPG"
         ],
         "facilities": [
             "daylight",
@@ -12626,9 +12626,9 @@
         "created_at": "2016-02-17T09:54:35.979Z",
         "updated_at": "2021-04-26T08:12:08.186Z",
         "images": [
-            "386/New_library_space_019.JPG?1455702874",
-            "389/New_library_space_018.JPG?1455707973",
-            "390/silentspace.jpg"
+            "386-New_library_space_019.JPG",
+            "389-New_library_space_018.JPG",
+            "390-silentspace.jpg"
         ],
         "facilities": [
             "daylight",
@@ -12702,7 +12702,7 @@
         "created_at": "2016-03-04T15:26:47.418Z",
         "updated_at": "2020-10-04T08:57:42.625Z",
         "images": [
-            "424/c3602-1.jpg"
+            "424-c3602-1.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -12780,7 +12780,7 @@
         "created_at": "2016-03-04T15:27:13.110Z",
         "updated_at": "2020-10-04T08:10:34.540Z",
         "images": [
-            "425/the-green-coffee-company.jpg"
+            "425-the-green-coffee-company.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -12836,9 +12836,9 @@
         "created_at": "2016-03-04T15:36:41.646Z",
         "updated_at": "2020-10-04T09:07:30.437Z",
         "images": [
-            "437/Screen_Shot_2016-03-04_at_15.24.48.png?1457105801",
-            "438/DSCF3661.JPG?1457105872",
-            "439/DSCF3662.JPG?1457105873"
+            "437-Screen_Shot_2016-03-04_at_15.24.48.png?1457105801",
+            "438-DSCF3661.JPG",
+            "439-DSCF3662.JPG"
         ],
         "facilities": [
             "food_drink",
@@ -12914,7 +12914,7 @@
         "created_at": "2016-03-04T15:51:14.798Z",
         "updated_at": "2020-10-04T08:59:21.729Z",
         "images": [
-            "440/DSC09078-500x332.jpg"
+            "440-DSC09078-500x332.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -13071,7 +13071,7 @@
         "created_at": "2016-03-04T16:02:10.279Z",
         "updated_at": "2020-10-04T08:48:55.103Z",
         "images": [
-            "441/pret-a-manger.jpg"
+            "441-pret-a-manger.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -13135,8 +13135,8 @@
         "created_at": "2016-03-04T16:06:01.293Z",
         "updated_at": "2020-10-04T09:09:58.327Z",
         "images": [
-            "442/The_Eagle_pub_ceiling.jpg",
-            "443/1146641_137201689823556_938485054_n.jpg"
+            "442-The_Eagle_pub_ceiling.jpg",
+            "443-1146641_137201689823556_938485054_n.jpg"
         ],
         "facilities": [
             "large_desks",
@@ -13225,9 +13225,9 @@
         "created_at": "2016-05-17T13:12:19.250Z",
         "updated_at": "2020-10-03T16:51:53.077Z",
         "images": [
-            "455/20160526_085545.jpg",
-            "456/Entrance.jpg",
-            "457/Hallway.jpg"
+            "455-20160526_085545.jpg",
+            "456-Entrance.jpg",
+            "457-Hallway.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -13291,7 +13291,7 @@
         "created_at": "2016-06-05T09:36:02.948Z",
         "updated_at": "2021-04-26T11:08:26.095Z",
         "images": [
-            "458/The_Community_Room_-_for_quiet_study.JPG?1465119360"
+            "458-The_Community_Room_-_for_quiet_study.JPG"
         ],
         "facilities": [
             "daylight",
@@ -13345,8 +13345,8 @@
         "created_at": "2016-06-05T09:54:02.126Z",
         "updated_at": "2021-04-26T11:08:38.283Z",
         "images": [
-            "459/Rock_Road_Library.JPG?1465120439",
-            "460/Reading_area_with_hot_drinks_machine.JPG?1465120440"
+            "459-Rock_Road_Library.JPG",
+            "460-Reading_area_with_hot_drinks_machine.JPG"
         ],
         "facilities": [
             "daylight",
@@ -13402,7 +13402,7 @@
         "created_at": "2016-06-05T10:02:29.017Z",
         "updated_at": "2021-04-26T11:08:10.799Z",
         "images": [
-            "464/The_community_garden_-_sit_outside_when_it's_warm.tif?1465147434"
+            "464-The_community_garden_-_sit_outside_when_it's_warm.tif?1465147434"
         ],
         "facilities": [
             "daylight",
@@ -13580,7 +13580,7 @@
         "created_at": "2017-02-16T11:33:57.765Z",
         "updated_at": "2020-10-04T09:18:43.804Z",
         "images": [
-            "480/cambridge-2000x1000.jpg"
+            "480-cambridge-2000x1000.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -13637,7 +13637,7 @@
         "created_at": "2017-02-16T11:36:07.403Z",
         "updated_at": "2020-10-04T08:55:41.272Z",
         "images": [
-            "481/C1zyq1jWIAE3fn6.jpg_large.jpg"
+            "481-C1zyq1jWIAE3fn6.jpg_large.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -13722,7 +13722,7 @@
         "created_at": "2017-02-16T11:38:19.107Z",
         "updated_at": "2020-10-04T08:18:09.093Z",
         "images": [
-            "482/breadandmeeat.jpg"
+            "482-breadandmeeat.jpg"
         ],
         "facilities": [
             "free_wifi",
@@ -13908,7 +13908,7 @@
         "created_at": "2017-02-16T11:54:15.744Z",
         "updated_at": "2020-10-04T08:25:37.231Z",
         "images": [
-            "483/cafe-1.jpg"
+            "483-cafe-1.jpg"
         ],
         "facilities": [
             "laptops_allowed",
@@ -14095,8 +14095,8 @@
         "created_at": "2017-02-16T11:59:19.574Z",
         "updated_at": "2020-10-04T09:10:25.581Z",
         "images": [
-            "484/14907002_445035005666688_5138173727821744253_n.jpg",
-            "485/2.jpg"
+            "484-14907002_445035005666688_5138173727821744253_n.jpg",
+            "485-2.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -14276,10 +14276,10 @@
         "created_at": "2017-08-29T15:57:21.237Z",
         "updated_at": "2020-10-04T08:34:50.689Z",
         "images": [
-            "492/image4.JPG?1504022742",
-            "493/image2.JPG?1504022744",
-            "494/image6.JPG?1504022745",
-            "495/image5.JPG?1504022899"
+            "492-image4.JPG",
+            "493-image2.JPG",
+            "494-image6.JPG",
+            "495-image5.JPG"
         ],
         "facilities": [
             "food_drink",
@@ -14403,8 +14403,8 @@
         "created_at": "2017-10-07T09:51:11.787Z",
         "updated_at": "2020-10-03T14:30:55.813Z",
         "images": [
-            "496/temp1.jpg",
-            "497/temp2.jpg"
+            "496-temp1.jpg",
+            "497-temp2.jpg"
         ],
         "facilities": [
             "daylight",
@@ -14504,12 +14504,12 @@
         "created_at": "2018-01-22T15:06:58.032Z",
         "updated_at": "2020-10-03T17:03:24.136Z",
         "images": [
-            "498/IMG_1550.JPG?1516633615",
-            "499/IMG_1454.JPG?1516633616",
-            "500/Woolf_GF2DM.jpg",
-            "501/Woolf_QR1DM.jpg",
-            "502/IMG_1566.JPG?1516633777",
-            "508/20180205_130625.jpg"
+            "498-IMG_1550.JPG",
+            "499-IMG_1454.JPG",
+            "500-Woolf_GF2DM.jpg",
+            "501-Woolf_QR1DM.jpg",
+            "502-IMG_1566.JPG",
+            "508-20180205_130625.jpg"
         ],
         "facilities": [
             "daylight",
@@ -14592,12 +14592,12 @@
         "created_at": "2018-01-22T15:18:48.454Z",
         "updated_at": "2020-10-03T17:02:27.597Z",
         "images": [
-            "503/IMG_1433.JPG?1516634325",
-            "504/IMG_1431.JPG?1516634325",
-            "505/IMG_1429.JPG?1516634326",
-            "506/IMG_1419.JPG?1516634326",
-            "507/IMG_1418.JPG?1516634327",
-            "509/20180205_130625.jpg"
+            "503-IMG_1433.JPG",
+            "504-IMG_1431.JPG",
+            "505-IMG_1429.JPG",
+            "506-IMG_1419.JPG",
+            "507-IMG_1418.JPG",
+            "509-20180205_130625.jpg"
         ],
         "facilities": [
             "large_desks",
@@ -15057,8 +15057,8 @@
         "created_at": "2019-06-13T15:53:43.014Z",
         "updated_at": "2020-10-03T14:45:38.367Z",
         "images": [
-            "516/32910930427_2e0c60c216_o.jpg",
-            "517/40888369743_3981803f03_o.jpg"
+            "516-32910930427_2e0c60c216_o.jpg",
+            "517-40888369743_3981803f03_o.jpg"
         ],
         "facilities": [
             "daylight",
@@ -15152,9 +15152,9 @@
         "created_at": "2019-07-19T09:33:33.924Z",
         "updated_at": "2020-10-04T08:18:35.516Z",
         "images": [
-            "525/bridges.jpg",
-            "526/bridges-shop.jpg",
-            "527/bridges3.png?1563529310"
+            "525-bridges.jpg",
+            "526-bridges-shop.jpg",
+            "527-bridges3.png?1563529310"
         ],
         "facilities": [
             "food_drink",
@@ -15228,8 +15228,8 @@
         "created_at": "2019-07-19T09:36:37.754Z",
         "updated_at": "2020-10-04T08:49:35.240Z",
         "images": [
-            "518/indigo_outside.jpg",
-            "519/indigo-inside.jpg"
+            "518-indigo_outside.jpg",
+            "519-indigo-inside.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -15303,9 +15303,9 @@
         "created_at": "2019-07-19T09:36:54.204Z",
         "updated_at": "2020-10-04T08:19:58.172Z",
         "images": [
-            "520/camtown.jpg",
-            "521/camtown2.jpg",
-            "522/outside-the-great-cafe.jpg"
+            "520-camtown.jpg",
+            "521-camtown2.jpg",
+            "522-outside-the-great-cafe.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -15401,8 +15401,8 @@
         "created_at": "2019-07-19T09:41:21.031Z",
         "updated_at": "2020-10-04T09:07:03.892Z",
         "images": [
-            "523/boathouse-cambridge.jpg",
-            "524/the-boathouse.jpg"
+            "523-boathouse-cambridge.jpg",
+            "524-the-boathouse.jpg"
         ],
         "facilities": [
             "food_drink",
@@ -15485,8 +15485,8 @@
         "created_at": "2019-07-19T09:45:39.478Z",
         "updated_at": "2020-10-04T08:12:01.826Z",
         "images": [
-            "528/47082_5_Blends_4.jpg",
-            "529/IMG_7793-300x236.jpg"
+            "528-47082_5_Blends_4.jpg",
+            "529-IMG_7793-300x236.jpg"
         ],
         "facilities": [
             "daylight",
@@ -15562,8 +15562,8 @@
         "created_at": "2019-07-19T09:52:52.120Z",
         "updated_at": "2020-10-04T09:19:55.306Z",
         "images": [
-            "530/urban_larder_outside.jpg",
-            "531/Urban_larder_inside.jpg"
+            "530-urban_larder_outside.jpg",
+            "531-Urban_larder_inside.jpg"
         ],
         "facilities": [
             "daylight",
@@ -15634,8 +15634,8 @@
         "created_at": "2019-07-19T09:55:54.405Z",
         "updated_at": "2020-10-04T09:23:02.959Z",
         "images": [
-            "532/whale_cafe_edit.png?1563530153",
-            "533/David-Attenborough-Cambridge-University-1007.jpg"
+            "532-whale_cafe_edit.png?1563530153",
+            "533-David-Attenborough-Cambridge-University-1007.jpg"
         ],
         "facilities": [
             "daylight",
@@ -15808,8 +15808,8 @@
         "created_at": "2019-07-19T10:00:02.055Z",
         "updated_at": "2020-10-04T08:35:20.225Z",
         "images": [
-            "534/Espresso_Lan.jpg",
-            "535/Espresso_Lane.jpg"
+            "534-Espresso_Lan.jpg",
+            "535-Espresso_Lane.jpg"
         ],
         "facilities": [
             "daylight",
@@ -15894,8 +15894,8 @@
         "created_at": "2019-07-19T10:09:02.341Z",
         "updated_at": "2020-10-04T09:12:15.477Z",
         "images": [
-            "536/garden_kitchen_outside.jpeg?1563530942",
-            "537/garden_kitchen_inside.jpg"
+            "536-garden_kitchen_outside.jpeg",
+            "537-garden_kitchen_inside.jpg"
         ],
         "facilities": [
             "daylight",
@@ -15988,9 +15988,9 @@
         "created_at": "2019-07-19T10:13:12.731Z",
         "updated_at": "2020-10-04T08:53:07.448Z",
         "images": [
-            "538/01.jpeg?1563531192",
-            "539/02.jpg",
-            "540/03.png?1563531192"
+            "538-01.jpeg",
+            "539-02.jpg",
+            "540-03.png?1563531192"
         ],
         "facilities": [
             "daylight",
@@ -16118,8 +16118,8 @@
         "created_at": "2019-07-19T10:17:48.369Z",
         "updated_at": "2020-10-04T08:33:36.041Z",
         "images": [
-            "541/0_FL_TMS_040419creams2.jpg",
-            "542/Creams-Cafe-interior-under-construction.jpg"
+            "541-0_FL_TMS_040419creams2.jpg",
+            "542-Creams-Cafe-interior-under-construction.jpg"
         ],
         "facilities": [
             "signal",
@@ -16169,8 +16169,8 @@
         "created_at": "2019-07-19T10:17:54.989Z",
         "updated_at": "2020-10-04T08:30:55.291Z",
         "images": [
-            "543/cornerstone2.png?1563531473",
-            "544/cornerstone.png?1563531474"
+            "543-cornerstone2.png?1563531473",
+            "544-cornerstone.png?1563531474"
         ],
         "facilities": [
             "daylight",
@@ -16238,7 +16238,7 @@
         "created_at": "2019-07-19T10:25:43.343Z",
         "updated_at": "2021-04-26T08:31:38.933Z",
         "images": [
-            "545/Medical_Library_share_space.jpg"
+            "545-Medical_Library_share_space.jpg"
         ],
         "facilities": [
             "daylight",
@@ -16296,9 +16296,9 @@
         "created_at": "2019-07-19T10:28:20.622Z",
         "updated_at": "2020-10-04T08:29:25.961Z",
         "images": [
-            "546/c3_church.jpg",
-            "547/JPGColdhams_coffee.2.jpg",
-            "548/JPGColdhams_coffee.jpg"
+            "546-c3_church.jpg",
+            "547-JPGColdhams_coffee.2.jpg",
+            "548-JPGColdhams_coffee.jpg"
         ],
         "facilities": [
             "views",
@@ -16365,8 +16365,8 @@
         "created_at": "2019-07-19T10:37:16.315Z",
         "updated_at": "2021-04-26T08:31:53.342Z",
         "images": [
-            "549/shh_room.PNG?1563532635",
-            "550/shhh_room_standing_desk.jpg"
+            "549-shh_room.PNG?1563532635",
+            "550-shhh_room_standing_desk.jpg"
         ],
         "facilities": [
             "daylight",
@@ -16448,7 +16448,7 @@
         "created_at": "2019-07-19T10:37:50.388Z",
         "updated_at": "2020-10-04T09:08:45.658Z",
         "images": [
-            "551/the_coffee_house.jpg"
+            "551-the_coffee_house.jpg"
         ],
         "facilities": [
             "daylight",
@@ -16522,8 +16522,8 @@
         "created_at": "2019-07-19T10:44:59.345Z",
         "updated_at": "2021-04-26T08:31:26.208Z",
         "images": [
-            "552/read_room.jpg",
-            "553/read_room_2.jpg"
+            "552-read_room.jpg",
+            "553-read_room_2.jpg"
         ],
         "facilities": [
             "daylight",
@@ -16611,8 +16611,8 @@
         "created_at": "2019-07-19T10:46:45.534Z",
         "updated_at": "2020-10-04T08:14:10.882Z",
         "images": [
-            "554/arena.png?1563533204",
-            "555/arena2.png?1563533205"
+            "554-arena.png?1563533204",
+            "555-arena2.png?1563533205"
         ],
         "facilities": [
             "free_wifi",
@@ -16716,8 +16716,8 @@
         "created_at": "2019-07-19T10:49:57.028Z",
         "updated_at": "2020-10-04T08:19:30.981Z",
         "images": [
-            "556/bluesage.jpeg?1563533396",
-            "557/bluesage2.jpeg?1563533396"
+            "556-bluesage.jpeg",
+            "557-bluesage2.jpeg"
         ],
         "facilities": [
             "signal",
