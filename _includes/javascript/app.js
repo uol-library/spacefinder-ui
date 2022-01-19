@@ -390,12 +390,32 @@ function loadSpaces() {
         $.each(points, function (key, value) {
             points[key].link = '#/space/' + points[key].id;
             points[key].distanceFromCentre = haversine_distance(currentLoc, {lat:points[key].lat,lng:points[key].lng});
+            points[key].classes = get_class_list(points[key]);
         });
         loadSearch();
         loadMap();
         loadList();
     });
     loadSpacesInProgress = false;
+}
+function get_class_list(space) {
+    var classList = '';
+    if (space.work.length){
+        classList += 'work_'+space.work.join(' work_')+' ';
+    }
+    if (space.facilities.length){
+        classList += 'facility_'+space.facilities.join(' facility_')+' ';
+    }
+    if (space.atmosphere.length){
+        classList += 'atmosphere_'+space.atmosphere.join(' atmosphere_')+' ';
+    }
+    if (space.noise) {
+        classList += 'noise_'+space.noise.replace(/\W/g, '').toLowerCase();
+    }
+    if (space.type) {
+        classList += 'type_'+space.space-type.replace(/\W/g, '').toLowerCase();
+    }
+    return classList;
 }
 function loadSearch() {
     getJSON({key:'filters',path:'/filters.json'}, function(data) {
