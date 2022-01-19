@@ -426,18 +426,6 @@ function sortNumber(a, b) {
     return a - b;
 }
 
-function showLoginScreen(container, data) {
-    var $con = $(container);
-    var tData = {};
-    $.extend(tData, data);
-
-    $('<div />')
-        .addClass('login-screen')
-        .html(parseTemplate('login', tData))
-        .appendTo($con);
-    $($con.parents('div')[$con.parents('div').length - 1]).scrollTop(0);
-
-}
 
 
 function getSpaces(options, callback) {
@@ -787,7 +775,6 @@ function parseTemplate(t, data, partial) {
     } else {
         template = templates[t].template;
     }
-    console.log(template);
     arrays = template.match(r);
     if (arrays !== null) {
         for (var i = 0; i < arrays.length; i++) {

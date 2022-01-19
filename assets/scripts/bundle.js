@@ -6,6 +6,7 @@
 {% include javascript/jquery.ui.js %}
 {% include javascript/icon-map.js %}
 {% include javascript/moment.js %}
+{% include javascript/lazyload.js %}
 {% include javascript/utilities.js %}
 {% include javascript/templates.js %}
 {% include javascript/app.js %}
