@@ -388,11 +388,8 @@ function loadSpaces() {
     getJSON({key:'spaces',path:'/spaces.json'}, function(data){
         points = data;
         $.each(points, function (key, value) {
-            points[key].link = '#/space/' + points[key].id + '/' + (points[key].name).replace(' ', '-');
-            $.each(points[key].images, function(idx){
-                points[key].images[idx] = 'assets/photos/'+points[key].images[idx];
-                points[key].distanceFromCentre = haversine_distance(currentLoc, {lat:points[key].lat,lng:points[key].lng});
-            });
+            points[key].link = '#/space/' + points[key].id;
+            points[key].distanceFromCentre = haversine_distance(currentLoc, {lat:points[key].lat,lng:points[key].lng});
         });
         loadSearch();
         loadMap();
