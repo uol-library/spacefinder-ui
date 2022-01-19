@@ -6,14 +6,14 @@ body, html {
     background: $backgroundColor;
     font-size: 14px;
     height: 100vh;
-    font-family: "myriad-pro-n3", "myriad-pro", myriad, verdana, arial, sans-serif;
+    font-family: $fancyFont, verdana, arial, sans-serif;
     font-weight: lighter;
 }
 * {
     box-sizing: border-box;
 }
 strong {
-    font-family: 'Myriad Pro', verdana, sans-serif;
+    font-family: $fancyFont, verdana, sans-serif;
     font-weight: normal;
 }
 .view-container {

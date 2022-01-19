@@ -1,12 +1,13 @@
 @font-face {
 	font-family: 'spacefinder';
-	src:font-url('spacefinder.eot?j6f4kv');
-	src:font-url('spacefinder.eot?#iefixj6f4kv') format('embedded-opentype'),
-		font-url('spacefinder.ttf?j6f4kv') format('truetype'),
-		font-url('spacefinder.woff?j6f4kv') format('woff'),
-		font-url('spacefinder.svg?j6f4kv#spacefinder') format('svg');
+	src: url('../fonts/spacefinder.eot');
+	src: url('../fonts/spacefinder.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/spacefinder.woff2') format('woff2'),
+		 url('../fonts/spacefinder.woff') format('woff'),
+		 url('../fonts/spacefinder.svg#spacefinder') format('svg');
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 
 [class^="icon-"], [class*=" icon-"] {

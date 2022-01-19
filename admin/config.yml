@@ -14,11 +14,14 @@ collections:
     editor:
       preview: false
     show_preview_links: false
-    slug: '{{name}}'
+    slug: '{{id}}'
     extension: 'json'
     format: 'json'
     identifier_field: 'name'
     fields:
+      - label: 'Space ID'
+        name: 'id'
+        widget: 'number'
       - label: 'Space name'
         name: 'name'
         widget: 'string'
@@ -89,6 +92,7 @@ collections:
           - { value: 'daylight', label: 'Natural daylight' }
           - { value: 'views', label: 'Attractive views out of the window' }
           - { value: 'large_desks', label: 'Large desks' }
+          - { value: 'individual_study_space', label: 'Individual study space' }
           - { value: 'free_wifi', label: 'Free Wifi' }
           - { value: 'no_wifi', label: 'No WiFi' }
           - { value: 'computers', label: 'Computers' }
@@ -98,14 +102,20 @@ collections:
           - { value: 'printers_copiers', label: 'Printers and copiers' }
           - { value: 'whiteboards', label: 'Whiteboards' }
           - { value: 'projector', label: 'Projector' }
+          - { value: 'prayer_room', label: 'Prayer room' }
           - { value: 'outdoor_seating', label: 'Outdoor seating' }
+          - { value: 'smoking_area', label: 'Smoking area' }
+          - { value: 'bike_racks', label: 'Bicycle racks' }
           - { value: 'bookable', label: 'Bookable' }
           - { value: 'toilets', label: 'Toilets nearby' }
           - { value: 'accessible_toilets', label: 'Accessible toilets' }
           - { value: 'gender_neutral_toilets', label: 'Gender-neutral toilets' }
+          - { value: 'baby_changing', label: 'Baby changing facilities' }
           - { value: 'refreshments', label: 'Close to refreshments' }
           - { value: 'break', label: 'Close to a place to take a break' }
+          - { value: 'induction_loops', label: 'Induction loops' }
           - { value: 'wheelchair_accessible', label: 'Wheelchair accessible' }
+          - { value: 'adjustable_furniture', label: 'Adjustable furniture' }
       - label: 'Work environment'
         name: 'work'
         widget: 'select'

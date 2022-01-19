@@ -12,7 +12,7 @@ var map,
     currView = 'small',
     currWidth = 0,
     loginWindow,
-    currentZoom = 14,
+    currentZoom = 16,
     currentLoc = loc,
     systemEvent = false,
     loadSpacesInProgress = false,
@@ -80,24 +80,6 @@ $().ready(function () {
         }
     });
 
-    if (!$('html').hasClass('flexbox')) {
-        $('head').append('<link  rel="stylesheet" type="text/css" href="/assets/css/old.css" />');
-    }
-    var iOS = navigator.userAgent.match(/(iPad|iPhone|iPod)/g);
-    if (iOS !== null && $(window).width() > 1000) {
-        //alert('detected ios');
-        $('.view-container').each(function () {
-            var $this = $(this);
-            $this.height($(window).height() - ($('#top-bar').outerHeight(true)));
-            if ($this.attr('id') == 'search') {
-                $this.height($(window).height() - ($('#top-bar').outerHeight(true) + 60));
-            }
-        });
-        $(window).on('scroll', function (event) {
-            event.preventDefault();
-            $('body').stop().animate({scrollTop: 0}, 10)
-        });
-    }
     $('#search-btn').on('click touchstart', function (event) {
         if (currView == 'large') {
             event.preventDefault();
@@ -120,35 +102,7 @@ $().ready(function () {
     });
 
     var startView = initialView;
-    $(window).on('hashchange', function (Event) {
-        //console.log('hashchange');
-        if (Event.originalEvent.oldURL !== undefined) {
-            oldView = Event.originalEvent.oldURL.split('#')[1];
-        } else {
-            if (currViewHash !== undefined) {
-                oldView = currViewHash
-            }
-        }
-        console.log(oldView);
-        currViewHash = view = window.location.hash.substr(1);
-        if (view.substr(0, 1) != '/') {
-            return false;
-        } else if (view == '/') {
-            window.location.hash = '/' + initialView;
-        }
-        view = view.substr(1);
-        console.log('switch view - ' + view);
-        switchView(view);
-    });
 
-    if (window.location.hash !== "" && initialView !== window.location.hash) {
-        view = window.location.hash.substr(1);
-        if (view.substr(0, 1) != '/') {
-            return false;
-        }
-        view = view.substr(1);
-        startView = view;
-    }
     $('.current-status').html('templates');
     loadTemplates({
         data: templates,
@@ -161,64 +115,6 @@ $().ready(function () {
                     switchView(startView);
                 }
             });
-            /*if ("geolocation" in navigator && !!getLocation && userLoc.lat == 0 && userLoc.lng == 0) {
-            //console.log('get user location');
-            $('.current-status').html('location');
-            navigator.geolocation.getCurrentPosition(function(position) {
-            if(cancelGeoLocation == false) {
-            cancelGeoLocation = null;
-            userLoc.lat = position.coords.latitude;
-            userLoc.lng = position.coords.longitude;
-            //set the center of the map on users current location
-            $('.current-status').html('spaces');
-            loadSpaces({
-            location:userLoc,
-            callback:function() {
-            switchView(startView);
-        }
-    });
-}
-
-}, function () {
-if(cancelGeoLocation == false) {
-cancelGeoLocation = null;
-getLocation = false;
-$('.current-status').html('spaces');
-loadSpaces({
-location:loc,
-callback:function() {
-switchView(startView);
-}
-});
-}
-}, {
-enableHighAccuracy: false,
-timeout: 5000,
-maximumAge: 0
-});
-window.setTimeout(function () {
-if (cancelGeoLocation !== null) {
-getLocation = false;
-cancelGeoLocation = true;
-$('.current-status').html('spaces');
-loadSpaces({
-location:loc,
-callback:function() {
-switchView(startView);
-}
-});
-}
-
-}, 8000)
-} else {
-$('.current-status').html('spaces');
-loadSpaces({
-location:loc,
-callback:function() {
-switchView(startView);
-}
-});
-}*/
         }
     })
     moment.locale('en', {
@@ -244,13 +140,6 @@ switchView(startView);
     $(window).trigger('resize');
 
 
-    $(window).on('login_success', function (event) {
-        event.preventDefault();
-        //console.log('login successful');
-        $('.login-screen').fadeOut(300, function () {
-            $(this).remove();
-        });
-    });
 });
 function resize(event) {
     systemEvent = true;
@@ -272,13 +161,6 @@ function resize(event) {
             map.setCenter(loc);
         }
 
-    }
-    var iOS = navigator.userAgent.match(/(iPad|iPhone|iPod)/g);
-    if (iOS !== null && currView == 'large') {
-        $('.view-container').each(function () {
-            var $this = $(this);
-            //$this.height($(window).height() - ($('#top-bar').height()+ 60));
-        });
     }
     $list.find('.list-meta').width($list.width());
 }
@@ -305,23 +187,6 @@ function resizeForDesktop() {
         'top': 0,
         'width': $list.width()
     });
-    if (map !== undefined) {
-        /*map.setZoom(14);
-        if(openPoints.length > 0) {
-        for (var i = 0; i < openPoints.length; i++) {
-        points[openPoints[i]].mapSummary.close();
-        points[openPoints[i]].marker.icon.fillColor = inactiveColor;
-        points[openPoints[i]].marker.setMap(map);
-        openPoints.splice(i, 1);
-    }
-}
-if(!!centerOnLocation) {
-map.setCenter(userLoc);
-} else {
-map.setCenter(loc);
-}*/
-    }
-
 }
 
 function switchView(newView, modal) {
@@ -371,16 +236,12 @@ function switchView(newView, modal) {
                     if (newView == 'list') {
                         systemEvent = true;
                         $(window).scrollTop(listScroll);
-                        //map.setZoom(currentZoom);
-                        //pointsInView();
                     }
                     if (newView == 'map') {
                         if (openPoints.length > 0) {
                             systemEvent = true;
                             new google.maps.event.trigger(points[openPoints[0]].marker, 'click');
                             systemEvent = true;
-                            //map.setZoom(currentZoom);
-                            //pointsInView();
                         }
                     }
                 }
@@ -396,18 +257,7 @@ function switchView(newView, modal) {
                 'name': parts[2].replace('-', ' ')
             })
         }
-        //pointsInView();
     }
-
-
-    /*if(!mapViewed) {
-    mapViewed == true;
-    if(!!centerOnLocation) {
-    map.setCenter(userLoc);
-} else {
-map.setCenter(loc);
-}
-}*/
 }
 
 
@@ -451,10 +301,8 @@ function showSpace(data) {
         .addClass('space-container')
         .append(parseTemplate('spaceDetail', data))
         .insertAfter('#list')
-    //.fadeIn(300)
 
     if (currView == 'large') {
-        //$('#list').css('display', 'none');
         space.width($list.width()).css('left', $list.offset().left);
         space.animate({'margin-top': $('#top-bar').outerHeight(true)}, 300);
     } else {
@@ -528,27 +376,6 @@ function resetViews() {
 
         if (!systemEvent && $('div[id^=space-]').length == 0 && $('.infoBubble:visible').length == 0) {
             console.log('non system event fired - bounds');
-            currentZoom = map.getZoom();
-
-            window.setTimeout(function () {
-                exclude = {
-                    'exclusions': [],
-                    'total': 0
-                }
-
-                console.log('*************** firing search-button - click');
-                // $('.search-button').trigger('click');
-                loadSpaces(
-                    {
-                        queryString: search,
-                        keepData: true,
-                        expanded: exclude
-                        //clearSpaces:true
-                    }
-                )
-            }, 300);
-
-            pointsInView();
         }
         setTimeout(function () {
             systemEvent = false;
@@ -557,248 +384,51 @@ function resetViews() {
     });
 }
 
-function getSpaces(options, callback) {
-    if ( storageAvailable('localStorage') && getWithExpiry('spaces') ) {
-        console.log("getting space data from localstorage");
-        callback(JSON.parse(getWithExpiry('spaces')));
+function getJSON(options, callback) {
+    if ( storageAvailable('localStorage') && getWithExpiry(options.key) ) {
+        console.log("getting data from localstorage");
+        callback(JSON.parse(getWithExpiry(options.key)));
     } else {
-        var spacesURL = window.location.protocol+'//'+window.location.host+'/spaces.json';
-        console.log("getting data from API at "+spacesURL);
+        var jsonURL = window.location.protocol+'//'+window.location.host+options.path;
+        console.log("getting data from "+jsonURL);
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", function(){
             if ( storageAvailable('localStorage') ) {
                 var expires = new Date().getTime() + (24*60*60*1000)
-                console.log('storing spaces data - expires '+expires);
-                setWithExpiry('spaces', this.responseText, 24);
+                console.log('storing data in localstorage - expires '+expires);
+                setWithExpiry(options.key, this.responseText, 24);
             }
             callback(JSON.parse(this.responseText));
         });
-        oReq.open("GET", spacesURL);
+        oReq.open("GET", jsonURL);
         oReq.send();
     }
 }
-getSpaces({}, function(data){
-    console.log(data);
-    getSpaces({}, function(data){
-        console.log(data);
-    });
-});
 
-
-function loadSpaces(options) {
-    var resultsContainer = document.getElementById('list');
-    uol_show_loader(resultsContainer);
-    getSpaces(options, function(data){
-        uol_hide_loader();
-    });
-
-    $('.current-status').html('load spaces');
-    if (loadSpacesInProgress) {
-        return;
-    }
+function loadSpaces() {
     loadSpacesInProgress = true;
-    var defaults = {
-        location: '',
-        queryString: (typeof prepSearch == 'function' ? prepSearch() : ''),
-        reset: false,
-        keepData: false,
-        boundToMap: true,
-        expanded: {
-            'exclusions': [],
-            'total': 0
-        }
-    };
-    $.extend(defaults, options);
-    console.log('### load spaces, exclude:' + defaults.expanded.exclusions.join(','));
-    /*----load spaces-----*/
-    $('#top-bar a[href*=map] i').removeClass('icon-marker').addClass('icon-loading');
-    defaults.queryString += '&limit=' + queryLimit;
-    /*if(defaults.location !== '') {
-    defaults.queryString += '&filters[nearest]=' + defaults.location.lat + ',' + defaults.location.lng;
-}*/
-//defaults.queryString += '&filters[nearest]=' + userLoc.lat + ',' + userLoc.lng;
-    $('.current-status').html('reset');
-//if(!defaults.keepData) resetViews();
-    $('.current-status').html('complete reset');
-//$('.current-status').html(typeof map.getBounds);
-
-    if (!!defaults.boundToMap && typeof map !== 'undefined') {
-        var bounds = map.getBounds();
-        if (bounds !== undefined) {
-            var ne = bounds.getNorthEast();
-            var sw = bounds.getSouthWest();
-            defaults.queryString += '&filters[bounds][sw]=' + sw.lat() + ',' + sw.lng();
-            defaults.queryString += '&filters[bounds][ne]=' + ne.lat() + ',' + ne.lng();
-        }
-
-    }
-
-    if (spacesRequest && spacesRequest.readyState != 4) {
-        console.log('abort request', spacesRequest);
-        spacesRequest.abort();
-    }
-
-    if (typeof ga !== "undefined") {
-        if (userDetails !== null && userDetails.id > 0) {
-            ga('set', 'userId', userDetails.id);
-        }
-        var qs = defaults.queryString;
-        try {
-            if ($.type(defaults.queryString) == 'object') {
-                qs = $.serialize(defaults.queryString);
-            }
-        } catch (e) {
-
-        }
-        ga('set', 'page', '/search?' + qs);
-    }
-    lastQuery = defaults.queryString;
-    spacesRequest = $.ajax(domain + 'spaces.json?callback=?', {
-        cache: false,
-        dataType: 'json',
-        contentType: "application/json; charset=utf-8",
-        method: 'GET',
-        data: defaults.queryString
-    }).complete(function (event, xhr, settings) {
-        if (xhr.readyState !== 4) {
-            if (typeof (defaults.callback) == 'function') {
-                defaults.callback();
-            }
-            $('#top-bar a[href*=map] i').addClass('icon-marker').removeClass('icon-loading');
-        }
-
-    }).success(function (data, status, xhr) {
-        if (!!defaults.clearSpaces) {
-            for (var i = 0; i < points.length; i++) {
-                points[i].marker.setMap(null);
-            }
-            //points = [];
-            $list.html('');
-            exclude = {
-                'exclusions': [],
-                'total': 0
-            }
-        }
-        console.log('success triggered', data, status, xhr);
-        //$.getJSON('/assets/data/points.json').done(function(data) {
-        console.log('spaces loaded', defaults.queryString, data.results.length);
-        if (!!defaults.keepData) {
-            var temp = points
-            niceExclusions = [];
-
-            for (var i = 0; i < exclude.exclusions.length; i++) {
-                switch (exclude.exclusions[i]) {
-                    case "noise":
-                        niceExclusions.push('noise levels');
-                        break;
-                    case "atmosphere":
-                        niceExclusions.push('atmosphere filters');
-                        break;
-                    case "work":
-                        niceExclusions.push('work environments');
-                        break;
-                }
-            }
-
-            for (var i = 0; i < data.results.length; i++) {
-                data.results[i].excluded = niceExclusions;
-            }
-            points = cleanData(points.concat(data.results));
-        } else {
-            points = data.results;
-        }
-
-        if (points.length == 0) {
-            loadMap();
-            loadList();
-        }
-
-        distCount = 0;
-        totalSpaceCount = data.total_count;
-        expanding = false;
-        if (typeof checkExpansions == 'function' && defaults.queryString.indexOf('page') == -1) {
-            checkExpansions();
-            expandSearch(defaults.expansionCount);
-
-            if (defaults.expansionCount == undefined) {
-                defaults.expansionCount = 0;
-            }
-            console.log('-----------------------------expanded:', defaults.expanded, exclude, defaults.expansionCount);
-            $('.search-expanding').remove();
-            if (points.length <= 0 && exclude.total > 0 && defaults.expansionCount <= exclude.total) {
-                expanding = true;
-                $('#list').append('<div class="search-expanding"><i class="icon-loading" /><br /><p>There were no exact matches. Expanding search...</p>')
-                loadSpaces({
-                    "queryString": prepSearch(),
-                    "keepData": true,
-                    "expanded": exclude,
-                    "expansionCount": ++defaults.expansionCount
-                })
-            } else {
-                $('#list').empty().append($('<div />').html('<p>There are no spaces available with all your selected facilities. Please try removing one from the list below and search again.</p>').addClass('empty-list'));
-                $('.empty-list').append('<ul class="active-facility-filters" />')
-                $('.filter-option.facility.active').each(function (index, el) {
-                    $('.active-facility-filters').append($(this).clone().on('click', function (event) {
-                        event.preventDefault();
-                        $(this).toggleClass('active');
-                        $('#search').find('.filter-option[data-id="' + $(this).attr('data-id') + '"]').toggleClass('active');
-                    }));
-                });
-                $('.empty-list').append($('<a class="btn search-button"><i class="icon-search"></i>Search</a>').on('click', function (event) {
-                    event.preventDefault();
-                    $('#search').find('.search-button.btn').trigger('click');
-                }))
-            }
-            //return false;
-        }
-
-
-        if (points.length == 0 && expanding == false) {
-            return false;
-        }
-
-        if ($('#near-me-btn').hasClass('active')) {
-            console.log('get distance');
-            $.each(points, function (key, value) {
-
-                if (points[key].lat !== null && points[key].lng !== null) {
-                    getDistance(userLoc, {lat: Number(points[key].lat), lng: Number(points[key].lng)}, function (dist) {
-                        points[key].distance = dist;
-                        distCount++;
-                        if (distCount == points.length) {
-                            orderSpaces();
-                            loadMap();
-                            loadList();
-
-                        }
-                    });
-                } else {
-                    distCount++;
-                    if (distCount == points.length) {
-                        orderSpaces();
-                        loadMap();
-                        loadList();
-                    }
-                }
-                points[key].link = '#/space/' + points[key].id + '/' + (points[key].name).replace(' ', '-');
+    getJSON({key:'spaces',path:'/spaces.json'}, function(data){
+        points = data;
+        $.each(points, function (key, value) {
+            points[key].link = '#/space/' + points[key].id + '/' + (points[key].name).replace(' ', '-');
+            $.each(points[key].images, function(idx){
+                points[key].images[idx] = 'assets/photos/'+points[key].images[idx];
             });
-        } else {
-            $.each(points, function (key, value) {
-                points[key].link = '#/space/' + points[key].id + '/' + (points[key].name).replace(' ', '-');
-            });
-            if ($('#search').html() == '') {
-                loadSearch();
+        });
+        if ($('#search').html() == '') {
+            loadSearch();
 
-            }
-            //orderSpaces();
-            loadMap();
-            loadList();
         }
-
+        loadMap();
+        loadList();
     });
     loadSpacesInProgress = false;
 }
-
+function loadSearch() {
+    getJSON({key:'filters',path:'/filters.json'}, function(data) {
+        $('#search').append(parseTemplate('search', data));
+    });
+}
 function cleanData(data) {
     var foundIds = [],
         ret = [],
@@ -833,18 +463,27 @@ function showLoginScreen(container, data) {
 
 }
 
-function loadSearch() {
-    $.ajax(domain + 'spaces/filters.json?callback=?', {
-        cache: false,
-        dataType: 'json',
-        method: 'GET'
-    })
-        .done(function (data) {
-            //console.log('loaded search');
-            $('#search').append(parseTemplate('search', data));
-        })
-}
 
+function getSpaces(options, callback) {
+    if ( storageAvailable('localStorage') && getWithExpiry('filters') ) {
+        console.log("getting filters data from localstorage");
+        callback(JSON.parse(getWithExpiry('filters')));
+    } else {
+        var spacesURL = window.location.protocol+'//'+window.location.host+'/filters.json';
+        console.log("getting data from API at "+spacesURL);
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", function(){
+            if ( storageAvailable('localStorage') ) {
+                var expires = new Date().getTime() + (24*60*60*1000)
+                console.log('storing spaces data - expires '+expires);
+                setWithExpiry('spaces', this.responseText, 24);
+            }
+            callback(JSON.parse(this.responseText));
+        });
+        oReq.open("GET", spacesURL);
+        oReq.send();
+    }
+}
 function checkMarker(data, checks) {
     var match = true;
     $.each(checks, function (key, val) {
@@ -931,7 +570,6 @@ function loadMap(options) {
             contentString = parseTemplate('mapMulti', points[key]);
         } else {
             points[key].template = 'mapSingle';
-            //console.log(points[key]);
             contentString = parseTemplate('mapSingle', points[key]);
         }
 
@@ -943,13 +581,9 @@ function loadMap(options) {
             borderRadius: 0,
             arrowSize: 10,
             borderWidth: 0,
-            //borderColor: '#2c2c2c',
             padding: 12,
             disableAutoPan: false,
             hideCloseButton: false,
-            //maxWidth:($(window).width() * 0.9),
-            //maxHeight:($(window).height() * 0.6),
-            //arrowPosition: 50,
             backgroundClassName: 'map-info-bubble',
             disableAnimation: true,
             arrowStyle: 0
@@ -983,10 +617,7 @@ function loadMap(options) {
                 var parent = $('#bubble-' + points[key].id).parent();
                 parent.parents('.infoBubble').css('width', $('#map').width() * 0.8);
             }
-
-
             infowindow.open(map, marker);
-            //this.icon.fillColor = defaults.activeColor;
             this.setZIndex(100);
             this.setMap(map);
             openPoints.push(key);
@@ -998,39 +629,7 @@ function loadMap(options) {
             openPoints = [];
         });
     });
-    if (openPoints.length == 1) {
-        //points[openPoints[0]].marker.icon.fillColor = activeColor;
-    }
-    $map.find('.map-meta').remove();
-    if (currView == 'small') {
-        $map.prepend(
-            $('<div class="map-meta" />').append('<span class="spaces-count">' + pointsInView().length + '/' + totalSpaceCount + '</span>')
-        );
-        if (pointsInView().length < totalSpaceCount) {
-            //console.info($map.find('.map-meta'))
-            $map.find('.map-meta').append(
-                $('<a href="#" class="map-load-spaces-link">Load ' + ((totalSpaceCount - pointsInView().length) > queryLimit ? queryLimit : totalSpaceCount - pointsInView().length) + ' more</a>').on('click', function (event) {
-                    $(this).html('<i class="icon-loading"></i>');
-                    event.preventDefault();
-                    //console.log('pages = ', Math.ceil(totalSpaceCount/queryLimit));
-                    //console.log('current page = ', Math.floor(pointsInView().length/queryLimit));
-                    if ($.type(prepSearch) == 'function') {
-                        var search = prepSearch();
-                        search += '&page=' + Math.floor(pointsInView().length / queryLimit + 1);
-                        //console.log(search);
-                        loadSpaces(
-                            {
-                                queryString: search,
-                                keepData: true,
-                                "reset": true
-                            }
-                        )
-                    }
-                })
-            );
-        }
-    }
-
+    var markerCluster = new markerClusterer.MarkerClusterer({ map, points });
     if (typeof (defaults.callback) == 'function') {
         defaults.callback();
     }
@@ -1179,36 +778,6 @@ function loadList(options) {
         }
         $list.find('.extended-description:last').html(str);
     }
-    //$list.find('.exclude-array:first')
-    pointsInView();
-    $list.find('.list-meta').remove();
-    $list.prepend(
-        $('<div class="list-meta" />').append('<span class="spaces-count">Showing ' + pointsInView().length + ' of ' + totalSpaceCount + ' results.</span>')
-    );
-    if (pointsInView().length < totalSpaceCount) {
-        $list.find('.list-meta').append(
-            $('<a href="#" class="more-spaces-link">Load ' + ((totalSpaceCount - pointsInView().length) > queryLimit ? queryLimit : totalSpaceCount - pointsInView().length) + ' more</a>').on('click', function (event) {
-                $(this).html('<i class="icon-loading"></i>');
-                event.preventDefault();
-                //console.log('pages = ', Math.ceil(totalSpaceCount/queryLimit));
-                //console.log('current page = ', Math.floor(pointsInView().length/queryLimit));
-                if ($.type(prepSearch) == 'function') {
-                    var search = lastQuery;
-                    search += '&page=' + Math.floor(pointsInView().length / queryLimit + 1);
-                    //console.log(search);
-                    loadSpaces(
-                        {
-                            queryString: search,
-                            keepData: true,
-                            expanded: exclude
-                            //clearSpaces:true
-                        }
-                    )
-                }
-            })
-        );
-    }
-    $list.find('.list-meta').width($list.width());
     if (typeof (defaults.callback) == 'function') {
         defaults.callback();
     }
@@ -1508,56 +1077,6 @@ function orderSpaces() {
 
 
     });
-}
-
-function pointsInView() {
-    if (map == undefined) return [];
-    var mapHidden = false;
-    var mapBounds = map.getBounds(),
-        ret = [],
-        ne = mapBounds.getNorthEast(),
-        sw = mapBounds.getSouthWest(),
-        bounds = [
-            new google.maps.LatLng(ne.lat(), sw.lng()),
-            new google.maps.LatLng(ne.lat(), ne.lng()),
-            new google.maps.LatLng(sw.lat(), ne.lng()),
-            new google.maps.LatLng(sw.lat(), sw.lng())
-        ];
-    console.log(mapBounds);
-    /*//console.log(mapBounds.Ia.G, mapBounds.Ca.G);
-    //console.log(mapBounds.Ia.j, mapBounds.Ca.G)
-    //console.log(mapBounds.Ia.j, mapBounds.Ca.j)
-    //console.log(mapBounds.Ia.G, mapBounds.Ca.j)*/
-    var poly = new google.maps.Polygon({
-        paths: bounds,
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 3,
-        fillColor: '#FF0000',
-        fillOpacity: 0.35
-    });
-    //poly.setMap(map);
-
-    for (var i = 0; i < points.length; i++) {
-        ////console.log(points[i].lat, points[i].lng);
-        if (points[i].lat !== null || points[i].lng !== null) {
-            var latlng = new google.maps.LatLng(points[i].lat, points[i].lng);
-            ////console.log(latlng);
-            var contains = google.maps.geometry.poly.containsLocation(latlng, poly);
-            if (!!contains) {
-                $list.find('[data-id=' + points[i].id + ']').slideDown(300);
-                ret.push(points[i]);
-            } else {
-                $list.find('[data-id=' + points[i].id + ']').slideUp(300);
-            }
-        }
-
-    }
-    //console.log('points in view', ret);
-    if (ret.length > 0 && $('.loading-cover').length > 0) {
-        $(window).trigger('initialLoadComplete')
-    }
-    return ret;
 }
 
 function lineDistance(point1, point2) {

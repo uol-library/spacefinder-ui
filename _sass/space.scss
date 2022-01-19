@@ -38,7 +38,7 @@
         text-align: center;
         color: #FFF;
         h1 {
-            font-family: 'myriad pro', verdana, sans-serif;
+            font-family: $fancyFont, verdana, sans-serif;
             font-size: 1.5rem;
             font-weight: lighter;
             line-height: 1;
@@ -334,7 +334,7 @@
                     margin: 0 6px 6px 0;
                     padding: 6px 7px 4px;
                     text-transform: uppercase;
-                    font-family: 'Myriad Pro', Verdana, sans-serif;
+                    font-family: $fancyFont, Verdana, sans-serif;
                     font-weight: normal;
                     font-size: 0.8rem;
                     color: #FFF;
