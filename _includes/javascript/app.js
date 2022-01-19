@@ -272,24 +272,6 @@ function loadSpace(options) {
     if (space.length == 1) {
         //we've got the space so show it
         showSpace(space[0]);
-    } else if (space.length == 0) {
-        $.ajax({
-            url: '/assets/data/unloaded-space.json',
-            dataType: 'json',
-            data: {id: defaults.id}
-        })
-            .done(function (data) {
-                if ($.type(data) == 'array') {
-                    data = data[0];
-                }
-                showSpace(data);
-
-
-            })
-
-        //load the space and show it;
-    } else {
-        //console.log('too many spaces with same ID returned');
     }
 
 }
@@ -349,18 +331,14 @@ function resetViews() {
     mapOptions.center = currentLoc;
     mapOptions.zoom = currentZoom;
     $map.empty();
-    //if (map == undefined || map == null) {
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
-    //}
     for (var i = 0; i < points.length; i++) {
         points[i].marker.setMap(null);
     }
-    //points = []
 
     $('#list').html('');
 
     google.maps.event.addListener(map, 'center_changed', function (e) {
-        console.log($('div[id^=space-]'));
         if (!systemEvent && $('div[id^=space-]').length == 0) {
             console.log('non system event fired - center');
             var newCenter = map.getCenter();
@@ -386,16 +364,16 @@ function resetViews() {
 
 function getJSON(options, callback) {
     if ( storageAvailable('localStorage') && getWithExpiry(options.key) ) {
-        console.log("getting data from localstorage");
+        console.log("getting data '"+options.key+"'from localstorage");
         callback(JSON.parse(getWithExpiry(options.key)));
     } else {
         var jsonURL = window.location.protocol+'//'+window.location.host+options.path;
-        console.log("getting data from "+jsonURL);
+        console.log("getting data '"+options.key+"' from "+jsonURL);
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", function(){
             if ( storageAvailable('localStorage') ) {
                 var expires = new Date().getTime() + (24*60*60*1000)
-                console.log('storing data in localstorage - expires '+expires);
+                console.log("storing data '"+options.key+"' in localstorage - expires "+expires);
                 setWithExpiry(options.key, this.responseText, 24);
             }
             callback(JSON.parse(this.responseText));
@@ -413,12 +391,10 @@ function loadSpaces() {
             points[key].link = '#/space/' + points[key].id + '/' + (points[key].name).replace(' ', '-');
             $.each(points[key].images, function(idx){
                 points[key].images[idx] = 'assets/photos/'+points[key].images[idx];
+                points[key].distanceFromCentre = haversine_distance(currentLoc, {lat:points[key].lat,lng:points[key].lng});
             });
         });
-        if ($('#search').html() == '') {
-            loadSearch();
-
-        }
+        loadSearch();
         loadMap();
         loadList();
     });
@@ -519,7 +495,6 @@ function findMarkers(data, checks) {
 
         ret.spaces[0].group_name = ret['group_name'];
 
-        console.log(ret);
     }
 
     return ret
@@ -671,7 +646,6 @@ function loadList(options) {
             var space = parseTemplate('list', points[key]);
             $list.append(space);
         }
-
     });
     $('.more-spaces-link').remove();
 
@@ -708,8 +682,6 @@ function loadList(options) {
             $(this).attr('data-expanded', $(this).find('.excluded-value').length);
         }
 
-        //console.log(desc);
-        //$(this).find('.description').html(desc.substr(0, desc.lastIndexOf(' ')) + '...');
         $(this).hover(function (event) {
             event.preventDefault();
             event.stopPropagation();
@@ -791,7 +763,6 @@ function loadTemplates(options) {
         templates[key].template = $('#'+templates[key].id).html();
         
     });
-    console.log(templates);
     defaults.callback();
 }
 
@@ -816,7 +787,7 @@ function parseTemplate(t, data, partial) {
     } else {
         template = templates[t].template;
     }
-
+    console.log(template);
     arrays = template.match(r);
     if (arrays !== null) {
         for (var i = 0; i < arrays.length; i++) {
