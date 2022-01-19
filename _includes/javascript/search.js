@@ -3,14 +3,12 @@ $().ready(function () {
         event.preventDefault();
         $(this).toggleClass('active');
         if ( $(this).hasClass('active') ) {
-            if ( $(this).data('id') == 'work_private'){
-                $('.filter-option.work_close,.filter-option.work_friends').removeClass('active');
-            }
-            if ( $(this).data('id') == 'work_close' || $(this).data('id') == 'work_friends' ) {
-                $('.filter-option.work_private').removeClass('active');
-            }
             if ( $(this).hasClass('noise-level') ) {
                 $('#search-noise .filter-option').removeClass('active');
+                $(this).toggleClass('active');
+            }
+            if ( $(this).hasClass('work') ) {
+                $('#search-work .filter-option').removeClass('active');
                 $(this).toggleClass('active');
             }
         }
