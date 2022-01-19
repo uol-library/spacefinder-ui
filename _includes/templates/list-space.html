@@ -4,7 +4,7 @@
     <h2><span class="space-type #{space_type(attr="-" transform="lowercase")}"><i class="icon-marker"></i>#{space_type} - </span><span class="library">#{library}</span><span class="address hidden">#{address}</span><small>#{distance}</small></h2>
 
     <div class="space-details">
-        #{images[<div style="background-image:url(#{value})" class="space-image lazy"></div>](limit="1")}
+        #{images[<div data-imgsrc="#{value}" class="space-image lazy"></div>](limit="1")}
         <div>
             <p class="description">#{description}</p>
 
