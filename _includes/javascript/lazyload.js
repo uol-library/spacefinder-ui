@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var photosFolder = '/assets/photos/';
-    var lazyloadImages;    
+    var photosFolder = baseurl+'/assets/photos/';
+    var lazyloadImages;
   
     if ("IntersectionObserver" in window) {
       lazyloadImages = document.querySelectorAll(".lazy");

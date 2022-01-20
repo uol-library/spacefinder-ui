@@ -33,6 +33,7 @@ $().ready(function () {
         } else {
             $('.list-space').removeClass('hidden');
         }
+        $('#list').scrollTop(0);
     });
     $(document).on('click', '#clear-search', function(event) {
         event.preventDefault();

@@ -58,7 +58,6 @@ var multiMarkerSymbol = {
     strokeWeight: 0
 };
 $().ready(function () {
-    //alert($(body).hasClass('flexbox'));
     resetViews();
 
     $(window).on('initialLoadComplete', function (event) {
@@ -197,13 +196,6 @@ function switchView(newView, modal) {
     if (newView == undefined) newView = initialView;
     closeSpaces();
     if (currView == 'small') $('.view-container').css('position', '');
-    if (typeof ga !== "undefined") {
-        ga('set', 'page', '/' + newView);
-        if (userDetails !== null && userDetails.id > 0) {
-            ga('set', 'userId', userDetails.id);
-        }
-        ga('send', 'pageview');
-    }
     if (newView.indexOf('/') == -1 && $('#' + newView).length > 0) {
         if (currView == 'small') {
 
@@ -367,7 +359,7 @@ function getJSON(options, callback) {
         console.log("getting data '"+options.key+"'from localstorage");
         callback(JSON.parse(getWithExpiry(options.key)));
     } else {
-        var jsonURL = window.location.protocol+'//'+window.location.host+options.path;
+        var jsonURL = baseurl+options.path;
         console.log("getting data '"+options.key+"' from "+jsonURL);
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", function(){
@@ -443,28 +435,6 @@ function sortNumber(a, b) {
     return a - b;
 }
 
-
-
-function getSpaces(options, callback) {
-    if ( storageAvailable('localStorage') && getWithExpiry('filters') ) {
-        console.log("getting filters data from localstorage");
-        callback(JSON.parse(getWithExpiry('filters')));
-    } else {
-        var spacesURL = window.location.protocol+'//'+window.location.host+'/filters.json';
-        console.log("getting data from API at "+spacesURL);
-        var oReq = new XMLHttpRequest();
-        oReq.addEventListener("load", function(){
-            if ( storageAvailable('localStorage') ) {
-                var expires = new Date().getTime() + (24*60*60*1000)
-                console.log('storing spaces data - expires '+expires);
-                setWithExpiry('spaces', this.responseText, 24);
-            }
-            callback(JSON.parse(this.responseText));
-        });
-        oReq.open("GET", spacesURL);
-        oReq.send();
-    }
-}
 function checkMarker(data, checks) {
     var match = true;
     $.each(checks, function (key, val) {
@@ -609,7 +579,6 @@ function loadMap(options) {
             openPoints = [];
         });
     });
-    var markerCluster = new markerClusterer.MarkerClusterer({ map, points });
     if (typeof (defaults.callback) == 'function') {
         defaults.callback();
     }
@@ -655,13 +624,6 @@ function loadList(options) {
     $('.more-spaces-link').remove();
 
     $('.list-footer').remove();
-    if (currView == "small") {
-        $list.append('<div class="list-footer"><span>&copy; <span class="year"></span> Cambridge University Library </span><a href="/terms.html">Terms &amp; Feedback</a></div>');
-        var d = new Date();
-        var n = d.getFullYear();
-        $('.list-footer .year').html(n);
-    }
-
 
     $('.list-space>h2>.library').each(function (index, el) {
         var $address = $(this).next('.address');
@@ -763,10 +725,8 @@ function loadList(options) {
 function loadTemplates(options) {
     var defaults = {};
     $.extend(defaults, options);
-
     $.each(templates, function (key) {
         templates[key].template = $('#'+templates[key].id).html();
-        
     });
     defaults.callback();
 }
@@ -1011,18 +971,6 @@ function getDistance(origin, dest, callback) {
     });
 }
 
-function loginCallback(response) {
-    //console.log('login callback success');
-    //console.log(response);
-    if (response.status == 'success') {
-        if ($.type(response) == 'object') {
-            userDetails = response;
-        }
-        $(window).trigger('login_callback');
-    }
-
-
-}
 
 function orderSpaces() {
     points.sort(function (a, b) {
