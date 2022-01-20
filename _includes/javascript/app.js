@@ -386,7 +386,7 @@ function loadSpaces() {
         });
         loadSearch();
         loadMap();
-        loadList();
+        loadList({callback: lazyLoadSpaceImages});
     });
     loadSpacesInProgress = false;
 }
@@ -604,7 +604,6 @@ function markerColor(space_type) {
 }
 
 function loadList(options) {
-    $('.current-status').html('list');
     var defaults = {
         inactiveColor: 'rgba(0,0,0,0.6)',
         activeColor: '#e2637c'
@@ -614,12 +613,8 @@ function loadList(options) {
     $list.find('.empty-list').remove();
 
     $.each(points, function (key) {
-        //check if space already exists, if not add it
-        if ($list.find('[data-id=' + points[key].id + ']').length == 0) {
-            //console.log(key);
-            var space = parseTemplate('list', points[key]);
-            $list.append(space);
-        }
+        var space = parseTemplate('list', points[key]);
+        $list.append(space);
     });
     $('.more-spaces-link').remove();
 
