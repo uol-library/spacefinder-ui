@@ -20,71 +20,91 @@ collections:
       - label: 'Space ID'
         name: 'id'
         widget: 'number'
+        required: true
       - label: 'Space name'
         name: 'title'
         widget: 'string'
+        required: true
       - label: 'Building name'
         name: 'library'
         widget: 'string'
+        required: false
       - label: 'Floor'
         name: 'floor'
         widget: 'string'
+        required: false
       - label: 'Description'
         name: 'description'
         widget: 'markdown'
+        required: false
       - label: 'Type'
         name: 'space_type'
         widget: 'select'
         options: ['Bar','Café','Lab','Lecture room','Library space','Meeting room','Restaurant','Seminar room','Other']
+        required: true
       - label: 'Address'
         name: 'address'
         widget: 'text'
+        required: false
       - label: 'Location'
         name: 'location'
         widget: 'map'
         type: 'Point'
         default: '{"type":"Point","coordinates":[-1.541763,53.7990926]}'
+        required: true
       - label: 'Access type'
         name: 'access'
         widget: 'select'
         options: ['Anyone (public)','Members of the University','Faculty','College']
+        required: false
       - label: 'Restricted access?'
         name: 'restricted'
         widget: 'boolean'
         hint: 'If there are any restrictions on access, please outline them below'
+        required: false
       - label: 'Restriction'
         name: 'restriction'
         widget: 'string'
+        required: false
       - label: 'Disabled access?'
         name: 'disabled_access'
         widget: 'boolean'
+        required: false
       - label: 'Website URL'
         name: 'url'
         widget: 'string'
+        required: false
       - label: 'Booking URL'
         name: 'booking_url'
         widget: 'string'
+        required: false
       - label: 'Phone number'
         name: 'phone_number'
         widget: 'string'
+        required: false
       - label: 'Email address'
         name: 'email_address'
         widget: 'string'
+        required: false
       - label: 'Twitter screen name'
         name: 'twitter_screen_name'
         widget: 'string'
+        required: false
       - label: 'Facebook URL'
         name: 'facebook_url'
         widget: 'string'
+        required: false
       - label: 'Noise level'
         name: 'noise'
         widget: 'select'
         options: ['Strictly silent','Whispers','Background chatter','Animated discussion','Music playing']
         hint: 'Which best describes the typical noise level in this space?'
+        required: false
       - label: 'Facilities'
         name: 'facilities'
         widget: 'select'
         multiple: true
+        required: false
         options:
           - { value: 'food_drink', label: 'Food and drink allowed' }
           - { value: 'daylight', label: 'Natural daylight' }
@@ -118,6 +138,7 @@ collections:
         name: 'work'
         widget: 'select'
         multiple: true
+        required: false
         options:
           - { value: 'private', label: 'Alone, in private' }
           - { value: 'close', label: 'Where others are working' }
@@ -127,6 +148,7 @@ collections:
         name: 'atmosphere'
         widget: 'select'
         multiple: true
+        required: false
         options:
           - { value: 'disciplined', label: 'Disciplined?' }
           - { value: 'relaxed', label: 'Relaxed or informal?' }
@@ -140,6 +162,7 @@ collections:
         name: 'tags'
         widget: 'list'
         hint: 'Add tags separated by a comma'
+        required: false
       - label: 'Photohraphs'
         name: 'images'
         widget: 'image'
