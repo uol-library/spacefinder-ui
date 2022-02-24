@@ -1,0 +1,95 @@
+{
+  "location": "{\"type\":\"Point\",\"coordinates\":[-1.541763,53.7990926]}",
+  "search_engine_opening": true,
+  "term_time_hours": {
+    "monday": {
+      "open": true,
+      "allday": false,
+      "from": "10:00",
+      "to": "17:00"
+    },
+    "Tuesday": {
+      "open": true,
+      "allday": false,
+      "from": "10:00",
+      "to": "17:00"
+    },
+    "wednesday": {
+      "open": true,
+      "allday": false,
+      "from": "10:00",
+      "to": "17:00"
+    },
+    "Thursday": {
+      "open": true,
+      "allday": false,
+      "from": "10:00",
+      "to": "17:00"
+    },
+    "friday": {
+      "open": true,
+      "allday": false,
+      "from": "10:00",
+      "to": "17:00"
+    },
+    "saturday": {
+      "open": true,
+      "allday": false,
+      "from": "10:00",
+      "to": "17:00"
+    },
+    "sunday": {
+      "open": true,
+      "allday": false,
+      "from": "10:00",
+      "to": "17:00"
+    }
+  },
+  "out_of_term_hours": {
+    "monday": {
+      "open": true,
+      "allday": false,
+      "from": "10:00",
+      "to": "17:00"
+    },
+    "Tuesday": {
+      "open": true,
+      "allday": false,
+      "from": "10:00",
+      "to": "17:00"
+    },
+    "wednesday": {
+      "open": true,
+      "allday": false,
+      "from": "10:00",
+      "to": "17:00"
+    },
+    "Thursday": {
+      "open": true,
+      "allday": false,
+      "from": "10:00",
+      "to": "17:00"
+    },
+    "friday": {
+      "open": true,
+      "allday": false,
+      "from": "10:00",
+      "to": "17:00"
+    },
+    "saturday": {
+      "open": true,
+      "allday": false,
+      "from": "10:00",
+      "to": "17:00"
+    },
+    "sunday": {
+      "open": true,
+      "allday": false,
+      "from": "10:00",
+      "to": "17:00"
+    }
+  },
+  "id": 1,
+  "title": "Space 1",
+  "space_type": "Café"
+}
