@@ -3,8 +3,8 @@ backend:
   repo: 'uol-library/spacefinder-ui'
   branch: 'main'
   site_domain: 'musing-hoover-8f4523.netlify.app'
-media_folder: 'assets/photos'
-public_folder: '/assets/photos'
+media_folder: 'spaces/photos'
+public_folder: '/spaces/photos'
 collections:
   - name: 'spaces'
     label: 'Spaces'
@@ -17,10 +17,6 @@ collections:
     extension: 'json'
     format: 'json'
     fields:
-      - label: 'Space ID'
-        name: 'id'
-        widget: 'number'
-        required: true
       - label: 'Space name'
         name: 'title'
         widget: 'string'
