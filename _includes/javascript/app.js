@@ -354,30 +354,10 @@ function resetViews() {
     });
 }
 
-function getJSON(options, callback) {
-    if ( storageAvailable('localStorage') && getWithExpiry(options.key) ) {
-        console.log("getting data '"+options.key+"'from localstorage");
-        callback(JSON.parse(getWithExpiry(options.key)));
-    } else {
-        var jsonURL = baseurl+options.path;
-        console.log("getting data '"+options.key+"' from "+jsonURL);
-        var oReq = new XMLHttpRequest();
-        oReq.addEventListener("load", function(){
-            if ( storageAvailable('localStorage') ) {
-                var expires = new Date().getTime() + (24*60*60*1000)
-                console.log("storing data '"+options.key+"' in localstorage - expires "+expires);
-                setWithExpiry(options.key, this.responseText, 24);
-            }
-            callback(JSON.parse(this.responseText));
-        });
-        oReq.open("GET", jsonURL);
-        oReq.send();
-    }
-}
 
 function loadSpaces() {
     loadSpacesInProgress = true;
-    getJSON({key:'spaces',path:'/spaces.json'}, function(data){
+    getJSON({key:'spaces',url:baseurl+'/spaces.json'}, function(data){
         points = data;
         $.each(points, function (key, value) {
             points[key].link = '#/space/' + points[key].id;

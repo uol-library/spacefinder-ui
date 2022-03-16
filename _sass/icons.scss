@@ -2,32 +2,32 @@
  * icons
  */
  @font-face {
-	font-family: 'spacefinder';
-	src: url('https://uol-library.github.io/spacefinder-ui/assets/fonts/spacefinder.eot');
-	src: url('https://uol-library.github.io/spacefinder-ui/assets/fonts/spacefinder.eot?#iefix') format('embedded-opentype'),
-		 url('https://uol-library.github.io/spacefinder-ui/assets/fonts/spacefinder.woff2') format('woff2'),
-		 url('https://uol-library.github.io/spacefinder-ui/assets/fonts/spacefinder.woff') format('woff'),
-		 url('https://uol-library.github.io/spacefinder-ui/assets/fonts/spacefinder.svg#spacefinder') format('svg');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
+    font-family: 'spacefinder';
+    src: url('https://uol-library.github.io/spacefinder-ui/assets/fonts/spacefinder.eot');
+    src: url('https://uol-library.github.io/spacefinder-ui/assets/fonts/spacefinder.eot?#iefix') format('embedded-opentype'),
+         url('https://uol-library.github.io/spacefinder-ui/assets/fonts/spacefinder.woff2') format('woff2'),
+         url('https://uol-library.github.io/spacefinder-ui/assets/fonts/spacefinder.woff') format('woff'),
+         url('https://uol-library.github.io/spacefinder-ui/assets/fonts/spacefinder.svg#spacefinder') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-	font-family: 'spacefinder';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+    font-family: 'spacefinder';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
     display: inline-block;
     text-decoration: inherit;
     //width: 1em;
     margin-right: .2em;
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 @-moz-keyframes spin { 0% {-moz-transform: rotate(0deg);} 100% { -moz-transform: rotate(360deg); } }
@@ -35,131 +35,131 @@
 @keyframes spin {  0% {-webkit-transform: rotate(0deg); transform: rotate(0deg);}100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 .icon-access:before {
-	content: "\e802";
+    content: "\e802";
 }
 .icon-disabled:before {
-	content: "\e801";
+    content: "\e801";
 }
 .icon-drink:before {
-	content: "\e800";
+    content: "\e800";
 }
 
 .icon-pencil:before {
-	content: "\e621";
+    content: "\e621";
 }
 .icon-callout:before {
-	content: "\e622";
+    content: "\e622";
 }
 .icon-arrow-up:before {
-	content: "\e61e";
+    content: "\e61e";
 }
 .icon-arrow-right:before {
-	content: "\e61f";
+    content: "\e61f";
 }
 .icon-arrow-down:before {
-	content: "\e620";
+    content: "\e620";
 }
 .icon-arrow-left:before {
-	content: "\e61d";
+    content: "\e61d";
 }
 
 .icon-loading {
-	-webkit-animation:spin 2s linear infinite;
+    -webkit-animation:spin 2s linear infinite;
     -moz-animation:spin 2s linear infinite;
     animation:spin 2s linear infinite;
 }
 .icon-loading:before {
-	content: "\e61c";
+    content: "\e61c";
 
 }
 .icon-tick:before {
-	content: "\e61b";
+    content: "\e61b";
 }
 .icon-views:before {
-	content: "\e600";
+    content: "\e600";
 }
 .icon-bench:before {
-	content: "\e601";
+    content: "\e601";
 }
 .icon-close:before {
-	content: "\e602";
+    content: "\e602";
 }
 .icon-add {
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 .icon-add:before {
-	content: "\e602";
+    content: "\e602";
 }
 .icon-coffee:before {
-	content: "\e603";
+    content: "\e603";
 }
 .icon-computer:before {
-	content: "\e604";
+    content: "\e604";
 }
 .icon-desk:before {
-	content: "\e605";
+    content: "\e605";
 }
 .icon-laptop:before {
-	content: "\e607";
+    content: "\e607";
 }
 .icon-list:before {
-	content: "\e608";
+    content: "\e608";
 }
 .icon-marker:before {
-	content: "\e609";
+    content: "\e609";
 }
 .icon-music:before {
-	content: "\e60a";
+    content: "\e60a";
 }
 .icon-no-wifi:before {
-	content: "\e60b";
+    content: "\e60b";
 }
 .icon-phone:before {
-	content: "\e60c";
+    content: "\e60c";
 }
 .icon-power:before {
-	content: "\e60d";
+    content: "\e60d";
 }
 .icon-printer:before {
-	content: "\e60e";
+    content: "\e60e";
 }
 .icon-projector:before {
-	content: "\e60f";
+    content: "\e60f";
 }
 .icon-search:before {
-	content: "\e610";
+    content: "\e610";
 }
 .icon-sound-0:before {
-	content: "\e611";
+    content: "\e611";
 }
 .icon-sound-1:before {
-	content: "\e612";
+    content: "\e612";
 }
 .icon-sound-2:before {
-	content: "\e613";
+    content: "\e613";
 }
 .icon-sound-3:before {
-	content: "\e614";
+    content: "\e614";
 }
 .icon-sun:before {
-	content: "\e615";
+    content: "\e615";
 }
 .icon-time-long:before {
-	content: "\e616";
+    content: "\e616";
 }
 .icon-time-short:before {
-	content: "\e617";
+    content: "\e617";
 }
 .icon-toilet:before {
-	content: "\e618";
+    content: "\e618";
 }
 .icon-whiteboard:before {
-	content: "\e619";
+    content: "\e619";
 }
 .icon-wifi:before {
-	content: "\e61a";
+    content: "\e61a";
 }
 .icon-public:before {
     content: "\e900";
