@@ -11,8 +11,10 @@ jobs:
         with:
           node-version: '16'
       - name: Concat spaces files
+        uses: ./
         run: npm run concat
       - name: Commit changes
+        uses: ./
         run: | 
           git config --global user.name 'peteredwards'
           git config --global user.email 'p.l.edwards@leeds.ac.uk'
