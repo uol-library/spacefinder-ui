@@ -1,0 +1,44 @@
+{
+    "id": 2,
+    "name": "Fuse Cafe in Chemical and Process Engineering",
+    "description": "Fuse at The School of Chemical and Process Engineering is a hidden gem located in the Engineering buildings",
+    "access": "Anyone (public)",
+    "space_type": "Café",
+    "library": false,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Ground Mezzanine",
+    "lat": 53.81015521,
+    "lng": -1.55714428,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/fuse/",
+    "phone_number": "",
+    "twitter_screen_name": "GreatFoodLeeds",
+    "facebook_url": "",
+    "noise": "Background chatter",
+    "facilities": [
+        "food_drink",
+        "views",
+        "large_desks",
+        "free_wifi",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "toilets",
+        "refreshments",
+        "break"
+    ],
+    "atmosphere": [
+        "relaxed",
+        "modern",
+        "cosy",
+        "social",
+        "friendly"
+    ],
+    "work": [
+        "close",
+        "friends",
+        "group"
+    ]
+}

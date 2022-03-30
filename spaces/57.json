@@ -1,0 +1,45 @@
+{
+    "id": 57,
+    "name": "IT Cluster - Irene Manton Building - 7.96",
+    "description": "Modern big cluster with plenty of big windows facing a beautiful  side of campus .",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Level 7",
+    "lat": 53.80438666,
+    "lng": -1.554864458,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF7D5",
+    "phone_number": "1132431751",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "noise": "Strictly silent",
+    "facilities": [
+        "daylight",
+        "views",
+        "large_desks",
+        "free_wifi",
+        "computers",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "projector",
+        "toilets",
+        "refreshments",
+        "break"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "modern",
+        "inspiring",
+        "social",
+        "friendly"
+    ],
+    "work": [
+        "private",
+        "close"
+    ]
+}

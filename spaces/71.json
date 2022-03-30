@@ -1,0 +1,47 @@
+{
+    "id": 71,
+    "name": "Edward Boyle 11th , 12 th floor",
+    "description": "Silent place for studying with access to books , clusters and nice high views to the campus .Perfect place for focused study and exam preparation.",
+    "access": "Students ",
+    "space_type": "Library ",
+    "library": true,
+    "address": "University of Leeds, Leeds LS2 9JT",
+    "floor": "Level 11,12",
+    "lat": 53.806102,
+    "lng": -1.554686,
+    "restricted": false,
+    "restriction": "Library Card needed",
+    "disabled_access": true,
+    "url": "https://library.leeds.ac.uk/",
+    "phone_number": " 0113 343 5663",
+    "twitter_screen_name": "UoLLibrary",
+    "facebook_url": "Edward Boyle Library ",
+    "noise": "Whispers",
+    "facilities": [
+        "food_drink",
+        "daylight",
+        "views",
+        "large_desks",
+        "free_wifi",
+        "computers",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "printers_copiers",
+        "outdoor_seating",
+        "bookable",
+        "toilets",
+        "refreshments",
+        "break"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "relaxed",
+        "inspiring",
+        "friendly"
+    ],
+    "work": [
+        "private",
+        "close"
+    ]
+}

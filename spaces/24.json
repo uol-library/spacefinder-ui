@@ -1,0 +1,38 @@
+{
+    "id": 24,
+    "name": "Seminal Communal Areas - Michael Sadler Building - 2.01",
+    "description": "Small room on a theater style. High views of Leeds are inspiring a productive study .",
+    "access": "Students",
+    "space_type": "Seminal Communal Areas",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Second Floor",
+    "lat": 53.80697704,
+    "lng": -1.553483796,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",
+    "phone_number": "113343555",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "noise": "Whispers",
+    "facilities": [
+        "daylight",
+        "free_wifi",
+        "laptops_allowed",
+        "signal",
+        "whiteboards",
+        "projector",
+        "toilets"
+    ],
+    "atmosphere": [
+        "relaxed",
+        "inspiring",
+        "friendly"
+    ],
+    "work": [
+        "private",
+        "group"
+    ]
+}

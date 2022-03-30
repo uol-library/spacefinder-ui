@@ -1,0 +1,44 @@
+{
+    "id": 82,
+    "name": "Footsteps fund room",
+    "description": "Casual seating area where food and drinks are allowed. Partially noisy ",
+    "access": "students",
+    "space_type": "Library",
+    "library": true,
+    "address": "Laidlaw library,University of, Leeds LS2 9JT",
+    "floor": "1st floor",
+    "lat": 53.80666,
+    "lng": -1.551973,
+    "restricted": true,
+    "restriction": "Library Card needed",
+    "disabled_access": true,
+    "url": "https://library.leeds.ac.uk/",
+    "phone_number": "",
+    "twitter_screen_name": "UoLLibrary",
+    "facebook_url": "Laidlaw library University of Leeds",
+    "noise": "Background chatter",
+    "facilities": [
+        "food_drink",
+        "daylight",
+        "views",
+        "free_wifi",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "printers_copiers",
+        "toilets",
+        "refreshments",
+        "break"
+    ],
+    "atmosphere": [
+        "relaxed",
+        "cosy",
+        "social",
+        "friendly"
+    ],
+    "work": [
+        "close",
+        "friends",
+        "group"
+    ]
+}

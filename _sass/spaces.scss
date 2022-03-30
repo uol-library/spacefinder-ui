@@ -1,0 +1,53 @@
+#listcontrols {
+
+}
+#listcontent {
+    .list-space {
+        &:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        padding: 0 10px;
+        padding-bottom: 1em;
+        margin-bottom: 1em;
+        border-bottom: 1px solid $separatorcolor;
+        a, a:hover, a:visited {
+            color: $linkcolor;
+            text-decoration: none;
+        }
+        h2 {
+            font-weight: normal;
+        }
+        h3 {
+            font-weight: normal;
+            padding-bottom: .3em;
+            border-bottom: 1px solid lighten($separatorcolor, 10%);
+            .space-type {
+                color: $linkcolor;
+                margin-right: 3em;
+            }
+            .address {
+                color: $lighttextcolor;
+                text-align: right;
+                float:right;
+                font-size: .9rem;
+            }
+        }
+        .space-details {
+            .space-image {
+                width: 50%;
+                height:250px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                float: left;
+                margin: 0 1em 1em 0;
+            }
+        }
+    }
+
+}
+#single-space {
+
+}

@@ -1,0 +1,44 @@
+{
+    "id": 10,
+    "name": "1915 (Sir William Henry Bragg)",
+    "description": "1915 is based in the Sir William Henry Bragg Building on Woodhouse Lane, its relaxed and informal menu has been carefully created to offer a mix of both classic and on-trend options.",
+    "access": "Anyone (public)",
+    "space_type": "Café",
+    "library": false,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Ground",
+    "lat": 53.80910265,
+    "lng": -1.553932038,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/1915/",
+    "phone_number": "",
+    "twitter_screen_name": "GreatFoodLeeds",
+    "facebook_url": "",
+    "noise": "Background chatter",
+    "facilities": [
+        "food_drink",
+        "daylight",
+        "views",
+        "large_desks",
+        "free_wifi",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "refreshments",
+        "break"
+    ],
+    "atmosphere": [
+        "modern",
+        "cosy",
+        "social",
+        "friendly"
+    ],
+    "work": [
+        "private",
+        "close",
+        "friends",
+        "group"
+    ]
+}

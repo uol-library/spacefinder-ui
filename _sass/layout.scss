@@ -1,0 +1,106 @@
+/**
+ * Main layout
+ *
+ * This contains rules to create the main layout
+ *
+ * +--------------------------------------------+
+ * | #top-bar                                   |
+ * +--------------------------------------------+
+ * | #spacefinder                               |
+ * +--------------------------------------------+
+ * | #footer-bar                                |
+ * +--------------------------------------------+
+ *
+ * and the spacefinder layout, which changes according to screen size
+ */
+#maincontainer {
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    #top-bar {
+        height: $topbarheight;
+    }
+    #footer-bar {
+        height: $footerheight;
+        padding: $footerpaddingy $footerpaddingx;
+    }
+    #spacefinder {
+        flex: 1;
+        display: flex;
+        height: calc(100vh - (#{$topbarheight} + #{$footerheight}));
+        width: 100vw;
+        overflow: hidden;
+        #filters, #list, #map {
+            width: 100vw;
+            flex: 0 0 100vw;
+            &.active {
+                display: block;
+            }
+        }
+        #filters, #list {
+            max-height: calc(100vh - (#{$topbarheight} + #{$footerheight}));
+            overflow-y: auto;
+            display: none;
+            margin-left: -100vw;
+            &.active {
+                margin-left: 0;
+            }
+        }
+        #map {
+            height: calc(100vh - (#{$topbarheight} + #{$footerheight}));
+        }
+        #single-space {
+            position:absolute;
+            top: 100%;
+            left:0;
+            width: 100%;
+            z-index: 2;
+            display: none;
+            .single-space--content {
+                height: calc(100vh - (#{$topbarheight} + #{$footerheight} + #{$single-navbarheight}));
+                overflow-y:auto;
+            }
+            nav {
+                height: $single-navbarheight;
+            }
+        }
+        #list {
+            position: relative;
+            &.single {
+                overflow: hidden;
+                #single-space {
+                    display: block;
+                    top: 0;
+                    transition: all .5s;
+                }
+            }
+        }
+        @media screen and (min-width: #{$breakpoint-large}) {
+            #filters, #list, #map {
+                display: block;
+                transition: all .5s;
+            }
+            #filters {
+                position:relative;
+                width: $filterswidth;
+                margin-left: -$filterswidth;
+                transition: all .5s;
+                flex: 0 0 $filterswidth;
+                &.active {
+                    margin-left: 0;
+                }
+            }
+            #list {
+                position:relative;
+                flex: 1 0 $listwidth;
+                margin-left: 0;
+            }
+            #map {
+                position:relative;
+                flex: 3 1 auto;
+            }
+        }
+    }
+}

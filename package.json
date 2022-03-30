@@ -1,10 +1,14 @@
 {
   "name": "spacefinder-ui",
   "version": "1.0.0",
-  "description": "Spacefinder UI ==============",
+  "description": "Spacefinder UI",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "node _scripts/cleanJSON.js",
+    "concat": "node _scripts/concat.js"
   },
   "repository": {
     "type": "git",
@@ -14,7 +18,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^5.68.0",
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2"
   }
 }

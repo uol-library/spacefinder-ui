@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Terms and Feedback
-permalink: /terms.html
+title: Terms and Conditions
+permalink: /terms/
 ---
 
 

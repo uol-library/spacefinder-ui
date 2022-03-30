@@ -1,0 +1,22 @@
+{
+    "id": 44,
+    "name": "IT Cluster - Chemistry and Chemistry West Block - 1.44A",
+    "description": "",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "First Floor",
+    "lat": 53.80843709,
+    "lng": -1.553410997,
+    "restricted": "",
+    "restriction": "",
+    "disabled_access": true,
+    "url": "not required",
+    "phone_number": "",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "facilities": [],
+    "atmosphere": [],
+    "work": []
+}

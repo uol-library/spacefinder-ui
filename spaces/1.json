@@ -1,0 +1,42 @@
+{
+    "id": 1,
+    "name": "Baines Wing Café",
+    "description": "Situated between the School of Healthcare and the Great Hall, Baines Wing Café has a large seating area including its own secluded courtyard which is perfect to enjoy the sunny weather.",
+    "access": "Anyone (public)",
+    "space_type": "Café",
+    "library": false,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Ground",
+    "lat": 53.80745464,
+    "lng": -1.553855264,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/baineswing/",
+    "phone_number": "",
+    "twitter_screen_name": "GreatFoodLeeds",
+    "facebook_url": "",
+    "noise": "Animated discussion",
+    "facilities": [
+        "food_drink",
+        "daylight",
+        "views",
+        "free_wifi",
+        "laptops_allowed",
+        "signal",
+        "outdoor_seating",
+        "toilets",
+        "refreshments"
+    ],
+    "atmosphere": [
+        "relaxed",
+        "cosy",
+        "social",
+        "friendly"
+    ],
+    "work": [
+        "close",
+        "friends",
+        "group"
+    ]
+}

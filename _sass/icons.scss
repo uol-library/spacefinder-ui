@@ -14,22 +14,23 @@
 }
 
 [class^="icon-"], [class*=" icon-"] {
-    font-family: 'spacefinder';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    display: inline-block;
-    text-decoration: inherit;
-    //width: 1em;
-    margin-right: .2em;
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    &::before {
+        font-family: 'spacefinder';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        display: inline-block;
+        text-decoration: inherit;
+        //width: 1em;
+        margin-right: .2em;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 }
-
 @-moz-keyframes spin { 0% {-moz-transform: rotate(0deg);} 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin {  0% {-webkit-transform: rotate(0deg);} 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg);} }
 @keyframes spin {  0% {-webkit-transform: rotate(0deg); transform: rotate(0deg);}100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

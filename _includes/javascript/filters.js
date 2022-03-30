@@ -2,16 +2,12 @@
  * Functions for the filters panel in the UI
  */
 
-/* event to listen for when filters change */
-const filterEvent = new Event('viewfilter', {
-    bubbles: true,
-    cancelable: true,
-    composed: false,
+document.addEventListener('DOMContentLoaded', () => {
+    setupFilters();
 });
-
 /* gets the current status of all filters */
 function getFilterStatus() {
-    const filters = document.querySelectorAll('#filter input[type=checkbox]');
+    const filters = document.querySelectorAll('#filters input[type=checkbox]');
     const activeFilters = [];
     for (const cbx of filters) {
         if (cbx.checked) {
@@ -39,9 +35,15 @@ function getFilterStatus() {
 }
 
 /* setup */
-document.addEventListener('DOMContentLoaded', () => {
+function setupFilters() {
+    /* event to listen for when filters change */
+    const filterEvent = new Event('viewfilter', {
+        bubbles: true,
+        cancelable: true,
+        composed: false,
+    });
     /* event listener for filter changes */
-    document.getElementById('filter').addEventListener('viewfilter', event => {
+    document.getElementById('filters').addEventListener('viewfilter', event => {
         console.log('viewfilter Event triggered');
         const activeFilters = getFilterStatus();
         if ( activeFilters.length ) {
@@ -73,12 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
     /* clear all filters button */
     document.getElementById('clear-all').addEventListener('click', event => {
         event.preventDefault();
-        const filters = document.querySelectorAll('#filter input[type=checkbox]');
+        const filters = document.querySelectorAll('#filters input[type=checkbox]');
         for (const cbx of filters) {
             cbx.checked = false;
         }
         /* trigger the viewfilter event */
         event.target.dispatchEvent(filterEvent);
     });
-});
+}
 

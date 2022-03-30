@@ -1,0 +1,43 @@
+{
+    "id": 59,
+    "name": "IT Cluster - Mechanical Engineering - 5.34d",
+    "description": "Cluster room surrounded by big windows with high views on campus . Perfect for focused study with acess to computers.",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Fifth Floor",
+    "lat": 53.80958489,
+    "lng": -1.55589859,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF8C8",
+    "phone_number": "1133432186",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "noise": "Strictly silent",
+    "facilities": [
+        "daylight",
+        "views",
+        "large_desks",
+        "free_wifi",
+        "computers",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "printers_copiers",
+        "whiteboards",
+        "toilets"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "modern",
+        "inspiring",
+        "friendly"
+    ],
+    "work": [
+        "private",
+        "close"
+    ]
+}

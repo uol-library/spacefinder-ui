@@ -1,0 +1,41 @@
+{
+    "id": 40,
+    "name": "General Seating Areas - Liberty Building - First floor Group workspace (1.22)",
+    "description": "casual seating area for a group or an individual. where food and drinks are allowed ",
+    "access": "Anyone (public)",
+    "space_type": "General Seating Area",
+    "library": false,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "First Floor",
+    "lat": 53.80838424,
+    "lng": -1.562380188,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",
+    "phone_number": "",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "noise": "Whispers",
+    "facilities": [
+        "food_drink",
+        "daylight",
+        "views",
+        "free_wifi",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "toilets"
+    ],
+    "atmosphere": [
+        "relaxed",
+        "modern",
+        "cosy",
+        "social",
+        "friendly"
+    ],
+    "work": [
+        "private",
+        "close"
+    ]
+}

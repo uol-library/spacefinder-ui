@@ -1,0 +1,42 @@
+{
+    "id": 5,
+    "name": "Café Maia  in Marjorie and Arnold Ziff Building",
+    "description": "Café Maia at Ziff is perfect for meetings, to take a break or even to do some work in the computer area.",
+    "access": "Anyone (public)",
+    "space_type": "Café",
+    "library": false,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Level 10",
+    "lat": 53.80656907,
+    "lng": -1.553827912,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/ziff/",
+    "phone_number": "",
+    "twitter_screen_name": "GreatFoodLeeds",
+    "facebook_url": "",
+    "noise": "Whispers",
+    "facilities": [
+        "food_drink",
+        "daylight",
+        "free_wifi",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "toilets",
+        "refreshments",
+        "break"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "relaxed",
+        "cosy"
+    ],
+    "work": [
+        "private",
+        "close",
+        "friends",
+        "group"
+    ]
+}

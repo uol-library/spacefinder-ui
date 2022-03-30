@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+    <div class="page">
+        <header>
+            <h1>{{ page.title | escape }}</h1>
+        </header>
+        <div class="content">
+            {% if page.imageurl and page.imagealt %}
+            <figure class="featured-image">
+                <img class="featured-image__img" src="{{ page.imageurl | absolute_url }}" alt="{{ page.imagealt | escape }}">
+            </figure>
+            {% endif %}
+            {{ content }}
+        </div>
+    </div>
+

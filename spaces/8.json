@@ -1,0 +1,40 @@
+{
+    "id": 8,
+    "name": "Café Seven  in Worsley Building",
+    "description": "Located in the Worsley building, Café Sevenéis one of our most popular and vibrant cafés. Recently refurbished the large seating area is a great place to meet with friends.",
+    "access": "Anyone (public)",
+    "space_type": "Café",
+    "library": true,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Level 7",
+    "lat": 53.80330122,
+    "lng": -1.555752941,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/cafeseven/",
+    "phone_number": "",
+    "twitter_screen_name": "GreatFoodLeeds",
+    "facebook_url": "",
+    "noise": "Background chatter",
+    "facilities": [
+        "food_drink",
+        "free_wifi",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "toilets",
+        "refreshments",
+        "break"
+    ],
+    "atmosphere": [
+        "relaxed",
+        "social",
+        "friendly"
+    ],
+    "work": [
+        "close",
+        "friends",
+        "group"
+    ]
+}

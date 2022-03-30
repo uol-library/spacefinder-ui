@@ -1,0 +1,42 @@
+{
+    "id": 54,
+    "name": "IT Cluster - Fine Art, History of Art and Cultural Studies - B16 (West Teaching Labs)",
+    "description": "Traditional cluster with rows of desks. Relaxed environment for 24 hours study ",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Basement",
+    "lat": 53.80779573,
+    "lng": -1.55751253,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF7E2",
+    "phone_number": "1133435260",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "noise": "Whispers",
+    "facilities": [
+        "large_desks",
+        "free_wifi",
+        "computers",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "printers_copiers",
+        "whiteboards",
+        "projector",
+        "toilets",
+        "break"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "historic",
+        "social"
+    ],
+    "work": [
+        "private",
+        "close"
+    ]
+}

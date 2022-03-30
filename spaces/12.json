@@ -1,0 +1,40 @@
+{
+    "id": 12,
+    "name": "Toasted in Chancellor's Court (Outdoor space)",
+    "description": "Outdoor seating and mobile café facilities situated in Chancellor's Court, next to the Roger Stevens Building",
+    "access": "Anyone (public)",
+    "space_type": "Outdoor café",
+    "library": false,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Ground",
+    "lat": 53.80516,
+    "lng": -1.55497,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/",
+    "phone_number": "",
+    "twitter_screen_name": "GreatFoodLeeds",
+    "facebook_url": "",
+    "noise": "Animated discussion",
+    "facilities": [
+        "food_drink",
+        "daylight",
+        "views",
+        "free_wifi",
+        "laptops_allowed",
+        "signal",
+        "outdoor_seating",
+        "refreshments",
+        "break"
+    ],
+    "atmosphere": [
+        "relaxed",
+        "social",
+        "friendly"
+    ],
+    "work": [
+        "friends",
+        "group"
+    ]
+}

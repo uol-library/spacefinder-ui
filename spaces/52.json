@@ -1,0 +1,40 @@
+{
+    "id": 52,
+    "name": "IT Cluster - E C Stoner Building - 6.68",
+    "description": "classrooms of big cluster with multiple computers and comfortable chairs. ",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": false,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Level 6",
+    "lat": 53.80538144,
+    "lng": -1.552767918,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF5E1",
+    "phone_number": "",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "noise": "Strictly silent",
+    "facilities": [
+        "daylight",
+        "large_desks",
+        "free_wifi",
+        "computers",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "whiteboards",
+        "projector",
+        "toilets"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "modern"
+    ],
+    "work": [
+        "private",
+        "close"
+    ]
+}

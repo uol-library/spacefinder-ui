@@ -1,0 +1,47 @@
+{
+    "id": 63,
+    "name": "IT Cluster - Psychology (37 and 41 University Road) - 1.45",
+    "description": "Rows of IT clusters on a theater style.",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "First Floor",
+    "lat": 53.80743844,
+    "lng": -1.557579705,
+    "restricted": "",
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF852",
+    "phone_number": "1133435724",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "noise": "Strictly silent",
+    "facilities": [
+        "daylight",
+        "views",
+        "free_wifi",
+        "computers",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "printers_copiers",
+        "whiteboards",
+        "projector",
+        "toilets",
+        "refreshments",
+        "break"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "relaxed",
+        "modern",
+        "inspiring",
+        "social",
+        "friendly"
+    ],
+    "work": [
+        "private",
+        "close"
+    ]
+}

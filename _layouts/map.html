@@ -2,8 +2,10 @@
 layout: default
 ---
 
-<div id="search" class="view-container"></div>
-<div id="list" class="view-container"></div>
-<div id="map" class="view-container"></div>
-
-{% include templates.html %}
+  <div id="filters">
+    {% include filters.html %}
+  </div>
+  <div id="list" class="active">
+    {% include list.html %}
+  </div>
+  <div id="map"></div>

@@ -1,0 +1,41 @@
+{
+    "id": 58,
+    "name": "IT Cluster - Maurice Keyworth Building - 2.21",
+    "description": "big cluster with. Multiple computers. ",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": false,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Second Floor",
+    "lat": 53.80801512,
+    "lng": -1.561132185,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "not required",
+    "phone_number": "",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "noise": "Whispers",
+    "facilities": [
+        "daylight",
+        "large_desks",
+        "free_wifi",
+        "computers",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "whiteboards",
+        "projector",
+        "toilets",
+        "refreshments",
+        "break"
+    ],
+    "atmosphere": [
+        "disciplined"
+    ],
+    "work": [
+        "private",
+        "close"
+    ]
+}

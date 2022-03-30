@@ -1,0 +1,38 @@
+{
+    "id": 14,
+    "name": "Seminal Communal Areas - Baines Wing - G.28",
+    "description": "Small study/seminar room space that includes one large desk for group or single  focused study. Acess to whiteboard and plug sockets.",
+    "access": "Students",
+    "space_type": "Seminal Communal Areas",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Ground",
+    "lat": 53.80745464,
+    "lng": -1.553855264,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/",
+    "phone_number": "1133437200",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "noise": "Whispers",
+    "facilities": [
+        "large_desks",
+        "free_wifi",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "whiteboards",
+        "toilets",
+        "break"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "social"
+    ],
+    "work": [
+        "private",
+        "group"
+    ]
+}

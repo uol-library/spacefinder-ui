@@ -1,0 +1,40 @@
+{
+    "id": 53,
+    "name": "IT Cluster - Esther Simpson Building - 109",
+    "description": "Cluster room surrounded by big windows with high views on campus . Perfect for focused study with acess to computers.",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": false,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "First Floor",
+    "lat": 53.80655803,
+    "lng": -1.559424814,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!39BE8717F501B6B3EB98ACD12260C99B",
+    "phone_number": "",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "noise": "Strictly silent",
+    "facilities": [
+        "daylight",
+        "large_desks",
+        "free_wifi",
+        "computers",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "whiteboards",
+        "projector",
+        "toilets"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "modern"
+    ],
+    "work": [
+        "private",
+        "close"
+    ]
+}

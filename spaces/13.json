@@ -1,0 +1,42 @@
+{
+    "id": 13,
+    "name": "Outside the Edward Boyle Library Edit Room café (Outdoor space)",
+    "description": "Outdoor seating situated outside the Edward Boyle Library",
+    "access": "Anyone (public)",
+    "space_type": "Outdoor café",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Ground",
+    "lat": 53.80618,
+    "lng": -1.55431,
+    "restricted": "",
+    "restriction": "",
+    "disabled_access": "",
+    "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/",
+    "phone_number": "",
+    "twitter_screen_name": "GreatFoodLeeds",
+    "facebook_url": "",
+    "noise": "Animated discussion",
+    "facilities": [
+        "food_drink",
+        "daylight",
+        "views",
+        "large_desks",
+        "free_wifi",
+        "laptops_allowed",
+        "signal",
+        "outdoor_seating",
+        "toilets",
+        "refreshments",
+        "break"
+    ],
+    "atmosphere": [
+        "relaxed",
+        "social",
+        "friendly"
+    ],
+    "work": [
+        "friends",
+        "group"
+    ]
+}

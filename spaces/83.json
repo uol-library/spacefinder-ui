@@ -1,0 +1,22 @@
+{
+    "id": 83,
+    "name": "Brotherton Library",
+    "description": "Inspiring study place with group study areas on floor 2 of the main building and floor 3 of the west building .",
+    "access": "Students",
+    "space_type": "Library",
+    "library": true,
+    "address": "Brotherton Library",
+    "floor": "2nd floor",
+    "lat": null,
+    "lng": null,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": "",
+    "url": "",
+    "phone_number": "",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "facilities": [],
+    "atmosphere": [],
+    "work": []
+}

@@ -1,0 +1,45 @@
+{
+    "id": 55,
+    "name": "IT Cluster - Fine Art, History of Art and Cultural Studies - G29 (West Teaching Labs)",
+    "description": "Inspiring cluster room surrounded by big windows with high views of campus . ",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Ground",
+    "lat": 53.80779573,
+    "lng": -1.55751253,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF7E3",
+    "phone_number": "1133435260",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "noise": "Strictly silent",
+    "facilities": [
+        "daylight",
+        "views",
+        "large_desks",
+        "free_wifi",
+        "computers",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "printers_copiers",
+        "projector",
+        "toilets",
+        "break"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "historic",
+        "inspiring",
+        "social",
+        "friendly"
+    ],
+    "work": [
+        "private",
+        "close"
+    ]
+}

@@ -1,2 +1,12 @@
-    <script src="{{ "/assets/scripts/bundle.js" | absolute_url }}"></script>
+<footer id="footer-bar">
+    <nav>
+        <ul>
+            <li><a href="{{ "/privacy/" | absolute_url }}">Privacy</a></li>
+            <li><a href="{{ "/accessibility/" | absolute_url }}">Accessibility</a></li>
+            <li><a href="{{ "/terms/" | absolute_url }}">Terms &amp; Conditions</a></li>
+            <li>&copy; {{ "now" | date: "%Y" }} University of Leeds</li>
+        </ul>
+    </nav>
+</footer>
+<script src="{{ "/assets/scripts/bundle.js" | absolute_url }}"></script>
     {% include custom-foot.html %}

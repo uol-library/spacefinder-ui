@@ -1,0 +1,37 @@
+{
+    "id": 69,
+    "name": "IT Cluster - Worsley Building - 8.049O (Fourman)",
+    "description": "Big mint room with plenty of available clusters to use. Comfortable chairs and big desk space perfect for focused study .",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Level 8",
+    "lat": 53.80330122,
+    "lng": -1.555752941,
+    "restricted": "",
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF724",
+    "phone_number": "",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "noise": "Strictly silent",
+    "facilities": [
+        "large_desks",
+        "free_wifi",
+        "computers",
+        "laptops_allowed",
+        "sockets",
+        "projector",
+        "toilets",
+        "break"
+    ],
+    "atmosphere": [
+        "disciplined"
+    ],
+    "work": [
+        "private",
+        "close"
+    ]
+}

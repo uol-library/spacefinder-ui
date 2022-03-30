@@ -1,0 +1,24 @@
+{
+    "id": 73,
+    "name": "Edward Boyle 13th floor",
+    "description": "Silent libary for postgruate students with bookable group study rooms",
+    "access": "PG Students",
+    "space_type": "Library ",
+    "library": true,
+    "address": "University of Leeds, Leeds LS2 9JT",
+    "floor": "Level 13",
+    "lat": 53.806102,
+    "lng": -1.554686,
+    "restricted": false,
+    "restriction": "PG Library Card needed",
+    "disabled_access": true,
+    "url": "https://library.leeds.ac.uk/",
+    "phone_number": " 115 343 5663",
+    "twitter_screen_name": "UoLLibrary",
+    "facebook_url": "Edward Boyle Library ",
+    "facilities": [],
+    "atmosphere": [
+        "disciplined"
+    ],
+    "work": []
+}

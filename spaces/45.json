@@ -1,0 +1,42 @@
+{
+    "id": 45,
+    "name": "IT Cluster - Chemistry and Chemistry West Block - 1.46 (Ingold)",
+    "description": "Bright large and social cluster room with variety of desks. Comfortable chairs perfect for long hours of individual or group work .",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "First Floor",
+    "lat": 53.80843709,
+    "lng": -1.553410997,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "not required",
+    "phone_number": "113343644",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "noise": "Whispers",
+    "facilities": [
+        "daylight",
+        "large_desks",
+        "free_wifi",
+        "computers",
+        "laptops_allowed",
+        "sockets",
+        "printers_copiers",
+        "toilets"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "modern",
+        "inspiring",
+        "social",
+        "friendly"
+    ],
+    "work": [
+        "private",
+        "close",
+        "friends"
+    ]
+}

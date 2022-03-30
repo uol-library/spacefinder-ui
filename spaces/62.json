@@ -1,0 +1,44 @@
+{
+    "id": 62,
+    "name": "IT Cluster - Psychology (37 and 41 University Road) - 1.43",
+    "description": "Circular bright clusters room with pretty views on campus available 24hours.Access to water fountain.",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "First Floor",
+    "lat": 53.80743844,
+    "lng": -1.557579705,
+    "restricted": "",
+    "restriction": "",
+    "disabled_access": "",
+    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF853",
+    "phone_number": "1133435724",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "noise": "Whispers",
+    "facilities": [
+        "daylight",
+        "views",
+        "free_wifi",
+        "computers",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "printers_copiers",
+        "projector",
+        "toilets",
+        "break"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "modern",
+        "inspiring",
+        "social",
+        "friendly"
+    ],
+    "work": [
+        "private",
+        "close"
+    ]
+}

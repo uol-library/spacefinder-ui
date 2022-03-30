@@ -8,5 +8,66 @@ $highlight:#00b1c1;
 $lowlight:#e8e8e8;
 $fontColor: #212121;
 
-$fancyFont: 'PT Sans';
-$navHeight:50px;
+
+/**
+ * Layout variables
+ */
+
+/* top navigation bar */
+$topbarheight: 73px;
+$topbarpadding: 10px;
+
+/* filters panel (large screens) */
+$filterswidth: 256px;
+
+/* list panel (large screens) */
+$listwidth: 500px;
+
+/* footer bar */
+$footerheight: 30px;
+$footerpaddingx: 10px;
+$footerpaddingy: 7px;
+
+/* navigation bar for single space */
+$single-navbarheight: 40px;
+
+/* breakpoints */
+$breakpoint-large: 1000px;
+$breakpoint-small: 400px;
+
+/**
+ * Colours
+ */
+
+/* top navigation bar */
+$topbarbg: #212121;
+$topbarbgactive: #111;
+$topbarcolor: #fff;
+
+/* filters panel */
+$filterbg: #f3f3f3;
+$filtercolor: #212121;
+
+/* footer bar */
+$footerbg: #212121;
+$footercolor: #fff;
+
+/* filters panel */
+$buttoncolor: #ffffff;
+$buttonbg: #212121;
+$buttoncolor-disabled: #696969;
+$buttonbg-disabled: #cfcfcf;
+$filterbg: #f3f3f3;
+$filtercolor: #212121;
+$filterlabelbg: #fff;
+$filterlabelcolor: #212121;
+
+/* List panel */
+$linkcolor:#066;
+$separatorcolor: #ccc;
+$lighttextcolor: #757575;
+$backgroundColor: #2e2e2e;
+$lightBackgroundColor:#F3F3F3;
+$titleColor:#e7e7e7;
+$bodyColor:#b0b0b0;
+$highlightI:#E37222;

@@ -1,0 +1,47 @@
+{
+    "id": 42,
+    "name": "IT Cluster - Chemical and Process Engineering - G06",
+    "description": "24 hour cluster with rows of desks with clusters . Perfect for day or night social studying with access to water fountain .",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Ground",
+    "lat": 53.81015521,
+    "lng": -1.55714428,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF5F6",
+    "phone_number": "1133432444",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "noise": "Animated discussion",
+    "facilities": [
+        "daylight",
+        "large_desks",
+        "free_wifi",
+        "computers",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "printers_copiers",
+        "outdoor_seating",
+        "toilets",
+        "refreshments",
+        "break"
+    ],
+    "atmosphere": [
+        "relaxed",
+        "modern",
+        "inspiring",
+        "social",
+        "friendly"
+    ],
+    "work": [
+        "private",
+        "close",
+        "friends",
+        "group"
+    ]
+}

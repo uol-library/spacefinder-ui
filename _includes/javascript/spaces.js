@@ -83,17 +83,16 @@ function loadSpaces() {
  * Renders list view for spaces
  */
 function renderList() {
-    let listContainer = document.getElementById('list');
+    let listContainer = document.getElementById('listcontent');
     spaces.forEach( space => {
         spaceContainer = document.createElement('div');
-        spaceContainer.setAttribute('id', 'space_' + space.id );
         spaceContainer.setAttribute('data-id', space.id );
         spaceContainer.setAttribute('data-sortkey', space.name.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() );
         spaceContainer.setAttribute('class', 'list-space ' + space.classes );
-        let spaceHTML = '<h1><a href="' + space.link + '">' + space.name + '</a></h1>';
-        spaceHTML += '<h2><span class="space-type space-type-' + space.space_type.toLowerCase() + '">' + space.space_type + '</span>';
+        let spaceHTML = '<h2><a href="' + space.link + '">' + space.name + '</a></h2>';
+        spaceHTML += '<h3><span class="space-type space-type-' + space.space_type.toLowerCase() + '">' + space.space_type + '</span>';
         spaceHTML += space.library? '<span class="library">' + space.library + '</span>': '';
-        spaceHTML += '<span class="address hidden">' + space.address + '</span></h2>';
+        spaceHTML += '<span class="address">' + space.address + '</span></h3>';
         spaceHTML += '<div class="space-details">';
         if ( space.images.length ) {
             spaceHTML += '<div data-imgsrc="' + space.images[0] + '" class="space-image lazy"></div>';
@@ -106,20 +105,8 @@ function renderList() {
         }
         spaceHTML += '</div></div>';
         spaceContainer.innerHTML = spaceHTML;
-        listcontainer.append( getListControls() );
         listContainer.append( spaceContainer );
     });
-}
-/**
- * Gets the controls for the list of spaces
- * @returns {DOM Node} div containing list controls
- */
-function getListControls() {
-    let controlsContainer = document.createElement('div');
-    controlsContainer.setAttribute('id', 'listcontrols' );
-    controlsContainerHTML = '<span class="sortbuttons"><span class="sortlabel">Sort:</span><button id="sortalpha">A-Z</button><button id="sortdistance">by distance</button></span>';
-    controlsContainer.innerHTML = controlsContainerHTML;
-    return controlsContainer;
 }
 
 /**
@@ -150,7 +137,7 @@ function getClassList( space ) {
 function updateDistances() {
     spaces.forEach( (space, index) => {
         spaces[index].distancefromcentre = haversine_distance( currentLoc, { lat: space.lat, lng: space.lng } );
-        document.getElementById( 'space_' + space.id ).setAttribute('data-distance', spaces[index].distancefromcentre );
+        document.querySelector('[data-id="' + space.id + '"]').setAttribute('data-distance', spaces[index].distancefromcentre );
     });
 }
 

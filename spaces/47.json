@@ -1,0 +1,42 @@
+{
+    "id": 47,
+    "name": "IT Cluster - Clarendon Building - G04",
+    "description": "classroom with 4 computer rows. Comfortable chairs.",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": false,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Ground",
+    "lat": 53.80744637,
+    "lng": -1.560460796,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF5C1",
+    "phone_number": "",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "noise": "Strictly silent",
+    "facilities": [
+        "daylight",
+        "large_desks",
+        "free_wifi",
+        "computers",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "whiteboards",
+        "projector",
+        "toilets",
+        "refreshments"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "modern",
+        "cosy"
+    ],
+    "work": [
+        "private",
+        "close"
+    ]
+}

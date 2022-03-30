@@ -1,0 +1,43 @@
+{
+    "id": 7,
+    "name": "Refectory ",
+    "description": "Located right at the heart of University campus, the contemporary Refectory venue offers a wide range of hot and cold food each day.",
+    "access": "Anyone (public)",
+    "space_type": "Refectory",
+    "library": false,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Ground",
+    "lat": 53.80685681,
+    "lng": -1.55657117,
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://gfal.leeds.ac.uk/where-to-eat/refectory/",
+    "phone_number": "",
+    "twitter_screen_name": "GreatFoodLeeds",
+    "facebook_url": "",
+    "noise": "Animated discussion",
+    "facilities": [
+        "food_drink",
+        "large_desks",
+        "free_wifi",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "toilets",
+        "refreshments",
+        "break"
+    ],
+    "atmosphere": [
+        "relaxed",
+        "cosy",
+        "social",
+        "friendly"
+    ],
+    "work": [
+        "private",
+        "close",
+        "friends",
+        "group"
+    ]
+}

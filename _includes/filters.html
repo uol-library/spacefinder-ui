@@ -1,0 +1,26 @@
+        <form id="filter-options-form" action="/" method="get">
+            <div class="filter-buttons">
+                <button id="clear-all" class="btn secondary" disabled>Clear all</button>
+            </div>
+            {%- for filter in site.data.filters -%}
+                {%- assign ecl = '' -%}
+                {%- if filter.exclusive -%}
+                    {%- assign excl = ' class="exclusive"' -%}
+                {%- endif -%}
+            <fieldset class="filter-options {{ filter.key }}-filter-options"><legend>{{ filter.label }}</legend>
+                <ul id="filter-{{ filter.key }}">
+                {%- for option in filter.options -%}
+                    {%- assign icon = "icon-tick" -%}
+                    {%- if option.icon -%}
+                        {%- assign icon = option.icon -%}
+                    {%- endif -%}
+                    <li class="filter-option {{ filter.key }} {{ filter.key }}_{{ option.key }}" data-id="{{ filter.key }}_{{ option.key }}">
+                        <input type="checkbox" id="{{ filter.key }}_{{ option.key }}" name="{{ filter.key }}_{{ option.key }}" value="{{ filter.key }}_{{ option.key }}"{{ ecl }}>
+                        <span class="{{ icon }}"></span>
+                        <label for="{{ filter.key }}_{{ option.key }}">{{ option.label }}</label>
+                    </li>
+                {%- endfor -%}
+                </ul>
+            </fieldset>
+            {%- endfor -%}
+        </form>
