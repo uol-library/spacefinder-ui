@@ -11,7 +11,7 @@ jobs:
         with:
           node-version: '16'
       - name: Change to project directory
-        run: cd /home/runner/work/spacefinder-ui
+        run: pwd
       - name: Concat spaces files
         run: npm run concat
       - name: Commit changes
