@@ -1,5 +1,5 @@
 name: concat-spacefinder-data
-on: [push]
+on: workflow_dispatch
 jobs:
   concat-data:
     runs-on: ubuntu-latest
@@ -8,4 +8,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - run: npm run concat
+      - name: Concat spaces files
+        run: npm run concat
+      - name: Commit changes
+        run: | 
+          git config --global user.name 'peteredwards'
+          git config --global user.email 'p.l.edwards@leeds.ac.uk'
+          git commit -am "Master space data file generation"
+          git push
+
