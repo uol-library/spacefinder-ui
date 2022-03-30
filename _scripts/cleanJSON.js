@@ -66,12 +66,26 @@ const workMapping = {
     "...alongside friends?": "friends",
     "...in a group?": "group"
 };
+const typeMapping = {
+    'Refectory': 'Restaurant',
+    'Outdoor café': 'Café',
+    'Seminal Communal Areas': 'Seminar room',
+    'Library': 'Library space',
+    'Library ': 'Library space'
+};
 var spaceID = 1;
+var spaceTypes = [];
 fileJSON.forEach( space => {
     const newspace = { "id": spaceID };
     for (f in fieldMapping) {
         if ( f === "twitter_screen_name" ) {
             newspace[f] = space[fieldMapping[f]].replace("https://twitter.com/", "");
+        } else if ( f === "space_type" ) {
+            if ( typeMapping.hasOwnProperty( space[fieldMapping[f]] ) ) {
+                newspace[f] = typeMapping[space[fieldMapping[f]]];
+            } else {
+                newspace[f] = space[fieldMapping[f]];
+            }
         } else {
             newspace[f] = ( space[fieldMapping[f]] == "no" ? false: ( space[fieldMapping[f]] == "yes" ? true: space[fieldMapping[f]] ) );
         }
@@ -111,9 +125,14 @@ fileJSON.forEach( space => {
             return;
         }
     });
+    if ( spaceTypes.hasOwnProperty( newspace.space_type ) ) {
+        spaceTypes[newspace.space_type]++;
+    } else {
+        spaceTypes[newspace.space_type] = 1;
+    }
     spaceID++;
 });
-
+console.log(spaceTypes);
 /*
 "name": "Starbucks (Grand Arcade)",
 "description": "",

@@ -3,7 +3,7 @@
     "name": "2nd floor Laidlaw library",
     "description": "Silent study space with enough seats. Group boots also available. ",
     "access": "students",
-    "space_type": "Library",
+    "space_type": "Library space",
     "library": true,
     "address": "Laidlaw library,University of, Leeds LS2 9JT",
     "floor": "2nd floor",

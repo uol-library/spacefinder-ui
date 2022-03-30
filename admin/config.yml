@@ -18,7 +18,7 @@ collections:
     format: 'json'
     fields:
       - label: 'Space name'
-        name: 'title'
+        name: 'name'
         widget: 'string'
         required: true
       - label: 'Building name'
@@ -36,7 +36,7 @@ collections:
       - label: 'Type'
         name: 'space_type'
         widget: 'select'
-        options: ['Bar','Café','Lab','Lecture room','Library space','Meeting room','Restaurant','Seminar room','Other']
+        options: ['Bar','Café','General Seating Area','IT Cluster','Lab','Lecture room','Library space','Meeting room','Restaurant','Seminar room','Other']
         required: true
       - label: 'Address'
         name: 'address'

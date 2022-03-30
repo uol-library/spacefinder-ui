@@ -3,7 +3,7 @@
     "name": "Group study booths ",
     "description": "Group study booths for a max group of 5 with monitor display",
     "access": "students",
-    "space_type": "Library",
+    "space_type": "Library space",
     "library": true,
     "address": "Laidlaw library,University of, Leeds LS2 9JT",
     "floor": "1st floor",

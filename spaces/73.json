@@ -3,7 +3,7 @@
     "name": "Edward Boyle 13th floor",
     "description": "Silent libary for postgruate students with bookable group study rooms",
     "access": "PG Students",
-    "space_type": "Library ",
+    "space_type": "Library space",
     "library": true,
     "address": "University of Leeds, Leeds LS2 9JT",
     "floor": "Level 13",

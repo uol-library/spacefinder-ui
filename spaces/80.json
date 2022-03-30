@@ -3,7 +3,7 @@
     "name": "Silent study space 1",
     "description": "Study space inside the library, closed doors, very silent ",
     "access": "students",
-    "space_type": "Library",
+    "space_type": "Library space",
     "library": true,
     "address": "Laidlaw library,University of, Leeds LS2 9JT",
     "floor": "1st floor",

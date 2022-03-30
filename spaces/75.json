@@ -3,7 +3,7 @@
     "name": "Health sciences library",
     "description": "Quite studying place with the environment. Books available (related to health sciences) ",
     "access": "students",
-    "space_type": "Library",
+    "space_type": "Library space",
     "library": true,
     "address": "7, Worsley Building, Clarendon Way, Woodhouse, Leeds LS2 9NL",
     "floor": "7th floor",
