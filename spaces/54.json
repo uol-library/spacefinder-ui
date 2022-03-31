@@ -1,6 +1,7 @@
 {
     "id": 54,
-    "name": "IT Cluster - Fine Art, History of Art and Cultural Studies - B16 (West Teaching Labs)",
+    "title": "IT Cluster - Fine Art, History of Art and Cultural Studies - B16 (West Teaching Labs)",
+    "basic_info": "33 Seat Capacity. Campus Map Ref 38",
     "description": "Traditional cluster with rows of desks. Relaxed environment for 24 hours study ",
     "access": "Students",
     "space_type": "IT Cluster",
@@ -16,6 +17,8 @@
     "phone_number": "1133435260",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17451",
     "noise": "Whispers",
     "facilities": [
         "large_desks",
@@ -38,5 +41,6 @@
     "work": [
         "private",
         "close"
-    ]
+    ],
+    "tags": []
 }

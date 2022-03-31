@@ -1,6 +1,7 @@
 {
     "id": 39,
-    "name": "General Seating Areas - Liberty Building - Ground floor Common Area (G01)",
+    "title": "General Seating Areas - Liberty Building - Ground floor Common Area (G01)",
+    "basic_info": "Ground Floor, Liberty Building.  Campus Map Ref 16",
     "description": "common area near the entrance of the liberty building. Silent space with different kinds of tables and a fooseball table ",
     "access": "Anyone (public)",
     "space_type": "General Seating Area",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17491",
     "noise": "Whispers",
     "facilities": [
         "food_drink",
@@ -40,5 +43,10 @@
         "private",
         "close",
         "friends"
+    ],
+    "tags": [
+        "mordern",
+        "silent",
+        "fooseball table"
     ]
 }

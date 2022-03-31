@@ -1,6 +1,7 @@
 {
     "id": 75,
-    "name": "Health sciences library",
+    "title": "Health sciences library",
+    "basic_info": "",
     "description": "Quite studying place with the environment. Books available (related to health sciences) ",
     "access": "students",
     "space_type": "Library space",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "UoLLibrary",
     "facebook_url": "Health Sciences Library",
+    "expensive": null,
+    "campusmap_url": "",
     "noise": "Strictly silent",
     "facilities": [
         "food_drink",
@@ -38,5 +41,11 @@
     "work": [
         "private",
         "close"
+    ],
+    "tags": [
+        "Silent",
+        "study mode",
+        "books",
+        "Library"
     ]
 }

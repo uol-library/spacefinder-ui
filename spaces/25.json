@@ -1,6 +1,7 @@
 {
     "id": 25,
-    "name": "Seminal Communal Areas - Michael Sadler Building - 3.40",
+    "title": "Seminal Communal Areas - Michael Sadler Building - 3.40",
+    "basic_info": "16 Seat Capacity. Third Floor Michael Sadler Building. Campus Map Ref 78",
     "description": "Seminar room available for individual study with great view to university campus.",
     "access": "Students",
     "space_type": "Seminar room",
@@ -16,6 +17,8 @@
     "phone_number": "113343555",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17512",
     "noise": "Strictly silent",
     "facilities": [
         "daylight",
@@ -39,5 +42,9 @@
     "work": [
         "private",
         "close"
+    ],
+    "tags": [
+        "views",
+        "inspiring"
     ]
 }

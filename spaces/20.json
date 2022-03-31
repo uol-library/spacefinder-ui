@@ -1,6 +1,7 @@
 {
     "id": 20,
-    "name": "Seminal Communal Areas - Michael Sadler Building - B.37",
+    "title": "Seminal Communal Areas - Michael Sadler Building - B.37",
+    "basic_info": "16 Seat Capacity. Basement Michael Sadler Building. Campus Map Ref 78",
     "description": "Large communal desk area surrounded by chairs.",
     "access": "Students",
     "space_type": "Seminar room",
@@ -16,6 +17,8 @@
     "phone_number": "113343555",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17512",
     "noise": "Animated discussion",
     "facilities": [
         "large_desks",
@@ -35,5 +38,9 @@
         "private",
         "friends",
         "group"
+    ],
+    "tags": [
+        "shared_desk",
+        "group_work"
     ]
 }

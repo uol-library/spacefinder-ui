@@ -1,18 +1,21 @@
 /**
- * This script scans through files in data/itemjson-combined and compiles a 
- * master list of people information from the ESMS and SAP data, then using this 
- * to consolidate information in these fields. The results are save in the 
- * data/temjson-cleaned directory.
+ * This script loads spacefinder data taken from a spreadsheet and creates
+ * separate JSON files for each space to use in the GitHub Pages site with
+ * NetlifyCMS. These individual space files are then concatenated to form
+ * the main data file which drives the application (using a GitHub Action).
  */
 const fs = require('fs');
 const path = require('path');
 
-const data = fs.readFileSync( path.resolve( __dirname, '../_data/leeds/spacefinder-leeds.json' ), { encoding: 'utf8' } );
+const data = fs.readFileSync( path.resolve( __dirname, '../../_data/leeds/spacefinder-leeds.json' ), { encoding: 'utf8' } );
 const fileJSON = JSON.parse( data );
+const cmapdata = fs.readFileSync( path.resolve( __dirname, '../../_data/leeds/campusmap_lookup.json' ), { encoding: 'utf8' } );
+const cmapJSON = JSON.parse( cmapdata );
 const cleanedJSON = [];
 const BreakException = {};
 const fieldMapping = {
-    "name": "Enter space name below e.g. first floor west, the red bean bags or relaxed reading space",
+    "title": "Enter space name below e.g. first floor west, the red bean bags or relaxed reading space",
+    "basic_info": "Basic info",
     "description": "Text description of space",
     "access": "Who can use the space?",
     "space_type": "Type of space",
@@ -28,7 +31,7 @@ const fieldMapping = {
     "phone_number": "Phone number",
     "twitter_screen_name": "Twitter",
     "facebook_url": "Facebook page",
-    "If this is a café, restaurant or bar how expensive is it?(1 = cheap, 5 = expensive)": "expensive"
+    "expensive": "If this is a café, restaurant or bar how expensive is it?(1 = cheap, 5 = expensive)"
 };
 const facilitiesMapping = {
     "Food & drink allowed": "food_drink",
@@ -73,6 +76,15 @@ const typeMapping = {
     'Library': 'Library space',
     'Library ': 'Library space'
 };
+function lookup_campusmap_url( title ) {
+    var url = '';
+    cmapJSON.forEach(n => {
+        if ( title.indexOf( n.title ) !== -1 ) {
+            url = 'https://www.leeds.ac.uk/campusmap?location='+n.id;
+        }
+    });
+    return url;
+}
 var spaceID = 1;
 var spaceTypes = [];
 fileJSON.forEach( space => {
@@ -86,10 +98,13 @@ fileJSON.forEach( space => {
             } else {
                 newspace[f] = space[fieldMapping[f]];
             }
+        } else if ( f === 'basic_info' ) {
+            newspace[f] = space[fieldMapping[f]].replace(" https://www.leeds.ac.uk/campusmap", "");
         } else {
             newspace[f] = ( space[fieldMapping[f]] == "no" ? false: ( space[fieldMapping[f]] == "yes" ? true: space[fieldMapping[f]] ) );
         }
     }
+    newspace.campusmap_url = lookup_campusmap_url( space[fieldMapping.title] );
     try {
         ["Strictly silent", "Whispers", "Background chatter", "Animated discussion", "Music playing"].forEach(n => {
             if (space[n] == "x") {
@@ -118,21 +133,23 @@ fileJSON.forEach( space => {
             newspace.work.push(workMapping[w]);
         }
     }
+    if ( space['Tags'] !== '' ) {
+        newspace.tags = space['Tags'].split(',').map( el => {
+            return el.trim();
+        });
+    } else {
+        newspace.tags = [];
+    }
     cleanedJSON.push(newspace);
-    fs.writeFile( path.resolve( __dirname, '../spaces/'+spaceID+'.json' ), JSON.stringify( newspace, null, '    ' ), err => {
+    fs.writeFile( path.resolve( __dirname, '../../spaces/'+spaceID+'.json' ), JSON.stringify( newspace, null, '    ' ), err => {
         if (err) {
             console.error( err );
             return;
         }
     });
-    if ( spaceTypes.hasOwnProperty( newspace.space_type ) ) {
-        spaceTypes[newspace.space_type]++;
-    } else {
-        spaceTypes[newspace.space_type] = 1;
-    }
+
     spaceID++;
 });
-console.log(spaceTypes);
 /*
 "name": "Starbucks (Grand Arcade)",
 "description": "",

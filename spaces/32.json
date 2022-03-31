@@ -1,6 +1,7 @@
 {
     "id": 32,
-    "name": "General Seating Areas - Leeds University Union - Foyer",
+    "title": "General Seating Areas - Leeds University Union - Foyer",
+    "basic_info": "Ground Floor, Leeds University Union. Campus Map Ref 32",
     "description": "Busy study place for people that like working alonside others . Couches with big tables can be used for comfortable group working on a nice environment .Extra couches on the side for anybody that wants to read or take a break .",
     "access": "Anyone (public)",
     "space_type": "General Seating Area",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17489",
     "noise": "Animated discussion",
     "facilities": [
         "food_drink",
@@ -38,5 +41,11 @@
         "close",
         "friends",
         "group"
+    ],
+    "tags": [
+        "busy",
+        "friendly",
+        "happening",
+        "social"
     ]
 }

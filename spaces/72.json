@@ -1,6 +1,7 @@
 {
     "id": 72,
-    "name": "Edward Boyle 10th floor",
+    "title": "Edward Boyle 10th floor",
+    "basic_info": "Study space desks and group studying couches",
     "description": "Busy study place for people that like working alonside others . Couches with big tables can be used for comfortable group working on a nice environment .Extra couches on the side for anybody that wants to read or take a break inside the library .",
     "access": "Students ",
     "space_type": "Library space",
@@ -16,6 +17,8 @@
     "phone_number": " 114 343 5663",
     "twitter_screen_name": "UoLLibrary",
     "facebook_url": "Edward Boyle Library ",
+    "expensive": null,
+    "campusmap_url": "",
     "noise": "Background chatter",
     "facilities": [
         "food_drink",
@@ -46,5 +49,10 @@
         "close",
         "friends",
         "group"
+    ],
+    "tags": [
+        "group",
+        "relax",
+        "deep_focus"
     ]
 }

@@ -1,6 +1,7 @@
 {
     "id": 53,
-    "name": "IT Cluster - Esther Simpson Building - 109",
+    "title": "IT Cluster - Esther Simpson Building - 109",
+    "basic_info": "Campus Map Ref 12",
     "description": "Cluster room surrounded by big windows with high views on campus . Perfect for focused study with acess to computers.",
     "access": "Students",
     "space_type": "IT Cluster",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17420",
     "noise": "Strictly silent",
     "facilities": [
         "daylight",
@@ -36,5 +39,10 @@
     "work": [
         "private",
         "close"
+    ],
+    "tags": [
+        "computers",
+        "silent",
+        "clusters"
     ]
 }

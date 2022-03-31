@@ -1,6 +1,7 @@
 {
     "id": 58,
-    "name": "IT Cluster - Maurice Keyworth Building - 2.21",
+    "title": "IT Cluster - Maurice Keyworth Building - 2.21",
+    "basic_info": "70 Seat Capacity. Campus Map Ref 19",
     "description": "big cluster with. Multiple computers. ",
     "access": "Students",
     "space_type": "IT Cluster",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "",
     "noise": "Whispers",
     "facilities": [
         "daylight",
@@ -37,5 +40,10 @@
     "work": [
         "private",
         "close"
+    ],
+    "tags": [
+        "computers",
+        "silent",
+        "clusters"
     ]
 }

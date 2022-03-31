@@ -1,6 +1,7 @@
 {
     "id": 56,
-    "name": "IT Cluster - Irene Manton Building - 7.90",
+    "title": "IT Cluster - Irene Manton Building - 7.90",
+    "basic_info": "45 Seat Capacity. Campus Map Ref 91",
     "description": "Rows of It clusters with a full left side of windows that are facing a beautiful side of campus allowing plenty of natural light into the study area.",
     "access": "Students",
     "space_type": "IT Cluster",
@@ -16,6 +17,8 @@
     "phone_number": "1132431751",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17462",
     "noise": "Whispers",
     "facilities": [
         "daylight",
@@ -43,5 +46,10 @@
         "private",
         "close",
         "friends"
+    ],
+    "tags": [
+        "views",
+        "modern",
+        "clusters"
     ]
 }

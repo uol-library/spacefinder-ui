@@ -1,6 +1,7 @@
 {
     "id": 6,
-    "name": "Costa Parkinson Court in Parkinson Building",
+    "title": "Costa Parkinson Court in Parkinson Building",
+    "basic_info": "Ground floor Parkinson Building, Campus Map ref 60",
     "description": "Parkinson Court Café sits in one of the most iconic buildings at the University of Leeds.",
     "access": "Anyone (public)",
     "space_type": "Café",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "GreatFoodLeeds",
     "facebook_url": "",
+    "expensive": 3,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17525",
     "noise": "Whispers",
     "facilities": [
         "food_drink",
@@ -39,5 +42,10 @@
         "private",
         "close",
         "friends"
+    ],
+    "tags": [
+        "historic",
+        "silent",
+        "inspiring"
     ]
 }

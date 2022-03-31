@@ -1,6 +1,7 @@
 {
     "id": 50,
-    "name": "IT Cluster - Clothworkers' Building Link - G.34",
+    "title": "IT Cluster - Clothworkers' Building Link - G.34",
+    "basic_info": "28 Seat Capacity. Campus Map Ref 34",
     "description": "Cluster room with a variety of desks for individual or group study .",
     "access": "Students",
     "space_type": "IT Cluster",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "",
     "noise": "Strictly silent",
     "facilities": [
         "daylight",
@@ -36,5 +39,10 @@
     "work": [
         "private",
         "close"
+    ],
+    "tags": [
+        "computers",
+        "silent",
+        "clusters"
     ]
 }

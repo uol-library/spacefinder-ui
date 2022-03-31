@@ -1,6 +1,7 @@
 {
     "id": 26,
-    "name": "Seminal Communal Areas - Michael Sadler Building - LG.17",
+    "title": "Seminal Communal Areas - Michael Sadler Building - LG.17",
+    "basic_info": "19 Seat Capacity. Lower Ground Floor Baines Wing. Campus Map Ref 78",
     "description": "Seminar room with chairs and flip out tables with big window facing the campus.",
     "access": "Students",
     "space_type": "Seminar room",
@@ -16,6 +17,8 @@
     "phone_number": "113343555",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17512",
     "noise": "Whispers",
     "facilities": [
         "daylight",
@@ -36,5 +39,10 @@
     "work": [
         "private",
         "group"
+    ],
+    "tags": [
+        "window",
+        "silent",
+        "small"
     ]
 }

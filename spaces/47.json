@@ -1,6 +1,7 @@
 {
     "id": 47,
-    "name": "IT Cluster - Clarendon Building - G04",
+    "title": "IT Cluster - Clarendon Building - G04",
+    "basic_info": "50 Seat Capacity. Campus Map Ref 20",
     "description": "classroom with 4 computer rows. Comfortable chairs.",
     "access": "Students",
     "space_type": "IT Cluster",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17385",
     "noise": "Strictly silent",
     "facilities": [
         "daylight",
@@ -38,5 +41,10 @@
     "work": [
         "private",
         "close"
+    ],
+    "tags": [
+        "computers",
+        "silent",
+        "clusters"
     ]
 }

@@ -1,6 +1,7 @@
 {
     "id": 40,
-    "name": "General Seating Areas - Liberty Building - First floor Group workspace (1.22)",
+    "title": "General Seating Areas - Liberty Building - First floor Group workspace (1.22)",
+    "basic_info": "First Floor, Liberty Building.  Campus Map Ref 16",
     "description": "casual seating area for a group or an individual. where food and drinks are allowed ",
     "access": "Anyone (public)",
     "space_type": "General Seating Area",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17491",
     "noise": "Whispers",
     "facilities": [
         "food_drink",
@@ -37,5 +40,9 @@
     "work": [
         "private",
         "close"
+    ],
+    "tags": [
+        "views",
+        "modern"
     ]
 }

@@ -1,6 +1,7 @@
 {
     "id": 78,
-    "name": "Silent study 3rd floor, Laidlaw library",
+    "title": "Silent study 3rd floor, Laidlaw library",
+    "basic_info": "",
     "description": "Silent study space inside the Laidlaw library. Enough seating area and",
     "access": "students",
     "space_type": "Library space",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "UoLLibrary",
     "facebook_url": "Laidlaw library University of Leeds",
+    "expensive": null,
+    "campusmap_url": "",
     "noise": "Strictly silent",
     "facilities": [
         "food_drink",
@@ -39,5 +42,9 @@
     "work": [
         "private",
         "close"
+    ],
+    "tags": [
+        "Silent study",
+        "concentrated study"
     ]
 }

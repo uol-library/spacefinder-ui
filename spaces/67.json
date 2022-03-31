@@ -1,6 +1,7 @@
 {
     "id": 67,
-    "name": "IT Cluster - Worsley Building - 7.027r",
+    "title": "IT Cluster - Worsley Building - 7.027r",
+    "basic_info": "12 Seat Capacity. Campus Map Ref 95",
     "description": "Big clusters area with adjustable size.No drinks or food allowed.",
     "access": "Students",
     "space_type": "IT Cluster",
@@ -16,7 +17,10 @@
     "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17591",
     "facilities": [],
     "atmosphere": [],
-    "work": []
+    "work": [],
+    "tags": []
 }

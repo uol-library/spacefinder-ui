@@ -1,6 +1,7 @@
 {
     "id": 8,
-    "name": "Café Seven  in Worsley Building",
+    "title": "Café Seven  in Worsley Building",
+    "basic_info": "Level 7 Worsley Building, next to Airport Lounge, Campus Map ref 95",
     "description": "Located in the Worsley building, Café Sevenéis one of our most popular and vibrant cafés. Recently refurbished the large seating area is a great place to meet with friends.",
     "access": "Anyone (public)",
     "space_type": "Café",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "GreatFoodLeeds",
     "facebook_url": "",
+    "expensive": 3,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17591",
     "noise": "Background chatter",
     "facilities": [
         "food_drink",
@@ -36,5 +39,10 @@
         "close",
         "friends",
         "group"
+    ],
+    "tags": [
+        "Cafe",
+        "warm jacket potatos",
+        "coffee available"
     ]
 }

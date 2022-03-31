@@ -1,6 +1,7 @@
 {
     "id": 70,
-    "name": "IT Cluster - Worsley Building - 8.049P (Fourman)",
+    "title": "IT Cluster - Worsley Building - 8.049P (Fourman)",
+    "basic_info": "53 Seat Capacity. Campus Map Ref 95",
     "description": "Big room with clusters available",
     "access": "Students",
     "space_type": "IT Cluster",
@@ -16,6 +17,8 @@
     "phone_number": "1132440111",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17591",
     "noise": "Whispers",
     "facilities": [
         "large_desks",
@@ -34,5 +37,9 @@
     "work": [
         "private",
         "close"
+    ],
+    "tags": [
+        "clusters",
+        "focused_study"
     ]
 }

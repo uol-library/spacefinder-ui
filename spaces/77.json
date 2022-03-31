@@ -1,6 +1,7 @@
 {
     "id": 77,
-    "name": "Group study space",
+    "title": "Group study space",
+    "basic_info": "",
     "description": "Group study space for groups inside the library",
     "access": "students",
     "space_type": "Library space",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "UoLLibrary",
     "facebook_url": "Health Sciences Library",
+    "expensive": null,
+    "campusmap_url": "",
     "noise": "Whispers",
     "facilities": [
         "food_drink",
@@ -38,5 +41,8 @@
     "work": [
         "private",
         "close"
+    ],
+    "tags": [
+        "Group study space"
     ]
 }

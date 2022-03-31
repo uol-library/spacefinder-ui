@@ -1,6 +1,7 @@
 {
     "id": 4,
-    "name": "Esther Simpson Café in Esther Simpson Building",
+    "title": "Esther Simpson Café in Esther Simpson Building",
+    "basic_info": "Ground floor Esther Simpson Building, Campus Map ref 12",
     "description": "Located in the new Esther Simpson building on the edge of Woodhouse Moor, the café is modern and relaxed, serving speciality coffee from Darkwoods.",
     "access": "Anyone (public)",
     "space_type": "Café",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "GreatFoodLeeds",
     "facebook_url": "",
+    "expensive": 4,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=18484",
     "noise": "Whispers",
     "facilities": [
         "food_drink",
@@ -41,5 +44,10 @@
         "close",
         "friends",
         "group"
+    ],
+    "tags": [
+        "formal",
+        "well maintained",
+        "new"
     ]
 }

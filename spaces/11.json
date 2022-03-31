@@ -1,6 +1,7 @@
 {
     "id": 11,
-    "name": "Hugo in University Square (Outdoor space)",
+    "title": "Hugo in University Square (Outdoor space)",
+    "basic_info": "Outdoors in University Square",
     "description": "Hugo, the Camionnette Café, is one of the more unique members oféthe Great Food at Leeds team and sells a range of hot drinks, pastries and brownies.",
     "access": "Anyone (public)",
     "space_type": "Café",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "GreatFoodLeeds",
     "facebook_url": "",
+    "expensive": 3,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=18475",
     "noise": "Animated discussion",
     "facilities": [
         "food_drink",
@@ -35,5 +38,10 @@
     "work": [
         "friends",
         "group"
+    ],
+    "tags": [
+        "food truck",
+        "pastries",
+        "brownies"
     ]
 }

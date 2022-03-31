@@ -1,6 +1,7 @@
 {
     "id": 35,
-    "name": "General Seating Areas - Electronic and Electrical Engineering - Ground Floor Foyer",
+    "title": "General Seating Areas - Electronic and Electrical Engineering - Ground Floor Foyer",
+    "basic_info": "Ground Floor Electronic and Electrical Engineering.  Campus Map Ref 51",
     "description": "Big bright foyer with couches and circular tables with chairs is a perfect place to take a break or study relaxed alone or in a group .",
     "access": "Anyone (public)",
     "space_type": "General Seating Area",
@@ -16,6 +17,8 @@
     "phone_number": "1133432000",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17412",
     "noise": "Animated discussion",
     "facilities": [
         "food_drink",
@@ -38,5 +41,10 @@
     "work": [
         "private",
         "friends"
+    ],
+    "tags": [
+        "bright",
+        "modern",
+        "couches"
     ]
 }

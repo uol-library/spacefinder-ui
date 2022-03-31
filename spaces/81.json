@@ -1,6 +1,7 @@
 {
     "id": 81,
-    "name": "Group study booths ",
+    "title": "Group study booths ",
+    "basic_info": "",
     "description": "Group study booths for a max group of 5 with monitor display",
     "access": "students",
     "space_type": "Library space",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "UoLLibrary",
     "facebook_url": "Laidlaw library University of Leeds",
+    "expensive": null,
+    "campusmap_url": "",
     "noise": "Whispers",
     "facilities": [
         "food_drink",
@@ -41,5 +44,10 @@
         "private",
         "close",
         "group"
+    ],
+    "tags": [
+        "Study booths",
+        "group of 5",
+        "near cafe nero"
     ]
 }

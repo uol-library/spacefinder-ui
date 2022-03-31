@@ -1,6 +1,7 @@
 {
     "id": 17,
-    "name": "Seminal Communal Areas - Baines Wing - LG.20",
+    "title": "Seminal Communal Areas - Baines Wing - LG.20",
+    "basic_info": "14 Seat Capacity. Lower Ground Floor Baines Wing. Campus Map Ref 58",
     "description": "Seminar room with flip out tables and chairs in small theater style. ",
     "access": "Students",
     "space_type": "Seminar room",
@@ -16,6 +17,8 @@
     "phone_number": "1133437200",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17343",
     "noise": "Whispers",
     "facilities": [
         "daylight",
@@ -34,5 +37,10 @@
         "private",
         "friends",
         "group"
+    ],
+    "tags": [
+        "seminar_room",
+        "projector",
+        "silent"
     ]
 }

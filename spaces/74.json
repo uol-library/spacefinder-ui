@@ -1,6 +1,7 @@
 {
     "id": 74,
-    "name": "Edward Boyle 8th floor",
+    "title": "Edward Boyle 8th floor",
+    "basic_info": "",
     "description": "Study space for people to attend seminars and being able to participate , study with friends and explore multiple journals.Available bookable study spaces / meeting rooms",
     "access": "Students",
     "space_type": "Library space",
@@ -16,6 +17,8 @@
     "phone_number": " 115 343 5663",
     "twitter_screen_name": "UoLLibrary",
     "facebook_url": "Edward Boyle Library ",
+    "expensive": null,
+    "campusmap_url": "",
     "noise": "Background chatter",
     "facilities": [
         "food_drink",
@@ -48,5 +51,10 @@
         "close",
         "friends",
         "group"
+    ],
+    "tags": [
+        "talking",
+        "group",
+        "meetings"
     ]
 }

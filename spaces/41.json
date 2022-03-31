@@ -1,6 +1,7 @@
 {
     "id": 41,
-    "name": "General Seating Areas - Charles Thackrah - Atrium (Ground Floor)",
+    "title": "General Seating Areas - Charles Thackrah - Atrium (Ground Floor)",
+    "basic_info": "Ground Floor, Charles Thackrah Building.  Campus Map Ref 15",
     "description": "mordern seating area with small tables and wall attached tables. Occationally busy. Perfect place to take a break or prepare before class. ",
     "access": "Anyone (public)",
     "space_type": "General Seating Area",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "",
     "noise": "Background chatter",
     "facilities": [
         "food_drink",
@@ -37,5 +40,10 @@
         "close",
         "friends",
         "group"
+    ],
+    "tags": [
+        "moreden",
+        "relaxed",
+        "small tables"
     ]
 }

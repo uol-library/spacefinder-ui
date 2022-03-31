@@ -1,6 +1,7 @@
 {
     "id": 79,
-    "name": "2nd floor Laidlaw library",
+    "title": "2nd floor Laidlaw library",
+    "basic_info": "",
     "description": "Silent study space with enough seats. Group boots also available. ",
     "access": "students",
     "space_type": "Library space",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "UoLLibrary",
     "facebook_url": "Laidlaw library University of Leeds",
+    "expensive": null,
+    "campusmap_url": "",
     "noise": "Strictly silent",
     "facilities": [
         "food_drink",
@@ -39,5 +42,10 @@
     "work": [
         "private",
         "close"
+    ],
+    "tags": [
+        "Silent Study space",
+        "group booths available",
+        "inside library"
     ]
 }

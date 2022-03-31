@@ -1,6 +1,7 @@
 {
     "id": 9,
-    "name": "Loma in Worsley Building",
+    "title": "Loma in Worsley Building",
+    "basic_info": "Level 9 Worsley Building, Campus Map ref 95",
     "description": "LOMA is a unique offering on campus serving up specially selected craft coffee, delicious drinks and handcrafted salads and sandwiches.",
     "access": "Anyone (public)",
     "space_type": "Café",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "GreatFoodLeeds",
     "facebook_url": "",
+    "expensive": 3,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17591",
     "noise": "Whispers",
     "facilities": [
         "food_drink",
@@ -41,5 +44,10 @@
         "private",
         "close",
         "friends"
+    ],
+    "tags": [
+        "mordern",
+        "coffee",
+        "casual"
     ]
 }

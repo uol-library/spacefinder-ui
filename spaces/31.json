@@ -1,6 +1,7 @@
 {
     "id": 31,
-    "name": "General Seating Areas - Michael Sadler Building - Behind Rupert Beckett Lecture Theatre",
+    "title": "General Seating Areas - Michael Sadler Building - Behind Rupert Beckett Lecture Theatre",
+    "basic_info": "Rear of Michael Sadler Building from Beech Grove Terrace. Campus Map Ref 78",
     "description": "Colorful study area with desks and access to clusters . Relaxed space for studying individually or with a group.",
     "access": "Anyone (public)",
     "space_type": "General Seating Area",
@@ -16,6 +17,8 @@
     "phone_number": "113343555",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17512",
     "noise": "Whispers",
     "facilities": [
         "food_drink",
@@ -37,5 +40,10 @@
     "work": [
         "private",
         "group"
+    ],
+    "tags": [
+        "colorful",
+        "relaxed",
+        "social"
     ]
 }

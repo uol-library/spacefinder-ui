@@ -1,6 +1,7 @@
 {
     "id": 76,
-    "name": "Group study rooms, health science library",
+    "title": "Group study rooms, health science library",
+    "basic_info": "",
     "description": "Group study rooms for group work( booking required",
     "access": "students",
     "space_type": "Library space",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "UoLLibrary",
     "facebook_url": "Health Sciences Library",
+    "expensive": null,
+    "campusmap_url": "",
     "noise": "Strictly silent",
     "facilities": [
         "food_drink",
@@ -40,5 +43,8 @@
         "private",
         "close",
         "group"
+    ],
+    "tags": [
+        "Group study room"
     ]
 }

@@ -18,7 +18,7 @@ collections:
     format: 'json'
     fields:
       - label: 'Space name'
-        name: 'name'
+        name: 'title'
         widget: 'string'
         required: true
       - label: 'Building name'
@@ -68,6 +68,10 @@ collections:
         required: false
       - label: 'Website URL'
         name: 'url'
+        widget: 'string'
+        required: false
+      - label: 'Campus Map URL'
+        name: 'campusmap_url'
         widget: 'string'
         required: false
       - label: 'Booking URL'

@@ -1,6 +1,7 @@
 {
     "id": 34,
-    "name": "General Seating Areas - Chemistry - Chaston Chapman Lounge (room G20)",
+    "title": "General Seating Areas - Chemistry - Chaston Chapman Lounge (room G20)",
+    "basic_info": "Ground Floor, Chemistry.  Campus Map Ref 55",
     "description": "Bright green modern lounge located at the Chemistry Building is the perfect place to study , take a break or explore the scientific magazines that are displayed on the selves . The couches and the chairs are very comfortable making the area very welcoming.",
     "access": "Anyone (public)",
     "space_type": "General Seating Area",
@@ -16,6 +17,8 @@
     "phone_number": "1133432444",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17381",
     "noise": "Animated discussion",
     "facilities": [
         "food_drink",
@@ -38,5 +41,10 @@
         "private",
         "friends",
         "group"
+    ],
+    "tags": [
+        "light",
+        "couches",
+        "lounge"
     ]
 }

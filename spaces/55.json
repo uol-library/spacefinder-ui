@@ -1,6 +1,7 @@
 {
     "id": 55,
-    "name": "IT Cluster - Fine Art, History of Art and Cultural Studies - G29 (West Teaching Labs)",
+    "title": "IT Cluster - Fine Art, History of Art and Cultural Studies - G29 (West Teaching Labs)",
+    "basic_info": "31 Seat Capacity. Campus Map Ref 38",
     "description": "Inspiring cluster room surrounded by big windows with high views of campus . ",
     "access": "Students",
     "space_type": "IT Cluster",
@@ -16,6 +17,8 @@
     "phone_number": "1133435260",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17451",
     "noise": "Strictly silent",
     "facilities": [
         "daylight",
@@ -41,5 +44,10 @@
     "work": [
         "private",
         "close"
+    ],
+    "tags": [
+        "views",
+        "historic",
+        "inspiring"
     ]
 }

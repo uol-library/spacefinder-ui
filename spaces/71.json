@@ -1,6 +1,7 @@
 {
     "id": 71,
-    "name": "Edward Boyle 11th , 12 th floor",
+    "title": "Edward Boyle 11th , 12 th floor",
+    "basic_info": "Study space and clusters",
     "description": "Silent place for studying with access to books , clusters and nice high views to the campus .Perfect place for focused study and exam preparation.",
     "access": "Students ",
     "space_type": "Library space",
@@ -16,6 +17,8 @@
     "phone_number": " 0113 343 5663",
     "twitter_screen_name": "UoLLibrary",
     "facebook_url": "Edward Boyle Library ",
+    "expensive": null,
+    "campusmap_url": "",
     "noise": "Whispers",
     "facilities": [
         "food_drink",
@@ -43,5 +46,11 @@
     "work": [
         "private",
         "close"
+    ],
+    "tags": [
+        "books",
+        "views",
+        "busy",
+        "silent"
     ]
 }

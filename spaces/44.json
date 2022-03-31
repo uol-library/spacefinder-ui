@@ -1,6 +1,7 @@
 {
     "id": 44,
-    "name": "IT Cluster - Chemistry and Chemistry West Block - 1.44A",
+    "title": "IT Cluster - Chemistry and Chemistry West Block - 1.44A",
+    "basic_info": "11 Seat Capacity. Campus Map Ref 55",
     "description": "",
     "access": "Students",
     "space_type": "IT Cluster",
@@ -16,7 +17,10 @@
     "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17382",
     "facilities": [],
     "atmosphere": [],
-    "work": []
+    "work": [],
+    "tags": []
 }

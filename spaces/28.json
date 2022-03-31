@@ -1,6 +1,7 @@
 {
     "id": 28,
-    "name": "Seminal Communal Areas - Parkinson Building - 4.20",
+    "title": "Seminal Communal Areas - Parkinson Building - 4.20",
+    "basic_info": "16 Seat Capacity. Fourth Floor Michael Sadler Building. Campus Map Ref 78",
     "description": "Seminar room available for individual study with great view to university campus.",
     "access": "Students",
     "space_type": "Seminar room",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17525",
     "noise": "Whispers",
     "facilities": [
         "food_drink",
@@ -37,5 +40,10 @@
         "close",
         "friends",
         "group"
+    ],
+    "tags": [
+        "private",
+        "calming",
+        "views"
     ]
 }

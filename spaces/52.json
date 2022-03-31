@@ -1,6 +1,7 @@
 {
     "id": 52,
-    "name": "IT Cluster - E C Stoner Building - 6.68",
+    "title": "IT Cluster - E C Stoner Building - 6.68",
+    "basic_info": "58 Seat Capacity. Campus Map Ref 73",
     "description": "classrooms of big cluster with multiple computers and comfortable chairs. ",
     "access": "Students",
     "space_type": "IT Cluster",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17406",
     "noise": "Strictly silent",
     "facilities": [
         "daylight",
@@ -36,5 +39,10 @@
     "work": [
         "private",
         "close"
+    ],
+    "tags": [
+        "computers",
+        "silent",
+        "clusters"
     ]
 }

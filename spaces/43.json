@@ -1,6 +1,7 @@
 {
     "id": 43,
-    "name": "IT Cluster - Chemistry and Chemistry West Block - 1.44",
+    "title": "IT Cluster - Chemistry and Chemistry West Block - 1.44",
+    "basic_info": "23 Seat Capacity. Campus Map Ref 55",
     "description": "Private study space for focused study .",
     "access": "Students",
     "space_type": "IT Cluster",
@@ -16,6 +17,8 @@
     "phone_number": "113343644",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17382",
     "noise": "Strictly silent",
     "facilities": [
         "daylight",
@@ -34,5 +37,10 @@
         "private",
         "close",
         "group"
+    ],
+    "tags": [
+        "silent",
+        "clusters",
+        "projector"
     ]
 }

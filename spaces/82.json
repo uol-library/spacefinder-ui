@@ -1,6 +1,7 @@
 {
     "id": 82,
-    "name": "Footsteps fund room",
+    "title": "Footsteps fund room",
+    "basic_info": "",
     "description": "Casual seating area where food and drinks are allowed. Partially noisy ",
     "access": "students",
     "space_type": "Library space",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "UoLLibrary",
     "facebook_url": "Laidlaw library University of Leeds",
+    "expensive": null,
+    "campusmap_url": "",
     "noise": "Background chatter",
     "facilities": [
         "food_drink",
@@ -40,5 +43,9 @@
         "close",
         "friends",
         "group"
+    ],
+    "tags": [
+        "Casual seating area",
+        "little noises"
     ]
 }

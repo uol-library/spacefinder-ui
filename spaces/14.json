@@ -1,6 +1,7 @@
 {
     "id": 14,
-    "name": "Seminal Communal Areas - Baines Wing - G.28",
+    "title": "Seminal Communal Areas - Baines Wing - G.28",
+    "basic_info": "15 Seat Capacity. Ground Floor Baines Wing. Campus Map Ref 58",
     "description": "Small study/seminar room space that includes one large desk for group or single  focused study. Acess to whiteboard and plug sockets.",
     "access": "Students",
     "space_type": "Seminar room",
@@ -16,6 +17,8 @@
     "phone_number": "1133437200",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17343",
     "noise": "Whispers",
     "facilities": [
         "large_desks",
@@ -34,5 +37,10 @@
     "work": [
         "private",
         "group"
+    ],
+    "tags": [
+        "big_desk",
+        "group_study",
+        "alone_study"
     ]
 }

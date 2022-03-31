@@ -1,6 +1,7 @@
 {
     "id": 65,
-    "name": "IT Cluster - Worsley Building - 8.038",
+    "title": "IT Cluster - Worsley Building - 8.038",
+    "basic_info": "52 Seat Capacity. Campus Map Ref 95",
     "description": "Cluster room with a variety of desks for individual or group study .",
     "access": "Students",
     "space_type": "IT Cluster",
@@ -16,6 +17,8 @@
     "phone_number": "33333",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17591",
     "noise": "Strictly silent",
     "facilities": [
         "large_desks",
@@ -36,5 +39,9 @@
         "private",
         "close",
         "group"
+    ],
+    "tags": [
+        "clusters",
+        "silent"
     ]
 }

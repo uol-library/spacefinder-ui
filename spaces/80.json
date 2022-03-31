@@ -1,6 +1,7 @@
 {
     "id": 80,
-    "name": "Silent study space 1",
+    "title": "Silent study space 1",
+    "basic_info": "",
     "description": "Study space inside the library, closed doors, very silent ",
     "access": "students",
     "space_type": "Library space",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "UoLLibrary",
     "facebook_url": "Laidlaw library University of Leeds",
+    "expensive": null,
+    "campusmap_url": "",
     "noise": "Strictly silent",
     "facilities": [
         "food_drink",
@@ -36,5 +39,9 @@
     "work": [
         "private",
         "close"
+    ],
+    "tags": [
+        "Silent study space",
+        "good for concentrated study"
     ]
 }

@@ -1,6 +1,7 @@
 {
     "id": 2,
-    "name": "Fuse Cafe in Chemical and Process Engineering",
+    "title": "Fuse Cafe in Chemical and Process Engineering",
+    "basic_info": "Ground floor Chemical and Process Engineering Building, Campus Map ref 48",
     "description": "Fuse at The School of Chemical and Process Engineering is a hidden gem located in the Engineering buildings",
     "access": "Anyone (public)",
     "space_type": "Café",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "GreatFoodLeeds",
     "facebook_url": "",
+    "expensive": 3,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=18474",
     "noise": "Background chatter",
     "facilities": [
         "food_drink",
@@ -40,5 +43,10 @@
         "close",
         "friends",
         "group"
+    ],
+    "tags": [
+        "silent",
+        "mordern",
+        "good coffee"
     ]
 }

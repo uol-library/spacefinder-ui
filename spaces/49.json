@@ -1,6 +1,7 @@
 {
     "id": 49,
-    "name": "IT Cluster - Clothworkers' Building Link - 140 (Richard Hughes)",
+    "title": "IT Cluster - Clothworkers' Building Link - 140 (Richard Hughes)",
+    "basic_info": "45 Seat Capacity. Campus Map Ref 34",
     "description": "Big clusters area with No drinks or food allowed.",
     "access": "Students",
     "space_type": "IT Cluster",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "",
     "noise": "Strictly silent",
     "facilities": [
         "daylight",
@@ -36,5 +39,10 @@
     "work": [
         "private",
         "close"
+    ],
+    "tags": [
+        "computers",
+        "silent",
+        "clusters"
     ]
 }

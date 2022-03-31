@@ -1,6 +1,7 @@
 {
     "id": 33,
-    "name": "General Seating Areas - Worsley Building - Airport Lounge seating (level 7)",
+    "title": "General Seating Areas - Worsley Building - Airport Lounge seating (level 7)",
+    "basic_info": "Level 7 Worsley Building. Campus Map ref 95",
     "description": "Modern colorful big area with comfortable couches and chairs . Vending , cash and cofee machie available as well as water fountain .",
     "access": "Anyone (public)",
     "space_type": "General Seating Area",
@@ -16,6 +17,8 @@
     "phone_number": "1133435663",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17591",
     "noise": "Background chatter",
     "facilities": [
         "food_drink",
@@ -41,5 +44,10 @@
         "close",
         "friends",
         "group"
+    ],
+    "tags": [
+        "lounge",
+        "modern",
+        "cash_mashine"
     ]
 }

@@ -1,6 +1,7 @@
 {
     "id": 83,
-    "name": "Brotherton Library",
+    "title": "Brotherton Library",
+    "basic_info": "Silent classic style library ",
     "description": "Inspiring study place with group study areas on floor 2 of the main building and floor 3 of the west building .",
     "access": "Students",
     "space_type": "Library space",
@@ -16,7 +17,10 @@
     "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17354",
     "facilities": [],
     "atmosphere": [],
-    "work": []
+    "work": [],
+    "tags": []
 }

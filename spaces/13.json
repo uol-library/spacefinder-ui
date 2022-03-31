@@ -1,6 +1,7 @@
 {
     "id": 13,
-    "name": "Outside the Edward Boyle Library Edit Room café (Outdoor space)",
+    "title": "Outside the Edward Boyle Library Edit Room café (Outdoor space)",
+    "basic_info": "Outdoors next to the Edward Boyle Library. ",
     "description": "Outdoor seating situated outside the Edward Boyle Library",
     "access": "Anyone (public)",
     "space_type": "Café",
@@ -16,6 +17,8 @@
     "phone_number": "",
     "twitter_screen_name": "GreatFoodLeeds",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17411",
     "noise": "Animated discussion",
     "facilities": [
         "food_drink",
@@ -38,5 +41,10 @@
     "work": [
         "friends",
         "group"
+    ],
+    "tags": [
+        "outdoors",
+        "big_area",
+        "group work"
     ]
 }

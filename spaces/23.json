@@ -1,6 +1,7 @@
 {
     "id": 23,
-    "name": "Seminal Communal Areas - Michael Sadler Building - 1.37",
+    "title": "Seminal Communal Areas - Michael Sadler Building - 1.37",
+    "basic_info": "12 Seat Capacity. First Floor Michael Sadler Building. Campus Map Ref 78",
     "description": "Silent study space with chairs and flip out tables .Perfect for studying using multiple whiteboards.",
     "access": "Students",
     "space_type": "Seminar room",
@@ -16,6 +17,8 @@
     "phone_number": "113343555",
     "twitter_screen_name": "",
     "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17512",
     "noise": "Whispers",
     "facilities": [
         "daylight",
@@ -34,5 +37,10 @@
     "work": [
         "private",
         "group"
+    ],
+    "tags": [
+        "whiteboards",
+        "group_study",
+        "focused_study"
     ]
 }
