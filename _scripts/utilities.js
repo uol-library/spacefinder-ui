@@ -1,7 +1,7 @@
 /**
  * Utility functions
  */
-export { getJSON, haversine_distance };
+
 /**
  * Checks to see if localStorage is available
  * 
@@ -94,7 +94,7 @@ function haversine_distance(mk1, mk2) {
  * @param {Object} options Information about the JSON file
  * @param {String} options.key Unique key used to store the data in localstorage (required)
  * @param {String} options.url URL of the JSON file (required)
- * @param {Integer} options.expiry How long to cache the results (in hours) default: 24
+ * @param {Integer} options.expires How long to cache the results (in hours) default: 24
  * @param {Boolean} options.debug Whether to display debugging information in the console
  * @param {Function} options.callback callback function with one parameter (JSON parsed response)
  */
@@ -103,7 +103,7 @@ function getJSON(options) {
         return;
     }
     if ( ! options.hasOwnProperty( 'expires' ) ) {
-        options.expires = 24;
+        options.expires = 0.01;
     }
     if ( storageAvailable('localStorage') && getWithExpiry(options.key) ) {
         if ( options.debug ) {
@@ -117,11 +117,11 @@ function getJSON(options) {
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", function(){
             if ( storageAvailable('localStorage') ) {
-                var expires = new Date().getTime() + (options.expiry*60*60*1000);
+                let expires = new Date().getTime() + (options.expires*60*60*1000);
                 if ( options.debug ) {
                     console.log("storing data '"+options.key+"' in localstorage - expires "+expires);
                 }
-                setWithExpiry(options.key, this.responseText, options.expiry);
+                setWithExpiry(options.key, this.responseText, expires);
             }
             if ( options.hasOwnProperty( 'callback' ) && typeof options.callback == 'function' ) {
                 options.callback( JSON.parse( this.responseText ) );
