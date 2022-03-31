@@ -38,9 +38,9 @@ function renderList() {
     spacefinder.spaces.forEach( space => {
         spaceContainer = document.createElement('div');
         spaceContainer.setAttribute('data-id', space.id );
-        spaceContainer.setAttribute('data-sortkey', space.name.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() );
+        spaceContainer.setAttribute('data-sortkey', space.title.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() );
         spaceContainer.setAttribute('class', 'list-space ' + space.classes );
-        let spaceHTML = '<h2><a href="' + space.link + '">' + space.name + '</a></h2>';
+        let spaceHTML = '<h2><a href="' + space.link + '">' + space.title + '</a></h2>';
         spaceHTML += '<h3><span class="space-type space-type-' + space.space_type.toLowerCase() + '">' + space.space_type + '</span>';
         spaceHTML += space.library? '<span class="library">' + space.library + '</span>': '';
         spaceHTML += '<span class="address">' + space.address + '</span></h3>';
