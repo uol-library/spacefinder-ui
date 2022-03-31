@@ -20,6 +20,7 @@
     "expensive": null,
     "campusmap_url": "",
     "noise": "Background chatter",
+    "images": [],
     "facilities": [
         "food_drink",
         "daylight",

@@ -115,6 +115,7 @@ fileJSON.forEach( space => {
     } catch (e) {
         if ( e !== BreakException ) throw e;
     }
+    newspace.images = [];
     newspace.facilities = [];
     for (fac in facilitiesMapping) {
         if ( space[fac] !== "" ) {

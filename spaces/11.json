@@ -20,6 +20,7 @@
     "expensive": 3,
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=18475",
     "noise": "Animated discussion",
+    "images": [],
     "facilities": [
         "food_drink",
         "daylight",

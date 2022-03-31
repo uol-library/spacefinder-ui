@@ -20,6 +20,7 @@
     "expensive": 3,
     "campusmap_url": "",
     "noise": "Animated discussion",
+    "images": [],
     "facilities": [
         "food_drink",
         "daylight",

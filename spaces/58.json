@@ -20,6 +20,7 @@
     "expensive": null,
     "campusmap_url": "",
     "noise": "Whispers",
+    "images": [],
     "facilities": [
         "daylight",
         "large_desks",
