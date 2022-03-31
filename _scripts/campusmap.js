@@ -5,7 +5,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const data = fs.readFileSync( path.resolve( __dirname, '../../_data/leeds/campusmap.json' ), { encoding: 'utf8' } );
+const data = fs.readFileSync( path.resolve( __dirname, '../_data/leeds/campusmap.json' ), { encoding: 'utf8' } );
 const fileJSON = JSON.parse( data );
 const cleanedJSON = [];
 fileJSON[0].buildings.forEach( bldg => {
@@ -14,7 +14,7 @@ fileJSON[0].buildings.forEach( bldg => {
         'title': bldg.title
     });
 });
-fs.writeFile( path.resolve( __dirname, '../../_data/leeds/campusmap_lookup.json' ), JSON.stringify( cleanedJSON, null, '    ' ), err => {
+fs.writeFile( path.resolve( __dirname, '../_data/leeds/campusmap_lookup.json' ), JSON.stringify( cleanedJSON, null, '    ' ), err => {
     if (err) {
         console.error( err );
         return;
