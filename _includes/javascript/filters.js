@@ -1,7 +1,6 @@
 /**
  * Functions for the filters panel in the UI
  */
-
 document.addEventListener('DOMContentLoaded', () => {
     setupFilters();
 });

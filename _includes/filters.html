@@ -1,6 +1,7 @@
         <form id="filter-options-form" action="/" method="get">
             <div class="filter-buttons">
                 <button id="clear-all" class="btn secondary" disabled>Clear all</button>
+                <button id="use-geolocation" class="btn secondary" disabled>Use my location</button>
             </div>
             {%- for filter in site.data.filters -%}
                 {%- assign ecl = '' -%}

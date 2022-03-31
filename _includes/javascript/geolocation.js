@@ -1,25 +1,6 @@
-const spacefinder = {
-    map: null,
-    currentLoc: {'lat': 52.205575, 'lng': 0.121682},
-    personLoc: {'lat': 52.205575, 'lng': 0.121682},
-    personMarker: null,
-    personInfo: false,
-    watchID: false,
-    permission: false,
-    mapLoaded: false
-};
+
 document.addEventListener('DOMContentLoaded', () => {
-	spacefinder.map = new google.maps.Map(document.getElementById('map'), {
-		center: spacefinder.currentLoc,
-		zoom: 10,
-		disableDefaultUI: true,
-		zoomControl: true,
-		zoomControlOptions: {
-			position: google.maps.ControlPosition.TOP_RIGHT
-		},
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-	});
-    spacefinder.mapLoaded = google.maps.event.addListener( spacefinder.map, 'tilesloaded', checkGeoPermissions );
+    document.addEventListener( 'maploaded', checkGeoPermissions );
 	document.addEventListener( 'userlocationchanged', event => {
 		if ( spacefinder.personInfo ) {
 			spacefinder.personInfo.close();
@@ -47,22 +28,22 @@ function checkGeoPermissions() {
             spacefinder.permission = result.state;
             geoReport( 'Geolocation permission: <strong>' + result.state + '</strong>' );
             if ( 'denied' == result.state ) {
-                document.getElementById('near-me-btn').disabled = true;
+                document.getElementById('use-geolocation').disabled = true;
             } else {
-                document.getElementById('near-me-btn').disabled = false;
+                document.getElementById('use-geolocation').disabled = false;
             }
             result.onchange = function() {
                 spacefinder.permission = result.state;
                 geoReport( 'Geolocation permission updated: ' + result.state );
                 if ( 'denied' == result.state ) {
-                    document.getElementById('near-me-btn').disabled = true;
+                    document.getElementById('use-geolocation').disabled = true;
                 } else {
-                    document.getElementById('near-me-btn').disabled = false;
+                    document.getElementById('use-geolocation').disabled = false;
                 }
             }
         }).catch(error => {
             geoReport( 'Geolocation permission could not be queried: ' + error );
-            document.getElementById('near-me-btn').disabled = true;
+            document.getElementById('use-geolocation').disabled = true;
         });
     }
     /**
@@ -72,13 +53,13 @@ function checkGeoPermissions() {
      * if denied: hides button
      */
     if ( 'geolocation' in navigator ) {
-        document.getElementById('near-me-btn').addEventListener('click', function () {
-            if ( document.getElementById('near-me-btn').disabled ) {
+        document.getElementById('use-geolocation').addEventListener('click', function () {
+            if ( document.getElementById('use-geolocation').disabled ) {
                 return;
             }
-            if ( document.getElementById('near-me-btn').classList.contains('active') ) {
+            if ( document.getElementById('use-geolocation').classList.contains('active') ) {
                 /* make use my location button inactive */
-                document.getElementById('near-me-btn').classList.remove('active');
+                document.getElementById('use-geolocation').classList.remove('active');
                 /* remove personmarker from map */
                 spacefinder.personMarker.setMap(null);
                 /* stop watching user position */
@@ -91,7 +72,7 @@ function checkGeoPermissions() {
             }
         });
     } else {
-        document.getElementById('near-me-btn').classList.add('hidden');
+        document.getElementById('use-geolocation').classList.add('hidden');
     }
 }
 /**
@@ -99,7 +80,7 @@ function checkGeoPermissions() {
  */
 function getUserPosition() {
 	navigator.geolocation.getCurrentPosition( position => {
-        document.getElementById('near-me-btn').classList.add('active');
+        document.getElementById('use-geolocation').classList.add('active');
 		spacefinder.personLoc.lat = position.coords.latitude;
 		spacefinder.personLoc.lng = position.coords.longitude;
 		geoReport( 'Your location: lat: '+spacefinder.personLoc.lat+', lng: '+spacefinder.personLoc.lng );
@@ -145,7 +126,7 @@ function getUserPosition() {
 				// Timeout - The time allowed to acquire the geolocation was reached before the information was obtained.
 		}
 		geoReport( 'Failed to get your location - ' + error.message + ' - button disabled' );
-		document.getElementById('near-me-btn').disabled = true;
+		document.getElementById('use-geolocation').disabled = true;
 	});
 }
 /**
@@ -160,6 +141,7 @@ function getInfoWindowContent( location ) {
  * @param {String} message HTML message to beappended to report
  */
 function geoReport( message ) {
+    return;
     let msg = document.createElement( 'p' );
     msg.innerHTML = message;
     document.getElementById('geo-report').append( msg );
