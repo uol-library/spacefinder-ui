@@ -20,6 +20,7 @@ function loadSpaces() {
                 spacefinder.spaces[index].link = '#/space/' + space.id;
                 spacefinder.spaces[index].classes = getClassList( space );
             });
+            spacefinder.spacesLoaded = true;
             /* fire the spacesloaded event */
             document.getElementById('list').dispatchEvent( new Event( 'spacesloaded', {
                 bubbles: true,
