@@ -6,4 +6,4 @@
 {% include javascript/filters.js %}
 {% include javascript/spaces.js %}
 {% include javascript/map.js %}
-{% include javascript/geolocation.js %}
+{% include javascript/components/accordion.js %}

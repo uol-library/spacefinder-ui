@@ -1,7 +1,16 @@
-<div id="listcontrols">
-    <span class="sortbuttons"><span class="sortlabel">Sort:</span><button id="sortalpha">A-Z</button><button id="sortdistance">by distance</button></span>
+<div id="listcontrols" class="top-controls">
+    <div class="listinfo">
+        <p>Showing <span id="listshowingcount"></span> of <span id="listtotalcount"></span> spaces</p>
+    </div>
+    <div class="sortbuttons">
+        <p>
+            <span class="sortlabel">Sort:</span>
+            <button id="sortalpha">A-Z</button>
+            <button id="sortdistance">by distance</button>
+        </p>
+    </div>
 </div>
-<div id="listcontent"></div>
+<div id="listcontent" class="panel-content"></div>
 <div id="single-space">
     <nav>
         <button id="ss-close">Close</button>

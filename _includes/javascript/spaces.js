@@ -36,7 +36,9 @@ function loadSpaces() {
  */
 function renderList() {
     let listContainer = document.getElementById('listcontent');
+    let spacetotal = 0;
     spacefinder.spaces.forEach( space => {
+        spacetotal++;
         spaceContainer = document.createElement('div');
         spaceContainer.setAttribute('data-id', space.id );
         spaceContainer.setAttribute('data-sortkey', space.title.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() );
@@ -59,6 +61,8 @@ function renderList() {
         spaceContainer.innerHTML = spaceHTML;
         listContainer.append( spaceContainer );
     });
+    document.getElementById('listshowingcount').textContent = spacetotal;
+    document.getElementById('listtotalcount').textContent = spacetotal;
 }
 
 /**

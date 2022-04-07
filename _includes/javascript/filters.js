@@ -55,8 +55,15 @@ function setupFilters() {
     });
 
     /* add radio button behaviour to checkboxes with exclusive attribute */
-    const filters = document.querySelectorAll('#filter input[type=checkbox]');
+    const filters = document.querySelectorAll('#filters input[type=checkbox]');
     for (const cbx of filters) {
+        cbx.addEventListener('focus', eventElement => {
+            eventElement.target.closest('li').classList.add('focus');
+        });
+        cbx.addEventListener('blur', eventElement => {
+            document.querySelectorAll('#filters li').forEach( el => el.classList.remove('focus') );
+        });
+
         cbx.addEventListener('change', eventElement => {
             const item = eventElement.target;
             if (item.matches('.exclusive')) {

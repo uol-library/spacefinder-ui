@@ -3,7 +3,7 @@ const spacefinder = {
     currentLoc: {'lat': 53.806529, 'lng': -1.555291},
     personLoc: {'lat': 53.806529, 'lng': -1.555291},
     personMarker: null,
-    personInfo: false,
+    personWatcher: false,
     startZoom: 16,
     watchID: false,
     permission: false,

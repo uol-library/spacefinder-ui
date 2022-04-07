@@ -1,0 +1,28 @@
+.accordion {
+	button.accordion-trigger {
+		display: flex;
+		justify-content: space-between;
+		cursor: pointer;
+		span {
+			margin-left:.5em;
+		}
+		&::after {
+		  content: "\276F";
+		  width: 1em;
+		  height: 1em;
+		  margin-right: .5em;
+		  transform: rotate(270deg);
+		}
+		&[aria-expanded="false"] {
+			&::after {
+				content: "\276E";
+			}
+		}
+	}
+
+	/* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4806035/ */
+	.accordion-content[hidden] {
+		display: none;
+	}
+
+}

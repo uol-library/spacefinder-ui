@@ -1,0 +1,42 @@
+#map {
+    .geo-button {
+        width: 40px;
+        height: 40px;
+        background: $buttonbg;
+        color: $buttoncolor;
+        margin-right: 10px;
+        border: none;
+        user-select: none;
+        box-shadow: 0px 1px 4px -1px $buttoncolor;
+        border-radius: 2px;
+        cursor: pointer;
+        svg {
+            pointer-events: none;
+        }
+        .icon-stroke {
+            stroke: $buttoncolor;
+        }
+        .icon-fill {
+            fill: $buttoncolor;
+        }
+        &:hover {
+            .icon-stroke {
+                stroke: $buttoncolor-hover;
+            }
+            .icon-fill {
+                fill: $buttoncolor-hover;
+            }
+        }
+        &.active {
+            background: $buttonbg-active;
+            svg {
+                .icon-stroke {
+                    stroke: $buttoncolor-active;
+                }
+                .icon-fill {
+                    fill: $buttoncolor-active;
+                }
+            }
+        }
+    }
+}

@@ -3,6 +3,7 @@
  */
 document.addEventListener('DOMContentLoaded', () => {
     initMap();
+    document.addEventListener( 'maploaded', checkGeo );
 });
 
 /**
@@ -19,8 +20,7 @@ function initMap() {
         },
         mapTypeId: google.maps.MapTypeId.ROADMAP,
     });
-    spacefinder.mapLoaded = google.maps.event.addListener( spacefinder.map, 'tilesloaded', () => {
-        google.maps.event.removeListener( spacefinder.mapLoaded );
+    spacefinder.mapLoaded = google.maps.event.addListenerOnce( spacefinder.map, 'tilesloaded', () => {
         spacefinder.mapLoaded = true;
         document.dispatchEvent( new Event( 'maploaded' ) );
     });
@@ -54,7 +54,9 @@ function maybeSetupMap() {
                 bounds.extend( spacePosition );
             }
         });
-        fitAllBounds( bounds );
+        google.maps.event.addListenerOnce(spacefinder.map, 'idle', function() {
+            fitAllBounds( bounds );
+        });
     }
 }
 function getSpaceInfoWindowContent( space ) {
@@ -80,4 +82,215 @@ function fitAllBounds(b) {
         }
     }
 }
-  
+
+/*******************************************************************
+ * GEOLOCATION
+ *******************************************************************/
+
+/**
+ * Toggle the disabled attribute of the geolocation control
+ * @param {boolean} enable which way to toggle
+ */
+function toggleGeolocation( enable ) {
+    if ( enable ) {
+        document.querySelectorAll( '.geo-button' ).forEach( e => e.disabled = false );
+    } else {
+        document.querySelectorAll( '.geo-button' ).forEach( e => e.disabled = true );
+    }
+}
+
+/**
+ * Toggle the active class of the geolocation control.
+ * Also adds/removes the event listener to update the user's position
+ * @param {boolean} activate which way to toggle
+ */
+function activateGeolocation( activate ) {
+    if ( activate ) {
+        document.querySelectorAll( '.geo-button' ).forEach( e => e.classList.add('active') );
+        document.addEventListener( 'userlocationchanged', movePersonMarker );
+    } else {
+        document.querySelectorAll( '.geo-button' ).forEach( e => e.classList.remove('active') );
+        document.removeEventListener( 'userlocationchanged', movePersonMarker );
+    }
+}
+
+/**
+ * Moves the person marker to the user's position and centres the 
+ * map on that position. The property spacefinder.personLoc is used
+ * for the user position - this is updated in the geolocation.watchPosition
+ * event listener
+ * @see getUserPosition()
+ */
+function movePersonMarker() {
+    if ( spacefinder.personMarker ) {
+        spacefinder.personMarker.setPosition( spacefinder.personLoc );
+    }
+    spacefinder.map.setCenter( spacefinder.personLoc );
+}
+
+/**
+ * Test to see if geolocation services are enabled
+ * @returns {boolean}
+ */
+ function geolocationEnabled() {
+    const btn = document.querySelector( '.geo-button' );
+    if ( btn !== null ) {
+        return btn.disabled == false;
+    }
+    return false;
+}
+
+/**
+ * Test to see if geolocation services are active
+ * @returns {boolean}
+ */
+function geolocationActive() {
+
+    return ( document.querySelector( '.geo-button.active' ) !== null ? true: false );
+}
+
+/**
+ * Performs checks for geolocation permissions and services when the map has loaded
+ */
+function checkGeo() {
+    /* first see if geolocation is available on the device */
+    checkGeoAvailable();
+    /* check to see if it is enabled to determine initial button states */
+    checkGeoPermissions();
+}
+
+/**
+ * Checks permissions to see if geolocation services are permitted.
+ * If they have been denied, geolocation is disabled. Also
+ * watches for updates to permissions.
+ */
+function checkGeoPermissions() {
+    /* check for permissions query */
+    if ( 'permissions' in navigator && navigator.permissions.query ) {
+        /* query geolocation permissions */
+        navigator.permissions.query( {
+            name: 'geolocation'
+        } ).then( result => {
+            /* save permission state (denied, granted or prompt) */
+            spacefinder.permission = result.state;
+            if ( 'denied' == result.state ) {
+                toggleGeolocation( false );
+            } else {
+                toggleGeolocation( true );
+            }
+            result.onchange = function() {
+                spacefinder.permission = result.state;
+                if ( 'denied' == result.state ) {
+                    toggleGeolocation( false );
+                } else {
+                    toggleGeolocation( true );
+                }
+            }
+        }).catch(error => {
+            toggleGeolocation( false );
+        });
+    }
+}
+
+/**
+ * Tests for availability of geolocation on client. If available,
+ * adds buttons to activate it and adds listeners to buttons.
+ */
+function checkGeoAvailable() {
+    if ( 'geolocation' in navigator ) {
+        /* make button for map to let user activate geolocation */
+        const locationButton = document.createElement( 'button' );
+        locationButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 6.35 6.35"><defs><clipPath clipPathUnits="userSpaceOnUse" id="a"><path style="fill:none;fill-opacity:1;stroke:none;stroke-width:6.50725;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" class="powerclip" d="M6.517 9.03h92.547v92.547H6.517Zm74.587 47.085a28.208 27.983 0 0 0-28.207-27.983 28.208 27.983 0 0 0-28.208 27.983 28.208 27.983 0 0 0 28.208 27.982 28.208 27.983 0 0 0 28.207-27.982z"/></clipPath></defs><path class="icon-stroke" style="fill:none;fill-opacity:1;stroke-width:10.30895366;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="matrix(-.077 0 0 -.077 7.24 7.433)" clip-path="url(#a)" d="m93.964 54.794-40.878.797.214 40.885-.797-40.878-40.885.214 40.878-.796-.214-40.886.796 40.878Z"/><circle class="icon-stroke" style="display:block;fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:.79375;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" cx="-3.175" cy="-3.175" transform="scale(-1)" r="2.232"/><circle class="icon-fill" style="fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:.0253999;stroke-miterlimit:4;stroke-dasharray:none" cx="-3.175" cy="-3.175" transform="scale(-1)" r=".529"/></svg>';
+        locationButton.classList.add('geo-button');
+        locationButton.setAttribute('aria-label', 'Pan to Current Location');
+        locationButton.setAttribute('title', 'Pan to Current Location');
+        spacefinder.map.controls[google.maps.ControlPosition.RIGHT_TOP].push(locationButton);
+
+        /* add listener to buttons to toggle geolocation */
+        document.addEventListener('click', e => {
+            if ( e.target.matches('.geo-button') ) {
+                if ( ! geolocationEnabled() ) {
+                    return;
+                }
+                if ( geolocationActive() ) {
+                    /* disable geolocation */
+                    forgetUserPosition()
+                } else {
+                    /* get the current position */
+                    getUserPosition();
+                }
+            }
+        });
+
+    } else {
+        activateGeolocation( false );
+        toggleGeolocation( false );
+    }
+}
+function forgetUserPosition() {
+    /* stop watching user position */
+    navigator.geolocation.clearWatch( spacefinder.watchID );
+    /* remove personmarker from map */
+    spacefinder.personMarker.setMap(null);
+    /* make location buttons inactive */
+    activateGeolocation( false );
+    /* re-centre map */
+    spacefinder.map.setCenter( spacefinder.currentLoc );
+}
+/**
+ * Gets the current position of the user device, centres the
+ * map on that position and adds a marker. Then sets a 
+ * geolocation.watchPosition listener to update the position 
+ * when it changes.
+ * TODO: watch for dragging of map by user - this should disable
+ * recentring the map on the user position and (possibly) show a 
+ * button to recentre? (but not moving the marker)
+ */
+function getUserPosition() {
+	navigator.geolocation.getCurrentPosition( position => {
+        /* activate the geolocation buttons */
+        activateGeolocation( true );
+        /* centre the map on the user coordinates */
+		spacefinder.personLoc.lat = position.coords.latitude;
+		spacefinder.personLoc.lng = position.coords.longitude;
+		spacefinder.map.setCenter( spacefinder.personLoc );
+        /* add a marker */
+		spacefinder.personMarker = new google.maps.Marker({
+			position: spacefinder.personLoc,
+			map: spacefinder.map,
+			title: 'Your location',
+            icon: {
+                path: google.maps.SymbolPath.CIRCLE,
+                scale: 10,
+                fillOpacity: 1,
+                strokeWeight: 2,
+                fillColor: '#5384ED',
+                strokeColor: '#ffffff',
+            },
+		});
+        /* watch for changes in the user position and update the map by firing an event */
+		spacefinder.watchID = navigator.geolocation.watchPosition( position => {
+            if ( ! ( spacefinder.personLoc.lat == position.coords.latitude && spacefinder.personLoc.lng == position.coords.longitude ) ) {
+                spacefinder.personLoc.lat = position.coords.latitude;
+                spacefinder.personLoc.lng = position.coords.longitude;
+                document.dispatchEvent( new Event( 'userlocationchanged' ) );
+            }
+        }, error => {
+			navigator.geolocation.clearWatch( spacefinder.watchID );
+            activateGeolocation( false );
+		});
+
+    }, (error) => {
+		switch (error.code) {
+			case 1:
+				// Permission denied - The acquisition of the geolocation information failed because the page didn't have the permission to do it.
+			case 2:
+				// Position unavailable - The acquisition of the geolocation failed because at least one internal source of position returned an internal error.
+                activateGeolocation( false );
+                toggleGeolocation( false );
+                break;
+			case 3:
+				// Timeout - The time allowed to acquire the geolocation was reached before the information was obtained.
+		}
+	});
+}

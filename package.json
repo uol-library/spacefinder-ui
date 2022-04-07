@@ -9,7 +9,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "node _scripts/cleanJSON.js",
     "concat": "node _scripts/concat.js",
-    "cmap": "node _scripts/campusmap.js"
+    "cmap": "node _scripts/campusmap.js",
+    "get_pids": "node _scripts/getPlaceIDs.js",
+    "clean_pids": "node _scripts/cleanPlaceIDs.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,9 @@
   "devDependencies": {
     "@babel/core": "^7.17.8",
     "@babel/preset-env": "^7.16.11",
+    "axios": "^0.26.1",
     "babel-loader": "^8.2.3",
+    "http": "^0.0.1-security",
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2"
   }

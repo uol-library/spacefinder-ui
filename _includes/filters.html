@@ -1,27 +1,34 @@
         <form id="filter-options-form" action="/" method="get">
-            <div class="filter-buttons">
-                <button id="clear-all" class="btn secondary" disabled>Clear all</button>
-                <button id="use-geolocation" class="btn secondary" disabled>Use my location</button>
+            <div class="top-controls">
+                <label for="search-input" class="visuallyhidden">Search</label>
+                <input id="search-input" type="search" placeholder="Search">
+                <!--<button type="button" class="geo-button btn">Use my location</button>-->
+                <button type="reset" id="clear-all" class="btn secondary" disabled>Clear all</button>
             </div>
+            <div class="panel-content">
             {%- for filter in site.data.filters -%}
                 {%- assign ecl = '' -%}
                 {%- if filter.exclusive -%}
                     {%- assign excl = ' class="exclusive"' -%}
                 {%- endif -%}
-            <fieldset class="filter-options {{ filter.key }}-filter-options"><legend>{{ filter.label }}</legend>
-                <ul id="filter-{{ filter.key }}">
-                {%- for option in filter.options -%}
-                    {%- assign icon = "icon-tick" -%}
-                    {%- if option.icon -%}
-                        {%- assign icon = option.icon -%}
-                    {%- endif -%}
-                    <li class="filter-option {{ filter.key }} {{ filter.key }}_{{ option.key }}" data-id="{{ filter.key }}_{{ option.key }}">
-                        <input type="checkbox" id="{{ filter.key }}_{{ option.key }}" name="{{ filter.key }}_{{ option.key }}" value="{{ filter.key }}_{{ option.key }}"{{ ecl }}>
-                        <span class="{{ icon }}"></span>
-                        <label for="{{ filter.key }}_{{ option.key }}">{{ option.label }}</label>
-                    </li>
-                {%- endfor -%}
-                </ul>
-            </fieldset>
+                <fieldset class="filter-options {{ filter.key }}-filter-options accordion">
+                    <legend>
+                        <button type="button" class="accordion-trigger" id="trigger-{{ filter.key }}" aria-controls="filters-{{ filter.key }}" aria-expanded="true" tabindex="0"><span>{{ filter.label }}</span></button>
+                    </legend>
+                    <ul id="filters-{{ filter.key }}" class="accordion-content" aria-hidden="false" aria-labelledby="trigger-{{ filter.key }}">
+                    {%- for option in filter.options -%}
+                        {%- assign icon = "icon-tick" -%}
+                        {%- if option.icon -%}
+                            {%- assign icon = option.icon -%}
+                        {%- endif -%}
+                        <li class="filter-option {{ filter.key }} {{ filter.key }}_{{ option.key }}" data-id="{{ filter.key }}_{{ option.key }}">
+                            <input type="checkbox" id="{{ filter.key }}_{{ option.key }}" name="{{ filter.key }}_{{ option.key }}" value="{{ filter.key }}_{{ option.key }}"{{ ecl }}>
+                            <span class="{{ icon }}"></span>
+                            <label for="{{ filter.key }}_{{ option.key }}">{{ option.label }}</label>
+                        </li>
+                    {%- endfor -%}
+                    </ul>
+                </fieldset>
             {%- endfor -%}
+            </div>
         </form>

@@ -48,6 +48,45 @@ collections:
         type: 'Point'
         default: '{"type":"Point","coordinates":[-1.541763,53.7990926]}'
         required: true
+      - label: 'Place'
+        name: 'placeid',
+        widget: 'select'
+        multiple: false
+        required: false
+        options:
+          - { value: 'ChIJ656kkqleeUgRjqlBhxAl_wI', label: 'Baines Wing' },
+          - { value: 'ChIJ8QXUcqleeUgRNys_b_p7Cd0', label: 'Baines Wing Café' },
+          - { value: 'ChIJ46-L86leeUgRxjKNaE9Rqf4', label: 'Brotherton Library' },
+          - { value: 'ChIJ8QXUcqleeUgRtWNxbgkV_b8', label: 'Café Maia in Marjorie and Arnold Ziff Building' },
+          - { value: 'ChIJG48jmqheeUgRR3B6z_c-GTs', label: 'Café Seven in Worsley Building' },
+          - { value: 'ChIJ03NE-aheeUgRz4iMEbVlHCY', label: 'Chancellor's Court' },
+          - { value: 'ChIJsXTNk65eeUgRMfg1Q-8JHrA', label: 'Charles Thackrah Building' },
+          - { value: 'ChIJCU27JqpeeUgRkavlSdqw8jA', label: 'Chemistry West Block' },
+          - { value: 'ChIJfUjgZaleeUgR968HsZ4fkbY', label: 'Clothworkers' Building Central' },
+          - { value: 'ChIJkwj8-KleeUgRTQypUQvF_gU', label: 'Costa Parkinson Court in Parkinson Building' },
+          - { value: 'ChIJD0BOLaheeUgRfG4MEVkpIws', label: 'E C Stoner Building' },
+          - { value: 'ChIJ8QXUcqleeUgROjul2errLdY', label: 'Edit Room Café in Edward Boyle Library' },
+          - { value: 'ChIJx3hGr6leeUgR2HTio7QlGvY', label: 'Edward Boyle Library' },
+          - { value: 'ChIJqSf_QupfeUgRWirR9Vcm2WM', label: 'Esther Simpson Building' },
+          - { value: 'ChIJ8QXUcqleeUgRQNg3EnGXI4A', label: 'Fuse Cafe in Chemical and Process Engineering' },
+          - { value: 'ChIJlbbam6heeUgRDv4zfC-BY-4', label: 'Health sciences library' },
+          - { value: 'ChIJcQLoXqheeUgREVhfSlUTtzg', label: 'Irene Manton Building' },
+          - { value: 'ChIJe7n6CwJceUgR5JpG8RxCSBE', label: 'Laidlaw library' },
+          - { value: 'ChIJ1eHQPFtfeUgR4Z-L3H4FE_Y', label: 'Leeds University Union' },
+          - { value: 'ChIJOW2-1q1eeUgR14hGwLAmUdk', label: 'Liberty Building' },
+          - { value: 'ChIJ6zKqmqheeUgRx8a4rTXhscA', label: 'Loma in Worsley Building' },
+          - { value: 'ChIJT77Ngq5eeUgRxcW4jljEfdg', label: 'Maurice Keyworth Building' },
+          - { value: 'ChIJT-07laleeUgRpcvD2GNqkEg', label: 'Michael Sadler Building' },
+          - { value: 'ChIJdcvV-6leeUgRx2yTCEq4Wlw', label: 'Parkinson Building' },
+          - { value: 'ChIJHyfg-qleeUgReAEIYY8cWyY', label: 'Parkinson Court' },
+          - { value: 'ChIJPUyP6qleeUgRx6_GxL0_9c8', label: 'Rupert Beckett Lecture Theatre' },
+          - { value: 'ChIJV_HWN6peeUgR23D85nQ8djo', label: 'School of Electronic and Electrical Engineering' },
+          - { value: 'ChIJL1aUJgNceUgRNMcJ78KDPzg', label: 'Sheila Silver Library' },
+          - { value: 'ChIJl_2I4UVfeUgRcLhqpq5DNzQ', label: 'Sir William Henry Bragg Building' },
+          - { value: 'ChIJG3BHaQJceUgR1n4RNzuHVi4', label: 'Terrace Bar, Leeds University Union' },
+          - { value: 'ChIJ3YCqJKleeUgRHJ6NxX0WQJY', label: 'The Refectory' },
+          - { value: 'ChIJryWK2gJceUgR-Wrph4RHiNM', label: 'University of Leeds' },
+          - { value: 'ChIJtZkEhaheeUgRTW78zDh1XIQ', label: 'Worsley Building' }
       - label: 'Access type'
         name: 'access'
         widget: 'select'

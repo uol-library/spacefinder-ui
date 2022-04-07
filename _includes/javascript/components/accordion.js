@@ -1,11 +1,20 @@
 /*
- * This content is licensed according to the W3C Software License at
- * https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
- *
- * Simple accordion pattern example
+ * Simple accordion
  */
 
 'use strict';
+
+document.addEventListener('DOMContentLoaded', () => {
+    initAccordions();
+});
+
+function initAccordions() {
+	// init accordions
+	const accordions = document.querySelectorAll('.accordion');
+	accordions.forEach((accordionEl) => {
+		new Accordion(accordionEl);
+	});
+}
 
 class Accordion {
 	constructor(domNode) {
@@ -21,7 +30,8 @@ class Accordion {
 		this.buttonEl.addEventListener('click', this.onButtonClick.bind(this));
 	}
 
-	onButtonClick() {
+	onButtonClick( event ) {
+		event.preventDefault();
 		this.toggle(!this.open);
 	}
 
@@ -35,11 +45,11 @@ class Accordion {
 		this.open = open;
 
 		// handle DOM updates
-		this.buttonEl.setAttribute('aria-expanded', `${open}`);
+		this.buttonEl.setAttribute('aria-expanded', (open ? 'true': 'false' ));
 		if (open) {
 			this.contentEl.removeAttribute('hidden');
 		} else {
-			this.contentEl.setAttribute('hidden', '');
+			this.contentEl.setAttribute('hidden','');
 		}
 	}
 
@@ -53,8 +63,3 @@ class Accordion {
 	}
 }
 
-// init accordions
-//const accordions = document.querySelectorAll('.accordion h3');
-//accordions.forEach((accordionEl) => {
-//	new Accordion(accordionEl);
-//});

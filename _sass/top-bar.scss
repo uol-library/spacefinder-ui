@@ -43,10 +43,17 @@
                 transition: all .5s;
                 a {
                     padding: 0 $topbarpadding;
+                    border-radius: 26px;
+                    &:hover {
+                        background: darken($topbarbg, 10%);
+                    }
                 }
                 &.active {
                     color: $filtercolor;
                     background: $filterbg;
+                    a:hover {
+                        background: $filterbg;
+                    }
                     border-radius: 5px 5px 0 0;
                     margin-bottom: -$topbarpadding;
                     padding-bottom: $topbarpadding;

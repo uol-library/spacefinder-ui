@@ -47,6 +47,13 @@
             &.active {
                 margin-left: 0;
             }
+            .top-controls {
+                height: $controlsheight;
+            }
+            .panel-content {
+                max-height: calc(100vh - (#{$topbarheight} + #{$footerheight} + #{$controlsheight}));
+                overflow-y: auto; 
+            }
         }
         #map {
             height: calc(100vh - (#{$topbarheight} + #{$footerheight}));

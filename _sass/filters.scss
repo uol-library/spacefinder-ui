@@ -1,36 +1,56 @@
 /* Filters panel */
 #filters {
+    .top-controls,
+    .panel-content {
+        padding:.2em;
+    }
     background: $filterbg;
     color: $filtercolor;
-    font-size: 0.9rem;
-    button#clear-all {
-        font-size: 0.9rem;
-        margin-top: 6px;
-    }
-    .btn[disabled] {
+    button[disabled] {
         cursor: default;
         background: $buttonbg-disabled;
         color: $buttoncolor-disabled;
     }
+    button {
+        background: $buttonbg;
+        color: $buttoncolor;
+        cursor: pointer;
+        padding: .5rem .2rem;
+        border: 1px solid $buttonborder;
+        &.active {
+            background: $buttonbg-active;
+            color: $buttoncolor-active;
+        }
+        &:focus {
+            border: 1px solid $buttonborder-focus;
+        }
+    }
+    input[type=search] {
+        width: 100%;
+        padding: .5rem;
+        border: 1px solid $buttonborder-focus;
+        border-radius: 3px;
+    }
     .btn {
         width: 100%;
         text-align: center;
-        background: $buttonbg;
-        color: $buttoncolor;
         text-transform: uppercase;
         text-decoration: none;
-        padding: 8px 6px 4px;
-        font-size: 1.4rem;
-        display: inline-block;
-        border: none;
-        cursor: pointer;
+        font-size: 0.9rem;
+        margin-top: 6px;
     }
     fieldset.filter-options {
         border: 0;
         padding: 0;
         legend {
-            padding: 1rem 0;
-            text-transform: uppercase;
+            width: 100%;
+            padding: 0;
+            button {
+                width: 100%;
+                padding: .8rem;
+                text-transform: uppercase;
+                text-align: left;
+            }
         }
         ul {
             padding: 0;
@@ -42,7 +62,12 @@
                 list-style: none;
                 background: $filterlabelbg;
                 color: $filterlabelcolor;
-                border-bottom: 2px solid $filterbg;
+                margin-bottom: 2px;
+                border: 1px solid $buttonborder;
+                &.focus {
+                    border: 1px solid $buttonborder-focus;
+                    border-radius: 3px;
+                }
                 label {
                     user-select: none;
                     cursor: pointer;
@@ -58,7 +83,7 @@
                     text-align: center;
                     z-index: 0;				
                 }
-                &:hover span {
+                &:hover span, &.focus span {
                     opacity:.6;
                 }
                 input[type=checkbox] {

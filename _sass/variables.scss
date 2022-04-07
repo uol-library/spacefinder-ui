@@ -23,6 +23,9 @@ $filterswidth: 256px;
 /* list panel (large screens) */
 $listwidth: 500px;
 
+/* controls at top of list and search panels */
+$controlsheight: 5rem;
+
 /* footer bar */
 $footerheight: 30px;
 $footerpaddingx: 10px;
@@ -33,6 +36,7 @@ $single-navbarheight: 40px;
 
 /* breakpoints */
 $breakpoint-large: 1000px;
+$breakpoint-med: 600px;
 $breakpoint-small: 400px;
 
 /**
@@ -53,10 +57,17 @@ $footerbg: #212121;
 $footercolor: #fff;
 
 /* filters panel */
-$buttoncolor: #ffffff;
-$buttonbg: #212121;
+$buttoncolor: #212121;
+$buttonbg: #fff;
+$buttoncolor-hover: #000;
+$buttonbg-hover: #fff;
 $buttoncolor-disabled: #696969;
 $buttonbg-disabled: #cfcfcf;
+$buttoncolor-active: #fff;
+$buttonbg-active: #b31b1b;
+$buttonborder: transparent;
+$buttonborder-focus: #212121;
+
 $filterbg: #f3f3f3;
 $filtercolor: #212121;
 $filterlabelbg: #fff;
