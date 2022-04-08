@@ -47,6 +47,7 @@ function activateSort( activate, sorttype ) {
     } else {
         sortbutton.disabled = false;
         sortbutton.addEventListener('click', sortSpaces);
+        sortbutton.dispatchEvent(new Event('click'));
     }
 }
 
@@ -76,6 +77,7 @@ function sortSpaces(e) {
         listcontainer.appendChild( el );
     })
 }
+
 /**
  * Comparer function
  * @param {boolean} asc ascending or decending sort mode
@@ -105,6 +107,7 @@ function sortSpaces(e) {
         }( aval, bval );
     };
 };
+
 /**
  * Loads all space data from a single JSON file
  */
