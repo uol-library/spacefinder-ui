@@ -1,0 +1,25 @@
+.btn {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 6px;
+    background: $buttonbg;
+    color: $buttoncolor;
+    cursor: pointer;
+    padding: .5rem .2rem;
+    border: 1px solid $buttonborder;
+    &.active {
+        background: $buttonbg-active;
+        color: $buttoncolor-active;
+    }
+    &:focus {
+        border: 1px solid $buttonborder-focus;
+    }
+    &[disabled] {
+        cursor: default;
+        background: $buttonbg-disabled;
+        color: $buttoncolor-disabled;
+    }
+}

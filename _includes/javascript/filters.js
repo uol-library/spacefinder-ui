@@ -43,14 +43,11 @@ function setupFilters() {
     });
     /* event listener for filter changes */
     document.getElementById('filters').addEventListener('viewfilter', event => {
-        console.log('viewfilter Event triggered');
         const activeFilters = getFilterStatus();
         if ( activeFilters.length ) {
             document.getElementById('clear-all').removeAttribute('disabled');
-            console.log(activeFilters);
         } else {
             document.getElementById('clear-all').setAttribute('disabled', true);
-            console.log('no filters currently active');
         }
     });
 
@@ -73,6 +70,9 @@ function setupFilters() {
                     sib.checked = false;
                 }
                 item.checked = itemStatus;
+            }
+            if ( ! item.checked ) {
+                //item.closest('li').classList.remove('focus');
             }
             /* trigger the viewfilter event */
             item.dispatchEvent(filterEvent);

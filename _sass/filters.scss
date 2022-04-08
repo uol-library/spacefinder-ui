@@ -6,38 +6,11 @@
     }
     background: $filterbg;
     color: $filtercolor;
-    button[disabled] {
-        cursor: default;
-        background: $buttonbg-disabled;
-        color: $buttoncolor-disabled;
-    }
-    button {
-        background: $buttonbg;
-        color: $buttoncolor;
-        cursor: pointer;
-        padding: .5rem .2rem;
-        border: 1px solid $buttonborder;
-        &.active {
-            background: $buttonbg-active;
-            color: $buttoncolor-active;
-        }
-        &:focus {
-            border: 1px solid $buttonborder-focus;
-        }
-    }
     input[type=search] {
         width: 100%;
         padding: .5rem;
         border: 1px solid $buttonborder-focus;
         border-radius: 3px;
-    }
-    .btn {
-        width: 100%;
-        text-align: center;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-size: 0.9rem;
-        margin-top: 6px;
     }
     fieldset.filter-options {
         border: 0;
@@ -82,9 +55,6 @@
                     width: 1.8rem;
                     text-align: center;
                     z-index: 0;				
-                }
-                &:hover span, &.focus span {
-                    opacity:.6;
                 }
                 input[type=checkbox] {
                     position: absolute;

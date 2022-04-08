@@ -10,6 +10,8 @@
                 {%- assign ecl = '' -%}
                 {%- if filter.exclusive -%}
                     {%- assign excl = ' class="exclusive"' -%}
+                {%- else -%}
+                    {%- assign excl = '' -%}
                 {%- endif -%}
                 <fieldset class="filter-options {{ filter.key }}-filter-options accordion">
                     <legend>
@@ -22,7 +24,7 @@
                             {%- assign icon = option.icon -%}
                         {%- endif -%}
                         <li class="filter-option {{ filter.key }} {{ filter.key }}_{{ option.key }}" data-id="{{ filter.key }}_{{ option.key }}">
-                            <input type="checkbox" id="{{ filter.key }}_{{ option.key }}" name="{{ filter.key }}_{{ option.key }}" value="{{ filter.key }}_{{ option.key }}"{{ ecl }}>
+                            <input type="checkbox" id="{{ filter.key }}_{{ option.key }}" name="{{ filter.key }}_{{ option.key }}" value="{{ filter.key }}_{{ option.key }}"{{ excl }}>
                             <span class="{{ icon }}"></span>
                             <label for="{{ filter.key }}_{{ option.key }}">{{ option.label }}</label>
                         </li>

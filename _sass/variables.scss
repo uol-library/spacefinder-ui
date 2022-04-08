@@ -43,40 +43,84 @@ $breakpoint-small: 400px;
  * Colours
  */
 
-/* top navigation bar */
-$topbarbg: #212121;
-$topbarbgactive: #111;
-$topbarcolor: #fff;
+/* uol design system colours */
+$color-brand--dark: #910000;
+$color-brand: #c70000;
+$color-brand--bright: #ff4e36;
+$color-brand--pastel: #ff8a7a;
+$color-brand--faded: #ffeded;
+$color-black--dark: #0a0202;
+$color-black: #212121;
+$color-black--light: #6e6b6b;
+$color-black--faded: #dedede;
+$color-brand-2--dark: #156265;
+$color-grey--dark: #6a645d;
+$color-grey--medium: #bcb8b3;
+$color-grey: #ddd9d5;
+$color-grey--light: #eae8e6;
+$color-grey--faded: #f3f2f1;
+$color-warmgrey--dark: #5f5754;
+$color-warmgrey--medium: #81746e;
+$color-warmgrey: #b7aaa4;
+$color-warmgrey--light: #cac2ba;
+$color-warmgrey--faded: #efeae6;
+$color-cream--dark: #ddcfc0;
+$color-cream--medium: #e9e1d8;
+$color-cream: #f6eee5;
+$color-cream--light: #faf6f1;
+$color-white--dark: #fffbf5;
+$color-white: #ffffff;
+$color-blue--dark: #00323d;
+$color-blue: #003a52;
+$color-blue--bright: #1a84c7;
+$color-font--dark: #0e0c0c;
+$color-font: #212529;
+$color-font--light: #3B3B3B;
+$color-font--x-light: #636363;
+$color-link: #910000;
+$color-link--hover: #0e0c0c;
+$color-link--visited: #570000;
+$color-link--active: #570000;
+$color-border--light: #c9c8c5;
+$color-border: #51504c;
+$color-alert--error: #d4351c;
+$color-alert--warning: #e76f16;
+$color-alert--success: #3a9018;
+$color-alert--info: #1993bd;
 
-/* filters panel */
-$filterbg: #f3f3f3;
-$filtercolor: #212121;
+/* top navigation bar */
+$topbarbg: $color-black;
+$topbarbgactive: $color-black--dark;
+$topbarcolor: $color-white;
 
 /* footer bar */
-$footerbg: #212121;
-$footercolor: #fff;
+$footerbg: $color-black;
+$footercolor: $color-white;
 
 /* filters panel */
-$buttoncolor: #212121;
-$buttonbg: #fff;
-$buttoncolor-hover: #000;
-$buttonbg-hover: #fff;
-$buttoncolor-disabled: #696969;
-$buttonbg-disabled: #cfcfcf;
-$buttoncolor-active: #fff;
-$buttonbg-active: #b31b1b;
+$buttoncolor: $color-black;
+$buttonbg: $color-white;
+$buttoncolor-hover: $color-black--dark;
+$buttonbg-hover: $color-white;
+$buttoncolor-disabled: $color-grey--dark;
+$buttonbg-disabled: $color-grey;
+$buttoncolor-active: $color-white;
+$buttonbg-active: $color-blue;
 $buttonborder: transparent;
-$buttonborder-focus: #212121;
+$buttonborder-focus: $color-black;
 
-$filterbg: #f3f3f3;
-$filtercolor: #212121;
-$filterlabelbg: #fff;
-$filterlabelcolor: #212121;
+$filterbg: $color-grey--light;
+$filtercolor: $color-black;
+$filterlabelbg: $color-white;
+$filterlabelcolor: $color-black;
 
 /* List panel */
-$linkcolor:#066;
-$separatorcolor: #ccc;
-$lighttextcolor: #757575;
+$separatorcolor: $color-grey--medium;
+$lighttextcolor: $color-font--light;
+$highlighttextcolor: $color-brand;
+$highlighttextcoloralt: $color-blue;
+
+
 $backgroundColor: #2e2e2e;
 $lightBackgroundColor:#F3F3F3;
 $titleColor:#e7e7e7;
