@@ -1,25 +1,15 @@
 {
     "id": 13,
-    "title": "Outside the Edward Boyle Library Edit Room café (Outdoor space)",
-    "basic_info": "Outdoors next to the Edward Boyle Library. ",
-    "description": "Outdoor seating situated outside the Edward Boyle Library",
-    "access": "Anyone (public)",
-    "space_type": "Café",
-    "library": "",
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Ground",
-    "lat": 53.80618,
-    "lng": -1.55431,
-    "restricted": "",
-    "restriction": "",
-    "disabled_access": "",
-    "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/",
-    "phone_number": "",
-    "twitter_screen_name": "GreatFoodLeeds",
-    "facebook_url": "",
-    "expensive": null,
-    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17411",
-    "noise": "Animated discussion",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80618,-1.55431]}",
+    "work": [
+        "friends",
+        "group"
+    ],
+    "atmosphere": [
+        "relaxed",
+        "social",
+        "friendly"
+    ],
     "images": [],
     "facilities": [
         "food_drink",
@@ -34,15 +24,24 @@
         "refreshments",
         "break"
     ],
-    "atmosphere": [
-        "relaxed",
-        "social",
-        "friendly"
-    ],
-    "work": [
-        "friends",
-        "group"
-    ],
+    "title": "Outside the Edward Boyle Library Edit Room café (Outdoor space)",
+    "basic_info": "Outdoors next to the Edward Boyle Library. ",
+    "description": "Outdoor seating situated outside the Edward Boyle Library",
+    "access": "Anyone (public)",
+    "space_type": "Café",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Ground",
+    "restricted": "",
+    "restriction": "",
+    "disabled_access": "",
+    "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/",
+    "phone_number": "",
+    "twitter_screen_name": "GreatFoodLeeds",
+    "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17411",
+    "noise": "Animated discussion",
     "tags": [
         "outdoors",
         "big_area",

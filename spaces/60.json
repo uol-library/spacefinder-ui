@@ -1,25 +1,13 @@
 {
     "id": 60,
-    "title": "IT Cluster - Parkinson Building - B.26",
-    "basic_info": "15 Seat Capacity. Campus Map Ref 60",
-    "description": "Cluster room surrounded by big windows with high views on campus . Perfect for focused study with acess to computers.",
-    "access": "Students",
-    "space_type": "IT Cluster",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Basement",
-    "lat": 53.80776358,
-    "lng": -1.552688693,
-    "restricted": false,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "not required",
-    "phone_number": "",
-    "twitter_screen_name": "",
-    "facebook_url": "",
-    "expensive": null,
-    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17525",
-    "noise": "Whispers",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80776358,-1.552688693]}",
+    "work": [
+        "private",
+        "close"
+    ],
+    "atmosphere": [
+        "disciplined"
+    ],
     "images": [],
     "facilities": [
         "daylight",
@@ -35,13 +23,24 @@
         "toilets",
         "break"
     ],
-    "atmosphere": [
-        "disciplined"
-    ],
-    "work": [
-        "private",
-        "close"
-    ],
+    "title": "IT Cluster - Parkinson Building - B.26",
+    "basic_info": "15 Seat Capacity. Campus Map Ref 60",
+    "description": "Cluster room surrounded by big windows with high views on campus . Perfect for focused study with acess to computers.",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": false,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Basement",
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "not required",
+    "phone_number": "",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17525",
+    "noise": "Whispers",
     "tags": [
         "computers",
         "silent",

@@ -1,25 +1,17 @@
 {
     "id": 71,
-    "title": "Edward Boyle 11th , 12 th floor",
-    "basic_info": "Study space and clusters",
-    "description": "Silent place for studying with access to books , clusters and nice high views to the campus .Perfect place for focused study and exam preparation.",
-    "access": "Students ",
-    "space_type": "Library space",
-    "library": true,
-    "address": "University of Leeds, Leeds LS2 9JT",
-    "floor": "Level 11,12",
-    "lat": 53.806102,
-    "lng": -1.554686,
-    "restricted": false,
-    "restriction": "Library Card needed",
-    "disabled_access": true,
-    "url": "https://library.leeds.ac.uk/",
-    "phone_number": " 0113 343 5663",
-    "twitter_screen_name": "UoLLibrary",
-    "facebook_url": "Edward Boyle Library ",
-    "expensive": null,
-    "campusmap_url": "",
-    "noise": "Whispers",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.806102,-1.554686]}",
+    "work": [
+        "in_a_library",
+        "private",
+        "close"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "relaxed",
+        "inspiring",
+        "friendly"
+    ],
     "images": [],
     "facilities": [
         "food_drink",
@@ -38,16 +30,24 @@
         "refreshments",
         "break"
     ],
-    "atmosphere": [
-        "disciplined",
-        "relaxed",
-        "inspiring",
-        "friendly"
-    ],
-    "work": [
-        "private",
-        "close"
-    ],
+    "title": "Edward Boyle 11th , 12 th floor",
+    "basic_info": "Study space and clusters",
+    "description": "Silent place for studying with access to books , clusters and nice high views to the campus .Perfect place for focused study and exam preparation.",
+    "access": "Students ",
+    "space_type": "Library space",
+    "library": true,
+    "address": "University of Leeds, Leeds LS2 9JT",
+    "floor": "Level 11,12",
+    "restricted": false,
+    "restriction": "Library Card needed",
+    "disabled_access": true,
+    "url": "https://library.leeds.ac.uk/",
+    "phone_number": " 0113 343 5663",
+    "twitter_screen_name": "UoLLibrary",
+    "facebook_url": "Edward Boyle Library ",
+    "expensive": null,
+    "campusmap_url": "",
+    "noise": "Whispers",
     "tags": [
         "books",
         "views",

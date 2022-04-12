@@ -88,7 +88,14 @@ function lookup_campusmap_url( title ) {
 var spaceID = 1;
 var spaceTypes = [];
 fileJSON.forEach( space => {
-    const newspace = { "id": spaceID };
+    const newspace = {
+        "id": spaceID,
+        "location": {},
+        work: [],
+        atmosphere: [],
+        images: [],
+        facilities: []
+    };
     for (f in fieldMapping) {
         if ( f === "twitter_screen_name" ) {
             newspace[f] = space[fieldMapping[f]].replace("https://twitter.com/", "");
@@ -98,12 +105,24 @@ fileJSON.forEach( space => {
             } else {
                 newspace[f] = space[fieldMapping[f]];
             }
+            if ( newspace[f] == 'Library space' ) {
+                newspace.work.push('in_a_library')
+            }
         } else if ( f === 'basic_info' ) {
             newspace[f] = space[fieldMapping[f]].replace(" https://www.leeds.ac.uk/campusmap", "");
         } else {
             newspace[f] = ( space[fieldMapping[f]] == "no" ? false: ( space[fieldMapping[f]] == "yes" ? true: space[fieldMapping[f]] ) );
         }
     }
+    if ( newspace.hasOwnProperty('lat') && newspace.hasOwnProperty('lng') ) {
+        let geoJSON = {
+            type: 'Point',
+            coordinates: [newspace.lat, newspace.lng]
+        };
+        newspace.location = JSON.stringify(geoJSON);
+    }
+    delete( newspace.lat );
+    delete( newspace.lng );
     newspace.campusmap_url = lookup_campusmap_url( space[fieldMapping.title] );
     try {
         ["Strictly silent", "Whispers", "Background chatter", "Animated discussion", "Music playing"].forEach(n => {
@@ -115,20 +134,16 @@ fileJSON.forEach( space => {
     } catch (e) {
         if ( e !== BreakException ) throw e;
     }
-    newspace.images = [];
-    newspace.facilities = [];
     for (fac in facilitiesMapping) {
         if ( space[fac] !== "" ) {
             newspace.facilities.push(facilitiesMapping[fac]);
         }
     }
-    newspace.atmosphere = [];
     for (atm in atmosphereMapping) {
         if ( space[atm] !== "" ) {
             newspace.atmosphere.push(atmosphereMapping[atm]);
         }
     }
-    newspace.work = [];
     for (w in workMapping) {
         if ( space[w] !== "" ) {
             newspace.work.push(workMapping[w]);

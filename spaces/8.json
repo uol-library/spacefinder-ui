@@ -1,25 +1,16 @@
 {
     "id": 8,
-    "title": "Café Seven  in Worsley Building",
-    "basic_info": "Level 7 Worsley Building, next to Airport Lounge, Campus Map ref 95",
-    "description": "Located in the Worsley building, Café Sevenéis one of our most popular and vibrant cafés. Recently refurbished the large seating area is a great place to meet with friends.",
-    "access": "Anyone (public)",
-    "space_type": "Café",
-    "library": true,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Level 7",
-    "lat": 53.80330122,
-    "lng": -1.555752941,
-    "restricted": false,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/cafeseven/",
-    "phone_number": "",
-    "twitter_screen_name": "GreatFoodLeeds",
-    "facebook_url": "",
-    "expensive": 3,
-    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17591",
-    "noise": "Background chatter",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80330122,-1.555752941]}",
+    "work": [
+        "close",
+        "friends",
+        "group"
+    ],
+    "atmosphere": [
+        "relaxed",
+        "social",
+        "friendly"
+    ],
     "images": [],
     "facilities": [
         "food_drink",
@@ -31,16 +22,24 @@
         "refreshments",
         "break"
     ],
-    "atmosphere": [
-        "relaxed",
-        "social",
-        "friendly"
-    ],
-    "work": [
-        "close",
-        "friends",
-        "group"
-    ],
+    "title": "Café Seven  in Worsley Building",
+    "basic_info": "Level 7 Worsley Building, next to Airport Lounge, Campus Map ref 95",
+    "description": "Located in the Worsley building, Café Sevenéis one of our most popular and vibrant cafés. Recently refurbished the large seating area is a great place to meet with friends.",
+    "access": "Anyone (public)",
+    "space_type": "Café",
+    "library": true,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Level 7",
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/cafeseven/",
+    "phone_number": "",
+    "twitter_screen_name": "GreatFoodLeeds",
+    "facebook_url": "",
+    "expensive": 3,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17591",
+    "noise": "Background chatter",
     "tags": [
         "Cafe",
         "warm jacket potatos",

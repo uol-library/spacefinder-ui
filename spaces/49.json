@@ -1,25 +1,14 @@
 {
     "id": 49,
-    "title": "IT Cluster - Clothworkers' Building Link - 140 (Richard Hughes)",
-    "basic_info": "45 Seat Capacity. Campus Map Ref 34",
-    "description": "Big clusters area with No drinks or food allowed.",
-    "access": "Students",
-    "space_type": "IT Cluster",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "First Floor",
-    "lat": 53.80760533,
-    "lng": -1.556592187,
-    "restricted": false,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF6CC",
-    "phone_number": "",
-    "twitter_screen_name": "",
-    "facebook_url": "",
-    "expensive": null,
-    "campusmap_url": "",
-    "noise": "Strictly silent",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80760533,-1.556592187]}",
+    "work": [
+        "private",
+        "close"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "modern"
+    ],
     "images": [],
     "facilities": [
         "daylight",
@@ -33,14 +22,24 @@
         "projector",
         "toilets"
     ],
-    "atmosphere": [
-        "disciplined",
-        "modern"
-    ],
-    "work": [
-        "private",
-        "close"
-    ],
+    "title": "IT Cluster - Clothworkers' Building Link - 140 (Richard Hughes)",
+    "basic_info": "45 Seat Capacity. Campus Map Ref 34",
+    "description": "Big clusters area with No drinks or food allowed.",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": false,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "First Floor",
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF6CC",
+    "phone_number": "",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "",
+    "noise": "Strictly silent",
     "tags": [
         "computers",
         "silent",

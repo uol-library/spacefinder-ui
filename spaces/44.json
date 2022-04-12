@@ -1,5 +1,10 @@
 {
     "id": 44,
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80843709,-1.553410997]}",
+    "work": [],
+    "atmosphere": [],
+    "images": [],
+    "facilities": [],
     "title": "IT Cluster - Chemistry and Chemistry West Block - 1.44A",
     "basic_info": "11 Seat Capacity. Campus Map Ref 55",
     "description": "",
@@ -8,8 +13,6 @@
     "library": "",
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
     "floor": "First Floor",
-    "lat": 53.80843709,
-    "lng": -1.553410997,
     "restricted": "",
     "restriction": "",
     "disabled_access": true,
@@ -19,9 +22,5 @@
     "facebook_url": "",
     "expensive": null,
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17382",
-    "images": [],
-    "facilities": [],
-    "atmosphere": [],
-    "work": [],
     "tags": []
 }

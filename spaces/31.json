@@ -1,25 +1,17 @@
 {
     "id": 31,
-    "title": "General Seating Areas - Michael Sadler Building - Behind Rupert Beckett Lecture Theatre",
-    "basic_info": "Rear of Michael Sadler Building from Beech Grove Terrace. Campus Map Ref 78",
-    "description": "Colorful study area with desks and access to clusters . Relaxed space for studying individually or with a group.",
-    "access": "Anyone (public)",
-    "space_type": "General Seating Area",
-    "library": "",
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Ground",
-    "lat": 53.80692,
-    "lng": -1.55346,
-    "restricted": false,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",
-    "phone_number": "113343555",
-    "twitter_screen_name": "",
-    "facebook_url": "",
-    "expensive": null,
-    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17512",
-    "noise": "Whispers",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80692,-1.55346]}",
+    "work": [
+        "private",
+        "group"
+    ],
+    "atmosphere": [
+        "relaxed",
+        "historic",
+        "cosy",
+        "social",
+        "friendly"
+    ],
     "images": [],
     "facilities": [
         "food_drink",
@@ -31,17 +23,24 @@
         "toilets",
         "break"
     ],
-    "atmosphere": [
-        "relaxed",
-        "historic",
-        "cosy",
-        "social",
-        "friendly"
-    ],
-    "work": [
-        "private",
-        "group"
-    ],
+    "title": "General Seating Areas - Michael Sadler Building - Behind Rupert Beckett Lecture Theatre",
+    "basic_info": "Rear of Michael Sadler Building from Beech Grove Terrace. Campus Map Ref 78",
+    "description": "Colorful study area with desks and access to clusters . Relaxed space for studying individually or with a group.",
+    "access": "Anyone (public)",
+    "space_type": "General Seating Area",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Ground",
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",
+    "phone_number": "113343555",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17512",
+    "noise": "Whispers",
     "tags": [
         "colorful",
         "relaxed",

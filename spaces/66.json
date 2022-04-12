@@ -1,25 +1,13 @@
 {
     "id": 66,
-    "title": "IT Cluster - Worsley Building - 8.039",
-    "basic_info": "51 Seat Capacity. Campus Map Ref 95",
-    "description": "Big room that offers clusters on high and normal desks. Modern and strictly silent environment.",
-    "access": "Students",
-    "space_type": "IT Cluster",
-    "library": "",
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Level 8",
-    "lat": 53.80330122,
-    "lng": -1.555752941,
-    "restricted": false,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "not required",
-    "phone_number": "1132440111",
-    "twitter_screen_name": "",
-    "facebook_url": "",
-    "expensive": null,
-    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17591",
-    "noise": "Strictly silent",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80330122,-1.555752941]}",
+    "work": [
+        "private",
+        "close"
+    ],
+    "atmosphere": [
+        "disciplined"
+    ],
     "images": [],
     "facilities": [
         "large_desks",
@@ -31,13 +19,24 @@
         "projector",
         "toilets"
     ],
-    "atmosphere": [
-        "disciplined"
-    ],
-    "work": [
-        "private",
-        "close"
-    ],
+    "title": "IT Cluster - Worsley Building - 8.039",
+    "basic_info": "51 Seat Capacity. Campus Map Ref 95",
+    "description": "Big room that offers clusters on high and normal desks. Modern and strictly silent environment.",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Level 8",
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "not required",
+    "phone_number": "1132440111",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17591",
+    "noise": "Strictly silent",
     "tags": [
         "silent",
         "clusters",

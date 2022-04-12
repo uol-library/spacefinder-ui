@@ -1,25 +1,16 @@
 {
     "id": 77,
-    "title": "Group study space",
-    "basic_info": "",
-    "description": "Group study space for groups inside the library",
-    "access": "students",
-    "space_type": "Library space",
-    "library": true,
-    "address": "6, Worsley Building, Clarendon Way, Woodhouse, Leeds LS2 9NL",
-    "floor": "7th floor",
-    "lat": 53.8034079,
-    "lng": -1.5561332,
-    "restricted": true,
-    "restriction": "Library Card needed",
-    "disabled_access": true,
-    "url": "https://library.leeds.ac.uk/",
-    "phone_number": "",
-    "twitter_screen_name": "UoLLibrary",
-    "facebook_url": "Health Sciences Library",
-    "expensive": null,
-    "campusmap_url": "",
-    "noise": "Whispers",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.8034079,-1.5561332]}",
+    "work": [
+        "in_a_library",
+        "private",
+        "close"
+    ],
+    "atmosphere": [
+        "relaxed",
+        "cosy",
+        "social"
+    ],
     "images": [],
     "facilities": [
         "food_drink",
@@ -34,15 +25,24 @@
         "refreshments",
         "break"
     ],
-    "atmosphere": [
-        "relaxed",
-        "cosy",
-        "social"
-    ],
-    "work": [
-        "private",
-        "close"
-    ],
+    "title": "Group study space",
+    "basic_info": "",
+    "description": "Group study space for groups inside the library",
+    "access": "students",
+    "space_type": "Library space",
+    "library": true,
+    "address": "6, Worsley Building, Clarendon Way, Woodhouse, Leeds LS2 9NL",
+    "floor": "7th floor",
+    "restricted": true,
+    "restriction": "Library Card needed",
+    "disabled_access": true,
+    "url": "https://library.leeds.ac.uk/",
+    "phone_number": "",
+    "twitter_screen_name": "UoLLibrary",
+    "facebook_url": "Health Sciences Library",
+    "expensive": null,
+    "campusmap_url": "",
+    "noise": "Whispers",
     "tags": [
         "Group study space"
     ]

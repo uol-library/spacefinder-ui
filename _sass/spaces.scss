@@ -3,9 +3,14 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    p, button {
-        width: calc(50% - 6px);
-        margin:3px;
+    p {
+        width: 100%;
+        margin: 0 3px;
+        padding:.5rem;
+    } 
+    button {
+        width: calc(33% - 6px);
+        margin: 3px;
     }
 }
 #listcontent {

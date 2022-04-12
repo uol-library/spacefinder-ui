@@ -1,25 +1,17 @@
 {
     "id": 55,
-    "title": "IT Cluster - Fine Art, History of Art and Cultural Studies - G29 (West Teaching Labs)",
-    "basic_info": "31 Seat Capacity. Campus Map Ref 38",
-    "description": "Inspiring cluster room surrounded by big windows with high views of campus . ",
-    "access": "Students",
-    "space_type": "IT Cluster",
-    "library": "",
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Ground",
-    "lat": 53.80779573,
-    "lng": -1.55751253,
-    "restricted": false,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF7E3",
-    "phone_number": "1133435260",
-    "twitter_screen_name": "",
-    "facebook_url": "",
-    "expensive": null,
-    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17451",
-    "noise": "Strictly silent",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80779573,-1.55751253]}",
+    "work": [
+        "private",
+        "close"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "historic",
+        "inspiring",
+        "social",
+        "friendly"
+    ],
     "images": [],
     "facilities": [
         "daylight",
@@ -35,17 +27,24 @@
         "toilets",
         "break"
     ],
-    "atmosphere": [
-        "disciplined",
-        "historic",
-        "inspiring",
-        "social",
-        "friendly"
-    ],
-    "work": [
-        "private",
-        "close"
-    ],
+    "title": "IT Cluster - Fine Art, History of Art and Cultural Studies - G29 (West Teaching Labs)",
+    "basic_info": "31 Seat Capacity. Campus Map Ref 38",
+    "description": "Inspiring cluster room surrounded by big windows with high views of campus . ",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Ground",
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF7E3",
+    "phone_number": "1133435260",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17451",
+    "noise": "Strictly silent",
     "tags": [
         "views",
         "historic",

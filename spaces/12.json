@@ -1,25 +1,15 @@
 {
     "id": 12,
-    "title": "Toasted in Chancellor's Court (Outdoor space)",
-    "basic_info": "Outdoors in Chancellor's Court",
-    "description": "Outdoor seating and mobile café facilities situated in Chancellor's Court, next to the Roger Stevens Building",
-    "access": "Anyone (public)",
-    "space_type": "Café",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Ground",
-    "lat": 53.80516,
-    "lng": -1.55497,
-    "restricted": false,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/",
-    "phone_number": "",
-    "twitter_screen_name": "GreatFoodLeeds",
-    "facebook_url": "",
-    "expensive": 3,
-    "campusmap_url": "",
-    "noise": "Animated discussion",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80516,-1.55497]}",
+    "work": [
+        "friends",
+        "group"
+    ],
+    "atmosphere": [
+        "relaxed",
+        "social",
+        "friendly"
+    ],
     "images": [],
     "facilities": [
         "food_drink",
@@ -32,15 +22,24 @@
         "refreshments",
         "break"
     ],
-    "atmosphere": [
-        "relaxed",
-        "social",
-        "friendly"
-    ],
-    "work": [
-        "friends",
-        "group"
-    ],
+    "title": "Toasted in Chancellor's Court (Outdoor space)",
+    "basic_info": "Outdoors in Chancellor's Court",
+    "description": "Outdoor seating and mobile café facilities situated in Chancellor's Court, next to the Roger Stevens Building",
+    "access": "Anyone (public)",
+    "space_type": "Café",
+    "library": false,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Ground",
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/",
+    "phone_number": "",
+    "twitter_screen_name": "GreatFoodLeeds",
+    "facebook_url": "",
+    "expensive": 3,
+    "campusmap_url": "",
+    "noise": "Animated discussion",
     "tags": [
         "food truck",
         "water fountain",

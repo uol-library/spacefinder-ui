@@ -1,25 +1,17 @@
 {
     "id": 36,
-    "title": "General Seating Areas - Mechanical Engineering - Second floor seating (room 240)",
-    "basic_info": "Second Floor Mechanical Engineering.  Campus Map Ref 50",
-    "description": "Comfortable small studying area with couches and views from big windows.",
-    "access": "Anyone (public)",
-    "space_type": "General Seating Area",
-    "library": "",
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Second Floor",
-    "lat": 53.80958489,
-    "lng": -1.55589859,
-    "restricted": false,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",
-    "phone_number": "1133432186",
-    "twitter_screen_name": "",
-    "facebook_url": "",
-    "expensive": null,
-    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17507",
-    "noise": "Whispers",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80958489,-1.55589859]}",
+    "work": [
+        "group"
+    ],
+    "atmosphere": [
+        "relaxed",
+        "modern",
+        "inspiring",
+        "cosy",
+        "social",
+        "friendly"
+    ],
     "images": [],
     "facilities": [
         "food_drink",
@@ -33,17 +25,24 @@
         "printers_copiers",
         "toilets"
     ],
-    "atmosphere": [
-        "relaxed",
-        "modern",
-        "inspiring",
-        "cosy",
-        "social",
-        "friendly"
-    ],
-    "work": [
-        "group"
-    ],
+    "title": "General Seating Areas - Mechanical Engineering - Second floor seating (room 240)",
+    "basic_info": "Second Floor Mechanical Engineering.  Campus Map Ref 50",
+    "description": "Comfortable small studying area with couches and views from big windows.",
+    "access": "Anyone (public)",
+    "space_type": "General Seating Area",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Second Floor",
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",
+    "phone_number": "1133432186",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17507",
+    "noise": "Whispers",
     "tags": [
         "views",
         "couches",

@@ -179,6 +179,7 @@ collections:
         multiple: true
         required: false
         options:
+          - { value: 'in_a_library', label: 'In a library' }
           - { value: 'private', label: 'Alone, in private' }
           - { value: 'close', label: 'Where others are working' }
           - { value: 'friends', label: 'With friends' }

@@ -1,25 +1,17 @@
 {
     "id": 19,
-    "title": "Seminal Communal Areas - Michael Sadler Building - B.49",
-    "basic_info": "10 Seat Capacity. Basement Michael Sadler Building. Campus Map Ref 78",
-    "description": "Large communal desk with adjustable height function . Plently of whiteboards available for silent or group study .",
-    "access": "Students",
-    "space_type": "Seminar room",
-    "library": "",
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Basement",
-    "lat": 53.80697704,
-    "lng": -1.553483796,
-    "restricted": false,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",
-    "phone_number": "113343555",
-    "twitter_screen_name": "",
-    "facebook_url": "",
-    "expensive": null,
-    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17512",
-    "noise": "Whispers",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80697704,-1.553483796]}",
+    "work": [
+        "private",
+        "friends",
+        "group"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "modern",
+        "social",
+        "friendly"
+    ],
     "images": [],
     "facilities": [
         "large_desks",
@@ -31,17 +23,24 @@
         "toilets",
         "break"
     ],
-    "atmosphere": [
-        "disciplined",
-        "modern",
-        "social",
-        "friendly"
-    ],
-    "work": [
-        "private",
-        "friends",
-        "group"
-    ],
+    "title": "Seminal Communal Areas - Michael Sadler Building - B.49",
+    "basic_info": "10 Seat Capacity. Basement Michael Sadler Building. Campus Map Ref 78",
+    "description": "Large communal desk with adjustable height function . Plently of whiteboards available for silent or group study .",
+    "access": "Students",
+    "space_type": "Seminar room",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Basement",
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",
+    "phone_number": "113343555",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17512",
+    "noise": "Whispers",
     "tags": [
         "adjustable_desks",
         "big_desk"

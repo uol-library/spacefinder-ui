@@ -6,6 +6,13 @@
     }
     background: $filterbg;
     color: $filtercolor;
+    .searchbuttons {
+        display: flex;
+        justify-content: space-between;
+        .btn {
+            width: 48%;
+        }
+    }
     input[type=search] {
         width: 100%;
         padding: .5rem;

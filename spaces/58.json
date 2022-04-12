@@ -1,25 +1,13 @@
 {
     "id": 58,
-    "title": "IT Cluster - Maurice Keyworth Building - 2.21",
-    "basic_info": "70 Seat Capacity. Campus Map Ref 19",
-    "description": "big cluster with. Multiple computers. ",
-    "access": "Students",
-    "space_type": "IT Cluster",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Second Floor",
-    "lat": 53.80801512,
-    "lng": -1.561132185,
-    "restricted": false,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "not required",
-    "phone_number": "",
-    "twitter_screen_name": "",
-    "facebook_url": "",
-    "expensive": null,
-    "campusmap_url": "",
-    "noise": "Whispers",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80801512,-1.561132185]}",
+    "work": [
+        "private",
+        "close"
+    ],
+    "atmosphere": [
+        "disciplined"
+    ],
     "images": [],
     "facilities": [
         "daylight",
@@ -35,13 +23,24 @@
         "refreshments",
         "break"
     ],
-    "atmosphere": [
-        "disciplined"
-    ],
-    "work": [
-        "private",
-        "close"
-    ],
+    "title": "IT Cluster - Maurice Keyworth Building - 2.21",
+    "basic_info": "70 Seat Capacity. Campus Map Ref 19",
+    "description": "big cluster with. Multiple computers. ",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": false,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Second Floor",
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "not required",
+    "phone_number": "",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "",
+    "noise": "Whispers",
     "tags": [
         "computers",
         "silent",

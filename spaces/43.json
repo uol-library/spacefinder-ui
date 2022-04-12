@@ -1,25 +1,15 @@
 {
     "id": 43,
-    "title": "IT Cluster - Chemistry and Chemistry West Block - 1.44",
-    "basic_info": "23 Seat Capacity. Campus Map Ref 55",
-    "description": "Private study space for focused study .",
-    "access": "Students",
-    "space_type": "IT Cluster",
-    "library": "",
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "First Floor",
-    "lat": 53.80843709,
-    "lng": -1.553410997,
-    "restricted": false,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "not required",
-    "phone_number": "113343644",
-    "twitter_screen_name": "",
-    "facebook_url": "",
-    "expensive": null,
-    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17382",
-    "noise": "Strictly silent",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80843709,-1.553410997]}",
+    "work": [
+        "private",
+        "close",
+        "group"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "inspiring"
+    ],
     "images": [],
     "facilities": [
         "daylight",
@@ -30,15 +20,24 @@
         "projector",
         "toilets"
     ],
-    "atmosphere": [
-        "disciplined",
-        "inspiring"
-    ],
-    "work": [
-        "private",
-        "close",
-        "group"
-    ],
+    "title": "IT Cluster - Chemistry and Chemistry West Block - 1.44",
+    "basic_info": "23 Seat Capacity. Campus Map Ref 55",
+    "description": "Private study space for focused study .",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "First Floor",
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "not required",
+    "phone_number": "113343644",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17382",
+    "noise": "Strictly silent",
     "tags": [
         "silent",
         "clusters",

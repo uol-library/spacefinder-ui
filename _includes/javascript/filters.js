@@ -30,8 +30,16 @@ function getFilterStatus() {
             }
         }
     }
+    let inputvalue = document.getElementById('search-input').value.trim().toLowerCase();
+    if ( inputvalue.length > 1 ) {
+        activeFilters.push({
+            name: 'search',
+            value: inputvalue.split(" ")
+        });
+    }
     return activeFilters;
 }
+
 
 /* setup */
 function setupFilters() {
@@ -45,9 +53,9 @@ function setupFilters() {
     document.getElementById('filters').addEventListener('viewfilter', event => {
         const activeFilters = getFilterStatus();
         if ( activeFilters.length ) {
-            document.getElementById('clear-all').removeAttribute('disabled');
+            document.getElementById('search-reset').removeAttribute('disabled');
         } else {
-            document.getElementById('clear-all').setAttribute('disabled', true);
+            document.getElementById('search-reset').setAttribute('disabled', true);
         }
     });
 
@@ -78,15 +86,40 @@ function setupFilters() {
             item.dispatchEvent(filterEvent);
         })
     }
-    /* clear all filters button */
-    document.getElementById('clear-all').addEventListener('click', event => {
+    /* reset button */
+    document.getElementById('search-reset').addEventListener('click', event => {
         event.preventDefault();
+        document.getElementById('filter-options-form').reset();
         const filters = document.querySelectorAll('#filters input[type=checkbox]');
         for (const cbx of filters) {
             cbx.checked = false;
         }
         /* trigger the viewfilter event */
         event.target.dispatchEvent(filterEvent);
+    });
+    /* search button */
+    document.getElementById('search-input').addEventListener('input', event => {
+        let inputvalue = document.getElementById('search-input').value.trim();
+        if ( inputvalue.length > 1 ) {
+            document.getElementById('search-reset').disabled = false;
+            document.getElementById('search-submit').disabled = false;
+        } else {
+            document.getElementById('search-reset').disabled = true;
+            document.getElementById('search-submit').disabled = true;
+            if ( inputvalue.length == 0 ) {
+                /* search has been cleared */
+                event.target.dispatchEvent(filterEvent);
+            }
+        }
+    });
+    /* search action */
+    document.getElementById('search-submit').addEventListener('click', event => {
+        event.preventDefault();
+        let inputvalue = document.getElementById('search-input').value.trim();
+        if ( inputvalue.length > 1 ) {
+            /* trigger the viewfilter event */
+            event.target.dispatchEvent(filterEvent);
+        }
     });
 }
 

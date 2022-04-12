@@ -1,25 +1,15 @@
 {
     "id": 38,
-    "title": "General Seating Areas - Maurice Keyworth - Study Centre (Rooms 238 & 307)",
-    "basic_info": "2nd and 3rd floor Maurice Keyworth Building.  Campus Map Ref 19",
-    "description": "silent study spaces with beautiful views. Outside seminar halls and occationally busy. ",
-    "access": "Anyone (public)",
-    "space_type": "General Seating Area",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Second and Third",
-    "lat": 53.80801512,
-    "lng": -1.561132185,
-    "restricted": false,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",
-    "phone_number": "",
-    "twitter_screen_name": "",
-    "facebook_url": "",
-    "expensive": null,
-    "campusmap_url": "",
-    "noise": "Strictly silent",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80801512,-1.561132185]}",
+    "work": [
+        "private",
+        "close"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "modern",
+        "cosy"
+    ],
     "images": [],
     "facilities": [
         "food_drink",
@@ -31,15 +21,24 @@
         "toilets",
         "break"
     ],
-    "atmosphere": [
-        "disciplined",
-        "modern",
-        "cosy"
-    ],
-    "work": [
-        "private",
-        "close"
-    ],
+    "title": "General Seating Areas - Maurice Keyworth - Study Centre (Rooms 238 & 307)",
+    "basic_info": "2nd and 3rd floor Maurice Keyworth Building.  Campus Map Ref 19",
+    "description": "silent study spaces with beautiful views. Outside seminar halls and occationally busy. ",
+    "access": "Anyone (public)",
+    "space_type": "General Seating Area",
+    "library": false,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Second and Third",
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",
+    "phone_number": "",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "",
+    "noise": "Strictly silent",
     "tags": [
         "silent",
         "mordern"

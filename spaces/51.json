@@ -1,25 +1,14 @@
 {
     "id": 51,
-    "title": "IT Cluster - E C Stoner Building - 6.61",
-    "basic_info": "47 Seat Capacity. Campus Map Ref 73",
-    "description": "classrooms of big cluster with multiple computers and comfortable chairs. ",
-    "access": "Students",
-    "space_type": "IT Cluster",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Level 6",
-    "lat": 53.80538144,
-    "lng": -1.552767918,
-    "restricted": false,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF5E0",
-    "phone_number": "",
-    "twitter_screen_name": "",
-    "facebook_url": "",
-    "expensive": null,
-    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17406",
-    "noise": "Strictly silent",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80538144,-1.552767918]}",
+    "work": [
+        "private",
+        "close"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "modern"
+    ],
     "images": [],
     "facilities": [
         "daylight",
@@ -33,14 +22,24 @@
         "projector",
         "toilets"
     ],
-    "atmosphere": [
-        "disciplined",
-        "modern"
-    ],
-    "work": [
-        "private",
-        "close"
-    ],
+    "title": "IT Cluster - E C Stoner Building - 6.61",
+    "basic_info": "47 Seat Capacity. Campus Map Ref 73",
+    "description": "classrooms of big cluster with multiple computers and comfortable chairs. ",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": false,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Level 6",
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF5E0",
+    "phone_number": "",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17406",
+    "noise": "Strictly silent",
     "tags": [
         "computers",
         "silent",

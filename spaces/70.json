@@ -1,25 +1,14 @@
 {
     "id": 70,
-    "title": "IT Cluster - Worsley Building - 8.049P (Fourman)",
-    "basic_info": "53 Seat Capacity. Campus Map Ref 95",
-    "description": "Big room with clusters available",
-    "access": "Students",
-    "space_type": "IT Cluster",
-    "library": "",
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Level 8",
-    "lat": 53.80330122,
-    "lng": -1.555752941,
-    "restricted": false,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF725",
-    "phone_number": "1132440111",
-    "twitter_screen_name": "",
-    "facebook_url": "",
-    "expensive": null,
-    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17591",
-    "noise": "Whispers",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80330122,-1.555752941]}",
+    "work": [
+        "private",
+        "close"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "inspiring"
+    ],
     "images": [],
     "facilities": [
         "large_desks",
@@ -31,14 +20,24 @@
         "projector",
         "toilets"
     ],
-    "atmosphere": [
-        "disciplined",
-        "inspiring"
-    ],
-    "work": [
-        "private",
-        "close"
-    ],
+    "title": "IT Cluster - Worsley Building - 8.049P (Fourman)",
+    "basic_info": "53 Seat Capacity. Campus Map Ref 95",
+    "description": "Big room with clusters available",
+    "access": "Students",
+    "space_type": "IT Cluster",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Level 8",
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF725",
+    "phone_number": "1132440111",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17591",
+    "noise": "Whispers",
     "tags": [
         "clusters",
         "focused_study"

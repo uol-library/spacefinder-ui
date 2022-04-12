@@ -1,5 +1,12 @@
 {
     "id": 83,
+    "location": "{\"type\":\"Point\",\"coordinates\":[null,null]}",
+    "work": [
+        "in_a_library"
+    ],
+    "atmosphere": [],
+    "images": [],
+    "facilities": [],
     "title": "Brotherton Library",
     "basic_info": "Silent classic style library ",
     "description": "Inspiring study place with group study areas on floor 2 of the main building and floor 3 of the west building .",
@@ -8,8 +15,6 @@
     "library": true,
     "address": "Brotherton Library",
     "floor": "2nd floor",
-    "lat": null,
-    "lng": null,
     "restricted": false,
     "restriction": "",
     "disabled_access": "",
@@ -19,9 +24,5 @@
     "facebook_url": "",
     "expensive": null,
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17354",
-    "images": [],
-    "facilities": [],
-    "atmosphere": [],
-    "work": [],
     "tags": []
 }

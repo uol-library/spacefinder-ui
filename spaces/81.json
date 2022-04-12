@@ -1,25 +1,16 @@
 {
     "id": 81,
-    "title": "Group study booths ",
-    "basic_info": "",
-    "description": "Group study booths for a max group of 5 with monitor display",
-    "access": "students",
-    "space_type": "Library space",
-    "library": true,
-    "address": "Laidlaw library,University of, Leeds LS2 9JT",
-    "floor": "1st floor",
-    "lat": 53.80666,
-    "lng": -1.551973,
-    "restricted": true,
-    "restriction": "Library Card needed",
-    "disabled_access": true,
-    "url": "https://library.leeds.ac.uk/",
-    "phone_number": "",
-    "twitter_screen_name": "UoLLibrary",
-    "facebook_url": "Laidlaw library University of Leeds",
-    "expensive": null,
-    "campusmap_url": "",
-    "noise": "Whispers",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80666,-1.551973]}",
+    "work": [
+        "in_a_library",
+        "private",
+        "close",
+        "group"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "cosy"
+    ],
     "images": [],
     "facilities": [
         "food_drink",
@@ -37,15 +28,24 @@
         "refreshments",
         "break"
     ],
-    "atmosphere": [
-        "disciplined",
-        "cosy"
-    ],
-    "work": [
-        "private",
-        "close",
-        "group"
-    ],
+    "title": "Group study booths ",
+    "basic_info": "",
+    "description": "Group study booths for a max group of 5 with monitor display",
+    "access": "students",
+    "space_type": "Library space",
+    "library": true,
+    "address": "Laidlaw library,University of, Leeds LS2 9JT",
+    "floor": "1st floor",
+    "restricted": true,
+    "restriction": "Library Card needed",
+    "disabled_access": true,
+    "url": "https://library.leeds.ac.uk/",
+    "phone_number": "",
+    "twitter_screen_name": "UoLLibrary",
+    "facebook_url": "Laidlaw library University of Leeds",
+    "expensive": null,
+    "campusmap_url": "",
+    "noise": "Whispers",
     "tags": [
         "Study booths",
         "group of 5",

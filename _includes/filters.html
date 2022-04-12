@@ -1,9 +1,13 @@
         <form id="filter-options-form" action="/" method="get">
             <div class="top-controls">
-                <label for="search-input" class="visuallyhidden">Search</label>
-                <input id="search-input" type="search" placeholder="Search">
-                <!--<button type="button" class="geo-button btn">Use my location</button>-->
-                <button type="reset" id="clear-all" class="btn secondary" disabled>Clear all</button>
+                <div>
+                    <label for="search-input" class="visuallyhidden">Search</label>
+                    <input id="search-input" type="search" placeholder="Search">
+                </div>
+                <div class="searchbuttons">
+                    <button type="reset" id="search-reset" class="btn" disabled>Reset</button>
+                    <button type="submit" id="search-submit" class="btn" disabled>Search</button>
+                </div>
             </div>
             <div class="panel-content">
             {%- for filter in site.data.filters -%}

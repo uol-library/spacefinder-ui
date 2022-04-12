@@ -1,5 +1,26 @@
 {
     "id": 20,
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80697704,-1.553483796]}",
+    "work": [
+        "private",
+        "friends",
+        "group"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "relaxed",
+        "social",
+        "friendly"
+    ],
+    "images": [],
+    "facilities": [
+        "large_desks",
+        "free_wifi",
+        "laptops_allowed",
+        "whiteboards",
+        "projector",
+        "break"
+    ],
     "title": "Seminal Communal Areas - Michael Sadler Building - B.37",
     "basic_info": "16 Seat Capacity. Basement Michael Sadler Building. Campus Map Ref 78",
     "description": "Large communal desk area surrounded by chairs.",
@@ -8,8 +29,6 @@
     "library": "",
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
     "floor": "Basement",
-    "lat": 53.80697704,
-    "lng": -1.553483796,
     "restricted": false,
     "restriction": "",
     "disabled_access": true,
@@ -20,26 +39,6 @@
     "expensive": null,
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17512",
     "noise": "Animated discussion",
-    "images": [],
-    "facilities": [
-        "large_desks",
-        "free_wifi",
-        "laptops_allowed",
-        "whiteboards",
-        "projector",
-        "break"
-    ],
-    "atmosphere": [
-        "disciplined",
-        "relaxed",
-        "social",
-        "friendly"
-    ],
-    "work": [
-        "private",
-        "friends",
-        "group"
-    ],
     "tags": [
         "shared_desk",
         "group_work"

@@ -1,5 +1,14 @@
 {
     "id": 73,
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.806102,-1.554686]}",
+    "work": [
+        "in_a_library"
+    ],
+    "atmosphere": [
+        "disciplined"
+    ],
+    "images": [],
+    "facilities": [],
     "title": "Edward Boyle 13th floor",
     "basic_info": "Study space only for post graduates",
     "description": "Silent libary for postgruate students with bookable group study rooms",
@@ -8,8 +17,6 @@
     "library": true,
     "address": "University of Leeds, Leeds LS2 9JT",
     "floor": "Level 13",
-    "lat": 53.806102,
-    "lng": -1.554686,
     "restricted": false,
     "restriction": "PG Library Card needed",
     "disabled_access": true,
@@ -19,11 +26,5 @@
     "facebook_url": "Edward Boyle Library ",
     "expensive": null,
     "campusmap_url": "",
-    "images": [],
-    "facilities": [],
-    "atmosphere": [
-        "disciplined"
-    ],
-    "work": [],
     "tags": []
 }

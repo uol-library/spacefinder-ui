@@ -1,25 +1,14 @@
 {
     "id": 14,
-    "title": "Seminal Communal Areas - Baines Wing - G.28",
-    "basic_info": "15 Seat Capacity. Ground Floor Baines Wing. Campus Map Ref 58",
-    "description": "Small study/seminar room space that includes one large desk for group or single  focused study. Acess to whiteboard and plug sockets.",
-    "access": "Students",
-    "space_type": "Seminar room",
-    "library": "",
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Ground",
-    "lat": 53.80745464,
-    "lng": -1.553855264,
-    "restricted": false,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/",
-    "phone_number": "1133437200",
-    "twitter_screen_name": "",
-    "facebook_url": "",
-    "expensive": null,
-    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17343",
-    "noise": "Whispers",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80745464,-1.553855264]}",
+    "work": [
+        "private",
+        "group"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "social"
+    ],
     "images": [],
     "facilities": [
         "large_desks",
@@ -31,14 +20,24 @@
         "toilets",
         "break"
     ],
-    "atmosphere": [
-        "disciplined",
-        "social"
-    ],
-    "work": [
-        "private",
-        "group"
-    ],
+    "title": "Seminal Communal Areas - Baines Wing - G.28",
+    "basic_info": "15 Seat Capacity. Ground Floor Baines Wing. Campus Map Ref 58",
+    "description": "Small study/seminar room space that includes one large desk for group or single  focused study. Acess to whiteboard and plug sockets.",
+    "access": "Students",
+    "space_type": "Seminar room",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Ground",
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/",
+    "phone_number": "1133437200",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17343",
+    "noise": "Whispers",
     "tags": [
         "big_desk",
         "group_study",

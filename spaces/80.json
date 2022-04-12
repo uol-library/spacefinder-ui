@@ -1,25 +1,15 @@
 {
     "id": 80,
-    "title": "Silent study space 1",
-    "basic_info": "",
-    "description": "Study space inside the library, closed doors, very silent ",
-    "access": "students",
-    "space_type": "Library space",
-    "library": true,
-    "address": "Laidlaw library,University of, Leeds LS2 9JT",
-    "floor": "1st floor",
-    "lat": 53.806788,
-    "lng": -1.551261,
-    "restricted": true,
-    "restriction": "Library Card needed",
-    "disabled_access": true,
-    "url": "https://library.leeds.ac.uk/",
-    "phone_number": "",
-    "twitter_screen_name": "UoLLibrary",
-    "facebook_url": "Laidlaw library University of Leeds",
-    "expensive": null,
-    "campusmap_url": "",
-    "noise": "Strictly silent",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.806788,-1.551261]}",
+    "work": [
+        "in_a_library",
+        "private",
+        "close"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "cosy"
+    ],
     "images": [],
     "facilities": [
         "food_drink",
@@ -33,14 +23,24 @@
         "refreshments",
         "break"
     ],
-    "atmosphere": [
-        "disciplined",
-        "cosy"
-    ],
-    "work": [
-        "private",
-        "close"
-    ],
+    "title": "Silent study space 1",
+    "basic_info": "",
+    "description": "Study space inside the library, closed doors, very silent ",
+    "access": "students",
+    "space_type": "Library space",
+    "library": true,
+    "address": "Laidlaw library,University of, Leeds LS2 9JT",
+    "floor": "1st floor",
+    "restricted": true,
+    "restriction": "Library Card needed",
+    "disabled_access": true,
+    "url": "https://library.leeds.ac.uk/",
+    "phone_number": "",
+    "twitter_screen_name": "UoLLibrary",
+    "facebook_url": "Laidlaw library University of Leeds",
+    "expensive": null,
+    "campusmap_url": "",
+    "noise": "Strictly silent",
     "tags": [
         "Silent study space",
         "good for concentrated study"

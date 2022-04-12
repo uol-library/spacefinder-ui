@@ -1,25 +1,17 @@
 {
     "id": 40,
-    "title": "General Seating Areas - Liberty Building - First floor Group workspace (1.22)",
-    "basic_info": "First Floor, Liberty Building.  Campus Map Ref 16",
-    "description": "casual seating area for a group or an individual. where food and drinks are allowed ",
-    "access": "Anyone (public)",
-    "space_type": "General Seating Area",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "First Floor",
-    "lat": 53.80838424,
-    "lng": -1.562380188,
-    "restricted": false,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",
-    "phone_number": "",
-    "twitter_screen_name": "",
-    "facebook_url": "",
-    "expensive": null,
-    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17491",
-    "noise": "Whispers",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80838424,-1.562380188]}",
+    "work": [
+        "private",
+        "close"
+    ],
+    "atmosphere": [
+        "relaxed",
+        "modern",
+        "cosy",
+        "social",
+        "friendly"
+    ],
     "images": [],
     "facilities": [
         "food_drink",
@@ -31,17 +23,24 @@
         "signal",
         "toilets"
     ],
-    "atmosphere": [
-        "relaxed",
-        "modern",
-        "cosy",
-        "social",
-        "friendly"
-    ],
-    "work": [
-        "private",
-        "close"
-    ],
+    "title": "General Seating Areas - Liberty Building - First floor Group workspace (1.22)",
+    "basic_info": "First Floor, Liberty Building.  Campus Map Ref 16",
+    "description": "casual seating area for a group or an individual. where food and drinks are allowed ",
+    "access": "Anyone (public)",
+    "space_type": "General Seating Area",
+    "library": false,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "First Floor",
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",
+    "phone_number": "",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17491",
+    "noise": "Whispers",
     "tags": [
         "views",
         "modern"

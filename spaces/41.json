@@ -1,25 +1,16 @@
 {
     "id": 41,
-    "title": "General Seating Areas - Charles Thackrah - Atrium (Ground Floor)",
-    "basic_info": "Ground Floor, Charles Thackrah Building.  Campus Map Ref 15",
-    "description": "mordern seating area with small tables and wall attached tables. Occationally busy. Perfect place to take a break or prepare before class. ",
-    "access": "Anyone (public)",
-    "space_type": "General Seating Area",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Ground",
-    "lat": 53.80699746,
-    "lng": -1.56084648,
-    "restricted": false,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",
-    "phone_number": "",
-    "twitter_screen_name": "",
-    "facebook_url": "",
-    "expensive": null,
-    "campusmap_url": "",
-    "noise": "Background chatter",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80699746,-1.56084648]}",
+    "work": [
+        "close",
+        "friends",
+        "group"
+    ],
+    "atmosphere": [
+        "relaxed",
+        "modern",
+        "social"
+    ],
     "images": [],
     "facilities": [
         "food_drink",
@@ -32,16 +23,24 @@
         "refreshments",
         "break"
     ],
-    "atmosphere": [
-        "relaxed",
-        "modern",
-        "social"
-    ],
-    "work": [
-        "close",
-        "friends",
-        "group"
-    ],
+    "title": "General Seating Areas - Charles Thackrah - Atrium (Ground Floor)",
+    "basic_info": "Ground Floor, Charles Thackrah Building.  Campus Map Ref 15",
+    "description": "mordern seating area with small tables and wall attached tables. Occationally busy. Perfect place to take a break or prepare before class. ",
+    "access": "Anyone (public)",
+    "space_type": "General Seating Area",
+    "library": false,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Ground",
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",
+    "phone_number": "",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "",
+    "noise": "Background chatter",
     "tags": [
         "moreden",
         "relaxed",

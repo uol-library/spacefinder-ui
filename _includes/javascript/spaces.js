@@ -10,16 +10,33 @@ document.addEventListener('DOMContentLoaded', () => {
     /* event listener for filter changes */
     document.addEventListener('viewfilter', event => {
         const activeFilters = getFilterStatus();
-        console.log(activeFilters);
+        let searchcondition = '';
         if ( activeFilters.length ) {
             document.querySelectorAll('.list-space').forEach( el => {
                 el.classList.remove('hidden');
+                let showEl = true;
                 activeFilters.forEach( filtergroup => {
-                    let regex = filtergroup.name+'_('+filtergroup.value.join('|')+')';
-                    if ( ! el.className.match(regex) ) {
-                        el.classList.add('hidden');
+                    if ( filtergroup.name == 'search' ) {
+                        let foundKw = false;
+                        filtergroup.value.forEach( term => {
+                            if ( el.textContent.toLowerCase().indexOf( term ) != -1 ) {
+                                foundKw = true;
+                            }
+                        });
+                        if ( ! foundKw ) {
+                            showEl = false;
+                        }
+                        searchcondition = 'containing text <em>'+filtergroup.value.join(' ')+'</em>'
+                    } else {
+                        let regex = filtergroup.name+'_('+filtergroup.value.join('|')+')';
+                        if ( ! el.className.match(regex) ) {
+                            showEl = false;
+                        }
                     }
                 });
+                if ( ! showEl ) {
+                    el.classList.add('hidden');
+                }
             });
         } else {
             document.querySelectorAll('.list-space').forEach( el => {
@@ -29,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (document.querySelectorAll('.list-space.hidden') != null ) {
             let spacesShowing = document.querySelectorAll('.list-space').length - document.querySelectorAll('.list-space.hidden').length;
             document.getElementById('listshowingcount').textContent = spacesShowing;
+            document.getElementById('listsearchterm').innerHTML = searchcondition;
         }
     });
     

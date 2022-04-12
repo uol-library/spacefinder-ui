@@ -1,25 +1,15 @@
 {
     "id": 17,
-    "title": "Seminal Communal Areas - Baines Wing - LG.20",
-    "basic_info": "14 Seat Capacity. Lower Ground Floor Baines Wing. Campus Map Ref 58",
-    "description": "Seminar room with flip out tables and chairs in small theater style. ",
-    "access": "Students",
-    "space_type": "Seminar room",
-    "library": "",
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Lower Ground",
-    "lat": 53.80745464,
-    "lng": -1.553855264,
-    "restricted": false,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",
-    "phone_number": "1133437200",
-    "twitter_screen_name": "",
-    "facebook_url": "",
-    "expensive": null,
-    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17343",
-    "noise": "Whispers",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.80745464,-1.553855264]}",
+    "work": [
+        "private",
+        "friends",
+        "group"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "friendly"
+    ],
     "images": [],
     "facilities": [
         "daylight",
@@ -30,15 +20,24 @@
         "projector",
         "toilets"
     ],
-    "atmosphere": [
-        "disciplined",
-        "friendly"
-    ],
-    "work": [
-        "private",
-        "friends",
-        "group"
-    ],
+    "title": "Seminal Communal Areas - Baines Wing - LG.20",
+    "basic_info": "14 Seat Capacity. Lower Ground Floor Baines Wing. Campus Map Ref 58",
+    "description": "Seminar room with flip out tables and chairs in small theater style. ",
+    "access": "Students",
+    "space_type": "Seminar room",
+    "library": "",
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "floor": "Lower Ground",
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",
+    "phone_number": "1133437200",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "expensive": null,
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17343",
+    "noise": "Whispers",
     "tags": [
         "seminar_room",
         "projector",
