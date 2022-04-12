@@ -9,7 +9,18 @@ const allSpaces = [];
 spacefiles.forEach( filename => {
     if ( filename !== '.' && filename !== '..' ) {
         var data = fs.readFileSync( path.resolve( __dirname, '../spaces/', filename ) );
-        allSpaces.push( JSON.parse( data ) );
+        var jsondata = JSON.parse( data );
+        console.log(jsondata);
+        var geodata = JSON.parse( jsondata.location );
+        console.log(geodata.coordinates);
+        if ( geodata && geodata.coordinates && geodata.coordinates.length == 2 ) {
+            jsondata.lat = geodata.coordinates[0];
+            jsondata.lng = geodata.coordinates[1];
+        } else {
+            jsondata.lat = '';
+            jsondata.lng = '';
+        }
+        allSpaces.push( jsondata );
     }
 });
 fs.writeFileSync( path.resolve( __dirname, '../spaces.json' ), JSON.stringify( allSpaces ) );

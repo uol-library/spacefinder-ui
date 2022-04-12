@@ -23,3 +23,38 @@
         color: $buttoncolor-disabled;
     }
 }
+.geo-button {
+    padding: 0;
+    background: $buttonbg;
+    color: $buttoncolor;
+    user-select: none;
+    cursor: pointer;
+    svg {
+        pointer-events: none;
+    }
+    .icon-stroke {
+        stroke: $buttoncolor;
+    }
+    .icon-fill {
+        fill: $buttoncolor;
+    }
+    &:hover {
+        .icon-stroke {
+            stroke: $buttoncolor-hover;
+        }
+        .icon-fill {
+            fill: $buttoncolor-hover;
+        }
+    }
+    &.active {
+        background: $buttonbg-active;
+        svg {
+            .icon-stroke {
+                stroke: $buttoncolor-active;
+            }
+            .icon-fill {
+                fill: $buttoncolor-active;
+            }
+        }
+    }
+}
