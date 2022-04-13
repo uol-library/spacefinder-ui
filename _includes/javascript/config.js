@@ -4,6 +4,7 @@ const spacefinder = {
     personLoc: {'lat': 53.806529, 'lng': -1.555291},
     personMarker: null,
     personWatcher: false,
+    infoWindow: null,
     startZoom: 16,
     watchID: false,
     permission: false,

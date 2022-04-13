@@ -5,9 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
         lazyLoadSpaceImages();
         updateDistances();
         activateSort(true, 'alpha');
+        activateSpaces();
     });
     loadSpaces();
-    /* event listener for filter changes */
+    /* event listener for search + filter changes */
     document.addEventListener('viewfilter', event => {
         const activeFilters = getFilterStatus();
         let searchcondition = '';
@@ -49,8 +50,40 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('listsearchterm').innerHTML = searchcondition;
         }
     });
-    
 });
+
+function activateSpaces() {
+    /* event listener to display space detail */
+    document.querySelectorAll('.space-title').forEach( el => {
+        el.addEventListener('click', event => {
+            highlightSpace( event.target.getAttribute('data-spaceid') );
+            //let spaceNode = event.target.parentNode.parentNode.cloneNode(true);
+            //console.log(spaceNode);
+        });
+        el.addEventListener('focus', highlightSpaceInMap );
+        el.addEventListener('blur', highlightSpaceInMap );
+        el.addEventListener('mouseover', highlightSpaceInMap );
+        el.addEventListener('mouseout', highlightSpaceInMap );
+    });
+}
+function highlightSpace( spaceid ) {
+    let spacenode = document.querySelector('[data-id="'+spaceid+'"]');
+    spacenode.scrollIntoView({behavior: "smooth"});
+    let space = getSpaceById( spaceid );
+    console.log(space);
+    zoomMapToSpace( space );
+}
+
+function getSpaceById( id ) {
+    for (let i = 0; i < spacefinder.spaces.length; i++ ) {
+        if ( spacefinder.spaces[i].id == id ) {
+            return spacefinder.spaces[i];
+        }
+    }
+}
+function highlightSpaceInMap( e ) {
+    let spacenode = e.target;
+}
 
 /**
  * Activates sorting the list of spaces in the UI.
@@ -160,20 +193,39 @@ function renderList() {
         spaceContainer.setAttribute('data-id', space.id );
         spaceContainer.setAttribute('data-sortalpha', space.title.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() );
         spaceContainer.setAttribute('class', 'list-space ' + space.classes );
-        let spaceHTML = '<h2><a href="' + space.link + '">' + space.title + '</a></h2>';
+        let spaceHTML = '<h2><a href="' + space.link + '" class="space-title" data-spaceid="' + space.id + '">' + space.title + '</a></h2>';
         spaceHTML += '<h3><span class="space-type space-type-' + space.space_type.toLowerCase() + '">' + space.space_type + '</span>';
         spaceHTML += '<span class="address">' + space.address + '</span></h3>';
         spaceHTML += '<div class="space-details">';
         if ( space.images.length ) {
             spaceHTML += '<div data-imgsrc="' + space.images[0] + '" class="space-image lazy"></div>';
         }
-        spaceHTML += '<div><p class="description">' + space.description + '</p>';
-        if ( space.facilities.length ) {
-            space.facilities.forEach( f => {
-                spaceHTML += '<span class="facility facility_' + f + '" title="' + spacefinder.spaceProperties[ 'facility_' + f ] + '>' + spacefinder.spaceProperties[ 'facility_' + f ] + '</span>';
-            });
+        spaceHTML += '<div><p class="description">' + space.description + '</p></div>';
+        if ( space.booking_url ) {
+
         }
-        spaceHTML += '</div></div>';
+        spaceHTML += '<section class="section-facts"><h3>Key Facts</h3><ul>';
+        spaceHTML += '<li class="space-address icon-marker"><span>'+space.address+'</span><li>';
+        if ( space.url ) {
+            spaceHTML += '<li class="space-url"><a href="'+space.url+'">'+space.url+'</a></li>';
+        }
+        if ( space.campusmap_url ) {
+            spaceHTML += '<li class="space-url"><a href="'+space.campusmap_url+'">'+space.campusmap_url+'</a><li>';
+        }
+        spaceHTML += '<li class="space-access icon-access">Open to '+space.access+'<li>';
+        spaceHTML += '</ul></section>';
+
+        spaceHTML += '<section class="section-opening"><h3>Opening Times</h3>';
+        spaceHTML += '</ul></section>';
+
+        if ( space.facilities.length ) {
+            spaceHTML += '<section class="section-facilities"><h3>Facilities</h3><ul>';
+            for ( i = 0; i < space.facilities.length; i++ ) {
+                spaceHTML += '<li><span class="facility facility_' + space.facilities[i] + '" title="' + spacefinder.spaceProperties[ 'facility_' + space.facilities[i] ] + '">' + spacefinder.spaceProperties[ 'facility_' + space.facilities[i] ] + '</span></li>';
+            }
+            spaceHTML += '</ul></section>';
+        }
+        spaceHTML += '</div>';
         spaceContainer.innerHTML = spaceHTML;
         listContainer.append( spaceContainer );
     });

@@ -28,5 +28,8 @@
     "http": "^0.0.1-security",
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "van11y-accessible-modal-window-aria": "^2.4.5"
   }
 }

@@ -3,11 +3,11 @@
  */
  @font-face {
     font-family: 'spacefinder';
-    src: url('https://uol-library.github.io/spacefinder-ui/assets/fonts/spacefinder.eot');
-    src: url('https://uol-library.github.io/spacefinder-ui/assets/fonts/spacefinder.eot?#iefix') format('embedded-opentype'),
-         url('https://uol-library.github.io/spacefinder-ui/assets/fonts/spacefinder.woff2') format('woff2'),
-         url('https://uol-library.github.io/spacefinder-ui/assets/fonts/spacefinder.woff') format('woff'),
-         url('https://uol-library.github.io/spacefinder-ui/assets/fonts/spacefinder.svg#spacefinder') format('svg');
+    src: url('https://uol-library.github.io/spacefinder-ui/assets/fonts/spacefinder-new.eot');
+    src: url('https://uol-library.github.io/spacefinder-ui/assets/fonts/spacefinder-new.eot?#iefix') format('embedded-opentype'),
+         url('https://uol-library.github.io/spacefinder-ui/assets/fonts/spacefinder-new.woff2') format('woff2'),
+         url('https://uol-library.github.io/spacefinder-ui/assets/fonts/spacefinder-new.woff') format('woff'),
+         url('https://uol-library.github.io/spacefinder-ui/assets/fonts/spacefinder-new.svg#spacefinder') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -194,4 +194,7 @@
 }
 .icon-prayer-room:before {
     content: "\e907";
+}
+.icon-my-location:before {
+    content: "\e90b";
 }

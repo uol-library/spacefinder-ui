@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * Initialise map and 
+ * Initialise map and set listeners to set up markers when loaded
  */
 function initMap() {
     spacefinder.map = new google.maps.Map(document.getElementById('map'), {
@@ -27,9 +27,17 @@ function initMap() {
     document.addEventListener('spacesloaded', maybeSetupMap );
     document.addEventListener('maploaded', maybeSetupMap );
 }
+/**
+ * Sets up te map with markers for each space. Needs to run when
+ * the map is fully loaded and the space data is fully loaded.
+ */
 function maybeSetupMap() {
     if ( spacefinder.mapLoaded && spacefinder.spacesLoaded ) {
         var bounds = new google.maps.LatLngBounds();
+        spacefinder.infoWindow = new google.maps.InfoWindow({
+            maxWidth: 350
+        });
+        /* add each spoace to the map using a marker */
         spacefinder.spaces.forEach( space => {
             if ( space.lat && space.lng ) {
                 var spacePosition = new google.maps.LatLng( space.lat, space.lng );
@@ -46,10 +54,9 @@ function maybeSetupMap() {
                     }
                 });
                 space.marker.infoContent = getSpaceInfoWindowContent( space );
-                space.spaceInfo = new google.maps.InfoWindow();
                 google.maps.event.addListener( space.marker, 'click', function (e) {
-                    space.spaceInfo.setContent( space.marker.infoContent );
-                    space.spaceInfo.open( spacefinder.map, space.marker );
+                    spacefinder.infoWindow.setContent( space.marker.infoContent );
+                    spacefinder.infoWindow.open( spacefinder.map, space.marker );
                 });
                 bounds.extend( spacePosition );
             }
@@ -62,6 +69,12 @@ function maybeSetupMap() {
 function getSpaceInfoWindowContent( space ) {
     return '<div class="spaceInfoWindow"><h3>'+space.title+'</h3><p>'+space.description+'</p></div>';
 }
+/**
+ * Takes the current bounds of the map and ensures all
+ * markers fit within the visible area while keeping the
+ * map centred on a given location (by setting the zoom).
+ * @param {google.maps.LatLngBounds} b bounds object
+ */
 function fitAllBounds(b) {
     // Get north east and south west markers bounds coordinates
     var ne = b.getNorthEast();
@@ -81,6 +94,17 @@ function fitAllBounds(b) {
             fitAllBounds(b);
         }
     }
+}
+/**
+ * Zooms the map to show a particular space
+ * @param {Object} space
+ */
+function zoomMapToSpace( space ) {
+    let newCenter = new google.maps.LatLng( space.lat, space.lng );
+    spacefinder.map.setCenter( newCenter );
+    spacefinder.map.setZoom(18);
+    spacefinder.infoWindow.setContent( getSpaceInfoWindowContent( space ) );
+    spacefinder.infoWindow.open( spacefinder.map, space.marker );    
 }
 
 /*******************************************************************

@@ -7,3 +7,4 @@
 {% include javascript/spaces.js %}
 {% include javascript/map.js %}
 {% include javascript/components/accordion.js %}
+{% include javascript/components/modal.js %}

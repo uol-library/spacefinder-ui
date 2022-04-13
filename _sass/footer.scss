@@ -22,9 +22,12 @@
                 border-left: none;
                 padding-left: 0;
             }
-            a {
+            button {
                 color: $footercolor;
+                background: $footerbg;
+                border: none;
                 text-decoration: none;
+                cursor: pointer;
             }
         }
     }
