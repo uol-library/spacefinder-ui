@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="24"
+   height="24"
+   viewBox="0 0 6.3499997 6.3500002"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="location-icon.svg"
+   inkscape:export-filename="/home/peter/repos/spacefinder-ui/assets/icons/location-icon.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect875"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect857"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath871">
+      <ellipse
+         style="display:none;fill:none;fill-opacity:1;stroke:none;stroke-width:6.50725;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle873"
+         cx="52.896515"
+         cy="56.114639"
+         rx="28.207605"
+         ry="27.9828"
+         d="M 81.10412,56.114639 A 28.207605,27.9828 0 0 1 52.896515,84.097439 28.207605,27.9828 0 0 1 24.68891,56.114639 28.207605,27.9828 0 0 1 52.896515,28.13184 28.207605,27.9828 0 0 1 81.10412,56.114639 Z" />
+      <path
+         id="lpe_path-effect875"
+         style="fill:none;fill-opacity:1;stroke:none;stroke-width:6.50725;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         class="powerclip"
+         d="M 6.517429,9.0297467 H 99.064274 V 101.57659 H 6.517429 Z M 81.10412,56.114639 A 28.207605,27.9828 0 0 0 52.896515,28.13184 28.207605,27.9828 0 0 0 24.68891,56.114639 a 28.207605,27.9828 0 0 0 28.207605,27.9828 28.207605,27.9828 0 0 0 28.207605,-27.9828 z" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="15.839192"
+     inkscape:cx="33.679052"
+     inkscape:cy="25.53765"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:type="star"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:10.30895366;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path851"
+       sodipodi:sides="4"
+       sodipodi:cx="52.790852"
+       sodipodi:cy="55.303169"
+       sodipodi:r1="41.176117"
+       sodipodi:r2="0.41176116"
+       sodipodi:arg1="-0.012368886"
+       sodipodi:arg2="0.77302928"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       inkscape:transform-center-x="-5.4465325e-06"
+       transform="matrix(-0.07699571,0,0,-0.07699664,7.2396692,7.4331486)"
+       clip-path="url(#clipPath871)"
+       inkscape:path-effect="#path-effect875"
+       d="M 93.963819,54.79388 53.08559,55.590705 53.300141,96.476136 52.503316,55.597907 11.617884,55.812459 52.496114,55.015634 52.281562,14.130202 53.078387,55.008431 Z" />
+    <ellipse
+       style="display:block;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.79375;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="circle864"
+       cx="-3.1750014"
+       cy="-3.1749911"
+       rx="2.2319741"
+       ry="2.2320018"
+       transform="scale(-1)" />
+    <circle
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0253999;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path12"
+       cx="-3.175"
+       cy="-3.175"
+       transform="scale(-1)"
+       r="0.52916664" />
+  </g>
+</svg>
