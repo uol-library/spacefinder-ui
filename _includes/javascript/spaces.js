@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* event listener for search + filter changes */
     document.addEventListener('viewfilter', event => {
         const activeFilters = getFilterStatus();
+        document.getElementById('listcontent').scrollTop = 0;
         let searchcondition = '';
         if ( activeFilters.length ) {
             document.querySelectorAll('.list-space').forEach( el => {
@@ -20,14 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     if ( filtergroup.name == 'search' ) {
                         let foundKw = false;
                         filtergroup.value.forEach( term => {
-                            if ( el.textContent.toLowerCase().indexOf( term ) != -1 ) {
+                            if ( el.textContent.toLowerCase().indexOf( term.toLowerCase() ) != -1 ) {
                                 foundKw = true;
                             }
                         });
                         if ( ! foundKw ) {
                             showEl = false;
                         }
-                        searchcondition = 'containing text <em>'+filtergroup.value.join(' ')+'</em>'
                     } else {
                         let regex = filtergroup.name+'_('+filtergroup.value.join('|')+')';
                         if ( ! el.className.match(regex) ) {
@@ -47,10 +47,52 @@ document.addEventListener('DOMContentLoaded', () => {
         if (document.querySelectorAll('.list-space.hidden') != null ) {
             let spacesShowing = document.querySelectorAll('.list-space').length - document.querySelectorAll('.list-space.hidden').length;
             document.getElementById('listshowingcount').textContent = spacesShowing;
-            document.getElementById('listsearchterm').innerHTML = searchcondition;
         }
+        updateListFilterMessage(activeFilters);
     });
 });
+
+/**
+ * Updates the message above the list of spaces to show what 
+ * search terms and filters are active
+ */
+function updateListFilterMessage( filters ) {
+    console.log(filters);
+    let container = document.getElementById('listfilters');
+    /* empty any existing messages and hide */
+    container.textContent = '';
+    container.setAttribute('hidden', true);
+    let searchmessage = filtermessage = resultsmessage = '';
+    if ( filters.length ) {
+        filters.forEach( f => {
+            if ( f.name == 'search' ) {
+                let pl = f.value.length > 1 ? 's': '';
+                searchmessage = '<p>Searching spaces which contain text: ';
+                let termlist = [];
+                f.value.forEach( term => {
+                    termlist.push('<button class="search-term icon-remove" data-searchtext="' + term + '">' + term + '</button>');
+                });
+                searchmessage += termlist.join(' or ') + '</p>';
+            } else {
+                let pl = f.value.length > 1 ? 's': '';
+                filtermessage += '<p>Filtering spaces by <em>' + f.name + '</em> term' + pl + ': ';
+                let termlist = [];
+                f.value.forEach( term => {
+                    termlist.push('<button class="filter-term icon-remove" data-termid="' + f.name + '_' + term + '">'+spacefinder.spaceProperties[ f.name + '_' + term ]+'</button>');
+                });
+                filtermessage += termlist.join(', ') + '</p>';
+            }
+        });
+        if (document.querySelectorAll('.list-space.hidden') != null ) {
+            let spacesShowing = document.querySelectorAll('.list-space').length - document.querySelectorAll('.list-space.hidden').length;
+            if ( spacesShowing == 0 ) {
+                resultsmessage = '<p class="noresults">Sorry, your search has found no results - try removing some of your search criteria.</p>';
+            }
+        }
+        container.innerHTML = searchmessage + filtermessage + resultsmessage;
+        container.removeAttribute('hidden');
+    }
+}
 
 function activateSpaces() {
     /* event listener to display space detail */
@@ -65,13 +107,41 @@ function activateSpaces() {
         el.addEventListener('mouseover', highlightSpaceInMap );
         el.addEventListener('mouseout', highlightSpaceInMap );
     });
+    /* add listener to buttons in filter and search status bar */
+    document.addEventListener('click', e => {
+        if ( e.target.matches('.search-term') ) {
+            e.preventDefault();
+            let searchtext = e.target.getAttribute('data-searchtext');
+            let searchinput = document.getElementById('search-input').value.trim();
+            let searchterms = searchinput.split(' ');
+            let newsearchterms = [];
+            searchterms.forEach( term => {
+                if ( term != searchtext ) {
+                    newsearchterms.push( term );
+                }
+            });
+            document.getElementById('search-input').value = newsearchterms.join(' ');
+            document.dispatchEvent(spacefinder.filterEvent);
+        }
+        if ( e.target.matches('.filter-term') ) {
+            e.preventDefault();
+            let termid = e.target.getAttribute('data-termid');
+            document.getElementById(termid).checked = false;
+            document.dispatchEvent(spacefinder.filterEvent);
+        }
+    });
+    
 }
 function highlightSpace( spaceid ) {
-    let spacenode = document.querySelector('[data-id="'+spaceid+'"]');
-    spacenode.scrollIntoView({behavior: "smooth"});
     let space = getSpaceById( spaceid );
-    console.log(space);
+    renderAdditionalInfo( space.id );
     zoomMapToSpace( space );
+    let spacenode = document.querySelector('[data-id="'+spaceid+'"]');
+    document.querySelectorAll('.list-space').forEach( sp => {
+        sp.classList.remove('active');
+    });
+    spacenode.classList.add('active');
+    spacenode.scrollIntoView({behavior: "smooth"});
 }
 
 function getSpaceById( id ) {
@@ -80,6 +150,9 @@ function getSpaceById( id ) {
             return spacefinder.spaces[i];
         }
     }
+}
+function getSpaceNodeById( id ) {
+    return document.querySelector('[data-id="'+id+'"]');
 }
 function highlightSpaceInMap( e ) {
     let spacenode = e.target;
@@ -201,30 +274,7 @@ function renderList() {
             spaceHTML += '<div data-imgsrc="' + space.images[0] + '" class="space-image lazy"></div>';
         }
         spaceHTML += '<div><p class="description">' + space.description + '</p></div>';
-        if ( space.booking_url ) {
-
-        }
-        spaceHTML += '<section class="section-facts"><h3>Key Facts</h3><ul>';
-        spaceHTML += '<li class="space-address icon-marker"><span>'+space.address+'</span><li>';
-        if ( space.url ) {
-            spaceHTML += '<li class="space-url"><a href="'+space.url+'">'+space.url+'</a></li>';
-        }
-        if ( space.campusmap_url ) {
-            spaceHTML += '<li class="space-url"><a href="'+space.campusmap_url+'">'+space.campusmap_url+'</a><li>';
-        }
-        spaceHTML += '<li class="space-access icon-access">Open to '+space.access+'<li>';
-        spaceHTML += '</ul></section>';
-
-        spaceHTML += '<section class="section-opening"><h3>Opening Times</h3>';
-        spaceHTML += '</ul></section>';
-
-        if ( space.facilities.length ) {
-            spaceHTML += '<section class="section-facilities"><h3>Facilities</h3><ul>';
-            for ( i = 0; i < space.facilities.length; i++ ) {
-                spaceHTML += '<li><span class="facility facility_' + space.facilities[i] + '" title="' + spacefinder.spaceProperties[ 'facility_' + space.facilities[i] ] + '">' + spacefinder.spaceProperties[ 'facility_' + space.facilities[i] ] + '</span></li>';
-            }
-            spaceHTML += '</ul></section>';
-        }
+        spaceHTML += '<div class="additionalInfo"></div>';
         spaceHTML += '</div>';
         spaceContainer.innerHTML = spaceHTML;
         listContainer.append( spaceContainer );
@@ -233,6 +283,37 @@ function renderList() {
     document.getElementById('listtotalcount').textContent = spacetotal;
 }
 
+function renderAdditionalInfo( spaceid ) {
+    document.querySelector('.additionalInfo').textContent = '';
+    let space = getSpaceById( spaceid );
+    //console.log(space);
+    let spaceHTML = '';
+    if ( space.booking_url ) {
+
+    }
+    spaceHTML += '<section class="section-facts"><h4>Key Facts</h4><ul class="bulleticons">';
+    spaceHTML += '<li class="icon-marker"><span>'+space.address+'</span><li>';
+    if ( space.url != "" ) {
+        spaceHTML += '<li class="icon-link"><a href="'+space.url+'">'+space.url+'</a></li>';
+    }
+    if ( space.campusmap_url != "" ) {
+        spaceHTML += '<li class="icon-link"><a href="'+space.campusmap_url+'">'+space.campusmap_url+'</a><li>';
+    }
+    spaceHTML += '<li class="icon-access">Open to '+space.access+'<li>';
+    spaceHTML += '</ul></section>';
+
+    //spaceHTML += '<section class="section-opening"><h4>Opening Times</h4>';
+    //spaceHTML += '</ul></section>';
+
+    if ( space.facilities.length ) {
+        spaceHTML += '<section class="section-facilities"><h4>Facilities</h4><ul>';
+        for ( i = 0; i < space.facilities.length; i++ ) {
+            spaceHTML += '<li><span class="facility facility_' + space.facilities[i] + '" title="' + spacefinder.spaceProperties[ 'facility_' + space.facilities[i] ] + '">' + spacefinder.spaceProperties[ 'facility_' + space.facilities[i] ] + '</span></li>';
+        }
+        spaceHTML += '</ul></section>';
+    }
+    getSpaceNodeById( spaceid ).querySelector('.additionalInfo').innerHTML = spaceHTML;
+}
 /**
  * Gets a list of classes for a space container to facilitate filtering
  * @param {Object} space Space data

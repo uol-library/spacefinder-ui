@@ -13,7 +13,17 @@ const spacefinder = {
     spacesurl: 'https://uol-library.github.io/spacefinder-ui/spaces.json',
     imageBaseURL: 'https://uol-library.github.io/spacefinder-ui/assets/photos/',
     spaces: [],
+    filterEvent: new Event('viewfilter', {
+        bubbles: true,
+        cancelable: true,
+        composed: false,
+    }),
     spaceProperties: {
+        'work_in_a_library': 'In a library',
+        'work_private': 'Alone, in private',
+        'work_close': 'Where others are working',
+        'work_friends': 'With friends',
+        'work_group': 'On a group project',
         'atmosphere_disciplined': 'Disciplined',
         'atmosphere_relaxed': 'Relaxed',
         'atmosphere_historic': 'Historic',

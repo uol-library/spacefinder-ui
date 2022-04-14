@@ -22,39 +22,50 @@
         background: $buttonbg-disabled;
         color: $buttoncolor-disabled;
     }
+    &.icon-distance {
+        &::before {
+            margin:0;
+            font-size: 24px;
+            content: '\e609'; 
+        }
+        &::after {
+            margin:0;
+            font-size: 12px;
+            content: '\e609'; 
+        }
+    }
 }
 .geo-button {
     padding: 0;
+    font-size: 26px;
     background: $buttonbg;
     color: $buttoncolor;
     user-select: none;
     cursor: pointer;
-    svg {
-        pointer-events: none;
-    }
-    .icon-stroke {
-        stroke: $buttoncolor;
-    }
-    .icon-fill {
-        fill: $buttoncolor;
+    &::before {
+        margin:0;
     }
     &:hover {
-        .icon-stroke {
-            stroke: $buttoncolor-hover;
-        }
-        .icon-fill {
-            fill: $buttoncolor-hover;
-        }
+        background: $buttonbg-hover;
+        color: $buttoncolor-hover;
     }
     &.active {
         background: $buttonbg-active;
-        svg {
-            .icon-stroke {
-                stroke: $buttoncolor-active;
-            }
-            .icon-fill {
-                fill: $buttoncolor-active;
-            }
+        color: $buttoncolor-active;
+    }
+}
+#listfilters {
+    .search-term,
+    .filter-term {
+        font-size: .9em;
+        border: none;
+        border-bottom: 1px dashed $buttoncolor;
+        background: $buttonbg;
+        cursor: pointer;
+        &.icon-remove:after {
+            content: '\e602';
+            margin-left: .5rem;
+            font-size: .8rem;
         }
     }
 }

@@ -224,8 +224,9 @@ function checkGeoAvailable() {
     if ( 'geolocation' in navigator ) {
         /* make button for map to let user activate geolocation */
         const locationButton = document.createElement( 'button' );
-        locationButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 6.35 6.35"><defs><clipPath clipPathUnits="userSpaceOnUse" id="a"><path style="fill:none;fill-opacity:1;stroke:none;stroke-width:6.50725;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" class="powerclip" d="M6.517 9.03h92.547v92.547H6.517Zm74.587 47.085a28.208 27.983 0 0 0-28.207-27.983 28.208 27.983 0 0 0-28.208 27.983 28.208 27.983 0 0 0 28.208 27.982 28.208 27.983 0 0 0 28.207-27.982z"/></clipPath></defs><path class="icon-stroke" style="fill:none;fill-opacity:1;stroke-width:10.30895366;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="matrix(-.077 0 0 -.077 7.24 7.433)" clip-path="url(#a)" d="m93.964 54.794-40.878.797.214 40.885-.797-40.878-40.885.214 40.878-.796-.214-40.886.796 40.878Z"/><circle class="icon-stroke" style="display:block;fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:.79375;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" cx="-3.175" cy="-3.175" transform="scale(-1)" r="2.232"/><circle class="icon-fill" style="fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:.0253999;stroke-miterlimit:4;stroke-dasharray:none" cx="-3.175" cy="-3.175" transform="scale(-1)" r="1.2"/></svg>';
+        locationButton.innerHTML = '';
         locationButton.classList.add('geo-button');
+        locationButton.classList.add('icon-my-location');
         locationButton.setAttribute('aria-label', 'Pan to Current Location');
         locationButton.setAttribute('title', 'Pan to Current Location');
         spacefinder.map.controls[google.maps.ControlPosition.RIGHT_TOP].push(locationButton);

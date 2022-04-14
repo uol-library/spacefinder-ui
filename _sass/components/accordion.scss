@@ -7,15 +7,20 @@
 			margin-left:.5em;
 		}
 		&::after {
-		  content: "\276F";
-		  width: 1em;
-		  height: 1em;
-		  margin-right: .5em;
-		  transform: rotate(270deg);
+			font-family: 'spacefinder';
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			display: inline-block;
+			text-decoration: inherit;
+			content: "\E61E";
 		}
 		&[aria-expanded="false"] {
 			&::after {
-				content: "\276E";
+				content: "\E620";
 			}
 		}
 	}

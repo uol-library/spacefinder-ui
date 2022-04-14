@@ -49,17 +49,14 @@
                     }
                 }
                 &.active {
-                    color: $filtercolor;
                     background: $filterbg;
-                    a:hover {
+                    a, a:hover {
+                        color: $topbarbg;
                         background: $filterbg;
                     }
                     border-radius: 5px 5px 0 0;
                     margin-bottom: -$topbarpadding;
                     padding-bottom: $topbarpadding;
-                    svg path {
-                        fill:  $filtercolor;
-                    }
                 }
             }
             &.list-button, &.map-button {

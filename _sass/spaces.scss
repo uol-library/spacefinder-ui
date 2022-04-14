@@ -1,21 +1,38 @@
 #listcontrols {
-    background: $filterbg;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    border-bottom: 1px solid $filterbg;
     p {
-        width: 100%;
+        flex: 1;
         margin: 1px 3px;
         padding:.5rem;
-    } 
+    }
     button {
-        width: calc(33% - 6px);
-        margin: 3px;
+        width: calc(15% - 6px);
+        margin: 3px 2px;
+        padding: 0;
+    }
+}
+#listfilters {
+    padding: .5rem;
+    border-bottom: 1px solid $filterbg;
+    .noresults {
+        padding: .5em 0 .5em 1em;
+        position:relative;
+        &:before {
+            content: "!";
+            color: red;
+            position:absolute;
+            top:.5em;
+            font-weight: bold;
+            left:0;
+        }
     }
 }
 #listcontent {
-    padding: .5rem;
     .list-space {
+        padding: .5rem;
         &:after {
             content: "";
             display: block;
@@ -26,6 +43,9 @@
         }
         &.hidden {
             display:none;
+        }
+        &.active {
+            background: $activespacebg;
         }
         padding-bottom: 1em;
         margin-bottom: 1em;
@@ -70,6 +90,27 @@
                 }
             }
         }
+        h4 {
+            font-weight: normal;
+            padding-bottom: .5rem 0;
+            background: $spacesubheadbg;
+            margin: .5rem 0;
+            border-top: 1px dotted $spacesubheadborder;
+            border-bottom: 1px dotted $spacesubheadborder;
+        }
+        ul.bulleticons {
+            list-style: none;
+            padding:0;
+            li {
+                padding-left: 1.5em;
+                &:before {
+                    margin-left: -1.2em;
+                }
+                &.icon-link {
+                    word-break: break-all;
+                }
+            }
+        }
         .space-details {
             .space-image {
                 width: 50%;
@@ -82,8 +123,5 @@
             }
         }
     }
-
-}
-#single-space {
 
 }

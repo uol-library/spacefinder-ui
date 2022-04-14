@@ -30,12 +30,6 @@ function setupLayout() {
             } ) );
         });
     });
-	/* event listener for close button on single space view */
-	document.getElementById('ss-close').addEventListener('click', event => {
-		event.preventDefault();
-		document.getElementById('list').classList.remove('single');
-		document.getElementById('view-single').classList.remove('active');
-	});
 	/* event listener for view changes triggered by top nav */
 	document.addEventListener( 'viewchange', event => {
 		let views = ['filters','list','map'];

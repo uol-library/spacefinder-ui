@@ -14,7 +14,7 @@
 }
 
 [class^="icon-"], [class*=" icon-"] {
-    &::before {
+    &::before, &::after {
         font-family: 'spacefinder';
         speak: none;
         font-style: normal;

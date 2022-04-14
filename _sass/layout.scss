@@ -40,19 +40,31 @@
             }
         }
         #filters, #list {
-            max-height: calc(100vh - (#{$topbarheight} + #{$footerheight}));
             overflow-y: auto;
             display: none;
             margin-left: -100vw;
+            max-height: calc(100vh - (#{$topbarheight} + #{$footerheight}));
             &.active {
                 margin-left: 0;
             }
+            .panel-content {
+                overflow-y: auto; 
+            }
+        }
+        #filters {
             .top-controls {
                 height: $controlsheight;
             }
             .panel-content {
                 max-height: calc(100vh - (#{$topbarheight} + #{$footerheight} + #{$controlsheight}));
-                overflow-y: auto; 
+            }
+        }
+        #list {
+            .top-controls {
+                height: $listcontrolsheight;
+            }
+            .panel-content {
+                max-height: calc(100vh - (#{$topbarheight} + #{$footerheight} + #{$listcontrolsheight}));
             }
         }
         #map {

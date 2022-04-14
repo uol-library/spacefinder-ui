@@ -25,6 +25,7 @@ $listwidth: 500px;
 
 /* controls at top of list and search panels */
 $controlsheight: 5rem;
+$listcontrolsheight: 2.5rem;
 
 /* footer bar */
 $footerheight: 30px;
@@ -120,6 +121,10 @@ $lighttextcolor: $color-font--light;
 $highlighttextcolor: $color-brand;
 $highlighttextcoloralt: $color-blue;
 
+/* space list */
+$activespacebg: $color-white--dark;
+$spacesubheadbg: $color-cream--light;
+$spacesubheadborder: $color-grey--medium;;
 
 $backgroundColor: #2e2e2e;
 $lightBackgroundColor:#F3F3F3;
