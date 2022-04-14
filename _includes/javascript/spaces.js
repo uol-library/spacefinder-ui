@@ -57,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
  * search terms and filters are active
  */
 function updateListFilterMessage( filters ) {
-    console.log(filters);
     let container = document.getElementById('listfilters');
     /* empty any existing messages and hide */
     container.textContent = '';
@@ -284,7 +283,9 @@ function renderList() {
 }
 
 function renderAdditionalInfo( spaceid ) {
-    document.querySelector('.additionalInfo').textContent = '';
+    document.querySelectorAll('.additionalInfo').forEach( el => {
+        el.textContent = '';
+    }
     let space = getSpaceById( spaceid );
     //console.log(space);
     let spaceHTML = '';
