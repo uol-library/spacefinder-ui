@@ -97,7 +97,12 @@ function activateSpaces() {
     /* event listener to display space detail */
     document.querySelectorAll('.space-title').forEach( el => {
         el.addEventListener('click', event => {
-            selectSpace( event.target.getAttribute('data-spaceid') );
+            let spacenode = document.querySelector('[data-id="'+event.target.getAttribute('data-spaceid')+'"]');
+            if ( spacenode.classList.contains('active') ) {
+                //deselectSpace(false);
+            } else {
+                selectSpace( event.target.getAttribute('data-spaceid') );
+            }
         });
         el.addEventListener('focus', highlightSpaceInMap );
         el.addEventListener('blur', highlightSpaceInMap );

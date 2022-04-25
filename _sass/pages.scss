@@ -1,0 +1,15 @@
+.simple-modal {
+    p {
+        margin: 1em 0;
+    }
+    dt {
+        font-weight:bold;
+    }
+    dd {
+        padding-left: 2em;
+    }
+    dl > dd > ul {
+        padding-left: 0;
+        margin: 0;
+    }
+}

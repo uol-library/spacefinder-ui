@@ -1,0 +1,12 @@
+<div class="page-include" id="accessibility-page" hidden>
+    {% capture accessibility_page %}{% include pages/accessibility.md %}{% endcapture %}
+    {{ accessibility_page | markdownify }}
+</div>
+<div class="page-include" id="privacy-page" hidden>
+    {% capture privacy_page %}{% include pages/privacy.md %}{% endcapture %}
+    {{ privacy_page | markdownify }}
+</div>
+<div class="page-include" id="terms-page" hidden>
+    {% capture terms_page %}{% include pages/terms.md %}{% endcapture %}
+    {{ terms_page | markdownify }}
+</div>
