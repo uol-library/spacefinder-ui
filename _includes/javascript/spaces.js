@@ -281,13 +281,19 @@ function renderList() {
     document.getElementById('listshowingcount').textContent = spacetotal;
     document.getElementById('listtotalcount').textContent = spacetotal;
 }
-
+/**
+ * Renders additional information about a space.
+ * The main listing only contains a minimal amount of information about spaces - 
+ * when a space is clicked on, this is augmented by additional data.
+ * @param {integer} spaceid ID of space
+ */
 function renderAdditionalInfo( spaceid ) {
+    /* clear any additional data currently displayed */
     document.querySelectorAll('.additionalInfo').forEach( el => {
         el.textContent = '';
-    }
+    });
+    /* get space data */
     let space = getSpaceById( spaceid );
-    //console.log(space);
     let spaceHTML = '';
     if ( space.booking_url ) {
 
