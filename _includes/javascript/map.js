@@ -33,7 +33,7 @@ function initMap() {
  */
 function maybeSetupMap() {
     if ( spacefinder.mapLoaded && spacefinder.spacesLoaded ) {
-        var bounds = new google.maps.LatLngBounds();
+        spacefinder.mapBounds = new google.maps.LatLngBounds();
         spacefinder.infoWindow = new google.maps.InfoWindow({
             maxWidth: 350
         });
@@ -57,13 +57,18 @@ function maybeSetupMap() {
                 google.maps.event.addListener( space.marker, 'click', function (e) {
                     spacefinder.infoWindow.setContent( space.marker.infoContent );
                     spacefinder.infoWindow.open( spacefinder.map, space.marker );
+                    selectSpace(space.id);
                 });
-                bounds.extend( spacePosition );
+                google.maps.event.addListener(spacefinder.infoWindow,'closeclick',function(){
+                    deselectSpace( true );
+                    let newCenter = geolocationActive() ? spacefinder.personLoc: spacefinder.currentLoc;
+                    spacefinder.map.setCenter( newCenter );
+                    fitAllBounds( spacefinder.mapBounds );
+                });
+                spacefinder.mapBounds.extend( spacePosition );
             }
         });
-        google.maps.event.addListenerOnce(spacefinder.map, 'idle', function() {
-            fitAllBounds( bounds );
-        });
+        fitAllBounds( spacefinder.mapBounds );
     }
 }
 function getSpaceInfoWindowContent( space ) {
@@ -169,7 +174,6 @@ function movePersonMarker() {
  * @returns {boolean}
  */
 function geolocationActive() {
-
     return ( document.querySelector( '.geo-button.active' ) !== null ? true: false );
 }
 

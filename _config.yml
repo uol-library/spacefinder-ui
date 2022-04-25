@@ -5,7 +5,8 @@ description: >-
   the University of Cambridge
   https://spacefinder.lib.cam.ac.uk/
 baseurl: "/spacefinder-ui"
-url: ""
+url: "https://uol-library.github.io"
+host: "localhost"
 photo_dir: "/spacefinder-ui/assets/photos/"
 google_maps_api_key: "AIzaSyBrAkYSJYjm6k9ultU71meFVsvxWR--97o"
 google_analytics: ""

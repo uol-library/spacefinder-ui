@@ -1,5 +1,0 @@
-## Accessibility Statement {#accessibility-title}
-
-
-
-

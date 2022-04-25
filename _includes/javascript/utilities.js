@@ -103,7 +103,7 @@ function getJSON(options) {
     }
     if ( storageAvailable('localStorage') && getWithExpiry(options.key) ) {
         if ( options.debug ) {
-            console.log("getting data '"+options.key+"'from localstorage");
+            console.log("getting data '"+options.key+"' from local storage");
         }
         if ( options.hasOwnProperty( 'callback' ) && typeof options.callback == 'function' ) {
             options.callback( JSON.parse( getWithExpiry( options.key ) ) );
@@ -113,11 +113,11 @@ function getJSON(options) {
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", function(){
             if ( storageAvailable('localStorage') ) {
-                var expires = new Date().getTime() + (options.expiry*60*60*1000);
+                var expires = new Date().getTime() + (options.expires*60*60*1000);
                 if ( options.debug ) {
                     console.log("storing data '"+options.key+"' in localstorage - expires "+expires);
                 }
-                setWithExpiry(options.key, this.responseText, options.expiry);
+                setWithExpiry(options.key, this.responseText, options.expires);
             }
             if ( options.hasOwnProperty( 'callback' ) && typeof options.callback == 'function' ) {
                 options.callback( JSON.parse( this.responseText ) );

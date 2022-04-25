@@ -97,9 +97,7 @@ function activateSpaces() {
     /* event listener to display space detail */
     document.querySelectorAll('.space-title').forEach( el => {
         el.addEventListener('click', event => {
-            highlightSpace( event.target.getAttribute('data-spaceid') );
-            //let spaceNode = event.target.parentNode.parentNode.cloneNode(true);
-            //console.log(spaceNode);
+            selectSpace( event.target.getAttribute('data-spaceid') );
         });
         el.addEventListener('focus', highlightSpaceInMap );
         el.addEventListener('blur', highlightSpaceInMap );
@@ -131,7 +129,7 @@ function activateSpaces() {
     });
     
 }
-function highlightSpace( spaceid ) {
+function selectSpace( spaceid ) {
     let space = getSpaceById( spaceid );
     renderAdditionalInfo( space.id );
     zoomMapToSpace( space );
@@ -141,6 +139,16 @@ function highlightSpace( spaceid ) {
     });
     spacenode.classList.add('active');
     spacenode.scrollIntoView({behavior: "smooth"});
+}
+
+function deselectSpace( scrollReset ) {
+    renderAdditionalInfo( false );
+    document.querySelectorAll('.list-space').forEach( sp => {
+        sp.classList.remove('active');
+    });
+    if ( scrollReset ) {
+        document.getElementById('listcontainer').scrollTop = 0;
+    }
 }
 
 function getSpaceById( id ) {
@@ -235,7 +243,7 @@ function sortSpaces(e) {
  * Loads all space data from a single JSON file
  */
 function loadSpaces() {
-    getJSON( { key: 'spaces', url: spacefinder.spacesurl, callback: data => {
+    getJSON( { key: 'spaces', url: spacefinder.spacesurl, debug: true, callback: data => {
         if ( data.length ) {
             data.forEach( (space, index) => {
                 spacefinder.spaces[index] = space;
@@ -292,34 +300,36 @@ function renderAdditionalInfo( spaceid ) {
     document.querySelectorAll('.additionalInfo').forEach( el => {
         el.textContent = '';
     });
-    /* get space data */
-    let space = getSpaceById( spaceid );
-    let spaceHTML = '';
-    if ( space.booking_url ) {
+    if ( spaceid !== false ) {
+        /* get space data */
+        let space = getSpaceById( spaceid );
+        let spaceHTML = '';
+        if ( space.booking_url ) {
 
-    }
-    spaceHTML += '<section class="section-facts"><h4>Key Facts</h4><ul class="bulleticons">';
-    spaceHTML += '<li class="icon-marker"><span>'+space.address+'</span><li>';
-    if ( space.url != "" ) {
-        spaceHTML += '<li class="icon-link"><a href="'+space.url+'">'+space.url+'</a></li>';
-    }
-    if ( space.campusmap_url != "" ) {
-        spaceHTML += '<li class="icon-link"><a href="'+space.campusmap_url+'">'+space.campusmap_url+'</a><li>';
-    }
-    spaceHTML += '<li class="icon-access">Open to '+space.access+'<li>';
-    spaceHTML += '</ul></section>';
-
-    //spaceHTML += '<section class="section-opening"><h4>Opening Times</h4>';
-    //spaceHTML += '</ul></section>';
-
-    if ( space.facilities.length ) {
-        spaceHTML += '<section class="section-facilities"><h4>Facilities</h4><ul>';
-        for ( i = 0; i < space.facilities.length; i++ ) {
-            spaceHTML += '<li><span class="facility facility_' + space.facilities[i] + '" title="' + spacefinder.spaceProperties[ 'facility_' + space.facilities[i] ] + '">' + spacefinder.spaceProperties[ 'facility_' + space.facilities[i] ] + '</span></li>';
         }
+        spaceHTML += '<section class="section-facts"><h4>Key Facts</h4><ul class="bulleticons">';
+        spaceHTML += '<li class="icon-marker"><span>'+space.address+'</span><li>';
+        if ( space.url != "" ) {
+            spaceHTML += '<li class="icon-link"><a href="'+space.url+'">'+space.url+'</a></li>';
+        }
+        if ( space.campusmap_url != "" ) {
+            spaceHTML += '<li class="icon-link"><a href="'+space.campusmap_url+'">'+space.campusmap_url+'</a><li>';
+        }
+        spaceHTML += '<li class="icon-access">Open to '+space.access+'<li>';
         spaceHTML += '</ul></section>';
+
+        //spaceHTML += '<section class="section-opening"><h4>Opening Times</h4>';
+        //spaceHTML += '</ul></section>';
+
+        if ( space.facilities.length ) {
+            spaceHTML += '<section class="section-facilities"><h4>Facilities</h4><ul>';
+            for ( i = 0; i < space.facilities.length; i++ ) {
+                spaceHTML += '<li><span class="facility facility_' + space.facilities[i] + '" title="' + spacefinder.spaceProperties[ 'facility_' + space.facilities[i] ] + '">' + spacefinder.spaceProperties[ 'facility_' + space.facilities[i] ] + '</span></li>';
+            }
+            spaceHTML += '</ul></section>';
+        }
+        getSpaceNodeById( spaceid ).querySelector('.additionalInfo').innerHTML = spaceHTML;
     }
-    getSpaceNodeById( spaceid ).querySelector('.additionalInfo').innerHTML = spaceHTML;
 }
 /**
  * Gets a list of classes for a space container to facilitate filtering
