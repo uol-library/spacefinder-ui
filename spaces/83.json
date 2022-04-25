@@ -1,12 +1,28 @@
 {
     "id": 83,
-    "location": "{\"type\":\"Point\",\"coordinates\":[null,null]}",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.807999,-1.552232]}",
     "work": [
-        "in_a_library"
+        "in_a_library",
+        "private",
+        "close"
     ],
-    "atmosphere": [],
+    "atmosphere": [
+        "disciplined",
+        "cosy"
+    ],
     "images": [],
-    "facilities": [],
+    "facilities": [
+        "food_drink",
+        "free_wifi",
+        "computers",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "printers_copiers",
+        "toilets",
+        "refreshments",
+        "break"
+    ],
     "title": "Brotherton Library",
     "basic_info": "Silent classic style library ",
     "description": "Inspiring study place with group study areas on floor 2 of the main building and floor 3 of the west building .",
@@ -15,14 +31,15 @@
     "library": true,
     "address": "Brotherton Library",
     "floor": "2nd floor",
-    "restricted": false,
-    "restriction": "",
+    "restricted": true,
+    "restriction": "Library Card needed",
     "disabled_access": "",
-    "url": "",
+    "url": "https://library.leeds.ac.uk/",
     "phone_number": "",
-    "twitter_screen_name": "",
-    "facebook_url": "",
+    "twitter_screen_name": "UoLLibrary",
+    "facebook_url": "https://www.facebook.com/leedsuniversitylibrary",
     "expensive": null,
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17354",
+    "noise": "Whispers",
     "tags": []
 }
