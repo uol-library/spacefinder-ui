@@ -282,6 +282,7 @@ function getUserPosition() {
 		spacefinder.personLoc.lng = position.coords.longitude;
         if ( ! spacefinder.mapBounds.contains( spacefinder.personLoc ) ) {
             toggleGeolocation( false );
+            return;
         }
         /* activate the geolocation buttons */
         activateGeolocation( true );
