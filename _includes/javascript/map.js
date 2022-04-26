@@ -106,7 +106,7 @@ function fitAllBounds(b) {
  */
 function zoomMapToSpace( space ) {
     let newCenter = new google.maps.LatLng( space.lat, space.lng );
-    spacefinder.map.setCenter( newCenter );
+    spacefinder.map.panTo( newCenter );
     spacefinder.map.setZoom(18);
     spacefinder.infoWindow.setContent( getSpaceInfoWindowContent( space ) );
     spacefinder.infoWindow.open( spacefinder.map, space.marker );    
@@ -161,7 +161,7 @@ function movePersonMarker() {
  * Test to see if geolocation services are enabled
  * @returns {boolean}
  */
- function geolocationEnabled() {
+function geolocationEnabled() {
     const btn = document.querySelector( '.geo-button' );
     if ( btn !== null ) {
         return btn.disabled == false;
@@ -277,11 +277,14 @@ function forgetUserPosition() {
  */
 function getUserPosition() {
 	navigator.geolocation.getCurrentPosition( position => {
-        /* activate the geolocation buttons */
-        activateGeolocation( true );
         /* centre the map on the user coordinates */
 		spacefinder.personLoc.lat = position.coords.latitude;
 		spacefinder.personLoc.lng = position.coords.longitude;
+        if ( ! spacefinder.mapBounds.contains( spacefinder.personLoc ) ) {
+            toggleGeolocation( false );
+        }
+        /* activate the geolocation buttons */
+        activateGeolocation( true );
 		spacefinder.map.setCenter( spacefinder.personLoc );
         /* add a marker */
 		spacefinder.personMarker = new google.maps.Marker({

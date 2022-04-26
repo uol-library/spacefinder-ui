@@ -53,6 +53,11 @@
         background: $buttonbg-active;
         color: $buttoncolor-active;
     }
+    &[disabled] {
+        cursor: default;
+        background: $buttonbg-disabled;
+        color: $buttoncolor-disabled;
+    }
 }
 .button {
     line-height: 1;
