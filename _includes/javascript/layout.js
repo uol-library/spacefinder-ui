@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function setupLayout() {
     /* event listener for top nav buttons */
-	document.querySelectorAll('#top-bar .button').forEach( el => {
+	document.querySelectorAll('#top-bar .navbutton').forEach( el => {
         el.addEventListener( 'click', event => {
             event.preventDefault();
             let isactive = el.classList.toggle( 'active' );
             if ( isactive ) {
-                document.querySelectorAll('#top-bar .button').forEach( other => {
+                document.querySelectorAll('#top-bar .navbutton').forEach( other => {
                     if ( el != other ) {
                         other.classList.remove('active');
                     }

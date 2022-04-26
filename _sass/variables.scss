@@ -74,8 +74,7 @@ $color-link--active: #570000;
 $color-border--light: #c9c8c5;
 $color-border: #51504c;
 $color-alert--error: #d4351c;
-$color-alert--warning: #e76f16;
-$color-alert--success: #3a9018;
+$color-alert--warning: #e76f16;$closebutton-active: $color-white;
 $color-alert--info: #1993bd;
 
 /* top navigation bar */
@@ -120,7 +119,7 @@ $modalbg: $color-white;
 $modalborder: $color-black--light;
 $modaloverlay: $color-white; /* set to .8 opacity */
 $closebutton: $color-white;
-$closebuttonbg: $color-link;
+$closebuttonbg: $color-black;
 $closebutton-active: $color-white;
-$closebuttonbg-active: $color-link--active;
-
+$closebuttonbg-active: $color-black;
+$closebutton-outline: $color-grey;

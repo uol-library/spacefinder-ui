@@ -41,18 +41,22 @@ dialog {
   }
   .simple-modal-close {
     float: right;
-    background: $closebuttonbg;
-    border-radius: 3px;
-    color: $closebutton;
+    line-height: 1;
     border: 0;
-    font: inherit;
-    padding: .25em .5em;
+    font-size: 1rem;
+    padding: 0.4em;
+    border-radius: 6px;
     cursor: pointer;
+    text-decoration: none;
+    border: 2px solid $closebuttonbg;
+    color: $closebutton;
+    background: $closebuttonbg;
+    font: inherit;
   }
   .simple-modal-close:focus,
   .simple-modal-close:hover,
   .simple-modal-close:active {
-    outline: 2px dotted $closebuttonbg-active;  
+    outline: 2px dotted $closebutton-outline;  
   }
   .simple-modal-close:hover,
   .simple-modal-close:active {

@@ -2,6 +2,8 @@ Privacy notice for {{ site.url }}{{ site.baseurl }}
 
 This privacy notice has been updated in line with the General Data Protection Regulation.
 
+<button type="button" class="button" onclick="showCookieSettings()">Show cookie settings</button>
+
 ### Purpose of this Notice
 
 This Notice tells you how the University of Leeds (University) will collect and use your personal data when you access this website. The University is a “controller” of this personal data for the purposes of the data protection legislation.

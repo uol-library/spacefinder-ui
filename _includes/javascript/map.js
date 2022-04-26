@@ -20,7 +20,7 @@ function initMap() {
         },
         mapTypeId: google.maps.MapTypeId.ROADMAP,
     });
-    spacefinder.mapLoaded = google.maps.event.addListenerOnce( spacefinder.map, 'tilesloaded', () => {
+    google.maps.event.addListenerOnce( spacefinder.map, 'tilesloaded', () => {
         spacefinder.mapLoaded = true;
         document.dispatchEvent( new Event( 'maploaded' ) );
     });
@@ -38,7 +38,7 @@ function maybeSetupMap() {
             maxWidth: 350
         });
         /* add each spoace to the map using a marker */
-        spacefinder.spaces.forEach( space => {
+        for ( space of spacefinder.spaces ) {
             if ( space.lat && space.lng ) {
                 var spacePosition = new google.maps.LatLng( space.lat, space.lng );
                 space.marker = new google.maps.Marker({
@@ -67,7 +67,7 @@ function maybeSetupMap() {
                 });
                 spacefinder.mapBounds.extend( spacePosition );
             }
-        });
+        }
         fitAllBounds( spacefinder.mapBounds );
     }
 }

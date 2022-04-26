@@ -5,6 +5,9 @@
  * @returns {boolean}
  */
 function storageAvailable(type) {
+    if ( ! canUseLocalStorage() ) {
+        return false;
+    }
     var storage;
     try {
         storage = window[type];

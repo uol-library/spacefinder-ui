@@ -54,6 +54,33 @@
         color: $buttoncolor-active;
     }
 }
+.button {
+    line-height: 1;
+    min-width: 10rem;
+    border: 0;
+    font-size: 1rem;
+    padding: 0.8em 1.8em;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid $color-black;
+    color: $color-white;
+    background: $color-black;
+    &-primary {
+        border: 2px solid $color-brand-2--dark;
+        color: $color-white;
+        background: $color-brand-2--dark;
+    }
+    &-secondary {
+        border: 2px solid $color-brand-2--dark;
+        color: $color-brand-2--dark;
+        background: $color-white;
+    }
+    &:hover, &:active {
+        text-decoration: none;
+        box-shadow: 0 3px 6px 0 rgba($color-black, 0.15), 0 2px 4px 0 rgba($color-black, 0.12);
+    }
+}
 #listfilters {
     .search-term,
     .filter-term {
