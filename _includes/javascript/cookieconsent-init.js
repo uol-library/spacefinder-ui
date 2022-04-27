@@ -10,15 +10,15 @@ cc.run({
     page_scripts: true,
     remove_cookie_tables: true,
     onFirstAction: function(user_preferences, cookie){
-        console.log(user_preferences);
-        console.log(cookie);
+        //console.log(user_preferences);
+        //console.log(cookie);
     },
     onAccept: function (cookie) {
-        console.log(cookie);
+        //console.log(cookie);
     },
     onChange: function (cookie, changed_preferences) {
-        console.log(changed_preferences);
-        console.log(cookie);
+        //console.log(changed_preferences);
+        //console.log(cookie);
     },
     gui_options: {
         consent_modal: {

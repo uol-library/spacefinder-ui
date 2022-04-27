@@ -112,7 +112,9 @@ function getJSON(options) {
             options.callback( JSON.parse( getWithExpiry( options.key ) ) );
         }
     } else {
-        console.log("getting data '"+options.key+"' from "+options.url);
+        if ( options.debug ) {
+            console.log("getting data '"+options.key+"' from "+options.url);
+        }
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", function(){
             if ( storageAvailable('localStorage') ) {
