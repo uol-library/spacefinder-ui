@@ -50,6 +50,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         updateListFilterMessage(activeFilters);
     });
+    /* load space from URL anchor */
+    document.addEventListener('sfmapready', event => {
+        if ( window.location.hash ) {
+            let hp = window.location.hash.split('/');
+            if ( hp.length === 3 ) {
+                if ( hp[1] == 'space' ) {
+                    selectSpace(hp[2])
+                }
+            }
+        }
+    });
 });
 
 /**
@@ -132,8 +143,12 @@ function activateSpaces() {
             document.dispatchEvent(spacefinder.filterEvent);
         }
     });
-    
 }
+
+/**
+ * 
+ * @param {integer} spaceid 
+ */
 function selectSpace( spaceid ) {
     let space = getSpaceById( spaceid );
     renderAdditionalInfo( space.id );
@@ -167,7 +182,21 @@ function getSpaceNodeById( id ) {
     return document.querySelector('[data-id="'+id+'"]');
 }
 function highlightSpaceInMap( e ) {
-    let spacenode = e.target;
+    let spaceid = parseInt( e.target.getAttribute('data-spaceid') );
+    let ops = 1, opd = 0.05;
+    switch (e.type) {
+        case 'mouseout':
+        case 'blur':
+            opd = 1;
+            break;
+    }
+    for (let i = 0; i < spacefinder.spaces.length; i++ ) {
+        if ( spacefinder.spaces[i].id !== spaceid ) {
+            spacefinder.spaces[i].marker.setOptions({'opacity': opd});
+        } else {
+            spacefinder.spaces[i].marker.setOptions({'opacity': ops});
+        }
+    }
 }
 
 /**
@@ -294,6 +323,7 @@ function renderList() {
     document.getElementById('listshowingcount').textContent = spacetotal;
     document.getElementById('listtotalcount').textContent = spacetotal;
 }
+
 /**
  * Renders additional information about a space.
  * The main listing only contains a minimal amount of information about spaces - 
@@ -310,7 +340,7 @@ function renderAdditionalInfo( spaceid ) {
         let space = getSpaceById( spaceid );
         let spaceHTML = '';
         if ( space.booking_url ) {
-
+            spaceHTML += '<p><a class="button" href="'+space.booking_url+'">Book a space</a></p>';
         }
         spaceHTML += '<section class="section-facts"><h4>Key Facts</h4><ul class="bulleticons">';
         spaceHTML += '<li class="icon-marker"><span>'+space.address+'</span><li>';
@@ -318,18 +348,34 @@ function renderAdditionalInfo( spaceid ) {
             spaceHTML += '<li class="icon-link"><a href="'+space.url+'">'+space.url+'</a></li>';
         }
         if ( space.campusmap_url != "" ) {
-            spaceHTML += '<li class="icon-link"><a href="'+space.campusmap_url+'">'+space.campusmap_url+'</a><li>';
+            spaceHTML += '<li class="icon-uol-logo-mark"><a href="'+space.campusmap_url+'">'+space.campusmap_url+'</a><li>';
         }
         spaceHTML += '<li class="icon-access">Open to '+space.access+'<li>';
         spaceHTML += '</ul></section>';
 
         //spaceHTML += '<section class="section-opening"><h4>Opening Times</h4>';
         //spaceHTML += '</ul></section>';
+        space.phone_number = "0 1   2345 6(7)89";
+        space.twitter_screen_name = "elonmusk";
+        space.facebook_url = "https://fuck.you/bastard/";
+        if ( space.phone_number !== "" || space.twitter_screen_name !== "" || space.facebook_url !== "" ) {
+            spaceHTML += '<section class="section-facts"><h4>Contact</h4><ul class="bulleticons">';
+            if ( space.phone_number !== "" ) {
+                let phoneattr = space.phone_number.replace(/[^0-9]+/g, '').replace(/^0/, '+44');
+                spaceHTML += '<li class="icon-phone"><a href="tel:'+phoneattr+'">'+space.phone_number+'</a></li>';
+            }
+            if ( space.twitter_screen_name !== "" ) {
+                spaceHTML += '<li class="icon-twitter"><a href="https://twitter.com/'+space.twitter_screen_name+'">'+space.twitter_screen_name+'</a></li>';
+            }
+            if ( space.facebook_url !== "" ) {
+                spaceHTML += '<li class="icon-facebook"><a href="'+space.facebook_url+'">'+space.facebook_url+'</a></li>';
+            }
+        }
 
         if ( space.facilities.length ) {
-            spaceHTML += '<section class="section-facilities"><h4>Facilities</h4><ul>';
+            spaceHTML += '<section class="section-facilities"><h4>Facilities</h4><ul class="bulleticons">';
             for ( i = 0; i < space.facilities.length; i++ ) {
-                spaceHTML += '<li><span class="facility facility_' + space.facilities[i] + '" title="' + spacefinder.spaceProperties[ 'facility_' + space.facilities[i] ] + '">' + spacefinder.spaceProperties[ 'facility_' + space.facilities[i] ] + '</span></li>';
+                spaceHTML += '<li class="' + spacefinder.iconMap[space.facilities[i]] + '">' + spacefinder.spaceProperties[ 'facility_' + space.facilities[i] ] + '</li>';
             }
             spaceHTML += '</ul></section>';
         }

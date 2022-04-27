@@ -3,7 +3,7 @@
  */
 document.addEventListener('DOMContentLoaded', () => {
     initMap();
-    document.addEventListener( 'maploaded', checkGeo );
+    document.addEventListener( 'sfmaploaded', checkGeo );
 });
 
 /**
@@ -22,11 +22,12 @@ function initMap() {
     });
     google.maps.event.addListenerOnce( spacefinder.map, 'tilesloaded', () => {
         spacefinder.mapLoaded = true;
-        document.dispatchEvent( new Event( 'maploaded' ) );
+        document.dispatchEvent( new Event( 'sfmaploaded' ) );
     });
     document.addEventListener('spacesloaded', maybeSetupMap );
-    document.addEventListener('maploaded', maybeSetupMap );
+    document.addEventListener('sfmaploaded', maybeSetupMap );
 }
+
 /**
  * Sets up te map with markers for each space. Needs to run when
  * the map is fully loaded and the space data is fully loaded.
@@ -71,9 +72,16 @@ function maybeSetupMap() {
         fitAllBounds( spacefinder.mapBounds );
     }
 }
+
+/**
+ * Returns HTML for an individual space's infoWindow 
+ * @param {Object} space 
+ * @returns {String} HTML content for space infoWindow
+ */
 function getSpaceInfoWindowContent( space ) {
     return '<div class="spaceInfoWindow"><h3>'+space.title+'</h3><p>'+space.description+'</p></div>';
 }
+
 /**
  * Takes the current bounds of the map and ensures all
  * markers fit within the visible area while keeping the
@@ -89,6 +97,7 @@ function fitAllBounds(b) {
     // Check if map bounds contains both north east and south west points
     if (mapBounds.contains(ne) && mapBounds.contains(sw)) {
         // Everything fits
+        document.dispatchEvent( new Event( 'sfmapready' ) );
         return;
     } else {
         var mapZoom = spacefinder.map.getZoom();
@@ -282,6 +291,7 @@ function getUserPosition() {
 		spacefinder.personLoc.lng = position.coords.longitude;
         if ( ! spacefinder.mapBounds.contains( spacefinder.personLoc ) ) {
             toggleGeolocation( false );
+            openAlertDialog('Sorry...', 'You need to be a bit nearer to use this feature.');
             return;
         }
         /* activate the geolocation buttons */

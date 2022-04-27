@@ -77,6 +77,9 @@ $color-alert--error: #d4351c;
 $color-alert--warning: #e76f16;$closebutton-active: $color-white;
 $color-alert--info: #1993bd;
 
+/* general colors */
+$separatorcolor: $color-grey--medium;
+
 /* top navigation bar */
 $topbarbg: $color-black;
 $topbarbgactive: $color-black--dark;
@@ -104,7 +107,6 @@ $filterlabelbg: $color-white;
 $filterlabelcolor: $color-black;
 
 /* List panel */
-$separatorcolor: $color-grey--medium;
 $lighttextcolor: $color-font--light;
 $highlighttextcolor: $color-brand;
 $highlighttextcoloralt: $color-blue;

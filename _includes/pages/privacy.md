@@ -2,8 +2,6 @@ Privacy notice for {{ site.url }}{{ site.baseurl }}
 
 This privacy notice has been updated in line with the General Data Protection Regulation.
 
-<button type="button" class="button" onclick="showCookieSettings()">Show cookie settings</button>
-
 ### Purpose of this Notice
 
 This Notice tells you how the University of Leeds (University) will collect and use your personal data when you access this website. The University is a “controller” of this personal data for the purposes of the data protection legislation.
@@ -48,15 +46,34 @@ Cookies are small text files that are placed on your device by websites that you
 
 We use cookies for the following purposes:
 
-* Performance tracking: Track how our website is used and help us make improvements
+* To save your cookie preferences between visits (essential)
+* To increase the performance of the site between visits (performance)
+* To track how our website is used and help us make improvements (analytics)
 
-### Performance and advertising cookies
+<button type="button" class="button" onclick="showCookieSettings()">Show cookie settings</button>
+
+### Performance and analytics cookies
 
 These cookies help our website function
 
 <dl>
     <dt>Cookie name</dt>
-    <dd>__utma, __utmb, __utmc, __utmv, __utmz, __ga, __gat, __nid</dd>
+    <dd>spaces</dd>
+    <dt>Cookie description</dt>
+    <dd>Space data</dd>
+    <dt>Cookie Purpose</dt>
+    <dd>The data used in this application is initially downloaded in a single file - the data can be stored in the browser's <em>localStorage</em>, a type of cookie which remains in the browser between sessions. The data held here expires after 7 days.</dd>
+    <dt>Further Information</dt>
+    <dd>
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Web_storage">Web storage (Wikipedia)</a></li>
+        </ul>
+    </dd>
+</dl>
+
+<dl>
+    <dt>Cookie name</dt>
+    <dd>__ga, __gat, __gid</dd>
     <dt>Cookie description</dt>
     <dd>Google Analytics</dd>
     <dt>Cookie Purpose</dt>
