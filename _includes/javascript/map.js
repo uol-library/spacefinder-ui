@@ -39,13 +39,13 @@ function maybeSetupMap() {
             maxWidth: 350
         });
         /* add each spoace to the map using a marker */
-        for ( space of spacefinder.spaces ) {
-            if ( space.lat && space.lng ) {
-                var spacePosition = new google.maps.LatLng( space.lat, space.lng );
-                space.marker = new google.maps.Marker({
+        for ( let i = 0; i < spacefinder.spaces.length; i++ ) {
+            if ( spacefinder.spaces[i].lat && spacefinder.spaces[i].lng ) {
+                var spacePosition = new google.maps.LatLng( spacefinder.spaces[i].lat, spacefinder.spaces[i].lng );
+                spacefinder.spaces[i].marker = new google.maps.Marker({
                     position: spacePosition,
                     map: spacefinder.map,
-                    title: space.title,
+                    title: spacefinder.spaces[i].title,
                     icon: {
                         path: 'M0-30.5c-5.7,0-10.2,4.6-10.2,10.2C-10.2-14.6,0,0,0,0s10.2-14.6,10.2-20.2C10.2-25.9,5.7-30.5,0-30.5z M0-17.7c-1.6,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S1.6-17.7,0-17.7z',
                         fillColor: "#D6083B",
@@ -54,22 +54,21 @@ function maybeSetupMap() {
                         strokeWeight: 0
                     }
                 });
-                space.marker.infoContent = getSpaceInfoWindowContent( space );
-                google.maps.event.addListener( space.marker, 'click', function (e) {
-                    spacefinder.infoWindow.setContent( space.marker.infoContent );
-                    spacefinder.infoWindow.open( spacefinder.map, space.marker );
-                    selectSpace(space.id);
-                });
-                google.maps.event.addListener(spacefinder.infoWindow,'closeclick',function(){
-                    deselectSpace( true );
-                    let newCenter = geolocationActive() ? spacefinder.personLoc: spacefinder.currentLoc;
-                    spacefinder.map.setCenter( newCenter );
-                    fitAllBounds( spacefinder.mapBounds );
+                spacefinder.spaces[i].marker.infoContent = getSpaceInfoWindowContent( spacefinder.spaces[i] );
+                google.maps.event.addListener( spacefinder.spaces[i].marker, 'click', function (e) {
+                    spacefinder.infoWindow.setContent( spacefinder.spaces[i].marker.infoContent );
+                    spacefinder.infoWindow.open( spacefinder.map, spacefinder.spaces[i].marker );
+                    selectSpace(spacefinder.spaces[i].id);
                 });
                 spacefinder.mapBounds.extend( spacePosition );
             }
         }
+        google.maps.event.addListener(spacefinder.infoWindow,'closeclick',function(){
+            deselectSpace( true );
+            recentreMap();
+        });
         fitAllBounds( spacefinder.mapBounds );
+        document.dispatchEvent( new Event( 'sfmapready' ) );
     }
 }
 
@@ -97,7 +96,6 @@ function fitAllBounds(b) {
     // Check if map bounds contains both north east and south west points
     if (mapBounds.contains(ne) && mapBounds.contains(sw)) {
         // Everything fits
-        document.dispatchEvent( new Event( 'sfmapready' ) );
         return;
     } else {
         var mapZoom = spacefinder.map.getZoom();
@@ -108,6 +106,12 @@ function fitAllBounds(b) {
             fitAllBounds(b);
         }
     }
+}
+
+function recentreMap() {
+    let newCenter = geolocationActive() ? spacefinder.personLoc: spacefinder.currentLoc;
+    spacefinder.map.setCenter( newCenter );
+    fitAllBounds( spacefinder.mapBounds );
 }
 /**
  * Zooms the map to show a particular space

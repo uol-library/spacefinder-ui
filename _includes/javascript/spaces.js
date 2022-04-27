@@ -110,7 +110,8 @@ function activateSpaces() {
         el.addEventListener('click', event => {
             let spacenode = document.querySelector('[data-id="'+event.target.getAttribute('data-spaceid')+'"]');
             if ( spacenode.classList.contains('active') ) {
-                //deselectSpace(false);
+                deselectSpace(false);
+                recentreMap();
             } else {
                 selectSpace( event.target.getAttribute('data-spaceid') );
             }
@@ -162,7 +163,10 @@ function selectSpace( spaceid ) {
 }
 
 function deselectSpace( scrollReset ) {
-    renderAdditionalInfo( false );
+    spacefinder.infoWindow.close();
+    document.querySelectorAll('.additionalInfo').forEach( el => {
+        el.textContent = '';
+    });
     document.querySelectorAll('.list-space').forEach( sp => {
         sp.classList.remove('active');
     });
@@ -182,8 +186,17 @@ function getSpaceNodeById( id ) {
     return document.querySelector('[data-id="'+id+'"]');
 }
 function highlightSpaceInMap( e ) {
-    let spaceid = parseInt( e.target.getAttribute('data-spaceid') );
-    let ops = 1, opd = 0.05;
+    /*let spaceid = parseInt( e.target.getAttribute('data-spaceid') );
+    for (let i = 0; i < spacefinder.spaces.length; i++ ) {
+        if ( spacefinder.spaces[i].id === spaceid ) {
+            if (spacefinder.spaces[i].marker.getAnimation() !== null) {
+                spacefinder.spaces[i].marker.setAnimation(null);
+            } else {
+                spacefinder.spaces[i].marker.setAnimation(google.maps.Animation.BOUNCE);
+            }
+        }
+    }*/
+    /*let ops = 1, opd = 0.05;
     switch (e.type) {
         case 'mouseout':
         case 'blur':
@@ -196,7 +209,7 @@ function highlightSpaceInMap( e ) {
         } else {
             spacefinder.spaces[i].marker.setOptions({'opacity': ops});
         }
-    }
+    }*/
 }
 
 /**
@@ -355,9 +368,6 @@ function renderAdditionalInfo( spaceid ) {
 
         //spaceHTML += '<section class="section-opening"><h4>Opening Times</h4>';
         //spaceHTML += '</ul></section>';
-        space.phone_number = "0 1   2345 6(7)89";
-        space.twitter_screen_name = "elonmusk";
-        space.facebook_url = "https://fuck.you/bastard/";
         if ( space.phone_number !== "" || space.twitter_screen_name !== "" || space.facebook_url !== "" ) {
             spaceHTML += '<section class="section-facts"><h4>Contact</h4><ul class="bulleticons">';
             if ( space.phone_number !== "" ) {
@@ -379,6 +389,8 @@ function renderAdditionalInfo( spaceid ) {
             }
             spaceHTML += '</ul></section>';
         }
+        spaceHTML += '<p><a class="button" href="#" onclick="deselectSpace(false);recentreMap();">Close</a></p>';
+
         getSpaceNodeById( spaceid ).querySelector('.additionalInfo').innerHTML = spaceHTML;
     }
 }
