@@ -61,7 +61,7 @@ const spacefinder = {
         'facility_wheelchair_accessible': 'Wheelchair accessible',
         'facility_blue_badge_parking': 'Parking for blue badge holders',
         'facility_accessible_toilets': 'Toilets accessible to disabled people',
-        'acility_induction_loops': 'Induction loops',
+        'facility_induction_loops': 'Induction loops',
         'facility_adjustable_furniture': 'Adjustable furniture',
         'facility_individual_study_space': 'Individual study spaces available',
         'facility_gender_neutral_toilets': 'Gender neutral toilets',

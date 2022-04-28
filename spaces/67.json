@@ -1,17 +1,35 @@
 {
     "id": 67,
     "location": "{\"type\":\"Point\",\"coordinates\":[53.80330122,-1.555752941]}",
-    "work": [],
-    "atmosphere": [],
+    "work": [
+        "private",
+        "close",
+        "group"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "modern"
+    ],
     "images": [],
-    "facilities": [],
+    "facilities": [
+        "large_desks",
+        "free_wifi",
+        "computers",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "printers_copiers",
+        "projector",
+        "toilets"
+    ],
     "title": "IT Cluster - Worsley Building - 7.027r",
     "basic_info": "12 Seat Capacity. Campus Map Ref 95",
     "description": "Big clusters area with adjustable size.No drinks or food allowed.",
     "access": "Students",
     "space_type": "IT Cluster",
-    "library": "",
+    "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "building": "Worsley building",
     "floor": "Level 7",
     "restricted": "",
     "restriction": "",
@@ -20,7 +38,43 @@
     "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
-    "expensive": null,
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17591",
-    "tags": []
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "8:00",
+            "to": "18:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "8:00",
+            "to": "18:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "8:00",
+            "to": "18:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "8:00",
+            "to": "18:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "8:00",
+            "to": "18:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }

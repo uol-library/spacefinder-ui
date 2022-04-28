@@ -30,7 +30,8 @@
     "space_type": "General Seating Area",
     "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "First Floor",
+    "building": "Liberty Building",
+    "floor": "First floor",
     "restricted": false,
     "restriction": "",
     "disabled_access": true,
@@ -38,11 +39,44 @@
     "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
-    "expensive": null,
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17491",
     "noise": "Whispers",
-    "tags": [
-        "views",
-        "modern"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "9:00",
+            "to": "17:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }

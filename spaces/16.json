@@ -26,9 +26,10 @@
     "description": "Big seminar room with projector and flipable whiteboard.Five windows are allowing plenty of daylight to enter the room and there is acesss to a big projector.",
     "access": "Students",
     "space_type": "Seminar room",
-    "library": "",
+    "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Lower Ground",
+    "building": "Baines Wing",
+    "floor": "Lower Ground floor",
     "restricted": false,
     "restriction": "",
     "disabled_access": true,
@@ -36,12 +37,44 @@
     "phone_number": "1133437200",
     "twitter_screen_name": "",
     "facebook_url": "",
-    "expensive": null,
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17343",
     "noise": "Animated discussion",
-    "tags": [
-        "large",
-        "projector",
-        "windows"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "9:00",
+            "to": "21:30"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "21:30"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "21:30"
+        },
+        "thursday": {
+            "open": true,
+            "from": "9:00",
+            "to": "21:30"
+        },
+        "friday": {
+            "open": true,
+            "from": "9:00",
+            "to": "17:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }

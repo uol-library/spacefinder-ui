@@ -27,13 +27,14 @@
         "refreshments",
         "break"
     ],
-    "title": "Group study rooms, health science library",
+    "title": "Group study rooms, Health Sciences library",
     "basic_info": "",
     "description": "Group study rooms for group work( booking required",
     "access": "students",
     "space_type": "Library space",
     "library": true,
-    "address": "6, Worsley Building, Clarendon Way, Woodhouse, Leeds LS2 9NL",
+    "address": "Clarendon Way, Leeds LS2 9NL",
+    "building": "Worsley building",
     "floor": "7th floor",
     "restricted": true,
     "restriction": "Library Card needed",
@@ -42,10 +43,44 @@
     "phone_number": "",
     "twitter_screen_name": "UoLLibrary",
     "facebook_url": "https://www.facebook.com/leedsuniversitylibrary",
-    "expensive": null,
-    "campusmap_url": "",
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17446",
     "noise": "Strictly silent",
-    "tags": [
-        "Group study room"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "8:00",
+            "to": "24:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "8:00",
+            "to": "24:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "8:00",
+            "to": "24:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "8:00",
+            "to": "24:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "8:00",
+            "to": "19:00"
+        },
+        "saturday": {
+            "open": true,
+            "from": "10:00",
+            "to": "17:00"
+        },
+        "sunday": {
+            "open": true,
+            "from": "12:00",
+            "to": "24:00"
+        }
+    }
 }

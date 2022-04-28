@@ -31,20 +31,53 @@
     "space_type": "Café",
     "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Ground",
+    "building": "Baines Wing",
+    "floor": "Ground floor",
     "restricted": false,
     "restriction": "",
     "disabled_access": true,
     "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/baineswing/",
     "phone_number": "",
     "twitter_screen_name": "GreatFoodLeeds",
-    "facebook_url": "",
-    "expensive": 3,
+    "facebook_url": "https://www.facebook.com/greatfoodleeds",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=18467",
     "noise": "Animated discussion",
-    "tags": [
-        "open",
-        "busy",
-        "food"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }

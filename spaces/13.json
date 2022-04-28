@@ -24,27 +24,60 @@
         "refreshments",
         "break"
     ],
-    "title": "Outside the Edward Boyle Library Edit Room café (Outdoor space)",
+    "title": "Outside the Edward Boyle Library Edit Room café",
     "basic_info": "Outdoors next to the Edward Boyle Library. ",
     "description": "Outdoor seating situated outside the Edward Boyle Library",
     "access": "Anyone (public)",
-    "space_type": "Café",
-    "library": "",
+    "space_type": "Outdoor Seating Area",
+    "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Ground",
+    "building": "Edward Boyle Library",
+    "floor": "Ground floor",
     "restricted": "",
     "restriction": "",
     "disabled_access": "",
-    "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/",
+    "url": "",
     "phone_number": "",
-    "twitter_screen_name": "GreatFoodLeeds",
+    "twitter_screen_name": "",
     "facebook_url": "",
-    "expensive": null,
-    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17411",
+    "campusmap_url": "",
     "noise": "Animated discussion",
-    "tags": [
-        "outdoors",
-        "big_area",
-        "group work"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "8:00",
+            "to": "24:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "8:00",
+            "to": "24:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "8:00",
+            "to": "24:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "8:00",
+            "to": "24:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "8:00",
+            "to": "24:00"
+        },
+        "saturday": {
+            "open": true,
+            "from": "10:00",
+            "to": "24:00"
+        },
+        "sunday": {
+            "open": true,
+            "from": "10:00",
+            "to": "24:00"
+        }
+    }
 }

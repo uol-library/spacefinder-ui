@@ -32,7 +32,8 @@
     "access": "students",
     "space_type": "Library space",
     "library": true,
-    "address": "Laidlaw library,University of, Leeds LS2 9JT",
+    "address": "Laidlaw library, University of Leeds LS2 9JT",
+    "building": "Laidlaw library",
     "floor": "3rd",
     "restricted": true,
     "restriction": "Library Card needed",
@@ -41,11 +42,44 @@
     "phone_number": "",
     "twitter_screen_name": "UoLLibrary",
     "facebook_url": "https://www.facebook.com/leedsuniversitylibrary",
-    "expensive": null,
-    "campusmap_url": "",
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17471",
     "noise": "Strictly silent",
-    "tags": [
-        "Silent study",
-        "concentrated study"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "8:00",
+            "to": "24:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "8:00",
+            "to": "24:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "8:00",
+            "to": "24:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "8:00",
+            "to": "24:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "8:00",
+            "to": "19:00"
+        },
+        "saturday": {
+            "open": true,
+            "from": "10:00",
+            "to": "17:00"
+        },
+        "sunday": {
+            "open": true,
+            "from": "12:00",
+            "to": "24:00"
+        }
+    }
 }

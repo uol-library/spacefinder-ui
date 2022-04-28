@@ -31,6 +31,7 @@
     "space_type": "IT Cluster",
     "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "building": "Clarendon building",
     "floor": "Ground",
     "restricted": false,
     "restriction": "",
@@ -39,12 +40,44 @@
     "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
-    "expensive": null,
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17385",
     "noise": "Strictly silent",
-    "tags": [
-        "computers",
-        "silent",
-        "clusters"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }

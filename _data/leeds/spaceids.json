@@ -1,0 +1,337 @@
+[
+    {
+        "id": 1,
+        "title": "Baines Wing Café"
+    },
+    {
+        "id": 10,
+        "title": "1915 (Sir William Henry Bragg)"
+    },
+    {
+        "id": 11,
+        "title": "Hugo in University Square (Outdoor space)"
+    },
+    {
+        "id": 12,
+        "title": "Toasted in Chancellor's Court (Outdoor space)"
+    },
+    {
+        "id": 13,
+        "title": "Outside the Edward Boyle Library Edit Room café (Outdoor space)"
+    },
+    {
+        "id": 14,
+        "title": "Seminal Communal Areas - Baines Wing - G.28"
+    },
+    {
+        "id": 15,
+        "title": "Seminal Communal Areas - Baines Wing - G.16"
+    },
+    {
+        "id": 16,
+        "title": "Seminal Communal Areas - Baines Wing - LG.17"
+    },
+    {
+        "id": 17,
+        "title": "Seminal Communal Areas - Baines Wing - LG.20"
+    },
+    {
+        "id": 18,
+        "title": "Seminal Communal Areas - Baines Wing - G.37"
+    },
+    {
+        "id": 19,
+        "title": "Seminal Communal Areas - Michael Sadler Building - B.49"
+    },
+    {
+        "id": 2,
+        "title": "Fuse Cafe in Chemical and Process Engineering"
+    },
+    {
+        "id": 20,
+        "title": "Seminal Communal Areas - Michael Sadler Building - B.37"
+    },
+    {
+        "id": 21,
+        "title": "Seminal Communal Areas - Michael Sadler Building - 1.01"
+    },
+    {
+        "id": 22,
+        "title": "Seminal Communal Areas - Michael Sadler Building - 1.19"
+    },
+    {
+        "id": 23,
+        "title": "Seminal Communal Areas - Michael Sadler Building - 1.37"
+    },
+    {
+        "id": 24,
+        "title": "Seminal Communal Areas - Michael Sadler Building - 2.01"
+    },
+    {
+        "id": 25,
+        "title": "Seminal Communal Areas - Michael Sadler Building - 3.40"
+    },
+    {
+        "id": 26,
+        "title": "Seminal Communal Areas - Michael Sadler Building - LG.17"
+    },
+    {
+        "id": 27,
+        "title": "Seminal Communal Areas - Parkinson Building - 2.25"
+    },
+    {
+        "id": 28,
+        "title": "Seminal Communal Areas - Parkinson Building - 4.20"
+    },
+    {
+        "id": 29,
+        "title": "Seminal Communal Areas - Parkinson Building - 4.30"
+    },
+    {
+        "id": 3,
+        "title": "Edit Room Café in Edward Boyle Library"
+    },
+    {
+        "id": 30,
+        "title": "General Seating Areas - Parkinson Building - Parkinson Court South"
+    },
+    {
+        "id": 31,
+        "title": "General Seating Areas - Michael Sadler Building - Behind Rupert Beckett Lecture Theatre"
+    },
+    {
+        "id": 32,
+        "title": "General Seating Areas - Leeds University Union - Foyer"
+    },
+    {
+        "id": 33,
+        "title": "General Seating Areas - Worsley Building - Airport Lounge seating (level 7)"
+    },
+    {
+        "id": 34,
+        "title": "General Seating Areas - Chemistry - Chaston Chapman Lounge (room G20)"
+    },
+    {
+        "id": 35,
+        "title": "General Seating Areas - Electronic and Electrical Engineering - Ground Floor Foyer"
+    },
+    {
+        "id": 36,
+        "title": "General Seating Areas - Mechanical Engineering - Second floor seating (room 240)"
+    },
+    {
+        "id": 37,
+        "title": "General Seating Areas - Sir William Henry Bragg Building - Ground Floor Breakout Area (Room G.08)"
+    },
+    {
+        "id": 38,
+        "title": "General Seating Areas - Maurice Keyworth - Study Centre (Rooms 238 & 307)"
+    },
+    {
+        "id": 39,
+        "title": "General Seating Areas - Liberty Building - Ground floor Common Area (G01)"
+    },
+    {
+        "id": 4,
+        "title": "Esther Simpson Café in Esther Simpson Building"
+    },
+    {
+        "id": 40,
+        "title": "General Seating Areas - Liberty Building - First floor Group workspace (1.22)"
+    },
+    {
+        "id": 41,
+        "title": "General Seating Areas - Charles Thackrah - Atrium (Ground Floor)"
+    },
+    {
+        "id": 42,
+        "title": "IT Cluster - Chemical and Process Engineering - G06"
+    },
+    {
+        "id": 43,
+        "title": "IT Cluster - Chemistry and Chemistry West Block - 1.44"
+    },
+    {
+        "id": 44,
+        "title": "IT Cluster - Chemistry and Chemistry West Block - 1.44A"
+    },
+    {
+        "id": 45,
+        "title": "IT Cluster - Chemistry and Chemistry West Block - 1.46 (Ingold)"
+    },
+    {
+        "id": 46,
+        "title": "IT Cluster - Chemistry and Chemistry West Block - 140 (Cohen)"
+    },
+    {
+        "id": 47,
+        "title": "IT Cluster - Clarendon Building - G04"
+    },
+    {
+        "id": 48,
+        "title": "IT Cluster - Clarendon Building - G07"
+    },
+    {
+        "id": 49,
+        "title": "IT Cluster - Clothworkers' Building Link - 140 (Richard Hughes)"
+    },
+    {
+        "id": 5,
+        "title": "Café Maia in Marjorie and Arnold Ziff Building"
+    },
+    {
+        "id": 50,
+        "title": "IT Cluster - Clothworkers' Building Link - G.34"
+    },
+    {
+        "id": 51,
+        "title": "IT Cluster - E C Stoner Building - 6.61"
+    },
+    {
+        "id": 52,
+        "title": "IT Cluster - E C Stoner Building - 6.68"
+    },
+    {
+        "id": 53,
+        "title": "IT Cluster - Esther Simpson Building - 109"
+    },
+    {
+        "id": 54,
+        "title": "IT Cluster - Fine Art, History of Art and Cultural Studies - B16 (West Teaching Labs)"
+    },
+    {
+        "id": 55,
+        "title": "IT Cluster - Fine Art, History of Art and Cultural Studies - G29 (West Teaching Labs)"
+    },
+    {
+        "id": 56,
+        "title": "IT Cluster - Irene Manton Building - 7.90"
+    },
+    {
+        "id": 57,
+        "title": "IT Cluster - Irene Manton Building - 7.96"
+    },
+    {
+        "id": 58,
+        "title": "IT Cluster - Maurice Keyworth Building - 2.21"
+    },
+    {
+        "id": 59,
+        "title": "IT Cluster - Mechanical Engineering - 5.34d"
+    },
+    {
+        "id": 6,
+        "title": "Costa Parkinson Court in Parkinson Building"
+    },
+    {
+        "id": 60,
+        "title": "IT Cluster - Parkinson Building - B.26"
+    },
+    {
+        "id": 61,
+        "title": "IT Cluster - Parkinson Building - B.32 (Woolhouse)"
+    },
+    {
+        "id": 62,
+        "title": "IT Cluster - Psychology (37 and 41 University Road) - 1.43"
+    },
+    {
+        "id": 63,
+        "title": "IT Cluster - Psychology (37 and 41 University Road) - 1.45"
+    },
+    {
+        "id": 64,
+        "title": "IT Cluster - Social Sciences Building - 10.11"
+    },
+    {
+        "id": 65,
+        "title": "IT Cluster - Worsley Building - 8.038"
+    },
+    {
+        "id": 66,
+        "title": "IT Cluster - Worsley Building - 8.039"
+    },
+    {
+        "id": 67,
+        "title": "IT Cluster - Worsley Building - 7.027r"
+    },
+    {
+        "id": 68,
+        "title": "IT Cluster - Worsley Building - 7.027s"
+    },
+    {
+        "id": 69,
+        "title": "IT Cluster - Worsley Building - 8.049O (Fourman)"
+    },
+    {
+        "id": 7,
+        "title": "Refectory "
+    },
+    {
+        "id": 70,
+        "title": "IT Cluster - Worsley Building - 8.049P (Fourman)"
+    },
+    {
+        "id": 71,
+        "title": "Edward Boyle 11th , 12 th floor"
+    },
+    {
+        "id": 72,
+        "title": "Edward Boyle 10th floor"
+    },
+    {
+        "id": 73,
+        "title": "Edward Boyle 13th floor"
+    },
+    {
+        "id": 74,
+        "title": "Edward Boyle 8th floor"
+    },
+    {
+        "id": 75,
+        "title": "Health sciences library"
+    },
+    {
+        "id": 76,
+        "title": "Group study rooms, health science library"
+    },
+    {
+        "id": 77,
+        "title": "Group study space"
+    },
+    {
+        "id": 78,
+        "title": "Silent study 3rd floor, Laidlaw library"
+    },
+    {
+        "id": 79,
+        "title": "2nd floor Laidlaw library"
+    },
+    {
+        "id": 8,
+        "title": "Café Seven  in Worsley Building"
+    },
+    {
+        "id": 80,
+        "title": "Silent study space 1"
+    },
+    {
+        "id": 81,
+        "title": "Group study booths"
+    },
+    {
+        "id": 82,
+        "title": "Footsteps fund room"
+    },
+    {
+        "id": 83,
+        "title": "Brotherton Library"
+    },
+    {
+        "id": 9,
+        "title": "Loma in Worsley Building"
+    },
+    {
+        "title": "Test Space"
+    }
+]

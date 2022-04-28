@@ -1,6 +1,6 @@
 {
     "id": 9,
-    "location": "{\"type\":\"Point\",\"coordinates\":[53.80330122,-1.555752941]}",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.8034799,-1.5560946]}",
     "work": [
         "private",
         "close",
@@ -27,13 +27,14 @@
         "refreshments",
         "break"
     ],
-    "title": "Loma in Worsley Building",
-    "basic_info": "Level 9 Worsley Building, Campus Map ref 95",
-    "description": "LOMA is a unique offering on campus serving up specially selected craft coffee, delicious drinks and handcrafted salads and sandwiches.",
+    "title": "Loma Café",
+    "basic_info": "Level 9 Worsley Building",
+    "description": "LOMA is a unique offering on campus serving up specially selected craft coffee, delicious drinks and handcrafted salads and sandwiches. With a focus on healthy, field-to-fork food options, LOMA stands apart from the other food outlets on campus with unique salad and sandwich combinations you will struggle to find elsewhere.",
     "access": "Anyone (public)",
     "space_type": "Café",
     "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "building": "Worsley Building",
     "floor": "Level 9",
     "restricted": false,
     "restriction": "",
@@ -41,13 +42,45 @@
     "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/loma-cafe/",
     "phone_number": "",
     "twitter_screen_name": "GreatFoodLeeds",
-    "facebook_url": "",
-    "expensive": 3,
+    "facebook_url": "https://www.facebook.com/greatfoodleeds",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17591",
     "noise": "Whispers",
-    "tags": [
-        "mordern",
-        "coffee",
-        "casual"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }

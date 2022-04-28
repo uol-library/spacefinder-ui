@@ -34,9 +34,10 @@
     "description": "Rows of IT clusters on a theater style.",
     "access": "Students",
     "space_type": "IT Cluster",
-    "library": "",
+    "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "First Floor",
+    "building": "Psychology (37 and 41 University Road)",
+    "floor": "First floor",
     "restricted": "",
     "restriction": "",
     "disabled_access": true,
@@ -44,12 +45,44 @@
     "phone_number": "1133435724",
     "twitter_screen_name": "",
     "facebook_url": "",
-    "expensive": null,
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17579",
     "noise": "Strictly silent",
-    "tags": [
-        "bright",
-        "modern",
-        "clusters"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "9:00",
+            "to": "17:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "17:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "17:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "9:00",
+            "to": "17:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "9:00",
+            "to": "17:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }

@@ -1,6 +1,6 @@
 {
     "id": 11,
-    "location": "{\"type\":\"Point\",\"coordinates\":[53.80704,-1.55531]}",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.8069784,-1.5551006]}",
     "work": [
         "friends",
         "group"
@@ -21,27 +21,60 @@
         "refreshments",
         "break"
     ],
-    "title": "Hugo in University Square (Outdoor space)",
+    "title": "Hugo, the Camionnette Café",
     "basic_info": "Outdoors in University Square",
     "description": "Hugo, the Camionnette Café, is one of the more unique members oféthe Great Food at Leeds team and sells a range of hot drinks, pastries and brownies.",
     "access": "Anyone (public)",
     "space_type": "Café",
     "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Ground",
+    "building": "University precinct",
+    "floor": "",
     "restricted": false,
     "restriction": "",
     "disabled_access": true,
     "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/hugo/",
     "phone_number": "",
     "twitter_screen_name": "GreatFoodLeeds",
-    "facebook_url": "",
-    "expensive": 3,
+    "facebook_url": "https://www.facebook.com/greatfoodleeds",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=18475",
     "noise": "Animated discussion",
-    "tags": [
-        "food truck",
-        "pastries",
-        "brownies"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }

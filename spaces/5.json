@@ -1,6 +1,6 @@
 {
     "id": 5,
-    "location": "{\"type\":\"Point\",\"coordinates\":[53.80656907,-1.553827912]}",
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.8067017,-1.5554644]}",
     "work": [
         "private",
         "close",
@@ -24,13 +24,14 @@
         "refreshments",
         "break"
     ],
-    "title": "Café Maia in Marjorie and Arnold Ziff Building",
+    "title": "Café Maia",
     "basic_info": "Level 10 Marjorie and Arnold Ziff Building, Campus Map ref 77",
     "description": "Café Maia at Ziff is perfect for meetings, to take a break or even to do some work in the computer area.",
     "access": "Anyone (public)",
     "space_type": "Café",
     "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "building": "Marjorie and Arnold Ziff Building",
     "floor": "Level 10",
     "restricted": false,
     "restriction": "",
@@ -38,13 +39,45 @@
     "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/ziff/",
     "phone_number": "",
     "twitter_screen_name": "GreatFoodLeeds",
-    "facebook_url": "",
-    "expensive": 2,
+    "facebook_url": "https://www.facebook.com/greatfoodleeds",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17503",
     "noise": "Whispers",
-    "tags": [
-        "isolated",
-        "food",
-        "coffee"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }

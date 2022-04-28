@@ -29,9 +29,10 @@
     "description": "Bright green modern lounge located at the Chemistry Building is the perfect place to study , take a break or explore the scientific magazines that are displayed on the selves . The couches and the chairs are very comfortable making the area very welcoming.",
     "access": "Anyone (public)",
     "space_type": "General Seating Area",
-    "library": "",
+    "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Ground",
+    "building": "Chemistry Building",
+    "floor": "Ground floor",
     "restricted": false,
     "restriction": "",
     "disabled_access": true,
@@ -39,12 +40,44 @@
     "phone_number": "1133432444",
     "twitter_screen_name": "",
     "facebook_url": "",
-    "expensive": null,
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17381",
     "noise": "Animated discussion",
-    "tags": [
-        "light",
-        "couches",
-        "lounge"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }

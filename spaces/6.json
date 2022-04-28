@@ -25,27 +25,60 @@
         "refreshments",
         "break"
     ],
-    "title": "Costa Parkinson Court in Parkinson Building",
+    "title": "Costa Parkinson Court",
     "basic_info": "Ground floor Parkinson Building, Campus Map ref 60",
-    "description": "Parkinson Court Café sits in one of the most iconic buildings at the University of Leeds.",
+    "description": "Parkinson Court Café sits in one of the most iconic buildings at the University of Leeds. Conveniently located for a break from working in the Brotherton Library, the café serves a range of sandwiches and snacks throughout the day.",
     "access": "Anyone (public)",
     "space_type": "Café",
     "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Ground",
-    "restricted": "yes, Parkinson Steps",
-    "restriction": "Access via lift from Woodhouse Lane next to the Parkinson Steps",
+    "building": "Parkinson Building",
+    "floor": "Ground floor",
+    "restricted": false,
+    "restriction": "",
     "disabled_access": true,
     "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/parkinson/",
     "phone_number": "",
     "twitter_screen_name": "GreatFoodLeeds",
-    "facebook_url": "",
-    "expensive": 3,
+    "facebook_url": "https://www.facebook.com/greatfoodleeds",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17525",
     "noise": "Whispers",
-    "tags": [
-        "historic",
-        "silent",
-        "inspiring"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }

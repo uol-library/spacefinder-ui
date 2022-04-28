@@ -5,3 +5,5 @@ _site
 vendor
 node_modules
 .vstags
+_data/leeds/processed
+_data/leeds/photos

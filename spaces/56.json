@@ -34,8 +34,9 @@
     "description": "Rows of It clusters with a full left side of windows that are facing a beautiful side of campus allowing plenty of natural light into the study area.",
     "access": "Students",
     "space_type": "IT Cluster",
-    "library": "",
+    "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "building": "Irene Manton Building",
     "floor": "Level 7",
     "restricted": false,
     "restriction": "",
@@ -44,12 +45,44 @@
     "phone_number": "1132431751",
     "twitter_screen_name": "",
     "facebook_url": "",
-    "expensive": null,
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17462",
     "noise": "Whispers",
-    "tags": [
-        "views",
-        "modern",
-        "clusters"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }

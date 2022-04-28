@@ -32,8 +32,9 @@
     "description": "Modern colorful big area with comfortable couches and chairs . Vending , cash and cofee machie available as well as water fountain .",
     "access": "Anyone (public)",
     "space_type": "General Seating Area",
-    "library": "",
+    "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "building": "Worsley Building",
     "floor": "Level 7",
     "restricted": false,
     "restriction": "",
@@ -42,12 +43,44 @@
     "phone_number": "1133435663",
     "twitter_screen_name": "",
     "facebook_url": "",
-    "expensive": null,
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17591",
     "noise": "Background chatter",
-    "tags": [
-        "lounge",
-        "modern",
-        "cash_mashine"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "8:00",
+            "to": "18:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "8:00",
+            "to": "18:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "8:00",
+            "to": "18:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "8:00",
+            "to": "18:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "8:00",
+            "to": "18:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }

@@ -26,21 +26,58 @@
     ],
     "title": "IT Cluster - Fine Art, History of Art and Cultural Studies - B16 (West Teaching Labs)",
     "basic_info": "33 Seat Capacity. Campus Map Ref 38",
-    "description": "Traditional cluster with rows of desks. Relaxed environment for 24 hours study ",
+    "description": "Traditional cluster with rows of desks. Relaxed environment for 24 hours study.",
     "access": "Students",
     "space_type": "IT Cluster",
-    "library": "",
+    "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "building": "History Building",
     "floor": "Basement",
     "restricted": false,
     "restriction": "",
     "disabled_access": true,
-    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF7E2",
+    "url": "",
     "phone_number": "1133435260",
     "twitter_screen_name": "",
     "facebook_url": "",
-    "expensive": null,
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17451",
     "noise": "Whispers",
-    "tags": []
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }

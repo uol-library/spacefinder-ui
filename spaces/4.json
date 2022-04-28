@@ -27,27 +27,60 @@
         "refreshments",
         "break"
     ],
-    "title": "Esther Simpson Café in Esther Simpson Building",
+    "title": "Esther Simpson Café",
     "basic_info": "Ground floor Esther Simpson Building, Campus Map ref 12",
     "description": "Located in the new Esther Simpson building on the edge of Woodhouse Moor, the café is modern and relaxed, serving speciality coffee from Darkwoods.",
     "access": "Anyone (public)",
     "space_type": "Café",
     "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Ground",
+    "building": "Esther Simpson Building",
+    "floor": "Ground floor",
     "restricted": false,
     "restriction": "",
     "disabled_access": true,
     "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/esther-simpson-cafe",
     "phone_number": "",
     "twitter_screen_name": "GreatFoodLeeds",
-    "facebook_url": "",
-    "expensive": 4,
+    "facebook_url": "https://www.facebook.com/greatfoodleeds",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=18484",
     "noise": "Whispers",
-    "tags": [
-        "formal",
-        "well maintained",
-        "new"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }

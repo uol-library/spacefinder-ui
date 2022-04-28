@@ -14,8 +14,8 @@ spacefiles.forEach( filename => {
         var geodata = JSON.parse( jsondata.location );
         console.log(geodata.coordinates);
         if ( geodata && geodata.coordinates && geodata.coordinates.length == 2 ) {
-            jsondata.lat = geodata.coordinates[0];
-            jsondata.lng = geodata.coordinates[1];
+            jsondata.lat = geodata.coordinates[1];
+            jsondata.lng = geodata.coordinates[0];
         } else {
             jsondata.lat = '';
             jsondata.lng = '';

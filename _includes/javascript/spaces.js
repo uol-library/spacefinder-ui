@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderList();
         lazyLoadSpaceImages();
         updateDistances();
+        checkOpeningHours();
         activateSort(true, 'alpha');
         activateSpaces();
     });
@@ -419,11 +420,62 @@ function getClassList( space ) {
     return classList;
 }
 
+/**
+ * Updates the data-sortdistance attribute for all spaces relative
+ * to either the current map centre of the user
+ */
 function updateDistances() {
     spacefinder.spaces.forEach( (space, index) => {
         spacefinder.spaces[index].distancefromcentre = haversine_distance( spacefinder.currentLoc, { lat: space.lat, lng: space.lng } );
         document.querySelector('[data-id="' + space.id + '"]').setAttribute('data-sortdistance', spacefinder.spaces[index].distancefromcentre );
     });
+}
+
+/**
+ * Checks each space to see if it currently open and sets data-opennow attribute
+ * Also adds class to the row in the opening times table.
+ */
+function checkOpeningHours() {
+    let today = new Date();
+    let daynames = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+    let todaysday = daynames[ today.getDay() ];
+    let timenow = ( today.getHours() * 100 ) + today.getMinutes();
+    function getTimeFromString( str ) {
+        let parts = str.split(':');
+        return ( parseInt( parts[0] ) * 100 ) + parseInt( parts[1] );
+    }
+    spacefinder.spaces.forEach( (space, index) => {
+        let openmsg = '';
+        let isopen = 'no';
+        if ( space.opening_hours ) {
+            if ( space.opening_hours[todaysday].open ) {
+                let open_from = getTimeFromString( space.opening_hours[todaysday].from );
+                let open_to = getTimeFromString( space.opening_hours[todaysday].to );
+                if ( open_from > timenow ) {
+                    let openingin = '';
+                    let openinmins = ( timenow - open_from ) % 60;
+                    let openinhrs = Math.floor( ( ( timenow - open_from ) / 60 ) );
+                    if ( openinhrs > 0 ) {
+                        let pl = ( openinhrs == 1 )? '': 's';
+                        openingin += openinhrs + 'hr' + pl + ' ';
+                    }
+                    openingin += openinmins + 'mins'
+                    openmsg = "Currently closed (opens in "+openingin+")";
+                } else if ( open_to < timenow ) {
+                    openmsg = "Currently closed";
+                } else {
+                    isopen = 'yes';
+                    openmsg = "Currently open";
+                }
+            } else {
+                openmsg = "Closed all day";
+            }
+        }
+        document.querySelector('[data-id="' + space.id + '"]').setAttribute('data-openmsg', openmsg );
+        document.querySelector('[data-id="' + space.id + '"]').setAttribute('data-isopen', isopen );
+    });
+    // call every 5 minutes
+    setInterval( checkOpeningHours, (5*60*1000) );
 }
 
 /**

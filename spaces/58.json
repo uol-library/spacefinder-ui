@@ -30,20 +30,53 @@
     "space_type": "IT Cluster",
     "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "building": "Maurice Keyworth Building",
     "floor": "Second Floor",
     "restricted": false,
     "restriction": "",
     "disabled_access": true,
-    "url": "not required",
+    "url": "",
     "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
-    "expensive": null,
-    "campusmap_url": "",
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17363",
     "noise": "Whispers",
-    "tags": [
-        "computers",
-        "silent",
-        "clusters"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "8:00",
+            "to": "21:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "8:00",
+            "to": "21:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "8:00",
+            "to": "21:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "8:00",
+            "to": "21:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "8:00",
+            "to": "21:00"
+        },
+        "saturday": {
+            "open": true,
+            "from": "9:00",
+            "to": "12:00"
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }

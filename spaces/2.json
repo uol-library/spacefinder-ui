@@ -28,25 +28,58 @@
     ],
     "title": "Fuse Cafe in Chemical and Process Engineering",
     "basic_info": "Ground floor Chemical and Process Engineering Building, Campus Map ref 48",
-    "description": "Fuse at The School of Chemical and Process Engineering is a hidden gem located in the Engineering buildings",
+    "description": "Fuse at The School of Chemical and Process Engineering is a hidden gem located in the Engineering buildings. It is a quiet café with plenty of space, a perfect spot to refresh yourself.",
     "access": "Anyone (public)",
     "space_type": "Café",
     "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Ground Mezzanine",
+    "building": "Chemical and Process Engineering Building",
+    "floor": "Ground floor and mezzanine",
     "restricted": false,
     "restriction": "",
     "disabled_access": true,
     "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/fuse/",
     "phone_number": "",
     "twitter_screen_name": "GreatFoodLeeds",
-    "facebook_url": "",
-    "expensive": 3,
+    "facebook_url": "https://www.facebook.com/greatfoodleeds",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=18474",
     "noise": "Background chatter",
-    "tags": [
-        "silent",
-        "mordern",
-        "good coffee"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "8:30",
+            "to": "15:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }

@@ -1,0 +1,86 @@
+{
+    "id": 85,
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.8035071,-1.5557077]}",
+    "work": [
+        "private",
+        "close",
+        "friends"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "relaxed",
+        "modern",
+        "cosy",
+        "social",
+        "friendly"
+    ],
+    "images": [],
+    "facilities": [
+        "food_drink",
+        "daylight",
+        "views",
+        "free_wifi",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "toilets",
+        "refreshments",
+        "break"
+    ],
+    "title": "Loma Express Dentistry",
+    "basic_info": "Level 6, Worsley building",
+    "description": "Located on level six of the Worsley building, the café provides a range of grab and go food and drinks. With a focus on healthy, field-to-fork food options, LOMA Express stocks unique salad and sandwich combinations, and fresh herbal infusion teas and other delicious LOMA Express products made fresh each day.",
+    "access": "Anyone (public)",
+    "space_type": "Café",
+    "library": false,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "building": "Worsley building",
+    "floor": "Level 6",
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/loma-express-dentistry/",
+    "phone_number": "",
+    "twitter_screen_name": "GreatFoodLeeds",
+    "facebook_url": "https://www.facebook.com/greatfoodleeds",
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=18477",
+    "noise": "Animated discussion",
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "8:30",
+            "to": "14:30"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "8:30",
+            "to": "14:30"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "8:30",
+            "to": "14:30"
+        },
+        "thursday": {
+            "open": true,
+            "from": "8:30",
+            "to": "14:30"
+        },
+        "friday": {
+            "open": true,
+            "from": "8:30",
+            "to": "14:30"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
+}

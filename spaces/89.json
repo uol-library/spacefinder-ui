@@ -1,0 +1,82 @@
+{
+    "id": 89,
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.8077517,-1.5196756]}",
+    "work": [
+        "in_a_library",
+        "private",
+        "close"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "cosy"
+    ],
+    "images": [],
+    "facilities": [
+        "food_drink",
+        "free_wifi",
+        "computers",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "printers_copiers",
+        "toilets",
+        "refreshments",
+        "break"
+    ],
+    "title": "St James's University Hospital Library",
+    "basic_info": "Silent classic style library ",
+    "description": "Based on level 3 of the Clinical Sciences building, St James’s University Hospital Library supports the information needs of University research and teaching staff, medical and healthcare students, and employees of the Leeds Teaching Hospitals Trust.",
+    "access": "Students",
+    "space_type": "Library space",
+    "library": true,
+    "address": "St James's University Hospital, Beckett St, Harehills, Leeds LS9 7LN",
+    "building": "Clinical Sciences building,",
+    "floor": "level 3",
+    "restricted": true,
+    "restriction": "Library Card needed",
+    "disabled_access": "",
+    "url": "https://library.leeds.ac.uk/",
+    "phone_number": "",
+    "twitter_screen_name": "UoLLibrary",
+    "facebook_url": "https://www.facebook.com/leedsuniversitylibrary",
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17354",
+    "noise": "Whispers",
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "9:00",
+            "to": "17:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "17:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "17:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "9:00",
+            "to": "17:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "9:00",
+            "to": "17:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
+}

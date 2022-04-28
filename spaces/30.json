@@ -27,9 +27,10 @@
     "description": "historic atmosphere with tables and chairs. Occationally  busy but mostly silent. At the entrance of parkinson building ",
     "access": "Anyone (public)",
     "space_type": "General Seating Area",
-    "library": "",
+    "building": "Parkinson Building",
+    "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Ground",
+    "floor": "Ground floor",
     "restricted": false,
     "restriction": "",
     "disabled_access": true,
@@ -37,12 +38,44 @@
     "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
-    "expensive": null,
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17525",
     "noise": "Background chatter",
-    "tags": [
-        "historic",
-        "claming",
-        "silent"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "9:00",
+            "to": "20:30"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "20:30"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "20:30"
+        },
+        "thursday": {
+            "open": true,
+            "from": "9:00",
+            "to": "20:30"
+        },
+        "friday": {
+            "open": true,
+            "from": "9:00",
+            "to": "19:00"
+        },
+        "saturday": {
+            "open": true,
+            "from": "10:00",
+            "to": "17:00"
+        },
+        "sunday": {
+            "open": true,
+            "from": "10:00",
+            "to": "17:00"
+        }
+    }
 }

@@ -11,7 +11,9 @@
     "concat": "node _scripts/concat.js",
     "cmap": "node _scripts/campusmap.js",
     "get_pids": "node _scripts/getPlaceIDs.js",
-    "clean_pids": "node _scripts/cleanPlaceIDs.js"
+    "clean_pids": "node _scripts/cleanPlaceIDs.js",
+    "process": "node _scripts/processJSON.js",
+    "resize": "node _scripts/processImages.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
     "axios": "^0.26.1",
     "babel-loader": "^8.2.3",
     "http": "^0.0.1-security",
+    "sharp": "^0.27.2",
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2"
   },

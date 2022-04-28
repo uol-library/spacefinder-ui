@@ -1,26 +1,82 @@
 {
     "id": 44,
     "location": "{\"type\":\"Point\",\"coordinates\":[53.80843709,-1.553410997]}",
-    "work": [],
-    "atmosphere": [],
+    "work": [
+        "private",
+        "close",
+        "friends"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "modern",
+        "inspiring",
+        "social",
+        "friendly"
+    ],
     "images": [],
-    "facilities": [],
+    "facilities": [
+        "daylight",
+        "large_desks",
+        "free_wifi",
+        "computers",
+        "laptops_allowed",
+        "sockets",
+        "printers_copiers",
+        "toilets"
+    ],
     "title": "IT Cluster - Chemistry and Chemistry West Block - 1.44A",
     "basic_info": "11 Seat Capacity. Campus Map Ref 55",
     "description": "",
     "access": "Students",
     "space_type": "IT Cluster",
-    "library": "",
+    "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "building": "Chemistry building",
     "floor": "First Floor",
     "restricted": "",
     "restriction": "",
     "disabled_access": true,
-    "url": "not required",
+    "url": "",
     "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
-    "expensive": null,
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17382",
-    "tags": []
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }

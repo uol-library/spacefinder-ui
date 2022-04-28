@@ -31,21 +31,53 @@
     "space_type": "General Seating Area",
     "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Ground",
+    "building": "Leeds University Union",
+    "floor": "Ground floor",
     "restricted": false,
     "restriction": "",
     "disabled_access": true,
-    "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",
-    "phone_number": "",
-    "twitter_screen_name": "",
-    "facebook_url": "",
-    "expensive": null,
+    "url": "https://www.luu.org.uk/",
+    "phone_number": "0113 3801 400",
+    "twitter_screen_name": "LeedsUniUnion",
+    "facebook_url": "https://www.facebook.com/leedsuniversityunion/",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17489",
     "noise": "Animated discussion",
-    "tags": [
-        "busy",
-        "friendly",
-        "happening",
-        "social"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "8:30",
+            "to": "22:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "8:30",
+            "to": "22:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "8:30",
+            "to": "22:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "8:30",
+            "to": "22:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "8:30",
+            "to": "22:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }

@@ -1,0 +1,86 @@
+{
+    "id": 87,
+    "location": "{\"type\":\"Point\",\"coordinates\":[53.8071273,-1.5517565]}",
+    "work": [
+        "private",
+        "close",
+        "friends"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "relaxed",
+        "modern",
+        "cosy",
+        "social",
+        "friendly"
+    ],
+    "images": [],
+    "facilities": [
+        "food_drink",
+        "daylight",
+        "views",
+        "free_wifi",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "toilets",
+        "refreshments",
+        "break"
+    ],
+    "title": "Caffè Nero at Laidlaw Library",
+    "basic_info": "Ground Floor, Laidlaw Library",
+    "description": "This is the very first Caffé Nero on a University campus, specialising in high-quality Italian coffee, a warm and welcoming atmosphere, good food and great personal service.",
+    "access": "Anyone (public)",
+    "space_type": "Café",
+    "library": true,
+    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "building": "Laidlaw Library",
+    "floor": "Ground Floor",
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/caffe-nero/",
+    "phone_number": "",
+    "twitter_screen_name": "GreatFoodLeeds",
+    "facebook_url": "https://www.facebook.com/greatfoodleeds",
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=18470",
+    "noise": "Animated discussion",
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "8:00",
+            "to": "20:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "8:00",
+            "to": "20:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "8:00",
+            "to": "20:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "8:00",
+            "to": "20:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "8:00",
+            "to": "18:00"
+        },
+        "saturday": {
+            "open": true,
+            "from": "10:00",
+            "to": "16:30"
+        },
+        "sunday": {
+            "open": true,
+            "from": "10:00",
+            "to": "20:00"
+        }
+    }
+}

@@ -16,6 +16,7 @@
     "space_type": "Library space",
     "library": true,
     "address": "University of Leeds, Leeds LS2 9JT",
+    "building": "Edward Boyle library",
     "floor": "Level 13",
     "restricted": false,
     "restriction": "PG Library Card needed",
@@ -24,7 +25,43 @@
     "phone_number": " 115 343 5663",
     "twitter_screen_name": "UoLLibrary",
     "facebook_url": "https://www.facebook.com/leedsuniversitylibrary",
-    "expensive": null,
     "campusmap_url": "",
-    "tags": []
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "8:00",
+            "to": "24:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "8:00",
+            "to": "24:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "8:00",
+            "to": "24:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "8:00",
+            "to": "24:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "8:00",
+            "to": "24:00"
+        },
+        "saturday": {
+            "open": true,
+            "from": "10:00",
+            "to": "24:00"
+        },
+        "sunday": {
+            "open": true,
+            "from": "10:00",
+            "to": "24:00"
+        }
+    }
 }

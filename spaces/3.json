@@ -33,20 +33,53 @@
     "space_type": "Café",
     "library": true,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
-    "floor": "Level 9",
+    "building": "Edward Boyle Library",
+    "floor": "Level 9 (ground floor)",
     "restricted": "",
     "restriction": "",
     "disabled_access": true,
     "url": "https://gfal.leeds.ac.uk/where-to-eat/cafes/the-edit-room/",
     "phone_number": "",
     "twitter_screen_name": "GreatFoodLeeds",
-    "facebook_url": "",
-    "expensive": 3,
+    "facebook_url": "https://www.facebook.com/greatfoodleeds",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17411",
     "noise": "Animated discussion",
-    "tags": [
-        "talking",
-        "food",
-        "calming"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "8:30",
+            "to": "16:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "8:30",
+            "to": "16:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "8:30",
+            "to": "16:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "8:30",
+            "to": "16:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "8:30",
+            "to": "16:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }

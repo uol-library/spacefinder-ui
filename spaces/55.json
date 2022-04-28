@@ -32,22 +32,55 @@
     "description": "Inspiring cluster room surrounded by big windows with high views of campus . ",
     "access": "Students",
     "space_type": "IT Cluster",
-    "library": "",
+    "library": false,
     "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "building": "History Building",
     "floor": "Ground",
     "restricted": false,
     "restriction": "",
     "disabled_access": true,
-    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF7E3",
+    "url": "",
     "phone_number": "1133435260",
     "twitter_screen_name": "",
     "facebook_url": "",
-    "expensive": null,
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17451",
     "noise": "Strictly silent",
-    "tags": [
-        "views",
-        "historic",
-        "inspiring"
-    ]
+    "tags": [],
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "9:00",
+            "to": "18:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
 }
