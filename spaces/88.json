@@ -1,6 +1,6 @@
 {
     "id": 88,
-    "location": "{\"type\":\"Point\",\"coordinates\":[53.8049273,-1.5543964]}",
+    "location": "{\"type\":\"Point\",\"coordinates\":[-1.5543964,53.8049273]}",
     "work": [
         "private",
         "close",

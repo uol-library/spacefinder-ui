@@ -1,6 +1,6 @@
 {
     "id": 79,
-    "location": "{\"type\":\"Point\",\"coordinates\":[53.8067884,-1.5512606]}",
+    "location": "{\"type\":\"Point\",\"coordinates\":[-1.5512606,53.8067884]}",
     "work": [
         "in_a_library",
         "private",
