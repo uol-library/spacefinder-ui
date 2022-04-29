@@ -13,11 +13,6 @@ function initMap() {
     spacefinder.map = new google.maps.Map(document.getElementById('map'), {
         center: spacefinder.currentLoc,
         zoom: spacefinder.startZoom,
-        disableDefaultUI: true,
-        zoomControl: true,
-        zoomControlOptions: {
-            position: google.maps.ControlPosition.TOP_RIGHT
-        },
         mapTypeId: google.maps.MapTypeId.ROADMAP,
     });
     google.maps.event.addListenerOnce( spacefinder.map, 'tilesloaded', () => {
