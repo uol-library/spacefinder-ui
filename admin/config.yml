@@ -3,8 +3,8 @@ backend:
   repo: 'uol-library/spacefinder-ui'
   branch: 'main'
   site_domain: 'musing-hoover-8f4523.netlify.app'
-media_folder: 'spaces/photos'
-public_folder: '/spaces/photos'
+media_folder: 'assets/photos'
+public_folder: '/assets/photos'
 collections:
   - name: 'spaces'
     label: 'Spaces'
