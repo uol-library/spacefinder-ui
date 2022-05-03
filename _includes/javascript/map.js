@@ -4,6 +4,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     initMap();
     document.addEventListener( 'sfmaploaded', checkGeo );
+    document.addEventListener( 'viewfilter', filterMarkers );
 });
 
 /**
@@ -118,6 +119,20 @@ function zoomMapToSpace( space ) {
     spacefinder.map.setZoom(18);
     spacefinder.infoWindow.setContent( getSpaceInfoWindowContent( space ) );
     spacefinder.infoWindow.open( spacefinder.map, space.marker );    
+}
+
+/**
+ * Filters the markers on the map
+ */
+function filterMarkers() {
+    document.querySelectorAll('.list-space').forEach( el => {
+        let space = getSpaceById( el.getAttribute('data-id') );
+        if ( el.classList.contains('hidden') ) {
+            space.marker.setMap( null );
+        } else {
+            space.marker.setMap( spacefinder.map );
+        }
+    });
 }
 
 /*******************************************************************

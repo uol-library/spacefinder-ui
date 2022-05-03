@@ -133,6 +133,28 @@ function getJSON(options) {
     }
 }
 
+/**
+ * Returns a space object given a valid ID
+ * @param {integer} id 
+ * @returns {Object} space object
+ */
+function getSpaceById( id ) {
+    for (let i = 0; i < spacefinder.spaces.length; i++ ) {
+        if ( spacefinder.spaces[i].id == id ) {
+            return spacefinder.spaces[i];
+        }
+    }
+}
+
+/**
+ * Returns a space DOM node given a valid ID
+ * @param {integer} id 
+ * @returns {Object} DOM node
+ */
+function getSpaceNodeById( id ) {
+    return document.querySelector('[data-id="'+id+'"]');
+}
+
 /* Not sure whether to use these */
 function uol_show_loader( parent ) {
     var c = document.createElement( 'div' );

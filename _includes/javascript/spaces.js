@@ -10,48 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     loadSpaces();
     /* event listener for search + filter changes */
-    document.addEventListener('viewfilter', event => {
-        const activeFilters = getFilterStatus();
-        document.getElementById('listcontent').scrollTop = 0;
-        let searchcondition = '';
-        if ( activeFilters.length ) {
-            document.querySelectorAll('.list-space').forEach( el => {
-                el.classList.remove('hidden');
-                let showEl = true;
-                activeFilters.forEach( filtergroup => {
-                    if ( filtergroup.name == 'search' ) {
-                        let foundKw = false;
-                        filtergroup.value.forEach( term => {
-                            if ( el.textContent.toLowerCase().indexOf( term.toLowerCase() ) != -1 ) {
-                                foundKw = true;
-                            }
-                        });
-                        if ( ! foundKw ) {
-                            showEl = false;
-                        }
-                    } else {
-                        let regex = filtergroup.name+'_('+filtergroup.value.join('|')+')';
-                        console.log(regex);
-                        if ( ! el.className.match(regex) ) {
-                            showEl = false;
-                        }
-                    }
-                });
-                if ( ! showEl ) {
-                    el.classList.add('hidden');
-                }
-            });
-        } else {
-            document.querySelectorAll('.list-space').forEach( el => {
-                el.classList.remove('hidden');
-            });
-        }
-        if (document.querySelectorAll('.list-space.hidden') != null ) {
-            let spacesShowing = document.querySelectorAll('.list-space').length - document.querySelectorAll('.list-space.hidden').length;
-            document.getElementById('listshowingcount').textContent = spacesShowing;
-        }
-        updateListFilterMessage(activeFilters);
-    });
+    document.addEventListener( 'viewfilter', applyFilters );
     /* load space from URL anchor */
     document.addEventListener('sfmapready', event => {
         if ( window.location.hash ) {
@@ -64,6 +23,51 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+/**
+ * Applies filters to the list of spaces
+ */
+function applyFilters() {
+    const activeFilters = getFilterStatus();
+    document.getElementById('listcontainer').scrollTop = 0;
+    let searchcondition = '';
+    if ( activeFilters.length ) {
+        document.querySelectorAll('.list-space').forEach( el => {
+            el.classList.remove('hidden');
+            let showEl = true;
+            activeFilters.forEach( filtergroup => {
+                if ( filtergroup.name == 'search' ) {
+                    let foundKw = false;
+                    filtergroup.value.forEach( term => {
+                        if ( el.textContent.toLowerCase().indexOf( term.toLowerCase() ) != -1 ) {
+                            foundKw = true;
+                        }
+                    });
+                    if ( ! foundKw ) {
+                        showEl = false;
+                    }
+                } else {
+                    let regex = filtergroup.name+'_('+filtergroup.value.join('|')+')';
+                    if ( ! el.className.match(regex) ) {
+                        showEl = false;
+                    }
+                }
+            });
+            if ( ! showEl ) {
+                el.classList.add('hidden');
+            }
+        });
+    } else {
+        document.querySelectorAll('.list-space').forEach( el => {
+            el.classList.remove('hidden');
+        });
+    }
+    if (document.querySelectorAll('.list-space.hidden') != null ) {
+        let spacesShowing = document.querySelectorAll('.list-space').length - document.querySelectorAll('.list-space.hidden').length;
+        document.getElementById('listshowingcount').textContent = spacesShowing;
+    }
+    updateListFilterMessage(activeFilters);
+}
 
 /**
  * Updates the message above the list of spaces to show what 
@@ -105,6 +109,10 @@ function updateListFilterMessage( filters ) {
     }
 }
 
+/**
+ * Activates spaces by adding a click listener to the titles, and
+ * delegated listeners for terms in the filter / search status bar.
+ */
 function activateSpaces() {
     /* event listener to display space detail */
     document.querySelectorAll('.space-title').forEach( el => {
@@ -148,7 +156,7 @@ function activateSpaces() {
 }
 
 /**
- * 
+ * Selects a space in the list
  * @param {integer} spaceid 
  */
 function selectSpace( spaceid ) {
@@ -163,6 +171,10 @@ function selectSpace( spaceid ) {
     spacenode.scrollIntoView({behavior: "smooth"});
 }
 
+/**
+ * Deselects a space in the list, an optionally scrolls the list to the top
+ * @param {boolean} scrollReset 
+ */
 function deselectSpace( scrollReset ) {
     spacefinder.infoWindow.close();
     document.querySelectorAll('.additionalInfo').forEach( el => {
@@ -176,16 +188,6 @@ function deselectSpace( scrollReset ) {
     }
 }
 
-function getSpaceById( id ) {
-    for (let i = 0; i < spacefinder.spaces.length; i++ ) {
-        if ( spacefinder.spaces[i].id == id ) {
-            return spacefinder.spaces[i];
-        }
-    }
-}
-function getSpaceNodeById( id ) {
-    return document.querySelector('[data-id="'+id+'"]');
-}
 function highlightSpaceInMap( e ) {
     /*let spaceid = parseInt( e.target.getAttribute('data-spaceid') );
     for (let i = 0; i < spacefinder.spaces.length; i++ ) {
