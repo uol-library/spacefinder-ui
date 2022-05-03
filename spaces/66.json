@@ -20,12 +20,10 @@
         "toilets"
     ],
     "title": "IT Cluster - Worsley Building - 8.039",
-    "basic_info": "51 Seat Capacity. Campus Map Ref 95",
-    "description": "Big room that offers clusters on high and normal desks. Modern and strictly silent environment.",
-    "access": "Students",
+    "description": "Big room that offers clusters on high and normal desks. Modern and strictly silent environment. 51 seat capacity.",
+    "access": "University Staff and Students",
     "space_type": "IT Cluster",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Worsley building",
     "floor": "Level 8",
     "restricted": false,
@@ -36,6 +34,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17591",
+    "campusmap_ref": "95",
     "noise": "Strictly silent",
     "tags": [],
     "opening_hours": {

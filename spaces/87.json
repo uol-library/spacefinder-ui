@@ -28,12 +28,10 @@
         "break"
     ],
     "title": "Caffè Nero at Laidlaw Library",
-    "basic_info": "Ground Floor, Laidlaw Library",
     "description": "This is the very first Caffé Nero on a University campus, specialising in high-quality Italian coffee, a warm and welcoming atmosphere, good food and great personal service.",
     "access": "Anyone (public)",
     "space_type": "Café",
-    "library": true,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Laidlaw Library",
     "floor": "Ground Floor",
     "restricted": false,
@@ -44,6 +42,7 @@
     "twitter_screen_name": "GreatFoodLeeds",
     "facebook_url": "https://www.facebook.com/greatfoodleeds",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=18470",
+    "campusmap_ref": "63",
     "noise": "Animated discussion",
     "tags": [],
     "opening_hours": {

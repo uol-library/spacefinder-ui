@@ -24,12 +24,10 @@
         "toilets"
     ],
     "title": "IT Cluster - Chemistry and Chemistry West Block - 140 (Cohen)",
-    "basic_info": "98 Seat Capacity. Campus Map Ref 55",
-    "description": "Big mint room with large lines of computer desks. Silent and busy study space.",
-    "access": "Students",
+    "description": "Large room with lines of computer desks. Silent and busy study space. 98 seat capacity.",
+    "access": "University Staff and Students",
     "space_type": "IT Cluster",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Chemistry building",
     "floor": "First Floor",
     "restricted": false,
@@ -40,6 +38,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17382",
+    "campusmap_ref": "55",
     "noise": "Strictly silent",
     "tags": [],
     "opening_hours": {

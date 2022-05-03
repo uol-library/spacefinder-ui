@@ -24,12 +24,10 @@
         "break"
     ],
     "title": "Silent study space 1, Laidlaw library",
-    "basic_info": "",
-    "description": "Study space inside the library, closed doors, very silent ",
-    "access": "students",
+    "description": "Study space inside the library, closed doors, very silent.",
+    "access": "University Staff and Students",
     "space_type": "Library space",
-    "library": true,
-    "address": "Laidlaw library,University of, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Laidlaw library",
     "floor": "1st floor",
     "restricted": true,
@@ -40,6 +38,7 @@
     "twitter_screen_name": "UoLLibrary",
     "facebook_url": "https://www.facebook.com/leedsuniversitylibrary",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17471",
+    "campusmap_ref": "63",
     "noise": "Strictly silent",
     "tags": [],
     "opening_hours": {

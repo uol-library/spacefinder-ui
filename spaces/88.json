@@ -28,12 +28,10 @@
         "break"
     ],
     "title": "Caffè Nero at Roger Stevens",
-    "basic_info": "Level 6, Roger Stevens building",
     "description": "This Caffè Nero is conveniently located at the heart of campus overlooking the sustainable pond. Serving a selection of hot and cold drinks, salads, soups, sandwiches, cakes and snacks. Inside there is varied ample seating - whether you want to relax or work in groups, longer opening hours makes it the perfect spot for breaks between lectures and meetings throughout the day.",
     "access": "Anyone (public)",
     "space_type": "Café",
-    "library": true,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Roger Stevens building",
     "floor": "Level 6",
     "restricted": false,
@@ -44,6 +42,7 @@
     "twitter_screen_name": "GreatFoodLeeds",
     "facebook_url": "https://www.facebook.com/greatfoodleeds",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=18471",
+    "campusmap_ref": "89",
     "noise": "Animated discussion",
     "tags": [],
     "opening_hours": {

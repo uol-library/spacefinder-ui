@@ -27,12 +27,10 @@
         "break"
     ],
     "title": "General Seating Areas - Liberty Building - Ground floor Common Area (G01)",
-    "basic_info": "Ground Floor, Liberty Building.  Campus Map Ref 16",
-    "description": "common area near the entrance of the liberty building. Silent space with different kinds of tables and a fooseball table ",
+    "description": "Common area near the entrance of the Liberty building. Quiet space with different kinds of tables (and table football).",
     "access": "Anyone (public)",
     "space_type": "General Seating Area",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Liberty Building",
     "floor": "Ground floor",
     "restricted": false,
@@ -43,6 +41,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17491",
+    "campusmap_ref": "16",
     "noise": "Whispers",
     "tags": [],
     "opening_hours": {

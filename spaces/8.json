@@ -23,12 +23,10 @@
         "break"
     ],
     "title": "Café Seven",
-    "basic_info": "Level 7 Worsley Building, next to Airport Lounge, Campus Map ref 95",
     "description": "Located in the Worsley building, Café Sevenéis one of our most popular and vibrant cafés. Recently refurbished the large seating area is a great place to meet with friends.",
     "access": "Anyone (public)",
     "space_type": "Café",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Worsley Building",
     "floor": "Level 7",
     "restricted": false,
@@ -39,6 +37,7 @@
     "twitter_screen_name": "GreatFoodLeeds",
     "facebook_url": "https://www.facebook.com/greatfoodleeds",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=18472",
+    "campusmap_ref": "95",
     "noise": "Background chatter",
     "tags": [],
     "opening_hours": {

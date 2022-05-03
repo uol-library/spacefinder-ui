@@ -28,12 +28,10 @@
         "break"
     ],
     "title": "IT Cluster - Irene Manton Building - 7.96",
-    "basic_info": "40 Seat Capacity. Campus Map Ref 91",
-    "description": "Modern big cluster with plenty of big windows facing a beautiful  side of campus .",
-    "access": "Students",
+    "description": "Modern large IT cluster with plenty of large windows facing a beautiful side of the University campus. 40 seat capacity.",
+    "access": "University Staff and Students",
     "space_type": "IT Cluster",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Irene Manton Building",
     "floor": "Level 7",
     "restricted": false,
@@ -44,6 +42,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17462",
+    "campusmap_ref": "91",
     "noise": "Strictly silent",
     "tags": [],
     "opening_hours": {

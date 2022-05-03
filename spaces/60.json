@@ -24,12 +24,10 @@
         "break"
     ],
     "title": "IT Cluster - Parkinson Building - B.26",
-    "basic_info": "15 Seat Capacity. Campus Map Ref 60",
-    "description": "Cluster room surrounded by big windows with high views on campus . Perfect for focused study with acess to computers.",
-    "access": "Students",
+    "description": "Cluster room surrounded by big windows with high views of the University campus. Perfect for focused study with acess to computers. 15 seat capacity.",
+    "access": "University Staff and Students",
     "space_type": "IT Cluster",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Parkinson building",
     "floor": "Basement",
     "restricted": false,
@@ -40,6 +38,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17525",
+    "campusmap_ref": "60",
     "noise": "Whispers",
     "tags": [],
     "opening_hours": {

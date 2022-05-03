@@ -34,11 +34,9 @@
         "break"
     ],
     "title": "Edward Boyle 10th floor",
-    "basic_info": "Study space desks and group studying couches",
-    "description": "Busy study place for people that like working alonside others . Couches with big tables can be used for comfortable group working on a nice environment .Extra couches on the side for anybody that wants to read or take a break inside the library .",
-    "access": "Students ",
+    "description": "Busy study place for people who like working alongside others. Couches with big tables can be used for comfortable group working in a nice environment. Extra couches on the side for anybody who wants to read or take a break inside the library.",
+    "access": "University Staff and Students",
     "space_type": "Library space",
-    "library": true,
     "address": "University of Leeds, Leeds LS2 9JT",
     "building": "Edward Boyle library",
     "floor": "Level 10",
@@ -49,7 +47,8 @@
     "phone_number": " 114 343 5663",
     "twitter_screen_name": "UoLLibrary",
     "facebook_url": "https://www.facebook.com/leedsuniversitylibrary",
-    "campusmap_url": "",
+    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17411",
+    "campusmap_ref": "83",
     "noise": "Background chatter",
     "tags": [],
     "opening_hours": {

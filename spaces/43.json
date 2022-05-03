@@ -21,12 +21,10 @@
         "toilets"
     ],
     "title": "IT Cluster - Chemistry and Chemistry West Block - 1.44",
-    "basic_info": "23 Seat Capacity. Campus Map Ref 55",
-    "description": "Private study space for focused study .",
-    "access": "Students",
+    "description": "Private study space for focused study. 23 seat capacity",
+    "access": "University Staff and Students",
     "space_type": "IT Cluster",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Chemistry building",
     "floor": "First Floor",
     "restricted": false,
@@ -37,6 +35,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17382",
+    "campusmap_ref": "55",
     "noise": "Strictly silent",
     "tags": [],
     "opening_hours": {

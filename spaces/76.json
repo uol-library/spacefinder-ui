@@ -28,11 +28,9 @@
         "break"
     ],
     "title": "Group study rooms, Health Sciences library",
-    "basic_info": "",
-    "description": "Group study rooms for group work( booking required",
-    "access": "students",
+    "description": "Group study rooms for group work (booking required)",
+    "access": "University Staff and Students",
     "space_type": "Library space",
-    "library": true,
     "address": "Clarendon Way, Leeds LS2 9NL",
     "building": "Worsley building",
     "floor": "7th floor",
@@ -44,6 +42,7 @@
     "twitter_screen_name": "UoLLibrary",
     "facebook_url": "https://www.facebook.com/leedsuniversitylibrary",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17446",
+    "campusmap_ref": "95",
     "noise": "Strictly silent",
     "tags": [],
     "opening_hours": {

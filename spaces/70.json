@@ -21,12 +21,10 @@
         "toilets"
     ],
     "title": "IT Cluster - Worsley Building - 8.049P (Fourman)",
-    "basic_info": "53 Seat Capacity. Campus Map Ref 95",
-    "description": "Big room with clusters available",
-    "access": "Students",
+    "description": "Large room with computers available. 53 seat cpacity.",
+    "access": "University Staff and Students",
     "space_type": "IT Cluster",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Worsley building",
     "floor": "Level 8",
     "restricted": false,
@@ -37,6 +35,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17591",
+    "campusmap_ref": "95",
     "noise": "Whispers",
     "tags": [],
     "opening_hours": {

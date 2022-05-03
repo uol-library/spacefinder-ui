@@ -61,8 +61,8 @@ cc.run({
                 ],
                 blocks: [
                     {
-                        title: 'Cookie usage 📢',
-                        description: 'This website uses cookies to enhance your online experience. You can choose for each category to opt-in/out whenever you want. For more details relative to cookies and other sensitive data, please read the full <a href="#" class="cc-link">privacy policy</a>.'
+                        title: 'Cookie usage',
+                        description: 'This website uses cookies to enhance your online experience. You can choose for each category to opt-in/out whenever you want. For more details relative to cookies and other sensitive data, please read the full <a href="#" class="cc-link modal-trigger" data-dialoghash="privacy" data-dialogid="privacy-page">privacy policy</a>.'
                     }, {
                         title: 'Strictly necessary cookies',
                         description: 'These cookies are essential for the proper functioning of this website. Without these cookies, the website would not remember your cookie preferences.',

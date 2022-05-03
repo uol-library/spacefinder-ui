@@ -22,12 +22,10 @@
         "break"
     ],
     "title": "Seminal Communal Areas - Baines Wing - LG.17",
-    "basic_info": "20 Seat Capacity. Lower Ground Floor Baines Wing. Campus Map Ref 58",
-    "description": "Big seminar room with projector and flipable whiteboard.Five windows are allowing plenty of daylight to enter the room and there is acesss to a big projector.",
-    "access": "Students",
+    "description": "Big seminar room with projector and flippable whiteboard. Five windows are allowing plenty of daylight to enter the room and there is acesss to a big projector. 20 seat capacity.",
+    "access": "University Staff and Students",
     "space_type": "Seminar room",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Baines Wing",
     "floor": "Lower Ground floor",
     "restricted": false,
@@ -38,6 +36,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17343",
+    "campusmap_ref": "58",
     "noise": "Animated discussion",
     "tags": [],
     "opening_hours": {

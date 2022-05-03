@@ -25,14 +25,6 @@ collections:
         name: 'title'
         widget: 'string'
         required: true
-      - label: 'Building name'
-        name: 'library'
-        widget: 'string'
-        required: false
-      - label: 'Floor'
-        name: 'floor'
-        widget: 'string'
-        required: false
       - label: 'Description'
         name: 'description'
         widget: 'markdown'
@@ -40,12 +32,19 @@ collections:
       - label: 'Type'
         name: 'space_type'
         widget: 'select'
-        #options: ['Bar','Café','General Seating Area','IT Cluster','Lab','Lecture room','Library space','Meeting room','Outdoor Seating Area','Seminar room','Other']
         options: ['Café','General Seating Area','IT Cluster','Library space','Outdoor Seating Area','Seminar room']
         required: true
       - label: 'Address'
         name: 'address'
         widget: 'text'
+        required: false
+      - label: 'Building name'
+        name: 'building'
+        widget: 'string'
+        required: false
+      - label: 'Floor'
+        name: 'floor'
+        widget: 'string'
         required: false
       - label: 'Location'
         name: 'location'
@@ -95,7 +94,7 @@ collections:
       - label: 'Access type'
         name: 'access'
         widget: 'select'
-        options: ['Anyone (public)','Members of the University','Faculty','College']
+        options: ['Anyone (public)','University Staff and Students']
         required: false
       - label: 'Restricted access?'
         name: 'restricted'
@@ -118,6 +117,234 @@ collections:
         name: 'campusmap_url'
         widget: 'string'
         required: false
+      - label: 'Campus Map Reference'
+        name: 'campusmap_ref'
+        widget: 'select'
+        multiple: false
+        required: false
+        options:
+          - { value: '77', label: 'Accommodation Office: Marjorie and Arnold Ziff Building' }
+          - { value: '73', label: 'Alumni and Development: E C Stoner Entrance 3' }
+          - { value: '78', label: 'Arabic, Islamic and Middle Eastern Studies: Michael Sadler Building' }
+          - { value: '60', label: 'Art Gallery, The Stanley and Audrey Burton: Parkinson Building' }
+          - { value: '92', label: 'Astbury Building' }
+          - { value: '58', label: 'Baines Wing' }
+          - { value: '33', label: 'Beech Grove House' }
+          - { value: '81', label: 'Beech Grove Terrace' }
+          - { value: '93', label: 'Biological Sciences: L C Miall Building' }
+          - { value: '94', label: 'Biological Sciences Teaching Laboratories, Willow Terrace Road' }
+          - { value: '64', label: 'Blenheim Terrace' }
+          - { value: '80', label: 'Botany House (13-15 Beech Grove Terrace)' }
+          - { value: '53', label: 'Bragg Centre for Materials Research: Sir William Henry Bragg Building' }
+          - { value: '23', label: 'Bright Beginnings Childcare Centre' }
+          - { value: '59', label: 'Brotherton Library' }
+          - { value: '10', label: 'Business Change: 4 Springfield Mount' }
+          - { value: '19', label: 'Business School: Maurice Keyworth Building' }
+          - { value: '15', label: 'Business School - Centre for Decision Research: Charles Thackrah' }
+          - { value: '22', label: 'Business School - Centre for Employment Relations, Innovation and Change: 31 Lyddon Terrace' }
+          - { value: '27', label: 'Business School - Centre for International Business: 14-20 Cromer Terrace' }
+          - { value: '15', label: 'Business School - Centre for Enterprise and Entrepreneurship: Charles Thackrah' }
+          - { value: '25', label: 'Business School - Confucius Business Institute: 22 Clarendon Place' }
+          - { value: '15', label: 'Business School - Executive Education: Charles Thackrah' }
+          - { value: '27', label: 'Business School - India and South Asian Business Centre: 10-12 Cromer Terrace' }
+          - { value: '22', label: 'Business School - Professional Development Hub: 26 Lyddon Terrace' }
+          - { value: '22', label: 'Business School - Professional Services Sector: 20 Lyddon Terrace' }
+          - { value: '22', label: 'Business School - Research and Innovation Office, Faculty Graduate School: 21 Lyddon Terrace' }
+          - { value: '27', label: 'Business School - White Rose East Asia Centre: 14-20 Cromer Terrace' }
+          - { value: '26', label: 'Careers Centre: 5-7 Cromer Terrace' }
+          - { value: '72', label: 'Cavendish Road 3-9' }
+          - { value: '76', label: 'Cavendish Road 6-10' }
+          - { value: '46', label: 'Cemetery Lodge (Praying Facility)' }
+          - { value: '107', label: 'Central Village' }
+          - { value: '62', label: 'Chaplaincy: Emmanuel Centre' }
+          - { value: '86', label: 'Charles Morris Hall, comprising: Dobree House; Storm Jameson Court, East & West; and Whetton House' }
+          - { value: '15', label: 'Charles Thackrah Building' }
+          - { value: '48', label: 'Chemical and Process Engineering' }
+          - { value: '55', label: 'Chemistry' }
+          - { value: '55A', label: 'Chemistry West Block' }
+          - { value: '108', label: 'CitySide' }
+          - { value: '49', label: 'Civil Engineering' }
+          - { value: '20', label: 'Clarendon Building' }
+          - { value: '25', label: 'Clarendon Place (19-21, at rear)' }
+          - { value: '70', label: 'Cleaning Services: 5-9 Hillary Place' }
+          - { value: '34', label: 'Clothworkers Building Central & Link' }
+          - { value: '56', label: 'Clothworkers Building North' }
+          - { value: '35', label: 'Clothworkers Building South' }
+          - { value: '75', label: 'Clothworkers Centenary Concert Hall' }
+          - { value: '71', label: 'Coach House (rear 5-9 Hillary Place)' }
+          - { value: '77', label: 'Communications Team: Marjorie and Arnold Ziff Building' }
+          - { value: '53', label: 'Computing: Sir William Henry Bragg Building' }
+          - { value: '100', label: 'Conference Auditorium' }
+          - { value: '27', label: 'Cromer Terrace' }
+          - { value: '27', label: 'Cromer Terrace Fitness Studio: 22 Cromer Terrace' }
+          - { value: '35', label: 'Cultural Institute: Clothworkers South' }
+          - { value: '65', label: 'Digital Learning: 171-177 Woodhouse Lane' }
+          - { value: '95', label: 'Dentistry and Dental Hospital: Worsley Building' }
+          - { value: '34', label: 'Design: Clothworkers Building Central' }
+          - { value: '55A', label: 'Disability Services: Chemistry West Block' }
+          - { value: '84', label: 'Earth and Environment: Maths/Earth and Environment Building' }
+          - { value: '78', label: 'East Asian Studies: Michael Sadler Building' }
+          - { value: '73', label: 'E C Stoner Building' }
+          - { value: '70', label: 'Education: 5-9 Hillary Place' }
+          - { value: '64', label: 'Educational Engagement: 18 Blenheim Terrace' }
+          - { value: '83', label: 'Edward Boyle Library' }
+          - { value: '51', label: 'Electronic and Electrical Engineering (at rear)' }
+          - { value: '22', label: 'Ellerslie Global, comprising: the Hall; 15-19 Lyddon Terrace; and 37-41 Lyddon Terrace' }
+          - { value: '62', label: 'Emmanuel Centre' }
+          - { value: '47', label: 'Energy Building' }
+          - { value: '76', label: 'English: 6-10 Cavendish Road' }
+          - { value: '73', label: 'Equality Policy Unit: E C Stoner Entrance 2' }
+          - { value: '24', label: 'Estate Services Helpdesk: Facilities Directorate Building' }
+          - { value: '12', label: 'Esther Simpson Building' }
+          - { value: '24', label: 'Facilities Directorate: Facilities Directorate Building' }
+          - { value: '72', label: 'Faculty of Arts, Humanities and Cultures Office: 3 Cavendish Road' }
+          - { value: '93', label: 'Faculty of Biological Sciences Reception: L C Miall Building' }
+          - { value: '19', label: 'Faculty of Business Reception: Maurice Keyworth Building' }
+          - { value: '55', label: 'Faculty of Engineering and Physical Sciences: Chemistry' }
+          - { value: '88', label: 'Faculty of Environment Office: Priestley Building' }
+          - { value: '95', label: 'Faculty of Medicine and Health Office: Worsley Building' }
+          - { value: '33', label: 'Faculty of Social Sciences: Beech Grove House' }
+          - { value: '5', label: 'Fairbairn House - MacMillan Wing' }
+          - { value: '6', label: 'Fairbairn House - Main Building' }
+          - { value: '3', label: 'Fairbairn House - Suite A' }
+          - { value: '1', label: 'Fairbairn Site Blocks A, C, D, E, Hallas Wing' }
+          - { value: '73', label: 'Finance: E C Stoner Entrance 2' }
+          - { value: '38', label: 'Fine Art, History of Art and Cultural Studies' }
+          - { value: '104', label: 'Finsbury Road Building' }
+          - { value: '102', label: 'Food Science and Nutrition: Food Science Building' }
+          - { value: '78', label: 'French: Michael Sadler Building' }
+          - { value: '90', label: 'Garstang Building' }
+          - { value: '90', label: 'Geography: Garstang Building' }
+          - { value: '78', label: 'German, Russian and Slavonic Studies: Michael Sadler Building' }
+          - { value: '64', label: 'Go Higher West Yorkshire: 17 Blenheim Terrace' }
+          - { value: '57', label: 'Great Hall' }
+          - { value: '17', label: 'Gryphon Sports Centre' }
+          - { value: '103', label: 'Health and Safety Services: 5-9 Willow Terrace Road' }
+          - { value: '95', label: 'Health Sciences Library: Worsley Building' }
+          - { value: '58', label: 'Healthcare: Baines Wing' }
+          - { value: '44', label: 'Henry Price Residences' }
+          - { value: '70', label: 'Hillary Place 5-9' }
+          - { value: '78', label: 'History: Michael Sadler Building' }
+          - { value: '65', label: 'Hopewell House (173 Woodhouse Lane)' }
+          - { value: '73', label: 'Human Resources: E C Stoner Entrance 2' }
+          - { value: '9', label: 'Hyde Terrace 30/32' }
+          - { value: '60', label: 'Institute for Medieval Studies: Parkinson Building' }
+          - { value: '43', label: 'Institute for Transport Studies: 34-40 University Road' }
+          - { value: '64', label: 'Inter-Disciplinary Ethics Applied Centre: 17 Blenheim Terrace' }
+          - { value: '77', label: 'International Office and International Student Office: Marjorie and Arnold Ziff Building' }
+          - { value: '77', label: 'International Pathways Centre: Marjorie and Arnold Ziff Building' }
+          - { value: '91', label: 'Irene Manton Building' }
+          - { value: '78', label: 'Italian: Michael Sadler Building' }
+          - { value: '2', label: 'IT Fairbairn Site' }
+          - { value: '73', label: 'IT Service Desk: E C Stoner Building' }
+          - { value: '74', label: 'IT Services' }
+          - { value: '105', label: 'Jerusalem Chapel' }
+          - { value: '93', label: 'L C Miall Building' }
+          - { value: '63', label: 'Laidlaw Library' }
+          - { value: '78', label: 'Languages, Cultures and Societies: Michael Sadler Building' }
+          - { value: '60', label: 'Language Centre: Parkinson Building' }
+          - { value: '78', label: 'Languages for All: Michael Sadler Building' }
+          - { value: '16', label: 'Law: Liberty Building' }
+          - { value: '35', label: 'Leeds Arts and Humanities Research Institute (LAHRI): Clothworkers South' }
+          - { value: '55A', label: 'Leeds Assessment Centre: Chemistry West Block' }
+          - { value: '77', label: 'Leeds Doctoral College: Marjorie and Arnold Ziff Building' }
+          - { value: '97', label: 'Leeds General Infirmary - Clarendon Wing' }
+          - { value: '81', label: 'Leeds Institute for Teaching Excellence (LITE): 18 Beech Grove Terrace' }
+          - { value: '95', label: 'Leeds Institute of Clinical Trials Research (LICTR): Worsley Building' }
+          - { value: '96', label: 'Leeds Institute of Cardiovascular and Metabolic Medicine (LICAMM) : LIGHT Building)' }
+          - { value: '95', label: 'Leeds Institute of Data Analytics (LIDA): Worsley Building' }
+          - { value: '95', label: 'Leeds Institute of Health Sciences (LIHS): Worsley Building' }
+          - { value: '95', label: 'Leeds Institute of Medical Education (LIME): Worsley Building' }
+          - { value: '109', label: 'Leeds Institute of Rheumatic & Musculoskeletal Medicine (LIRMM): Martin Link' }
+          - { value: '65', label: 'Leeds International Piano Competition: 169b Woodhouse Lane' }
+          - { value: '82', label: 'Leeds Social Sciences Institute: Social Sciences Building' }
+          - { value: '110', label: 'Leeds Student Medical Practice: off Blenheim Walk' }
+          - { value: '32', label: 'Leeds University Union' }
+          - { value: '16', label: 'Liberty Building' }
+          - { value: '77', label: 'Lifelong Learning Centre: Marjorie and Arnold Ziff Building' }
+          - { value: '40', label: 'Lifton Place 4' }
+          - { value: '41', label: 'Lifton Place 5-7' }
+          - { value: '42', label: 'Lifton Villas (1-3 Lifton Place)' }
+          - { value: '96', label: 'LIGHT Building' }
+          - { value: '78', label: 'Linguistics and Phonetics: Michael Sadler Building' }
+          - { value: '41', label: 'LOGIK Centre: 5-7 Lifton Place' }
+          - { value: '30', label: 'Lyddon Hall' }
+          - { value: '22', label: 'Lyddon Terrace (18-26)' }
+          - { value: '13', label: 'Marks & Spencer Company Archive: Michael Marks Building' }
+          - { value: '77', label: 'Marjorie and Arnold Ziff Building' }
+          - { value: '73', label: 'Marketing Team: E C Stoner Entrance 4' }
+          - { value: '84', label: 'Mathematics: Maths/Earth and Environment Building' }
+          - { value: '84', label: 'Maths/Earth and Environment Building' }
+          - { value: '19', label: 'Maurice Keyworth Building' }
+          - { value: '50', label: 'Mechanical Engineering' }
+          - { value: '56', label: 'Media and Communication: Clothworkers Building North' }
+          - { value: '50A', label: 'Medical and Biological Engineering' }
+          - { value: '95', label: 'Medicine: Worsley Building' }
+          - { value: '28', label: 'MEETinLEEDS: University House' }
+          - { value: '13', label: 'Michael Marks Building' }
+          - { value: '78', label: 'Michael Sadler Building' }
+          - { value: '106', label: 'Multi-storey Car Park' }
+          - { value: '75', label: 'Music and Clothworkers Centenary Concert Hall' }
+          - { value: '100', label: 'Muslim Prayer Hall: Conference Auditorium - Green Room' }
+          - { value: '4', label: 'National Centre for Atmospheric Science Annex' }
+          - { value: '6', label: 'National Centre for Atmospheric Science (NCAS): Fairbairn House - Main Building' }
+          - { value: '85', label: 'Newlyn Building' }
+          - { value: '66', label: 'NEXUS' }
+          - { value: '103', label: 'Occupational Health Service: 5-9 Willow Terrace Road' }
+          - { value: '58', label: 'Organisational Development and Professional Learning: Baines Wing' }
+          - { value: '60', label: 'Parkinson Building' }
+          - { value: '31', label: 'PCI & stage@leeds' }
+          - { value: '31', label: 'Performance and Cultural Industries: PCI & stage@leeds' }
+          - { value: '78', label: 'Philosophy, Religion and the History of Science: Michael Sadler Building' }
+          - { value: '53', label: 'Physics and Astronomy: Sir William Henry Bragg Building' }
+          - { value: '69', label: 'Physics Research Deck' }
+          - { value: '82', label: 'Politics and International Studies: Social Sciences Building' }
+          - { value: '88', label: 'Priestley Building' }
+          - { value: '88', label: 'Priestley International Centre for Climate: Priestley Building' }
+          - { value: '89', label: 'Print and Copy Bureau: Roger Stevens Building' }
+          - { value: '37', label: 'Psychology' }
+          - { value: '42', label: 'Purchasing: 1-3 Lifton Place' }
+          - { value: '73', label: 'Quality Assurance: E C Stoner Entrance 4' }
+          - { value: '29', label: 'Refectory' }
+          - { value: '66', label: 'Research and Innovation Service: NEXUS' }
+          - { value: '24', label: 'Residential Services: Facilities Directorate Building' }
+          - { value: '89', label: 'Roger Stevens Building' }
+          - { value: '73', label: 'Secretariat (including Legal Advisor): E C Stoner Entrance 4' }
+          - { value: '65', label: 'Security Office: 175 Woodhouse Lane' }
+          - { value: '53', label: 'Sir William Henry Bragg Building' }
+          - { value: '63', label: 'Skills@Library: Laidlaw Library' }
+          - { value: '82', label: 'Social Sciences Building' }
+          - { value: '82', label: 'Sociology and Social Policy: Social Sciences Building' }
+          - { value: '78', label: 'Spanish, Portuguese and Latin American Studies: Michael Sadler Building' }
+          - { value: '101', label: 'Sport and Physical Activity: The Edge' }
+          - { value: '10', label: 'Springfield Mount' }
+          - { value: '28', label: 'Staff Counselling: University House' }
+          - { value: '31', label: 'stage@leeds: PCI & stage@leeds' }
+          - { value: '60', label: 'Stanley and Audrey Burton Art Gallery: Parkinson Building' }
+          - { value: '73', label: 'Strategy and Planning: E C Stoner Entrance 3' }
+          - { value: '25', label: 'Student Counselling Centre: 19-21 Clarendon Place' }
+          - { value: '77', label: 'Student Education Service: Marjorie and Arnold Ziff Building' }
+          - { value: '77', label: 'Student Services Centre: Marjorie and Arnold Ziff Building' }
+          - { value: '21', label: 'St Wilfreds Chapel' }
+          - { value: '32', label: 'Stylus: Leeds University Union' }
+          - { value: '101', label: 'The Edge' }
+          - { value: '73', label: 'Trade Union Offices: E C Stoner Entrance 3' }
+          - { value: '60', label: 'Translation Studies: Parkinson Building' }
+          - { value: '60', label: 'Treasures of the Brotherton: Leeds University Library Gallery, Parkinson Building' }
+          - { value: '67', label: 'UNIPOL: 155-157 Woodhouse Lane' }
+          - { value: '57', label: 'University Archive: Great Hall' }
+          - { value: '28', label: 'University House' }
+          - { value: '36', label: 'University Road 28' }
+          - { value: '77', label: 'University Secretary: Marjorie and Arnold Ziff Building' }
+          - { value: '77', label: 'Vice-Chancellor and Executive Officers: Marjorie and Arnold Ziff Building' }
+          - { value: '103', label: 'Wellbeing, Safety and Health: 5-9 Willow Terrace Road' }
+          - { value: '18', label: 'Western Lecture Theatre' }
+          - { value: '103', label: 'Willow Terrace Road 5-9' }
+          - { value: '67', label: 'Woodhouse Lane 153-157' }
+          - { value: '65', label: 'Woodhouse Lane 169-177' }
+          - { value: '61', label: 'Workshop Theatre' }
+          - { value: '95', label: 'Worsley Building' }
+          - { value: '25', label: 'Yorkshire Universities: 22 Clarendon Place' }
       - label: 'Booking URL'
         name: 'booking_url'
         widget: 'string'
@@ -216,162 +443,162 @@ collections:
         media_library:
           config:
             multiple: true
-      - label: "Opening Hours"
-        name: "opening_hours"
-        widget: "object"
+      - label: 'Opening Hours'
+        name: 'opening_hours'
+        widget: 'object'
         collapsed: true
         fields:
-          - label: "Monday"
-            name: "monday"
-            widget: "object"
+          - label: 'Monday'
+            name: 'monday'
+            widget: 'object'
             collapsed: false
             fields:
-              - label: "Open?"
-                name: "open"
-                widget: "boolean"
+              - label: 'Open?'
+                name: 'open'
+                widget: 'boolean'
                 default: true
                 required: false
-              - label: "From"
-                name: "from"
-                widget: "string"
-                pattern: ['[0-9]{1,2}:[0-9]{2}', "Specify times in 24hr clock mode with hours and minutes separated by a colon"]
-                default: "9:00"
+              - label: 'From'
+                name: 'from'
+                widget: 'string'
+                pattern: ['[0-9]{1,2}:[0-9]{2}', 'Specify times in 24hr clock mode with hours and minutes separated by a colon']
+                default: '9:00'
                 required: false
-              - label: "To"
-                name: "to"
-                widget: "string"
-                pattern: ['[0-9]{1,2}:[0-9]{2}', "Specify times in 24hr clock mode with hours and minutes separated by a colon"]
-                default: "17:00"
+              - label: 'To'
+                name: 'to'
+                widget: 'string'
+                pattern: ['[0-9]{1,2}:[0-9]{2}', 'Specify times in 24hr clock mode with hours and minutes separated by a colon']
+                default: '17:00'
                 required: false
-          - label: "Tuesday"
-            name: "Tuesday"
-            widget: "object"
+          - label: 'Tuesday'
+            name: 'Tuesday'
+            widget: 'object'
             collapsed: false
             fields:
-              - label: "Open?"
-                name: "open"
-                widget: "boolean"
+              - label: 'Open?'
+                name: 'open'
+                widget: 'boolean'
                 default: true
                 required: false
-              - label: "From"
-                name: "from"
-                widget: "string"
-                pattern: ['[0-9]{1,2}:[0-9]{2}', "Specify times in 24hr clock mode with hours and minutes separated by a colon"]
-                default: "9:00"
+              - label: 'From'
+                name: 'from'
+                widget: 'string'
+                pattern: ['[0-9]{1,2}:[0-9]{2}', 'Specify times in 24hr clock mode with hours and minutes separated by a colon']
+                default: '9:00'
                 required: false
-              - label: "To"
-                name: "to"
-                widget: "string"
-                pattern: ['[0-9]{1,2}:[0-9]{2}', "Specify times in 24hr clock mode with hours and minutes separated by a colon"]
-                default: "17:00"
+              - label: 'To'
+                name: 'to'
+                widget: 'string'
+                pattern: ['[0-9]{1,2}:[0-9]{2}', 'Specify times in 24hr clock mode with hours and minutes separated by a colon']
+                default: '17:00'
                 required: false
-          - label: "Wednesday"
-            name: "wednesday"
-            widget: "object"
+          - label: 'Wednesday'
+            name: 'wednesday'
+            widget: 'object'
             collapsed: false
             fields:
-              - label: "Open?"
-                name: "open"
-                widget: "boolean"
+              - label: 'Open?'
+                name: 'open'
+                widget: 'boolean'
                 default: true
                 required: false
-              - label: "From"
-                name: "from"
-                widget: "string"
-                pattern: ['[0-9]{1,2}:[0-9]{2}', "Specify times in 24hr clock mode with hours and minutes separated by a colon"]
-                default: "9:00"
+              - label: 'From'
+                name: 'from'
+                widget: 'string'
+                pattern: ['[0-9]{1,2}:[0-9]{2}', 'Specify times in 24hr clock mode with hours and minutes separated by a colon']
+                default: '9:00'
                 required: false
-              - label: "To"
-                name: "to"
-                widget: "string"
-                pattern: ['[0-9]{1,2}:[0-9]{2}', "Specify times in 24hr clock mode with hours and minutes separated by a colon"]
-                default: "17:00"
+              - label: 'To'
+                name: 'to'
+                widget: 'string'
+                pattern: ['[0-9]{1,2}:[0-9]{2}', 'Specify times in 24hr clock mode with hours and minutes separated by a colon']
+                default: '17:00'
                 required: false
-          - label: "Thursday"
-            name: "Thursday"
-            widget: "object"
+          - label: 'Thursday'
+            name: 'Thursday'
+            widget: 'object'
             collapsed: false
             fields:
-              - label: "Open?"
-                name: "open"
-                widget: "boolean"
+              - label: 'Open?'
+                name: 'open'
+                widget: 'boolean'
                 default: true
                 required: false
-              - label: "From"
-                name: "from"
-                widget: "string"
-                pattern: ['[0-9]{1,2}:[0-9]{2}', "Specify times in 24hr clock mode with hours and minutes separated by a colon"]
-                default: "9:00"
+              - label: 'From'
+                name: 'from'
+                widget: 'string'
+                pattern: ['[0-9]{1,2}:[0-9]{2}', 'Specify times in 24hr clock mode with hours and minutes separated by a colon']
+                default: '9:00'
                 required: false
-              - label: "To"
-                name: "to"
-                widget: "string"
-                pattern: ['[0-9]{1,2}:[0-9]{2}', "Specify times in 24hr clock mode with hours and minutes separated by a colon"]
-                default: "17:00"
+              - label: 'To'
+                name: 'to'
+                widget: 'string'
+                pattern: ['[0-9]{1,2}:[0-9]{2}', 'Specify times in 24hr clock mode with hours and minutes separated by a colon']
+                default: '17:00'
                 required: false
-          - label: "Friday"
-            name: "friday"
-            widget: "object"
+          - label: 'Friday'
+            name: 'friday'
+            widget: 'object'
             collapsed: false
             fields:
-              - label: "Open?"
-                name: "open"
-                widget: "boolean"
+              - label: 'Open?'
+                name: 'open'
+                widget: 'boolean'
                 default: true
                 required: false
-              - label: "From"
-                name: "from"
-                widget: "string"
-                pattern: ['[0-9]{1,2}:[0-9]{2}', "Specify times in 24hr clock mode with hours and minutes separated by a colon"]
-                default: "9:00"
+              - label: 'From'
+                name: 'from'
+                widget: 'string'
+                pattern: ['[0-9]{1,2}:[0-9]{2}', 'Specify times in 24hr clock mode with hours and minutes separated by a colon']
+                default: '9:00'
                 required: false
-              - label: "To"
-                name: "to"
-                widget: "string"
-                pattern: ['[0-9]{1,2}:[0-9]{2}', "Specify times in 24hr clock mode with hours and minutes separated by a colon"]
-                default: "17:00"
+              - label: 'To'
+                name: 'to'
+                widget: 'string'
+                pattern: ['[0-9]{1,2}:[0-9]{2}', 'Specify times in 24hr clock mode with hours and minutes separated by a colon']
+                default: '17:00'
                 required: false
-          - label: "Saturday"
-            name: "saturday"
-            widget: "object"
+          - label: 'Saturday'
+            name: 'saturday'
+            widget: 'object'
             collapsed: false
             fields:
-              - label: "Open?"
-                name: "open"
-                widget: "boolean"
+              - label: 'Open?'
+                name: 'open'
+                widget: 'boolean'
                 required: false
                 default: true
-              - label: "From"
-                name: "from"
-                widget: "string"
-                pattern: ['[0-9]{1,2}:[0-9]{2}', "Specify times in 24hr clock mode with hours and minutes separated by a colon"]
-                default: "9:00"
+              - label: 'From'
+                name: 'from'
+                widget: 'string'
+                pattern: ['[0-9]{1,2}:[0-9]{2}', 'Specify times in 24hr clock mode with hours and minutes separated by a colon']
+                default: '9:00'
                 required: false
-              - label: "To"
-                name: "to"
-                widget: "string"
-                pattern: ['[0-9]{1,2}:[0-9]{2}', "Specify times in 24hr clock mode with hours and minutes separated by a colon"]
-                default: "17:00"
+              - label: 'To'
+                name: 'to'
+                widget: 'string'
+                pattern: ['[0-9]{1,2}:[0-9]{2}', 'Specify times in 24hr clock mode with hours and minutes separated by a colon']
+                default: '17:00'
                 required: false
-          - label: "Sunday"
-            name: "sunday"
-            widget: "object"
+          - label: 'Sunday'
+            name: 'sunday'
+            widget: 'object'
             collapsed: false
             fields:
-              - label: "Open?"
-                name: "open"
-                widget: "boolean"
+              - label: 'Open?'
+                name: 'open'
+                widget: 'boolean'
                 default: true
                 required: false
-              - label: "From"
-                name: "from"
-                widget: "string"
-                pattern: ['[0-9]{1,2}:[0-9]{2}', "Specify times in 24hr clock mode with hours and minutes separated by a colon"]
-                default: "9:00"
+              - label: 'From'
+                name: 'from'
+                widget: 'string'
+                pattern: ['[0-9]{1,2}:[0-9]{2}', 'Specify times in 24hr clock mode with hours and minutes separated by a colon']
+                default: '9:00'
                 required: false
-              - label: "To"
-                name: "to"
-                widget: "string"
-                pattern: ['[0-9]{1,2}:[0-9]{2}', "Specify times in 24hr clock mode with hours and minutes separated by a colon"]
-                default: "17:00"
+              - label: 'To'
+                name: 'to'
+                widget: 'string'
+                pattern: ['[0-9]{1,2}:[0-9]{2}', 'Specify times in 24hr clock mode with hours and minutes separated by a colon']
+                default: '17:00'
                 required: false

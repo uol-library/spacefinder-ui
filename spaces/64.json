@@ -25,12 +25,10 @@
         "break"
     ],
     "title": "IT Cluster - Social Sciences Building - 10.11",
-    "basic_info": "40 Seat Capacity. Campus Map Ref 82",
-    "description": "Big cluster room at the Social Sciences Building.Rows of desks with computers near a place to take a break . Perfect for studying between lectures on campus.",
-    "access": "Students",
+    "description": "Big cluster room at the Social Sciences Building. Rows of desks with computers near a place to take a break. Perfect for studying between lectures on campus. 40 seat capacity.",
+    "access": "University Staff and Students",
     "space_type": "IT Cluster",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Social Sciences building",
     "floor": "Level 10",
     "restricted": false,
@@ -41,6 +39,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17547",
+    "campusmap_ref": "82",
     "noise": "Strictly silent",
     "tags": [],
     "opening_hours": {

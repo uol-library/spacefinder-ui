@@ -27,12 +27,10 @@
         "break"
     ],
     "title": "IT Cluster - Psychology (37 and 41 University Road) - 1.43",
-    "basic_info": "48 Seat Capacity. Campus Map Ref 37",
-    "description": "Circular bright clusters room with pretty views on campus available 24hours.Access to water fountain.",
-    "access": "Students",
+    "description": "Circular bright clusters room with pretty views on campus available 24 hours. Access to water fountain. 48 seat capacity.",
+    "access": "University Staff and Students",
     "space_type": "IT Cluster",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Psychology (37 and 41 University Road)",
     "floor": "First Floor",
     "restricted": "",
@@ -43,6 +41,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17579",
+    "campusmap_ref": "37",
     "noise": "Whispers",
     "tags": [],
     "opening_hours": {

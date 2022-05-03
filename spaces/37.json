@@ -30,12 +30,10 @@
         "break"
     ],
     "title": "General Seating Areas - Sir William Henry Bragg Building - Ground Floor Breakout Area (Room G.08)",
-    "basic_info": "Ground floor Sir W H Bragg Building, Campus Map ref 53",
-    "description": "Modern big break out area with café shop nearby. Social, modern and very comfortable for people to study or even relax.",
+    "description": "Modern big break out area with café shop nearby. Social, modern and very comfortable for people to study and relax.",
     "access": "Anyone (public)",
     "space_type": "General Seating Area",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Sir William Henry Bragg Building",
     "floor": "Ground floor",
     "restricted": false,
@@ -46,6 +44,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17545",
+    "campusmap_ref": "53",
     "noise": "Animated discussion",
     "tags": [],
     "opening_hours": {

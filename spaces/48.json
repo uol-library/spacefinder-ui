@@ -23,12 +23,10 @@
         "toilets"
     ],
     "title": "IT Cluster - Clarendon Building - G07",
-    "basic_info": " Campus Map Ref 20",
-    "description": "classroom with 4 computer rows. Comfortable chairs.",
-    "access": "Students",
+    "description": "Classroom with 4 computer rows. Comfortable chairs.",
+    "access": "University Staff and Students",
     "space_type": "IT Cluster",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Clarendon building",
     "floor": "Ground",
     "restricted": false,
@@ -39,6 +37,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17385",
+    "campusmap_ref": "20",
     "noise": "Strictly silent",
     "tags": [],
     "opening_hours": {

@@ -36,11 +36,9 @@
         "break"
     ],
     "title": "Edward Boyle 8th floor",
-    "basic_info": "",
     "description": "Study space for people to attend seminars and being able to participate, study with friends and explore multiple journals. Available bookable study spaces / meeting rooms",
-    "access": "Students",
+    "access": "University Staff and Students",
     "space_type": "Library space",
-    "library": true,
     "address": "University of Leeds, Leeds LS2 9JT",
     "building": "Edward Boyle library",
     "floor": "Level 8",
@@ -52,6 +50,7 @@
     "twitter_screen_name": "UoLLibrary",
     "facebook_url": "https://www.facebook.com/leedsuniversitylibrary",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17411",
+    "campusmap_ref": "83",
     "noise": "Background chatter",
     "tags": [],
     "opening_hours": {

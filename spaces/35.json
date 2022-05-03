@@ -25,12 +25,10 @@
         "break"
     ],
     "title": "General Seating Areas - Electronic and Electrical Engineering - Ground Floor Foyer",
-    "basic_info": "Ground Floor Electronic and Electrical Engineering.  Campus Map Ref 51",
-    "description": "Big bright foyer with couches and circular tables with chairs is a perfect place to take a break or study relaxed alone or in a group .",
+    "description": "Big bright foyer with couches and circular tables with chairs. A perfect place to relax, take a break or study alone or in a group.",
     "access": "Anyone (public)",
     "space_type": "General Seating Area",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Electronic and Electrical Engineering",
     "floor": "Ground floor",
     "restricted": false,
@@ -41,6 +39,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17412",
+    "campusmap_ref": "51",
     "noise": "Animated discussion",
     "tags": [],
     "opening_hours": {

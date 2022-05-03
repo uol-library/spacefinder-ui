@@ -23,13 +23,11 @@
         "break"
     ],
     "title": "General Seating Areas - Parkinson Building - Parkinson Court South",
-    "basic_info": "Ground Floor Parkinson Building. Campus Map Ref 60",
-    "description": "historic atmosphere with tables and chairs. Occationally  busy but mostly silent. At the entrance of parkinson building ",
+    "description": "Historic atmosphere with tables and chairs. Occationally busy but mostly silent. At the entrance of Parkinson building.",
     "access": "Anyone (public)",
     "space_type": "General Seating Area",
     "building": "Parkinson Building",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "floor": "Ground floor",
     "restricted": false,
     "restriction": "",
@@ -39,6 +37,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17525",
+    "campusmap_ref": "60",
     "noise": "Background chatter",
     "tags": [],
     "opening_hours": {

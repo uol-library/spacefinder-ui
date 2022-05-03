@@ -26,12 +26,10 @@
         "toilets"
     ],
     "title": "General Seating Areas - Mechanical Engineering - Second floor seating (room 240)",
-    "basic_info": "Second Floor Mechanical Engineering.  Campus Map Ref 50",
-    "description": "Comfortable small studying area with couches and views from big windows.",
+    "description": "Comfortable small study area with couches and views from big windows.",
     "access": "Anyone (public)",
     "space_type": "General Seating Area",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Electronic and Electrical Engineering",
     "floor": "Second floor",
     "restricted": false,
@@ -42,6 +40,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17507",
+    "campusmap_ref": "50",
     "noise": "Whispers",
     "tags": [],
     "opening_hours": {

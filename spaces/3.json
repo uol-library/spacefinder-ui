@@ -27,12 +27,10 @@
         "break"
     ],
     "title": "Edit Room Café in Edward Boyle Library",
-    "basic_info": "Level 9 Edward Boyle Library Campus Map ref 83",
     "description": "Situated on the ground floor of the Edward Boyle Library, the cafe provides an eclectic mix of grab and go food and drinks for everyone to enjoy at any time of the day.",
     "access": "Anyone (public)",
     "space_type": "Café",
-    "library": true,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Edward Boyle Library",
     "floor": "Level 9 (ground floor)",
     "restricted": "",
@@ -43,6 +41,7 @@
     "twitter_screen_name": "GreatFoodLeeds",
     "facebook_url": "https://www.facebook.com/greatfoodleeds",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17411",
+    "campusmap_ref": "83",
     "noise": "Animated discussion",
     "tags": [],
     "opening_hours": {

@@ -1,17 +1,30 @@
 {
     "id": 15,
     "location": "{\"type\":\"Point\",\"coordinates\":[-1.553855264,53.80745464]}",
-    "work": [],
-    "atmosphere": [],
+    "work": [
+        "private",
+        "group"
+    ],
+    "atmosphere": [
+        "disciplined",
+        "social"
+    ],
     "images": [],
-    "facilities": [],
+    "facilities": [
+        "large_desks",
+        "free_wifi",
+        "laptops_allowed",
+        "sockets",
+        "signal",
+        "whiteboards",
+        "toilets",
+        "break"
+    ],
     "title": "Seminal Communal Areas - Baines Wing - G.16",
-    "basic_info": "16 Seat Capacity. Ground Floor Baines Wing. Campus Map Ref 58",
-    "description": "",
-    "access": "Students",
+    "description": "16 Seat Capacity",
+    "access": "University Staff and Students",
     "space_type": "Seminar room",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Baines Wing",
     "floor": "Ground floor",
     "restricted": "",
@@ -22,6 +35,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17343",
+    "campusmap_ref": "58",
     "tags": [],
     "opening_hours": {
         "monday": {

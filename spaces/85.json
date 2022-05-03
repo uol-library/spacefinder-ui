@@ -28,12 +28,10 @@
         "break"
     ],
     "title": "Loma Express Dentistry",
-    "basic_info": "Level 6, Worsley building",
     "description": "Located on level six of the Worsley building, the café provides a range of grab and go food and drinks. With a focus on healthy, field-to-fork food options, LOMA Express stocks unique salad and sandwich combinations, and fresh herbal infusion teas and other delicious LOMA Express products made fresh each day.",
     "access": "Anyone (public)",
     "space_type": "Café",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Worsley building",
     "floor": "Level 6",
     "restricted": false,
@@ -44,6 +42,7 @@
     "twitter_screen_name": "GreatFoodLeeds",
     "facebook_url": "https://www.facebook.com/greatfoodleeds",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=18477",
+    "campusmap_ref": "95",
     "noise": "Animated discussion",
     "tags": [],
     "opening_hours": {

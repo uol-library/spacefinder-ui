@@ -3,12 +3,13 @@
  */
 const fs = require('fs');
 const path = require('path');
+
 const spacefiles = fs.readdirSync( path.resolve( __dirname, '../spaces' ), { encoding: 'utf8' } );
 spacefiles.forEach( filename => {
     if ( filename !== '.' && filename !== '..' ) {
         let spaceData = fs.readFileSync( path.resolve( __dirname, '../spaces/', filename ) );
         const spaceJSON = JSON.parse( spaceData );
-        let geoJSON = JSON.parse( spaceJSON.location );
+        /*let geoJSON = JSON.parse( spaceJSON.location );
         let newGeoJSON = {
             type: 'Point',
             coordinates: [ geoJSON.coordinates[1], geoJSON.coordinates[0] ]
@@ -25,7 +26,7 @@ spacefiles.forEach( filename => {
         spaceJSON.opening_hours = getTimesForSpace( spaceJSON.id );
         if ( spaceJSON.opening_hours == false ) {
             console.log( spaceJSON.id + ": " + spaceJSON.title );
-        }
+        }*/
         fs.writeFile( path.resolve( __dirname, '../_data/leeds/processed/'+spaceJSON.id+'.json' ), JSON.stringify( spaceJSON, null, '    ' ), err => {
             if (err) {
                 console.error( err );

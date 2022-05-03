@@ -25,12 +25,10 @@
         "break"
     ],
     "title": "Outside the Edward Boyle Library Edit Room café",
-    "basic_info": "Outdoors next to the Edward Boyle Library. ",
     "description": "Outdoor seating situated outside the Edward Boyle Library",
     "access": "Anyone (public)",
     "space_type": "Outdoor Seating Area",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Edward Boyle Library",
     "floor": "Ground floor",
     "restricted": "",
@@ -41,6 +39,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "",
+    "campusmap_ref": "",
     "noise": "Animated discussion",
     "tags": [],
     "opening_hours": {

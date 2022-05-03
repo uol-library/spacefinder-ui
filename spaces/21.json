@@ -27,12 +27,10 @@
         "toilets"
     ],
     "title": "Seminal Communal Areas - Michael Sadler Building - 1.01",
-    "basic_info": "24 Seat Capacity. First Floor Michael Sadler Building. Campus Map Ref 78",
-    "description": "Study space with nice views and frames on the walls.",
-    "access": "Students",
+    "description": "Study space with nice views and frames on the walls. 24 seat capacity.",
+    "access": "University Staff and Students",
     "space_type": "Seminar room",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Michael Sadler Building",
     "floor": "First floor",
     "restricted": false,
@@ -43,6 +41,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17512",
+    "campusmap_ref": "78",
     "noise": "Whispers",
     "tags": [],
     "opening_hours": {

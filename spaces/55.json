@@ -28,12 +28,10 @@
         "break"
     ],
     "title": "IT Cluster - Fine Art, History of Art and Cultural Studies - G29 (West Teaching Labs)",
-    "basic_info": "31 Seat Capacity. Campus Map Ref 38",
-    "description": "Inspiring cluster room surrounded by big windows with high views of campus . ",
-    "access": "Students",
+    "description": "Inspiring cluster room surrounded by big windows with high views of the University campus. 31 seat capacity.",
+    "access": "University Staff and Students",
     "space_type": "IT Cluster",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "History Building",
     "floor": "Ground",
     "restricted": false,
@@ -44,6 +42,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17451",
+    "campusmap_ref": "38",
     "noise": "Strictly silent",
     "tags": [],
     "opening_hours": {

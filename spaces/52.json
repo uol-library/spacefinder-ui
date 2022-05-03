@@ -23,12 +23,10 @@
         "toilets"
     ],
     "title": "IT Cluster - E C Stoner Building - 6.68",
-    "basic_info": "58 Seat Capacity. Campus Map Ref 73",
-    "description": "classrooms of big cluster with multiple computers and comfortable chairs. ",
-    "access": "Students",
+    "description": "Large cluster with multiple computers and comfortable chairs. 58 seat capacity",
+    "access": "University Staff and Students",
     "space_type": "IT Cluster",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "E C Stoner Building",
     "floor": "Level 6",
     "restricted": false,
@@ -39,6 +37,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17406",
+    "campusmap_ref": "73",
     "noise": "Strictly silent",
     "tags": [],
     "opening_hours": {

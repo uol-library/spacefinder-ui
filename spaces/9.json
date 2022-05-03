@@ -28,12 +28,10 @@
         "break"
     ],
     "title": "Loma Café",
-    "basic_info": "Level 9 Worsley Building",
     "description": "LOMA is a unique offering on campus serving up specially selected craft coffee, delicious drinks and handcrafted salads and sandwiches. With a focus on healthy, field-to-fork food options, LOMA stands apart from the other food outlets on campus with unique salad and sandwich combinations you will struggle to find elsewhere.",
     "access": "Anyone (public)",
     "space_type": "Café",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Worsley Building",
     "floor": "Level 9",
     "restricted": false,
@@ -44,6 +42,7 @@
     "twitter_screen_name": "GreatFoodLeeds",
     "facebook_url": "https://www.facebook.com/greatfoodleeds",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17591",
+    "campusmap_ref": "95",
     "noise": "Whispers",
     "tags": [],
     "opening_hours": {

@@ -24,12 +24,10 @@
         "toilets"
     ],
     "title": "Seminal Communal Areas - Parkinson Building - 2.25",
-    "basic_info": "20 Seat Capacity. Second Floor Michael Sadler Building. Campus Map Ref 78",
-    "description": "Seminar room available for individual study with great view to university campus.",
-    "access": "Students",
+    "description": "Seminar room available for individual study with a great view of the University campus. 20 Seat Capacity.",
+    "access": "University Staff and Students",
     "space_type": "Seminar room",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Parkinson Building",
     "floor": "Second floor",
     "restricted": false,
@@ -40,6 +38,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17525",
+    "campusmap_ref": "78",
     "noise": "Whispers",
     "tags": [],
     "opening_hours": {

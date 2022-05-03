@@ -30,12 +30,10 @@
         "break"
     ],
     "title": "IT Cluster - Psychology (37 and 41 University Road) - 1.45",
-    "basic_info": "58 Seat Capacity. Campus Map Ref 37",
-    "description": "Rows of IT clusters on a theater style.",
-    "access": "Students",
+    "description": "Rows of IT clusters in a theatre style. 58 seat capacity.",
+    "access": "University Staff and Students",
     "space_type": "IT Cluster",
-    "library": false,
-    "address": "University of Leeds Campus, Woodhouse Lane, Leeds LS2 9JT",
+    "address": "University of Leeds, LS2 9JT",
     "building": "Psychology (37 and 41 University Road)",
     "floor": "First floor",
     "restricted": "",
@@ -46,6 +44,7 @@
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17579",
+    "campusmap_ref": "37",
     "noise": "Strictly silent",
     "tags": [],
     "opening_hours": {
