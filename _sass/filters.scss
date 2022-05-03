@@ -16,7 +16,7 @@
     input[type=search] {
         width: 100%;
         padding: .5rem;
-        border: 1px solid $buttonborder-focus;
+        border: 1px solid $filterbuttonborder-focus;
         border-radius: 3px;
     }
     fieldset.filter-options {
@@ -44,9 +44,9 @@
                 background: $filterlabelbg;
                 color: $filterlabelcolor;
                 margin-bottom: 2px;
-                border: 1px solid $buttonborder;
+                border: 1px solid $filterbuttonborder;
                 &.focus {
-                    border: 1px solid $buttonborder-focus;
+                    border: 1px solid $filterbuttonborder-focus;
                     border-radius: 3px;
                 }
                 label {

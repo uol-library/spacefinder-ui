@@ -32,7 +32,7 @@ collections:
       - label: 'Type'
         name: 'space_type'
         widget: 'select'
-        options: ['Café','General Seating Area','IT Cluster','Library space','Outdoor Seating Area','Seminar room']
+        options: ['Café','General Seating Area','IT Cluster','Library','Outdoor Seating Area','Seminar room']
         required: true
       - label: 'Address'
         name: 'address'

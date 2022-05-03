@@ -5,22 +5,22 @@
     text-decoration: none;
     font-size: 0.9rem;
     margin-top: 6px;
-    background: $buttonbg;
-    color: $buttoncolor;
+    background: $filterbuttonbg;
+    color: $filterbuttoncolor;
     cursor: pointer;
     padding: .5rem .2rem;
-    border: 1px solid $buttonborder;
+    border: 1px solid $filterbuttonborder;
     &.active {
-        background: $buttonbg-active;
-        color: $buttoncolor-active;
+        background: $filterbuttonbg-active;
+        color: $filterbuttoncolor-active;
     }
     &:focus {
-        border: 1px solid $buttonborder-focus;
+        border: 1px solid $filterbuttonborder-focus;
     }
     &[disabled] {
         cursor: default;
-        background: $buttonbg-disabled;
-        color: $buttoncolor-disabled;
+        background: $filterbuttonbg-disabled;
+        color: $filterbuttoncolor-disabled;
     }
     &.icon-distance {
         &::before {
@@ -38,25 +38,25 @@
 .geo-button {
     padding: 0;
     font-size: 26px;
-    background: $buttonbg;
-    color: $buttoncolor;
+    background: $filterbuttonbg;
+    color: $filterbuttoncolor;
     user-select: none;
     cursor: pointer;
     &::before {
         margin:0;
     }
     &:hover {
-        background: $buttonbg-hover;
-        color: $buttoncolor-hover;
+        background: $filterbuttonbg-hover;
+        color: $filterbuttoncolor-hover;
     }
     &.active {
-        background: $buttonbg-active;
-        color: $buttoncolor-active;
+        background: $filterbuttonbg-active;
+        color: $filterbuttoncolor-active;
     }
     &[disabled] {
         cursor: default;
-        background: $buttonbg-disabled;
-        color: $buttoncolor-disabled;
+        background: $filterbuttonbg-disabled;
+        color: $filterbuttoncolor-disabled;
     }
 }
 .button {
@@ -68,22 +68,22 @@
     border-radius: 6px;
     cursor: pointer;
     text-decoration: none;
-    border: 2px solid $color-black;
-    color: $color-white;
-    background: $color-black;
+    border: 2px solid $buttonborder;
+    color: $buttoncolor;
+    background: $buttonbg;
     &-primary {
-        border: 2px solid $color-brand-2--dark;
-        color: $color-white;
-        background: $color-brand-2--dark;
+        border: 2px solid $buttonborder-primary;
+        color: $buttoncolor-primary;
+        background: $buttonbg-primary;
     }
     &-secondary {
-        border: 2px solid $color-brand-2--dark;
-        color: $color-brand-2--dark;
-        background: $color-white;
+        border: 2px solid $buttonborder-secondary;
+        color: $buttoncolor-secondary;
+        background: $buttonbg-secondary;
     }
     &:hover, &:active {
         text-decoration: none;
-        box-shadow: 0 3px 6px 0 rgba($color-black, 0.15), 0 2px 4px 0 rgba($color-black, 0.12);
+        box-shadow: 0 3px 6px 0 rgba($button-shadow, 0.15), 0 2px 4px 0 rgba($button-shadow, 0.12);
     }
 }
 #listfilters {
@@ -91,8 +91,8 @@
     .filter-term {
         font-size: .9em;
         border: none;
-        border-bottom: 1px dashed $buttoncolor;
-        background: $buttonbg;
+        border-bottom: 1px dashed $filterbuttoncolor;
+        background: $filterbuttonbg;
         cursor: pointer;
         &.icon-remove:after {
             content: '\e602';

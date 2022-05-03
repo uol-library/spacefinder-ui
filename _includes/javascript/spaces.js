@@ -323,7 +323,18 @@ function renderList() {
         spaceContainer.setAttribute('class', 'list-space ' + space.classes );
         let spaceHTML = '<h2><a href="' + space.link + '" class="space-title" data-spaceid="' + space.id + '">' + space.title + '</a></h2>';
         spaceHTML += '<h3><span class="space-type space-type-' + space.space_type.toLowerCase() + '">' + space.space_type + '</span>';
-        spaceHTML += '<span class="address">' + space.address + '</span></h3>';
+        spaceHTML += '<span class="distance">(1,353 metres)</span>';
+        let loc = '';
+        if ( space.floor !== "" ) {
+            loc += '<span class="address-floor">' + space.floor + '</span>, ';
+        }
+        if ( space.building !== "" ) {
+            loc += '<span class="address-building">' + space.building + '</span>, ';
+        }
+        if ( space.address !== "" ) {
+            loc += '<span class="address-location">' + space.address + '</span>';
+        }
+        spaceHTML += '<span class="address">' + loc + '</span></h3>';
         spaceHTML += '<div class="space-details">';
         if ( space.images.length ) {
             spaceHTML += '<div data-imgsrc="' + space.images[0] + '" class="space-image lazy"></div>';
@@ -352,6 +363,7 @@ function renderAdditionalInfo( spaceid ) {
     if ( spaceid !== false ) {
         /* get space data */
         let space = getSpaceById( spaceid );
+        let spaceNode = getSpaceNodeById( spaceid );
         let spaceHTML = '';
         if ( space.booking_url ) {
             spaceHTML += '<p><a class="button" href="'+space.booking_url+'">Book a space</a></p>';
@@ -362,13 +374,26 @@ function renderAdditionalInfo( spaceid ) {
             spaceHTML += '<li class="icon-link"><a href="'+space.url+'">'+space.url+'</a></li>';
         }
         if ( space.campusmap_url != "" ) {
-            spaceHTML += '<li class="icon-uol-logo-mark"><a href="'+space.campusmap_url+'">'+space.campusmap_url+'</a><li>';
+            let campusmap_ref = space.campusmap_ref !== "" ? " (map reference "+space.campusmap_ref+")": "";
+            spaceHTML += '<li class="icon-uol-logo-mark"><a target="campusmap" href="'+space.campusmap_url+'">View on campus map</a>' + campusmap_ref + '<li>';
         }
         spaceHTML += '<li class="icon-access">Open to '+space.access+'<li>';
         spaceHTML += '</ul></section>';
 
-        //spaceHTML += '<section class="section-opening"><h4>Opening Times</h4>';
-        //spaceHTML += '</ul></section>';
+        spaceHTML += '<section class="section-opening"><h4>Opening Times</h4>';
+        spaceHTML += '<p class="' + spaceNode.getAttribute('data-openclass') + ' icon-time-short">' + spaceNode.getAttribute('data-openmsg') + '</p>';
+        spaceHTML += '<ul class="opening-times">';
+        ["monday","tuesday","wednesday","thursday","friday","saturday","sunday"].forEach( (day, idx) => {
+            let today = new Date().getDay();
+            let todayidx = ( ( idx + 1 ) < 7 ) ? ( idx + 1 ): 0;
+            let istodayclass = ( todayidx === today ) ? ' class="today"': '';
+            if ( space.opening_hours[day].open ) {
+                spaceHTML += '<li'+istodayclass+'><span class="dayname">'+ day.charAt(0).toUpperCase() + day.slice(1) + '</span> <span class="opening">' + space.opening_hours[day].from + ' - ' + space.opening_hours[day].to +'</span></li>';
+            } else {
+                spaceHTML += '<li'+istodayclass+'><span class="dayname">'+ day.charAt(0).toUpperCase() + day.slice(1) + '</span> <span class="opening">Closed</span></li>';
+            }
+        });
+        spaceHTML += '</ul></section>';
         if ( space.phone_number !== "" || space.twitter_screen_name !== "" || space.facebook_url !== "" ) {
             spaceHTML += '<section class="section-facts"><h4>Contact</h4><ul class="bulleticons">';
             if ( space.phone_number !== "" ) {
@@ -440,13 +465,9 @@ function checkOpeningHours() {
     let daynames = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
     let todaysday = daynames[ today.getDay() ];
     let timenow = ( today.getHours() * 100 ) + today.getMinutes();
-    function getTimeFromString( str ) {
-        let parts = str.split(':');
-        return ( parseInt( parts[0] ) * 100 ) + parseInt( parts[1] );
-    }
     spacefinder.spaces.forEach( (space, index) => {
         let openmsg = '';
-        let isopen = 'no';
+        let openclass = 'currently-closed';
         if ( space.opening_hours ) {
             if ( space.opening_hours[todaysday].open ) {
                 let open_from = getTimeFromString( space.opening_hours[todaysday].from );
@@ -461,10 +482,12 @@ function checkOpeningHours() {
                     }
                     openingin += openinmins + 'mins'
                     openmsg = "Currently closed (opens in "+openingin+")";
+                    openclass = 'opening-later';
                 } else if ( open_to < timenow ) {
+                    openclass = 'closed';
                     openmsg = "Currently closed";
                 } else {
-                    isopen = 'yes';
+                    openclass = 'open';
                     openmsg = "Currently open";
                 }
             } else {
@@ -472,11 +495,16 @@ function checkOpeningHours() {
             }
         }
         document.querySelector('[data-id="' + space.id + '"]').setAttribute('data-openmsg', openmsg );
-        document.querySelector('[data-id="' + space.id + '"]').setAttribute('data-isopen', isopen );
+        document.querySelector('[data-id="' + space.id + '"]').setAttribute('data-openclass', openclass );
     });
     // call every 5 minutes
     setInterval( checkOpeningHours, (5*60*1000) );
 }
+function getTimeFromString( str ) {
+    let parts = str.split(':');
+    return ( parseInt( parts[0] ) * 100 ) + parseInt( parts[1] );
+}
+
 
 /**
  * Lazy loads images (i.e. only retrieves them from their URLs when they are
