@@ -10,9 +10,7 @@ spacefiles.forEach( filename => {
     if ( filename !== '.' && filename !== '..' ) {
         var data = fs.readFileSync( path.resolve( __dirname, '../spaces/', filename ) );
         var jsondata = JSON.parse( data );
-        console.log(jsondata);
         var geodata = JSON.parse( jsondata.location );
-        console.log(geodata.coordinates);
         if ( geodata && geodata.coordinates && geodata.coordinates.length == 2 ) {
             jsondata.lat = geodata.coordinates[1];
             jsondata.lng = geodata.coordinates[0];
