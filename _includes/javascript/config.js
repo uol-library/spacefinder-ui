@@ -22,7 +22,12 @@ const spacefinder = {
         composed: false,
     }),
     spaceProperties: {
-        'work_in_a_library': 'In a library',
+        'type_caf': 'Café',
+        'type_generalseatingarea': 'General Seating Area',
+        'type_itcluster': 'IT Cluster',
+        'type_library': 'Library',
+        'type_outdoorseatingarea': 'Outdoor Seating Area',
+        'type_seminarroom': 'Seminar room',
         'work_private': 'Alone, in private',
         'work_close': 'Where others are working',
         'work_friends': 'With friends',

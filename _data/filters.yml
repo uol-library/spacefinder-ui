@@ -1,9 +1,25 @@
+- key: "type"
+  label: "Space type"
+  exclusive: false
+  open: false
+  options:
+    - key: "caf"
+      label: "Café"
+    - key: "generalseatingarea"
+      label: "General Seating Area"
+    - key: "itcluster"
+      label: "IT Cluster"
+    - key: "library"
+      label: "Library"
+    - key: "outdoorseatingarea"
+      label: "Outdoor Seating Area"
+    - key: "seminarroom"
+      label: "Seminar room"
 - key: "work"
   label: "I want to work..."
   exclusive: true
+  open: true
   options:
-    - key: "in_a_library"
-      label: "In a library"
     - key: "private"
       label: "Alone, in private"
     - key: "close"
@@ -15,6 +31,7 @@
 - key: "atmosphere"
   label: "Atmosphere"
   exclusive: false
+  open: true
   options:
     - key: "disciplined"
       label: "Disciplined"
@@ -35,6 +52,7 @@
 - key: "noise"
   label: "Noise levels"
   exclusive: true
+  open: true
   options:
     - key: "strictlysilent"
       label: "Strictly silent"
@@ -54,6 +72,7 @@
 - key: "facility"
   label: "Facilities"
   exclusive: false
+  open: true
   options:
     - key: "food_drink"
       label: "Food &amp; drink allowed"

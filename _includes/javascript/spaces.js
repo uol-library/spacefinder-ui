@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     } else {
                         let regex = filtergroup.name+'_('+filtergroup.value.join('|')+')';
+                        console.log(regex);
                         if ( ! el.className.match(regex) ) {
                             showEl = false;
                         }
@@ -85,8 +86,7 @@ function updateListFilterMessage( filters ) {
                 });
                 searchmessage += termlist.join(' or ') + '</p>';
             } else {
-                let pl = f.value.length > 1 ? 's': '';
-                filtermessage += '<p>Filtering spaces by <em>' + f.name + '</em> term' + pl + ': ';
+                filtermessage += '<p>Filtering spaces by <em>' + f.name + '</em>: ';
                 let termlist = [];
                 f.value.forEach( term => {
                     termlist.push('<button class="filter-term icon-remove" data-termid="' + f.name + '_' + term + '">'+spacefinder.spaceProperties[ f.name + '_' + term ]+'</button>');
@@ -320,9 +320,9 @@ function renderList() {
         spaceContainer = document.createElement('div');
         spaceContainer.setAttribute('data-id', space.id );
         spaceContainer.setAttribute('data-sortalpha', space.title.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() );
-        spaceContainer.setAttribute('class', 'list-space ' + space.classes );
+        spaceContainer.setAttribute('class', space.classes );
         let spaceHTML = '<h2><a href="' + space.link + '" class="space-title" data-spaceid="' + space.id + '">' + space.title + '</a></h2>';
-        spaceHTML += '<h3><span class="space-type space-type-' + space.space_type.toLowerCase() + '">' + space.space_type + '</span>';
+        spaceHTML += '<h3><span class="space-type space-type-' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + '">' + space.space_type + '</span>';
         spaceHTML += '<span class="distance">(1,353 metres)</span>';
         let loc = '';
         if ( space.floor !== "" ) {
@@ -426,7 +426,10 @@ function renderAdditionalInfo( spaceid ) {
  * @return {String} classList Space separated list of classnames
  */
 function getClassList( space ) {
-    var classList = '';
+    var classList = 'list-space ';
+    if ( space.space_type ) {
+        classList += 'type_' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + ' ';
+    }
     if (space.work.length){
         classList += 'work_'+space.work.join(' work_')+' ';
     }
@@ -438,9 +441,6 @@ function getClassList( space ) {
     }
     if (space.noise) {
         classList += 'noise_'+space.noise.replace(/\W/g, '').toLowerCase();
-    }
-    if (space.type) {
-        classList += 'type_'+space.space-type.replace(/\W/g, '').toLowerCase();
     }
     return classList;
 }

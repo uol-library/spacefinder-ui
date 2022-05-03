@@ -17,11 +17,20 @@
                 {%- else -%}
                     {%- assign excl = '' -%}
                 {%- endif -%}
+                {%- assign open = 'false' -%}
+                {%- assign hidden = 'true' -%}
+                {%- assign hiddenAttr = ' hidden' -%}
+                {%- if filter.open -%}
+                    {%- assign open = 'true' -%}
+                    {%- assign hidden = 'false' -%}
+                    {%- assign hiddenAttr = '' -%}
+                {%- endif -%}
+
                 <fieldset class="filter-options {{ filter.key }}-filter-options accordion">
                     <legend>
-                        <button type="button" class="accordion-trigger" id="trigger-{{ filter.key }}" aria-controls="filters-{{ filter.key }}" aria-expanded="true" tabindex="0"><span>{{ filter.label }}</span></button>
+                        <button type="button" class="accordion-trigger" id="trigger-{{ filter.key }}" aria-controls="filters-{{ filter.key }}" aria-expanded="{{ open }}" tabindex="0"><span>{{ filter.label }}</span></button>
                     </legend>
-                    <ul id="filters-{{ filter.key }}" class="accordion-content" aria-hidden="false" aria-labelledby="trigger-{{ filter.key }}">
+                    <ul id="filters-{{ filter.key }}" class="accordion-content" aria-hidden="{{ hidden }}" aria-labelledby="trigger-{{ filter.key }}"{{hiddenAttr }}>
                     {%- for option in filter.options -%}
                         {%- assign icon = "icon-tick" -%}
                         {%- if option.icon -%}
