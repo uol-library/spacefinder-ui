@@ -13,7 +13,9 @@
         "social",
         "friendly"
     ],
-    "images": [],
+    "images": [
+        "/assets/photos/Fuse-Cafe.jpg"
+    ],
     "facilities": [
         "food_drink",
         "views",

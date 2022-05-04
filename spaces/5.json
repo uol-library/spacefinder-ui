@@ -12,7 +12,11 @@
         "relaxed",
         "cosy"
     ],
-    "images": [],
+    "images": [
+        "/assets/photos/Cafe-Maia1.jpg",
+        "/assets/photos/Cafe-Maia2.jpg",
+        "/assets/photos/Cafe-Maia3.jpg"
+    ],
     "facilities": [
         "food_drink",
         "daylight",

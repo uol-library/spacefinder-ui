@@ -175,7 +175,9 @@ function selectSpace( spaceid ) {
  * @param {boolean} scrollReset 
  */
 function deselectSpaces( scrollReset ) {
-    spacefinder.infoWindow.close();
+    if ( spacefinder.infoWindow ) {
+        spacefinder.infoWindow.close();
+    }
     document.querySelectorAll('.additionalInfo').forEach( el => {
         el.textContent = '';
     });
