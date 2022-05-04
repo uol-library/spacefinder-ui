@@ -60,8 +60,7 @@ function maybeSetupMap() {
             }
         }
         google.maps.event.addListener(spacefinder.infoWindow,'closeclick',function(){
-            deselectSpace( true );
-            recentreMap();
+            deselectSpaces(false);
         });
         fitAllBounds( spacefinder.mapBounds );
         document.dispatchEvent( new Event( 'sfmapready' ) );

@@ -14,7 +14,9 @@
         "social",
         "friendly"
     ],
-    "images": [],
+    "images": [
+        "/assets/photos/Esther-Simpson-Cafe.jpg"
+    ],
     "facilities": [
         "food_drink",
         "daylight",

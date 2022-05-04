@@ -12,7 +12,9 @@
         "social",
         "friendly"
     ],
-    "images": [],
+    "images": [
+        "/assets/photos/Baines-Wing-Cafe.jpg"
+    ],
     "facilities": [
         "food_drink",
         "daylight",

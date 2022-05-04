@@ -13,7 +13,9 @@
         "social",
         "friendly"
     ],
-    "images": [],
+    "images": [
+        "/assets/photos/1915.jpg"
+    ],
     "facilities": [
         "food_drink",
         "daylight",

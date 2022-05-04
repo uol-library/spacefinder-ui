@@ -14,7 +14,10 @@
         "social",
         "friendly"
     ],
-    "images": [],
+    "images": [
+        "/assets/photos/Caffe-Nero-Roger-Stevens1.jpg",
+        "/assets/photos/Caffe-Nero-Roger-Stevens2.jpg"
+    ],
     "facilities": [
         "food_drink",
         "daylight",

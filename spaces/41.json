@@ -11,7 +11,9 @@
         "modern",
         "social"
     ],
-    "images": [],
+    "images": [
+        "/assets/photos/Charles-Thackrah.jpg"
+    ],
     "facilities": [
         "food_drink",
         "daylight",

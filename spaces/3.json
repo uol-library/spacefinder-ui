@@ -1,6 +1,6 @@
 {
     "id": 3,
-    "location": "{\"type\":\"Point\",\"coordinates\":[-1.55472811,53.80615604]}",
+    "location": "{\"type\":\"Point\",\"coordinates\":[-1.5546372444373286,53.80605751185165]}",
     "work": [
         "close",
         "friends",
@@ -12,7 +12,9 @@
         "social",
         "friendly"
     ],
-    "images": [],
+    "images": [
+        "/assets/photos/Edit-Room.jpg"
+    ],
     "facilities": [
         "food_drink",
         "daylight",

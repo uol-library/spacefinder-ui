@@ -1,6 +1,6 @@
 {
     "id": 9,
-    "location": "{\"type\":\"Point\",\"coordinates\":[-1.5560946,53.8034799]}",
+    "location": "{\"type\":\"Point\",\"coordinates\":[-1.5559066355802778,53.80347902972122]}",
     "work": [
         "private",
         "close",
@@ -14,7 +14,9 @@
         "social",
         "friendly"
     ],
-    "images": [],
+    "images": [
+        "/assets/photos/Loma-Cafe.jpg"
+    ],
     "facilities": [
         "food_drink",
         "daylight",

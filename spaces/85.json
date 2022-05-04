@@ -1,6 +1,6 @@
 {
     "id": 85,
-    "location": "{\"type\":\"Point\",\"coordinates\":[-1.5557077,53.8035071]}",
+    "location": "{\"type\":\"Point\",\"coordinates\":[-1.5553239258361453,53.803461209927285]}",
     "work": [
         "private",
         "close",
@@ -14,7 +14,9 @@
         "social",
         "friendly"
     ],
-    "images": [],
+    "images": [
+        "/assets/photos/Loma-Express-Dentistry.jpg"
+    ],
     "facilities": [
         "food_drink",
         "daylight",

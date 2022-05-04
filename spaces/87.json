@@ -1,6 +1,6 @@
 {
     "id": 87,
-    "location": "{\"type\":\"Point\",\"coordinates\":[-1.5517565,53.8071273]}",
+    "location": "{\"type\":\"Point\",\"coordinates\":[-1.5517479706497481,53.807130152155715]}",
     "work": [
         "private",
         "close",
@@ -14,7 +14,9 @@
         "social",
         "friendly"
     ],
-    "images": [],
+    "images": [
+        "/assets/photos/Caffe-Nero-Laidlaw.jpg"
+    ],
     "facilities": [
         "food_drink",
         "daylight",

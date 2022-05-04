@@ -10,7 +10,12 @@
         "social",
         "friendly"
     ],
-    "images": [],
+    "images": [
+        "/assets/photos/Hugo-Camionette-Cafe1.jpg",
+        "/assets/photos/Hugo-Camionette-Cafe2.jpg",
+        "/assets/photos/Hugo-Camionette-Cafe3.jpg",
+        "/assets/photos/Hugo-Camionette-Cafe4.jpg"
+    ],
     "facilities": [
         "food_drink",
         "daylight",

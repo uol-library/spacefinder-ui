@@ -4,13 +4,23 @@
 const fs = require('fs');
 const path = require('path');
 
+/* what3words */
+const what3words = require("@what3words/api");
+const apiKey = '3EZMJ4IE';
+const config = {
+  host: 'https://api.what3words.com',
+  apiVersion: 'v3',
+}
+const client = what3words.ConvertTo3waClient.init(apiKey, config);
+
+
 const spacefiles = fs.readdirSync( path.resolve( __dirname, '../spaces' ), { encoding: 'utf8' } );
 spacefiles.forEach( filename => {
     if ( filename !== '.' && filename !== '..' ) {
         let spaceData = fs.readFileSync( path.resolve( __dirname, '../spaces/', filename ) );
         const spaceJSON = JSON.parse( spaceData );
-        /*let geoJSON = JSON.parse( spaceJSON.location );
-        let newGeoJSON = {
+        let geoJSON = JSON.parse( spaceJSON.location );
+        /*let newGeoJSON = {
             type: 'Point',
             coordinates: [ geoJSON.coordinates[1], geoJSON.coordinates[0] ]
         };  
@@ -27,14 +37,19 @@ spacefiles.forEach( filename => {
         if ( spaceJSON.opening_hours == false ) {
             console.log( spaceJSON.id + ": " + spaceJSON.title );
         }*/
-        fs.writeFile( path.resolve( __dirname, '../_data/leeds/processed/'+spaceJSON.id+'.json' ), JSON.stringify( spaceJSON, null, '    ' ), err => {
-            if (err) {
-                console.error( err );
-                return;
-            }
-        });
+        client.run({ coordinates: { lat: geoJSON.coordinates[1],lng: geoJSON.coordinates[0] } })
+            .then( response => {
+                spaceJSON.w3w = response.words;
+                fs.writeFile( path.resolve( __dirname, '../_data/leeds/processed/'+spaceJSON.id+'.json' ), JSON.stringify( spaceJSON, null, '    ' ), err => {
+                    if (err) {
+                        console.error( err );
+                        return;
+                    }
+                });
+            });
     }
 });
+
 
 function getTimesForSpace( spaceid ) {
     // Affine, Baines Wing Cafe, Cafe Maia, Cafe seven, Esther Simpson, FUSE, Hugo, LOMA, Parkinson Court

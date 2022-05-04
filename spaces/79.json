@@ -1,6 +1,6 @@
 {
     "id": 79,
-    "location": "{\"type\":\"Point\",\"coordinates\":[-1.5512606,53.8067884]}",
+    "location": "{\"type\":\"Point\",\"coordinates\":[-1.5519026406650602,53.806631618358196]}",
     "work": [
         "private",
         "close"
@@ -9,7 +9,9 @@
         "disciplined",
         "cosy"
     ],
-    "images": [],
+    "images": [
+        "/assets/photos/Laidlaw-library2.jpg"
+    ],
     "facilities": [
         "food_drink",
         "daylight",

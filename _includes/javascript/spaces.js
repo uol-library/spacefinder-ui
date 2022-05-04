@@ -119,8 +119,7 @@ function activateSpaces() {
         el.addEventListener('click', event => {
             let spacenode = document.querySelector('[data-id="'+event.target.getAttribute('data-spaceid')+'"]');
             if ( spacenode.classList.contains('active') ) {
-                deselectSpace(false);
-                recentreMap();
+                deselectSpaces(false);
             } else {
                 selectSpace( event.target.getAttribute('data-spaceid') );
             }
@@ -175,7 +174,7 @@ function selectSpace( spaceid ) {
  * Deselects a space in the list, an optionally scrolls the list to the top
  * @param {boolean} scrollReset 
  */
-function deselectSpace( scrollReset ) {
+function deselectSpaces( scrollReset ) {
     spacefinder.infoWindow.close();
     document.querySelectorAll('.additionalInfo').forEach( el => {
         el.textContent = '';
@@ -256,7 +255,8 @@ function sortSpaces(e) {
     /* add back to the DOM */
     listitemsArray.forEach( el => {
         listcontainer.appendChild( el );
-    })
+    });
+    deselectSpaces(true);
 }
 
 /**
@@ -417,7 +417,7 @@ function renderAdditionalInfo( spaceid ) {
             }
             spaceHTML += '</ul></section>';
         }
-        spaceHTML += '<p><a class="button" href="#" onclick="deselectSpace(false);recentreMap();">Close</a></p>';
+        spaceHTML += '<p><a class="button" href="#" onclick="deselectSpaces(false);">Close</a></p>';
 
         getSpaceNodeById( spaceid ).querySelector('.additionalInfo').innerHTML = spaceHTML;
     }

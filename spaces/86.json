@@ -14,7 +14,9 @@
         "social",
         "friendly"
     ],
-    "images": [],
+    "images": [
+        "/assets/photos/Caffe-Nero-Business-School.jpg"
+    ],
     "facilities": [
         "food_drink",
         "daylight",

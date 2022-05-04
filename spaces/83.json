@@ -9,7 +9,9 @@
         "disciplined",
         "cosy"
     ],
-    "images": [],
+    "images": [
+        "/assets/photos/Brotherton-Library.jpg"
+    ],
     "facilities": [
         "food_drink",
         "free_wifi",

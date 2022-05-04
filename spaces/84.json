@@ -12,7 +12,9 @@
         "social",
         "friendly"
     ],
-    "images": [],
+    "images": [
+        "/assets/photos/Affine.jpg"
+    ],
     "facilities": [
         "food_drink",
         "daylight",

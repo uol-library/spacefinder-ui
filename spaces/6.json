@@ -1,6 +1,6 @@
 {
     "id": 6,
-    "location": "{\"type\":\"Point\",\"coordinates\":[-1.552688693,53.80776358]}",
+    "location": "{\"type\":\"Point\",\"coordinates\":[-1.5526256147622044,53.808126986172226]}",
     "work": [
         "private",
         "close",
@@ -13,7 +13,12 @@
         "cosy",
         "friendly"
     ],
-    "images": [],
+    "images": [
+        "/assets/photos/Parkinson-Court-Cafe4.jpg",
+        "/assets/photos/Parkinson-Court-Cafe2.jpg",
+        "/assets/photos/Parkinson-Court-Cafe1.jpg",
+        "/assets/photos/Parkinson-Court-Cafe3.jpg"    
+    ],
     "facilities": [
         "food_drink",
         "daylight",

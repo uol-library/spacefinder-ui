@@ -1,6 +1,6 @@
 {
     "id": 17,
-    "location": "{\"type\":\"Point\",\"coordinates\":[-1.553855264,53.80745464]}",
+    "location": "{\"type\":\"Point\",\"coordinates\":[-1.5535268369342148,53.807575812914095]}",
     "work": [
         "private",
         "friends",
@@ -10,7 +10,9 @@
         "disciplined",
         "friendly"
     ],
-    "images": [],
+    "images": [
+        "/assets/photos/Baines-Wing.jpg"
+    ],
     "facilities": [
         "daylight",
         "free_wifi",
