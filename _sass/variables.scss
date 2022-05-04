@@ -154,4 +154,25 @@ $buttonborder-secondary: $color-brand-2--dark;
 $buttonbg-secondary: $color-white;
 $button-shadow: $color-black;
 
-
+/* cookie consent */
+$cc-bg: $color-white;
+$cc-text: $color-black;
+$cc-btn-primary-bg: $color-black;
+$cc-btn-primary-text: $color-white;
+$cc-btn-primary-hover-bg: $color-black--dark;
+$cc-btn-secondary-bg: $color-warmgrey--faded;
+$cc-btn-secondary-text: $color-black;
+$cc-btn-secondary-hover-bg: $color-warmgrey--light;
+$cc-toggle-bg-off: $color-warmgrey--dark;
+$cc-toggle-bg-on: $color-black;
+$cc-toggle-bg-readonly: $color-warmgrey--light;
+$cc-toggle-knob-bg: $color-white;
+$cc-toggle-knob-icon-color: $color-warmgrey--faded;
+$cc-block-text: $color-black;
+$cc-cookie-category-block-bg: $color-grey--faded;
+$cc-cookie-category-block-bg-hover: $color-warmgrey--faded;
+$cc-section-border: $color-grey--faded;
+$cc-cookie-table-border: $color-grey--faded;
+$cc-overlay-bg: rgba(4, 6, 8, .85);
+$cc-webkit-scrollbar-bg: $color-warmgrey--light;
+$cc-webkit-scrollbar-bg-hover: $color-warmgrey;

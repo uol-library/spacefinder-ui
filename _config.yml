@@ -10,6 +10,8 @@ host: "localhost"
 photo_dir: "/spacefinder-ui/assets/photos/"
 google_maps_api_key: "AIzaSyBrAkYSJYjm6k9ultU71meFVsvxWR--97o"
 google_analytics: ""
+sass:
+  style: compressed
 plugins:
   - jekyll-feed
 
