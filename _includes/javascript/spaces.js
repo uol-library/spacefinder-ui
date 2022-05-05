@@ -11,17 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadSpaces();
     /* event listener for search + filter changes */
     document.addEventListener( 'viewfilter', applyFilters );
-    /* load space from URL anchor */
-    document.addEventListener('sfmapready', event => {
-        if ( window.location.hash ) {
-            let hp = window.location.hash.split('/');
-            if ( hp.length === 3 ) {
-                if ( hp[1] == 'space' ) {
-                    selectSpace(hp[2])
-                }
-            }
-        }
-    });
 });
 
 /**
@@ -119,7 +108,8 @@ function activateSpaces() {
         el.addEventListener('click', event => {
             let spacenode = document.querySelector('[data-id="'+event.target.getAttribute('data-spaceid')+'"]');
             if ( spacenode.classList.contains('active') ) {
-                deselectSpaces(false);
+                event.preventDefault();
+                //deselectSpaces(false);
             } else {
                 selectSpace( event.target.getAttribute('data-spaceid') );
             }
@@ -128,6 +118,11 @@ function activateSpaces() {
         el.addEventListener('blur', highlightSpaceInMap );
         el.addEventListener('mouseover', highlightSpaceInMap );
         el.addEventListener('mouseout', highlightSpaceInMap );
+    });
+    document.querySelectorAll('.list-space .closebutton').forEach( el => {
+        el.addEventListener('click', event => {
+            deselectSpaces(false);
+        });
     });
     /* add listener to buttons in filter and search status bar */
     document.addEventListener('click', e => {
@@ -167,7 +162,13 @@ function selectSpace( spaceid ) {
         sp.classList.remove('active');
     });
     spacenode.classList.add('active');
-    spacenode.scrollIntoView({behavior: "smooth"});
+    /* find distance from top of listcontainer */
+    let scrollingElement = document.getElementById('listcontainer');
+    let listContainer = document.getElementById('listcontent');
+    console.log(spacenode.offsetTop, listContainer.offsetTop);
+    let totop = spacenode.offsetTop - listContainer.offsetTop;
+    scrollingElement.scrollTo({top: totop, left: 0, behaviour: 'smooth'});
+    //spacenode.scrollIntoView();
 }
 
 /**
@@ -325,7 +326,7 @@ function renderList() {
         spaceContainer.setAttribute('data-id', space.id );
         spaceContainer.setAttribute('data-sortalpha', space.title.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() );
         spaceContainer.setAttribute('class', space.classes );
-        let spaceHTML = '<h2><a href="' + space.link + '" class="space-title" data-spaceid="' + space.id + '">' + space.title + '</a></h2>';
+        let spaceHTML = '<h2><a href="' + space.link + '" class="space-title" data-spaceid="' + space.id + '">' + space.title + '<button class="closebutton icon-close"><span class="visuallyhidden">Close</span></button></a></h2>';
         spaceHTML += '<h3><span class="space-type space-type-' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + '">' + space.space_type + '</span>';
         spaceHTML += '<span class="distance">(1,353 metres)</span>';
         let loc = '';

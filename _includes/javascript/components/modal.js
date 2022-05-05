@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mb.addEventListener('click', e => {
             dialog.show();
             dialog.originalpagehash = window.location.hash;
-            window.location.hash = '#/'+pagehash;
+            window.location.hash = '#/page/'+pagehash;
         });
         dialog.on('hide', (element, event) => {
             window.location.hash = dialog.originalpagehash

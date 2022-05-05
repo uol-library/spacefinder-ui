@@ -40,7 +40,6 @@
             }
         }
         #filters, #list {
-            overflow-y: auto;
             display: none;
             margin-left: -100vw;
             max-height: calc(100vh - (#{$topbarheight} + #{$footerheight}));

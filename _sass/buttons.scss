@@ -86,6 +86,24 @@
         box-shadow: 0 3px 6px 0 rgba($button-shadow, 0.15), 0 2px 4px 0 rgba($button-shadow, 0.12);
     }
 }
+.closebutton {
+    float: right;
+    margin: 0 0 0 1em;
+    width: 32x;
+    height: 32px;
+    border-radius: 3px;
+    border: 2px solid $buttonborder;
+    color: $buttoncolor;
+    background: $buttonbg;
+    display: none;
+    cursor: pointer;
+    &:hover, &:active {
+        box-shadow: 0 3px 6px 0 rgba($button-shadow, 0.15), 0 2px 4px 0 rgba($button-shadow, 0.12);
+    }
+    .list-space.active & {
+        display: inline-block;
+    }
+}
 #listfilters {
     .search-term,
     .filter-term {

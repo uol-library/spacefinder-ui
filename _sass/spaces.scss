@@ -32,7 +32,7 @@
 }
 #listcontent {
     .list-space {
-        padding: .5rem;
+        padding: 1em .5rem;
         &:after {
             content: "";
             display: block;
@@ -54,6 +54,9 @@
                     margin: 0 0 1em 0;
                 }
             }
+            .space-title {
+                cursor: default;
+            }
         }
         .space-details {
             .space-image {
@@ -66,8 +69,6 @@
                 margin: 0 1em 1em 0;
             }
         }
-        padding-bottom: 1em;
-        margin-bottom: 1em;
         border-bottom: 1px solid $separatorcolor;
         a {
             color: $linkcolor;
@@ -98,8 +99,9 @@
         h2 {
             font-weight: normal;
             padding-bottom: .3rem;
-            > a {
-                display:block;
+            display: flex;
+            a {
+                flex-grow: 1;
             }
         }
         h3 {

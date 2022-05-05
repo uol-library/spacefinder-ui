@@ -42,12 +42,14 @@ function maybeSetupMap() {
                     position: spacePosition,
                     map: spacefinder.map,
                     title: spacefinder.spaces[i].title,
+                    optimized: false,
                     icon: {
-                        path: 'M0-30.5c-5.7,0-10.2,4.6-10.2,10.2C-10.2-14.6,0,0,0,0s10.2-14.6,10.2-20.2C10.2-25.9,5.7-30.5,0-30.5z M0-17.7c-1.6,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S1.6-17.7,0-17.7z',
-                        fillColor: "#D6083B",
+                        path: google.maps.SymbolPath.CIRCLE,//'M0-30.5c-5.7,0-10.2,4.6-10.2,10.2C-10.2-14.6,0,0,0,0s10.2-14.6,10.2-20.2C10.2-25.9,5.7-30.5,0-30.5z M0-17.7c-1.6,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S1.6-17.7,0-17.7z',
+                        fillColor: "#c70000",
+                        strokeColor: "#910000",
                         fillOpacity: 1,
-                        scale: 1,
-                        strokeWeight: 0
+                        scale: 8,
+                        strokeWeight: 4
                     }
                 });
                 spacefinder.spaces[i].marker.infoContent = getSpaceInfoWindowContent( spacefinder.spaces[i] );
