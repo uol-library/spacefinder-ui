@@ -355,7 +355,18 @@ function renderAdditionalInfo( spaceid ) {
             spaceHTML += '<p><a class="button" href="'+space.booking_url+'">Book a space</a></p>';
         }
         spaceHTML += '<section class="section-facts"><h4>Key Facts</h4><ul class="bulleticons">';
-        spaceHTML += '<li class="icon-marker"><span>'+space.address+'</span><li>';
+        let loc = '';
+        if ( space.floor !== "" ) {
+            loc += space.floor + ', ';
+        }
+        if ( space.building !== "" ) {
+            loc += space.building + ', ';
+        }
+        if ( space.address !== "" ) {
+            loc += space.address;
+        }
+        loc += ' (<a target="googlemaps" href="https://www.google.com/maps/dir/?api=1&amp;destination='+space.lat+'%2c' + space.lng + '&amp;travelmode=walking">get directions</a>)';
+        spaceHTML += '<li class="icon-marker">'+loc+'</li>';
         if ( space.url != "" ) {
             spaceHTML += '<li class="icon-link"><a href="'+space.url+'">'+space.url+'</a></li>';
         }
