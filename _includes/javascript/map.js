@@ -160,10 +160,18 @@ function toggleGeolocation( enable ) {
  */
 function activateGeolocation( activate ) {
     if ( activate ) {
-        document.querySelectorAll( '.geo-button' ).forEach( e => e.classList.add('active') );
+        document.querySelectorAll( '.geo-button' ).forEach( e => {
+            e.classList.add('active');
+            e.setAttribute('aria-label','Stop using my location')
+            e.setAttribute('title','Stop using my location')
+        });
         document.addEventListener( 'userlocationchanged', movePersonMarker );
     } else {
-        document.querySelectorAll( '.geo-button' ).forEach( e => e.classList.remove('active') );
+        document.querySelectorAll( '.geo-button' ).forEach( e => {
+            e.classList.remove('active');
+            e.setAttribute('aria-label','Use my location')
+            e.setAttribute('title','Use my location')
+        });
         document.removeEventListener( 'userlocationchanged', movePersonMarker );
         /* remove sorting indicator from all buttons */
         document.getElementById( 'sortdistance' ).setAttribute('data-sortdir', '');
@@ -275,8 +283,8 @@ function checkGeoAvailable() {
         locationButton.innerHTML = '';
         locationButton.classList.add('geo-button');
         locationButton.classList.add('icon-my-location');
-        locationButton.setAttribute('aria-label', 'Pan to Current Location');
-        locationButton.setAttribute('title', 'Pan to Current Location');
+        locationButton.setAttribute('aria-label', 'Use my location');
+        locationButton.setAttribute('title', 'Use my location');
         spacefinder.map.controls[google.maps.ControlPosition.RIGHT_TOP].push(locationButton);
 
         /* add listener to buttons to toggle geolocation */
