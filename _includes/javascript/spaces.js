@@ -106,11 +106,9 @@ function activateSpaces() {
     /* event listener to display space detail */
     document.querySelectorAll('.space-title').forEach( el => {
         el.addEventListener('click', event => {
+            event.preventDefault();
             let spacenode = document.querySelector('[data-id="'+event.target.getAttribute('data-spaceid')+'"]');
-            if ( spacenode.classList.contains('active') ) {
-                event.preventDefault();
-                //deselectSpaces(false);
-            } else {
+            if ( ! spacenode.classList.contains('active') ) {
                 selectSpace( event.target.getAttribute('data-spaceid') );
             }
         });
@@ -154,6 +152,7 @@ function activateSpaces() {
  * @param {integer} spaceid 
  */
 function selectSpace( spaceid ) {
+    window.location.hash = '/space/'+spaceid;
     let space = getSpaceById( spaceid );
     renderAdditionalInfo( space.id );
     zoomMapToSpace( space );
@@ -167,7 +166,11 @@ function selectSpace( spaceid ) {
     let listContainer = document.getElementById('listcontent');
     console.log(spacenode.offsetTop, listContainer.offsetTop);
     let totop = spacenode.offsetTop - listContainer.offsetTop;
-    scrollingElement.scrollTo({top: totop, left: 0, behaviour: 'smooth'});
+    if ( scrollingElement.scrollTo ) {
+        scrollingElement.scrollTo({top: totop, left: 0, behavior: 'smooth'});
+    } else {
+        scrollingElement.scrollTop = totop;
+    }
     //spacenode.scrollIntoView();
 }
 
@@ -326,7 +329,7 @@ function renderList() {
         spaceContainer.setAttribute('data-id', space.id );
         spaceContainer.setAttribute('data-sortalpha', space.title.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() );
         spaceContainer.setAttribute('class', space.classes );
-        let spaceHTML = '<h2><a href="' + space.link + '" class="space-title" data-spaceid="' + space.id + '">' + space.title + '<button class="closebutton icon-close"><span class="visuallyhidden">Close</span></button></a></h2>';
+        let spaceHTML = '<h2><a href="' + space.link + '" class="space-title" data-spaceid="' + space.id + '">' + space.title + '</a><button class="closebutton icon-close"><span class="visuallyhidden">Close</span></button></h2>';
         spaceHTML += '<h3><span class="space-type space-type-' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + '">' + space.space_type + '</span>';
         spaceHTML += '<span class="distance">(1,353 metres)</span>';
         let loc = '';
