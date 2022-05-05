@@ -154,22 +154,3 @@ function getSpaceById( id ) {
 function getSpaceNodeById( id ) {
     return document.querySelector('[data-id="'+id+'"]');
 }
-
-/* Not sure whether to use these */
-function uol_show_loader( parent ) {
-    var c = document.createElement( 'div' );
-    c.setAttribute( 'id', 'uol_loader' );
-    var loadStr = "loading"
-    for ( var i = 1; i <= loadStr.length; i++ ) {
-        var circle = document.createElement( 'span' );
-        circle.classList.add( 'circle' );
-        circle.classList.add( 'circle-'+i );
-        circle.appendChild( document.createTextNode(loadStr[(i-1)]) );
-        c.appendChild(circle);
-    }
-    parent.appendChild( c );
-}
-function uol_hide_loader() {
-    var el = document.getElementById( 'uol_loader' );
-    if ( el ) el.remove();
-}

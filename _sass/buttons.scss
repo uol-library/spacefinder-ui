@@ -22,41 +22,29 @@
         background: $filterbuttonbg-disabled;
         color: $filterbuttoncolor-disabled;
     }
-    &.icon-distance {
-        &::before {
-            margin:0;
-            font-size: 24px;
-            content: '\e609'; 
-        }
-        &::after {
-            margin:0;
-            font-size: 12px;
-            content: '\e609'; 
-        }
-    }
 }
 .geo-button {
     padding: 0;
     font-size: 26px;
-    background: $filterbuttonbg;
-    color: $filterbuttoncolor;
+    background: $geobuttonbg;
+    color: $geobuttoncolor;
     user-select: none;
     cursor: pointer;
     &::before {
         margin:0;
     }
     &:hover {
-        background: $filterbuttonbg-hover;
-        color: $filterbuttoncolor-hover;
+        background: $geobuttonbg-hover;
+        color: $geobuttoncolor-hover;
     }
     &.active {
-        background: $filterbuttonbg-active;
-        color: $filterbuttoncolor-active;
+        background: $geobuttonbg-active;
+        color: $geobuttoncolor-active;
     }
     &[disabled] {
         cursor: default;
-        background: $filterbuttonbg-disabled;
-        color: $filterbuttoncolor-disabled;
+        background: $geobuttonbg-disabled;
+        color: $geobuttoncolor-disabled;
     }
 }
 .button {
@@ -119,3 +107,63 @@
         }
     }
 }
+#listcontrols {
+    button {
+        width: calc(15% - 6px);
+        margin: 3px 2px;
+        padding: 0;
+        position:relative;
+        border: 1px solid $filterbuttonborder-focus;
+        &#sortalpha {
+            &:after {
+                position: absolute;
+                top:.1em;
+                right:.1em;
+                font-size:1.5em;
+                font-weight: bold;
+            }
+            &[data-sortdir="asc"]:after {
+                content: '\2191';
+            }
+            &[data-sortdir="desc"]:after {
+                content: '\2193';
+            }
+        }
+        &#sortdistance {
+            &:after, &:before {
+                margin:0;
+                color: $color-blue;
+            }
+            &[disabled]:after, &[disabled]:before {
+                color: $filterbuttoncolor-disabled;
+            }
+            &:before {
+                content: '\e803';
+                font-size: 14px;
+            }
+            &:after {
+                content: '\e609';
+                font-size: 14px;
+            }
+            &[data-sortdir="asc"] {
+                &:after {
+                    font-size: 12px;
+                }
+                &:before {
+                    content: '\e609';
+                    font-size: 24px;
+                }
+            }
+            &[data-sortdir="desc"] {
+                &:after {
+                    font-size: 24px;
+                }
+                &:before {
+                    content: '\e609';
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+

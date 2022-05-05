@@ -155,6 +155,7 @@ function toggleGeolocation( enable ) {
 /**
  * Toggle the active class of the geolocation control.
  * Also adds/removes the event listener to update the user's position
+ * and adds / removes the person marker.
  * @param {boolean} activate which way to toggle
  */
 function activateGeolocation( activate ) {
@@ -164,20 +165,39 @@ function activateGeolocation( activate ) {
     } else {
         document.querySelectorAll( '.geo-button' ).forEach( e => e.classList.remove('active') );
         document.removeEventListener( 'userlocationchanged', movePersonMarker );
+        /* remove sorting indicator from all buttons */
+        document.getElementById( 'sortdistance' ).setAttribute('data-sortdir', '');
     }
+    updateDistances();
+    activateSort( activate, 'distance' );
 }
 
 /**
  * Moves the person marker to the user's position and centres the 
  * map on that position. The property spacefinder.personLoc is used
  * for the user position - this is updated in the geolocation.watchPosition
- * event listener
+ * event listener. In addition to moving the person marker, distances
+ * from the person to each space are updated, and if spaces are sorted
+ * by distance, the sort order is updated.
  * @see getUserPosition()
  */
 function movePersonMarker() {
+    /* move person marker */
     if ( spacefinder.personMarker ) {
         spacefinder.personMarker.setPosition( spacefinder.personLoc );
     }
+    /* update distances to each space */
+    updateDistances();
+    /* see if the spaces are sorted by distance */
+    let btn = document.querySelector('#sortdistance[data-sortdir$="sc"');
+    if ( btn !== null ) {
+        /* determine direction from current attribute value */
+        let sortdir = document.getElementById('sortdistance').getAttribute('data-sortdir');
+        let dir = ( sortdir == 'desc' ) ? false: true;
+        /* re-sort spaces */
+        sortSpaces( 'sortdistance', dir );
+    }
+    /* centre the map on the person */
     spacefinder.map.setCenter( spacefinder.personLoc );
 }
 
@@ -280,10 +300,15 @@ function checkGeoAvailable() {
         toggleGeolocation( false );
     }
 }
+
+/**
+ * Cancels the watchPosition listener, removes the person marker,
+ * and deactivates geolocation controls.
+ */
 function forgetUserPosition() {
     /* stop watching user position */
     navigator.geolocation.clearWatch( spacefinder.watchID );
-    /* remove personmarker from map */
+    /* remove person marker from map */
     spacefinder.personMarker.setMap(null);
     /* make location buttons inactive */
     activateGeolocation( false );
@@ -309,10 +334,9 @@ function getUserPosition() {
             openAlertDialog('Sorry...', 'You need to be a bit nearer to use this feature.');
             return;
         }
-        /* activate the geolocation buttons */
-        activateGeolocation( true );
+        /* centre the map on the user position */
 		spacefinder.map.setCenter( spacefinder.personLoc );
-        /* add a marker */
+        /* add a person marker */
 		spacefinder.personMarker = new google.maps.Marker({
 			position: spacefinder.personLoc,
 			map: spacefinder.map,
@@ -322,12 +346,14 @@ function getUserPosition() {
                 scale: 10,
                 fillOpacity: 1,
                 strokeWeight: 2,
-                fillColor: '#5384ED',
+                fillColor: '#003a52',
                 strokeColor: '#ffffff',
             },
 		});
+        activateGeolocation( true );
         /* watch for changes in the user position and update the map by firing an event */
 		spacefinder.watchID = navigator.geolocation.watchPosition( position => {
+            console.log('position changed');
             if ( ! ( spacefinder.personLoc.lat == position.coords.latitude && spacefinder.personLoc.lng == position.coords.longitude ) ) {
                 spacefinder.personLoc.lat = position.coords.latitude;
                 spacefinder.personLoc.lng = position.coords.longitude;
@@ -339,16 +365,34 @@ function getUserPosition() {
 		});
 
     }, (error) => {
+        activateGeolocation( false );
 		switch (error.code) {
 			case 1:
 				// Permission denied - The acquisition of the geolocation information failed because the page didn't have the permission to do it.
 			case 2:
 				// Position unavailable - The acquisition of the geolocation failed because at least one internal source of position returned an internal error.
-                activateGeolocation( false );
                 toggleGeolocation( false );
                 break;
 			case 3:
 				// Timeout - The time allowed to acquire the geolocation was reached before the information was obtained.
 		}
 	});
+}
+
+/**
+ * Updates the data-sortdistance attribute for all spaces relative
+ * to the user position.
+ */
+function updateDistances() {
+    if ( geolocationActive() ) {
+        spacefinder.spaces.forEach( (space, index) => {
+            spacefinder.spaces[index].distancefromcentre = haversine_distance( spacefinder.personLoc, { lat: space.lat, lng: space.lng } );
+            document.querySelector('[data-id="' + space.id + '"]').setAttribute('data-sortdistance', spacefinder.spaces[index].distancefromcentre );
+        });
+    } else {
+        let spacenodes = document.querySelectorAll('.list-space');
+        if ( spacenodes !== null ) {
+            spacenodes.forEach( el => el.setAttribute('data-sortdistance', '') );
+        }
+    }
 }

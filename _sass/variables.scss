@@ -107,6 +107,18 @@ $filterbuttonbg-active: $color-blue;
 $filterbuttonborder: transparent;
 $filterbuttonborder-focus: $color-black;
 
+/* geolocation button */
+$geobuttoncolor: $filterbuttoncolor;
+$geobuttonbg: $filterbuttonbg;
+$geobuttoncolor-hover: $filterbuttoncolor-hover;
+$geobuttonbg-hover: $filterbuttonbg-hover;
+$geobuttoncolor-disabled: $filterbuttoncolor-disabled;
+$geobuttonbg-disabled: $filterbuttonbg-disabled;
+$geobuttoncolor-active: $color-white;
+$geobuttonbg-active: $color-blue;
+
+
+
 /* List panel */
 $lighttextcolor: $color-font--light;
 $highlighttextcolor: $color-blue;

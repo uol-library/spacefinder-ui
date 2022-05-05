@@ -35,8 +35,7 @@
 .icon-drink:before { content: '\e800'; } /* '' */
 .icon-disabled:before { content: '\e801'; } /* '' */
 .icon-access:before { content: '\e802'; } /* '' */
-.icon-resize-full:before { content: '\e803'; } /* '' */
-.icon-resize-small:before { content: '\e804'; } /* '' */
+.icon-user:before { content: '\e803'; } /* '' */
 .icon-bench:before { content: '\e822'; } /* '' */
 .icon-uol-logo-mark:before { content: '\e831'; } /* '' */
 .icon-public:before { content: '\e900'; } /* '' */

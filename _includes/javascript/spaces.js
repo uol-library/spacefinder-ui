@@ -112,10 +112,6 @@ function activateSpaces() {
                 selectSpace( event.target.getAttribute('data-spaceid') );
             }
         });
-        el.addEventListener('focus', highlightSpaceInMap );
-        el.addEventListener('blur', highlightSpaceInMap );
-        el.addEventListener('mouseover', highlightSpaceInMap );
-        el.addEventListener('mouseout', highlightSpaceInMap );
     });
     document.querySelectorAll('.list-space .closebutton').forEach( el => {
         el.addEventListener('click', event => {
@@ -193,33 +189,6 @@ function deselectSpaces( scrollReset ) {
     }
 }
 
-function highlightSpaceInMap( e ) {
-    /*let spaceid = parseInt( e.target.getAttribute('data-spaceid') );
-    for (let i = 0; i < spacefinder.spaces.length; i++ ) {
-        if ( spacefinder.spaces[i].id === spaceid ) {
-            if (spacefinder.spaces[i].marker.getAnimation() !== null) {
-                spacefinder.spaces[i].marker.setAnimation(null);
-            } else {
-                spacefinder.spaces[i].marker.setAnimation(google.maps.Animation.BOUNCE);
-            }
-        }
-    }*/
-    /*let ops = 1, opd = 0.05;
-    switch (e.type) {
-        case 'mouseout':
-        case 'blur':
-            opd = 1;
-            break;
-    }
-    for (let i = 0; i < spacefinder.spaces.length; i++ ) {
-        if ( spacefinder.spaces[i].id !== spaceid ) {
-            spacefinder.spaces[i].marker.setOptions({'opacity': opd});
-        } else {
-            spacefinder.spaces[i].marker.setOptions({'opacity': ops});
-        }
-    }*/
-}
-
 /**
  * Activates sorting the list of spaces in the UI.
  * @param {boolean} activate whether to activate of deactivate sorting.
@@ -229,33 +198,42 @@ function activateSort( activate, sorttype ) {
     const sortbutton = document.getElementById( 'sort'+sorttype );
     if ( ! activate ) {
         sortbutton.disabled = true;
-        sortbutton.removeEventListener('click', sortSpaces);
+        sortbutton.removeEventListener('click', sortSpacesListener);
     } else {
         sortbutton.disabled = false;
-        sortbutton.addEventListener('click', sortSpaces);
-        sortbutton.dispatchEvent(new Event('click'));
+        sortbutton.addEventListener('click', sortSpacesListener);
+        //sortbutton.dispatchEvent(new Event('click'));
     }
+}
+/**
+ * Function used as an event listener on the sorting buttons
+ * @param {Event} e event from button click
+ */
+function sortSpacesListener( e ) {
+    e.preventDefault();
+    /* get all the data we need to perform the sort */
+    let sortdir = e.target.getAttribute('data-sortdir');
+    let sortby = e.target.getAttribute('id');
+    /* determine direction from current attribute value */
+    let dir = ( sortdir == 'desc' || sortdir == '' ) ? true: false;
+    /* remove sorting indicators from all buttons */
+    document.querySelectorAll( '.sortbutton' ).forEach( el => el.setAttribute('data-sortdir', '') );
+    /* update direction on attribute */
+    e.target.setAttribute('data-sortdir', (dir ? 'asc': 'desc' ) );
+    /* perform the sort */
+    sortSpaces( sortby, dir );
 }
 
 /**
  * Function to sort spaces. Sorts using data attributes on 
  * space containers (sortalpha, sortdistance)
- * @param {Event} e event from button click
+ * @param {string} sortby property we are using to sort the list (needs to be part of a data attribute)
+ * @param {boolean} dir sort direction (true = asc, false = desc)
  */
-function sortSpaces(e) {
-    e.preventDefault();
+function sortSpaces( sortby, dir ) {
     /* get all the things we need to perform the sort */
-    const sortdir = e.target.getAttribute('data-sortdir'),
-        sortby = e.target.getAttribute('id'),
-        listcontainer = document.getElementById('listcontent'),
-        listitems = document.querySelectorAll('#listcontent>div');
-    /* determine direction from current attribute value */
-    let dir = ( sortdir == 'desc' || sortdir == '' ) ? true: false;
-    /* update direction on attribute */
-    e.target.setAttribute('data-sortdir', (dir ? 'asc': 'desc' ) );
-    /* update arrow on button label */
-    let dirarrow = dir ? '&uarr;': '&darr;';
-    document.getElementById(sortby+'dir').innerHTML = dirarrow;
+    let listcontainer = document.getElementById('listcontent');
+    let listitems = document.querySelectorAll('#listcontent>div');
     /* sort the list items */
     let listitemsArray = Array.prototype.slice.call(listitems).sort( comparer( dir, 'data-'+sortby ) );
     /* add back to the DOM */
@@ -451,17 +429,6 @@ function getClassList( space ) {
         classList += 'noise_'+space.noise.replace(/\W/g, '').toLowerCase();
     }
     return classList;
-}
-
-/**
- * Updates the data-sortdistance attribute for all spaces relative
- * to either the current map centre of the user
- */
-function updateDistances() {
-    spacefinder.spaces.forEach( (space, index) => {
-        spacefinder.spaces[index].distancefromcentre = haversine_distance( spacefinder.currentLoc, { lat: space.lat, lng: space.lng } );
-        document.querySelector('[data-id="' + space.id + '"]').setAttribute('data-sortdistance', spacefinder.spaces[index].distancefromcentre );
-    });
 }
 
 /**

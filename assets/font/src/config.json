@@ -693,18 +693,6 @@
       ]
     },
     {
-      "uid": "e594fc6e5870b4ab7e49f52571d52577",
-      "css": "resize-full",
-      "code": 59395,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "3c24ee33c9487bbf18796ca6dffa1905",
-      "css": "resize-small",
-      "code": 59396,
-      "src": "fontawesome"
-    },
-    {
       "uid": "1fb8776fe6f1d3bbf970996fdfcf0f94",
       "css": "link",
       "code": 61563,
@@ -747,6 +735,12 @@
       "css": "pinterest",
       "code": 62226,
       "src": "entypo"
+    },
+    {
+      "uid": "8b80d36d4ef43889db10bc1f0dc9a862",
+      "css": "user",
+      "code": 59395,
+      "src": "fontawesome"
     }
   ]
 }
