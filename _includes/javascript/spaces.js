@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateDistances();
         checkOpeningHours();
         activateSort(true, 'alpha');
+        sortSpaces( 'sortalpha', true );
         activateSpaces();
     });
     loadSpaces();
@@ -160,14 +161,13 @@ function selectSpace( spaceid ) {
     /* find distance from top of listcontainer */
     let scrollingElement = document.getElementById('listcontainer');
     let listContainer = document.getElementById('listcontent');
-    console.log(spacenode.offsetTop, listContainer.offsetTop);
     let totop = spacenode.offsetTop - listContainer.offsetTop;
+    /* scroll into view */
     if ( scrollingElement.scrollTo ) {
         scrollingElement.scrollTo({top: totop, left: 0, behavior: 'smooth'});
     } else {
         scrollingElement.scrollTop = totop;
     }
-    //spacenode.scrollIntoView();
 }
 
 /**

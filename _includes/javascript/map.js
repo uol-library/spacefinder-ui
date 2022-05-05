@@ -361,7 +361,6 @@ function getUserPosition() {
         activateGeolocation( true );
         /* watch for changes in the user position and update the map by firing an event */
 		spacefinder.watchID = navigator.geolocation.watchPosition( position => {
-            console.log('position changed');
             if ( ! ( spacefinder.personLoc.lat == position.coords.latitude && spacefinder.personLoc.lng == position.coords.longitude ) ) {
                 spacefinder.personLoc.lat = position.coords.latitude;
                 spacefinder.personLoc.lng = position.coords.longitude;
