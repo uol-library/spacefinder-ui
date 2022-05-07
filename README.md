@@ -10,5 +10,4 @@ For more information about the project, [please visit the Spacefinder UI wiki](h
 Changelog
 ---------
 
-* **v0.1.0**
-  Initial release
+* **v0.1.0** - Initial release (6/5/2022)

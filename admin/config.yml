@@ -28,7 +28,7 @@ collections:
       - label: 'Description'
         name: 'description'
         widget: 'markdown'
-        required: false
+        required: true
       - label: 'Type'
         name: 'space_type'
         widget: 'select'
@@ -95,7 +95,7 @@ collections:
         name: 'access'
         widget: 'select'
         options: ['Anyone (public)','University Staff and Students']
-        required: false
+        required: true
       - label: 'Restricted access?'
         name: 'restricted'
         widget: 'boolean'
@@ -370,12 +370,12 @@ collections:
         widget: 'select'
         options: ['Strictly silent','Whispers','Background chatter','Animated discussion','Music playing']
         hint: 'Which best describes the typical noise level in this space?'
-        required: false
+        required: true
       - label: 'Facilities'
         name: 'facilities'
         widget: 'select'
         multiple: true
-        required: false
+        required: true
         options:
           - { value: 'food_drink', label: 'Food and drink allowed' }
           - { value: 'daylight', label: 'Natural daylight' }
@@ -409,7 +409,7 @@ collections:
         name: 'work'
         widget: 'select'
         multiple: true
-        required: false
+        required: true
         options:
           - { value: 'in_a_library', label: 'In a library' }
           - { value: 'private', label: 'Alone, in private' }
@@ -420,7 +420,7 @@ collections:
         name: 'atmosphere'
         widget: 'select'
         multiple: true
-        required: false
+        required: true
         options:
           - { value: 'disciplined', label: 'Disciplined' }
           - { value: 'relaxed', label: 'Relaxed or informal' }
@@ -446,7 +446,7 @@ collections:
       - label: 'Opening Hours'
         name: 'opening_hours'
         widget: 'object'
-        collapsed: true
+        collapsed: false
         fields:
           - label: 'Monday'
             name: 'monday'
