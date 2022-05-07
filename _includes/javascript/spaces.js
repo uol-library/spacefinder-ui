@@ -216,10 +216,6 @@ function sortSpacesListener( e ) {
     let sortby = e.target.getAttribute('id');
     /* determine direction from current attribute value */
     let dir = ( sortdir == 'desc' || sortdir == '' ) ? true: false;
-    /* remove sorting indicators from all buttons */
-    document.querySelectorAll( '.sortbutton' ).forEach( el => el.setAttribute('data-sortdir', '') );
-    /* update direction on attribute */
-    e.target.setAttribute('data-sortdir', (dir ? 'asc': 'desc' ) );
     /* perform the sort */
     sortSpaces( sortby, dir );
 }
@@ -231,9 +227,13 @@ function sortSpacesListener( e ) {
  * @param {boolean} dir sort direction (true = asc, false = desc)
  */
 function sortSpaces( sortby, dir ) {
+    /* first update the sorting buttons */
+    document.querySelectorAll( '.sortbutton' ).forEach( el => el.setAttribute( 'data-sortdir', '' ) );
+    let dirAttr = dir ? 'asc': 'desc';
+    document.getElementById( sortby ).setAttribute( 'data-sortdir', dirAttr );
     /* get all the things we need to perform the sort */
-    let listcontainer = document.getElementById('listcontent');
-    let listitems = document.querySelectorAll('#listcontent>div');
+    let listcontainer = document.getElementById( 'listcontent' );
+    let listitems = document.querySelectorAll( '#listcontent>div' );
     /* sort the list items */
     let listitemsArray = Array.prototype.slice.call(listitems).sort( comparer( dir, 'data-'+sortby ) );
     /* add back to the DOM */
@@ -265,10 +265,10 @@ function sortSpaces( sortby, dir ) {
          * @param {(integer|string)} v1 first value to sort
          * @param {(integer|string)} v2 second value to sort
          */
-        let aval = asc ? a.getAttribute(attr): b.getAttribute(attr);
-        let bval = asc ? b.getAttribute(attr): a.getAttribute(attr);
+        let aval = asc ? a.getAttribute( attr ): b.getAttribute( attr );
+        let bval = asc ? b.getAttribute( attr ): a.getAttribute( attr );
         return function( v1, v2 ) {
-            return v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2);
+            return v1 !== '' && v2 !== '' && ! isNaN( v1 ) && ! isNaN( v2 ) ? v1 - v2 : v1.toString().localeCompare( v2 );
         }( aval, bval );
     };
 };
