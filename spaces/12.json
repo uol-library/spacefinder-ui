@@ -1,80 +1,82 @@
 {
-    "id": 12,
-    "location": "{\"type\":\"Point\",\"coordinates\":[-1.55497,53.80516]}",
-    "work": [
-        "friends",
-        "group"
-    ],
-    "atmosphere": [
-        "relaxed",
-        "social",
-        "friendly"
-    ],
-    "images": [],
-    "facilities": [
-        "food_drink",
-        "daylight",
-        "views",
-        "free_wifi",
-        "laptops_allowed",
-        "signal",
-        "outdoor_seating",
-        "refreshments",
-        "break"
-    ],
-    "title": "Toasted in Chancellor's Court (Outdoor space)",
-    "description": "Gourmet toastie van serving a range of toasties, croissants, sweet treats, cold drinks and freshly brewed coffees. Outdoor seating situated in Chancellor's Court, next to the Roger Stevens Building",
-    "access": "Anyone (public)",
-    "space_type": "Café",
-    "address": "University of Leeds, LS2 9JT",
-    "building": "Chancellor's Court",
-    "floor": "",
-    "restricted": false,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "",
-    "phone_number": "",
-    "twitter_screen_name": "",
-    "facebook_url": "https://www.facebook.com/toastedleeds/",
-    "campusmap_url": "",
-    "campusmap_ref": "",
-    "noise": "Animated discussion",
-    "tags": [],
-    "opening_hours": {
-        "monday": {
-            "open": true,
-            "from": "8:00",
-            "to": "24:00"
-        },
-        "tuesday": {
-            "open": true,
-            "from": "8:00",
-            "to": "24:00"
-        },
-        "wednesday": {
-            "open": true,
-            "from": "8:00",
-            "to": "24:00"
-        },
-        "thursday": {
-            "open": true,
-            "from": "8:00",
-            "to": "24:00"
-        },
-        "friday": {
-            "open": true,
-            "from": "8:00",
-            "to": "24:00"
-        },
-        "saturday": {
-            "open": true,
-            "from": "10:00",
-            "to": "24:00"
-        },
-        "sunday": {
-            "open": true,
-            "from": "10:00",
-            "to": "24:00"
-        }
+  "facilities": [
+    "food_drink",
+    "daylight",
+    "views",
+    "free_wifi",
+    "laptops_allowed",
+    "signal",
+    "outdoor_seating",
+    "refreshments",
+    "break"
+  ],
+  "atmosphere": [
+    "relaxed",
+    "social",
+    "friendly"
+  ],
+  "access": "Anyone (public)",
+  "disabled_access": true,
+  "opening_hours": {
+    "monday": {
+      "open": true,
+      "from": "8:00",
+      "to": "24:00"
+    },
+    "tuesday": {
+      "open": true,
+      "from": "8:00",
+      "to": "24:00"
+    },
+    "wednesday": {
+      "open": true,
+      "from": "8:00",
+      "to": "24:00"
+    },
+    "thursday": {
+      "open": true,
+      "from": "8:00",
+      "to": "24:00"
+    },
+    "friday": {
+      "open": true,
+      "from": "8:00",
+      "to": "24:00"
+    },
+    "saturday": {
+      "open": true,
+      "from": "10:00",
+      "to": "24:00"
+    },
+    "sunday": {
+      "open": true,
+      "from": "10:00",
+      "to": "24:00"
     }
+  },
+  "floor": "",
+  "restriction": "",
+  "campusmap_url": "",
+  "url": "",
+  "campusmap_ref": "",
+  "work": [
+    "friends",
+    "group"
+  ],
+  "twitter_screen_name": "",
+  "space_type": "Café",
+  "building": "Chancellor's Court",
+  "address": "University of Leeds, LS2 9JT",
+  "location": "{\"type\":\"Point\",\"coordinates\":[-1.5547883,53.8051901]}",
+  "facebook_url": "https://www.facebook.com/toastedleeds/",
+  "title": "Toasted in Chancellor's Court (Outdoor space)",
+  "images": [
+    "/assets/photos/toasted.jpg"
+  ],
+  "tags": [],
+  "noise": "Animated discussion",
+  "phone_number": "",
+  "restricted": false,
+  "id": 12,
+  "description": "Gourmet toastie van serving a range of toasties, croissants, sweet treats, cold drinks and freshly brewed coffees. Outdoor seating situated in Chancellor's Court, next to the Roger Stevens Building"
 }
