@@ -308,7 +308,7 @@ function renderList() {
         spaceContainer.setAttribute('data-sortalpha', space.title.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() );
         spaceContainer.setAttribute('class', space.classes );
         let spaceHTML = '<h2><a href="' + space.link + '" class="space-title" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">' + space.title + '</a><button class="closebutton icon-close"><span class="visuallyhidden">Close</span></button></h2>';
-        spaceHTML += '<h3><span class="space-type space-type-' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + '">' + space.space_type + '</span>';
+        spaceHTML += '<p class="info"><span class="space-type space-type-' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + '">' + space.space_type + '</span>';
         spaceHTML += '<span class="distance">(1,353 metres)</span>';
         let loc = '';
         if ( space.floor !== "" ) {
@@ -320,7 +320,7 @@ function renderList() {
         if ( space.address !== "" ) {
             loc += '<span class="address-location">' + space.address + '</span>';
         }
-        spaceHTML += '<span class="address">' + loc + '</span></h3>';
+        spaceHTML += '<span class="address">' + loc + '</span></p>';
         spaceHTML += '<div class="space-details">';
         if ( space.images.length ) {
             spaceHTML += '<div data-imgsrc="' + space.images[0] + '" class="space-image lazy"></div>';
@@ -412,8 +412,6 @@ function renderAdditionalInfo( spaceid ) {
             }
             spaceHTML += '</ul></section>';
         }
-        spaceHTML += '<p><a class="button" href="#" onclick="deselectSpaces(false);">Close</a></p>';
-
         getSpaceNodeById( spaceid ).querySelector('.additionalInfo').innerHTML = spaceHTML;
     }
 }
