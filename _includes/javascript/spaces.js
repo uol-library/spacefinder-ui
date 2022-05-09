@@ -354,7 +354,7 @@ function renderAdditionalInfo( spaceid ) {
         if ( space.booking_url ) {
             spaceHTML += '<p><a class="button" href="'+space.booking_url+'">Book a space</a></p>';
         }
-        spaceHTML += '<section class="section-facts"><h4>Key Facts</h4><ul class="bulleticons">';
+        spaceHTML += '<section class="section-facts"><h3>Key Facts</h3><ul class="bulleticons">';
         let loc = '';
         if ( space.floor !== "" ) {
             loc += space.floor + ', ';
@@ -377,7 +377,7 @@ function renderAdditionalInfo( spaceid ) {
         spaceHTML += '<li class="icon-access">Open to '+space.access+'<li>';
         spaceHTML += '</ul></section>';
 
-        spaceHTML += '<section class="section-opening"><h4>Opening Times</h4>';
+        spaceHTML += '<section class="section-opening"><h3>Opening Times</h3>';
         spaceHTML += '<p class="' + spaceNode.getAttribute('data-openclass') + ' icon-time-short">' + spaceNode.getAttribute('data-openmsg') + '</p>';
         spaceHTML += '<ul class="opening-times">';
         ["monday","tuesday","wednesday","thursday","friday","saturday","sunday"].forEach( (day, idx) => {
@@ -392,7 +392,7 @@ function renderAdditionalInfo( spaceid ) {
         });
         spaceHTML += '</ul></section>';
         if ( space.phone_number !== "" || space.twitter_screen_name !== "" || space.facebook_url !== "" ) {
-            spaceHTML += '<section class="section-facts"><h4>Contact</h4><ul class="bulleticons">';
+            spaceHTML += '<section class="section-facts"><h3>Contact</h3><ul class="bulleticons">';
             if ( space.phone_number !== "" ) {
                 let phoneattr = space.phone_number.replace(/[^0-9]+/g, '').replace(/^0/, '+44');
                 spaceHTML += '<li class="icon-phone"><a href="tel:'+phoneattr+'">'+space.phone_number+'</a></li>';
@@ -406,7 +406,7 @@ function renderAdditionalInfo( spaceid ) {
         }
 
         if ( space.facilities.length ) {
-            spaceHTML += '<section class="section-facilities"><h4>Facilities</h4><ul class="bulleticons">';
+            spaceHTML += '<section class="section-facilities"><h3>Facilities</h3><ul class="bulleticons">';
             for ( i = 0; i < space.facilities.length; i++ ) {
                 spaceHTML += '<li class="' + spacefinder.iconMap[space.facilities[i]] + '">' + spacefinder.spaceProperties[ 'facility_' + space.facilities[i] ] + '</li>';
             }
