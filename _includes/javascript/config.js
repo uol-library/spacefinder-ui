@@ -12,8 +12,8 @@ const spacefinder = {
     mapLoaded: false,
     spacesLoaded: false,
     mapBounds: null,
-    spacesurl: 'https://uol-library.github.io/spacefinder-ui/spaces.json',
-    imageBaseURL: 'https://uol-library.github.io/spacefinder-ui',
+    spacesurl: 'http://localhost:4000/spacefinder-ui/spaces.json',
+    imageBaseURL: 'http://localhost:4000/spacefinder-ui',
     spaces: [],
     dialogs: {},
     filterEvent: new Event('viewfilter', {

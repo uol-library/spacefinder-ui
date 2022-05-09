@@ -6,7 +6,7 @@
                 </div>
                 <div class="searchbuttons">
                     <button type="reset" id="search-reset" class="btn" disabled>Reset</button>
-                    <button type="submit" id="search-submit" class="btn" disabled>Search</button>
+                    <button type="submit" id="search-submit" class="btn"  aria-controls="searchResultsSummary" disabled>Search</button>
                 </div>
             </div>
             <div class="panel-content">
@@ -37,7 +37,7 @@
                             {%- assign icon = option.icon -%}
                         {%- endif -%}
                         <li class="filter-option {{ filter.key }} {{ filter.key }}_{{ option.key }}" data-id="{{ filter.key }}_{{ option.key }}">
-                            <input type="checkbox" id="{{ filter.key }}_{{ option.key }}" name="{{ filter.key }}_{{ option.key }}" value="{{ filter.key }}_{{ option.key }}"{{ excl }}>
+                            <input type="checkbox" id="{{ filter.key }}_{{ option.key }}" aria-controls="searchResultsSummary" name="{{ filter.key }}_{{ option.key }}" value="{{ filter.key }}_{{ option.key }}"{{ excl }}>
                             <span class="{{ icon }}"></span>
                             <label for="{{ filter.key }}_{{ option.key }}">{{ option.label }}</label>
                         </li>
