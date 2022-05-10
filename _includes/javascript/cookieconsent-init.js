@@ -6,9 +6,7 @@ var cc = initCookieConsent();
 
 cc.run({
     current_lang: 'en',
-    autoclear_cookies: true,
     page_scripts: true,
-    remove_cookie_tables: true,
     onFirstAction: function(user_preferences, cookie){
         //console.log(user_preferences);
         //console.log(cookie);
@@ -53,12 +51,6 @@ cc.run({
                 accept_all_btn: 'Accept all',
                 reject_all_btn: 'Reject all',
                 close_btn_label: 'Close',
-                cookie_table_headers: [
-                    {col1: 'Name'},
-                    {col2: 'Domain'},
-                    {col3: 'Expiration'},
-                    {col4: 'Description'}
-                ],
                 blocks: [
                     {
                         title: 'Cookie usage',
@@ -86,22 +78,7 @@ cc.run({
                             value: 'analytics',
                             enabled: false,
                             readonly: false
-                        },
-                        cookie_table: [
-                            {
-                                col1: '^_ga',
-                                col2: 'google.com',
-                                col3: '2 years',
-                                col4: 'These cookies are used to distinguish between different users of the site and remember your usage across visits.',
-                                is_regex: true
-                            },
-                            {
-                                col1: '_gid',
-                                col2: 'google.com',
-                                col3: '1 day',
-                                col4: 'This cookie is used to distinguish between different users.',
-                            }
-                        ]
+                        }
                     }, {
                         title: 'More information',
                         description: 'You can manage your privacy settings, including cookies, through your browser settings. Further information about cookies can be found on the <a target="_ico" href="https://ico.org.uk/">Information Commissioner’s Office website</a>.',

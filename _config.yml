@@ -7,12 +7,8 @@ description: >-
 baseurl: "/spacefinder-ui"
 url: "https://uol-library.github.io"
 host: "localhost"
-<<<<<<< HEAD
-photo_dir: "/spacefinder-ui/assets/photos/"
-=======
 photo_dir: "/assets/photos/"
 #google_maps_api_key: "AIzaSyAIs8tLmBzS5UguzOQsgFLHBZXuYXIJ-xM"
->>>>>>> 910ceef (Changed layout selection to make search show list on smaller screens. Removed redundant styling for single spaces. Added google analytics tag.)
 google_maps_api_key: "AIzaSyBrAkYSJYjm6k9ultU71meFVsvxWR--97o"
 google_analytics: "G-6LHKST5028"
 sass:
