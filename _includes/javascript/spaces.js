@@ -168,6 +168,7 @@ function selectSpace( spaceid ) {
     } else {
         scrollingElement.scrollTop = totop;
     }
+    spacenode.querySelector( 'h2' ).focus();
 }
 
 /**
@@ -241,6 +242,7 @@ function sortSpaces( sortby, dir ) {
         listcontainer.appendChild( el );
     });
     deselectSpaces(true);
+    listcontainer.querySelector( 'h2' ).focus();
 }
 
 /**
@@ -349,7 +351,7 @@ function renderAdditionalInfo( spaceid ) {
     if ( spaceid !== false ) {
         /* get space data */
         let space = getSpaceById( spaceid );
-        let spaceNode = getSpaceNodeById( spaceid );
+        let spacenode = getSpaceNodeById( spaceid );
         let spaceHTML = '';
         if ( space.booking_url ) {
             spaceHTML += '<p><a class="button" href="'+space.booking_url+'">Book a space</a></p>';
@@ -378,7 +380,7 @@ function renderAdditionalInfo( spaceid ) {
         spaceHTML += '</ul></section>';
 
         spaceHTML += '<section class="section-opening"><h3>Opening Times</h3>';
-        spaceHTML += '<p class="' + spaceNode.getAttribute('data-openclass') + ' icon-time-short">' + spaceNode.getAttribute('data-openmsg') + '</p>';
+        spaceHTML += '<p class="' + spacenode.getAttribute('data-openclass') + ' icon-time-short">' + spacenode.getAttribute('data-openmsg') + '</p>';
         spaceHTML += '<ul class="opening-times">';
         ["monday","tuesday","wednesday","thursday","friday","saturday","sunday"].forEach( (day, idx) => {
             let today = new Date().getDay();
@@ -412,7 +414,8 @@ function renderAdditionalInfo( spaceid ) {
             }
             spaceHTML += '</ul></section>';
         }
-        getSpaceNodeById( spaceid ).querySelector('.additionalInfo').innerHTML = spaceHTML;
+        spacenode.querySelector('.additionalInfo').innerHTML = spaceHTML;
+        spacenode.querySelector( 'h2' ).focus();
     }
 }
 /**

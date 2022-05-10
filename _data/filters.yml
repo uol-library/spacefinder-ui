@@ -16,7 +16,7 @@
     - key: "seminarroom"
       label: "Seminar room"
 - key: "work"
-  label: "I want to work..."
+  label: "I want to work"
   exclusive: true
   open: true
   options:

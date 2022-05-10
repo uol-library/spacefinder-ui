@@ -98,6 +98,9 @@
             a {
                 flex-grow: 1;
             }
+            &:focus {
+                outline: 1px dotted $spacesubheadborder;
+            }
         }
         p.info {
             font-weight: normal;
