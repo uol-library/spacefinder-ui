@@ -4,8 +4,8 @@ description: >-
   Map-driven application originally developed by
   the University of Cambridge
   https://spacefinder.lib.cam.ac.uk/
-baseurl: "/spacefinder-ui"
-url: "https://uol-library.github.io"
+baseurl: ""
+url: "https://spacefinder.leeds.ac.uk/"
 host: "localhost"
 photo_dir: "/assets/photos/"
 #google_maps_api_key: "AIzaSyAIs8tLmBzS5UguzOQsgFLHBZXuYXIJ-xM"
