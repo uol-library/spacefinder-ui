@@ -1,82 +1,84 @@
 {
-    "id": 83,
-    "location": "{\"type\":\"Point\",\"coordinates\":[-1.553329,53.80789]}",
-    "work": [
-        "private",
-        "close"
-    ],
-    "atmosphere": [
-        "disciplined",
-        "cosy"
-    ],
-    "images": [
-        "/assets/photos/Brotherton-Library.jpg"
-    ],
-    "facilities": [
-        "food_drink",
-        "free_wifi",
-        "computers",
-        "laptops_allowed",
-        "sockets",
-        "signal",
-        "printers_copiers",
-        "toilets",
-        "refreshments",
-        "break"
-    ],
-    "title": "Brotherton Library",
-    "description": "Inspiring study place with group study areas on floor 2 of the main building and floor 3 of the west building.",
-    "access": "University Staff and Students",
-    "space_type": "Library",
-    "address": "University of Leeds, LS2 9JT",
-    "building": "Brotherton Library",
-    "floor": "2nd floor",
-    "restricted": true,
-    "restriction": "Library Card needed",
-    "disabled_access": "",
-    "url": "https://library.leeds.ac.uk/",
-    "phone_number": "",
-    "twitter_screen_name": "UoLLibrary",
-    "facebook_url": "https://www.facebook.com/leedsuniversitylibrary",
-    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17354",
-    "campusmap_ref": "59",
-    "noise": "Whispers",
-    "tags": [],
-    "opening_hours": {
-        "monday": {
-            "open": true,
-            "from": "8:00",
-            "to": "20:30"
-        },
-        "tuesday": {
-            "open": true,
-            "from": "8:00",
-            "to": "20:30"
-        },
-        "wednesday": {
-            "open": true,
-            "from": "8:00",
-            "to": "20:30"
-        },
-        "thursday": {
-            "open": true,
-            "from": "8:00",
-            "to": "20:30"
-        },
-        "friday": {
-            "open": true,
-            "from": "8:00",
-            "to": "19:00"
-        },
-        "saturday": {
-            "open": true,
-            "from": "10:00",
-            "to": "17:00"
-        },
-        "sunday": {
-            "open": true,
-            "from": "10:00",
-            "to": "17:00"
-        }
+  "facilities": [
+    "food_drink",
+    "free_wifi",
+    "computers",
+    "laptops_allowed",
+    "sockets",
+    "signal",
+    "printers_copiers",
+    "toilets",
+    "refreshments",
+    "break",
+    "wheelchair_accessible"
+  ],
+  "atmosphere": [
+    "disciplined",
+    "cosy"
+  ],
+  "access": "University Staff and Students",
+  "disabled_access": "",
+  "opening_hours": {
+    "tuesday": {
+      "open": true,
+      "from": "8:00",
+      "to": "20:30"
+    },
+    "monday": {
+      "open": true,
+      "from": "8:00",
+      "to": "20:30"
+    },
+    "sunday": {
+      "open": true,
+      "from": "10:00",
+      "to": "17:00"
+    },
+    "wednesday": {
+      "open": true,
+      "from": "8:00",
+      "to": "20:30"
+    },
+    "saturday": {
+      "open": true,
+      "from": "10:00",
+      "to": "17:00"
+    },
+    "thursday": {
+      "open": true,
+      "from": "8:00",
+      "to": "20:30"
+    },
+    "friday": {
+      "open": true,
+      "from": "8:00",
+      "to": "19:00"
     }
+  },
+  "floor": "2nd floor",
+  "restriction": "Library Card needed",
+  "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17354",
+  "url": "https://library.leeds.ac.uk/",
+  "campusmap_ref": "59",
+  "work": [
+    "private",
+    "close"
+  ],
+  "twitter_screen_name": "UoLLibrary",
+  "space_type": "Library",
+  "building": "Brotherton Library",
+  "address": "University of Leeds, LS2 9JT",
+  "location": "{\"type\":\"Point\",\"coordinates\":[-1.553329,53.80789]}",
+  "facebook_url": "https://www.facebook.com/leedsuniversitylibrary",
+  "title": "Brotherton Library",
+  "images": [
+    "/assets/photos/Brotherton-Library.jpg"
+  ],
+  "tags": [],
+  "noise": "Whispers",
+  "phone_number": "",
+  "restricted": true,
+  "id": 83,
+  "description": "Inspiring study place with group study areas on floor 2 of the main building and floor 3 of the west building."
 }
+

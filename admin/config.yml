@@ -471,7 +471,7 @@ collections:
                 default: '17:00'
                 required: false
           - label: 'Tuesday'
-            name: 'Tuesday'
+            name: 'tuesday'
             widget: 'object'
             collapsed: false
             fields:
@@ -515,7 +515,7 @@ collections:
                 default: '17:00'
                 required: false
           - label: 'Thursday'
-            name: 'Thursday'
+            name: 'thursday'
             widget: 'object'
             collapsed: false
             fields:
