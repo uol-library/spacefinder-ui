@@ -9,14 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
 function checkInitialPageLoad() {
     /* load spaces and pages from URL anchor */
     document.addEventListener('sfmapready', event => {
-        console.log(window.location.hash);
         if ( window.location.hash ) {
-            console.log(window.location.hash);
             let hp = window.location.hash.split('/');
             if ( hp.length === 3 ) {
                 if ( hp[1] == 'space' ) {
                     let space = getSpaceBySlug(hp[2]);
-                    console.log(space);
                     selectSpace(space.id)
                 }
                 if ( hp[1] == 'page' ) {

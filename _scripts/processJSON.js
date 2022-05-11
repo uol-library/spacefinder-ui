@@ -20,7 +20,8 @@ spacefiles.forEach( filename => {
         let spaceData = fs.readFileSync( path.resolve( __dirname, '../spaces/', filename ) );
         const spaceJSON = JSON.parse( spaceData );
         let geoJSON = JSON.parse( spaceJSON.location );
-        spaceJSON.image = spaceJSON.images.length ? spaceJSON.images[0]: '';
+        console.log('"'+spaceJSON.title+'","' + spaceJSON.space_type + '"');
+        /*spaceJSON.image = spaceJSON.images.length ? spaceJSON.images[0]: '';
         spaceJSON.imagealt = spaceJSON.title;
         delete spaceJSON.images;
         spaceJSON.slug = string_to_slug( spaceJSON.title );
@@ -29,7 +30,7 @@ spacefiles.forEach( filename => {
                 console.error( err );
                 return;
             }
-        });
+        });*/
 
         /*let newGeoJSON = {
             type: 'Point',

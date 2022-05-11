@@ -5,4 +5,15 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', '{{ site.google_analytics }}');
+      document.addEventListener( 'sfanalytics', e => {
+        if ( e.detail.type == 'event' ) {
+          gtag('event',e.detail.action, {
+            'event_category': e.detail.category,
+            'event_label': e.detail.label
+          })
+        } else if (e.detail.type == 'page_view') {
+          gtag('set', 'page_path', e.detail.path);
+          gtag('event', 'page_view');
+        }
+      });
     </script>

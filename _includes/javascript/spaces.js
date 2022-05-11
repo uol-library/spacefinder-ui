@@ -22,6 +22,18 @@ function applyFilters() {
     document.getElementById('listcontainer').scrollTop = 0;
     let searchcondition = '';
     if ( activeFilters.length ) {
+        activeFilters.forEach( filtergroup => {
+            if ( filtergroup.name !== 'search' ) {
+                document.dispatchEvent(new CustomEvent('sfanalytics', {
+                    detail: {
+                        type: 'event',
+                        action: 'sf_filter',
+                        category: filtergroup.name,
+                        label: filtergroup.value.join(', ')
+                    }
+                }));
+            }
+        });
         document.querySelectorAll('.list-space').forEach( el => {
             el.classList.remove('hidden');
             let showEl = true;
@@ -152,6 +164,12 @@ function activateSpaces() {
 function selectSpace( spaceid ) {
     let space = getSpaceById( spaceid );
     window.location.hash = '/space/'+space.slug;
+    document.dispatchEvent(new CustomEvent('sfanalytics', {
+        detail: {
+            type: 'page_view',
+            path: '/space/'+space.slug
+        }
+    }));
     renderAdditionalInfo( space.id );
     zoomMapToSpace( space );
     let spacenode = document.querySelector('[data-id="'+spaceid+'"]');

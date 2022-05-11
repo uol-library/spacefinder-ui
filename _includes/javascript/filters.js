@@ -122,6 +122,15 @@ function setupFilters() {
             document.getElementById('search-input').value = inputvalue;
             /* trigger the viewfilter event */
             event.target.dispatchEvent(spacefinder.filterEvent);
+            document.dispatchEvent(new CustomEvent('sfanalytics', {
+                detail: {
+                    type: 'event',
+                    action: 'sf_search',
+                    category: 'keyword',
+                    label: inputvalue
+                }
+            }));
+
         }
         /* switch to list view */
         document.getElementById('top-bar').dispatchEvent( new CustomEvent( 'viewchange', {
