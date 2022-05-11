@@ -9,7 +9,6 @@
         "disciplined",
         "modern"
     ],
-    "images": [],
     "facilities": [
         "daylight",
         "large_desks",
@@ -76,5 +75,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Clarendon Building - G07",
+    "slug": "clarendon-building-g07"
 }

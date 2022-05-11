@@ -14,9 +14,6 @@
         "social",
         "friendly"
     ],
-    "images": [
-        "/assets/photos/Loma-Cafe.jpg"
-    ],
     "facilities": [
         "food_drink",
         "daylight",
@@ -83,5 +80,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "/assets/photos/Loma-Cafe.jpg",
+    "imagealt": "Loma Café",
+    "slug": "loma-cafe"
 }

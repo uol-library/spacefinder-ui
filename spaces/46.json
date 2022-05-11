@@ -10,7 +10,6 @@
         "cosy",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "daylight",
         "large_desks",
@@ -77,5 +76,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Chemistry and Chemistry West Block - 140 (Cohen)",
+    "slug": "chemistry-and-chemistry-west-block-140-cohen"
 }

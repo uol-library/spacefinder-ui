@@ -117,6 +117,7 @@ function activateSpaces() {
     document.querySelectorAll('.list-space .closebutton').forEach( el => {
         el.addEventListener('click', event => {
             deselectSpaces(false);
+            window.location.hash = '';
         });
     });
     /* add listener to buttons in filter and search status bar */
@@ -149,8 +150,8 @@ function activateSpaces() {
  * @param {integer} spaceid 
  */
 function selectSpace( spaceid ) {
-    window.location.hash = '/space/'+spaceid;
     let space = getSpaceById( spaceid );
+    window.location.hash = '/space/'+space.slug;
     renderAdditionalInfo( space.id );
     zoomMapToSpace( space );
     let spacenode = document.querySelector('[data-id="'+spaceid+'"]');
@@ -283,7 +284,7 @@ function loadSpaces() {
         if ( data.length ) {
             data.forEach( (space, index) => {
                 spacefinder.spaces[index] = space;
-                spacefinder.spaces[index].link = '#/space/' + space.id;
+                spacefinder.spaces[index].link = '#/space/' + space.slug;
                 spacefinder.spaces[index].classes = getClassList( space );
             });
             spacefinder.spacesLoaded = true;
@@ -324,8 +325,8 @@ function renderList() {
         }
         spaceHTML += '<span class="address">' + loc + '</span></p>';
         spaceHTML += '<div class="space-details">';
-        if ( space.images.length ) {
-            spaceHTML += '<div data-imgsrc="' + space.images[0] + '" class="space-image lazy"></div>';
+        if ( space.image != '' ) {
+            spaceHTML += '<div data-imgsrc="' + space.image + '" class="space-image lazy" role="image" aria-label="' + space.imagealt + '"></div>';
         }
         spaceHTML += '<div><p class="description">' + space.description + '</p></div>';
         spaceHTML += '<div class="additionalInfo" aria-live="polite" id="additionalInfo' + space.id + '"></div>';

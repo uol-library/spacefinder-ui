@@ -34,6 +34,12 @@ collections:
         widget: 'select'
         options: ['Café','General Seating Area','IT Cluster','Library','Outdoor Seating Area','Seminar room']
         required: true
+      - label: 'Slug'
+        name: 'slug'
+        widget: 'string'
+        required: true
+        hint: 'This forms part of the URL for the space'
+        pattern: ['^[a-z\-]+$', 'only use lowercase letters and hyphens here']
       - label: 'Address'
         name: 'address'
         widget: 'text'
@@ -402,14 +408,16 @@ collections:
         widget: 'list'
         hint: 'Add tags separated by a comma'
         required: false
-      - label: 'Photohraphs'
-        name: 'images'
+      - label: 'Image'
+        name: 'image'
         widget: 'image'
         choose_url: false
         required: false
-        media_library:
-          config:
-            multiple: true
+        allow_multiple: false
+      - label: 'Image Alternate text'
+        name: 'imagealt'
+        widget: 'string'
+        required: false
       - label: 'Opening Hours'
         name: 'opening_hours'
         widget: 'object'

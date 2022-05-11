@@ -10,12 +10,6 @@
         "social",
         "friendly"
     ],
-    "images": [
-        "/assets/photos/Hugo-Camionette-Cafe1.jpg",
-        "/assets/photos/Hugo-Camionette-Cafe2.jpg",
-        "/assets/photos/Hugo-Camionette-Cafe3.jpg",
-        "/assets/photos/Hugo-Camionette-Cafe4.jpg"
-    ],
     "facilities": [
         "food_drink",
         "daylight",
@@ -80,5 +74,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "/assets/photos/Hugo-Camionette-Cafe1.jpg",
+    "imagealt": "Hugo, the Camionnette Café",
+    "slug": "hugo-the-camionnette-cafe"
 }

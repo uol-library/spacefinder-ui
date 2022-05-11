@@ -12,7 +12,6 @@
         "social",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "food_drink",
         "daylight",
@@ -79,5 +78,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Mechanical Engineering - Second floor seating (room 240)",
+    "slug": "mechanical-engineering-second-floor-seating-room-240"
 }

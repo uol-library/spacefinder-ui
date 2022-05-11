@@ -11,7 +11,6 @@
         "inspiring",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "food_drink",
         "daylight",
@@ -83,5 +82,8 @@
             "from": "10:00",
             "to": "24:00"
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Edward Boyle 11th and 12th floors",
+    "slug": "edward-boyle-11th-and-12th-floors"
 }

@@ -13,7 +13,6 @@
         "social",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "daylight",
         "views",
@@ -80,5 +79,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Michael Sadler Building - 1.01",
+    "slug": "michael-sadler-building-101"
 }

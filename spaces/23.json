@@ -10,7 +10,6 @@
         "relaxed",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "daylight",
         "free_wifi",
@@ -74,5 +73,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Michael Sadler Building - 1.37",
+    "slug": "michael-sadler-building-137"
 }

@@ -13,7 +13,6 @@
         "social",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "food_drink",
         "daylight",
@@ -80,5 +79,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Liberty Building - Ground floor Common Area (G01)",
+    "slug": "liberty-building-ground-floor-common-area-g01"
 }

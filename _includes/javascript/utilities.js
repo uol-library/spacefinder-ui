@@ -147,6 +147,19 @@ function getSpaceById( id ) {
 }
 
 /**
+ * Returns a space object given a valid slug
+ * @param {string} slug 
+ * @returns {Object} space object
+ */
+ function getSpaceBySlug( slug ) {
+    for (let i = 0; i < spacefinder.spaces.length; i++ ) {
+        if ( spacefinder.spaces[i].slug == slug ) {
+            return spacefinder.spaces[i];
+        }
+    }
+}
+
+/**
  * Returns a space DOM node given a valid ID
  * @param {integer} id 
  * @returns {Object} DOM node

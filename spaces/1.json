@@ -12,9 +12,6 @@
         "social",
         "friendly"
     ],
-    "images": [
-        "/assets/photos/Baines-Wing-Cafe.jpg"
-    ],
     "facilities": [
         "food_drink",
         "daylight",
@@ -80,5 +77,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "/assets/photos/Baines-Wing-Cafe.jpg",
+    "imagealt": "Baines Wing Café",
+    "slug": "baines-wing-cafe"
 }

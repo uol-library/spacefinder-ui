@@ -1,6 +1,6 @@
 {
     "id": 61,
-    "location": "{\"type\":\"Point\",\"coordinates\":[-1.552550512914537,53.807721526089274]}", 
+    "location": "{\"type\":\"Point\",\"coordinates\":[-1.552550512914537,53.807721526089274]}",
     "work": [
         "private",
         "close"
@@ -8,7 +8,6 @@
     "atmosphere": [
         "disciplined"
     ],
-    "images": [],
     "facilities": [
         "daylight",
         "views",
@@ -77,5 +76,8 @@
             "from": "10:00",
             "to": "17:00"
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Parkinson Building - B.32 (Woolhouse)",
+    "slug": "parkinson-building-b32-woolhouse"
 }

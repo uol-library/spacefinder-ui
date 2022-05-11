@@ -12,9 +12,6 @@
         "social",
         "friendly"
     ],
-    "images": [
-        "/assets/photos/Laidlaw-library5.jpg"
-    ],
     "facilities": [
         "food_drink",
         "daylight",
@@ -82,5 +79,8 @@
             "from": "12:00",
             "to": "24:00"
         }
-    }
+    },
+    "image": "/assets/photos/Laidlaw-library5.jpg",
+    "imagealt": "Laidlaw library - Footsteps fund room",
+    "slug": "laidlaw-library-footsteps-fund-room"
 }

@@ -10,7 +10,6 @@
         "relaxed",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "daylight",
         "views",
@@ -76,5 +75,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Michael Sadler Building - 1.19",
+    "slug": "michael-sadler-building-119"
 }

@@ -8,7 +8,6 @@
     "atmosphere": [
         "disciplined"
     ],
-    "images": [],
     "facilities": [
         "large_desks",
         "free_wifi",
@@ -73,5 +72,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Worsley Building - 8.039",
+    "slug": "worsley-building-8039"
 }

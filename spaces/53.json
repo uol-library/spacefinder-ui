@@ -9,7 +9,6 @@
         "disciplined",
         "modern"
     ],
-    "images": [],
     "facilities": [
         "daylight",
         "large_desks",
@@ -76,5 +75,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Esther Simpson Building - 109",
+    "slug": "esther-simpson-building-109"
 }

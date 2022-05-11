@@ -12,7 +12,6 @@
         "social",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "daylight",
         "views",
@@ -81,5 +80,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Irene Manton Building - 7.96",
+    "slug": "irene-manton-building-796"
 }

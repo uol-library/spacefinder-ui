@@ -10,7 +10,6 @@
         "inspiring",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "daylight",
         "views",
@@ -76,5 +75,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Michael Sadler Building - LG.17",
+    "slug": "michael-sadler-building-lg17"
 }

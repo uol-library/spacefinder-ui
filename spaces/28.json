@@ -11,7 +11,6 @@
         "disciplined",
         "cosy"
     ],
-    "images": [],
     "facilities": [
         "food_drink",
         "daylight",
@@ -77,5 +76,8 @@
             "from": "10:00",
             "to": "17:00"
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Parkinson Building - 4.20",
+    "slug": "parkinson-building-420"
 }

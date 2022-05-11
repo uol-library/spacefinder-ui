@@ -9,7 +9,6 @@
         "disciplined",
         "modern"
     ],
-    "images": [],
     "facilities": [
         "daylight",
         "large_desks",
@@ -76,5 +75,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Clothworkers' Building Link - G.34",
+    "slug": "clothworkers-building-link-g34"
 }

@@ -20,6 +20,17 @@ spacefiles.forEach( filename => {
         let spaceData = fs.readFileSync( path.resolve( __dirname, '../spaces/', filename ) );
         const spaceJSON = JSON.parse( spaceData );
         let geoJSON = JSON.parse( spaceJSON.location );
+        spaceJSON.image = spaceJSON.images.length ? spaceJSON.images[0]: '';
+        spaceJSON.imagealt = spaceJSON.title;
+        delete spaceJSON.images;
+        spaceJSON.slug = string_to_slug( spaceJSON.title );
+        fs.writeFile( path.resolve( __dirname, '../_data/leeds/processed/'+spaceJSON.id+'.json' ), JSON.stringify( spaceJSON, null, '    ' ), err => {
+            if (err) {
+                console.error( err );
+                return;
+            }
+        });
+
         /*let newGeoJSON = {
             type: 'Point',
             coordinates: [ geoJSON.coordinates[1], geoJSON.coordinates[0] ]
@@ -37,6 +48,8 @@ spacefiles.forEach( filename => {
         if ( spaceJSON.opening_hours == false ) {
             console.log( spaceJSON.id + ": " + spaceJSON.title );
         }*/
+        /*
+        process coordinates to w3w
         client.run({ coordinates: { lat: geoJSON.coordinates[1],lng: geoJSON.coordinates[0] } })
             .then( response => {
                 spaceJSON.w3w = response.words;
@@ -47,9 +60,27 @@ spacefiles.forEach( filename => {
                     }
                 });
             });
+        */
     }
 });
 
+function string_to_slug (str) {
+    str = str.replace(/^\s+|\s+$/g, ''); // trim
+    str = str.toLowerCase();
+  
+    // remove accents, swap ñ for n, etc
+    var from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;";
+    var to   = "aaaaeeeeiiiioooouuuunc------";
+    for (var i=0, l=from.length ; i<l ; i++) {
+        str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+    }
+
+    str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+        .replace(/\s+/g, '-') // collapse whitespace and replace by -
+        .replace(/-+/g, '-'); // collapse dashes
+
+    return str;
+}
 
 function getTimesForSpace( spaceid ) {
     // Affine, Baines Wing Cafe, Cafe Maia, Cafe seven, Esther Simpson, FUSE, Hugo, LOMA, Parkinson Court

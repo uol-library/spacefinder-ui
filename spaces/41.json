@@ -11,9 +11,6 @@
         "modern",
         "social"
     ],
-    "images": [
-        "/assets/photos/Charles-Thackrah.jpg"
-    ],
     "facilities": [
         "food_drink",
         "daylight",
@@ -79,5 +76,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "/assets/photos/Charles-Thackrah.jpg",
+    "imagealt": "Charles Thackrah - Atrium (Ground Floor)",
+    "slug": "charles-thackrah-atrium-ground-floor"
 }

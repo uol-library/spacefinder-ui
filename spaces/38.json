@@ -10,7 +10,6 @@
         "modern",
         "cosy"
     ],
-    "images": [],
     "facilities": [
         "food_drink",
         "large_desks",
@@ -75,5 +74,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Maurice Keyworth - Study Centre (Rooms 238 & 307)",
+    "slug": "maurice-keyworth-study-centre-rooms-238-307"
 }

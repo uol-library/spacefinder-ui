@@ -12,7 +12,6 @@
         "social",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "daylight",
         "views",
@@ -81,5 +80,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Fine Art, History of Art and Cultural Studies - G29 (West Teaching Labs)",
+    "slug": "fine-art-history-of-art-and-cultural-studies-g29-west-teaching-labs"
 }

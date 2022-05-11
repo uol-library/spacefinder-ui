@@ -13,9 +13,6 @@
         "social",
         "friendly"
     ],
-    "images": [
-        "/assets/photos/1915.jpg"
-    ],
     "facilities": [
         "food_drink",
         "daylight",
@@ -82,5 +79,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "/assets/photos/1915.jpg",
+    "imagealt": "1915",
+    "slug": "1915"
 }

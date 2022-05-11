@@ -10,9 +10,6 @@
         "disciplined",
         "friendly"
     ],
-    "images": [
-        "/assets/photos/Baines-Wing.jpg"
-    ],
     "facilities": [
         "daylight",
         "free_wifi",
@@ -75,5 +72,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "/assets/photos/Baines-Wing.jpg",
+    "imagealt": "Baines Wing - G.37",
+    "slug": "baines-wing-g37"
 }

@@ -9,7 +9,6 @@
         "disciplined",
         "modern"
     ],
-    "images": [],
     "facilities": [
         "daylight",
         "large_desks",
@@ -76,5 +75,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Clothworkers' Building Link - 140 (Richard Hughes)",
+    "slug": "clothworkers-building-link-140-richard-hughes"
 }

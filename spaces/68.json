@@ -10,7 +10,6 @@
         "disciplined",
         "modern"
     ],
-    "images": [],
     "facilities": [
         "large_desks",
         "free_wifi",
@@ -75,5 +74,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Worsley Building - 7.027s",
+    "slug": "worsley-building-7027s"
 }

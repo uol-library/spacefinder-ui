@@ -10,9 +10,6 @@
         "disciplined",
         "cosy"
     ],
-    "images": [
-        "/assets/photos/Laidlaw-library4.jpg"
-    ],
     "facilities": [
         "food_drink",
         "large_desks",
@@ -83,5 +80,8 @@
             "from": "12:00",
             "to": "24:00"
         }
-    }
+    },
+    "image": "/assets/photos/Laidlaw-library4.jpg",
+    "imagealt": "Laidlaw library - 1st floor group study booths",
+    "slug": "laidlaw-library-1st-floor-group-study-booths"
 }

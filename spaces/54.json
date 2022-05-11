@@ -10,7 +10,6 @@
         "historic",
         "social"
     ],
-    "images": [],
     "facilities": [
         "large_desks",
         "free_wifi",
@@ -78,5 +77,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Fine Art, History of Art and Cultural Studies - B16 (West Teaching Labs)",
+    "slug": "fine-art-history-of-art-and-cultural-studies-b16-west-teaching-labs"
 }

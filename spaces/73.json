@@ -7,7 +7,6 @@
     "atmosphere": [
         "disciplined"
     ],
-    "images": [],
     "facilities": [],
     "title": "Edward Boyle 13th floor",
     "description": "Silent libary space for postgruate students with bookable group study rooms.",
@@ -61,5 +60,8 @@
             "from": "10:00",
             "to": "24:00"
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Edward Boyle 13th floor",
+    "slug": "edward-boyle-13th-floor"
 }

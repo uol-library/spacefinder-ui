@@ -12,9 +12,6 @@
         "social",
         "friendly"
     ],
-    "images": [
-        "/assets/photos/Affine.jpg"
-    ],
     "facilities": [
         "food_drink",
         "daylight",
@@ -81,5 +78,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "/assets/photos/Affine.jpg",
+    "imagealt": "Affine Café",
+    "slug": "affine-cafe"
 }

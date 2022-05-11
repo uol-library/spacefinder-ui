@@ -10,7 +10,6 @@
         "disciplined",
         "modern"
     ],
-    "images": [],
     "facilities": [
         "large_desks",
         "free_wifi",
@@ -76,5 +75,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Worsley Building - 8.038",
+    "slug": "worsley-building-8038"
 }
