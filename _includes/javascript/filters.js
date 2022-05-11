@@ -133,25 +133,5 @@ function setupFilters() {
             }
         } ) );
     });
-    /* view-results action */
-    document.getElementById('view-results').addEventListener('click', event => {
-        event.preventDefault();
-        /* first apply search */
-        let inputvalue = document.getElementById('search-input').value.replace(/[^a-zA-Z0-9 ]/g, '').trim();
-        if ( inputvalue.length > 1 ) {
-            document.getElementById('search-input').value = inputvalue;
-            /* trigger the viewfilter event */
-            event.target.dispatchEvent(spacefinder.filterEvent);
-        }
-        /* switch to list view */
-        document.getElementById('top-bar').dispatchEvent( new CustomEvent( 'viewchange', {
-            bubbles: true,
-            cancelable: true,
-            composed: false,
-            detail: {
-                view: 'list'
-            }
-        } ) );
-    });
 }
 
