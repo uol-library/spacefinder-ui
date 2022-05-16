@@ -56,7 +56,7 @@ function maybeSetupMap() {
                 google.maps.event.addListener( spacefinder.spaces[i].marker, 'click', function (e) {
                     spacefinder.infoWindow.setContent( spacefinder.spaces[i].marker.infoContent );
                     spacefinder.infoWindow.open( spacefinder.map, spacefinder.spaces[i].marker );
-                    selectSpace(spacefinder.spaces[i].id);
+                    selectSpace(spacefinder.spaces[i].id, 'map');
                 });
                 spacefinder.mapBounds.extend( spacePosition );
             }

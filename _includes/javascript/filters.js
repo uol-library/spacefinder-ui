@@ -124,10 +124,8 @@ function setupFilters() {
             event.target.dispatchEvent(spacefinder.filterEvent);
             document.dispatchEvent(new CustomEvent('sfanalytics', {
                 detail: {
-                    type: 'event',
-                    action: 'sf_search',
-                    category: 'keyword',
-                    label: inputvalue
+                    type: 'search',
+                    terms: inputvalue
                 }
             }));
 

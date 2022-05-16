@@ -26,10 +26,9 @@ function applyFilters() {
             if ( filtergroup.name !== 'search' ) {
                 document.dispatchEvent(new CustomEvent('sfanalytics', {
                     detail: {
-                        type: 'event',
-                        action: 'sf_filter',
-                        category: filtergroup.name,
-                        label: filtergroup.value.join(', ')
+                        type: 'filter',
+                        filtername: filtergroup.name,
+                        terms: filtergroup.value.join(', ')
                     }
                 }));
             }
@@ -122,7 +121,7 @@ function activateSpaces() {
             event.preventDefault();
             let spacenode = document.querySelector('[data-id="'+event.target.getAttribute('data-spaceid')+'"]');
             if ( ! spacenode.classList.contains('active') ) {
-                selectSpace( event.target.getAttribute('data-spaceid') );
+                selectSpace( event.target.getAttribute('data-spaceid'), 'list' );
             }
         });
     });
@@ -161,13 +160,15 @@ function activateSpaces() {
  * Selects a space in the list
  * @param {integer} spaceid 
  */
-function selectSpace( spaceid ) {
+function selectSpace( spaceid, source ) {
     let space = getSpaceById( spaceid );
     window.location.hash = '/space/'+space.slug;
     document.dispatchEvent(new CustomEvent('sfanalytics', {
         detail: {
-            type: 'page_view',
-            path: '/space/'+space.slug
+            type: 'select',
+            id: spaceid,
+            name: space.title,
+            src: source
         }
     }));
     renderAdditionalInfo( space.id );

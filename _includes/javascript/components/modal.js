@@ -10,8 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.hash = '#/page/'+pagehash;
             document.dispatchEvent(new CustomEvent('sfanalytics', {
                 detail: {
-                    type: 'page_view',
-                    path: '/page/'+pagehash
+                    type: 'select',
+                    id: pagehash,
+                    name: e.target.textContent
                 }
             }));
         });

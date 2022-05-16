@@ -1,19 +1,7 @@
     <script type="text/plain" data-cookiecategory="analytics" src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}" defer></script>
     <script type="text/plain" data-cookiecategory="analytics">
-      window['ga-disable-{{ site.google_analytics }}'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', '{{ site.google_analytics }}');
-      document.addEventListener( 'sfanalytics', e => {
-        if ( e.detail.type == 'event' ) {
-          gtag('event',e.detail.action, {
-            'event_category': e.detail.category,
-            'event_label': e.detail.label
-          })
-        } else if (e.detail.type == 'page_view') {
-          gtag('set', 'page_path', e.detail.path);
-          gtag('event', 'page_view');
-        }
-      });
     </script>

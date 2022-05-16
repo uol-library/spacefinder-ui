@@ -7,17 +7,6 @@ var cc = initCookieConsent();
 cc.run({
     current_lang: 'en',
     page_scripts: true,
-    onFirstAction: function(user_preferences, cookie){
-        //console.log(user_preferences);
-        //console.log(cookie);
-    },
-    onAccept: function (cookie) {
-        //console.log(cookie);
-    },
-    onChange: function (cookie, changed_preferences) {
-        //console.log(changed_preferences);
-        //console.log(cookie);
-    },
     gui_options: {
         consent_modal: {
             layout: 'box', 
@@ -81,7 +70,7 @@ cc.run({
                         }
                     }, {
                         title: 'More information',
-                        description: 'You can manage your privacy settings, including cookies, through your browser settings. Further information about cookies can be found on the <a target="_ico" href="https://ico.org.uk/">Information Commissioner’s Office website</a>.',
+                        description: 'You can manage your privacy settings, including cookies, through your browser settings. Further information about cookies can be found on the <a target="_ico" href="https://ico.org.uk/">Information Commissioners Office website</a>.',
                     }
                 ]
             }
