@@ -11,6 +11,7 @@ collections:
     label_singular: 'Space'
     folder: 'spaces/'
     create: true
+    delete: false
     editor:
       preview: false
     show_preview_links: false
@@ -39,7 +40,7 @@ collections:
         widget: 'string'
         required: true
         hint: 'This forms part of the URL for the space'
-        pattern: ['^[a-z\-]+$', 'only use lowercase letters and hyphens here']
+        pattern: ['^[a-z0-9\-]+$', 'only use lowercase letters, numbers and hyphens here']
       - label: 'Address'
         name: 'address'
         widget: 'text'
