@@ -299,7 +299,7 @@ function sortSpaces( sortby, dir ) {
  * Loads all space data from a single JSON file
  */
 function loadSpaces() {
-    getJSON( { key: 'spaces', url: spacefinder.spacesurl, debug: true, callback: data => {
+    getJSON( { key: 'spaces', url: spacefinder.spacesurl, debug: false, callback: data => {
         if ( data.length ) {
             data.forEach( (space, index) => {
                 spacefinder.spaces[index] = space;
