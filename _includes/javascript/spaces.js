@@ -94,7 +94,7 @@ function updateListFilterMessage( filters ) {
                 filtermessage += '<p>Filtering spaces by <em>' + f.name + '</em>: ';
                 let termlist = [];
                 f.value.forEach( term => {
-                    termlist.push('<button class="filter-term icon-remove" data-termid="' + f.name + '_' + term + '">'+spacefinder.spaceProperties[ f.name + '_' + term ]+'</button>');
+                    termlist.push('<button class="filter-term icon-remove" data-termid="' + f.name + '_' + term + '">'+spacefinder.filters[ f.name + '_' + term ]+'</button>');
                 });
                 filtermessage += termlist.join(', ') + '</p>';
             }
@@ -345,7 +345,7 @@ function renderList() {
         spaceHTML += '<span class="address">' + loc + '</span></p>';
         spaceHTML += '<div class="space-details">';
         if ( space.image != '' ) {
-            spaceHTML += '<div data-imgsrc="' + space.image + '" class="space-image lazy" role="image" aria-label="' + space.imagealt + '"></div>';
+            spaceHTML += '<div data-imgsrc="' + space.image + '" class="space-image lazy" role="img" aria-label="' + space.imagealt + '"></div>';
         }
         spaceHTML += '<div><p class="description">' + space.description + '</p></div>';
         spaceHTML += '<div class="additionalInfo" aria-live="polite" id="additionalInfo' + space.id + '"></div>';
@@ -430,7 +430,7 @@ function renderAdditionalInfo( spaceid ) {
         if ( space.facilities.length ) {
             spaceHTML += '<section class="section-facilities"><h3>Facilities</h3><ul class="bulleticons">';
             for ( i = 0; i < space.facilities.length; i++ ) {
-                spaceHTML += '<li class="' + spacefinder.iconMap[space.facilities[i]] + '">' + spacefinder.spaceProperties[ 'facility_' + space.facilities[i] ] + '</li>';
+                spaceHTML += '<li class="' + spacefinder.icons[space.facilities[i]] + '">' + spacefinder.filters[ 'facility_' + space.facilities[i] ] + '</li>';
             }
             spaceHTML += '</ul></section>';
         }
