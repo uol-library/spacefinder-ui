@@ -14,7 +14,6 @@
         "social",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "daylight",
         "large_desks",
@@ -83,5 +82,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Chemical and Process Engineering - G06",
+    "slug": "chemical-and-process-engineering-g06"
 }

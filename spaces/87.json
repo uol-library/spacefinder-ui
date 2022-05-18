@@ -14,9 +14,6 @@
         "social",
         "friendly"
     ],
-    "images": [
-        "/assets/photos/Caffe-Nero-Laidlaw.jpg"
-    ],
     "facilities": [
         "food_drink",
         "daylight",
@@ -83,5 +80,8 @@
             "from": "10:00",
             "to": "20:00"
         }
-    }
+    },
+    "image": "/assets/photos/Caffe-Nero-Laidlaw.jpg",
+    "imagealt": "Caffè Nero at Laidlaw Library",
+    "slug": "caffe-nero-at-laidlaw-library"
 }

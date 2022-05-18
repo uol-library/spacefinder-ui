@@ -10,22 +10,13 @@ function setupLayout() {
 	document.querySelectorAll('#top-bar .navbutton').forEach( el => {
         el.addEventListener( 'click', event => {
             event.preventDefault();
-            let isactive = el.classList.toggle( 'active' );
-            if ( isactive ) {
-                document.querySelectorAll('#top-bar .navbutton').forEach( other => {
-                    if ( el != other ) {
-                        other.classList.remove('active');
-                    }
-                });
-            }
             /* Dispatch a custom event (viewchange) with the name of the active view */
             document.getElementById('top-bar').dispatchEvent( new CustomEvent( 'viewchange', {
                 bubbles: true,
                 cancelable: true,
                 composed: false,
                 detail: {
-                    view: el.getAttribute('data-view'),
-                    active: isactive
+                    view: el.getAttribute('data-view')
                 }
             } ) );
         });
@@ -34,25 +25,19 @@ function setupLayout() {
 	document.addEventListener( 'viewchange', event => {
 		let views = ['filters','list','map'];
 		let changedview = document.getElementById( event.detail.view );
-		if ( event.detail.view == 'single' ) {
-			views.forEach(view => {
-				document.getElementById( view ).classList.remove( 'active' );
-			});
-			document.getElementById('list').classList.add( 'active' );
-			if ( event.detail.active ) {
-				document.getElementById('list').classList.add( 'single' );
-			} else {
-				document.getElementById('list').classList.remove( 'single' );
-			}
+		/* special case for closing filters view */
+		if ( event.detail.view == 'filters' && document.querySelector('#top-bar .navbutton[data-view="filters"]').classList.contains( 'active' ) ) {
+			document.querySelector('#top-bar .navbutton[data-view="filters"]').classList.remove( 'active' );
+			document.getElementById( 'filters' ).classList.remove( 'active' );
+			document.querySelector('#top-bar .navbutton[data-view="list"]').classList.add( 'active' );
+			document.getElementById( 'list' ).classList.add( 'active' );
 		} else {
 			views.forEach(view => {
 				document.getElementById( view ).classList.remove( 'active' );
+				document.querySelector('#top-bar .navbutton[data-view="'+view+'"]').classList.remove( 'active' );
 			});
-			if ( event.detail.active ) {
-				changedview.classList.add( 'active' );
-			} else {
-				changedview.classList.remove( 'active' );
-			}
+			changedview.classList.add( 'active' );
+			document.querySelector('#top-bar .navbutton[data-view="'+event.detail.view+'"]').classList.add( 'active' );
 		}
 	});
 }

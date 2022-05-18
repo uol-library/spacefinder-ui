@@ -10,7 +10,6 @@
         "modern",
         "cosy"
     ],
-    "images": [],
     "facilities": [
         "daylight",
         "large_desks",
@@ -78,5 +77,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Clarendon Building - G04",
+    "slug": "clarendon-building-g04"
 }

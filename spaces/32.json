@@ -12,7 +12,6 @@
         "social",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "food_drink",
         "daylight",
@@ -78,5 +77,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Leeds University Union - Foyer",
+    "slug": "leeds-university-union-foyer"
 }

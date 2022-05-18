@@ -12,7 +12,6 @@
         "social",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "large_desks",
         "free_wifi",
@@ -75,5 +74,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Michael Sadler Building - B.37",
+    "slug": "michael-sadler-building-b37"
 }

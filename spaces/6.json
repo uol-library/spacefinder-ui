@@ -13,12 +13,6 @@
         "cosy",
         "friendly"
     ],
-    "images": [
-        "/assets/photos/Parkinson-Court-Cafe4.jpg",
-        "/assets/photos/Parkinson-Court-Cafe2.jpg",
-        "/assets/photos/Parkinson-Court-Cafe1.jpg",
-        "/assets/photos/Parkinson-Court-Cafe3.jpg"    
-    ],
     "facilities": [
         "food_drink",
         "daylight",
@@ -84,5 +78,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "/assets/photos/Parkinson-Court-Cafe4.jpg",
+    "imagealt": "Costa Parkinson Court",
+    "slug": "costa-parkinson-court"
 }

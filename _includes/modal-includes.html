@@ -1,57 +1,61 @@
 <div id="accessibility-page" class="dialog-container" aria-labelledby="accessibility-page-title" aria-describedby="accessibility-page-description" aria-hidden="true">
     <div class="dialog-overlay" data-a11y-dialog-hide></div>
-    <div role="document" class="dialog-content">
+    <article role="document" class="dialog-content">
         <header>
             <button type="button" class="button dialog-close" data-a11y-dialog-hide aria-label="Close dialog">&times;</button>
-            <h1 id="accessibility-page-title">Accessibility</h1>
+            <h2 id="accessibility-page-title">Accessibility</h2>
             <p class="visuallyhidden" id="accessibility-page-description">Accessibility statement for Spacefinder</p>
         </header>
-        <article>
-            {% capture accessibility_page %}{% include pages/accessibility.md %}{% endcapture %}
-            {{ accessibility_page | markdownify }}
-        </article>
-    </div>
+        {% capture accessibility_page %}{% include pages/accessibility.md %}{% endcapture %}
+        {{ accessibility_page | markdownify }}
+    </article>
 </div>
 
 <div id="privacy-page" class="dialog-container" aria-labelledby="privacy-page-title" aria-describedby="privacy-page-description" aria-hidden="true">
     <div class="dialog-overlay" data-a11y-dialog-hide></div>
-    <div role="document" class="dialog-content">
+    <article role="document" class="dialog-content">
         <header>
             <button type="button" class="button dialog-close" data-a11y-dialog-hide aria-label="Close dialog">&times;</button>
-            <h1 id="privacy-page-title">Privacy &amp; Cookies</h1>
+            <h2 id="privacy-page-title">Privacy &amp; Cookies</h2>
             <p class="visuallyhidden" id="privacy-page-description">Privacy and cookies statement for Spacefinder</p>
         </header>
-        <article>
-            {% capture privacy_page %}{% include pages/privacy.md %}{% endcapture %}
-            {{ privacy_page | markdownify }}
-        </article>
-    </div>
+        {% capture privacy_page %}{% include pages/privacy.md %}{% endcapture %}
+        {{ privacy_page | markdownify }}
+    </article>
 </div>
 
 <div id="terms-page" class="dialog-container" aria-labelledby="terms-page-title" aria-describedby="terms-page-description" aria-hidden="true">
     <div class="dialog-overlay" data-a11y-dialog-hide></div>
-    <div role="document" class="dialog-content">
+    <article role="document" class="dialog-content">
         <header>
             <button type="button" class="button dialog-close" data-a11y-dialog-hide aria-label="Close dialog">&times;</button>
-            <h1 id="terms-page-title">Terms &amp; Conditions</h1>
+            <h2 id="terms-page-title">Terms &amp; Conditions</h2>
             <p class="visuallyhidden" id="terms-page-description">Terms and Conditions statement for Spacefinder</p>
         </header>
-        <article>
-            {% capture terms_page %}{% include pages/terms.md %}{% endcapture %}
-            {{ terms_page | markdownify }}
-        </article>
-    </div>
+        {% capture terms_page %}{% include pages/terms.md %}{% endcapture %}
+        {{ terms_page | markdownify }}
+    </article>
+</div>
+
+<div id="feedback-page" class="dialog-container" aria-labelledby="feedback-page-title" aria-describedby="feedback-page-description" aria-hidden="true">
+    <div class="dialog-overlay" data-a11y-dialog-hide></div>
+    <article role="document" class="dialog-content">
+        <header>
+            <button type="button" class="button dialog-close" data-a11y-dialog-hide aria-label="Close dialog">&times;</button>
+            <h2 id="feedback-page-title">Spacefinder feedback</h2>
+            <p class="visuallyhidden" id="feedback-page-description">Spacefinder feedback</p>
+        </header>
+        <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=qO3qvR3IzkWGPlIypTW3y1HKKRLEEutMhj3gY5HWuwpUOFk0R0RQUjEzN0xUTjRXV0pTT1NGTE9HMy4u&embed=true"></iframe>
+    </article>
 </div>
 
 <div id="sfalertdialog" class="dialog-container" role="alertdialog" aria-labelledby="sfalertdialog-title" aria-describedby="sfalertdialog-description" aria-hidden="true">
     <div class="dialog-overlay"></div>
-    <div role="document" class="dialog-content alert-dialog">
+    <article role="document" class="dialog-content alert-dialog">
         <header>
             <button type="button" class="button dialog-close" data-a11y-dialog-hide aria-label="Close dialog">&times;</button>
-            <h1 id="sfalertdialog-title"></h1>
+            <h2 id="sfalertdialog-title">Dialog title</h2>
         </header>
-        <article>
-            <p id="sfalertdialog-description"></p>
-        </article>
-    </div>
+        <p id="sfalertdialog-description">Dialog description</p>
+    </article>
 </div>

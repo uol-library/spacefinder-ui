@@ -13,7 +13,6 @@
         "social",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "daylight",
         "views",
@@ -83,5 +82,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Psychology (37 and 41 University Road) - 1.45",
+    "slug": "psychology-37-and-41-university-road-145"
 }

@@ -10,7 +10,6 @@
         "cosy",
         "social"
     ],
-    "images": [],
     "facilities": [
         "food_drink",
         "large_desks",
@@ -78,5 +77,8 @@
             "from": "12:00",
             "to": "24:00"
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Health Sciences library - group study space",
+    "slug": "health-sciences-library-group-study-space"
 }

@@ -1,16 +1,17 @@
 /**
  * Google maps API functions for spacefinder
  */
-document.addEventListener('DOMContentLoaded', () => {
-    initMap();
-    document.addEventListener( 'sfmaploaded', checkGeo );
-    document.addEventListener( 'viewfilter', filterMarkers );
-});
 
 /**
  * Initialise map and set listeners to set up markers when loaded
+ * This function needs to be global as it is used as a callback by
+ * the google maps script tag src.
  */
 function initMap() {
+    document.addEventListener( 'sfmaploaded', checkGeo );
+    document.addEventListener( 'viewfilter', filterMarkers );
+    document.addEventListener( 'spacesloaded', maybeSetupMap );
+    document.addEventListener( 'sfmaploaded', maybeSetupMap );
     spacefinder.map = new google.maps.Map(document.getElementById('map'), {
         center: spacefinder.currentLoc,
         zoom: spacefinder.startZoom,
@@ -20,8 +21,6 @@ function initMap() {
         spacefinder.mapLoaded = true;
         document.dispatchEvent( new Event( 'sfmaploaded' ) );
     });
-    document.addEventListener('spacesloaded', maybeSetupMap );
-    document.addEventListener('sfmaploaded', maybeSetupMap );
 }
 
 /**
@@ -56,7 +55,7 @@ function maybeSetupMap() {
                 google.maps.event.addListener( spacefinder.spaces[i].marker, 'click', function (e) {
                     spacefinder.infoWindow.setContent( spacefinder.spaces[i].marker.infoContent );
                     spacefinder.infoWindow.open( spacefinder.map, spacefinder.spaces[i].marker );
-                    selectSpace(spacefinder.spaces[i].id);
+                    selectSpace(spacefinder.spaces[i].id, 'map');
                 });
                 spacefinder.mapBounds.extend( spacePosition );
             }

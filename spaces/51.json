@@ -9,7 +9,6 @@
         "disciplined",
         "modern"
     ],
-    "images": [],
     "facilities": [
         "daylight",
         "large_desks",
@@ -76,5 +75,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "E C Stoner Building - 6.61",
+    "slug": "e-c-stoner-building-661"
 }

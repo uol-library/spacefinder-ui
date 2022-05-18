@@ -9,9 +9,6 @@
         "disciplined",
         "cosy"
     ],
-    "images": [
-        "/assets/photos/Laidlaw-library3.jpg"
-    ],
     "facilities": [
         "food_drink",
         "free_wifi",
@@ -78,5 +75,8 @@
             "from": "12:00",
             "to": "24:00"
         }
-    }
+    },
+    "image": "/assets/photos/Laidlaw-library3.jpg",
+    "imagealt": "Laidlaw library - 1st floor silent study area",
+    "slug": "laidlaw-library-1st-floor-silent-study-area"
 }

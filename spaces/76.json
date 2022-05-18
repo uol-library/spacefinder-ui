@@ -10,7 +10,6 @@
         "disciplined",
         "cosy"
     ],
-    "images": [],
     "facilities": [
         "food_drink",
         "free_wifi",
@@ -80,5 +79,8 @@
             "from": "12:00",
             "to": "24:00"
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Health Sciences library - group study rooms",
+    "slug": "health-sciences-library-group-study-rooms"
 }

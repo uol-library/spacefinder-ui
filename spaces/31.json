@@ -12,7 +12,6 @@
         "social",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "food_drink",
         "daylight",
@@ -77,5 +76,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Michael Sadler Building - Behind Rupert Beckett Lecture Theatre",
+    "slug": "michael-sadler-building-behind-rupert-beckett-lecture-theatre"
 }

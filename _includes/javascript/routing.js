@@ -13,7 +13,8 @@ function checkInitialPageLoad() {
             let hp = window.location.hash.split('/');
             if ( hp.length === 3 ) {
                 if ( hp[1] == 'space' ) {
-                    selectSpace(hp[2])
+                    let space = getSpaceBySlug(hp[2]);
+                    selectSpace(space.id, 'load');
                 }
                 if ( hp[1] == 'page' ) {
                     let pagedialog = document.getElementById( hp[2] + '-page' );

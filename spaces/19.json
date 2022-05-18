@@ -12,7 +12,6 @@
         "social",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "large_desks",
         "adjustable_furniture",
@@ -78,5 +77,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Michael Sadler Building - B.49",
+    "slug": "michael-sadler-building-b49"
 }

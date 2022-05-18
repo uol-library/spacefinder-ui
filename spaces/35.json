@@ -12,7 +12,6 @@
         "social",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "food_drink",
         "daylight",
@@ -78,5 +77,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Electronic and Electrical Engineering - Ground Floor Foyer",
+    "slug": "electronic-and-electrical-engineering-ground-floor-foyer"
 }

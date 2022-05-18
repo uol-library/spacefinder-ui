@@ -8,6 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
             dialog.show();
             dialog.originalpagehash = window.location.hash;
             window.location.hash = '#/page/'+pagehash;
+            document.dispatchEvent(new CustomEvent('sfanalytics', {
+                detail: {
+                    type: 'select',
+                    id: pagehash,
+                    name: e.target.textContent
+                }
+            }));
         });
         dialog.on('hide', (element, event) => {
             window.location.hash = dialog.originalpagehash

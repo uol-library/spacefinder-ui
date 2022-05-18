@@ -11,9 +11,6 @@
         "social",
         "friendly"
     ],
-    "images": [
-        "/assets/photos/Cafe-Seven.jpg"
-    ],
     "facilities": [
         "food_drink",
         "free_wifi",
@@ -78,5 +75,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "/assets/photos/Cafe-Seven.jpg",
+    "imagealt": "Café Seven",
+    "slug": "cafe-seven"
 }

@@ -15,7 +15,6 @@
         "social",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "food_drink",
         "daylight",
@@ -83,5 +82,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Sir William Henry Bragg Building - Ground Floor Breakout Area (Room G.08)",
+    "slug": "sir-william-henry-bragg-building-ground-floor-breakout-area-room-g08"
 }

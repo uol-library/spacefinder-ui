@@ -48,8 +48,13 @@ function setupFilters() {
         const activeFilters = getFilterStatus();
         if ( activeFilters.length ) {
             document.getElementById('search-reset').removeAttribute('disabled');
+            document.getElementById('search-submit').removeAttribute('disabled');
         } else {
-            document.getElementById('search-reset').setAttribute('disabled', true);
+            let inputvalue = document.getElementById('search-input').value.trim();
+            if ( inputvalue.length < 2 ) {
+                document.getElementById('search-reset').setAttribute('disabled', '');
+                document.getElementById('search-submit').setAttribute('disabled', '');
+            }
         }
     });
 
@@ -91,15 +96,18 @@ function setupFilters() {
         /* trigger the viewfilter event */
         event.target.dispatchEvent(spacefinder.filterEvent);
     });
-    /* search and reset button activation */
+    /* search, reset and view results buttons activation */
     document.getElementById('search-input').addEventListener('input', event => {
         let inputvalue = document.getElementById('search-input').value.trim();
         if ( inputvalue.length > 1 ) {
-            document.getElementById('search-reset').disabled = false;
-            document.getElementById('search-submit').disabled = false;
+            document.getElementById('search-reset').removeAttribute('disabled');
+            document.getElementById('search-submit').removeAttribute('disabled');
         } else {
-            document.getElementById('search-reset').disabled = true;
-            document.getElementById('search-submit').disabled = true;
+            const checkedfilters = document.querySelectorAll('#filters input[type=checkbox]:checked');
+            if ( checkedfilters == null ) {
+                document.getElementById('search-reset').setAttribute('disabled', '');
+                document.getElementById('search-submit').setAttribute('disabled', '');
+            }
             if ( inputvalue.length == 0 ) {
                 /* search has been cleared */
                 event.target.dispatchEvent(spacefinder.filterEvent);
@@ -114,7 +122,23 @@ function setupFilters() {
             document.getElementById('search-input').value = inputvalue;
             /* trigger the viewfilter event */
             event.target.dispatchEvent(spacefinder.filterEvent);
+            document.dispatchEvent(new CustomEvent('sfanalytics', {
+                detail: {
+                    type: 'search',
+                    terms: inputvalue
+                }
+            }));
+
         }
+        /* switch to list view */
+        document.getElementById('top-bar').dispatchEvent( new CustomEvent( 'viewchange', {
+            bubbles: true,
+            cancelable: true,
+            composed: false,
+            detail: {
+                view: 'list'
+            }
+        } ) );
     });
 }
 

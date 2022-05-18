@@ -12,9 +12,6 @@
         "social",
         "friendly"
     ],
-    "images": [
-        "/assets/photos/Edit-Room.jpg"
-    ],
     "facilities": [
         "food_drink",
         "daylight",
@@ -82,5 +79,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "/assets/photos/Edit-Room.jpg",
+    "imagealt": "Edit Room Café in Edward Boyle Library",
+    "slug": "edit-room-cafe-in-edward-boyle-library"
 }

@@ -84,6 +84,11 @@
         margin: 0;
     }
 }
+#feedback-page iframe {
+    width:100%;
+    min-height: 600px;
+    border:0;
+}
 
 @media screen and (min-width: 700px) {
     .dialog-content {

@@ -14,9 +14,6 @@
         "social",
         "friendly"
     ],
-    "images": [
-        "/assets/photos/Esther-Simpson-Cafe.jpg"
-    ],
     "facilities": [
         "food_drink",
         "daylight",
@@ -83,5 +80,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "/assets/photos/Esther-Simpson-Cafe.jpg",
+    "imagealt": "Esther Simpson Café",
+    "slug": "esther-simpson-cafe"
 }

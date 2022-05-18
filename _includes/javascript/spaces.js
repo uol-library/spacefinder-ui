@@ -22,6 +22,17 @@ function applyFilters() {
     document.getElementById('listcontainer').scrollTop = 0;
     let searchcondition = '';
     if ( activeFilters.length ) {
+        activeFilters.forEach( filtergroup => {
+            if ( filtergroup.name !== 'search' ) {
+                document.dispatchEvent(new CustomEvent('sfanalytics', {
+                    detail: {
+                        type: 'filter',
+                        filtername: filtergroup.name,
+                        terms: filtergroup.value.join(', ')
+                    }
+                }));
+            }
+        });
         document.querySelectorAll('.list-space').forEach( el => {
             el.classList.remove('hidden');
             let showEl = true;
@@ -83,7 +94,7 @@ function updateListFilterMessage( filters ) {
                 filtermessage += '<p>Filtering spaces by <em>' + f.name + '</em>: ';
                 let termlist = [];
                 f.value.forEach( term => {
-                    termlist.push('<button class="filter-term icon-remove" data-termid="' + f.name + '_' + term + '">'+spacefinder.spaceProperties[ f.name + '_' + term ]+'</button>');
+                    termlist.push('<button class="filter-term icon-remove" data-termid="' + f.name + '_' + term + '">'+spacefinder.filters[ f.name + '_' + term ]+'</button>');
                 });
                 filtermessage += termlist.join(', ') + '</p>';
             }
@@ -110,13 +121,14 @@ function activateSpaces() {
             event.preventDefault();
             let spacenode = document.querySelector('[data-id="'+event.target.getAttribute('data-spaceid')+'"]');
             if ( ! spacenode.classList.contains('active') ) {
-                selectSpace( event.target.getAttribute('data-spaceid') );
+                selectSpace( event.target.getAttribute('data-spaceid'), 'list' );
             }
         });
     });
     document.querySelectorAll('.list-space .closebutton').forEach( el => {
         el.addEventListener('click', event => {
             deselectSpaces(false);
+            window.location.hash = '';
         });
     });
     /* add listener to buttons in filter and search status bar */
@@ -148,9 +160,17 @@ function activateSpaces() {
  * Selects a space in the list
  * @param {integer} spaceid 
  */
-function selectSpace( spaceid ) {
-    window.location.hash = '/space/'+spaceid;
+function selectSpace( spaceid, source ) {
     let space = getSpaceById( spaceid );
+    window.location.hash = '/space/'+space.slug;
+    document.dispatchEvent(new CustomEvent('sfanalytics', {
+        detail: {
+            type: 'select',
+            id: spaceid,
+            name: space.title,
+            src: source
+        }
+    }));
     renderAdditionalInfo( space.id );
     zoomMapToSpace( space );
     let spacenode = document.querySelector('[data-id="'+spaceid+'"]');
@@ -168,6 +188,7 @@ function selectSpace( spaceid ) {
     } else {
         scrollingElement.scrollTop = totop;
     }
+    spacenode.querySelector( 'h2' ).focus();
 }
 
 /**
@@ -241,6 +262,7 @@ function sortSpaces( sortby, dir ) {
         listcontainer.appendChild( el );
     });
     deselectSpaces(true);
+    listcontainer.querySelector( 'h2' ).focus();
 }
 
 /**
@@ -281,7 +303,7 @@ function loadSpaces() {
         if ( data.length ) {
             data.forEach( (space, index) => {
                 spacefinder.spaces[index] = space;
-                spacefinder.spaces[index].link = '#/space/' + space.id;
+                spacefinder.spaces[index].link = '#/space/' + space.slug;
                 spacefinder.spaces[index].classes = getClassList( space );
             });
             spacefinder.spacesLoaded = true;
@@ -307,8 +329,8 @@ function renderList() {
         spaceContainer.setAttribute('data-id', space.id );
         spaceContainer.setAttribute('data-sortalpha', space.title.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() );
         spaceContainer.setAttribute('class', space.classes );
-        let spaceHTML = '<h2><a href="' + space.link + '" class="space-title" data-spaceid="' + space.id + '">' + space.title + '</a><button class="closebutton icon-close"><span class="visuallyhidden">Close</span></button></h2>';
-        spaceHTML += '<h3><span class="space-type space-type-' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + '">' + space.space_type + '</span>';
+        let spaceHTML = '<h2><a href="' + space.link + '" class="space-title" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">' + space.title + '</a><button class="closebutton icon-close"><span class="visuallyhidden">Close</span></button></h2>';
+        spaceHTML += '<p class="info"><span class="space-type space-type-' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + '">' + space.space_type + '</span>';
         spaceHTML += '<span class="distance">(1,353 metres)</span>';
         let loc = '';
         if ( space.floor !== "" ) {
@@ -320,13 +342,13 @@ function renderList() {
         if ( space.address !== "" ) {
             loc += '<span class="address-location">' + space.address + '</span>';
         }
-        spaceHTML += '<span class="address">' + loc + '</span></h3>';
+        spaceHTML += '<span class="address">' + loc + '</span></p>';
         spaceHTML += '<div class="space-details">';
-        if ( space.images.length ) {
-            spaceHTML += '<div data-imgsrc="' + space.images[0] + '" class="space-image lazy"></div>';
+        if ( space.image != '' ) {
+            spaceHTML += '<div data-imgsrc="' + space.image + '" class="space-image lazy" role="img" aria-label="' + space.imagealt + '"></div>';
         }
         spaceHTML += '<div><p class="description">' + space.description + '</p></div>';
-        spaceHTML += '<div class="additionalInfo"></div>';
+        spaceHTML += '<div class="additionalInfo" aria-live="polite" id="additionalInfo' + space.id + '"></div>';
         spaceHTML += '</div>';
         spaceContainer.innerHTML = spaceHTML;
         listContainer.append( spaceContainer );
@@ -349,12 +371,12 @@ function renderAdditionalInfo( spaceid ) {
     if ( spaceid !== false ) {
         /* get space data */
         let space = getSpaceById( spaceid );
-        let spaceNode = getSpaceNodeById( spaceid );
+        let spacenode = getSpaceNodeById( spaceid );
         let spaceHTML = '';
         if ( space.booking_url ) {
             spaceHTML += '<p><a class="button" href="'+space.booking_url+'">Book a space</a></p>';
         }
-        spaceHTML += '<section class="section-facts"><h4>Key Facts</h4><ul class="bulleticons">';
+        spaceHTML += '<section class="section-facts"><h3>Key Facts</h3><ul class="bulleticons">';
         let loc = '';
         if ( space.floor !== "" ) {
             loc += space.floor + ', ';
@@ -377,8 +399,8 @@ function renderAdditionalInfo( spaceid ) {
         spaceHTML += '<li class="icon-access">Open to '+space.access+'<li>';
         spaceHTML += '</ul></section>';
 
-        spaceHTML += '<section class="section-opening"><h4>Opening Times</h4>';
-        spaceHTML += '<p class="' + spaceNode.getAttribute('data-openclass') + ' icon-time-short">' + spaceNode.getAttribute('data-openmsg') + '</p>';
+        spaceHTML += '<section class="section-opening"><h3>Opening Times</h3>';
+        spaceHTML += '<p class="' + spacenode.getAttribute('data-openclass') + ' icon-time-short">' + spacenode.getAttribute('data-openmsg') + '</p>';
         spaceHTML += '<ul class="opening-times">';
         ["monday","tuesday","wednesday","thursday","friday","saturday","sunday"].forEach( (day, idx) => {
             let today = new Date().getDay();
@@ -392,7 +414,7 @@ function renderAdditionalInfo( spaceid ) {
         });
         spaceHTML += '</ul></section>';
         if ( space.phone_number !== "" || space.twitter_screen_name !== "" || space.facebook_url !== "" ) {
-            spaceHTML += '<section class="section-facts"><h4>Contact</h4><ul class="bulleticons">';
+            spaceHTML += '<section class="section-facts"><h3>Contact</h3><ul class="bulleticons">';
             if ( space.phone_number !== "" ) {
                 let phoneattr = space.phone_number.replace(/[^0-9]+/g, '').replace(/^0/, '+44');
                 spaceHTML += '<li class="icon-phone"><a href="tel:'+phoneattr+'">'+space.phone_number+'</a></li>';
@@ -406,15 +428,14 @@ function renderAdditionalInfo( spaceid ) {
         }
 
         if ( space.facilities.length ) {
-            spaceHTML += '<section class="section-facilities"><h4>Facilities</h4><ul class="bulleticons">';
+            spaceHTML += '<section class="section-facilities"><h3>Facilities</h3><ul class="bulleticons">';
             for ( i = 0; i < space.facilities.length; i++ ) {
-                spaceHTML += '<li class="' + spacefinder.iconMap[space.facilities[i]] + '">' + spacefinder.spaceProperties[ 'facility_' + space.facilities[i] ] + '</li>';
+                spaceHTML += '<li class="' + spacefinder.icons[space.facilities[i]] + '">' + spacefinder.filters[ 'facility_' + space.facilities[i] ] + '</li>';
             }
             spaceHTML += '</ul></section>';
         }
-        spaceHTML += '<p><a class="button" href="#" onclick="deselectSpaces(false);">Close</a></p>';
-
-        getSpaceNodeById( spaceid ).querySelector('.additionalInfo').innerHTML = spaceHTML;
+        spacenode.querySelector('.additionalInfo').innerHTML = spaceHTML;
+        spacenode.querySelector( 'h2' ).focus();
     }
 }
 /**

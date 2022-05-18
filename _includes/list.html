@@ -1,10 +1,10 @@
 <div id="listcontrols" class="top-controls">
-    <p>Showing <span id="listshowingcount"></span> of <span id="listtotalcount"></span> spaces</p>
+    <p id="searchResultsSummary" aria-live="assertive" aria-atomic="true">Showing <span id="listshowingcount"></span> of <span id="listtotalcount"></span> spaces</p>
     <button type="button" class="geo-button btn icon-my-location" title="Use my location" aria-label="Use my location" disabled></button>
     <button id="sortdistance" data-sortdir="" class="btn sortbutton icon-distance" title="Sort by distance" aria-label="Sort by distance" disabled></button>
     <button id="sortalpha" data-sortdir="" class="btn sortbutton" title="Sort alphabetically" aria-label="Sort alphabetically" >A-Z</button>
 </div>
 <div id="listcontainer" class="panel-content">
     <div id="listfilters" hidden></div>
-    <div id="listcontent"></div>
+    <div id="listcontent" aria-live="polite"></div>
 </div>

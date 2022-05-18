@@ -11,9 +11,6 @@
         "social",
         "friendly"
     ],
-    "images": [
-        "/assets/photos/Baines-Wing.jpg"
-    ],
     "facilities": [
         "daylight",
         "free_wifi",
@@ -77,5 +74,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "/assets/photos/Baines-Wing.jpg",
+    "imagealt": "Baines Wing - LG.17",
+    "slug": "baines-wing-lg17"
 }

@@ -13,9 +13,6 @@
         "social",
         "friendly"
     ],
-    "images": [
-        "/assets/photos/Fuse-Cafe.jpg"
-    ],
     "facilities": [
         "food_drink",
         "views",
@@ -82,5 +79,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "/assets/photos/Fuse-Cafe.jpg",
+    "imagealt": "Fuse Cafe in Chemical and Process Engineering",
+    "slug": "fuse-cafe-in-chemical-and-process-engineering"
 }

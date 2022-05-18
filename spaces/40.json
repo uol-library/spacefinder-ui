@@ -12,7 +12,6 @@
         "social",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "food_drink",
         "daylight",
@@ -77,5 +76,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Liberty Building - First floor Group workspace (1.22)",
+    "slug": "liberty-building-first-floor-group-workspace-122"
 }

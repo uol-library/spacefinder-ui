@@ -14,7 +14,6 @@
         "social",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "food_drink",
         "daylight",
@@ -86,5 +85,8 @@
             "from": "10:00",
             "to": "24:00"
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Edward Boyle 10th floor",
+    "slug": "edward-boyle-10th-floor"
 }

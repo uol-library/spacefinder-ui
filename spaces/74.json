@@ -1,6 +1,6 @@
 {
     "id": 74,
-    "location": "{\"type\":\"Point\",\"coordinates\":[-1.5548797388561932,53.80627235748126]}", 
+    "location": "{\"type\":\"Point\",\"coordinates\":[-1.5548797388561932,53.80627235748126]}",
     "work": [
         "private",
         "close",
@@ -14,7 +14,6 @@
         "social",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "food_drink",
         "daylight",
@@ -88,5 +87,8 @@
             "from": "10:00",
             "to": "24:00"
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Edward Boyle 8th floor",
+    "slug": "edward-boyle-8th-floor"
 }

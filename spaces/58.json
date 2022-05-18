@@ -8,7 +8,6 @@
     "atmosphere": [
         "disciplined"
     ],
-    "images": [],
     "facilities": [
         "daylight",
         "large_desks",
@@ -77,5 +76,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Maurice Keyworth Building - 2.21",
+    "slug": "maurice-keyworth-building-221"
 }

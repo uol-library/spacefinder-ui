@@ -12,11 +12,6 @@
         "relaxed",
         "cosy"
     ],
-    "images": [
-        "/assets/photos/Cafe-Maia1.jpg",
-        "/assets/photos/Cafe-Maia2.jpg",
-        "/assets/photos/Cafe-Maia3.jpg"
-    ],
     "facilities": [
         "food_drink",
         "daylight",
@@ -82,5 +77,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "/assets/photos/Cafe-Maia1.jpg",
+    "imagealt": "Café Maia",
+    "slug": "cafe-maia"
 }

@@ -15,7 +15,6 @@
         "social",
         "friendly"
     ],
-    "images": [],
     "facilities": [
         "food_drink",
         "large_desks",
@@ -81,5 +80,8 @@
             "from": "",
             "to": ""
         }
-    }
+    },
+    "image": "",
+    "imagealt": "Worsley Building - Airport Lounge seating (level 7)",
+    "slug": "worsley-building-airport-lounge-seating-level-7"
 }
