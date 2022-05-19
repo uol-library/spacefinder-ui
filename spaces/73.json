@@ -1,67 +1,81 @@
 {
-    "id": 73,
-    "location": "{\"type\":\"Point\",\"coordinates\":[-1.5545886781506026,53.80627235748126]}",
-    "work": [
-        "in_a_library"
-    ],
-    "atmosphere": [
-        "disciplined"
-    ],
-    "facilities": [],
-    "title": "Edward Boyle 13th floor",
-    "description": "Silent libary space for postgruate students with bookable group study rooms.",
-    "access": "University Staff and Students",
-    "space_type": "Library",
-    "address": "University of Leeds, Leeds LS2 9JT",
-    "building": "Edward Boyle library",
-    "floor": "Level 13",
-    "restricted": false,
-    "restriction": "PG Library Card needed",
-    "disabled_access": true,
-    "url": "https://library.leeds.ac.uk/",
-    "phone_number": " 115 343 5663",
-    "twitter_screen_name": "UoLLibrary",
-    "facebook_url": "https://www.facebook.com/leedsuniversitylibrary",
-    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17411",
-    "campusmap_ref": "83",
-    "opening_hours": {
-        "monday": {
-            "open": true,
-            "from": "8:00",
-            "to": "24:00"
-        },
-        "tuesday": {
-            "open": true,
-            "from": "8:00",
-            "to": "24:00"
-        },
-        "wednesday": {
-            "open": true,
-            "from": "8:00",
-            "to": "24:00"
-        },
-        "thursday": {
-            "open": true,
-            "from": "8:00",
-            "to": "24:00"
-        },
-        "friday": {
-            "open": true,
-            "from": "8:00",
-            "to": "24:00"
-        },
-        "saturday": {
-            "open": true,
-            "from": "10:00",
-            "to": "24:00"
-        },
-        "sunday": {
-            "open": true,
-            "from": "10:00",
-            "to": "24:00"
-        }
+  "facilities": [
+    "large_desks",
+    "individual_study_space",
+    "free_wifi",
+    "computers",
+    "laptops_allowed",
+    "sockets",
+    "printers_copiers",
+    "toilets",
+    "accessible_toilets",
+    "wheelchair_accessible",
+    "break",
+    "refreshments"
+  ],
+  "atmosphere": [
+    "disciplined"
+  ],
+  "access": "University Staff and Students",
+  "disabled_access": true,
+  "opening_hours": {
+    "monday": {
+      "open": true,
+      "from": "8:00",
+      "to": "24:00"
     },
-    "image": "",
-    "imagealt": "Edward Boyle 13th floor",
-    "slug": "edward-boyle-13th-floor"
+    "tuesday": {
+      "open": true,
+      "from": "8:00",
+      "to": "24:00"
+    },
+    "wednesday": {
+      "open": true,
+      "from": "8:00",
+      "to": "24:00"
+    },
+    "thursday": {
+      "open": true,
+      "from": "8:00",
+      "to": "24:00"
+    },
+    "friday": {
+      "open": true,
+      "from": "8:00",
+      "to": "24:00"
+    },
+    "saturday": {
+      "open": true,
+      "from": "10:00",
+      "to": "24:00"
+    },
+    "sunday": {
+      "open": true,
+      "from": "10:00",
+      "to": "24:00"
+    }
+  },
+  "slug": "edward-boyle-13th-floor",
+  "floor": "Level 13",
+  "restriction": "PG Library Card needed",
+  "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17411",
+  "imagealt": "Edward Boyle 13th floor",
+  "url": "https://library.leeds.ac.uk/",
+  "campusmap_ref": "83",
+  "work": [
+    "in_a_library"
+  ],
+  "twitter_screen_name": "UoLLibrary",
+  "space_type": "Library",
+  "building": "Edward Boyle library",
+  "address": "University of Leeds, Leeds LS2 9JT",
+  "location": "{\"type\":\"Point\",\"coordinates\":[-1.5545886781506026,53.80627235748126]}",
+  "facebook_url": "https://www.facebook.com/leedsuniversitylibrary",
+  "title": "Edward Boyle 13th floor",
+  "noise": "Background chatter",
+  "phone_number": " 115 343 5663",
+  "restricted": false,
+  "id": 73,
+  "image": "",
+  "description": "Silent libary space for postgruate students with bookable group study rooms."
 }
