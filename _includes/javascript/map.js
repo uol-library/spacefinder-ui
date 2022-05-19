@@ -9,7 +9,7 @@
  */
 function initMap() {
     document.addEventListener( 'sfmaploaded', checkGeo );
-    document.addEventListener( 'viewfilter', filterMarkers );
+    document.addEventListener( 'filtersapplied', filterMarkers );
     document.addEventListener( 'spacesloaded', maybeSetupMap );
     document.addEventListener( 'sfmaploaded', maybeSetupMap );
     spacefinder.map = new google.maps.Map(document.getElementById('map'), {

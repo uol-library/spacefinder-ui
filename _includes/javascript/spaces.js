@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadSpaces();
     /* event listener for search + filter changes */
     document.addEventListener( 'viewfilter', applyFilters );
+    document.addEventListener( 'filtersapplied', updateListFilterMessage );
 });
 
 /**
@@ -63,25 +64,22 @@ function applyFilters() {
             el.classList.remove('hidden');
         });
     }
-    if (document.querySelectorAll('.list-space.hidden') != null ) {
-        let spacesShowing = document.querySelectorAll('.list-space').length - document.querySelectorAll('.list-space.hidden').length;
-        document.getElementById('listshowingcount').textContent = spacesShowing;
-    }
-    updateListFilterMessage(activeFilters);
+    document.dispatchEvent( new Event( 'filtersapplied' ) );
 }
 
 /**
  * Updates the message above the list of spaces to show what 
  * search terms and filters are active
  */
-function updateListFilterMessage( filters ) {
+function updateListFilterMessage() {
+    let activeFilters = getFilterStatus();
     let container = document.getElementById('listfilters');
     /* empty any existing messages and hide */
     container.textContent = '';
     container.setAttribute('hidden', true);
     let searchmessage = filtermessage = resultsmessage = '';
-    if ( filters.length ) {
-        filters.forEach( f => {
+    if ( activeFilters.length ) {
+        activeFilters.forEach( f => {
             if ( f.name == 'search' ) {
                 let pl = f.value.length > 1 ? 's': '';
                 searchmessage = '<p>Searching spaces which contain text: ';
@@ -99,15 +97,17 @@ function updateListFilterMessage( filters ) {
                 filtermessage += termlist.join(', ') + '</p>';
             }
         });
-        if (document.querySelectorAll('.list-space.hidden') != null ) {
-            let spacesShowing = document.querySelectorAll('.list-space').length - document.querySelectorAll('.list-space.hidden').length;
-            if ( spacesShowing == 0 ) {
-                resultsmessage = '<p class="noresults">Sorry, your search has found no results - try removing some of your search criteria.</p>';
-            }
-        }
         container.innerHTML = searchmessage + filtermessage + resultsmessage;
         container.removeAttribute('hidden');
     }
+    let spacesShowing = document.querySelectorAll('.list-space').length;
+    if (document.querySelectorAll('.list-space.hidden') != null ) {
+        spacesShowing = document.querySelectorAll('.list-space').length - document.querySelectorAll('.list-space.hidden').length;
+        if ( spacesShowing == 0 ) {
+            resultsmessage = '<p class="noresults">Sorry, your search has found no results - try removing some of your search criteria.</p>';
+        }
+    }
+    document.getElementById('listshowingcount').textContent = spacesShowing;
 }
 
 /**
