@@ -44,7 +44,7 @@ function getFilterStatus() {
 /* setup */
 function setupFilters() {
     /* event listener for filter changes */
-    document.getElementById('filters').addEventListener('viewfilter', event => {
+    document.addEventListener('filtersapplied', event => {
         const activeFilters = getFilterStatus();
         if ( activeFilters.length ) {
             document.getElementById('search-reset').removeAttribute('disabled');
