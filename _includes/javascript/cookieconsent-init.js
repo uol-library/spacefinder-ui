@@ -57,7 +57,7 @@ cc.run({
                         description: 'These cookies allow the website to store data so the website works more efficiently between visits.',
                         toggle: {
                             value: 'performance',
-                            enabled: false,
+                            enabled: true,
                             readonly: false
                         }
                     }, {
@@ -65,7 +65,7 @@ cc.run({
                         description: 'Analytics tools set cookies that store anonymised information about how you got to the site and what you click on while you are visiting the site. We do not allow other organisations to use or share the data about how you use this site.',
                         toggle: {
                             value: 'analytics',
-                            enabled: false,
+                            enabled: true,
                             readonly: false
                         }
                     }, {
