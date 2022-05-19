@@ -15,7 +15,6 @@ const spacefinder = {
     spacesurl: '{{ site.url }}/spaces.json',
     imageBaseURL: '{{ site.url }}',
     spaces: [],
-    dialogs: {},
     filterEvent: new Event('viewfilter', {
         bubbles: true,
         cancelable: true,
