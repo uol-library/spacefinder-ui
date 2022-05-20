@@ -44,15 +44,14 @@ axios({
                 }
             }
             if ( update ) {
-                console.log( filename );
+                fs.writeFileSync(path.resolve( __dirname, '../spaces/', filename ), JSON.stringify(spaceJSON), err => {
+                    if (err) {
+                        console.error(err);
+                        return;
+                    }
+                });
             }
         });
-        /*fs.writeFileSync(path.resolve( __dirname, '../spaces/withplaceids/', filename ), JSON.stringify(spaceJSON), err => {
-            if (err) {
-                console.error(err);
-                return;
-            }
-        });*/
     }
 }).catch( error => {
     console.error( error );

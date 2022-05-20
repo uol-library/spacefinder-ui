@@ -13,6 +13,7 @@ We’ve also made the website text as simple as possible to understand. [Ability
 We know some parts of this website are not fully accessible:
 
 * this site uses interactive maps, which a screen reader will not be able to navigate
+* this site loads and displays data interactively - while every attempt has been made to accomodate screen readers, support is still a work in progress
 
 ### Feedback and contact information
 
