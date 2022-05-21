@@ -24,7 +24,7 @@ cc.run({
         'en': {
             consent_modal: {
                 title: 'Tell us whether you accept cookies',
-                description: 'This website uses essential cookies to ensure its proper operation, performance cookies to help it work faster, and tracking cookies to understand how you interact with it. Performance and tracking cookies will be set only after consent is given. <button type="button" data-cc="c-settings" class="cc-link">Let me choose</button>',
+                description: 'This website uses essential cookies to ensure its proper operation, performance cookies to help it work faster, and tracking cookies to understand how you interact with it. Performance and tracking cookies are set automatically as this application is currently being assessed in a pilot, but you can opt out at any stage. <button type="button" data-cc="c-settings" class="cc-link">Let me choose</button>',
                 primary_btn: {
                     text: 'Accept all',
                     role: 'accept_all'
