@@ -14,6 +14,7 @@ jobs:
         run: | 
           cd main
           npm run updateOpening
+          npm run concat
           git config --global user.name 'peteredwards'
           git config --global user.email 'p.l.edwards@leeds.ac.uk'
           git add --all
