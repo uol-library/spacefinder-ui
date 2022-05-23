@@ -1,7 +1,7 @@
 backend:
   name: 'github'
   repo: 'uol-library/spacefinder-ui'
-  branch: 'main'
+  branch: 'spacefinder-pilot'
   site_domain: 'musing-hoover-8f4523.netlify.app'
 media_folder: 'assets/photos'
 public_folder: '/assets/photos'
