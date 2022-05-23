@@ -1,82 +1,86 @@
 {
-    "id": 80,
-    "location": "{\"type\":\"Point\",\"coordinates\":[-1.5521869665500727,53.806643780629116]}",
-    "work": [
-        "private",
-        "close"
-    ],
-    "atmosphere": [
-        "disciplined",
-        "cosy"
-    ],
-    "facilities": [
-        "food_drink",
-        "free_wifi",
-        "computers",
-        "laptops_allowed",
-        "sockets",
-        "signal",
-        "printers_copiers",
-        "toilets",
-        "refreshments",
-        "break"
-    ],
-    "title": "Laidlaw library - 1st floor silent study area",
-    "description": "Study space inside the library, closed doors, very silent.",
-    "access": "University Staff and Students",
-    "space_type": "Library",
-    "address": "University of Leeds, LS2 9JT",
-    "building": "Laidlaw library",
-    "floor": "1st floor",
-    "restricted": true,
-    "restriction": "Library Card needed",
-    "disabled_access": true,
-    "url": "https://library.leeds.ac.uk/",
-    "phone_number": "",
-    "twitter_screen_name": "UoLLibrary",
-    "facebook_url": "https://www.facebook.com/leedsuniversitylibrary",
-    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17471",
-    "campusmap_ref": "63",
-    "noise": "Strictly silent",
-    "tags": [],
-    "opening_hours": {
-        "monday": {
-            "open": true,
-            "from": "8:00",
-            "to": "24:00"
-        },
-        "tuesday": {
-            "open": true,
-            "from": "8:00",
-            "to": "24:00"
-        },
-        "wednesday": {
-            "open": true,
-            "from": "8:00",
-            "to": "24:00"
-        },
-        "thursday": {
-            "open": true,
-            "from": "8:00",
-            "to": "24:00"
-        },
-        "friday": {
-            "open": true,
-            "from": "8:00",
-            "to": "19:00"
-        },
-        "saturday": {
-            "open": true,
-            "from": "10:00",
-            "to": "17:00"
-        },
-        "sunday": {
-            "open": true,
-            "from": "12:00",
-            "to": "24:00"
-        }
+  "facilities": [
+    "free_wifi",
+    "computers",
+    "laptops_allowed",
+    "sockets",
+    "signal",
+    "printers_copiers",
+    "toilets",
+    "refreshments",
+    "break",
+    "daylight",
+    "views",
+    "individual_study_space",
+    "accessible_toilets",
+    "wheelchair_accessible"
+  ],
+  "atmosphere": [
+    "disciplined",
+    "cosy"
+  ],
+  "access": "University Staff and Students",
+  "disabled_access": true,
+  "opening_hours": {
+    "monday": {
+      "open": true,
+      "from": "8:00",
+      "to": "24:00"
     },
-    "image": "/assets/photos/Laidlaw-library3.jpg",
-    "imagealt": "Laidlaw library - 1st floor silent study area",
-    "slug": "laidlaw-library-1st-floor-silent-study-area"
+    "tuesday": {
+      "open": true,
+      "from": "8:00",
+      "to": "24:00"
+    },
+    "wednesday": {
+      "open": true,
+      "from": "8:00",
+      "to": "24:00"
+    },
+    "thursday": {
+      "open": true,
+      "from": "8:00",
+      "to": "24:00"
+    },
+    "friday": {
+      "open": true,
+      "from": "8:00",
+      "to": "19:00"
+    },
+    "saturday": {
+      "open": true,
+      "from": "10:00",
+      "to": "17:00"
+    },
+    "sunday": {
+      "open": true,
+      "from": "12:00",
+      "to": "24:00"
+    }
+  },
+  "slug": "laidlaw-library-1st-floor-silent-study-area",
+  "floor": "1st floor",
+  "restriction": "Library Card needed",
+  "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17471",
+  "imagealt": "Laidlaw library - 1st floor silent study area",
+  "url": "https://library.leeds.ac.uk/",
+  "campusmap_ref": "63",
+  "work": [
+    "private",
+    "close"
+  ],
+  "twitter_screen_name": "UoLLibrary",
+  "space_type": "Library",
+  "building": "Laidlaw library",
+  "address": "University of Leeds, LS2 9JT",
+  "location": "{\"type\":\"Point\",\"coordinates\":[-1.5521869665500727,53.806643780629116]}",
+  "facebook_url": "https://www.facebook.com/leedsuniversitylibrary",
+  "title": "Laidlaw library - 1st floor silent study area",
+  "tags": [],
+  "noise": "Strictly silent",
+  "phone_number": "",
+  "restricted": true,
+  "id": 80,
+  "image": "/assets/photos/Laidlaw-library3.jpg",
+  "description": "Study space inside the library, closed doors, very silent."
 }
