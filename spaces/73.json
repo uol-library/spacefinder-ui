@@ -13,7 +13,8 @@
     "break",
     "refreshments",
     "daylight",
-    "signal"
+    "signal",
+    "bookable"
   ],
   "atmosphere": [
     "disciplined"
