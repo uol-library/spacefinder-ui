@@ -43,7 +43,7 @@ axios({
                     }
                 }
             }
-            if ( update ) {
+            if ( 0 && update ) {
                 fs.writeFileSync(path.resolve( __dirname, '../spaces/', filename ), JSON.stringify(spaceJSON), err => {
                     if (err) {
                         console.error(err);
@@ -52,9 +52,26 @@ axios({
                 });
             }
         });
+    } else {
+        console.log( response );
     }
 }).catch( error => {
-    console.error( error );
+    if (error.response) {
+        // The request was made and the server responded with a status code
+        // that falls out of the range of 2xx
+        console.log(error.response.data);
+        console.log(error.response.status);
+        console.log(error.response.headers);
+    } else if (error.request) {
+        // The request was made but no response was received
+        // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+        // http.ClientRequest in node.js
+        console.log(error.request);
+    } else {
+        // Something happened in setting up the request that triggered an Error
+        console.log('Error', error.message);
+    }
+    console.log(error.config);
 });
 
 function getWeekDates() {
@@ -64,9 +81,9 @@ function getWeekDates() {
     /* set date to previous monday */
     d.setDate( d.getDate() - ( ( d.getDay() + 6 ) % 7 ) );
     for ( let i = 0; i < 7; i++ ) {
-        d.setDate( d.getDate() + 1 );
         let datestring = d.getFullYear() + '-' + ( '0' + ( d.getMonth() + 1 ) ).slice( -2 ) + '-' + ( '0' + d.getDate() ).slice( -2 );
         weekdates.push ( { 'day': days[i], 'datestring': datestring } );
+        d.setDate( d.getDate() + 1 );
     }
     return weekdates;
 }
