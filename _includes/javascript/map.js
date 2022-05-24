@@ -165,6 +165,11 @@ function activateGeolocation( activate ) {
             e.setAttribute('title','Stop using my location')
         });
         document.addEventListener( 'userlocationchanged', movePersonMarker );
+        document.dispatchEvent(new CustomEvent('sfanalytics', {
+            detail: {
+                type: 'geostart'
+            }
+        }));
     } else {
         document.querySelectorAll( '.geo-button' ).forEach( e => {
             e.classList.remove('active');
@@ -174,6 +179,11 @@ function activateGeolocation( activate ) {
         document.removeEventListener( 'userlocationchanged', movePersonMarker );
         /* remove sorting indicator from all buttons */
         document.getElementById( 'sortdistance' ).setAttribute('data-sortdir', '');
+        document.dispatchEvent(new CustomEvent('sfanalytics', {
+            detail: {
+                type: 'geoend'
+            }
+        }));
     }
     updateDistances();
     activateSort( activate, 'distance' );

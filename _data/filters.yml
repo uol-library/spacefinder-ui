@@ -1,3 +1,10 @@
+- key: "open"
+  label: "Spaces currently open"
+  exclusive: false
+  open: true
+  options:
+    - key: "show_open"
+      label: "Only show spaces which are currently open"
 - key: "type"
   label: "Space type"
   exclusive: false
@@ -18,7 +25,7 @@
 - key: "work"
   label: "I want to work"
   exclusive: true
-  open: true
+  open: false
   options:
     - key: "private"
       label: "Alone, in private"
@@ -31,7 +38,7 @@
 - key: "atmosphere"
   label: "Atmosphere"
   exclusive: false
-  open: true
+  open: false
   options:
     - key: "disciplined"
       label: "Disciplined"
@@ -52,7 +59,7 @@
 - key: "noise"
   label: "Noise levels"
   exclusive: true
-  open: true
+  open: false
   options:
     - key: "strictlysilent"
       label: "Strictly silent"
@@ -72,7 +79,7 @@
 - key: "facility"
   label: "Facilities"
   exclusive: false
-  open: true
+  open: false
   options:
     - key: "food_drink"
       label: "Food &amp; drink allowed"

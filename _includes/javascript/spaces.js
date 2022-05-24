@@ -48,6 +48,10 @@ function applyFilters() {
                     if ( ! foundKw ) {
                         showEl = false;
                     }
+                } else if ( filtergroup.name == 'open' ) {
+                    if ( el.getAttribute('data-openclass') != 'open' ) {
+                        showEl = false;
+                    }
                 } else {
                     let regex = filtergroup.name+'_('+filtergroup.value.join('|')+')';
                     if ( ! el.className.match(regex) ) {
@@ -79,6 +83,7 @@ function updateListFilterMessage() {
     container.setAttribute('hidden', true);
     let searchmessage = filtermessage = resultsmessage = '';
     if ( activeFilters.length ) {
+        /* add search and filter messages - buttons will remove filters/terms */
         activeFilters.forEach( f => {
             if ( f.name == 'search' ) {
                 let pl = f.value.length > 1 ? 's': '';
@@ -88,6 +93,8 @@ function updateListFilterMessage() {
                     termlist.push('<button class="search-term icon-remove" data-searchtext="' + term + '">' + term + '</button>');
                 });
                 searchmessage += termlist.join(' or ') + '</p>';
+            } else if ( f.name == 'open' ) {
+                filtermessage += '<p><button class="filter-term icon-remove" data-termid="open_show_open">Showing spaces which are currently open</button>';
             } else {
                 filtermessage += '<p>Filtering spaces by <em>' + f.name + '</em>: ';
                 let termlist = [];
@@ -97,16 +104,23 @@ function updateListFilterMessage() {
                 filtermessage += termlist.join(', ') + '</p>';
             }
         });
-        container.innerHTML = searchmessage + filtermessage + resultsmessage;
-        container.removeAttribute('hidden');
     }
+    /* get count of spaces */
     let spacesShowing = document.querySelectorAll('.list-space').length;
+    /* decrease spaces count if some are hidden */
     if (document.querySelectorAll('.list-space.hidden') != null ) {
         spacesShowing = document.querySelectorAll('.list-space').length - document.querySelectorAll('.list-space.hidden').length;
+        /* show zero results message */
         if ( spacesShowing == 0 ) {
             resultsmessage = '<p class="noresults">Sorry, your search has found no results - try removing some of your search criteria.</p>';
         }
     }
+    /* add filter, search and results messages */
+    if ( ( searchmessage + filtermessage + resultsmessage ) != '' ) {
+        container.innerHTML = searchmessage + filtermessage + resultsmessage;
+        container.removeAttribute('hidden');
+    }
+    /* update spaces showing count */
     document.getElementById('listshowingcount').textContent = spacesShowing;
 }
 
@@ -400,7 +414,7 @@ function renderAdditionalInfo( spaceid ) {
         spaceHTML += '</ul></section>';
 
         spaceHTML += '<section class="section-opening"><h3>Opening Times</h3>';
-        spaceHTML += '<p class="' + spacenode.getAttribute('data-openclass') + ' icon-time-short">' + spacenode.getAttribute('data-openmsg') + '</p>';
+        spaceHTML += '<p class="icon-time-short" data-openmsg-id="' + space.id + '">' + spacenode.getAttribute('data-openmsg') + '</p>';
         spaceHTML += '<ul class="opening-times">';
         ["monday","tuesday","wednesday","thursday","friday","saturday","sunday"].forEach( (day, idx) => {
             let today = new Date().getDay();
@@ -475,19 +489,24 @@ function checkOpeningHours() {
     spacefinder.spaces.forEach( (space, index) => {
         let openmsg = '';
         let openclass = 'currently-closed';
+        let currentClass = document.querySelector('[data-id="' + space.id + '"]').getAttribute( 'data-openclass' );
         if ( space.opening_hours ) {
             if ( space.opening_hours[todaysday].open ) {
                 let open_from = getTimeFromString( space.opening_hours[todaysday].from );
                 let open_to = getTimeFromString( space.opening_hours[todaysday].to );
                 if ( open_from > timenow ) {
                     let openingin = '';
-                    let openinmins = ( timenow - open_from ) % 60;
-                    let openinhrs = Math.floor( ( ( timenow - open_from ) / 60 ) );
+                    let openinmins = ( open_from - timenow ) % 60;
+                    let openinhrs = Math.floor( ( ( open_from - timenow ) / 60 ) );
+                    let pl = '';
                     if ( openinhrs > 0 ) {
-                        let pl = ( openinhrs == 1 )? '': 's';
+                        pl = ( openinhrs == 1 )? '': 's';
                         openingin += openinhrs + 'hr' + pl + ' ';
                     }
-                    openingin += openinmins + 'mins'
+                    pl = ( openinmins == 1 ) ? '': 's';
+                    if ( openinmins > 0 ) {
+                        openingin += openinmins + 'min' + pl;
+                    }
                     openmsg = "Currently closed (opens in "+openingin+")";
                     openclass = 'opening-later';
                 } else if ( open_to < timenow ) {
@@ -503,9 +522,16 @@ function checkOpeningHours() {
         }
         document.querySelector('[data-id="' + space.id + '"]').setAttribute('data-openmsg', openmsg );
         document.querySelector('[data-id="' + space.id + '"]').setAttribute('data-openclass', openclass );
+        /* change message in any spaces showing additional info */
+        if ( document.querySelector('[data-openmsg-id="' + space.id + '"]') != null ) {
+            document.querySelector('[data-openmsg-id="' + space.id + '"]').textContent = openmsg;
+            document.querySelector('[data-openmsg-id="' + space.id + '"]').classList.remove(currentClass);
+            document.querySelector('[data-openmsg-id="' + space.id + '"]').classList.add(openclass);
+            
+        }
     });
-    // call every 5 minutes
-    setInterval( checkOpeningHours, (5*60*1000) );
+    // call every 30 seconds
+    setInterval( checkOpeningHours, (30*1000) );
 }
 function getTimeFromString( str ) {
     let parts = str.split(':');

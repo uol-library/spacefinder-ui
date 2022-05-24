@@ -1,3 +1,16 @@
 body {
     font-family: 'PT Sans', sans-serif;
 }
+a {
+    color: $linkcolor;
+    &:hover {
+        color: $linkcolor-hover;
+    }
+    &:visited {
+        color: $linkcolor-visited;
+    }
+    &:active {
+        color: $linkcolor-active;
+    }
+    text-decoration: none;
+}
