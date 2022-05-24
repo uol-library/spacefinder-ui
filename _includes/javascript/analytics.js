@@ -11,6 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     'content_type': e.detail.filtername,
                     'item_id': e.detail.terms
                 });
+            } else if ( e.detail.type == 'geostart' ) {
+                gtag('event','level_start', {
+                    'level_name': 'Geolocation activated'
+                });
+            } else if ( e.detail.type == 'geoend' ) {
+                gtag('event','level_end', {
+                    'level_name': 'Geolocation deactivated'
+                });
             } else if (e.detail.type == 'select') {
                 gtag('event', 'select_item', {
                     item_list_id: e.detail.src,

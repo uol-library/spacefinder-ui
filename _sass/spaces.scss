@@ -66,17 +66,6 @@
         }
         border-bottom: 1px solid $separatorcolor;
         a {
-            color: $linkcolor;
-            &:hover {
-                color: $linkcolor-hover;
-            }
-            &:visited {
-                color: $linkcolor-visited;
-            }
-            &:active {
-                color: $linkcolor-active;
-            }
-            text-decoration: none;
             &.button {
                 display: inline-block;
                 min-width: 3em;
@@ -158,15 +147,22 @@
                 }
             }
         }
-        p {
-            &.open {
+        &[data-openclass="open"] {
+            [data-openmsg-id],
+            li.today {
                 color: $opencolor;
             }
-            &.closed {
-                color: $closedcolor;
-            }
-            &.opening-later {
+        }
+        &[data-openclass="opening-later"] {
+            [data-openmsg-id],
+            li.today {
                 color: $openingcolor;
+            }
+        }
+        &[data-openclass="open"] {
+            [data-openmsg-id],
+            li.today {
+                color: $closedcolor;
             }
         }
         ul.opening-times {
@@ -183,9 +179,6 @@
                     width:25%;
                     text-align:right;
                     border-bottom: 1px solid $spacesubheadborder;
-                }
-                &.today {
-                    color: $todaycolor;
                 }
             }
         }
