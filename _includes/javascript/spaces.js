@@ -67,6 +67,7 @@ function applyFilters() {
         document.querySelectorAll('.list-space').forEach( el => {
             el.classList.remove('hidden');
         });
+        deselectSpaces();
     }
     document.dispatchEvent( new Event( 'filtersapplied' ) );
 }
