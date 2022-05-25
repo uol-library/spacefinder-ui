@@ -111,12 +111,12 @@ fileJSON.results.forEach( space => {
             newspace.opening_hours[day].to = '24:00';
         }
     }
-    fs.writeFile( path.resolve( __dirname, '../_data/cambridge/spaces/'+spaceID+'.json' ), JSON.stringify( newspace, null, '    ' ), err => {
+    /*fs.writeFile( path.resolve( __dirname, '../_data/cambridge/spaces/'+spaceID+'.json' ), JSON.stringify( newspace, null, '    ' ), err => {
         if (err) {
             console.error( err );
             return;
         }
-    });
+    });*/
     spaceID++;
 });
 console.log(spacetypes);

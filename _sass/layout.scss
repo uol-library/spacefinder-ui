@@ -77,11 +77,13 @@
             #filters {
                 position:relative;
                 width: $filterswidth;
+                visibility: hidden;
                 margin-left: -$filterswidth;
                 transition: all .5s;
                 flex: 0 0 $filterswidth;
                 &.active {
                     margin-left: 0;
+                    visibility: visible;
                 }
             }
             #list {
