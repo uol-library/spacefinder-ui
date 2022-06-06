@@ -1,3 +1,5 @@
+name: get-opening-hours
+on: workflow_dispatch
 jobs:
   keep_file_updated:
     runs-on: ubuntu-latest
@@ -12,6 +14,3 @@ jobs:
       with:
         url: https://library.leeds.ac.uk/opening-hours-calendar
         file_in_repo: data/leeds/opening-hours.json
-on:
-  schedule:
-    - cron: '0 0 * * *'
