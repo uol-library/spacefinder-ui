@@ -1,0 +1,18 @@
+name: get-library-opening-hours-scheduled
+on:
+  schedule:
+    - cron: '30 4 * * 1'
+jobs:
+  keep_file_updated:
+    runs-on: ubuntu-latest
+    name: Keep file updated
+    steps:
+    - name: Checkout repo
+      id: checkout
+      uses: actions/checkout@v2
+    - name: Update file
+      id: update_file
+      uses: TheLastProject/keep-remote-file-locally-up-to-date-action@v1
+      with:
+        url: https://library.leeds.ac.uk/opening-hours-calendar
+        file_in_repo: _data/leeds/opening-hours.json
