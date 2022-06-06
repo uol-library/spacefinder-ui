@@ -13,4 +13,4 @@ jobs:
       uses: TheLastProject/keep-remote-file-locally-up-to-date-action@v1
       with:
         url: https://library.leeds.ac.uk/opening-hours-calendar
-        file_in_repo: data/leeds/opening-hours.json
+        file_in_repo: _data/leeds/opening-hours.json
