@@ -40,4 +40,16 @@ function setupLayout() {
 			document.querySelector('#top-bar .navbutton[data-view="'+event.detail.view+'"]').classList.add( 'active' );
 		}
 	});
+	/* show filter/search panel if screen big enough */
+	if ( window.innerWidth >= spacefinder.breakpointLarge ) {
+		console.log('activating filters panel');
+		document.dispatchEvent( new CustomEvent( 'viewchange', {
+			bubbles: true,
+			cancelable: true,
+			composed: false,
+			detail: {
+				view: 'filters'
+			}
+		} ) );
+	}
 }
