@@ -1,4 +1,4 @@
-name: get-opening-hours
+name: get-library-opening-hours
 on: workflow_dispatch
 jobs:
   keep_file_updated:
