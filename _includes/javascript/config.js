@@ -7,7 +7,11 @@ const spacefinder = {
     geoActive: false,
     infoWindow: null,
     startZoom: 16,
-    breakpointLarge: 1000,
+    breakpoints: {
+        large: 1000,
+        med: 600,
+        small: 400
+    },
     watchID: false,
     permission: false,
     mapLoaded: false,

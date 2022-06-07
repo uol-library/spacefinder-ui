@@ -41,8 +41,7 @@ function setupLayout() {
 		}
 	});
 	/* show filter/search panel if screen big enough */
-	if ( window.innerWidth >= spacefinder.breakpointLarge ) {
-		console.log('activating filters panel');
+	if ( window.innerWidth >= spacefinder.breakpoints.large ) {
 		document.dispatchEvent( new CustomEvent( 'viewchange', {
 			bubbles: true,
 			cancelable: true,

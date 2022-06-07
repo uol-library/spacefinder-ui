@@ -13,6 +13,19 @@ document.addEventListener('DOMContentLoaded', () => {
     /* event listener for search + filter changes */
     document.addEventListener( 'viewfilter', applyFilters );
     document.addEventListener( 'filtersapplied', updateListFilterMessage );
+    document.addEventListener( 'click', event => {
+        if ( event.target.classList.contains( 'show-map' ) ) {
+            event.preventDefault();
+            document.dispatchEvent( new CustomEvent( 'viewchange', {
+                bubbles: true,
+                cancelable: true,
+                composed: false,
+                detail: {
+                    view: 'map'
+                }
+            } ) );
+        }
+    })
 });
 
 /**
@@ -131,14 +144,14 @@ function updateListFilterMessage() {
  */
 function activateSpaces() {
     /* event listener to display space detail */
-    document.querySelectorAll('.space-title').forEach( el => {
-        el.addEventListener('click', event => {
+    document.addEventListener('click', event => {
+        if ( event.target.classList.contains('load-info') ) {
             event.preventDefault();
             let spacenode = document.querySelector('[data-id="'+event.target.getAttribute('data-spaceid')+'"]');
             if ( ! spacenode.classList.contains('active') ) {
                 selectSpace( event.target.getAttribute('data-spaceid'), 'list' );
             }
-        });
+        }
     });
     document.querySelectorAll('.list-space .closebutton').forEach( el => {
         el.addEventListener('click', event => {
@@ -196,7 +209,8 @@ function selectSpace( spaceid, source ) {
     /* find distance from top of listcontainer */
     let scrollingElement = document.getElementById('listcontainer');
     let listContainer = document.getElementById('listcontent');
-    let totop = spacenode.offsetTop - listContainer.offsetTop;
+    let listFilters = document.getElementById('listfilters');
+    let totop = ( spacenode.offsetTop + listFilters.offsetHeight ) - listContainer.offsetTop;
     /* scroll into view */
     if ( scrollingElement.scrollTo ) {
         scrollingElement.scrollTo({top: totop, left: 0, behavior: 'smooth'});
@@ -220,6 +234,10 @@ function deselectSpaces( scrollReset ) {
     });
     document.querySelectorAll('.list-space').forEach( sp => {
         sp.classList.remove('active');
+    });
+    /* make sure all info links are visible */
+    document.querySelectorAll('.more-link').forEach( el => {
+        el.style.display = 'block';
     });
     if ( scrollReset ) {
         document.getElementById('listcontainer').scrollTop = 0;
@@ -345,7 +363,7 @@ function renderList() {
         spaceContainer.setAttribute('data-id', space.id );
         spaceContainer.setAttribute('data-sortalpha', space.title.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() );
         spaceContainer.setAttribute('class', space.classes );
-        let spaceHTML = '<h2><a href="' + space.link + '" class="space-title" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">' + space.title + '</a><button class="closebutton icon-close"><span class="visuallyhidden">Close</span></button></h2>';
+        let spaceHTML = '<h2><a href="' + space.link + '" class="space-title load-info" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">' + space.title + '</a><button class="closebutton icon-close"><span class="visuallyhidden">Close</span></button></h2>';
         spaceHTML += '<p class="info"><span class="space-type space-type-' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + '">' + space.space_type + '</span>';
         spaceHTML += '<span class="distance">(1,353 metres)</span>';
         let loc = '';
@@ -363,7 +381,7 @@ function renderList() {
         if ( space.image != '' ) {
             spaceHTML += '<div data-imgsrc="' + space.image + '" class="space-image lazy" role="img" aria-label="' + space.imagealt + '"></div>';
         }
-        spaceHTML += '<div><p class="description">' + space.description + '</p></div>';
+        spaceHTML += '<div><p class="description">' + space.description + '</p><p class="more-link"><a class="load-info" href="' + space.link + '" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">More info&hellip;</a></p></div>';
         spaceHTML += '<div class="additionalInfo" aria-live="polite" id="additionalInfo' + space.id + '"></div>';
         spaceHTML += '</div>';
         spaceContainer.innerHTML = spaceHTML;
@@ -384,15 +402,16 @@ function renderAdditionalInfo( spaceid ) {
     document.querySelectorAll('.additionalInfo').forEach( el => {
         el.textContent = '';
     });
+
     if ( spaceid !== false ) {
         /* get space data */
         let space = getSpaceById( spaceid );
         let spacenode = getSpaceNodeById( spaceid );
         let spaceHTML = '';
         if ( space.booking_url ) {
-            spaceHTML += '<p><a class="button" href="'+space.booking_url+'">Book a space</a></p>';
+            spaceHTML += '<p><a target="booking" class="button" href="'+space.booking_url+'">Book a space</a></p>';
         }
-        spaceHTML += '<section class="section-facts"><h3>Key Facts</h3><ul class="bulleticons">';
+        spaceHTML += '<section class="section-facts"><h3>Key Facts</h3><ul class="bulleticons"><li class="icon-marker switch-view"><a class="show-map" href="#">Show on map</a></li>';
         let loc = '';
         if ( space.floor !== "" ) {
             loc += space.floor + ', ';
@@ -404,15 +423,23 @@ function renderAdditionalInfo( spaceid ) {
             loc += space.address;
         }
         loc += ' (<a target="googlemaps" href="https://www.google.com/maps/dir/?api=1&amp;destination='+space.lat+'%2c' + space.lng + '&amp;travelmode=walking">get directions</a>)';
-        spaceHTML += '<li class="icon-marker">'+loc+'</li>';
+        spaceHTML += '<li class="icon-address">'+loc+'</li>';
         if ( space.url != "" ) {
-            spaceHTML += '<li class="icon-link"><a href="'+space.url+'">'+space.url+'</a></li>';
+            spaceHTML += '<li class="icon-link"><a target="spaceurl" href="'+space.url+'">'+space.url+'</a></li>';
         }
         if ( space.campusmap_url != "" ) {
             let campusmap_ref = space.campusmap_ref !== "" ? " (map reference "+space.campusmap_ref+")": "";
             spaceHTML += '<li class="icon-uol-logo-mark"><a target="campusmap" href="'+space.campusmap_url+'">View on campus map</a>' + campusmap_ref + '<li>';
         }
-        spaceHTML += '<li class="icon-access">Open to '+space.access+'<li>';
+        if ( space.restricted ) {
+            spaceHTML += '<li class="icon-public">Open to ' + space.access;
+            if ( space.restriction ) {
+                spaceHTML += ' (' + space.restriction + ')';
+            }
+            spaceHTML += '</li>';
+        } else {
+            spaceHTML += '<li class="icon-public">Open to '+space.access+'<li>';
+        }
         spaceHTML += '</ul></section>';
 
         spaceHTML += '<section class="section-opening"><h3>Opening Times</h3>';
@@ -451,6 +478,7 @@ function renderAdditionalInfo( spaceid ) {
             spaceHTML += '</ul></section>';
         }
         spacenode.querySelector('.additionalInfo').innerHTML = spaceHTML;
+        spacenode.querySelector('.more-link').style.display = 'none';
         spacenode.querySelector( 'h2' ).focus();
     }
 }

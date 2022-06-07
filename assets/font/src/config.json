@@ -741,6 +741,12 @@
       "css": "user",
       "code": 59395,
       "src": "fontawesome"
+    },
+    {
+      "uid": "540b6a4262be769515c79700618b4aea",
+      "css": "address",
+      "code": 59396,
+      "src": "entypo"
     }
   ]
 }

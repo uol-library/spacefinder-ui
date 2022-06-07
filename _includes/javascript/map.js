@@ -21,6 +21,22 @@ function initMap() {
         spacefinder.mapLoaded = true;
         document.dispatchEvent( new Event( 'sfmaploaded' ) );
     });
+    /**
+     * Returns to list view from map "more info" button
+     */
+    document.addEventListener( 'click', event => {
+        if ( event.target.classList.contains('show-list') ) {
+            event.preventDefault();
+            document.dispatchEvent( new CustomEvent( 'viewchange', {
+                bubbles: true,
+                cancelable: true,
+                composed: false,
+                detail: {
+                    view: 'list'
+                }
+            } ) );
+        }
+    });
 }
 
 /**
@@ -74,8 +90,9 @@ function maybeSetupMap() {
  * @returns {String} HTML content for space infoWindow
  */
 function getSpaceInfoWindowContent( space ) {
-    return '<div class="spaceInfoWindow"><h3>'+space.title+'</h3><p>'+space.description+'</p></div>';
+    return '<div class="spaceInfoWindow"><h3>'+space.title+'</h3><p>'+space.description+'</p><button class="show-list">More info&hellip;</button></div>';
 }
+
 
 /**
  * Takes the current bounds of the map and ensures all

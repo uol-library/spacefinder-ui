@@ -10,4 +10,22 @@
     .spaceInfoWindow {
         max-width:300px;
     }
+    button.show-list {
+        margin-right: 0;
+        margin-left: auto;
+        margin-top: .25em;
+        display: none;
+        border: none;
+        color: $linkcolor;
+        cursor: pointer;
+        &:hover {
+            color: $linkcolor-hover;
+        }
+        background: $color-white;
+    }
+    &.active {
+        button.show-list {
+            display:block;
+        }
+    }
 }

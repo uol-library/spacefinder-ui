@@ -13,6 +13,9 @@
  *
  * and the spacefinder layout, which changes according to screen size
  */
+body {
+    overflow: hidden;
+}
 #maincontainer {
     max-height: 100vh;
     display: flex;
@@ -36,11 +39,11 @@
             width: 100vw;
             flex: 0 0 100vw;
             &.active {
-                display: block;
+                visibility: visible;
             }
         }
         #filters, #list {
-            display: none;
+            visibility: hidden;
             margin-left: -100vw;
             max-height: calc(100vh - (#{$topbarheight} + #{$footerheight}));
             &.active {
@@ -70,8 +73,11 @@
             height: calc(100vh - (#{$topbarheight} + #{$footerheight}));
         }
         @media screen and (min-width: #{$breakpoint-large}) {
+            .switch-view {
+                display: none;
+            }
             #filters, #list, #map {
-                display: block;
+                visibility: visible;
                 transition: all .5s;
             }
             #filters {

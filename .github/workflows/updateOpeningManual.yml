@@ -1,4 +1,4 @@
-name: update-library-opening-hours-manual
+name: update-library-opening-hours
 on: workflow_dispatch
 jobs:
   update-opening:
