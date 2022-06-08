@@ -241,10 +241,6 @@ function deselectSpaces( scrollReset ) {
     document.querySelectorAll('.list-space').forEach( sp => {
         sp.classList.remove('active');
     });
-    /* make sure all info links are visible */
-    document.querySelectorAll('.more-link').forEach( el => {
-        el.style.display = 'block';
-    });
     if ( scrollReset ) {
         document.getElementById('listcontainer').scrollTop = 0;
     }
@@ -393,7 +389,7 @@ function renderList() {
         if ( space.image != '' ) {
             spaceHTML += '<div data-imgsrc="' + space.image + '" class="space-image lazy" role="img" aria-label="' + space.imagealt + '"></div>';
         }
-        spaceHTML += '<div><p class="description">' + space.description + '</p><p class="more-link"><a class="load-info" href="' + space.link + '" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">More info&hellip;</a></p></div>';
+        spaceHTML += '<div><p class="description">' + space.description + '</p></div>';
         spaceHTML += '<div class="additionalInfo" aria-live="polite" id="additionalInfo' + space.id + '"></div>';
         spaceHTML += '</div>';
         spaceContainer.innerHTML = spaceHTML;
@@ -421,9 +417,9 @@ function renderAdditionalInfo( spaceid ) {
         let space = getSpaceById( spaceid );
         let spacenode = getSpaceNodeById( spaceid );
         let spaceHTML = '';
-        if ( space.booking_url ) {
+        /*if ( space.booking_url ) {
             spaceHTML += '<p><a target="booking" class="button" href="'+space.booking_url+'">Book a space</a></p>';
-        }
+        }*/
         spaceHTML += '<section class="section-facts"><h3>Key Facts</h3><ul class="bulleticons"><li class="icon-marker switch-view"><a class="show-map" href="#">Show on map</a></li>';
         let loc = '';
         if ( space.floor !== "" ) {
@@ -496,7 +492,6 @@ function renderAdditionalInfo( spaceid ) {
             }
         }
         spacenode.querySelector('.additionalInfo').innerHTML = spaceHTML;
-        spacenode.querySelector('.more-link').style.display = 'none';
         spacenode.querySelector( 'h2' ).focus();
     }
 }
