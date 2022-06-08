@@ -21,10 +21,14 @@
         "signal",
         "toilets",
         "refreshments",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible",
+        "baby_changing"
     ],
     "title": "Leeds University Union - Foyer",
-    "description": "Busy study place for people that like working alonside others. Couches with big tables can be used for comfortable group working in a nice environment. Extra couches on the side for anybody wanting to read or take a break.",
+    "description": "Busy study place for people that like working alongside others. Couches with big tables can be used for comfortable group working in a nice environment. Extra couches on the side for anybody wanting to read or take a break.",
     "access": "Anyone (public)",
     "space_type": "General Seating Area",
     "address": "University of Leeds, LS2 9JT",

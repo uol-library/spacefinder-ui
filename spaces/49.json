@@ -19,7 +19,10 @@
         "signal",
         "whiteboards",
         "projector",
-        "toilets"
+        "toilets",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible"
     ],
     "title": "Clothworkers' Building Link - 140 (Richard Hughes)",
     "description": "Large area with no drinks or food allowed. 45 seat capacity.",
@@ -28,7 +31,7 @@
     "address": "University of Leeds, LS2 9JT",
     "building": "Clothworkers' Building Central and Link",
     "floor": "First Floor",
-    "restricted": false,
+    "restricted": true,
     "restriction": "",
     "disabled_access": true,
     "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF6CC",

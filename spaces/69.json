@@ -16,7 +16,10 @@
         "sockets",
         "projector",
         "toilets",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible"
     ],
     "title": "Worsley Building - 8.049O (Fourman)",
     "description": "Large room with plenty of available clusters to use. Comfortable chairs and large desks perfect for focused study. 52 seat capacity.",
@@ -25,7 +28,7 @@
     "address": "University of Leeds, LS2 9JT",
     "building": "Worsley building",
     "floor": "Level 8",
-    "restricted": "",
+    "restricted": true,
     "restriction": "",
     "disabled_access": true,
     "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF724",

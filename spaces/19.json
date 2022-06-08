@@ -21,7 +21,12 @@
         "whiteboards",
         "projector",
         "toilets",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible",
+        "blue_badge_parking",
+        "accessible_toilets"
     ],
     "title": "Michael Sadler Building - B.49",
     "description": "Large communal desk with adjustable height function. Plently of whiteboards available for silent or group study. 10 seat capacity.",
@@ -30,7 +35,7 @@
     "address": "University of Leeds, LS2 9JT",
     "building": "Michael Sadler Building",
     "floor": "Basement",
-    "restricted": false,
+    "restricted": true,
     "restriction": "",
     "disabled_access": true,
     "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",

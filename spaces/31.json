@@ -20,10 +20,15 @@
         "laptops_allowed",
         "signal",
         "toilets",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible",
+        "blue_badge_parking",
+        "accessible_toilets"
     ],
     "title": "Michael Sadler Building - Behind Rupert Beckett Lecture Theatre",
-    "description": "Colorful study area with desks and access to clusters. Relaxed space for studying individually or with a group.",
+    "description": "Colourful study area with desks and access to clusters. Relaxed space for studying individually or with a group.",
     "access": "Anyone (public)",
     "space_type": "General Seating Area",
     "address": "University of Leeds, LS2 9JT",

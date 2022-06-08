@@ -24,10 +24,14 @@
         "printers_copiers",
         "toilets",
         "refreshments",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible",
+        "accessible_toilets"
     ],
     "title": "Worsley Building - Airport Lounge seating (level 7)",
-    "description": "Modern colorful big area with comfortable couches and chairs. Vending, cash and cofee machines available as well as water fountain.",
+    "description": "Modern colourful big area with comfortable couches and chairs. Vending, cash and cofee machines available as well as water fountain.",
     "access": "Anyone (public)",
     "space_type": "General Seating Area",
     "address": "University of Leeds, LS2 9JT",

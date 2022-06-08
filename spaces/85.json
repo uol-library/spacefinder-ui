@@ -24,7 +24,10 @@
         "signal",
         "toilets",
         "refreshments",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible"
     ],
     "title": "Loma Express Dentistry",
     "description": "Located on level six of the Worsley building, the café provides a range of grab and go food and drinks. With a focus on healthy, field-to-fork food options, LOMA Express stocks unique salad and sandwich combinations, and fresh herbal infusion teas and other delicious LOMA Express products made fresh each day.",

@@ -21,7 +21,10 @@
         "laptops_allowed",
         "signal",
         "toilets",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible"
     ],
     "title": "Electronic and Electrical Engineering - Ground Floor Foyer",
     "description": "Big bright foyer with couches and circular tables with chairs. A perfect place to relax, take a break or study alone or in a group.",

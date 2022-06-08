@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 /* gets the current status of all filters */
 function getFilterStatus() {
+    splog( 'getFilterStatus', 'filters.js' );
     const filters = document.querySelectorAll('#filters input[type=checkbox]');
     const activeFilters = [];
     for (const cbx of filters) {
@@ -43,6 +44,7 @@ function getFilterStatus() {
 
 /* setup */
 function setupFilters() {
+    splog( 'setupFilters', 'filters.js' );
     /* event listener for filter changes */
     document.addEventListener('filtersapplied', event => {
         const activeFilters = getFilterStatus();
@@ -82,7 +84,7 @@ function setupFilters() {
                 //item.closest('li').classList.remove('focus');
             }
             /* trigger the viewfilter event */
-            item.dispatchEvent(spacefinder.filterEvent);
+            item.dispatchEvent( new Event( 'viewfilter', { bubbles: true } ) );
         })
     }
     /* reset button */
@@ -94,7 +96,7 @@ function setupFilters() {
             cbx.checked = false;
         }
         /* trigger the viewfilter event */
-        event.target.dispatchEvent(spacefinder.filterEvent);
+        event.target.dispatchEvent( new Event( 'viewfilter', { bubbles: true }  ) );
     });
     /* search, reset and view results buttons activation */
     document.getElementById('search-input').addEventListener('input', event => {
@@ -110,7 +112,7 @@ function setupFilters() {
             }
             if ( inputvalue.length == 0 ) {
                 /* search has been cleared */
-                event.target.dispatchEvent(spacefinder.filterEvent);
+                event.target.dispatchEvent( new Event( 'viewfilter', { bubbles: true } ) );
             }
         }
     });
@@ -118,10 +120,11 @@ function setupFilters() {
     document.getElementById('search-submit').addEventListener('click', event => {
         event.preventDefault();
         let inputvalue = document.getElementById('search-input').value.replace(/[^a-zA-Z0-9 ]/g, '').trim();
+        splog( inputvalue, 'filters.js' );
         if ( inputvalue.length > 1 ) {
             document.getElementById('search-input').value = inputvalue;
             /* trigger the viewfilter event */
-            event.target.dispatchEvent(spacefinder.filterEvent);
+            event.target.dispatchEvent( new Event( 'viewfilter', { bubbles: true } ) );
             document.dispatchEvent(new CustomEvent('sfanalytics', {
                 detail: {
                     type: 'search',

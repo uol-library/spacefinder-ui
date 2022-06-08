@@ -20,7 +20,11 @@
         "projector",
         "toilets",
         "refreshments",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible",
+        "accessible_toilets"
     ],
     "title": "Maurice Keyworth Building - 2.21",
     "description": "Large IT cluster. 70 seat capacity.",
@@ -29,7 +33,7 @@
     "address": "University of Leeds, LS2 9JT",
     "building": "Maurice Keyworth Building",
     "floor": "Second Floor",
-    "restricted": false,
+    "restricted": true,
     "restriction": "",
     "disabled_access": true,
     "url": "",

@@ -21,7 +21,11 @@
         "signal",
         "outdoor_seating",
         "toilets",
-        "refreshments"
+        "refreshments",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible",
+        "blue_badge_parking"
     ],
     "title": "Affine Café",
     "description": "Affine is more than just a place to grab a bite. A place to break away from the pressures of the working day and enjoy a breather, a change of scenery, or even a chat with fellow professionals. Located at the heart of the innovation hub, the contemporary space provides a welcoming environment to relax and unwind. The perfect place for casual meetings or laidback lunches.",

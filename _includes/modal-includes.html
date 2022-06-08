@@ -1,3 +1,16 @@
+<div id="about-page" class="dialog-container" aria-labelledby="about-page-title" aria-describedby="accessibility-page-description" aria-hidden="true">
+    <div class="dialog-overlay" data-a11y-dialog-hide></div>
+    <article role="document" class="dialog-content">
+        <header>
+            <button type="button" class="button dialog-close" data-a11y-dialog-hide aria-label="Close dialog">&times;</button>
+            <h2 id="about-page-title">About Spacefinder</h2>
+            <p class="visuallyhidden" id="accessibility-page-description">More information about Spacefinder</p>
+        </header>
+        {% capture about_page %}{% include pages/about.md %}{% endcapture %}
+        {{ about_page | markdownify }}
+    </article>
+</div>
+
 <div id="accessibility-page" class="dialog-container" aria-labelledby="accessibility-page-title" aria-describedby="accessibility-page-description" aria-hidden="true">
     <div class="dialog-overlay" data-a11y-dialog-hide></div>
     <article role="document" class="dialog-content">

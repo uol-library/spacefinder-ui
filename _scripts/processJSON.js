@@ -15,12 +15,48 @@ const client = what3words.ConvertTo3waClient.init(apiKey, config);
 
 
 const spacefiles = fs.readdirSync( path.resolve( __dirname, '../spaces' ), { encoding: 'utf8' } );
+const buildings = [];
 spacefiles.forEach( filename => {
     if ( filename !== '.' && filename !== '..' ) {
         let spaceData = fs.readFileSync( path.resolve( __dirname, '../spaces/', filename ) );
         const spaceJSON = JSON.parse( spaceData );
         let geoJSON = JSON.parse( spaceJSON.location );
-        console.log('"'+spaceJSON.title+'","' + spaceJSON.space_type + '"');
+        if ( spaceJSON.access == 'University Staff and Students' ) {
+            spaceJSON.restricted = true;
+        }
+        if ( spaceJSON.building == 'History Building' ) {
+            spaceJSON.building = 'Fine Art Building';
+        }
+        if ( buildings.indexOf( spaceJSON.building ) == -1 ) {
+            buildings.push( spaceJSON.building );
+        }
+        ['bike_racks','gender_neutral_toilets','wheelchair_accessible'].forEach( f => {
+            if ( spaceJSON.facilities.indexOf( f ) == -1 ) {
+                spaceJSON.facilities.push( f );
+            }
+        });
+        if ( ['Michael Sadler Building','E C Stoner Building','Marjorie and Arnold Ziff Building','Irene Manton Building','Nexus building','Esther Simpson Building'].indexOf( spaceJSON.building ) != -1 ) {
+            if ( spaceJSON.facilities.indexOf('blue_badge_parking') == -1 ) {
+                spaceJSON.facilities.push('blue_badge_parking');
+            }
+        }
+        if ( ['Parkinson Building','Leeds University Union','Marjorie and Arnold Ziff Building'].indexOf( spaceJSON.building ) != -1 ) {
+            if ( spaceJSON.facilities.indexOf('baby_changing') == -1 ) {
+                spaceJSON.facilities.push('baby_changing');
+            }
+        }
+        if ( ['Psychology (37 and 41 University Road)','Social Sciences building','Irene Manton Building','Roger Stevens building','Worsley Building','Parkinson Building','Liberty Building','Michael Sadler Building','Mechanical Engineering building','Maurice Keyworth Building','Marjorie and Arnold Ziff Building'].indexOf( spaceJSON.building ) != -1 || spaceJSON.title == 'Refectory' || spaceJSON.space_type == 'Library' ) {
+            if ( spaceJSON.facilities.indexOf('accessible_toilets') == -1 ) {
+                spaceJSON.facilities.push('accessible_toilets');
+            }
+        }
+        fs.writeFile( path.resolve( __dirname, '../_data/leeds/processed/'+spaceJSON.id+'.json' ), JSON.stringify( spaceJSON, null, '    ' ), err => {
+            if (err) {
+                console.error( err );
+                return;
+            }
+        });
+
         /*spaceJSON.image = spaceJSON.images.length ? spaceJSON.images[0]: '';
         spaceJSON.imagealt = spaceJSON.title;
         delete spaceJSON.images;
@@ -64,6 +100,7 @@ spacefiles.forEach( filename => {
         */
     }
 });
+console.log(buildings);
 
 function string_to_slug (str) {
     str = str.replace(/^\s+|\s+$/g, ''); // trim

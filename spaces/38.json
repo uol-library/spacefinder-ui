@@ -18,7 +18,11 @@
         "sockets",
         "signal",
         "toilets",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible",
+        "accessible_toilets"
     ],
     "title": "Maurice Keyworth - Study Centre (Rooms 238 & 307)",
     "description": "silent study spaces with beautiful views. Outside seminar halls and occationally busy.",

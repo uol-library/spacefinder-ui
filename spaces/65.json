@@ -19,7 +19,10 @@
         "signal",
         "printers_copiers",
         "projector",
-        "toilets"
+        "toilets",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible"
     ],
     "title": "Worsley Building - 8.038",
     "description": "Cluster room with a variety of desks for individual or group study. 52 seat capacity.",
@@ -28,7 +31,7 @@
     "address": "University of Leeds, LS2 9JT",
     "building": "Worsley building",
     "floor": "Level 8",
-    "restricted": false,
+    "restricted": true,
     "restriction": "",
     "disabled_access": true,
     "url": "",

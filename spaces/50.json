@@ -19,7 +19,10 @@
         "signal",
         "whiteboards",
         "projector",
-        "toilets"
+        "toilets",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible"
     ],
     "title": "Clothworkers' Building Link - G.34",
     "description": "Cluster room with a variety of desks for individual or group study. 28 seat capacity.",
@@ -28,7 +31,7 @@
     "address": "University of Leeds, LS2 9JT",
     "building": "Clothworkers' Building Central and Link",
     "floor": "Ground",
-    "restricted": false,
+    "restricted": true,
     "restriction": "",
     "disabled_access": true,
     "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF7E0",

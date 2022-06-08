@@ -26,7 +26,12 @@
         "projector",
         "toilets",
         "refreshments",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible",
+        "blue_badge_parking",
+        "accessible_toilets"
     ],
     "title": "Irene Manton Building - 7.90",
     "description": "Rows of desks with a full left side of windows that are facing a beautiful side of campus allowing plenty of natural light into the study area. 45 seat capacity.",
@@ -35,7 +40,7 @@
     "address": "University of Leeds, LS2 9JT",
     "building": "Irene Manton Building",
     "floor": "Level 7",
-    "restricted": false,
+    "restricted": true,
     "restriction": "",
     "disabled_access": true,
     "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF7D6",

@@ -17,7 +17,12 @@
         "signal",
         "whiteboards",
         "projector",
-        "toilets"
+        "toilets",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible",
+        "blue_badge_parking",
+        "accessible_toilets"
     ],
     "title": "Michael Sadler Building - 1.37",
     "description": "Silent study space with chairs and flip out tables. 12 seat capacity. Perfect for studying using multiple whiteboards.",
@@ -26,7 +31,7 @@
     "address": "University of Leeds, LS2 9JT",
     "building": "Michael Sadler Building",
     "floor": "First floor",
-    "restricted": false,
+    "restricted": true,
     "restriction": "",
     "disabled_access": true,
     "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",

@@ -20,7 +20,10 @@
         "whiteboards",
         "projector",
         "toilets",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible"
     ],
     "title": "Parkinson Building - B.26",
     "description": "Cluster room surrounded by big windows with high views of the University campus. Perfect for focused study with acess to computers. 15 seat capacity.",
@@ -29,7 +32,7 @@
     "address": "University of Leeds, LS2 9JT",
     "building": "Parkinson building",
     "floor": "Basement",
-    "restricted": false,
+    "restricted": true,
     "restriction": "",
     "disabled_access": true,
     "url": "",

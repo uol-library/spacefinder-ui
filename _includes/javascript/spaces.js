@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lazyLoadSpaceImages();
         updateDistances();
         checkOpeningHours();
+        setInterval( checkOpeningHours, (30*1000) );
         activateSort(true, 'alpha');
         sortSpaces( 'sortalpha', true );
         activateSpaces();
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
  * Applies filters to the list of spaces
  */
 function applyFilters() {
+    splog( 'applyFilters', 'spaces.js' );
     const activeFilters = getFilterStatus();
     document.getElementById('listcontainer').scrollTop = 0;
     let searchcondition = '';
@@ -90,6 +92,7 @@ function applyFilters() {
  * search terms and filters are active
  */
 function updateListFilterMessage() {
+    splog( 'updateListFilterMessage', 'spaces.js' );
     let activeFilters = getFilterStatus();
     let container = document.getElementById('listfilters');
     /* empty any existing messages and hide */
@@ -143,6 +146,7 @@ function updateListFilterMessage() {
  * delegated listeners for terms in the filter / search status bar.
  */
 function activateSpaces() {
+    splog( 'activateSpaces', 'spaces.js' );
     /* event listener to display space detail */
     document.addEventListener('click', event => {
         if ( event.target.classList.contains('load-info') ) {
@@ -173,13 +177,13 @@ function activateSpaces() {
                 }
             });
             document.getElementById('search-input').value = newsearchterms.join(' ');
-            document.dispatchEvent(spacefinder.filterEvent);
+            document.dispatchEvent( new Event( 'viewfilter', { bubbles: true } ) );
         }
         if ( e.target.matches('.filter-term') ) {
             e.preventDefault();
             let termid = e.target.getAttribute('data-termid');
             document.getElementById(termid).checked = false;
-            document.dispatchEvent(spacefinder.filterEvent);
+            document.dispatchEvent( new Event( 'viewfilter', { bubbles: true } ) );
         }
     });
 }
@@ -189,6 +193,7 @@ function activateSpaces() {
  * @param {integer} spaceid 
  */
 function selectSpace( spaceid, source ) {
+    splog( 'selectSpace', 'spaces.js' );
     let space = getSpaceById( spaceid );
     window.location.hash = '/space/'+space.slug;
     document.dispatchEvent(new CustomEvent('sfanalytics', {
@@ -226,6 +231,7 @@ function selectSpace( spaceid, source ) {
  * @param {boolean} scrollReset 
  */
 function deselectSpaces( scrollReset ) {
+    splog( 'deselectSpaces', 'spaces.js' );
     if ( spacefinder.infoWindow ) {
         spacefinder.infoWindow.close();
     }
@@ -250,6 +256,7 @@ function deselectSpaces( scrollReset ) {
  * @param {string} sorttype either alpha or distance.
  */
 function activateSort( activate, sorttype ) {
+    splog( 'activateSort', 'spaces.js' );
     const sortbutton = document.getElementById( 'sort'+sorttype );
     if ( ! activate ) {
         sortbutton.disabled = true;
@@ -265,6 +272,7 @@ function activateSort( activate, sorttype ) {
  * @param {Event} e event from button click
  */
 function sortSpacesListener( e ) {
+    splog( 'sortSpacesListener', 'spaces.js' );
     e.preventDefault();
     /* get all the data we need to perform the sort */
     let sortdir = e.target.getAttribute('data-sortdir');
@@ -282,6 +290,7 @@ function sortSpacesListener( e ) {
  * @param {boolean} dir sort direction (true = asc, false = desc)
  */
 function sortSpaces( sortby, dir ) {
+    splog( 'sortSpaces', 'spaces.js' );
     /* first update the sorting buttons */
     document.querySelectorAll( '.sortbutton' ).forEach( el => el.setAttribute( 'data-sortdir', '' ) );
     let dirAttr = dir ? 'asc': 'desc';
@@ -305,7 +314,8 @@ function sortSpaces( sortby, dir ) {
  * @param {string} attr attribute name for sort key
  * @returns sorting function for Array.sort()
  */
- function comparer( asc, attr ) {
+function comparer( asc, attr ) {
+    splog( 'comparer', 'spaces.js' );
     /**
      * the function to perform the comparison
      * @param {(integer|string)} a first value to sort
@@ -333,6 +343,7 @@ function sortSpaces( sortby, dir ) {
  * Loads all space data from a single JSON file
  */
 function loadSpaces() {
+    splog( 'loadSpaces', 'spaces.js' );
     getJSON( { key: 'spaces', url: spacefinder.spacesurl, debug: false, callback: data => {
         if ( data.length ) {
             data.forEach( (space, index) => {
@@ -355,6 +366,7 @@ function loadSpaces() {
  * Renders list view for spaces
  */
 function renderList() {
+    splog( 'renderList', 'spaces.js' );
     let listContainer = document.getElementById('listcontent');
     let spacetotal = 0;
     spacefinder.spaces.forEach( space => {
@@ -398,6 +410,7 @@ function renderList() {
  * @param {integer} spaceid ID of space
  */
 function renderAdditionalInfo( spaceid ) {
+    splog( 'renderAdditionalInfo', 'spaces.js' );
     /* clear any additional data currently displayed */
     document.querySelectorAll('.additionalInfo').forEach( el => {
         el.textContent = '';
@@ -466,16 +479,21 @@ function renderAdditionalInfo( spaceid ) {
                 spaceHTML += '<li class="icon-twitter"><a href="https://twitter.com/'+space.twitter_screen_name+'">'+space.twitter_screen_name+'</a></li>';
             }
             if ( space.facebook_url !== "" ) {
-                spaceHTML += '<li class="icon-facebook"><a href="'+space.facebook_url+'">'+space.facebook_url+'</a></li>';
+                spaceHTML += '<li class="icon-facebook-squared"><a href="'+space.facebook_url+'">'+space.facebook_url+'</a></li>';
             }
         }
 
         if ( space.facilities.length ) {
-            spaceHTML += '<section class="section-facilities"><h3>Facilities</h3><ul class="bulleticons">';
-            for ( i = 0; i < space.facilities.length; i++ ) {
-                spaceHTML += '<li class="' + spacefinder.icons[space.facilities[i]] + '">' + spacefinder.filters[ 'facility_' + space.facilities[i] ] + '</li>';
+            let facilitieslist = '';
+            for ( filter in spacefinder.filters) { 
+                let fac = filter.substring( 9 );
+                if ( space.facilities.indexOf( fac ) != -1 ) {
+                    facilitieslist += '<li class="' + spacefinder.icons[fac] + '">' + spacefinder.filters[ filter ] + '</li>';
+                }
+            };
+            if ( facilitieslist != '' ) {
+                spaceHTML += '<section class="section-facilities"><h3>Facilities</h3><ul class="bulleticons">' + facilitieslist + '</ul></section>';
             }
-            spaceHTML += '</ul></section>';
         }
         spacenode.querySelector('.additionalInfo').innerHTML = spaceHTML;
         spacenode.querySelector('.more-link').style.display = 'none';
@@ -488,6 +506,7 @@ function renderAdditionalInfo( spaceid ) {
  * @return {String} classList Space separated list of classnames
  */
 function getClassList( space ) {
+    splog( 'getClassList', 'spaces.js' );
     var classList = 'list-space ';
     if ( space.space_type ) {
         classList += 'type_' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + ' ';
@@ -512,6 +531,7 @@ function getClassList( space ) {
  * Also adds class to the row in the opening times table.
  */
 function checkOpeningHours() {
+    splog( 'checkOpeningHours', 'spaces.js' );
     let today = new Date();
     let daynames = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
     let todaysday = daynames[ today.getDay() ];
@@ -560,9 +580,13 @@ function checkOpeningHours() {
             
         }
     });
-    // call every 30 seconds
-    setInterval( checkOpeningHours, (30*1000) );
 }
+
+/**
+ * Returns an integer for a time in the format hh:mm 
+ * @param {string} str 
+ * @returns {integer}
+ */
 function getTimeFromString( str ) {
     let parts = str.split(':');
     return ( parseInt( parts[0] ) * 100 ) + parseInt( parts[1] );
@@ -574,7 +598,8 @@ function getTimeFromString( str ) {
  * in the viewport). Uses IntersectionObserver API if available, and falls
  * back to listening for scroll events and testing scrollTop/offsetTop.
  */
- function lazyLoadSpaceImages() {
+function lazyLoadSpaceImages() {
+    splog( 'lazyLoadSpaceImages', 'spaces.js' );
     var lazyloadImages, lazyloadThrottleTimeout;
 
     if ( "IntersectionObserver" in window ) {

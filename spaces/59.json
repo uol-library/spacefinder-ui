@@ -22,7 +22,11 @@
         "signal",
         "printers_copiers",
         "whiteboards",
-        "toilets"
+        "toilets",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible",
+        "accessible_toilets"
     ],
     "title": "Mechanical Engineering - 5.34d",
     "description": "Cluster room surrounded by big windows with high views of the University campus. Perfect for focused study with access to computers. 25 seat capacity.",
@@ -31,7 +35,7 @@
     "address": "University of Leeds, LS2 9JT",
     "building": "Mechanical Engineering building",
     "floor": "Fifth Floor",
-    "restricted": false,
+    "restricted": true,
     "restriction": "",
     "disabled_access": true,
     "url": "",

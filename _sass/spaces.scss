@@ -109,11 +109,6 @@
                     color: $lighttextcolor;
                     text-align: right;
                     font-size: .9rem;
-                    .address-floor,
-                    .address-building,
-                    .address-location {
-                        white-space: nowrap;
-                    }
                 }
                 &.distance {
                     display: none;

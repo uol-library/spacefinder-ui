@@ -8,7 +8,10 @@
         "signal",
         "outdoor_seating",
         "refreshments",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible"
     ],
     "atmosphere": [
         "relaxed",

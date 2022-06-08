@@ -167,3 +167,15 @@ function getSpaceById( id ) {
 function getSpaceNodeById( id ) {
     return document.querySelector('[data-id="'+id+'"]');
 }
+
+/**
+ * Logs messages to console if debug flag is set
+ * @param {string} message
+ * @param {string} filename
+ */
+function splog( message, filename ) {
+    if ( spacefinder.debug ) {
+        let now = new Date();
+        console.log( now.getHours() + ':' + now.getMinutes().toString().padStart(2, '0') + ':' + now.getSeconds().toString().padStart(2, '0') + '.' + now.getMilliseconds().toString().padStart(3, '0') + ' ' + filename.padEnd(12) + ' - ' + message );
+    }
+}

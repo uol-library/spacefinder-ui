@@ -21,7 +21,10 @@
         "laptops_allowed",
         "sockets",
         "signal",
-        "toilets"
+        "toilets",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible"
     ],
     "title": "Chemistry - Chaston Chapman Lounge (room G20)",
     "description": "Bright green modern lounge located in the Chemistry Building. The perfect place to study, take a break or explore the scientific magazines that are displayed on the shelves. The couches and the chairs are very comfortable, making the area very welcoming.",

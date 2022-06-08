@@ -21,7 +21,11 @@
         "projector",
         "outdoor_seating",
         "toilets",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible",
+        "accessible_toilets"
     ],
     "title": "Social Sciences Building - 10.11",
     "description": "Big cluster room at the Social Sciences Building. Rows of desks with computers near a place to take a break. Perfect for studying between lectures on campus. 40 seat capacity.",
@@ -30,7 +34,7 @@
     "address": "University of Leeds, LS2 9JT",
     "building": "Social Sciences building",
     "floor": "Level 10",
-    "restricted": false,
+    "restricted": true,
     "restriction": "",
     "disabled_access": true,
     "url": "",

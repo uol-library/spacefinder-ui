@@ -17,7 +17,10 @@
         "signal",
         "whiteboards",
         "toilets",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible"
     ],
     "title": "Baines Wing - G.28",
     "description": "Small study/seminar room space that includes one large desk for group or single focused study. Access to whiteboard and plug sockets. 15 seat capacity.",
@@ -26,7 +29,7 @@
     "address": "University of Leeds, LS2 9JT",
     "building": "Baines Wing",
     "floor": "Ground floor",
-    "restricted": false,
+    "restricted": true,
     "restriction": "",
     "disabled_access": true,
     "url": "",

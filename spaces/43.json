@@ -17,7 +17,10 @@
         "laptops_allowed",
         "whiteboards",
         "projector",
-        "toilets"
+        "toilets",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible"
     ],
     "title": "Chemistry and Chemistry West Block - 1.44",
     "description": "Private study space for focused study. 23 seat capacity",
@@ -26,7 +29,7 @@
     "address": "University of Leeds, LS2 9JT",
     "building": "Chemistry building",
     "floor": "First Floor",
-    "restricted": false,
+    "restricted": true,
     "restriction": "",
     "disabled_access": true,
     "url": "",

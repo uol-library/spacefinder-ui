@@ -26,7 +26,10 @@
         "outdoor_seating",
         "toilets",
         "refreshments",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible"
     ],
     "title": "Chemical and Process Engineering - G06",
     "description": "24 hour cluster with rows of desks. Perfect for day or night social studying with access to water fountain. 105 seat capacity",
@@ -35,7 +38,7 @@
     "address": "University of Leeds, LS2 9JT",
     "building": "Chemical and Process Engineering",
     "floor": "Ground floor",
-    "restricted": false,
+    "restricted": true,
     "restriction": "",
     "disabled_access": true,
     "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF5F6",

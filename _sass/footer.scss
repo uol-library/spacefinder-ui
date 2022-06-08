@@ -22,13 +22,38 @@
                 border-left: none;
                 padding-left: 0;
             }
-            button {
+            button, a, a:hover, a:visited {
+                font-size: .9em;
                 color: $footercolor;
                 background: $footerbg;
                 border: none;
                 text-decoration: none;
                 cursor: pointer;
             }
+        }
+    }
+    .button-icon {
+        &:before {
+            display:none;
+        }
+        @media screen and (max-width: #{$breakpoint-med}) {
+            &:before {
+                display: inline-block;
+            }
+            .button-text {
+                display: none;
+            }
+        }
+    }
+
+    @media screen and (max-width: #{$breakpoint-large}) {
+        .hide-med {
+            display: none;
+        }
+    }
+    @media screen and (max-width: #{$breakpoint-med}) {
+        .hide-small {
+            display: none;
         }
     }
 }

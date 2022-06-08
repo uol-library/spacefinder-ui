@@ -20,7 +20,10 @@
         "printers_copiers",
         "whiteboards",
         "projector",
-        "toilets"
+        "toilets",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible"
     ],
     "title": "Chemistry and Chemistry West Block - 140 (Cohen)",
     "description": "Large room with lines of computer desks. Silent and busy study space. 98 seat capacity.",
@@ -29,7 +32,7 @@
     "address": "University of Leeds, LS2 9JT",
     "building": "Chemistry building",
     "floor": "First Floor",
-    "restricted": false,
+    "restricted": true,
     "restriction": "",
     "disabled_access": true,
     "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF6CD",

@@ -19,7 +19,11 @@
         "signal",
         "whiteboards",
         "projector",
-        "toilets"
+        "toilets",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible",
+        "blue_badge_parking"
     ],
     "title": "E C Stoner Building - 6.68",
     "description": "Large cluster with multiple computers and comfortable chairs. 58 seat capacity",
@@ -28,7 +32,7 @@
     "address": "University of Leeds, LS2 9JT",
     "building": "E C Stoner Building",
     "floor": "Level 6",
-    "restricted": false,
+    "restricted": true,
     "restriction": "",
     "disabled_access": true,
     "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF5E1",

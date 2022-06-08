@@ -21,7 +21,13 @@
         "signal",
         "toilets",
         "refreshments",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible",
+        "blue_badge_parking",
+        "baby_changing",
+        "accessible_toilets"
     ],
     "title": "Café Maia",
     "description": "Café Maia at Ziff is perfect for meetings, to take a break or even to do some work in the computer area.",

@@ -23,7 +23,11 @@
         "signal",
         "toilets",
         "refreshments",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible",
+        "accessible_toilets"
     ],
     "title": "Liberty Building - Ground floor Common Area (G01)",
     "description": "Common area near the entrance of the Liberty building. Quiet space with different kinds of tables (and table football).",

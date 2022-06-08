@@ -20,10 +20,13 @@
         "signal",
         "toilets",
         "refreshments",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible"
     ],
     "title": "Charles Thackrah - Atrium (Ground Floor)",
-    "description": "Modern seating area with small tables and wall-attached tables. Occationally busy. Perfect place to take a break or prepare before class.",
+    "description": "Modern seating area with small tables and wall-attached tables. Occasionally busy. Perfect place to take a break or prepare before class.",
     "access": "Anyone (public)",
     "space_type": "General Seating Area",
     "address": "University of Leeds, LS2 9JT",

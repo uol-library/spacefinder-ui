@@ -24,7 +24,12 @@
         "projector",
         "toilets",
         "refreshments",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible",
+        "blue_badge_parking",
+        "accessible_toilets"
     ],
     "title": "Irene Manton Building - 7.96",
     "description": "Modern large IT cluster with plenty of large windows facing a beautiful side of the University campus. 40 seat capacity.",
@@ -33,7 +38,7 @@
     "address": "University of Leeds, LS2 9JT",
     "building": "Irene Manton Building",
     "floor": "Level 7",
-    "restricted": false,
+    "restricted": true,
     "restriction": "",
     "disabled_access": true,
     "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF7D5",

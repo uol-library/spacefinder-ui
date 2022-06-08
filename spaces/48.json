@@ -19,7 +19,10 @@
         "signal",
         "whiteboards",
         "projector",
-        "toilets"
+        "toilets",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible"
     ],
     "title": "Clarendon Building - G07",
     "description": "Classroom with 4 computer rows. Comfortable chairs.",
@@ -28,7 +31,7 @@
     "address": "University of Leeds, LS2 9JT",
     "building": "Clarendon building",
     "floor": "Ground",
-    "restricted": false,
+    "restricted": true,
     "restriction": "",
     "disabled_access": true,
     "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF5C2",

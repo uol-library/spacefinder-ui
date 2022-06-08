@@ -22,7 +22,10 @@
         "sockets",
         "signal",
         "printers_copiers",
-        "toilets"
+        "toilets",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible"
     ],
     "title": "Mechanical Engineering - Second floor seating (room 240)",
     "description": "Comfortable small study area with couches and views from big windows.",

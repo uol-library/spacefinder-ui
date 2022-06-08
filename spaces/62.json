@@ -23,7 +23,11 @@
         "printers_copiers",
         "projector",
         "toilets",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible",
+        "accessible_toilets"
     ],
     "title": "Psychology (37 and 41 University Road) - 1.43",
     "description": "Circular bright clusters room with pretty views on campus available 24 hours. Access to water fountain. 48 seat capacity.",
@@ -32,7 +36,7 @@
     "address": "University of Leeds, LS2 9JT",
     "building": "Psychology (37 and 41 University Road)",
     "floor": "First Floor",
-    "restricted": "",
+    "restricted": true,
     "restriction": "",
     "disabled_access": "",
     "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF853",

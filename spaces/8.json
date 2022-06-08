@@ -19,7 +19,11 @@
         "signal",
         "toilets",
         "refreshments",
-        "break"
+        "break",
+        "bike_racks",
+        "gender_neutral_toilets",
+        "wheelchair_accessible",
+        "accessible_toilets"
     ],
     "title": "Café Seven",
     "description": "Located in the Worsley building, Café Seven is one of our most popular and vibrant cafés. Recently refurbished the large seating area is a great place to meet with friends.",

@@ -1,4 +1,10 @@
 const spacefinder = {
+    debug: false,
+    breakpoints: {
+        large: 1000,
+        med: 600,
+        small: 400
+    },
     map: null,
     currentLoc: {'lat': 53.806529, 'lng': -1.555291},
     personLoc: {'lat': 53.806529, 'lng': -1.555291},
@@ -7,24 +13,14 @@ const spacefinder = {
     geoActive: false,
     infoWindow: null,
     startZoom: 16,
-    breakpoints: {
-        large: 1000,
-        med: 600,
-        small: 400
-    },
+    mapBounds: null,
     watchID: false,
     permission: false,
     mapLoaded: false,
     spacesLoaded: false,
-    mapBounds: null,
     spacesurl: '{{ site.url }}/spaces.json',
     imageBaseURL: '{{ site.url }}',
-    spaces: [],
-    filterEvent: new Event('viewfilter', {
-        bubbles: true,
-        cancelable: true,
-        composed: false,
-    })
+    spaces: []
 };
 spacefinder.filters = {
 {%- for filter in site.data.filters -%}
