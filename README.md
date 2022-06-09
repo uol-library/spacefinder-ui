@@ -23,6 +23,6 @@ Changelog
 * Added Google Analytics and feedback form link in preparation for pilot
 * Added opening times and filter to show spaces currently open 
 
-### v0.1.0** (6/5/2022)
+### v0.1.0 (6/5/2022)
 
 * Initial release
