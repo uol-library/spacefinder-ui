@@ -12,7 +12,7 @@ We’ve also made the website text as simple as possible to understand. [Ability
 
 We know some parts of this website are not fully accessible:
 
-* this site uses interactive maps, which a screen reader will not be able to navigate
+* this site uses interactive maps, which assistive technologies may not be able to navigate
 * this site loads and displays data interactively - while every attempt has been made to accomodate screen readers, support for them is still a work in progress
 
 ### Feedback and contact information
@@ -26,7 +26,7 @@ If you can’t view the map on our [‘Find us’ page](https://www.leeds.ac.uk/
 
 ### Reporting accessibility problems with this website
 
-We’re always looking to improve the accessibility of this website. If you find any problems not listed on this page or think we’re not meeting accessibility requirements, [contact the University Library](https://library.leeds.ac.uk/contact].
+We’re always looking to improve the accessibility of this website. If you find any problems not listed on this page or think we’re not meeting accessibility requirements, [contact the University Library](https://library.leeds.ac.uk/contact).
 
 ### Enforcement procedure
 
@@ -36,7 +36,7 @@ The Equality and Human Rights Commission (EHRC) is responsible for enforcing the
 
 This website is partially compliant with the Web Content Accessibility Guidelines version 2.1 AA standard, due to the non-compliances listed below.
 
-This site includes interactive maps, and while maps are exempt from the scope of the regulations, parts of the site contain information about locations on and off campus in text and image formats - these should be fully compliant with Web Content Accessibility Guidelines.
+This site includes interactive maps, and while maps are exempt from the scope of the regulations, parts of the site contain information about locations on and off campus in text and image formats - these should be fully compliant with Web Content Accessibility Guidelines. This site also loads and displays data interactively - while every attempt has been made to accomodate screen readers, support for them is still a work in progress.
 
 This statement was prepared on 25th March 2022. It was last updated on 25th April 2022.
 
