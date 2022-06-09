@@ -157,10 +157,23 @@ function activateSpaces() {
             }
         }
     });
+    /* activate close buttons on expanded spaces */
     document.querySelectorAll('.list-space .closebutton').forEach( el => {
         el.addEventListener('click', event => {
+            event.stopPropagation();
             deselectSpaces(false);
             window.location.hash = '';
+        });
+    });
+
+    /* activate space summary click to open space */
+    document.querySelectorAll('.list-space .space-summary').forEach( el => {
+        el.addEventListener('click', event => {
+            /* prevent action is text is selected */
+            const isTextSelected = window.getSelection().toString();
+            if ( ! isTextSelected ) {
+                el.querySelector('.space-title').click();
+            }
         });
     });
     /* add listener to buttons in filter and search status bar */
@@ -371,7 +384,7 @@ function renderList() {
         spaceContainer.setAttribute('data-id', space.id );
         spaceContainer.setAttribute('data-sortalpha', space.title.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() );
         spaceContainer.setAttribute('class', space.classes );
-        let spaceHTML = '<h2><a href="' + space.link + '" class="space-title load-info" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">' + space.title + '</a><button class="closebutton icon-close"><span class="visuallyhidden">Close</span></button></h2>';
+        let spaceHTML = '<div class="space-summary"><h2><a href="' + space.link + '" class="space-title load-info" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">' + space.title + '</a><button class="closebutton icon-close"><span class="visuallyhidden">Close</span></button></h2>';
         spaceHTML += '<p class="info"><span class="space-type space-type-' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + '">' + space.space_type + '</span>';
         spaceHTML += '<span class="distance">(1,353 metres)</span>';
         let loc = '';
@@ -389,7 +402,7 @@ function renderList() {
         if ( space.image != '' ) {
             spaceHTML += '<div data-imgsrc="' + space.image + '" class="space-image lazy" role="img" aria-label="' + space.imagealt + '"></div>';
         }
-        spaceHTML += '<div><p class="description">' + space.description + '</p></div>';
+        spaceHTML += '<p class="description">' + space.description + '</p></div></div>';
         spaceHTML += '<div class="additionalInfo" aria-live="polite" id="additionalInfo' + space.id + '"></div>';
         spaceHTML += '</div>';
         spaceContainer.innerHTML = spaceHTML;
@@ -466,7 +479,7 @@ function renderAdditionalInfo( spaceid ) {
         });
         spaceHTML += '</ul></section>';
         if ( space.phone_number !== "" || space.twitter_screen_name !== "" || space.facebook_url !== "" ) {
-            spaceHTML += '<section class="section-facts"><h3>Contact</h3><ul class="bulleticons">';
+            spaceHTML += '<section class="section-contact"><h3>Contact</h3><ul class="bulleticons">';
             if ( space.phone_number !== "" ) {
                 let phoneattr = space.phone_number.replace(/[^0-9]+/g, '').replace(/^0/, '+44');
                 spaceHTML += '<li class="icon-phone"><a href="tel:'+phoneattr+'">'+space.phone_number+'</a></li>';
@@ -477,6 +490,7 @@ function renderAdditionalInfo( spaceid ) {
             if ( space.facebook_url !== "" ) {
                 spaceHTML += '<li class="icon-facebook-squared"><a href="'+space.facebook_url+'">'+space.facebook_url+'</a></li>';
             }
+            spaceHTML += '</ul></section>'
         }
 
         if ( space.facilities.length ) {

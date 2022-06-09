@@ -54,7 +54,18 @@
                 cursor: default;
             }
         }
+        .space-summary {
+            cursor: pointer;
+        }
+        &.active .space-summary {
+            cursor: default;
+        }
         .space-details {
+            &:after {
+                content: "";
+                display: block;
+                clear: both;
+            }
             .space-image {
                 width: 50%;
                 height: 150px;
@@ -176,9 +187,6 @@
                     border-bottom: 1px solid $spacesubheadborder;
                 }
             }
-        }
-        .additionalInfo {
-            clear: both;
         }
     }
 }
