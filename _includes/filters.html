@@ -26,7 +26,7 @@
                     {%- assign hiddenAttr = '' -%}
                 {%- endif -%}
                 {%- if filter.options.size == 1 -%}
-                <fieldset class="filter-options {{ filter.key }}-filter-options">
+                <fieldset class="filter-options {{ filter.key }}-filter-options"><legend class="visuallyhidden">{{ filter.label }}</legend>
                     <ul id="filters-{{ filter.key }}">
                     {%- for option in filter.options -%}
                         {%- assign icon = "icon-tick" -%}

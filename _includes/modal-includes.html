@@ -37,19 +37,6 @@
     </article>
 </div>
 
-<div id="terms-page" class="dialog-container" aria-labelledby="terms-page-title" aria-describedby="terms-page-description" aria-hidden="true">
-    <div class="dialog-overlay" data-a11y-dialog-hide></div>
-    <article role="document" class="dialog-content">
-        <header>
-            <button type="button" class="button dialog-close" data-a11y-dialog-hide aria-label="Close dialog">&times;</button>
-            <h2 id="terms-page-title">Terms &amp; Conditions</h2>
-            <p class="visuallyhidden" id="terms-page-description">Terms and Conditions statement for Spacefinder</p>
-        </header>
-        {% capture terms_page %}{% include pages/terms.md %}{% endcapture %}
-        {{ terms_page | markdownify }}
-    </article>
-</div>
-
 <div id="sfalertdialog" class="dialog-container" role="alertdialog" aria-labelledby="sfalertdialog-title" aria-describedby="sfalertdialog-description" aria-hidden="true">
     <div class="dialog-overlay"></div>
     <article role="document" class="dialog-content alert-dialog">
