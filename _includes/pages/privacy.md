@@ -122,4 +122,4 @@ The University’s main telephone number is +44 (0) 113 2431751.
 
 The UK’s regulator for the DPA and GDPR is the Information Commissioner’s Office (ICO). The University is registered as a Data Controller with the ICO
 
-Should you be dissatisfied with our handling of your concerns you have the right to complain to a supervisory authority. In the case of the UK this is the Information Commissioner’s Office and details can be found at <a href="https://ico.org.uk/">https://ico.org.uk</a>.
+Should you be dissatisfied with our handling of your concerns you have the right to complain to a supervisory authority. In the case of the UK this is the Information Commissioner’s Office and details can be found at <a href="https://ico.org.uk/make-a-complaint/">https://ico.org.uk/make-a-complaint/</a>.
