@@ -10,4 +10,19 @@ For more information about the project, [please visit the Spacefinder UI wiki](h
 Changelog
 ---------
 
-* **v0.1.0** - Initial release (6/5/2022)
+### v0.1.2 (9/6/2022)
+
+* Accessibility fixes
+* Bugfix (race condition)
+* Changed Terms & Conditions to link to Corporate site, and added FOI link
+* Added About page
+
+### v0.1.1 (18/5/2022)
+
+* Merged pilot branch into main
+* Added Google Analytics and feedback form link in preparation for pilot
+* Added opening times and filter to show spaces currently open 
+
+### v0.1.0** (6/5/2022)
+
+* Initial release
