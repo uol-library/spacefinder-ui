@@ -35,7 +35,7 @@ function openAlertDialog( title, content ) {
     let dialog = new A11yDialog( document.getElementById( 'sfalertdialog' ) );
     dialog.show();
     dialog.on('hide', (element, event) => {
-        document.getElementById('sfalertdialog-title').textContent = '';
-        document.getElementById('sfalertdialog-description').textContent = '';
+        document.getElementById('sfalertdialog-title').textContent = 'Dialog title';
+        document.getElementById('sfalertdialog-description').textContent = 'Dialog description';
     });
 }
