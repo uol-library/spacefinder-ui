@@ -13,7 +13,8 @@
         "accessible_toilets",
         "wheelchair_accessible",
         "bike_racks",
-        "gender_neutral_toilets"
+        "gender_neutral_toilets",
+        "prayer_room"
     ],
     "atmosphere": [
         "disciplined",
