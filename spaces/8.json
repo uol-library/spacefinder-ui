@@ -82,5 +82,6 @@
     },
     "image": "/assets/photos/Cafe-Seven.jpg",
     "imagealt": "Café Seven",
-    "slug": "cafe-seven"
+    "slug": "cafe-seven",
+    "published": true
 }

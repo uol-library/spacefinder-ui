@@ -87,5 +87,6 @@
     "restricted": true,
     "id": 82,
     "image": "/assets/photos/Laidlaw-library5.jpg",
-    "description": "Casual seating area."
+    "description": "Casual seating area.",
+    "published": true
 }

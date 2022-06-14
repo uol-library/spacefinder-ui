@@ -85,5 +85,6 @@
     "restricted": true,
     "id": 78,
     "image": "/assets/photos/Laidlaw-library1.jpg",
-    "description": "Silent study space inside the Laidlaw library."
+    "description": "Silent study space inside the Laidlaw library.",
+    "published": true
 }

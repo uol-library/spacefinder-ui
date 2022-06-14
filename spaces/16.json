@@ -80,5 +80,6 @@
     },
     "image": "/assets/photos/Baines-Wing.jpg",
     "imagealt": "Baines Wing - LG.17",
-    "slug": "baines-wing-lg17"
+    "slug": "baines-wing-lg17",
+    "published": false
 }

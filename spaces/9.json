@@ -87,5 +87,6 @@
     },
     "image": "/assets/photos/Loma-Cafe.jpg",
     "imagealt": "Loma Café",
-    "slug": "loma-cafe"
+    "slug": "loma-cafe",
+    "published": true
 }

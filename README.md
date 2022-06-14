@@ -10,6 +10,12 @@ For more information about the project, [please visit the Spacefinder UI wiki](h
 Changelog
 ---------
 
+### v0.1.3 (14/6/2022)
+
+* Added publishing switch to spaces to allow them to be turned on and off
+* Removed Seminar Rooms space type from filters
+* Added prayer room facilities to libraries
+
 ### v0.1.2 (9/6/2022)
 
 * Accessibility fixes

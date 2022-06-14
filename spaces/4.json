@@ -87,5 +87,6 @@
     },
     "image": "/assets/photos/Esther-Simpson-Cafe.jpg",
     "imagealt": "Esther Simpson Café",
-    "slug": "esther-simpson-cafe"
+    "slug": "esther-simpson-cafe",
+    "published": true
 }

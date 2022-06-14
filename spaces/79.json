@@ -85,5 +85,6 @@
     "restricted": true,
     "id": 79,
     "image": "/assets/photos/Laidlaw-library2.jpg",
-    "description": "Silent study space. Group booths also available."
+    "description": "Silent study space. Group booths also available.",
+    "published": true
 }

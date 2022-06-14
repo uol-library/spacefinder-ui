@@ -84,5 +84,6 @@
     "restricted": true,
     "id": 75,
     "image": "",
-    "description": "Quiet study space within the library. Books available (related to health sciences)."
+    "description": "Quiet study space within the library. Books available (related to health sciences).",
+    "published": true
 }

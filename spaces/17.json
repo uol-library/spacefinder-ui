@@ -79,5 +79,6 @@
     },
     "image": "/assets/photos/Baines-Wing.jpg",
     "imagealt": "Baines Wing - LG.20",
-    "slug": "baines-wing-lg20"
+    "slug": "baines-wing-lg20",
+    "published": false
 }

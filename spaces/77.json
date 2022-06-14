@@ -84,5 +84,6 @@
     "restricted": true,
     "id": 77,
     "image": "",
-    "description": "Group study space for groups inside the library."
+    "description": "Group study space for groups inside the library.",
+    "published": true
 }

@@ -86,5 +86,6 @@
     },
     "image": "/assets/photos/Loma-Express-Dentistry.jpg",
     "imagealt": "Loma Express Dentistry",
-    "slug": "loma-express-dentistry"
+    "slug": "loma-express-dentistry",
+    "published": true
 }

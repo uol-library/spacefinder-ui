@@ -22,6 +22,11 @@ collections:
         name: 'id'
         widget: 'number'
         required: true
+      - label: 'Published'
+        name: 'published'
+        widget: 'boolean'
+        default: false
+        required: true
       - label: 'Space name'
         name: 'title'
         widget: 'string'

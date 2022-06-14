@@ -84,5 +84,6 @@
     },
     "image": "",
     "imagealt": "Parkinson Building - 4.20",
-    "slug": "parkinson-building-420"
+    "slug": "parkinson-building-420",
+    "published": false
 }

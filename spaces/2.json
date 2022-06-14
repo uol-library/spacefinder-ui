@@ -85,5 +85,6 @@
     },
     "image": "/assets/photos/Fuse-Cafe.jpg",
     "imagealt": "Fuse Cafe in Chemical and Process Engineering",
-    "slug": "fuse-cafe-in-chemical-and-process-engineering"
+    "slug": "fuse-cafe-in-chemical-and-process-engineering",
+    "published": true
 }

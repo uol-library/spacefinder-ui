@@ -87,5 +87,6 @@
     "restricted": true,
     "id": 81,
     "image": "/assets/photos/Laidlaw-library4.jpg",
-    "description": "Group study booths for groups of up to 5 with monitor display."
+    "description": "Group study booths for groups of up to 5 with monitor display.",
+    "published": true
 }

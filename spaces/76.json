@@ -86,5 +86,6 @@
     "restricted": true,
     "id": 76,
     "image": "",
-    "description": "Group study rooms for group work (booking required)"
+    "description": "Group study rooms for group work (booking required)",
+    "published": true
 }

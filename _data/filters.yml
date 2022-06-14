@@ -20,8 +20,8 @@
       label: "Library"
     - key: "outdoorseatingarea"
       label: "Outdoor Seating Area"
-    - key: "seminarroom"
-      label: "Seminar room"
+#    - key: "seminarroom"
+#      label: "Seminar room"
 - key: "work"
   label: "I want to work"
   exclusive: true
