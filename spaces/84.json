@@ -85,5 +85,6 @@
     },
     "image": "/assets/photos/Affine.jpg",
     "imagealt": "Affine Café",
-    "slug": "affine-cafe"
+    "slug": "affine-cafe",
+    "published": true
 }

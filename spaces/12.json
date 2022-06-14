@@ -81,5 +81,6 @@
     "description": "Gourmet toastie van serving a range of toasties, croissants, sweet treats, cold drinks and freshly brewed coffees. Outdoor seating situated in Chancellor's Court, next to the Roger Stevens Building",
     "image": "/assets/photos/toasted.jpg",
     "imagealt": "Toasted in Chancellor's Court (Outdoor space)",
-    "slug": "toasted-in-chancellors-court-outdoor-space"
+    "slug": "toasted-in-chancellors-court-outdoor-space",
+    "published": true
 }

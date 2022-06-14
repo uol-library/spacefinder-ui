@@ -87,5 +87,6 @@
     },
     "image": "/assets/photos/Caffe-Nero-Business-School.jpg",
     "imagealt": "Caffè Nero at Business School",
-    "slug": "caffe-nero-at-business-school"
+    "slug": "caffe-nero-at-business-school",
+    "published": true
 }

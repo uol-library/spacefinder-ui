@@ -79,5 +79,6 @@
     },
     "image": "/assets/photos/Baines-Wing.jpg",
     "imagealt": "Baines Wing - G.28",
-    "slug": "baines-wing-g28"
+    "slug": "baines-wing-g28",
+    "published": false
 }

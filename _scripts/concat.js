@@ -10,15 +10,17 @@ spacefiles.forEach( filename => {
     if ( filename !== '.' && filename !== '..' ) {
         var data = fs.readFileSync( path.resolve( __dirname, '../spaces/', filename ) );
         var jsondata = JSON.parse( data );
-        var geodata = JSON.parse( jsondata.location );
-        if ( geodata && geodata.coordinates && geodata.coordinates.length == 2 ) {
-            jsondata.lat = geodata.coordinates[1];
-            jsondata.lng = geodata.coordinates[0];
-        } else {
-            jsondata.lat = '';
-            jsondata.lng = '';
+        if ( jsondata.published ) {
+            var geodata = JSON.parse( jsondata.location );
+            if ( geodata && geodata.coordinates && geodata.coordinates.length == 2 ) {
+                jsondata.lat = geodata.coordinates[1];
+                jsondata.lng = geodata.coordinates[0];
+            } else {
+                jsondata.lat = '';
+                jsondata.lng = '';
+            }
+            allSpaces.push( jsondata );
         }
-        allSpaces.push( jsondata );
     }
 });
 fs.writeFileSync( path.resolve( __dirname, '../spaces.json' ), JSON.stringify( allSpaces ) );

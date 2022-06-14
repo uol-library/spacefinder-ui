@@ -82,5 +82,6 @@
     },
     "image": "/assets/photos/Charles-Thackrah.jpg",
     "imagealt": "Charles Thackrah - Atrium (Ground Floor)",
-    "slug": "charles-thackrah-atrium-ground-floor"
+    "slug": "charles-thackrah-atrium-ground-floor",
+    "published": true
 }

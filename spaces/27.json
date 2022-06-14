@@ -84,5 +84,6 @@
     },
     "image": "",
     "imagealt": "Parkinson Building - 2.25",
-    "slug": "parkinson-building-225"
+    "slug": "parkinson-building-225",
+    "published": false
 }

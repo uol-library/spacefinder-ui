@@ -15,7 +15,8 @@
         "accessible_toilets",
         "wheelchair_accessible",
         "bike_racks",
-        "gender_neutral_toilets"
+        "gender_neutral_toilets",
+        "prayer_room"
     ],
     "atmosphere": [
         "disciplined",
@@ -85,5 +86,6 @@
     "restricted": true,
     "id": 76,
     "image": "",
-    "description": "Group study rooms for group work (booking required)"
+    "description": "Group study rooms for group work (booking required)",
+    "published": true
 }

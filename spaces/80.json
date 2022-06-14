@@ -15,7 +15,8 @@
         "accessible_toilets",
         "wheelchair_accessible",
         "bike_racks",
-        "gender_neutral_toilets"
+        "gender_neutral_toilets",
+        "prayer_room"
     ],
     "atmosphere": [
         "disciplined",
@@ -84,5 +85,6 @@
     "restricted": true,
     "id": 80,
     "image": "/assets/photos/Laidlaw-library3.jpg",
-    "description": "Study space inside the library, closed doors, very silent."
+    "description": "Study space inside the library, closed doors, very silent.",
+    "published": true
 }

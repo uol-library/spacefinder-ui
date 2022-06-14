@@ -86,5 +86,6 @@
     },
     "image": "/assets/photos/Caffe-Nero-Laidlaw.jpg",
     "imagealt": "Caffè Nero at Laidlaw Library",
-    "slug": "caffe-nero-at-laidlaw-library"
+    "slug": "caffe-nero-at-laidlaw-library",
+    "published": true
 }

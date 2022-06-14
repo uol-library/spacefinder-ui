@@ -78,5 +78,6 @@
     },
     "image": "/assets/photos/Baines-Wing.jpg",
     "imagealt": "Baines Wing - G.37",
-    "slug": "baines-wing-g37"
+    "slug": "baines-wing-g37",
+    "published": false
 }

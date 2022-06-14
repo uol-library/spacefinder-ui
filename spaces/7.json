@@ -84,5 +84,6 @@
     "description": "Located right at the heart of University campus, the contemporary Refectory venue offers a wide range of hot and cold food each day.",
     "image": "/assets/photos/Refectory4.jpg",
     "imagealt": "Refectory ",
-    "slug": "refectory"
+    "slug": "refectory",
+    "published": true
 }
