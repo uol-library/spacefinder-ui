@@ -6,6 +6,7 @@ const spacefinder = {
         small: 400
     },
     map: null,
+    osm: null,
     currentLoc: {'lat': 53.806529, 'lng': -1.555291},
     personLoc: {'lat': 53.806529, 'lng': -1.555291},
     personMarker: null,
