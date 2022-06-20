@@ -1,21 +1,29 @@
 /**
  * Leaflet.js functions for spacefinder
  */
+document.addEventListener('DOMContentLoaded', () => {
+    initMap();
+});
 
 /**
  * Initialise map and set listeners to set up markers when loaded
  */
-document.addEventListener('DOMContentLoaded', () => {
+function initMap() {
     splog( 'initMap', 'map-leaflet.js' );
     document.addEventListener( 'sfmaploaded', checkGeo );
     document.addEventListener( 'filtersapplied', filterMarkers );
     document.addEventListener( 'spacesloaded', maybeSetupMap );
     document.addEventListener( 'sfmaploaded', maybeSetupMap );
+    document.addEventListener( 'viewchange', () => {
+        console.log('veiw changed');
+        spacefinder.map.invalidateSize({animate:false});
+    });
     spacefinder.map = L.map('map').setView([spacefinder.currentLoc.lat, spacefinder.currentLoc.lng], spacefinder.startZoom );
     spacefinder.osm = L.tileLayer( 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© <a target="attribution" href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo( spacefinder.map );
+    spacefinder.mapLoaded = true;
     document.dispatchEvent( new Event( 'sfmaploaded' ) );
     /**
      * Returns to list view from map "more info" button
@@ -47,9 +55,10 @@ function maybeSetupMap() {
         for ( let i = 0; i < spacefinder.spaces.length; i++ ) {
             if ( spacefinder.spaces[i].lat && spacefinder.spaces[i].lng ) {
                 var spacePosition = L.latLng( spacefinder.spaces[i].lat, spacefinder.spaces[i].lng );
-                pointsArray.push( spacePosition );
+                pointsArray.push( [ spacefinder.spaces[i].lat, spacefinder.spaces[i].lng ] );
                 spacefinder.spaces[i].marker = L.marker( spacePosition, {
-                    alt: spacefinder.spaces[i].title
+                    alt: spacefinder.spaces[i].title,
+                    icon: getSVGIcon( 'space-marker' )
                 }).addTo( spacefinder.map );
                 spacefinder.spaces[i].popup = L.popup().setContent( getSpaceInfoWindowContent( spacefinder.spaces[i] ) );
                 spacefinder.spaces[i].popup.spaceID = spacefinder.spaces[i].id;
@@ -62,8 +71,8 @@ function maybeSetupMap() {
         spacefinder.map.on('popupclose', function(e){
             deselectSpaces(false);
         });
-        spacefinder.mapBounds = L.latLngBounds( pointsArray );
-        spacefinder.map.fitBounds( spacefinder.mapBounds );
+        spacefinder.map.fitBounds( pointsArray );
+        spacefinder.mapBounds = spacefinder.map.getBounds();
         document.dispatchEvent( new Event( 'sfmapready' ) );
     }
 }
@@ -74,8 +83,21 @@ function maybeSetupMap() {
  * @returns {String} HTML content for space infoWindow
  */
 function getSpaceInfoWindowContent( space ) {
-    splog( 'getSpaceInfoWindowContent', 'map.js' );
     return '<div class="spaceInfoWindow"><h3>'+space.title+'</h3><p>'+space.description+'</p><button class="show-list">More info&hellip;</button></div>';
+}
+
+/**
+ * Returns an object to be used in the map to make a leaflet icon
+ * @param {String} className CSS class to be used on the icon
+ * @return {Object}
+ */
+function getSVGIcon( c ) {
+	return L.divIcon({
+  		html: `<svg width="32" height="32" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="10" stroke-width="6"></circle></svg>`,
+		className: c,
+  		iconSize: [32, 32],
+  		iconAnchor: [16, 16]
+	});
 }
 
 
@@ -91,10 +113,11 @@ function recentreMap() {
  */
 function zoomMapToSpace( space ) {
     splog( 'zoomMapToSpace', 'map.js' );
-    let newCenter = L.LatLng( space.lat, space.lng );
-    spacefinder.map.panTo( newCenter );
+    let newCenter = L.latLng( space.lat, space.lng );
     spacefinder.map.setZoom(18);
     space.popup.setLatLng( newCenter ).openOn( spacefinder.map );
+    spacefinder.map.panTo( newCenter );
+
 }
 
 /**

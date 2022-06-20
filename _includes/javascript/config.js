@@ -1,5 +1,5 @@
 const spacefinder = {
-    debug: false,
+    debug: true,
     breakpoints: {
         large: 1000,
         med: 600,

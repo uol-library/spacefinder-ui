@@ -1,4 +1,5 @@
 #map {
+    position:relative;
     .geo-button {
         margin-right: 10px;
         width: 40px;
@@ -26,6 +27,12 @@
     &.active {
         button.show-list {
             display:block;
+        }
+    }
+    .space-marker {
+        circle {
+            stroke: $space-icon-stroke;
+            fill: $space-icon-fill;
         }
     }
 }

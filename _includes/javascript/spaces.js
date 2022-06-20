@@ -245,9 +245,6 @@ function selectSpace( spaceid, source ) {
  */
 function deselectSpaces( scrollReset ) {
     splog( 'deselectSpaces', 'spaces.js' );
-    if ( spacefinder.infoWindow ) {
-        spacefinder.infoWindow.close();
-    }
     document.querySelectorAll('.additionalInfo').forEach( el => {
         el.textContent = '';
     });
@@ -515,7 +512,6 @@ function renderAdditionalInfo( spaceid ) {
  * @return {String} classList Space separated list of classnames
  */
 function getClassList( space ) {
-    splog( 'getClassList', 'spaces.js' );
     var classList = 'list-space ';
     if ( space.space_type ) {
         classList += 'type_' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + ' ';
