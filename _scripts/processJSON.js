@@ -20,18 +20,24 @@ spacefiles.forEach( filename => {
         let spaceData = fs.readFileSync( path.resolve( __dirname, '../spaces/', filename ) );
         const spaceJSON = JSON.parse( spaceData );
         let geoJSON = JSON.parse( spaceJSON.location );
-        /* add published switch to spaces */
+        /* add published switch to spaces
         if ( ['Baines Wing - G.16','Baines Wing - G.28','Baines Wing - G.37','Baines Wing - LG.17','Baines Wing - LG.20','Michael Sadler Building - 1.01','Michael Sadler Building - 1.19','Michael Sadler Building - 1.37','Michael Sadler Building - 2.01','Michael Sadler Building - 3.40','Michael Sadler Building - B.37','Michael Sadler Building - B.49','Michael Sadler Building - LG.17','Parkinson Building - 2.25','Parkinson Building - 4.20','Parkinson Building - 4.30','Mechanical Engineering - 5.34d','Worsley Building - 7.027r','Worsley Building - 7.027s'].indexOf( spaceJSON.title ) != -1 ) {
             spaceJSON.published = false;
         } else {
             spaceJSON.published = true;
-        }
-        fs.writeFile( path.resolve( __dirname, '../spaces/'+spaceJSON.id+'.json' ), JSON.stringify( spaceJSON, null, '    ' ), err => {
-            if (err) {
-                console.error( err );
-                return;
+        }*/
+        /* removes food and drink option from library spaces */
+        if ( spaceJSON.space_type == 'Library' ) {
+            if ( spaceJSON.facilities.indexOf('food_drink') != -1 ) {
+                spaceJSON.facilities.splice( spaceJSON.facilities.indexOf('food_drink'), 1 );
+                fs.writeFile( path.resolve( __dirname, '../spaces/'+spaceJSON.id+'.json' ), JSON.stringify( spaceJSON, null, '    ' ), err => {
+                    if (err) {
+                        console.error( err );
+                        return;
+                    }
+                });
             }
-        });
+        }
         /*if ( spaceJSON.access == 'University Staff and Students' ) {
             spaceJSON.restricted = true;
         }
