@@ -6,6 +6,7 @@ backend:
 media_folder: 'assets/photos'
 public_folder: '/assets/photos'
 collections:
+<<<<<<< HEAD
   - name: 'config'
     label: 'Configuration'
     files:
@@ -36,6 +37,8 @@ collections:
                   - { label: 'Key', name: 'key', widget: 'string' }
                   - { label: 'Label', name: 'label', widget: 'string' }
                   - { label: 'Icon', name: 'icon', widget: 'string' }
+=======
+>>>>>>> 251e357 (Amended filter config)
   - name: 'spaces'
     label: 'Spaces'
     label_singular: 'Space'
@@ -613,3 +616,38 @@ collections:
                 pattern: ['[0-9]{1,2}:[0-9]{2}', 'Specify times in 24hr clock mode with hours and minutes separated by a colon']
                 default: '17:00'
                 required: false
+  - name: 'config'
+    label: 'Configuration'
+    files:
+      - label: 'Filters'
+        name: 'filterconfig'
+        file: '_data/filters-test.yml'
+        fields:
+          - label: 'Filter groups'
+            name: 'filters'
+            widget: list
+            allow_add: false
+            label_singular: 'Filter group'
+            summary: 'label'
+            fields:
+              - label: 'Group key'
+                name: 'key'
+                widget: 'string'
+              - label: 'Group name'
+                name: 'label'
+                widget: 'string'
+              - label: 'Options are exclusive?'
+                name: 'exclusive'
+                widget: 'boolean'
+              - label: 'Open when page loads?'
+                name: 'open'
+                widget: 'boolean'
+              - label: 'Group options'
+                name: 'options'
+                widget: 'list'
+                label_singular: 'filter option'
+                summary: 'label'
+                fields:
+                  - { label: 'Key', name: 'key', widget: 'string' }
+                  - { label: 'Label', name: 'label', widget: 'string' }
+                  - { label: 'Icon', name: 'icon', widget: 'string' }
