@@ -16,8 +16,11 @@ collections:
           - label: 'Filter groups'
             name: 'filters'
             widget: list
+            allow_add: false
+            label_singular: 'Filter group'
+            summary: 'label'
             fields:
-              - key: 'Group key'
+              - label: 'Group key'
                 name: 'key'
                 widget: 'string'
               - label: 'Group name'
@@ -32,6 +35,8 @@ collections:
               - label: 'Group options'
                 name: 'options'
                 widget: 'list'
+                label_singular: 'filter option'
+                summary: 'label'
                 fields:
                   - { label: 'Key', name: 'key', widget: 'string' }
                   - { label: 'Label', name: 'label', widget: 'string' }
