@@ -16,13 +16,14 @@ function initMap() {
     document.addEventListener( 'sfmaploaded', maybeSetupMap );
     document.addEventListener( 'viewchange', () => {
         console.log('veiw changed');
-        spacefinder.map.invalidateSize({animate:false});
+        spacefinder.map.invalidateSize();
     });
-    spacefinder.map = L.map('map').setView([spacefinder.currentLoc.lat, spacefinder.currentLoc.lng], spacefinder.startZoom );
+    spacefinder.map = L.map('map' ).setView([spacefinder.currentLoc.lat, spacefinder.currentLoc.lng], spacefinder.startZoom );
     spacefinder.osm = L.tileLayer( 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© <a target="attribution" href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo( spacefinder.map );
+    spacefinder.map.addControl(new L.Control.Fullscreen({position: 'topright'}));
     spacefinder.mapLoaded = true;
     document.dispatchEvent( new Event( 'sfmaploaded' ) );
     /**
@@ -51,6 +52,15 @@ function maybeSetupMap() {
     splog( 'maybeSetupMap', 'map-leaflet.js' );
     if ( spacefinder.mapLoaded && spacefinder.spacesLoaded ) {
         let pointsArray = [];
+        spacefinder.markergroup = L.markerClusterGroup({
+			disableClusteringAtZoom: 17,
+			zoomToBoundsOnClick: true,
+			spiderfyOnMaxZoom: false,
+			polygonOptions: {
+				color: '#c70000',
+				fillColor: '#c70000'
+			}
+		});
         /* add each spoace to the map using a marker */
         for ( let i = 0; i < spacefinder.spaces.length; i++ ) {
             if ( spacefinder.spaces[i].lat && spacefinder.spaces[i].lng ) {
@@ -59,12 +69,14 @@ function maybeSetupMap() {
                 spacefinder.spaces[i].marker = L.marker( spacePosition, {
                     alt: spacefinder.spaces[i].title,
                     icon: getSVGIcon( 'space-marker' )
-                }).addTo( spacefinder.map );
+                });
+                spacefinder.markergroup.addLayer(spacefinder.spaces[i].marker);
                 spacefinder.spaces[i].popup = L.popup().setContent( getSpaceInfoWindowContent( spacefinder.spaces[i] ) );
                 spacefinder.spaces[i].popup.spaceID = spacefinder.spaces[i].id;
                 spacefinder.spaces[i].marker.bindPopup( spacefinder.spaces[i].popup );
             }
         }
+        spacefinder.map.addLayer(spacefinder.markergroup);
         spacefinder.map.on( 'popupopen', e => {
             selectSpace( e.popup.spaceID, 'map' );
         });
@@ -73,6 +85,26 @@ function maybeSetupMap() {
         });
         spacefinder.map.fitBounds( pointsArray );
         spacefinder.mapBounds = spacefinder.map.getBounds();
+
+        L.Control.geoControl = L.Control.extend({
+            onAdd: function(map) {
+                const locationButton = document.createElement( 'button' );
+                locationButton.innerHTML = 'Use my location';
+                locationButton.classList.add('geo-button');
+                locationButton.classList.add('icon-my-location');
+                locationButton.setAttribute('aria-label', 'Use my location');
+                locationButton.setAttribute('title', 'Use my location');
+                return locationButton;
+            },
+            onRemove: function(map) {
+                // Nothing to do here
+            }
+        });
+        
+        L.control.geoControl = function(opts) {
+            return new L.Control.geoControl(opts);
+        }
+
         document.dispatchEvent( new Event( 'sfmapready' ) );
     }
 }
@@ -83,7 +115,19 @@ function maybeSetupMap() {
  * @returns {String} HTML content for space infoWindow
  */
 function getSpaceInfoWindowContent( space ) {
-    return '<div class="spaceInfoWindow"><h3>'+space.title+'</h3><p>'+space.description+'</p><button class="show-list">More info&hellip;</button></div>';
+	let info = [];
+	info.push( space.space_type );
+	if ( space.floor !== "" ) {
+		info.push( space.floor );
+	}
+	if ( space.building !== "" ) {
+		info.push( space.building );
+	}
+	let content = '<div class="spaceInfoWindow"><h3>'+space.title+'</h3>';
+	content += '<p class="info">' + info.join(', ') + '</p>';
+	content += '<p class="description">' + space.description + '</p>';
+	content += '<button class="show-list">More info&hellip;</button></div>';
+	return content;
 }
 
 /**
