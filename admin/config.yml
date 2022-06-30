@@ -6,39 +6,6 @@ backend:
 media_folder: 'assets/photos'
 public_folder: '/assets/photos'
 collections:
-<<<<<<< HEAD
-  - name: 'config'
-    label: 'Configuration'
-    files:
-      - label: 'Filters'
-        name: 'filterconfig'
-        file: '_data/filters-test.yml'
-        fields:
-          - label: 'Filter groups'
-            name: 'filters'
-            widget: list
-            fields:
-              - key: 'Group key'
-                name: 'key'
-                widget: 'string'
-              - label: 'Group name'
-                name: 'label'
-                widget: 'string'
-              - label: 'Options are exclusive?'
-                name: 'exclusive'
-                widget: 'boolean'
-              - label: 'Open when page loads?'
-                name: 'open'
-                widget: 'boolean'
-              - label: 'Group options'
-                name: 'options'
-                widget: 'list'
-                fields:
-                  - { label: 'Key', name: 'key', widget: 'string' }
-                  - { label: 'Label', name: 'label', widget: 'string' }
-                  - { label: 'Icon', name: 'icon', widget: 'string' }
-=======
->>>>>>> 251e357 (Amended filter config)
   - name: 'spaces'
     label: 'Spaces'
     label_singular: 'Space'
