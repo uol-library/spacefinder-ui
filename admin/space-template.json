@@ -1,0 +1,336 @@
+{
+    "id": 0,                        // IDs should be numbers
+    "published": true,
+    "title": "",
+    "description": "",
+    "space_type": "",               // One of 'Café','General Seating Area','IT Cluster','Library','Outdoor Seating Area','Seminar room'
+    "slug": "",                     // Only use lowercase letters, numbers and hyphens here
+    "address": "",
+    "building": "",
+    "floor": "",
+    "location": "",                 // GeoJSON string like {"type":"Point","coordinates":[-1.555291,53.806529]}
+    "what3words": "",               // This should be in the format ///what.three.words - see https://what3words.com/ for details
+    "access": "",                   // One of 'Anyone (public)','University Staff and Students'
+    "restricted": false,
+    "restriction": "",
+    "disabled_access": true,
+    "url": "",
+    "campusmap_url": "",
+    "campusmap_ref": "",
+                                    // these are the reference numbers from the printed campus map on signs around campus
+                                    // 77 =  Accommodation Office: Marjorie and Arnold Ziff Building
+                                    // 73 =  Alumni and Development: E C Stoner Entrance 3
+                                    // 78 =  Arabic, Islamic and Middle Eastern Studies: Michael Sadler Building
+                                    // 60 =  Art Gallery, The Stanley and Audrey Burton: Parkinson Building
+                                    // 92 =  Astbury Building
+                                    // 58 =  Baines Wing
+                                    // 33 =  Beech Grove House
+                                    // 81 =  Beech Grove Terrace
+                                    // 93 =  Biological Sciences: L C Miall Building
+                                    // 94 =  Biological Sciences Teaching Laboratories, Willow Terrace Road
+                                    // 64 =  Blenheim Terrace
+                                    // 80 =  Botany House (13-15 Beech Grove Terrace)
+                                    // 53 =  Bragg Centre for Materials Research: Sir William Henry Bragg Building
+                                    // 23 =  Bright Beginnings Childcare Centre
+                                    // 59 =  Brotherton Library
+                                    // 10 =  Business Change: 4 Springfield Mount
+                                    // 19 =  Business School: Maurice Keyworth Building
+                                    // 15 =  Business School - Centre for Decision Research: Charles Thackrah
+                                    // 22 =  Business School - Centre for Employment Relations, Innovation and Change: 31 Lyddon Terrace
+                                    // 27 =  Business School - Centre for International Business: 14-20 Cromer Terrace
+                                    // 15 =  Business School - Centre for Enterprise and Entrepreneurship: Charles Thackrah
+                                    // 25 =  Business School - Confucius Business Institute: 22 Clarendon Place
+                                    // 15 =  Business School - Executive Education: Charles Thackrah
+                                    // 27 =  Business School - India and South Asian Business Centre: 10-12 Cromer Terrace
+                                    // 22 =  Business School - Professional Development Hub: 26 Lyddon Terrace
+                                    // 22 =  Business School - Professional Services Sector: 20 Lyddon Terrace
+                                    // 22 =  Business School - Research and Innovation Office, Faculty Graduate School: 21 Lyddon Terrace
+                                    // 27 =  Business School - White Rose East Asia Centre: 14-20 Cromer Terrace
+                                    // 26 =  Careers Centre: 5-7 Cromer Terrace
+                                    // 72 =  Cavendish Road 3-9
+                                    // 76 =  Cavendish Road 6-10
+                                    // 46 =  Cemetery Lodge (Praying Facility)
+                                    // 107 = Central Village
+                                    // 62 =  Chaplaincy: Emmanuel Centre
+                                    // 86 =  Charles Morris Hall, comprising: Dobree House; Storm Jameson Court, East & West; and Whetton House
+                                    // 15 =  Charles Thackrah Building
+                                    // 48 =  Chemical and Process Engineering
+                                    // 55 =  Chemistry
+                                    // 55A = Chemistry West Block
+                                    // 108 = CitySide
+                                    // 49 =  Civil Engineering
+                                    // 20 =  Clarendon Building
+                                    // 25 =  Clarendon Place (19-21, at rear)
+                                    // 70 =  Cleaning Services: 5-9 Hillary Place
+                                    // 34 =  Clothworkers Building Central & Link
+                                    // 56 =  Clothworkers Building North
+                                    // 35 =  Clothworkers Building South
+                                    // 75 =  Clothworkers Centenary Concert Hall
+                                    // 71 =  Coach House (rear 5-9 Hillary Place)
+                                    // 77 =  Communications Team: Marjorie and Arnold Ziff Building
+                                    // 53 =  Computing: Sir William Henry Bragg Building
+                                    // 100 = Conference Auditorium
+                                    // 27 =  Cromer Terrace
+                                    // 27 =  Cromer Terrace Fitness Studio: 22 Cromer Terrace
+                                    // 35 =  Cultural Institute: Clothworkers South
+                                    // 65 =  Digital Learning: 171-177 Woodhouse Lane
+                                    // 95 =  Dentistry and Dental Hospital: Worsley Building
+                                    // 34 =  Design: Clothworkers Building Central
+                                    // 55A = Disability Services: Chemistry West Block
+                                    // 84 =  Earth and Environment: Maths/Earth and Environment Building
+                                    // 78 =  East Asian Studies: Michael Sadler Building
+                                    // 73 =  E C Stoner Building
+                                    // 70 =  Education: 5-9 Hillary Place
+                                    // 64 =  Educational Engagement: 18 Blenheim Terrace
+                                    // 83 =  Edward Boyle Library
+                                    // 51 =  Electronic and Electrical Engineering (at rear)
+                                    // 22 =  Ellerslie Global, comprising: the Hall; 15-19 Lyddon Terrace; and 37-41 Lyddon Terrace
+                                    // 62 =  Emmanuel Centre
+                                    // 47 =  Energy Building
+                                    // 76 =  English: 6-10 Cavendish Road
+                                    // 73 =  Equality Policy Unit: E C Stoner Entrance 2
+                                    // 24 =  Estate Services Helpdesk: Facilities Directorate Building
+                                    // 12 =  Esther Simpson Building
+                                    // 24 =  Facilities Directorate: Facilities Directorate Building
+                                    // 72 =  Faculty of Arts, Humanities and Cultures Office: 3 Cavendish Road
+                                    // 93 =  Faculty of Biological Sciences Reception: L C Miall Building
+                                    // 19 =  Faculty of Business Reception: Maurice Keyworth Building
+                                    // 55 =  Faculty of Engineering and Physical Sciences: Chemistry
+                                    // 88 =  Faculty of Environment Office: Priestley Building
+                                    // 95 =  Faculty of Medicine and Health Office: Worsley Building
+                                    // 33 =  Faculty of Social Sciences: Beech Grove House
+                                    // 5 =   Fairbairn House - MacMillan Wing
+                                    // 6 =   Fairbairn House - Main Building
+                                    // 3 =   Fairbairn House - Suite A
+                                    // 1 =   Fairbairn Site Blocks A, C, D, E, Hallas Wing
+                                    // 73 =  Finance: E C Stoner Entrance 2
+                                    // 38 =  Fine Art, History of Art and Cultural Studies
+                                    // 104 = Finsbury Road Building
+                                    // 102 = Food Science and Nutrition: Food Science Building
+                                    // 78 =  French: Michael Sadler Building
+                                    // 90 =  Garstang Building
+                                    // 90 =  Geography: Garstang Building
+                                    // 78 =  German, Russian and Slavonic Studies: Michael Sadler Building
+                                    // 64 =  Go Higher West Yorkshire: 17 Blenheim Terrace
+                                    // 57 =  Great Hall
+                                    // 17 =  Gryphon Sports Centre
+                                    // 103 = Health and Safety Services: 5-9 Willow Terrace Road
+                                    // 95 =  Health Sciences Library: Worsley Building
+                                    // 58 =  Healthcare: Baines Wing
+                                    // 44 =  Henry Price Residences
+                                    // 70 =  Hillary Place 5-9
+                                    // 78 =  History: Michael Sadler Building
+                                    // 65 =  Hopewell House (173 Woodhouse Lane)
+                                    // 73 =  Human Resources: E C Stoner Entrance 2
+                                    // 9 =   Hyde Terrace 30/32
+                                    // 60 =  Institute for Medieval Studies: Parkinson Building
+                                    // 43 =  Institute for Transport Studies: 34-40 University Road
+                                    // 64 =  Inter-Disciplinary Ethics Applied Centre: 17 Blenheim Terrace
+                                    // 77 =  International Office and International Student Office: Marjorie and Arnold Ziff Building
+                                    // 77 =  International Pathways Centre: Marjorie and Arnold Ziff Building
+                                    // 91 =  Irene Manton Building
+                                    // 78 =  Italian: Michael Sadler Building
+                                    // 2 =   IT Fairbairn Site
+                                    // 73 =  IT Service Desk: E C Stoner Building
+                                    // 74 =  IT Services
+                                    // 105 = Jerusalem Chapel
+                                    // 93 =  L C Miall Building
+                                    // 63 =  Laidlaw Library
+                                    // 78 =  Languages, Cultures and Societies: Michael Sadler Building
+                                    // 60 =  Language Centre: Parkinson Building
+                                    // 78 =  Languages for All: Michael Sadler Building
+                                    // 16 =  Law: Liberty Building
+                                    // 35 =  Leeds Arts and Humanities Research Institute (LAHRI): Clothworkers South
+                                    // 55A = Leeds Assessment Centre: Chemistry West Block
+                                    // 77 =  Leeds Doctoral College: Marjorie and Arnold Ziff Building
+                                    // 97 =  Leeds General Infirmary - Clarendon Wing
+                                    // 81 =  Leeds Institute for Teaching Excellence (LITE): 18 Beech Grove Terrace
+                                    // 95 =  Leeds Institute of Clinical Trials Research (LICTR): Worsley Building
+                                    // 96 =  Leeds Institute of Cardiovascular and Metabolic Medicine (LICAMM) : LIGHT Building)
+                                    // 95 =  Leeds Institute of Data Analytics (LIDA): Worsley Building
+                                    // 95 =  Leeds Institute of Health Sciences (LIHS): Worsley Building
+                                    // 95 =  Leeds Institute of Medical Education (LIME): Worsley Building
+                                    // 109 = Leeds Institute of Rheumatic & Musculoskeletal Medicine (LIRMM): Martin Link
+                                    // 65 =  Leeds International Piano Competition: 169b Woodhouse Lane
+                                    // 82 =  Leeds Social Sciences Institute: Social Sciences Building
+                                    // 110 = Leeds Student Medical Practice: off Blenheim Walk
+                                    // 32 =  Leeds University Union
+                                    // 16 =  Liberty Building
+                                    // 77 =  Lifelong Learning Centre: Marjorie and Arnold Ziff Building
+                                    // 40 =  Lifton Place 4
+                                    // 41 =  Lifton Place 5-7
+                                    // 42 =  Lifton Villas (1-3 Lifton Place)
+                                    // 96 =  LIGHT Building
+                                    // 78 =  Linguistics and Phonetics: Michael Sadler Building
+                                    // 41 =  LOGIK Centre: 5-7 Lifton Place
+                                    // 30 =  Lyddon Hall
+                                    // 22 =  Lyddon Terrace (18-26)
+                                    // 13 =  Marks & Spencer Company Archive: Michael Marks Building
+                                    // 77 =  Marjorie and Arnold Ziff Building
+                                    // 73 =  Marketing Team: E C Stoner Entrance 4
+                                    // 84 =  Mathematics: Maths/Earth and Environment Building
+                                    // 84 =  Maths/Earth and Environment Building
+                                    // 19 =  Maurice Keyworth Building
+                                    // 50 =  Mechanical Engineering
+                                    // 56 =  Media and Communication: Clothworkers Building North
+                                    // 50A = Medical and Biological Engineering
+                                    // 95 =  Medicine: Worsley Building
+                                    // 28 =  MEETinLEEDS: University House
+                                    // 13 =  Michael Marks Building
+                                    // 78 =  Michael Sadler Building
+                                    // 106 = Multi-storey Car Park
+                                    // 75 =  Music and Clothworkers Centenary Concert Hall
+                                    // 100 = Muslim Prayer Hall: Conference Auditorium - Green Room
+                                    // 4 =   National Centre for Atmospheric Science Annex
+                                    // 6 =   National Centre for Atmospheric Science (NCAS): Fairbairn House - Main Building
+                                    // 85 =  Newlyn Building
+                                    // 66 =  NEXUS
+                                    // 103 = Occupational Health Service: 5-9 Willow Terrace Road
+                                    // 58 =  Organisational Development and Professional Learning: Baines Wing
+                                    // 60 =  Parkinson Building
+                                    // 31 =  PCI & stage@leeds
+                                    // 31 =  Performance and Cultural Industries: PCI & stage@leeds
+                                    // 78 =  Philosophy, Religion and the History of Science: Michael Sadler Building
+                                    // 53 =  Physics and Astronomy: Sir William Henry Bragg Building
+                                    // 69 =  Physics Research Deck
+                                    // 82 =  Politics and International Studies: Social Sciences Building
+                                    // 88 =  Priestley Building
+                                    // 88 =  Priestley International Centre for Climate: Priestley Building
+                                    // 89 =  Print and Copy Bureau: Roger Stevens Building
+                                    // 37 =  Psychology
+                                    // 42 =  Purchasing: 1-3 Lifton Place
+                                    // 73 =  Quality Assurance: E C Stoner Entrance 4
+                                    // 29 =  Refectory
+                                    // 66 =  Research and Innovation Service: NEXUS
+                                    // 24 =  Residential Services: Facilities Directorate Building
+                                    // 89 =  Roger Stevens Building
+                                    // 73 =  Secretariat (including Legal Advisor): E C Stoner Entrance 4
+                                    // 65 =  Security Office: 175 Woodhouse Lane
+                                    // 53 =  Sir William Henry Bragg Building
+                                    // 63 =  Skills@Library: Laidlaw Library
+                                    // 82 =  Social Sciences Building
+                                    // 82 =  Sociology and Social Policy: Social Sciences Building
+                                    // 78 =  Spanish, Portuguese and Latin American Studies: Michael Sadler Building
+                                    // 101 = Sport and Physical Activity: The Edge
+                                    // 10 =  Springfield Mount
+                                    // 28 =  Staff Counselling: University House
+                                    // 31 =  stage@leeds: PCI & stage@leeds
+                                    // 60 =  Stanley and Audrey Burton Art Gallery: Parkinson Building
+                                    // 73 =  Strategy and Planning: E C Stoner Entrance 3
+                                    // 25 =  Student Counselling Centre: 19-21 Clarendon Place
+                                    // 77 =  Student Education Service: Marjorie and Arnold Ziff Building
+                                    // 77 =  Student Services Centre: Marjorie and Arnold Ziff Building
+                                    // 21 =  St Wilfreds Chapel
+                                    // 32 =  Stylus: Leeds University Union
+                                    // 101 = The Edge
+                                    // 73 =  Trade Union Offices: E C Stoner Entrance 3
+                                    // 60 =  Translation Studies: Parkinson Building
+                                    // 60 =  Treasures of the Brotherton: Leeds University Library Gallery, Parkinson Building
+                                    // 67 =  UNIPOL: 155-157 Woodhouse Lane
+                                    // 57 =  University Archive: Great Hall
+                                    // 28 =  University House
+                                    // 36 =  University Road 28
+                                    // 77 =  University Secretary: Marjorie and Arnold Ziff Building
+                                    // 77 =  Vice-Chancellor and Executive Officers: Marjorie and Arnold Ziff Building
+                                    // 103 = Wellbeing, Safety and Health: 5-9 Willow Terrace Road
+                                    // 18 =  Western Lecture Theatre
+                                    // 103 = Willow Terrace Road 5-9
+                                    // 67 =  Woodhouse Lane 153-157
+                                    // 65 =  Woodhouse Lane 169-177
+                                    // 61 =  Workshop Theatre
+                                    // 95 =  Worsley Building
+                                    // 25 =  Yorkshire Universities: 22 Clarendon Place
+    "booking_url": "",
+    "phone_number": "",
+    "email_address'": "",
+    "twitter_screen_name": "",
+    "facebook_url": "",
+    "noise": "",                    // One of 'Strictly silent','Whispers','Background chatter','Animated discussion','Music playing'
+    "facilities": [
+        "food_drink",               // Food and drink allowed
+        "daylight",                 // Natural daylight
+        "views",                    // Attractive views out of the window
+        "large_desks",              // Large desks
+        "individual_study_space",   // Individual study space
+        "free_wifi",                // Free Wifi
+        "no_wifi",                  // No WiFi
+        "computers",                // Computers
+        "laptops_allowed",          // Laptops allowed
+        "sockets",                  // Plug sockets
+        "signal",                   // Phone signal
+        "printers_copiers",         // Printers and copiers
+        "whiteboards",              // Whiteboards
+        "projector",                // Projector
+        "prayer_room",              // Prayer room
+        "outdoor_seating",          // Outdoor seating
+        "smoking_area",             // Smoking area
+        "bike_racks",               // Bicycle racks
+        "bookable",                 // Bookable
+        "toilets",                  // Toilets nearby
+        "accessible_toilets",       // Accessible toilets
+        "gender_neutral_toilets",   // Gender-neutral toilets
+        "baby_changing",            // Baby changing facilities
+        "refreshments",             // Close to refreshments
+        "break",                    // Close to a place to take a break
+        "induction_loops",          // Induction loops
+        "wheelchair_accessible",    // Wheelchair accessible
+        "adjustable_furniture"      // Adjustable furniture
+    ],
+    "work": [
+        "in_a_library",             // In a library
+        "private",                  // Alone, in private
+        "close",                    // Where others are working
+        "friends",                  // With friends
+        "group"                     // On a group project
+    ],
+    "atmosphere": [
+        "disciplined",              // Disciplined
+        "relaxed",                  // Relaxed or informal
+        "historic",                 // Historic
+        "modern",                   // Modern
+        "inspiring",                // Inspiring or thought provoking
+        "cosy",                     // Cosy
+        "social",                   // Social
+        "friendly"                  // Friendly or welcoming
+    ],
+    "tags": "",                     // Add tags separated by a comma
+    "image": "",
+    "imagealt": "",
+    "opening_hours": {
+        "monday": {
+            "open": true,
+            "from": "9:30",
+            "to": "17:00"
+        },
+        "tuesday": {
+            "open": true,
+            "from": "9:30",
+            "to": "17:00"
+        },
+        "wednesday": {
+            "open": true,
+            "from": "9:30",
+            "to": "17:00"
+        },
+        "thursday": {
+            "open": true,
+            "from": "9:30",
+            "to": "17:00"
+        },
+        "friday": {
+            "open": true,
+            "from": "9:30",
+            "to": "17:00"
+        },
+        "saturday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        },
+        "sunday": {
+            "open": false,
+            "from": "",
+            "to": ""
+        }
+    }
+}
