@@ -10,7 +10,7 @@ collections:
     label: 'Spaces'
     label_singular: 'Space'
     folder: 'spaces/'
-    create: true
+    create: false
     delete: false
     editor:
       preview: false
