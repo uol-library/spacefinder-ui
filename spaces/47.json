@@ -1,88 +1,88 @@
 {
-    "id": 47,
-    "location": "{\"type\":\"Point\",\"coordinates\":[-1.5602497100466306,53.80726148395461]}",
-    "work": [
-        "private",
-        "close"
-    ],
-    "atmosphere": [
-        "disciplined",
-        "modern",
-        "cosy"
-    ],
-    "facilities": [
-        "daylight",
-        "large_desks",
-        "free_wifi",
-        "computers",
-        "laptops_allowed",
-        "sockets",
-        "signal",
-        "whiteboards",
-        "projector",
-        "toilets",
-        "refreshments",
-        "bike_racks",
-        "gender_neutral_toilets",
-        "wheelchair_accessible"
-    ],
-    "title": "Clarendon Building - G04",
-    "description": "Classroom with 4 computer rows. Comfortable chairs. 50 seat capacity.",
-    "access": "University Staff and Students",
-    "space_type": "IT Cluster",
-    "address": "University of Leeds, LS2 9JT",
-    "building": "Clarendon building",
-    "floor": "Ground",
-    "restricted": true,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF5C1",
-    "phone_number": "",
-    "twitter_screen_name": "",
-    "facebook_url": "",
-    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17385",
-    "campusmap_ref": "20",
-    "noise": "Strictly silent",
-    "tags": [],
-    "opening_hours": {
-        "monday": {
-            "open": true,
-            "from": "9:00",
-            "to": "18:00"
-        },
-        "tuesday": {
-            "open": true,
-            "from": "9:00",
-            "to": "18:00"
-        },
-        "wednesday": {
-            "open": true,
-            "from": "9:00",
-            "to": "18:00"
-        },
-        "thursday": {
-            "open": true,
-            "from": "9:00",
-            "to": "18:00"
-        },
-        "friday": {
-            "open": true,
-            "from": "9:00",
-            "to": "18:00"
-        },
-        "saturday": {
-            "open": false,
-            "from": "",
-            "to": ""
-        },
-        "sunday": {
-            "open": false,
-            "from": "",
-            "to": ""
-        }
+  "facilities": [
+    "daylight",
+    "large_desks",
+    "free_wifi",
+    "computers",
+    "laptops_allowed",
+    "sockets",
+    "signal",
+    "whiteboards",
+    "projector",
+    "toilets",
+    "refreshments",
+    "bike_racks",
+    "gender_neutral_toilets",
+    "wheelchair_accessible"
+  ],
+  "atmosphere": [
+    "disciplined",
+    "modern",
+    "cosy"
+  ],
+  "access": "University Staff and Students",
+  "disabled_access": true,
+  "opening_hours": {
+    "monday": {
+      "open": true,
+      "from": "9:00",
+      "to": "18:00"
     },
-    "image": "",
-    "imagealt": "Clarendon Building - G04",
-    "slug": "clarendon-building-g04",
-    "published": true
+    "tuesday": {
+      "open": true,
+      "from": "9:00",
+      "to": "18:00"
+    },
+    "wednesday": {
+      "open": true,
+      "from": "9:00",
+      "to": "18:00"
+    },
+    "thursday": {
+      "open": true,
+      "from": "9:00",
+      "to": "18:00"
+    },
+    "friday": {
+      "open": true,
+      "from": "9:00",
+      "to": "18:00"
+    },
+    "saturday": {
+      "open": false,
+      "from": "",
+      "to": ""
+    },
+    "sunday": {
+      "open": false,
+      "from": "",
+      "to": ""
+    }
+  },
+  "slug": "clarendon-building-g04",
+  "floor": "Ground",
+  "restriction": "",
+  "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17385",
+  "published": false,
+  "imagealt": "Clarendon Building - G04",
+  "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF5C1",
+  "campusmap_ref": "20",
+  "work": [
+    "private",
+    "close"
+  ],
+  "twitter_screen_name": "",
+  "space_type": "IT Cluster",
+  "building": "Clarendon building",
+  "address": "University of Leeds, LS2 9JT",
+  "location": "{\"type\":\"Point\",\"coordinates\":[-1.5602497100466306,53.80726148395461]}",
+  "facebook_url": "",
+  "title": "Clarendon Building - G04",
+  "tags": [],
+  "noise": "Strictly silent",
+  "phone_number": "",
+  "restricted": true,
+  "id": 47,
+  "image": "",
+  "description": "Classroom with 4 computer rows. Comfortable chairs. 50 seat capacity."
 }
