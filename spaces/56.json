@@ -1,95 +1,95 @@
 {
-    "id": 56,
-    "location": "{\"type\":\"Point\",\"coordinates\":[-1.5548974249272625,53.80446980623904]}",
-    "work": [
-        "private",
-        "close",
-        "friends"
-    ],
-    "atmosphere": [
-        "relaxed",
-        "modern",
-        "inspiring",
-        "cosy",
-        "social",
-        "friendly"
-    ],
-    "facilities": [
-        "daylight",
-        "views",
-        "large_desks",
-        "free_wifi",
-        "computers",
-        "laptops_allowed",
-        "sockets",
-        "signal",
-        "projector",
-        "toilets",
-        "refreshments",
-        "break",
-        "bike_racks",
-        "gender_neutral_toilets",
-        "wheelchair_accessible",
-        "blue_badge_parking",
-        "accessible_toilets"
-    ],
-    "title": "Irene Manton Building - 7.90",
-    "description": "Rows of desks with a full left side of windows that are facing a beautiful side of campus allowing plenty of natural light into the study area. 45 seat capacity.",
-    "access": "University Staff and Students",
-    "space_type": "IT Cluster",
-    "address": "University of Leeds, LS2 9JT",
-    "building": "Irene Manton Building",
-    "floor": "Level 7",
-    "restricted": true,
-    "restriction": "",
-    "disabled_access": true,
-    "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF7D6",
-    "phone_number": "1132431751",
-    "twitter_screen_name": "",
-    "facebook_url": "",
-    "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17462",
-    "campusmap_ref": "91",
-    "noise": "Whispers",
-    "tags": [],
-    "opening_hours": {
-        "monday": {
-            "open": true,
-            "from": "9:00",
-            "to": "18:00"
-        },
-        "tuesday": {
-            "open": true,
-            "from": "9:00",
-            "to": "18:00"
-        },
-        "wednesday": {
-            "open": true,
-            "from": "9:00",
-            "to": "18:00"
-        },
-        "thursday": {
-            "open": true,
-            "from": "9:00",
-            "to": "18:00"
-        },
-        "friday": {
-            "open": true,
-            "from": "9:00",
-            "to": "18:00"
-        },
-        "saturday": {
-            "open": false,
-            "from": "",
-            "to": ""
-        },
-        "sunday": {
-            "open": false,
-            "from": "",
-            "to": ""
-        }
+  "facilities": [
+    "daylight",
+    "views",
+    "large_desks",
+    "free_wifi",
+    "computers",
+    "laptops_allowed",
+    "sockets",
+    "signal",
+    "projector",
+    "toilets",
+    "refreshments",
+    "break",
+    "bike_racks",
+    "gender_neutral_toilets",
+    "wheelchair_accessible",
+    "blue_badge_parking",
+    "accessible_toilets"
+  ],
+  "atmosphere": [
+    "relaxed",
+    "modern",
+    "inspiring",
+    "cosy",
+    "social",
+    "friendly"
+  ],
+  "access": "University Staff and Students",
+  "disabled_access": true,
+  "opening_hours": {
+    "monday": {
+      "open": true,
+      "from": "9:00",
+      "to": "18:00"
     },
-    "image": "",
-    "imagealt": "Irene Manton Building - 7.90",
-    "slug": "irene-manton-building-790",
-    "published": true
+    "tuesday": {
+      "open": true,
+      "from": "9:00",
+      "to": "18:00"
+    },
+    "wednesday": {
+      "open": true,
+      "from": "9:00",
+      "to": "18:00"
+    },
+    "thursday": {
+      "open": true,
+      "from": "9:00",
+      "to": "18:00"
+    },
+    "friday": {
+      "open": true,
+      "from": "9:00",
+      "to": "18:00"
+    },
+    "saturday": {
+      "open": false,
+      "from": "",
+      "to": ""
+    },
+    "sunday": {
+      "open": false,
+      "from": "",
+      "to": ""
+    }
+  },
+  "slug": "irene-manton-building-790",
+  "floor": "Level 7",
+  "restriction": "",
+  "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17462",
+  "published": true,
+  "imagealt": "Irene Manton Building - 7.90",
+  "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202122!location!8F4AB242729B06218C8F007C556BF7D6",
+  "campusmap_ref": "91",
+  "work": [
+    "private",
+    "close",
+    "friends"
+  ],
+  "twitter_screen_name": "",
+  "space_type": "IT Cluster",
+  "building": "Irene Manton Building",
+  "address": "University of Leeds, LS2 9JT",
+  "location": "{\"type\":\"Point\",\"coordinates\":[-1.5548974249272625,53.80446980623904]}",
+  "facebook_url": "",
+  "title": "Irene Manton Building - 7.90",
+  "tags": [],
+  "noise": "Whispers",
+  "phone_number": "1132431751",
+  "restricted": true,
+  "id": 56,
+  "image": "",
+  "description": "Rows of desks with a full left side of windows that are facing a beautiful side of campus allowing plenty of natural light into the study area. 41 seat capacity."
 }
