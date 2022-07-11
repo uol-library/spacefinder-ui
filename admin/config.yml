@@ -24,6 +24,9 @@ collections:
       - label: 'Inactive spaces'
         field: 'published'
         pattern: false
+    view_groups:
+      - label: 'Type'
+        field: 'space_type'
     fields:
       - label: 'Space ID'
         name: 'id'
