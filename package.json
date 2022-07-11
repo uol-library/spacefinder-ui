@@ -4,8 +4,6 @@
   "description": "Spacefinder UI",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "node _scripts/cleanJSON.js",
     "concat": "node _scripts/concat.js",
@@ -14,7 +12,8 @@
     "clean_pids": "node _scripts/cleanPlaceIDs.js",
     "process": "node _scripts/processJSON.js",
     "resize": "node _scripts/processImages.js",
-    "updateOpening": "node _scripts/updateLibraryOpening,js"
+    "updateOpening": "node _scripts/updateLibraryOpening.js",
+    "crontab": "node _scripts/cron.js"
   },
   "repository": {
     "type": "git",

@@ -10,13 +10,23 @@ collections:
     label: 'Spaces'
     label_singular: 'Space'
     folder: 'spaces/'
-    create: true
+    create: false
     delete: false
     editor:
       preview: false
     show_preview_links: false
     extension: 'json'
     format: 'json'
+    view_filters:
+      - label: 'Active spaces'
+        field: 'published'
+        pattern: true
+      - label: 'Inactive spaces'
+        field: 'published'
+        pattern: false
+    view_groups:
+      - label: 'Type'
+        field: 'space_type'
     fields:
       - label: 'Space ID'
         name: 'id'
