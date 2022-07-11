@@ -17,6 +17,13 @@ collections:
     show_preview_links: false
     extension: 'json'
     format: 'json'
+    view_filters:
+      - label: 'Active spaces'
+        field: 'published'
+        pattern: true
+      - label: 'Inactive spaces'
+        field: 'published'
+        pattern: false
     fields:
       - label: 'Space ID'
         name: 'id'
