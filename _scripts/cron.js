@@ -21,7 +21,7 @@ const crontab = fs.readFileSync( path.resolve( __dirname, '../_data/crontab.json
 const spacefiles = fs.readdirSync( path.resolve( __dirname, '../spaces' ), { encoding: 'utf8' } );
 const cronJSON = JSON.parse( crontab );
 const today = new Date();
-const checkDay = today.getDate()+'-'+today.getMonth()+'-'+today.getFullYear();
+const checkDay = today.getDate() + '-' + ( today.getMonth() + 1 ) + '-' + today.getFullYear();
 cronJSON.jobs.forEach( job => {
     if ( job.date == checkDay ) {
         const spacefiles = fs.readdirSync( path.resolve( __dirname, '../spaces' ), { encoding: 'utf8' } );
