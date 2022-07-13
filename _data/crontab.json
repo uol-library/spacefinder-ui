@@ -1,6 +1,144 @@
 {
     "jobs": [
         {
+            "date": "18-7-2022",
+            "updates": [
+                {
+                    "title": "Caffè Nero at Laidlaw Library",
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "20:00"
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "20:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "20:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "20:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "18:00"
+                        },
+                        "saturday": {
+                            "open": true,
+                            "from": "10:00",
+                            "to": "16:30"
+                        },
+                        "sunday": {
+                            "open": true,
+                            "from": "10:00",
+                            "to": "20:00"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "date": "15-8-2022",
+            "updates": [
+                {
+                    "title": "Caffè Nero at Laidlaw Library",
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "tuesday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "wednesday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "thursday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "friday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "date": "19-8-2022",
+            "updates": [
+                {
+                    "title": "Caffè Nero at Laidlaw Library",
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "20:00"
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "20:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "20:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "20:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "18:00"
+                        },
+                        "saturday": {
+                            "open": true,
+                            "from": "10:00",
+                            "to": "16:30"
+                        },
+                        "sunday": {
+                            "open": true,
+                            "from": "10:00",
+                            "to": "20:00"
+                        }
+                    }
+                }
+            ]
+        },
+        {
             "date": "12-8-2022",
             "updates": [
                 {
