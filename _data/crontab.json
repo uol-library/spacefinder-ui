@@ -1,56 +1,9 @@
 {
     "jobs": [
         {
-            "date": "13-7-2022",
-            "updates": [
-                {
-                    "title": "Caffè Nero at Laidlaw Library",
-                    "field": "opening_hours",
-                    "value": {
-                        "monday": {
-                            "open": false,
-                            "from": "",
-                            "to": ""
-                        },
-                        "tuesday": {
-                            "open": false,
-                            "from": "",
-                            "to": ""
-                        },
-                        "wednesday": {
-                            "open": false,
-                            "from": "",
-                            "to": ""
-                        },
-                        "thursday": {
-                            "open": false,
-                            "from": "",
-                            "to": ""
-                        },
-                        "friday": {
-                            "open": false,
-                            "from": "",
-                            "to": ""
-                        },
-                        "saturday": {
-                            "open": false,
-                            "from": "",
-                            "to": ""
-                        },
-                        "sunday": {
-                            "open": false,
-                            "from": "",
-                            "to": ""
-                        }
-                    }
-                }
-            ]
-        },
-        {
             "date": "18-7-2022",
             "updates": [
                 {
-                        {
                     "title": "Caffè Nero at Laidlaw Library",
                     "field": "opening_hours",
                     "value": {
@@ -90,8 +43,7 @@
                             "to": "20:00"
                         }
                     }
-                
-                },
+                }
             ]
         },
         {
@@ -144,7 +96,6 @@
             "date": "19-8-2022",
             "updates": [
                 {
-                        {
                     "title": "Caffè Nero at Laidlaw Library",
                     "field": "opening_hours",
                     "value": {
@@ -184,8 +135,7 @@
                             "to": "20:00"
                         }
                     }
-                
-                },
+                }
             ]
         },
         {
