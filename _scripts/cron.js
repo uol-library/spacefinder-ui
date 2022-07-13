@@ -18,7 +18,7 @@ const fs = require('fs');
 const path = require('path');
 const { exit } = require('process');
 
-const crontab = fs.readFileSync( path.resolve( __dirname, '../_data/crontab.json' ), { encoding: 'utf8' } );
+const crontab = fs.readFileSync( path.resolve( __dirname, '../_scripts/crontab.json' ), { encoding: 'utf8' } );
 const spacefiles = fs.readdirSync( path.resolve( __dirname, '../spaces' ), { encoding: 'utf8' } );
 const cronJSON = JSON.parse( crontab );
 const today = new Date();
@@ -59,7 +59,7 @@ cronJSON.jobs.forEach( job => {
     }
 });
 if ( updateCrontab ) {
-    fs.writeFile( path.resolve( __dirname, '../_data/crontab.json' ), JSON.stringify( newCrontab, null, '    ' ), err => {
+    fs.writeFile( path.resolve( __dirname, '../_scripts/crontab.json' ), JSON.stringify( newCrontab, null, '    ' ), err => {
         if (err) {
             console.error( err );
             return;
