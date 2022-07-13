@@ -1,16 +1,6 @@
 {
     "jobs": [
         {
-            "date": "13-7-2022",
-            "updates": [
-                {
-                    "title": "Worsley Building - 11.006 (LIDA cluster)",
-                    "field": "published",
-                    "value": true
-                }
-            ]
-        },
-        {
             "date": "12-8-2022",
             "updates": [
                 {
