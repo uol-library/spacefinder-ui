@@ -21,4 +21,4 @@ jobs:
           git config --global user.name 'peteredwards'
           git config --global user.email 'p.l.edwards@leeds.ac.uk'
           git add --all
-          git diff-index --quiet HEAD || (git commit -am "[bot] Library Opening Hours updated from calendar JSON feed" && git push)
+          git diff-index --quiet HEAD || (git commit -am "[bot] Updated space data using crontab" && git push)
