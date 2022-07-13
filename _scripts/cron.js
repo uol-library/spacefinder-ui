@@ -23,8 +23,11 @@ const spacefiles = fs.readdirSync( path.resolve( __dirname, '../spaces' ), { enc
 const cronJSON = JSON.parse( crontab );
 const today = new Date();
 const checkDay = today.getDate() + '-' + ( today.getMonth() + 1 ) + '-' + today.getFullYear();
+const newCrontab = {jobs:[]};
+let updateCrontab = false;
 cronJSON.jobs.forEach( job => {
     if ( job.date == checkDay ) {
+        updateCrontab = true;
         const spacefiles = fs.readdirSync( path.resolve( __dirname, '../spaces' ), { encoding: 'utf8' } );
         spacefiles.forEach( filename => {
             if ( filename !== '.' && filename !== '..' ) {
@@ -51,5 +54,15 @@ cronJSON.jobs.forEach( job => {
                 });
             }
         });
+    } else {
+        newCrontab.jobs.push(job);
     }
 });
+if ( updateCrontab ) {
+    fs.writeFile( path.resolve( __dirname, '../_data/crontab.json' ), JSON.stringify( newCrontab, null, '    ' ), err => {
+        if (err) {
+            console.error( err );
+            return;
+        }
+    });
+}
