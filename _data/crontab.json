@@ -4,7 +4,8 @@
             "date": "18-7-2022",
             "updates": [
                 {
-                    "title": "Caffè Nero at Laidlaw Library",
+                    "match": "title",
+                    "term": "Caffè Nero at Laidlaw Library",
                     "field": "opening_hours",
                     "value": {
                         "monday": {
@@ -50,7 +51,8 @@
             "date": "15-8-2022",
             "updates": [
                 {
-                    "title": "Caffè Nero at Laidlaw Library",
+                    "match": "title",
+                    "term": "Caffè Nero at Laidlaw Library",
                     "field": "opening_hours",
                     "value": {
                         "monday": {
@@ -96,7 +98,8 @@
             "date": "19-8-2022",
             "updates": [
                 {
-                    "title": "Caffè Nero at Laidlaw Library",
+                    "match": "title",
+                    "term": "Caffè Nero at Laidlaw Library",
                     "field": "opening_hours",
                     "value": {
                         "monday": {
@@ -142,87 +145,104 @@
             "date": "12-8-2022",
             "updates": [
                 {
-                    "title": "Chemical and Process Engineering - G06",
+                    "match": "title",
+                    "term": "Chemical and Process Engineering - G06",
                     "field": "url",
                     "value": "https://mytimetable.leeds.ac.uk/link?timetable.id=202223!location!6856E1BEE4EE6ABF22261FF5840C4D8D"
                 },
                 {
-                    "title": "Chemistry and Chemistry West Block - 140 (Cohen)",
+                    "match": "title",
+                    "term": "Chemistry and Chemistry West Block - 140 (Cohen)",
                     "field": "url",
                     "value": "https://mytimetable.leeds.ac.uk/link?timetable.id=202223!location!6856E1BEE4EE6ABF22261FF5840C4E61"
                 },
                 {
-                    "title": "Clarendon Building - G04",
+                    "match": "title",
+                    "term": "Clarendon Building - G04",
                     "field": "url",
                     "value": "https://mytimetable.leeds.ac.uk/link?timetable.id=202223!location!6856E1BEE4EE6ABF22261FF5840C4D58"
                 },
                 {
-                    "title": "Clarendon Building - G07",
+                    "match": "title",
+                    "term": "Clarendon Building - G07",
                     "field": "url",
                     "value": "https://mytimetable.leeds.ac.uk/link?timetable.id=202223!location!6856E1BEE4EE6ABF22261FF5840C4D59"
                 },
                 {
-                    "title": "Clothworkers' Building Link - G.34",
+                    "match": "title",
+                    "term": "Clothworkers' Building Link - G.34",
                     "field": "url",
                     "value": "https://mytimetable.leeds.ac.uk/link?timetable.id=202223!location!6856E1BEE4EE6ABF22261FF5840C4F6C"
                 },
                 {
-                    "title": "Clothworkers' Building Link - 140 (Richard Hughes)",
+                    "match": "title",
+                    "term": "Clothworkers' Building Link - 140 (Richard Hughes)",
                     "field": "url",
                     "value": "https://mytimetable.leeds.ac.uk/link?timetable.id=202223!location!6856E1BEE4EE6ABF22261FF5840C4E60"
                 },
                 {
-                    "title": "Fine Art, History of Art and Cultural Studies - G29 (West Teaching Labs)",
+                    "match": "title",
+                    "term": "Fine Art, History of Art and Cultural Studies - G29 (West Teaching Labs)",
                     "field": "url",
                     "value": "https://mytimetable.leeds.ac.uk/link?timetable.id=202223!location!6856E1BEE4EE6ABF22261FF5840C4F6F"
                 },
                 {
-                    "title": "Fine Art, History of Art and Cultural Studies - B16 (West Teaching Labs)",
+                    "match": "title",
+                    "term": "Fine Art, History of Art and Cultural Studies - B16 (West Teaching Labs)",
                     "field": "url",
                     "value": "https://mytimetable.leeds.ac.uk/link?timetable.id=202223!location!6856E1BEE4EE6ABF22261FF5840C4F6E"
                 },
                 {
-                    "title": "Esther Simpson Building - 109",
+                    "match": "title",
+                    "term": "Esther Simpson Building - 109",
                     "field": "url",
                     "value": "https://mytimetable.leeds.ac.uk/link?timetable.id=202223!location!6856E1BEE4EE6ABF22261FF5840C4D26"
                 },
                 {
-                    "title": "E C Stoner Building - 6.61",
+                    "match": "title",
+                    "term": "E C Stoner Building - 6.61",
                     "field": "url",
                     "value": "https://mytimetable.leeds.ac.uk/link?timetable.id=202223!location!6856E1BEE4EE6ABF22261FF5840C4D77"
                 },
                 {
-                    "title": "E C Stoner Building - 6.68",
+                    "match": "title",
+                    "term": "E C Stoner Building - 6.68",
                     "field": "url",
                     "value": "https://mytimetable.leeds.ac.uk/link?timetable.id=202223!location!6856E1BEE4EE6ABF22261FF5840C4D78"
                 },
                 {
-                    "title": "Irene Manton Building - 7.90",
+                    "match": "title",
+                    "term": "Irene Manton Building - 7.90",
                     "field": "url",
                     "value": "https://mytimetable.leeds.ac.uk/link?timetable.id=202223!location!6856E1BEE4EE6ABF22261FF5840C4F62"
                 },
                 {
-                    "title": "Irene Manton Building - 7.96",
+                    "match": "title",
+                    "term": "Irene Manton Building - 7.96",
                     "field": "url",
                     "value": "https://mytimetable.leeds.ac.uk/link?timetable.id=202223!location!6856E1BEE4EE6ABF22261FF5840C4F61"
                 },
                 {
-                    "title": "Psychology (37 and 41 University Road) - 1.43",
+                    "match": "title",
+                    "term": "Psychology (37 and 41 University Road) - 1.43",
                     "field": "url",
                     "value": "https://mytimetable.leeds.ac.uk/link?timetable.id=202223!location!6856E1BEE4EE6ABF22261FF5840C4FDC"
                 },
                 {
-                    "title": "Psychology (37 and 41 University Road) - 1.45",
+                    "match": "title",
+                    "term": "Psychology (37 and 41 University Road) - 1.45",
                     "field": "url",
                     "value": "https://mytimetable.leeds.ac.uk/link?timetable.id=202223!location!6856E1BEE4EE6ABF22261FF5840C4FDB"
                 },
                 {
-                    "title": "Worsley Building - 8.049O (Fourman)",
+                    "match": "title",
+                    "term": "Worsley Building - 8.049O (Fourman)",
                     "field": "url",
                     "value": "https://mytimetable.leeds.ac.uk/link?timetable.id=202223!location!6856E1BEE4EE6ABF22261FF5840C4F00"
                 },
                 {
-                    "title": "Worsley Building - 8.049P (Fourman)",
+                    "match": "title",
+                    "term": "Worsley Building - 8.049P (Fourman)",
                     "field": "url",
                     "value": "https://mytimetable.leeds.ac.uk/link?timetable.id=202223!location!6856E1BEE4EE6ABF22261FF5840C4F01"
                 }
@@ -232,17 +252,20 @@
             "date": "30-9-2022",
             "updates": [
                 {
-                    "title": "Café Maia",
+                    "match": "title",
+                    "term": "Café Maia",
                     "field": "published",
                     "value": true
                 },
                 {
-                    "title": "Michael Sadler Building - Behind Rupert Beckett Lecture Theatre",
+                    "match": "title",
+                    "term": "Michael Sadler Building - Behind Rupert Beckett Lecture Theatre",
                     "field": "published",
                     "value": true
                 },
                 {
-                    "title": "Worsley Building - Airport Lounge seating (level 7)",
+                    "match": "title",
+                    "term": "Worsley Building - Airport Lounge seating (level 7)",
                     "field": "published",
                     "value": true
                 }
