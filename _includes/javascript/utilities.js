@@ -147,6 +147,29 @@ function getSpaceById( id ) {
 }
 
 /**
+ * Returns filter data
+ * @param {string} filterkey
+ * @param {string} optionkey
+ * @return {Object} filter option object
+ */
+function getFilterData( filterkey, optionkey) {
+    for (let i = 0; i < spacefinder.filters.length; i++ ) {
+        if ( spacefinder.filters[i].key == filterkey ) {
+            if ( typeof optionkey !== 'undefined' ) {
+                for (let j = 0; j < spacefinder.filters[i].options.length; j++ ) {
+                    if ( spacefinder.filters[i].options[j].key == optionkey ) {
+                        return spacefinder.filters[i].options[j];
+                    }
+                }
+            } else {
+                return spacefinder.filters[i];
+            }
+        }
+    }
+    return false;
+}
+
+/**
  * Returns a space object given a valid slug
  * @param {string} slug 
  * @returns {Object} space object

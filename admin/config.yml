@@ -595,12 +595,15 @@ collections:
                 required: false
   - name: 'config'
     label: 'Configuration'
+    editor:
+      preview: false
+    show_preview_links: false
     files:
       - label: "Filters"
         name: "filters"
-        file: "_data/filters_.yml"
+        file: "_data/filters.yml"
         fields:
-          - label: 'Filter'
+          - label: 'Filters'
             name: 'filters'
             widget: 'list'
             allow_add: true

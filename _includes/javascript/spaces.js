@@ -116,7 +116,10 @@ function updateListFilterMessage() {
                 filtermessage += '<p>Filtering spaces by <em>' + f.name + '</em>: ';
                 let termlist = [];
                 f.value.forEach( term => {
-                    termlist.push('<button class="filter-term icon-remove" data-termid="' + f.name + '_' + term + '">'+spacefinder.filters[ f.name + '_' + term ]+'</button>');
+                    let filterData = getFilterData( f.name, term );
+                    if ( filterData ) {
+                        termlist.push('<button class="filter-term icon-remove" data-termid="' + f.name + '_' + term + '">'+filterData.label+'</button>');
+                    }
                 });
                 filtermessage += termlist.join(', ') + '</p>';
             }
@@ -495,12 +498,12 @@ function renderAdditionalInfo( spaceid ) {
 
         if ( space.facilities.length ) {
             let facilitieslist = '';
-            for ( filter in spacefinder.filters) { 
-                let fac = filter.substring( 9 );
-                if ( space.facilities.indexOf( fac ) != -1 ) {
-                    facilitieslist += '<li class="' + spacefinder.icons[fac] + '">' + spacefinder.filters[ filter ] + '</li>';
+            space.facilities.forEach( fac => {
+                let filterData = getFilterData('facility', fac);
+                if ( filterData ) {
+                    facilitieslist += '<li class="' + filterData.icon  + '">' + filterData.label + '</li>';
                 }
-            };
+            });
             if ( facilitieslist != '' ) {
                 spaceHTML += '<section class="section-facilities"><h3>Facilities</h3><ul class="bulleticons">' + facilitieslist + '</ul></section>';
             }

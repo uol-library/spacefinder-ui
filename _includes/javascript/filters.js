@@ -1,9 +1,14 @@
 /**
  * Functions for the filters panel in the UI
  */
-document.addEventListener('DOMContentLoaded', () => {
-    setupFilters();
+document.addEventListener( 'spacesloaded', () => {
+    document.addEventListener( 'filtersloaded', () => {
+        renderFilters();
+        setupFilters();
+    });
+    loadFilters();
 });
+
 /* gets the current status of all filters */
 function getFilterStatus() {
     splog( 'getFilterStatus', 'filters.js' );
@@ -41,6 +46,73 @@ function getFilterStatus() {
     return activeFilters;
 }
 
+/**
+ * Loads all filter data from a single JSON file
+ */
+function loadFilters() {
+    splog( 'loadFilters', 'filters.js' );
+    getJSON( { key: 'filters', url: spacefinder.filtersurl, debug: false, callback: data => {
+        if ( data.length ) {
+            spacefinder.filters = data;
+            console.log(data);
+            spacefinder.filtersLoaded = true;
+            /* fire the filtersloaded event */
+            document.dispatchEvent( new Event( 'filtersloaded' ) );
+        }
+    } } );
+}
+
+/**
+ * Builds the filters panel
+ */
+function renderFilters() {
+    if ( spacefinder.filters.length ) {
+        let filterForm = document.createElement( 'form' );
+        filterForm.setAttribute( 'id', 'filter-options-form' );
+        let controlsContainer = document.createElement( 'div' );
+        controlsContainer.classList.add( 'top-controls' );
+        controlsContainer.innerHTML = '<div><label for="search-input" class="visuallyhidden">Search</label><input id="search-input" type="search" placeholder="Search"></div><div class="searchbuttons"><button type="reset" id="search-reset" class="btn" disabled>Reset</button><button type="submit" id="search-submit" class="btn" aria-controls="searchResultsSummary" disabled>Search</button></div></div>';
+        filterForm.appendChild( controlsContainer );
+        let panelContainer = document.createElement( 'div' );
+        panelContainer.classList.add( 'panel-content' );
+        spacefinder.filters.forEach( filter => {
+            let fs = document.createElement( 'fieldset' );
+            fs.classList.add( 'filter-options' );
+            fs.classList.add( filter.key + '-filter-options' );
+            let ld = document.createElement( 'legend' );
+            let fl = document.createElement( 'ul' );
+            fl.setAttribute( 'id', 'filters-' + filter.key );
+            if ( filter.options.length === 1 ) {
+                ld.classList.add( 'visuallyhidden' );
+                ld.appendChild( document.createTextNode( filter.label ) );
+            } else {
+                fs.classList.add( 'accordion' );
+                ld.innerHTML = '<button type="button" class="accordion-trigger" id="trigger-' + filter.key + '" aria-controls="filters-' + filter.key + '" aria-expanded="' + ( filter.open ? 'true': 'false' ) + '" tabindex="0"><span>' + filter.label + '</span></button>';
+                fl.classList.add( 'accordion-content' );
+                fl.setAttribute( 'aria-hidden', ( filter.open ? 'false': 'true' ) );
+                fl.setAttribute( 'aria-labelledby', 'trigger-' + filter.key );
+                if ( ! filter.open ) {
+                    fl.setAttribute( 'hidden', true );
+                }
+            }
+            fs.appendChild( ld );
+            let filterOptions = '';
+            let excl = filter.exclusive ? ' class="exclusive"': '';
+            filter.options.forEach( option => {
+                filterOptions += '<li class="filter-option ' + filter.key + ' ' + filter.key + '_' + option.key + '" data-id="' + filter.key + '_' + option.key + '">';
+                filterOptions += '<input type="checkbox" id="' + filter.key + '_' + option.key + '" name="' + filter.key + '_' + option.key + '" value="' + filter.key + '_' + option.key + '"' + excl + '>';
+                let icon = option.icon ? option.icon: 'icon-tick';
+                filterOptions += '<span class="' + icon + '"></span><label for="' + filter.key + '_' + option.key + '">' + option.label + '</label>';
+                filterOptions += '</li>';
+            });
+            fl.innerHTML = filterOptions;
+            fs.appendChild( fl );
+            panelContainer.appendChild( fs );
+        });
+        filterForm.appendChild( panelContainer );
+        document.getElementById( 'filters' ).appendChild( filterForm );
+    }
+}
 
 /* setup */
 function setupFilters() {
