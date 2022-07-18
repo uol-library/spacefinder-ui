@@ -49,39 +49,39 @@
     "tags": [],
     "opening_hours": {
         "monday": {
-            "open": false,
-            "from": "",
-            "to": ""
+            "open": true,
+            "from": "8:00",
+            "to": "20:00"
         },
         "tuesday": {
-            "open": false,
-            "from": "",
-            "to": ""
+            "open": true,
+            "from": "8:00",
+            "to": "20:00"
         },
         "wednesday": {
-            "open": false,
-            "from": "",
-            "to": ""
+            "open": true,
+            "from": "8:00",
+            "to": "20:00"
         },
         "thursday": {
-            "open": false,
-            "from": "",
-            "to": ""
+            "open": true,
+            "from": "8:00",
+            "to": "20:00"
         },
         "friday": {
-            "open": false,
-            "from": "",
-            "to": ""
+            "open": true,
+            "from": "8:00",
+            "to": "18:00"
         },
         "saturday": {
-            "open": false,
-            "from": "",
-            "to": ""
+            "open": true,
+            "from": "10:00",
+            "to": "16:30"
         },
         "sunday": {
-            "open": false,
-            "from": "",
-            "to": ""
+            "open": true,
+            "from": "10:00",
+            "to": "20:00"
         }
     },
     "image": "/assets/photos/Caffe-Nero-Laidlaw.jpg",
