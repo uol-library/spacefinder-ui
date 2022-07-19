@@ -6,7 +6,7 @@ filters:
     options:
       - key: "show_open"
         label: "Only show spaces which are currently open"
-  - key: "type"
+  - key: "space_type"
     label: "Space type"
     exclusive: false
     open: true
@@ -75,7 +75,7 @@ filters:
       - key: "musicplaying"
         label: "Music playing"
         icon: "icon-music"
-  - key: "facility"
+  - key: "facilities"
     label: "Facilities"
     exclusive: false
     open: false
