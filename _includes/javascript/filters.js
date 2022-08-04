@@ -16,9 +16,8 @@ function getFilterStatus() {
     const activeFilters = [];
     for (const cbx of filters) {
         if (cbx.checked) {
-            let us = cbx.getAttribute('value').indexOf('_');
-            const filterName = cbx.getAttribute('value').substring( 0, us );
-            const filterValue = cbx.getAttribute('value').substring( us + 1 );
+            const filterName = cbx.getAttribute('data-filterkey');
+            const filterValue = cbx.getAttribute('data-optionkey');
             let appended = false;
             if ( activeFilters.length ) {
                 for ( let i = 0; i < activeFilters.length; i++ ) {
@@ -51,10 +50,9 @@ function getFilterStatus() {
  */
 function loadFilters() {
     splog( 'loadFilters', 'filters.js' );
-    getJSON( { key: 'filters', url: spacefinder.filtersurl, debug: false, callback: data => {
+    getJSON( { key: 'filters', url: spacefinder.filtersurl, callback: data => {
         if ( data.length ) {
             spacefinder.filters = data;
-            console.log(data);
             spacefinder.filtersLoaded = true;
             /* fire the filtersloaded event */
             document.dispatchEvent( new Event( 'filtersloaded' ) );
@@ -100,7 +98,7 @@ function renderFilters() {
             let excl = filter.exclusive ? ' class="exclusive"': '';
             filter.options.forEach( option => {
                 filterOptions += '<li class="filter-option ' + filter.key + ' ' + filter.key + '_' + option.key + '" data-id="' + filter.key + '_' + option.key + '">';
-                filterOptions += '<input type="checkbox" id="' + filter.key + '_' + option.key + '" name="' + filter.key + '_' + option.key + '" value="' + filter.key + '_' + option.key + '"' + excl + '>';
+                filterOptions += '<input type="checkbox" data-filterkey="' + filter.key + '" data-optionkey="' + option.key + '" id="' + filter.key + '_' + option.key + '" name="' + filter.key + '_' + option.key + '" value="' + filter.key + '_' + option.key + '"' + excl + '>';
                 let icon = option.icon ? option.icon: 'icon-tick';
                 filterOptions += '<span class="' + icon + '"></span><label for="' + filter.key + '_' + option.key + '">' + option.label + '</label>';
                 filterOptions += '</li>';
@@ -215,5 +213,10 @@ function setupFilters() {
             }
         } ) );
     });
+    // init accordions
+	const accordions = document.querySelectorAll('.accordion');
+	accordions.forEach((accordionEl) => {
+		new Accordion(accordionEl);
+	});
 }
 

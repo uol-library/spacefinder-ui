@@ -1,14 +1,18 @@
 filters:
   - key: "open"
     label: "Spaces currently open"
+    message: "Showing spaces which are currently open"
     exclusive: false
+    additive: false
     open: true
     options:
       - key: "show_open"
         label: "Only show spaces which are currently open"
   - key: "space_type"
     label: "Space type"
+    message: "Filtering spaces by type: "
     exclusive: false
+    additive: false
     open: true
     options:
       - key: "caf"
@@ -23,7 +27,9 @@ filters:
         label: "Outdoor Seating Area"
   - key: "work"
     label: "I want to work"
+    message: "Showing spaces where you can work: "
     exclusive: true
+    additive: false
     open: true
     options:
       - key: "private"
@@ -36,7 +42,9 @@ filters:
         label: "On a group project"
   - key: "atmosphere"
     label: "Atmosphere"
+    message: "Showing spaces where the atmosphere is: "
     exclusive: false
+    additive: false
     open: false
     options:
       - key: "disciplined"
@@ -57,7 +65,9 @@ filters:
         label: "Friendly"
   - key: "noise"
     label: "Noise levels"
+    message: "Showing spaces where noise levels are: "
     exclusive: true
+    additive: false
     open: false
     options:
       - key: "strictlysilent"
@@ -77,7 +87,9 @@ filters:
         icon: "icon-music"
   - key: "facilities"
     label: "Facilities"
+    message: "Showing spaces with facilities: "
     exclusive: false
+    additive: true
     open: false
     options:
       - key: "food_drink"

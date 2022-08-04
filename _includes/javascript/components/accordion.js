@@ -4,18 +4,6 @@
 
 'use strict';
 
-document.addEventListener('DOMContentLoaded', () => {
-    initAccordions();
-});
-
-function initAccordions() {
-	// init accordions
-	const accordions = document.querySelectorAll('.accordion');
-	accordions.forEach((accordionEl) => {
-		new Accordion(accordionEl);
-	});
-}
-
 class Accordion {
 	constructor(domNode) {
 		this.rootEl = domNode;
@@ -32,6 +20,7 @@ class Accordion {
 
 	onButtonClick( event ) {
 		event.preventDefault();
+		console.log('click');
 		this.toggle(!this.open);
 	}
 
