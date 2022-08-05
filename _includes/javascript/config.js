@@ -18,28 +18,12 @@ const spacefinder = {
     watchID: false,
     permission: false,
     mapLoaded: false,
+    spaces: [],
     spacesLoaded: false,
     spacesurl: '{{ site.url }}/spaces.json',
-    imageBaseURL: '{{ site.url }}',
-    spaces: []
-};
-spacefinder.filters = {
-{%- for filter in site.data.filters -%}
-    {%- for option in filter.options -%}
-    '{{ filter.key }}_{{ option.key }}':'{{option.label }}'{% if forloop.last != true %},{% endif %}
-    {%- endfor -%}{% if forloop.last != true %},{% endif %}
-{%- endfor -%}
-};
-spacefinder.icons = {
-{%- for filter in site.data.filters -%}
-    {%- if filter.key == 'facility' -%}
-        {%- for option in filter.options -%}
-            {%- if option.icon -%}
-    '{{ option.key }}':'{{option.icon }}'{% if forloop.last != true %},{% endif %}
-            {%- endif -%}
-        {%- endfor -%}
-    {%- endif -%}
-{%- endfor -%}
-};
-    
+    filters: [],
+    filtersLoaded: false,
+    filtersurl: '{{ site.url }}/filters.json',
+    imageBaseURL: '{{ site.url }}'
+};    
 

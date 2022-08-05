@@ -68,9 +68,24 @@ function applyFilters() {
                         showEl = false;
                     }
                 } else {
-                    let regex = filtergroup.name+'_('+filtergroup.value.join('|')+')';
-                    if ( ! el.className.match(regex) ) {
-                        showEl = false;
+                    let filterdata = getFilterData( filtergroup.name );
+                    if ( filterdata.additive ) {
+                        // if the filter is additive, only show if all filters are true
+                        let miss = false;
+                        filtergroup.value.forEach( val => {
+                            if ( ! el.classList.contains( filtergroup.name + '_' + val ) ) {
+                                miss = true;
+                            }
+                        });
+                        if ( miss === true ) {
+                            showEl = false;
+                        }
+                    } else {
+                        // not additive - match any
+                        let regex = filtergroup.name+'_('+filtergroup.value.join('|')+')';
+                        if ( ! el.className.match(regex) ) {
+                            showEl = false;
+                        }
                     }
                 }
             });
@@ -110,15 +125,21 @@ function updateListFilterMessage() {
                     termlist.push('<button class="search-term icon-remove" data-searchtext="' + term + '">' + term + '</button>');
                 });
                 searchmessage += termlist.join(' or ') + '</p>';
-            } else if ( f.name == 'open' ) {
-                filtermessage += '<p><button class="filter-term icon-remove" data-termid="open_show_open">Showing spaces which are currently open</button>';
             } else {
-                filtermessage += '<p>Filtering spaces by <em>' + f.name + '</em>: ';
-                let termlist = [];
-                f.value.forEach( term => {
-                    termlist.push('<button class="filter-term icon-remove" data-termid="' + f.name + '_' + term + '">'+spacefinder.filters[ f.name + '_' + term ]+'</button>');
-                });
-                filtermessage += termlist.join(', ') + '</p>';
+                let filterdata = getFilterData( f.name );
+                if ( filterdata.options.length === 1 ) {
+                    filtermessage += '<p><button class="filter-term icon-remove" data-termid="' + f.name + '_' + f.value + '">' + filterdata.message + '</button>';
+                } else {
+                    filtermessage += '<p>' + filterdata.message;
+                    let termlist = [];
+                    f.value.forEach( term => {
+                        let termdata = getFilterData( f.name, term );
+                        if ( termdata ) {
+                            termlist.push('<button class="filter-term icon-remove" data-termid="' + f.name + '_' + term + '">' + termdata.label + '</button>');
+                        }
+                    });
+                    filtermessage += termlist.join(filterdata.additive? ' and ': ' or ') + '</p>';
+                }
             }
         });
     }
@@ -350,7 +371,7 @@ function comparer( asc, attr ) {
  */
 function loadSpaces() {
     splog( 'loadSpaces', 'spaces.js' );
-    getJSON( { key: 'spaces', url: spacefinder.spacesurl, debug: false, callback: data => {
+    getJSON( { key: 'spaces', url: spacefinder.spacesurl, callback: data => {
         if ( data.length ) {
             data.forEach( (space, index) => {
                 spacefinder.spaces[index] = space;
@@ -492,12 +513,12 @@ function renderAdditionalInfo( spaceid ) {
 
         if ( space.facilities.length ) {
             let facilitieslist = '';
-            for ( filter in spacefinder.filters) { 
-                let fac = filter.substring( 9 );
-                if ( space.facilities.indexOf( fac ) != -1 ) {
-                    facilitieslist += '<li class="' + spacefinder.icons[fac] + '">' + spacefinder.filters[ filter ] + '</li>';
+            space.facilities.forEach( fac => {
+                let filterData = getFilterData('facilities', fac);
+                if ( filterData ) {
+                    facilitieslist += '<li class="' + filterData.icon  + '">' + filterData.label + '</li>';
                 }
-            };
+            });
             if ( facilitieslist != '' ) {
                 spaceHTML += '<section class="section-facilities"><h3>Facilities</h3><ul class="bulleticons">' + facilitieslist + '</ul></section>';
             }
@@ -514,13 +535,13 @@ function renderAdditionalInfo( spaceid ) {
 function getClassList( space ) {
     var classList = 'list-space ';
     if ( space.space_type ) {
-        classList += 'type_' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + ' ';
+        classList += 'space_type_' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + ' ';
     }
     if (space.work.length){
         classList += 'work_'+space.work.join(' work_')+' ';
     }
     if (space.facilities.length){
-        classList += 'facility_'+space.facilities.join(' facility_')+' ';
+        classList += 'facilities_'+space.facilities.join(' facilities_')+' ';
     }
     if (space.atmosphere.length){
         classList += 'atmosphere_'+space.atmosphere.join(' atmosphere_')+' ';

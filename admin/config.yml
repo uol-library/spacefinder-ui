@@ -593,3 +593,48 @@ collections:
                 pattern: ['[0-9]{1,2}:[0-9]{2}', 'Specify times in 24hr clock mode with hours and minutes separated by a colon']
                 default: '17:00'
                 required: false
+  - name: 'config'
+    label: 'Configuration'
+    editor:
+      preview: false
+    show_preview_links: false
+    files:
+      - label: "Filters"
+        name: "filters"
+        file: "_data/filters.yml"
+        fields:
+          - label: 'Filters'
+            name: 'filters'
+            widget: 'list'
+            allow_add: true
+            collapsed: false
+            fields:
+              - name: "key"
+                label: "Filter ID"
+                widget: "string"
+              - name: "label"
+                label: "Filter label"
+                widget: "string"
+              - name: "exclusive"
+                label: "Single selection only?"
+                widget: "boolean"
+              - name: "open"
+                label: "Start expanded?"
+                widget: "boolean"
+              - name: "options"
+                label: "Options"
+                widget: "list"
+                allow_add: true
+                collapsed: false
+                fields:
+                  - name: "key"
+                    label: "Option ID"
+                    widget: "string"
+                  - name: "label"
+                    label: "Option Label"
+                    widget: "string"
+                  - name: "icon"
+                    label: "Options icon"
+                    widget: "select"
+                    default: "icon-tick"
+                    options: ["icon-views", "icon-close", "icon-coffee", "icon-computer", "icon-desk", "icon-laptop", "icon-list", "icon-marker", "icon-music", "icon-no-wifi", "icon-phone", "icon-power", "icon-printer", "icon-projector", "icon-search", "icon-sound-0", "icon-sound-1", "icon-sound-2", "icon-sound-3", "icon-sun", "icon-time-long", "icon-time-short", "icon-toilet", "icon-whiteboard", "icon-wifi", "icon-tick", "icon-loading", "icon-arrow-left", "icon-arrow-up", "icon-arrow-right", "icon-arrow-down", "icon-pencil", "icon-callout", "icon-drink", "icon-disabled", "icon-access", "icon-user", "icon-address", "icon-info-circled", "icon-bench", "icon-uol-logo-mark", "icon-public", "icon-adjustable-furniture", "icon-individual-space", "icon-neutral-toilets", "icon-bike-rack", "icon-smoking-area", "icon-baby-changing", "icon-prayer-room", "icon-disabled-parking", "icon-disabled-toilet", "icon-hearing-loop", "icon-my-location", "icon-link", "icon-universal-access", "icon-twitter", "icon-facebook-squared", "icon-pinterest", "icon-linkedin"]
