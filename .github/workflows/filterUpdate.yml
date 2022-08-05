@@ -1,7 +1,0 @@
-name: filter-update
-on:
-  push:
-    branches:
-      - 'main'
-    paths:
-      - '_data/filters.yml'
