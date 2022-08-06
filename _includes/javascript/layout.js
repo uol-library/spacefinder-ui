@@ -1,6 +1,9 @@
 /* setup */
 document.addEventListener('DOMContentLoaded', () => {
 	setupLayout();
+    document.addEventListener( 'spacesloaded', maybeShowFilters );
+    document.addEventListener( 'sfmaploaded', maybeShowFilters );
+    document.addEventListener( 'filtersloaded', maybeShowFilters );
 });
 /**
  * Sets up layout event listeners
@@ -40,8 +43,13 @@ function setupLayout() {
 			document.querySelector('#top-bar .navbutton[data-view="'+event.detail.view+'"]').classList.add( 'active' );
 		}
 	});
-	/* show filter/search panel if screen big enough */
-	if ( window.innerWidth >= spacefinder.breakpoints.large ) {
+}
+
+/**
+ * Shows the filter/search panel if the screen big enough
+ */
+function maybeShowFilters() {
+	if ( spacefinder.mapLoaded && spacefinder.spacesLoaded && spacefinder.filtersLoaded && window.innerWidth >= spacefinder.breakpoints.large ) {
 		document.dispatchEvent( new CustomEvent( 'viewchange', {
 			bubbles: true,
 			cancelable: true,

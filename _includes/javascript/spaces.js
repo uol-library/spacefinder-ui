@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     /* event listener for search + filter changes */
     document.addEventListener( 'viewfilter', applyFilters );
     document.addEventListener( 'filtersapplied', updateListFilterMessage );
+    document.addEventListener( 'spaceSelectedOnMap' e => { selectSpace( e.detail, 'map' ) } );
+    document.addEventListener( 'spaceDeselectedOnMap' e => { deselectSpaces( e.detail ) } );
     document.addEventListener( 'click', event => {
         if ( event.target.classList.contains( 'show-map' ) ) {
             event.preventDefault();
@@ -98,7 +100,7 @@ function applyFilters() {
             el.classList.remove('hidden');
         });
     }
-    deselectSpaces();
+    deselectSpaces(true,true);
     document.dispatchEvent( new Event( 'filtersapplied' ) );
 }
 
@@ -172,9 +174,11 @@ function activateSpaces() {
     document.addEventListener('click', event => {
         if ( event.target.classList.contains('load-info') ) {
             event.preventDefault();
-            let spacenode = document.querySelector('[data-id="'+event.target.getAttribute('data-spaceid')+'"]');
+            let spaceID = event.target.getAttribute( 'data-spaceid' );
+            let spacenode = document.querySelector('[data-id="' + spaceID + '"]');
             if ( ! spacenode.classList.contains('active') ) {
                 selectSpace( event.target.getAttribute('data-spaceid'), 'list' );
+                e.target.dispatchEvent( new CustomEvent( 'spaceSelectedOnList', { bubbles: true, detail: spaceID } ) );
             }
         }
     });
@@ -182,7 +186,9 @@ function activateSpaces() {
     document.querySelectorAll('.list-space .closebutton').forEach( el => {
         el.addEventListener('click', event => {
             event.stopPropagation();
-            deselectSpaces(false);
+
+            deselectSpaces(false,true);
+            e.target.dispatchEvent( new CustomEvent( 'spaceDeselectedOnList', { bubbles: true, detail: spaceID } ) );
             window.location.hash = '';
         });
     });
@@ -239,7 +245,6 @@ function selectSpace( spaceid, source ) {
         }
     }));
     renderAdditionalInfo( space.id );
-    zoomMapToSpace( space );
     let spacenode = document.querySelector('[data-id="'+spaceid+'"]');
     document.querySelectorAll('.list-space').forEach( sp => {
         sp.classList.remove('active');
@@ -264,7 +269,7 @@ function selectSpace( spaceid, source ) {
  * and recentres the map.
  * @param {boolean} scrollReset 
  */
-function deselectSpaces( scrollReset ) {
+function deselectSpaces( scrollReset, fromMap ) {
     splog( 'deselectSpaces', 'spaces.js' );
     document.querySelectorAll('.additionalInfo').forEach( el => {
         el.textContent = '';
@@ -274,6 +279,9 @@ function deselectSpaces( scrollReset ) {
     });
     if ( scrollReset ) {
         document.getElementById('listcontainer').scrollTop = 0;
+    }
+    if ( fromMap ) {
+        deselectSpacesFromMap();
     }
 }
 
@@ -402,7 +410,7 @@ function renderList() {
         spaceContainer.setAttribute('data-id', space.id );
         spaceContainer.setAttribute('data-sortalpha', space.title.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() );
         spaceContainer.setAttribute('class', space.classes );
-        let spaceHTML = '<div class="space-summary"><h2><a href="' + space.link + '" class="space-title load-info" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">' + space.title + '</a><button class="closebutton icon-close"><span class="visuallyhidden">Close</span></button></h2>';
+        let spaceHTML = '<div class="space-summary"><h2><a href="' + space.link + '" class="space-title load-info" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">' + space.title + '</a><button class="closebutton icon-close" data-spaceid="' + space.id + '"><span class="visuallyhidden">Close</span></button></h2>';
         spaceHTML += '<p class="info"><span class="space-type space-type-' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + '">' + space.space_type + '</span>';
         spaceHTML += '<span class="distance">(1,353 metres)</span>';
         let loc = '';

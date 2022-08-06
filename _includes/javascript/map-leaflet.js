@@ -14,18 +14,34 @@ function initMap() {
     document.addEventListener( 'filtersapplied', filterMarkers );
     document.addEventListener( 'spacesloaded', maybeSetupMap );
     document.addEventListener( 'sfmaploaded', maybeSetupMap );
-    document.addEventListener( 'viewchange', () => {
-        console.log('veiw changed');
-        spacefinder.map.invalidateSize();
-    });
     spacefinder.map = L.map('map' ).setView([spacefinder.currentLoc.lat, spacefinder.currentLoc.lng], spacefinder.startZoom );
     spacefinder.osm = L.tileLayer( 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© <a target="attribution" href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo( spacefinder.map );
-    spacefinder.map.addControl(new L.Control.Fullscreen({position: 'topright'}));
+    spacefinder.esri_sat = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        maxZoom: 19,
+	    attribution: 'Tiles © Esri - Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+    });
+    spacefinder.map.addControl(new L.Control.Fullscreen( { position: 'topright' } ));
     spacefinder.mapLoaded = true;
+    spacefinder.viewdata = {
+        'street': {
+            btnText: 'Street',
+            btnLabel: 'Switch to Street View',
+            btnClass: 'maptype-street',
+            tileLayer: spacefinder.osm
+        },
+        'satellite': {
+            btnText: 'Satellite',
+            btnLabel: 'Switch to Satellite View',
+            btnClass: 'maptype-satellite',
+            tileLayer: spacefinder.esri_sat
+        }
+    };
+
     document.dispatchEvent( new Event( 'sfmaploaded' ) );
+
     /**
      * Returns to list view from map "more info" button
      */
@@ -42,6 +58,26 @@ function initMap() {
             } ) );
         }
     });
+
+    /**
+     * make sure the map knows about resizing, both of the main
+     * window, and when a change in view happens (which may reduce
+     * the area taken up by the map component)
+     */
+    window.addEventListener( 'resize', () => {
+        clearTimeout( spacefinder.resizeTimeout );
+        spacefinder.resizeTimeout = setTimeout( () => {
+            splog( 'invalidating map size - resize event', 'map-leaflet.js' );
+            spacefinder.map.invalidateSize( true );
+        }, 200);
+    });
+    document.addEventListener( 'viewchange', () => {
+        splog('view changed', 'map-leaflet.js');
+        window.setTimeout( () => {
+            splog( 'invalidating map size - viewchange event', 'map-leaflet.js' );
+            spacefinder.map.invalidateSize( true );
+        }, 500);
+    });
 }
 
 /**
@@ -51,7 +87,14 @@ function initMap() {
 function maybeSetupMap() {
     splog( 'maybeSetupMap', 'map-leaflet.js' );
     if ( spacefinder.mapLoaded && spacefinder.spacesLoaded ) {
+
+        /* collect latLng coordinates here to define map bounds */
         let pointsArray = [];
+        
+        /**
+         * Initialise marker cluster group
+         * @see https://github.com/Leaflet/Leaflet.markercluster
+         */
         spacefinder.markergroup = L.markerClusterGroup({
 			disableClusteringAtZoom: 17,
 			zoomToBoundsOnClick: true,
@@ -61,7 +104,8 @@ function maybeSetupMap() {
 				fillColor: '#c70000'
 			}
 		});
-        /* add each spoace to the map using a marker */
+        
+        /* add each space to the map using a marker */
         for ( let i = 0; i < spacefinder.spaces.length; i++ ) {
             if ( spacefinder.spaces[i].lat && spacefinder.spaces[i].lng ) {
                 var spacePosition = L.latLng( spacefinder.spaces[i].lat, spacefinder.spaces[i].lng );
@@ -71,40 +115,79 @@ function maybeSetupMap() {
                     icon: getSVGIcon( 'space-marker' )
                 });
                 spacefinder.markergroup.addLayer(spacefinder.spaces[i].marker);
+                /* set the popup for the marker */
                 spacefinder.spaces[i].popup = L.popup().setContent( getSpaceInfoWindowContent( spacefinder.spaces[i] ) );
                 spacefinder.spaces[i].popup.spaceID = spacefinder.spaces[i].id;
                 spacefinder.spaces[i].marker.bindPopup( spacefinder.spaces[i].popup );
             }
         }
-        spacefinder.map.addLayer(spacefinder.markergroup);
-        spacefinder.map.on( 'popupopen', e => {
-            selectSpace( e.popup.spaceID, 'map' );
-        });
-        spacefinder.map.on('popupclose', function(e){
-            deselectSpaces(false);
-        });
-        spacefinder.map.fitBounds( pointsArray );
-        spacefinder.mapBounds = spacefinder.map.getBounds();
 
-        L.Control.geoControl = L.Control.extend({
+        /* add the markers to the map */
+        spacefinder.map.addLayer( spacefinder.markergroup );
+
+        /* use popupopen and popupclose events to select and deselect spaces from map */
+        spacefinder.map.on( 'popupopen', e => {
+            e.target.dispatchEvent( new CustomEvent( 'spaceSelectedOnMap', { bubbles: true, detail: e.popup.spaceID } ) );
+        });
+        spacefinder.map.on( 'popupclose', e => {
+            e.target.dispatchEvent( new CustomEvent( 'spaceDeselectedOnMap', { bubbles: true, detail: e.popup.spaceID } ) );
+        });
+
+        /* make sure the map view encompasses all markers */
+        spacefinder.map.fitBounds( pointsArray );
+
+        /* save the map bounds and zoom to enable resetting */
+        spacefinder.mapBounds = spacefinder.map.getBounds();
+        spacefinder.mapZoom = spacefinder.map.getZoom();
+        
+        /**
+         * Create a button to switch base layers between streets (OpenStreetMap)
+         * and satellite (ESRI).
+         */
+        L.Control.mapTypeControl = L.Control.extend({
             onAdd: function(map) {
-                const locationButton = document.createElement( 'button' );
-                locationButton.innerHTML = 'Use my location';
-                locationButton.classList.add('geo-button');
-                locationButton.classList.add('icon-my-location');
-                locationButton.setAttribute('aria-label', 'Use my location');
-                locationButton.setAttribute('title', 'Use my location');
-                return locationButton;
+                let sd = spacefinder.viewdata.satellite;
+                const mapTypeButton = document.createElement( 'button' );
+                mapTypeButton.innerHTML = sd.btnText;
+                mapTypeButton.classList.add('maptype-button');
+                mapTypeButton.classList.add(sd.btnClass);
+                mapTypeButton.setAttribute('aria-label', sd.btnLabel);
+                mapTypeButton.setAttribute('title', sd.btnLabel);
+                mapTypeButton.setAttribute('data-currentType', 'street');
+                return mapTypeButton;
             },
             onRemove: function(map) {
                 // Nothing to do here
             }
         });
-        
-        L.control.geoControl = function(opts) {
-            return new L.Control.geoControl(opts);
+
+        /* constructor */
+        L.control.mapTypeControl = function(opts) {
+            return new L.Control.mapTypeControl(opts);
         }
 
+        /* add to map */
+        L.control.mapTypeControl( { position: 'topright' } ).addTo( spacefinder.map );
+
+        /* add listener to map type button to toggle base layer */
+        document.addEventListener('click', e => {
+            if ( e.target.matches('.maptype-button') ) {
+                let currentType = e.target.getAttribute('data-currentType');
+                let newType = currentType == 'street' ? 'satellite': 'street';
+                let mapTypeButton = document.querySelector('button.maptype-button');
+                if ( mapTypeButton ) {
+                    mapTypeButton.classList.replace( spacefinder.viewdata[newType].btnClass, spacefinder.viewdata[currentType].btnClass );
+                    mapTypeButton.innerHTML = spacefinder.viewdata[currentType].btnText;
+                    mapTypeButton.setAttribute('aria-label', spacefinder.viewdata[currentType].btnLabel);
+                    mapTypeButton.setAttribute('title', spacefinder.viewdata[currentType].btnLabel);
+                    mapTypeButton.setAttribute('data-currentType', newType);
+                    spacefinder.viewdata[currentType].tileLayer.removeFrom( spacefinder.map );
+                    spacefinder.viewdata[newType].tileLayer.addTo( spacefinder.map );
+                }
+            }
+        });
+        
+        /* let eveyone know we are ready */
         document.dispatchEvent( new Event( 'sfmapready' ) );
     }
 }
@@ -146,37 +229,52 @@ function getSVGIcon( c ) {
 
 
 function recentreMap() {
-    splog( 'recentreMap', 'map.js' );
+    splog( 'recentreMap', 'map-leaflet.js' );
     let newCenter = geolocationActive() ? spacefinder.personLoc: spacefinder.currentLoc;
     spacefinder.map.panTo( newCenter );
     spacefinder.map.fitBounds( spacefinder.mapBounds );
 }
+
 /**
  * Zooms the map to show a particular space
  * @param {Object} space
  */
 function zoomMapToSpace( space ) {
-    splog( 'zoomMapToSpace', 'map.js' );
+    splog( 'zoomMapToSpace', 'map-leaflet.js' );
     let newCenter = L.latLng( space.lat, space.lng );
-    spacefinder.map.setZoom(18);
     space.popup.setLatLng( newCenter ).openOn( spacefinder.map );
-    spacefinder.map.panTo( newCenter );
+    spacefinder.map.setView( newCenter, 18 );
+}
 
+
+/**
+ * Resets the map after a space has been selected
+ * @param {Object} space
+ */
+ function deselectSpacesFromMap( recentre ) {
+    splog( 'deselectSpacesFromMap', 'map-leaflet.js' );
+    spacefinder.map.closePopup();
+    if ( recentre ) {
+        recentreMap();
+    } else if ( spacefinder.map.getZoom() > 17 ) {
+        spacefinder.map.zoomOut();
+    }
 }
 
 /**
  * Filters the markers on the map
  */
 function filterMarkers() {
-    splog( 'filterMarkers', 'map.js' );
+    splog( 'filterMarkers', 'map-leaflet.js' );
+    let markersToAdd = [];
     document.querySelectorAll('.list-space').forEach( el => {
         let space = getSpaceById( el.getAttribute('data-id') );
-        if ( el.classList.contains('hidden') ) {
-            space.marker.removeFrom( spacefinder.map );
-        } else {
-            space.marker.addTo( spacefinder.map );
+        if ( ! el.classList.contains('hidden') ) {
+            markersToAdd.push( space.marker );
         }
     });
+    spacefinder.markergroup.clearLayers();
+    spacefinder.markergroup.addLayers( markersToAdd );
 }
 
 /*******************************************************************
@@ -188,7 +286,7 @@ function filterMarkers() {
  * @param {boolean} enable which way to toggle
  */
 function toggleGeolocation( enable ) {
-    splog( 'toggleGeolocation', 'map.js' );
+    splog( 'toggleGeolocation', 'map-leaflet.js' );
     if ( enable ) {
         document.querySelectorAll( '.geo-button' ).forEach( e => e.disabled = false );
     } else {
@@ -203,7 +301,7 @@ function toggleGeolocation( enable ) {
  * @param {boolean} activate which way to toggle
  */
 function activateGeolocation( activate ) {
-    splog( 'activateGeolocation', 'map.js' );
+    splog( 'activateGeolocation', 'map-leaflet.js' );
     if ( activate ) {
         document.querySelectorAll( '.geo-button' ).forEach( e => {
             e.classList.add('active');
@@ -245,7 +343,7 @@ function activateGeolocation( activate ) {
  * @see getUserPosition()
  */
 function movePersonMarker() {
-    splog( 'movePersonMarker', 'map.js' );
+    splog( 'movePersonMarker', 'map-leaflet.js' );
     /* move person marker */
     if ( spacefinder.personMarker ) {
         spacefinder.personMarker.setPosition( spacefinder.personLoc );
@@ -270,7 +368,7 @@ function movePersonMarker() {
  * @returns {boolean}
  */
 function geolocationEnabled() {
-    splog( 'geolocationEnabled', 'map.js' );
+    splog( 'geolocationEnabled', 'map-leaflet.js' );
     const btn = document.querySelector( '.geo-button' );
     if ( btn !== null ) {
         return btn.disabled == false;
@@ -283,7 +381,7 @@ function geolocationEnabled() {
  * @returns {boolean}
  */
 function geolocationActive() {
-    splog( 'geolocationActive', 'map.js' );
+    splog( 'geolocationActive', 'map-leaflet.js' );
     return ( document.querySelector( '.geo-button.active' ) !== null ? true: false );
 }
 
@@ -291,7 +389,7 @@ function geolocationActive() {
  * Performs checks for geolocation permissions and services when the map has loaded
  */
 function checkGeo() {
-    splog( 'checkGeo', 'map.js' );
+    splog( 'checkGeo', 'map-leaflet.js' );
     /* first see if geolocation is available on the device */
     checkGeoAvailable();
     /* check to see if it is enabled to determine initial button states */
@@ -304,7 +402,7 @@ function checkGeo() {
  * watches for updates to permissions.
  */
 function checkGeoPermissions() {
-    splog( 'checkGeoPermissions', 'map.js' );
+    splog( 'checkGeoPermissions', 'map-leaflet.js' );
     /* check for permissions query */
     if ( 'permissions' in navigator && navigator.permissions.query ) {
         /* query geolocation permissions */
@@ -337,7 +435,7 @@ function checkGeoPermissions() {
  * adds buttons to activate it and adds listeners to buttons.
  */
 function checkGeoAvailable() {
-    splog( 'checkGeoAvailable', 'map.js' );
+    splog( 'checkGeoAvailable', 'map-leaflet.js' );
     if ( 'geolocation' in navigator ) {
         /* make button for map to let user activate geolocation */
         L.Control.geoControl = L.Control.extend({
@@ -384,7 +482,7 @@ function checkGeoAvailable() {
  * and deactivates geolocation controls.
  */
 function forgetUserPosition() {
-    splog( 'forgetUserPosition', 'map.js' );
+    splog( 'forgetUserPosition', 'map-leaflet.js' );
     /* stop watching user position */
     navigator.geolocation.clearWatch( spacefinder.watchID );
     /* remove person marker from map */
@@ -404,7 +502,7 @@ function forgetUserPosition() {
  * button to recentre? (but not moving the marker)
  */
 function getUserPosition() {
-    splog( 'getUserPosition', 'map.js' );
+    splog( 'getUserPosition', 'map-leaflet.js' );
 	navigator.geolocation.getCurrentPosition( position => {
         /* centre the map on the user coordinates */
 		spacefinder.personLoc.lat = position.coords.latitude;
@@ -451,7 +549,7 @@ function getUserPosition() {
  * to the user position.
  */
 function updateDistances() {
-    splog( 'updateDistances', 'map.js' );
+    splog( 'updateDistances', 'map-leaflet.js' );
     if ( geolocationActive() ) {
         spacefinder.spaces.forEach( (space, index) => {
             spacefinder.spaces[index].distancefromcentre = haversine_distance( spacefinder.personLoc, { lat: space.lat, lng: space.lng } );
