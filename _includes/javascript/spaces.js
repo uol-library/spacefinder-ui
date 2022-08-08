@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval( checkOpeningHours, (30*1000) );
         activateSort(true, 'alpha');
         sortSpaces( 'sortalpha', true );
-        activateSpaces();
     });
     loadSpaces();
     /* event listener for search + filter changes */
@@ -27,8 +26,49 @@ document.addEventListener('DOMContentLoaded', () => {
                     view: 'map'
                 }
             } ) );
+        } else if ( event.target.classList.contains( 'load-info' ) ) {
+            /* event listener to display space detail */
+            event.preventDefault();
+            let spaceID = event.target.getAttribute( 'data-spaceid' );
+            let spacenode = document.querySelector( '[data-id="' + spaceID + '"]' );
+            if ( ! spacenode.classList.contains( 'active' ) ) {
+                selectSpace( event.target.getAttribute( 'data-spaceid'), 'list' );
+                e.target.dispatchEvent( new CustomEvent( 'spaceSelectedOnList', { bubbles: true, detail: spaceID } ) );
+            }
+        } else if ( event.target.classList.contains( 'space-closebutton' ) ) {
+            /* activate close buttons on expanded spaces */
+            event.stopPropagation();
+            let spaceID = event.target.getAttribute( 'data-spaceid' );
+            deselectSpaces( false, true );
+            e.target.dispatchEvent( new CustomEvent( 'spaceDeselectedOnList', { bubbles: true, detail: spaceID } ) );
+            window.location.hash = '';
+        } else if ( event.target.classList.contains( 'space-summary' ) ) {
+            /* activate space summary click to open space */
+            const isTextSelected = window.getSelection().toString();
+            /* prevent action is text is selected */
+            if ( ! isTextSelected ) {
+                el.querySelector('.load-info').click();
+            }
+        } else if ( event.target.classList.contains( 'search-term' ) ) {
+            e.preventDefault();
+            let searchtext = e.target.getAttribute('data-searchtext');
+            let searchinput = document.getElementById('search-input').value.trim();
+            let searchterms = searchinput.split(' ');
+            let newsearchterms = [];
+            searchterms.forEach( term => {
+                if ( term != searchtext ) {
+                    newsearchterms.push( term );
+                }
+            });
+            document.getElementById('search-input').value = newsearchterms.join(' ');
+            document.dispatchEvent( new Event( 'viewfilter', { bubbles: true } ) );
+        } else if ( e.target.classList.contains( 'filter-term' ) ) {
+            e.preventDefault();
+            let termid = e.target.getAttribute('data-termid');
+            document.getElementById( termid ).checked = false;
+            document.dispatchEvent( new Event( 'viewfilter', { bubbles: true } ) );
         }
-    })
+    });
 });
 
 /**
@@ -165,70 +205,6 @@ function updateListFilterMessage() {
 }
 
 /**
- * Activates spaces by adding a click listener to the titles, and
- * delegated listeners for terms in the filter / search status bar.
- */
-function activateSpaces() {
-    splog( 'activateSpaces', 'spaces.js' );
-    /* event listener to display space detail */
-    document.addEventListener('click', event => {
-        if ( event.target.classList.contains('load-info') ) {
-            event.preventDefault();
-            let spaceID = event.target.getAttribute( 'data-spaceid' );
-            let spacenode = document.querySelector('[data-id="' + spaceID + '"]');
-            if ( ! spacenode.classList.contains('active') ) {
-                selectSpace( event.target.getAttribute('data-spaceid'), 'list' );
-                e.target.dispatchEvent( new CustomEvent( 'spaceSelectedOnList', { bubbles: true, detail: spaceID } ) );
-            }
-        }
-    });
-    /* activate close buttons on expanded spaces */
-    document.querySelectorAll('.list-space .closebutton').forEach( el => {
-        el.addEventListener('click', event => {
-            event.stopPropagation();
-
-            deselectSpaces(false,true);
-            e.target.dispatchEvent( new CustomEvent( 'spaceDeselectedOnList', { bubbles: true, detail: spaceID } ) );
-            window.location.hash = '';
-        });
-    });
-
-    /* activate space summary click to open space */
-    document.querySelectorAll('.list-space .space-summary').forEach( el => {
-        el.addEventListener('click', event => {
-            /* prevent action is text is selected */
-            const isTextSelected = window.getSelection().toString();
-            if ( ! isTextSelected ) {
-                el.querySelector('.space-title').click();
-            }
-        });
-    });
-    /* add listener to buttons in filter and search status bar */
-    document.addEventListener('click', e => {
-        if ( e.target.matches('.search-term') ) {
-            e.preventDefault();
-            let searchtext = e.target.getAttribute('data-searchtext');
-            let searchinput = document.getElementById('search-input').value.trim();
-            let searchterms = searchinput.split(' ');
-            let newsearchterms = [];
-            searchterms.forEach( term => {
-                if ( term != searchtext ) {
-                    newsearchterms.push( term );
-                }
-            });
-            document.getElementById('search-input').value = newsearchterms.join(' ');
-            document.dispatchEvent( new Event( 'viewfilter', { bubbles: true } ) );
-        }
-        if ( e.target.matches('.filter-term') ) {
-            e.preventDefault();
-            let termid = e.target.getAttribute('data-termid');
-            document.getElementById(termid).checked = false;
-            document.dispatchEvent( new Event( 'viewfilter', { bubbles: true } ) );
-        }
-    });
-}
-
-/**
  * Selects a space in the list
  * @param {integer} spaceid 
  */
@@ -245,11 +221,11 @@ function selectSpace( spaceid, source ) {
         }
     }));
     renderAdditionalInfo( space.id );
-    let spacenode = document.querySelector('[data-id="'+spaceid+'"]');
-    document.querySelectorAll('.list-space').forEach( sp => {
-        sp.classList.remove('active');
+    let spacenode = document.querySelector( '[data-id="' + spaceid + '"]' );
+    document.querySelectorAll( '.list-space' ).forEach( sp => {
+        sp.classList.remove( 'active' );
     });
-    spacenode.classList.add('active');
+    spacenode.classList.add( 'active' );
     /* find distance from top of listcontainer */
     let scrollingElement = document.getElementById('listcontainer');
     let listContainer = document.getElementById('listcontent');
@@ -269,7 +245,7 @@ function selectSpace( spaceid, source ) {
  * and recentres the map.
  * @param {boolean} scrollReset 
  */
-function deselectSpaces( scrollReset, fromMap ) {
+function deselectSpaces( scrollReset ) {
     splog( 'deselectSpaces', 'spaces.js' );
     document.querySelectorAll('.additionalInfo').forEach( el => {
         el.textContent = '';
@@ -279,9 +255,6 @@ function deselectSpaces( scrollReset, fromMap ) {
     });
     if ( scrollReset ) {
         document.getElementById('listcontainer').scrollTop = 0;
-    }
-    if ( fromMap ) {
-        deselectSpacesFromMap();
     }
 }
 
@@ -410,7 +383,7 @@ function renderList() {
         spaceContainer.setAttribute('data-id', space.id );
         spaceContainer.setAttribute('data-sortalpha', space.title.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() );
         spaceContainer.setAttribute('class', space.classes );
-        let spaceHTML = '<div class="space-summary"><h2><a href="' + space.link + '" class="space-title load-info" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">' + space.title + '</a><button class="closebutton icon-close" data-spaceid="' + space.id + '"><span class="visuallyhidden">Close</span></button></h2>';
+        let spaceHTML = '<div class="space-summary"><h2><a href="' + space.link + '" class="space-title load-info" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">' + space.title + '</a><button class="info-closebutton icon-close" data-spaceid="' + space.id + '"><span class="visuallyhidden">Close</span></button></h2>';
         spaceHTML += '<p class="info"><span class="space-type space-type-' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + '">' + space.space_type + '</span>';
         spaceHTML += '<span class="distance">(1,353 metres)</span>';
         let loc = '';

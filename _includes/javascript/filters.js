@@ -109,6 +109,8 @@ function renderFilters() {
         });
         filterForm.appendChild( panelContainer );
         document.getElementById( 'filters' ).appendChild( filterForm );
+        /* fire the filtersloaded event */
+        document.dispatchEvent( new Event( 'filtersrendered' ) );
     }
 }
 

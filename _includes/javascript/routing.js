@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function checkInitialPageLoad() {
     /* load spaces and pages from URL anchor */
-    document.addEventListener('sfmapready', event => {
+    document.addEventListener( 'sfmapready', event => {
         if ( window.location.hash ) {
             let hp = window.location.hash.split('/');
             if ( hp.length === 3 ) {
