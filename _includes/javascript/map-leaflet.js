@@ -129,14 +129,14 @@ function maybeSetupMap() {
         /* use popupopen and popupclose events to select and deselect spaces from map */
         spacefinder.map.on( 'popupopen', event => {
             zoomMapToSpace( event.popup.spaceID );
-            document.dispatchEvent( new CustomEvent( 'spaceSelectedOnMap', { bubbles: true, detail: event.popup.spaceID } ) );
+            document.dispatchEvent( new CustomEvent( 'spaceSelectedOnMap', { bubbles: true, detail: { id: event.popup.spaceID, src: 'map' } } ) );
         });
         spacefinder.map.on( 'popupclose', event => {
-            document.dispatchEvent( new Event( 'spaceDeselectedFromMap' ) );
+            document.dispatchEvent( new CustomEvent( 'spaceDeselectedFromMap', { bubbles: true, detail: { id: event.popup.spaceID } } ) );
         });
 
         /* respond to corresponding events from list */
-        document.addEventListener( 'spaceSelected', event => { zoomMapToSpace( event.detail ) } );
+        document.addEventListener( 'spaceSelected', event => { zoomMapToSpace( event.detail.id ) } );
         document.addEventListener( 'spaceDeselected', deselectSpacesFromMap );
     
         /* Make sure the map view encompasses all markers */
@@ -263,12 +263,12 @@ function zoomMapToSpace( spaceid ) {
  function deselectSpacesFromMap( recentre ) {
     splog( 'deselectSpacesFromMap', 'map-leaflet.js' );
     spacefinder.map.closePopup();
-    if ( recentre ) {
+    /*if ( recentre ) {
         splog('recentring map', 'map-leaflet.js' );
         recentreMap();
     } else if ( spacefinder.map.getZoom() > 17 ) {
         spacefinder.map.zoomOut();
-    }
+    }*/
 }
 
 /**

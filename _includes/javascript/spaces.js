@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener( 'filtersapplied', updateListFilterMessage );
 
     /* event listeners for space selection and deselection */
-    document.addEventListener( 'spaceSelected', event => { selectSpace( event.detail ) } );
-    document.addEventListener( 'spaceDeselected', deselectSpaces );
-    document.addEventListener( 'spaceSelectedOnMap', event => { selectSpace( event.detail ) } );
-    document.addEventListener( 'spaceDeselectedFromMap', deselectSpaces );
+    document.addEventListener( 'spaceSelected', event => { selectSpace( event.detail.id, event.detail.src ) } );
+    document.addEventListener( 'spaceDeselected', event => { deselectSpaces( event.detail ) }  );
+    document.addEventListener( 'spaceSelectedOnMap', event => { selectSpace( event.detail.id, 'map' ) } );
+    document.addEventListener( 'spaceDeselectedFromMap', event => { deselectSpaces( event.detail ) }  );
     /* set up click events for spaces */
     document.addEventListener( 'click', event => {
         /**
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let spaceID = event.target.getAttribute( 'data-spaceid' );
             let spacenode = document.querySelector( '[data-id="' + spaceID + '"]' );
             if ( ! spacenode.classList.contains( 'active' ) ) {
-                document.dispatchEvent( new CustomEvent( 'spaceSelected', { bubbles: true, detail: spaceID } ) );
+                document.dispatchEvent( new CustomEvent( 'spaceSelected', { bubbles: true, detail: { id: spaceID, src: 'list' } } ) );
             }
         /**
          * Event listener to display space detail
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if ( event.target.classList.contains( 'info-closebutton' ) ) {
             event.preventDefault();
             let spaceID = event.target.getAttribute( 'data-spaceid' );
-            document.dispatchEvent( new Event( 'spaceDeselected' ) );
+            document.dispatchEvent( new CustomEvent( 'spaceDeselected', { bubbles: true, detail: spaceID } ) );
             window.location.hash = '';
         /**
          * These remove search terms or filter terms when one of them is
@@ -160,7 +160,7 @@ function applyFilters() {
             el.classList.remove('hidden');
         });
     }
-    document.dispatchEvent( new Event( 'spaceDeselected' ) );
+    document.dispatchEvent( new CustomEvent( 'spaceDeselected', { bubbles: true, detail: false } ) );
     document.dispatchEvent( new Event( 'filtersapplied' ) );
 }
 
@@ -226,7 +226,8 @@ function updateListFilterMessage() {
 
 /**
  * Selects a space in the list
- * @param {integer} spaceid 
+ * @param {integer} spaceid ID of space to be selected
+ * @param {string} source Source of selection (map, list, load)
  */
 function selectSpace( spaceid, source ) {
     splog( 'selectSpace', 'spaces.js' );
@@ -250,28 +251,39 @@ function selectSpace( spaceid, source ) {
     let scrollingElement = document.getElementById('listcontainer');
     let listContainer = document.getElementById('listcontent');
     let listFilters = document.getElementById('listfilters');
+    console.log(spacenode.offsetTop, listFilters.offsetHeight, listContainer.offsetTop);
     let totop = ( spacenode.offsetTop + listFilters.offsetHeight ) - listContainer.offsetTop;
+    console.log(totop);
     /* scroll into view */
-    if ( scrollingElement.scrollTo ) {
-        scrollingElement.scrollTo({top: totop, left: 0, behavior: 'smooth'});
-    } else {
+    /* scrollTo seems to be affected by leaflet if behavior is set to smooth */
+    //if ( scrollingElement.scrollTo ) {
+        //scrollingElement.scrollTo({top: totop, left: 0, behavior: 'instant'});
+    //} else {
         scrollingElement.scrollTop = totop;
-    }
-    spacenode.querySelector( 'h2' ).focus();
+    //}
+    spacenode.querySelector( 'h2>a' ).focus();
 }
 
 /**
  * Deselects a space in the list, an optionally scrolls the list to the top
  * and recentres the map.
+ * @param {integer} spaceid ID of space which has been deselected
  */
-function deselectSpaces() {
+function deselectSpaces( spaceid ) {
     splog( 'deselectSpaces', 'spaces.js' );
-    document.querySelectorAll('.additionalInfo').forEach( el => {
-        el.textContent = '';
-    });
-    document.querySelectorAll('.list-space').forEach( sp => {
-        sp.classList.remove('active');
-    });
+    if ( document.querySelector('.list-space.active') ) {
+        document.querySelectorAll('.additionalInfo').forEach( el => {
+            el.textContent = '';
+        });
+        document.querySelectorAll('.list-space').forEach( sp => {
+            sp.classList.remove('active');
+        });
+        let deselectedSpace = document.querySelector('.space-title[data-spaceid="' + parseInt( spaceid ) + '"]');
+        console.log( deselectedSpace, spaceid );
+        if ( deselectedSpace ) {
+            deselectedSpace.focus();
+        }
+    }
     //document.getElementById('listcontainer').scrollTop = 0;
 }
 

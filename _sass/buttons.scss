@@ -88,6 +88,10 @@
     &:hover, &:active {
         box-shadow: 0 3px 6px 0 rgba($button-shadow, 0.15), 0 2px 4px 0 rgba($button-shadow, 0.12);
     }
+    &:focus {
+        color: $buttonfocuscolor;
+        background: $buttonfocusbg;
+    }
     .list-space.active & {
         display: inline-block;
     }
