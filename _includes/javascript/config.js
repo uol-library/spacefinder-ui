@@ -10,6 +10,7 @@ const spacefinder = {
     osm: null,
     esri_sat: null,
     currentLoc: {'lat': 53.806529, 'lng': -1.555291},
+    startZoom: 16,
 
     personLoc: {'lat': 53.806529, 'lng': -1.555291},
     personMarker: null,

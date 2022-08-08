@@ -13,9 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
     /* event listener for search + filter changes */
     document.addEventListener( 'viewfilter', applyFilters );
     document.addEventListener( 'filtersapplied', updateListFilterMessage );
-    document.addEventListener( 'spaceSelectedOnMap' e => { selectSpace( e.detail, 'map' ) } );
-    document.addEventListener( 'spaceDeselectedOnMap' e => { deselectSpaces( e.detail ) } );
+
+    /* event listeners for space selection and deselection */
+    document.addEventListener( 'spaceSelected', event => { selectSpace( event.detail ) } );
+    document.addEventListener( 'spaceDeselected', deselectSpaces );
+    document.addEventListener( 'spaceSelectedOnMap', event => { selectSpace( event.detail ) } );
+    document.addEventListener( 'spaceDeselectedFromMap', deselectSpaces );
+    /* set up click events for spaces */
     document.addEventListener( 'click', event => {
+        /**
+         * Show space on map button (only visible on smaller screens)
+         * Changes the view to show the map pane
+         */
         if ( event.target.classList.contains( 'show-map' ) ) {
             event.preventDefault();
             document.dispatchEvent( new CustomEvent( 'viewchange', {
@@ -26,32 +35,43 @@ document.addEventListener('DOMContentLoaded', () => {
                     view: 'map'
                 }
             } ) );
+        /**
+         * Event listener to display space detail
+         * Added to load-info class which is on space headings
+         */
         } else if ( event.target.classList.contains( 'load-info' ) ) {
-            /* event listener to display space detail */
             event.preventDefault();
             let spaceID = event.target.getAttribute( 'data-spaceid' );
             let spacenode = document.querySelector( '[data-id="' + spaceID + '"]' );
             if ( ! spacenode.classList.contains( 'active' ) ) {
-                selectSpace( event.target.getAttribute( 'data-spaceid'), 'list' );
-                e.target.dispatchEvent( new CustomEvent( 'spaceSelectedOnList', { bubbles: true, detail: spaceID } ) );
+                document.dispatchEvent( new CustomEvent( 'spaceSelected', { bubbles: true, detail: spaceID } ) );
             }
-        } else if ( event.target.classList.contains( 'space-closebutton' ) ) {
-            /* activate close buttons on expanded spaces */
-            event.stopPropagation();
-            let spaceID = event.target.getAttribute( 'data-spaceid' );
-            deselectSpaces( false, true );
-            e.target.dispatchEvent( new CustomEvent( 'spaceDeselectedOnList', { bubbles: true, detail: spaceID } ) );
-            window.location.hash = '';
+        /**
+         * Event listener to display space detail
+         * Added to space-summary class which is on the space summary text
+         */
         } else if ( event.target.classList.contains( 'space-summary' ) ) {
-            /* activate space summary click to open space */
             const isTextSelected = window.getSelection().toString();
             /* prevent action is text is selected */
             if ( ! isTextSelected ) {
-                el.querySelector('.load-info').click();
+                event.target.closest('.load-info').click();
             }
+        /**
+         * Activate close buttons on expanded spaces
+         */
+        } else if ( event.target.classList.contains( 'info-closebutton' ) ) {
+            event.preventDefault();
+            let spaceID = event.target.getAttribute( 'data-spaceid' );
+            document.dispatchEvent( new Event( 'spaceDeselected' ) );
+            window.location.hash = '';
+        /**
+         * These remove search terms or filter terms when one of them is
+         * clicked in the filter status message. Maybe need to refactor filter
+         * status message and these events to filters.js?
+         */
         } else if ( event.target.classList.contains( 'search-term' ) ) {
-            e.preventDefault();
-            let searchtext = e.target.getAttribute('data-searchtext');
+            event.preventDefault();
+            let searchtext = event.target.getAttribute('data-searchtext');
             let searchinput = document.getElementById('search-input').value.trim();
             let searchterms = searchinput.split(' ');
             let newsearchterms = [];
@@ -62,9 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             document.getElementById('search-input').value = newsearchterms.join(' ');
             document.dispatchEvent( new Event( 'viewfilter', { bubbles: true } ) );
-        } else if ( e.target.classList.contains( 'filter-term' ) ) {
-            e.preventDefault();
-            let termid = e.target.getAttribute('data-termid');
+        } else if ( event.target.classList.contains( 'filter-term' ) ) {
+            event.preventDefault();
+            let termid = event.target.getAttribute('data-termid');
             document.getElementById( termid ).checked = false;
             document.dispatchEvent( new Event( 'viewfilter', { bubbles: true } ) );
         }
@@ -140,7 +160,7 @@ function applyFilters() {
             el.classList.remove('hidden');
         });
     }
-    deselectSpaces(true,true);
+    document.dispatchEvent( new Event( 'spaceDeselected' ) );
     document.dispatchEvent( new Event( 'filtersapplied' ) );
 }
 
@@ -243,9 +263,8 @@ function selectSpace( spaceid, source ) {
 /**
  * Deselects a space in the list, an optionally scrolls the list to the top
  * and recentres the map.
- * @param {boolean} scrollReset 
  */
-function deselectSpaces( scrollReset ) {
+function deselectSpaces() {
     splog( 'deselectSpaces', 'spaces.js' );
     document.querySelectorAll('.additionalInfo').forEach( el => {
         el.textContent = '';
@@ -253,9 +272,7 @@ function deselectSpaces( scrollReset ) {
     document.querySelectorAll('.list-space').forEach( sp => {
         sp.classList.remove('active');
     });
-    if ( scrollReset ) {
-        document.getElementById('listcontainer').scrollTop = 0;
-    }
+    //document.getElementById('listcontainer').scrollTop = 0;
 }
 
 /**
@@ -277,14 +294,14 @@ function activateSort( activate, sorttype ) {
 }
 /**
  * Function used as an event listener on the sorting buttons
- * @param {Event} e event from button click
+ * @param {Event} event event from button click
  */
-function sortSpacesListener( e ) {
+function sortSpacesListener( event ) {
     splog( 'sortSpacesListener', 'spaces.js' );
-    e.preventDefault();
+    event.preventDefault();
     /* get all the data we need to perform the sort */
-    let sortdir = e.target.getAttribute('data-sortdir');
-    let sortby = e.target.getAttribute('id');
+    let sortdir = event.target.getAttribute('data-sortdir');
+    let sortby = event.target.getAttribute('id');
     /* determine direction from current attribute value */
     let dir = ( sortdir == 'desc' || sortdir == '' ) ? true: false;
     /* perform the sort */
@@ -312,7 +329,7 @@ function sortSpaces( sortby, dir ) {
     listitemsArray.forEach( el => {
         listcontainer.appendChild( el );
     });
-    deselectSpaces(true);
+    document.dispatchEvent( new Event( 'spaceDeselected' ) );
     listcontainer.querySelector( 'h2' ).focus();
 }
 

@@ -13,8 +13,9 @@ function initMap() {
     document.addEventListener( 'sfmaploaded', checkGeo );
     document.addEventListener( 'filtersapplied', filterMarkers );
     document.addEventListener( 'spacesloaded', maybeSetupMap );
+    document.addEventListener( 'filtersloaded', maybeSetupMap );
     document.addEventListener( 'sfmaploaded', maybeSetupMap );
-    spacefinder.map = L.map('map' ).setView([spacefinder.currentLoc.lat, spacefinder.currentLoc.lng], spacefinder.startZoom );
+    spacefinder.map = L.map( 'map' ).setView([spacefinder.currentLoc.lat, spacefinder.currentLoc.lng], spacefinder.startZoom );
     spacefinder.osm = L.tileLayer( 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© <a target="attribution" href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -86,7 +87,7 @@ function initMap() {
  */
 function maybeSetupMap() {
     splog( 'maybeSetupMap', 'map-leaflet.js' );
-    if ( spacefinder.mapLoaded && spacefinder.spacesLoaded ) {
+    if ( spacefinder.mapLoaded && spacefinder.spacesLoaded && spacefinder.filtersLoaded ) {
 
         /* collect latLng coordinates here to define map bounds */
         let pointsArray = [];
@@ -126,19 +127,26 @@ function maybeSetupMap() {
         spacefinder.map.addLayer( spacefinder.markergroup );
 
         /* use popupopen and popupclose events to select and deselect spaces from map */
-        spacefinder.map.on( 'popupopen', e => {
-            e.target.dispatchEvent( new CustomEvent( 'spaceSelectedOnMap', { bubbles: true, detail: e.popup.spaceID } ) );
+        spacefinder.map.on( 'popupopen', event => {
+            zoomMapToSpace( event.popup.spaceID );
+            document.dispatchEvent( new CustomEvent( 'spaceSelectedOnMap', { bubbles: true, detail: event.popup.spaceID } ) );
         });
-        spacefinder.map.on( 'popupclose', e => {
-            e.target.dispatchEvent( new CustomEvent( 'spaceDeselectedOnMap', { bubbles: true, detail: e.popup.spaceID } ) );
+        spacefinder.map.on( 'popupclose', event => {
+            document.dispatchEvent( new Event( 'spaceDeselectedFromMap' ) );
         });
 
-        /* make sure the map view encompasses all markers */
-        spacefinder.map.fitBounds( pointsArray );
+        /* respond to corresponding events from list */
+        document.addEventListener( 'spaceSelected', event => { zoomMapToSpace( event.detail ) } );
+        document.addEventListener( 'spaceDeselected', deselectSpacesFromMap );
+    
+        /* Make sure the map view encompasses all markers */
+        if ( pointsArray.length ) {
+            spacefinder.map.fitBounds( pointsArray );
+        }
 
         /* save the map bounds and zoom to enable resetting */
         spacefinder.mapBounds = spacefinder.map.getBounds();
-        spacefinder.mapZoom = spacefinder.map.getZoom();
+        spacefinder.mapZoom = parseInt( spacefinder.map.getZoom() );
         
         /**
          * Create a button to switch base layers between streets (OpenStreetMap)
@@ -170,9 +178,9 @@ function maybeSetupMap() {
         L.control.mapTypeControl( { position: 'topright' } ).addTo( spacefinder.map );
 
         /* add listener to map type button to toggle base layer */
-        document.addEventListener('click', e => {
-            if ( e.target.matches('.maptype-button') ) {
-                let currentType = e.target.getAttribute('data-currentType');
+        document.addEventListener('click', event => {
+            if ( event.target.matches('.maptype-button') ) {
+                let currentType = event.target.getAttribute('data-currentType');
                 let newType = currentType == 'street' ? 'satellite': 'street';
                 let mapTypeButton = document.querySelector('button.maptype-button');
                 if ( mapTypeButton ) {
@@ -239,8 +247,9 @@ function recentreMap() {
  * Zooms the map to show a particular space
  * @param {Object} space
  */
-function zoomMapToSpace( space ) {
+function zoomMapToSpace( spaceid ) {
     splog( 'zoomMapToSpace', 'map-leaflet.js' );
+    let space = getSpaceById( spaceid );
     let newCenter = L.latLng( space.lat, space.lng );
     space.popup.setLatLng( newCenter ).openOn( spacefinder.map );
     spacefinder.map.setView( newCenter, 18 );
@@ -255,6 +264,7 @@ function zoomMapToSpace( space ) {
     splog( 'deselectSpacesFromMap', 'map-leaflet.js' );
     spacefinder.map.closePopup();
     if ( recentre ) {
+        splog('recentring map', 'map-leaflet.js' );
         recentreMap();
     } else if ( spacefinder.map.getZoom() > 17 ) {
         spacefinder.map.zoomOut();
@@ -267,9 +277,9 @@ function zoomMapToSpace( space ) {
 function filterMarkers() {
     splog( 'filterMarkers', 'map-leaflet.js' );
     let markersToAdd = [];
-    document.querySelectorAll('.list-space').forEach( el => {
-        let space = getSpaceById( el.getAttribute('data-id') );
-        if ( ! el.classList.contains('hidden') ) {
+    document.querySelectorAll('.list-space').forEach( element => {
+        let space = getSpaceById( element.getAttribute('data-id') );
+        if ( ! element.classList.contains('hidden') ) {
             markersToAdd.push( space.marker );
         }
     });
@@ -288,9 +298,9 @@ function filterMarkers() {
 function toggleGeolocation( enable ) {
     splog( 'toggleGeolocation', 'map-leaflet.js' );
     if ( enable ) {
-        document.querySelectorAll( '.geo-button' ).forEach( e => e.disabled = false );
+        document.querySelectorAll( '.geo-button' ).forEach( element => element.disabled = false );
     } else {
-        document.querySelectorAll( '.geo-button' ).forEach( e => e.disabled = true );
+        document.querySelectorAll( '.geo-button' ).forEach( element => element.disabled = true );
     }
 }
 
@@ -303,10 +313,10 @@ function toggleGeolocation( enable ) {
 function activateGeolocation( activate ) {
     splog( 'activateGeolocation', 'map-leaflet.js' );
     if ( activate ) {
-        document.querySelectorAll( '.geo-button' ).forEach( e => {
-            e.classList.add('active');
-            e.setAttribute('aria-label','Stop using my location')
-            e.setAttribute('title','Stop using my location')
+        document.querySelectorAll( '.geo-button' ).forEach( element => {
+            element.classList.add('active');
+            element.setAttribute('aria-label','Stop using my location')
+            element.setAttribute('title','Stop using my location')
         });
         document.addEventListener( 'userlocationchanged', movePersonMarker );
         document.dispatchEvent(new CustomEvent('sfanalytics', {
@@ -315,10 +325,10 @@ function activateGeolocation( activate ) {
             }
         }));
     } else {
-        document.querySelectorAll( '.geo-button' ).forEach( e => {
-            e.classList.remove('active');
-            e.setAttribute('aria-label','Use my location')
-            e.setAttribute('title','Use my location')
+        document.querySelectorAll( '.geo-button' ).forEach( element => {
+            element.classList.remove('active');
+            element.setAttribute('aria-label','Use my location')
+            element.setAttribute('title','Use my location')
         });
         document.removeEventListener( 'userlocationchanged', movePersonMarker );
         /* remove sorting indicator from all buttons */
@@ -456,8 +466,8 @@ function checkGeoAvailable() {
         L.control.geoControl( { position: 'topright' } ).addTo( spacefinder.map );
 
         /* add listener to buttons to toggle geolocation */
-        document.addEventListener('click', e => {
-            if ( e.target.matches('.geo-button') ) {
+        document.addEventListener('click', event => {
+            if ( event.target.matches('.geo-button') ) {
                 if ( ! geolocationEnabled() ) {
                     return;
                 }
@@ -558,7 +568,7 @@ function updateDistances() {
     } else {
         let spacenodes = document.querySelectorAll('.list-space');
         if ( spacenodes !== null ) {
-            spacenodes.forEach( el => el.setAttribute('data-sortdistance', '') );
+            spacenodes.forEach( element => element.setAttribute('data-sortdistance', '') );
         }
     }
 }
