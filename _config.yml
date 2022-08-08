@@ -5,12 +5,9 @@ description: >-
   the University of Cambridge
   https://spacefinder.lib.cam.ac.uk/
 baseurl: ""
-url: "https://spacefinder.leeds.ac.uk/"
+url: "https://lively-coast-02f6b8403.1.azurestaticapps.net"
 host: "localhost"
 photo_dir: "/assets/photos/"
-#google_maps_api_key: "AIzaSyB5KjIF7J9qrj1S23l0m1BWUT4Pk_6cOxA"
-#google_maps_api_key: "AIzaSyBrAkYSJYjm6k9ultU71meFVsvxWR--97o"
-google_analytics: "G-6LHKST5028"
 sass:
   style: compressed
 plugins:
