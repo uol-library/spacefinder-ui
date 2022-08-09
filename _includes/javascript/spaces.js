@@ -251,9 +251,7 @@ function selectSpace( spaceid, source ) {
     let scrollingElement = document.getElementById('listcontainer');
     let listContainer = document.getElementById('listcontent');
     let listFilters = document.getElementById('listfilters');
-    console.log(spacenode.offsetTop, listFilters.offsetHeight, listContainer.offsetTop);
     let totop = ( spacenode.offsetTop + listFilters.offsetHeight ) - listContainer.offsetTop;
-    console.log(totop);
     /* scroll into view */
     /* scrollTo seems to be affected by leaflet if behavior is set to smooth */
     //if ( scrollingElement.scrollTo ) {
