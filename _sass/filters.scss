@@ -50,11 +50,11 @@
                     border-radius: 3px;
                 }
                 label {
+                    position: relative;
                     user-select: none;
                     cursor: pointer;
                     padding-left: 2.3rem;
                     display: block;
-                    z-index: 1;
                 }
                 span {
                     position: absolute;
@@ -62,7 +62,6 @@
                     font-size: 1rem;
                     width: 1.8rem;
                     text-align: center;
-                    z-index: 0;				
                 }
                 input[type=checkbox] {
                     position: absolute;
