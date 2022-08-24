@@ -440,7 +440,7 @@ function renderList() {
             spaceHTML += '<div data-imgsrc="' + space.image + '" class="space-image lazy" role="img" aria-label="' + space.imagealt + '"></div>';
         }
         spaceHTML += '<p class="description">' + space.description + '</p></div></div>';
-        spaceHTML += '<div class="additionalInfo" aria-live="polite" id="additionalInfo' + space.id + '"></div>';
+        spaceHTML += '<div class="additionalInfo" id="additionalInfo' + space.id + '"></div>';
         spaceHTML += '</div>';
         spaceContainer.innerHTML = spaceHTML;
         listContainer.append( spaceContainer );
@@ -448,7 +448,7 @@ function renderList() {
     document.getElementById('listshowingcount').textContent = spacetotal;
     document.getElementById('listtotalcount').textContent = spacetotal;
     document.getElementById('searchResultsSummary').setAttribute( 'aria-busy', false );
-    document.getElementById('listcontent').querySelector( 'h2' ).focus();
+    document.getElementById('listcontent').querySelector( 'h2>a' ).focus();
 }
 
 /**
