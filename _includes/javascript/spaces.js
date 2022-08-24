@@ -448,7 +448,7 @@ function renderList() {
     document.getElementById('listshowingcount').textContent = spacetotal;
     document.getElementById('listtotalcount').textContent = spacetotal;
     document.getElementById('searchResultsSummary').setAttribute( 'aria-busy', false );
-    document.getElementById('listcontent').setAttribute( 'aria-busy', false );
+    document.getElementById('listcontent').querySelector( 'h2' ).focus();
 }
 
 /**
