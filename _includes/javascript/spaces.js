@@ -282,6 +282,7 @@ function deselectSpaces( spaceid ) {
             deselectedSpace.focus();
         }
     }
+    window.location.hash = '';
     //document.getElementById('listcontainer').scrollTop = 0;
 }
 

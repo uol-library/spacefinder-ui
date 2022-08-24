@@ -44,9 +44,10 @@ function initMap() {
     document.dispatchEvent( new Event( 'sfmaploaded' ) );
 
     /**
-     * Returns to list view from map "more info" button
+     * Add click listeners
      */
     document.addEventListener( 'click', event => {
+        /* Returns to list view from map "more info" button */
         if ( event.target.classList.contains('show-list') ) {
             event.preventDefault();
             document.dispatchEvent( new CustomEvent( 'viewchange', {
@@ -57,6 +58,10 @@ function initMap() {
                     view: 'list'
                 }
             } ) );
+        }
+        /* prevents the close button on popups changing the anchor */
+        if ( event.target.classList.contains( 'leaflet-popup-close-button' ) || event.target.parentNode.classList.contains( 'leaflet-popup-close-button' ) ) {
+            event.preventDefault();
         }
     });
 

@@ -60,7 +60,7 @@
   "floor": "Level 3",
   "restriction": "Library Card needed",
   "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17354",
-  "published": false,
+  "published": true,
   "url": "https://library.leeds.ac.uk/",
   "campusmap_ref": null,
   "work": [
@@ -72,11 +72,13 @@
   "space_type": "Library",
   "building": "Clinical Sciences building",
   "address": "St James's University Hospital, Beckett St, Harehills, Leeds LS9 7LN",
+  "phone_number": "",
   "location": "{\"type\":\"Point\",\"coordinates\":[-1.5199219,53.8079267]}",
   "facebook_url": "https://www.facebook.com/leedsuniversitylibrary",
   "title": "St James's University Hospital Library",
   "noise": "Whispers",
   "restricted": true,
+  "image": "",
   "id": 89,
   "description": "Based on level 3 of the Clinical Sciences building, St James’s University Hospital Library supports the information needs of University research and teaching staff, medical and healthcare students, and employees of the Leeds Teaching Hospitals Trust."
 }
