@@ -4,6 +4,10 @@
     color: $topbarcolor;
     z-index: 10;
     padding: $topbarpadding;
+    a {
+        background: $topbarbg;
+        color: $topbarcolor;
+    }
     svg {
         path {
             fill: $topbarcolor;
