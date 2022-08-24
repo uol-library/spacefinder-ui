@@ -174,7 +174,7 @@ function updateListFilterMessage() {
     let container = document.getElementById('listfilters');
     /* empty any existing messages and hide */
     container.textContent = '';
-    container.setAttribute('hidden', true);
+    container.setAttribute( 'hidden', '' );
     let searchmessage = filtermessage = resultsmessage = '';
     if ( activeFilters.length ) {
         /* add search and filter messages - buttons will remove filters/terms */
