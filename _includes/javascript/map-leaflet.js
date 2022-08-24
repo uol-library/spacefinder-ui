@@ -118,6 +118,7 @@ function maybeSetupMap() {
                 pointsArray.push( [ spacefinder.spaces[i].lat, spacefinder.spaces[i].lng ] );
                 spacefinder.spaces[i].marker = L.marker( spacePosition, {
                     alt: spacefinder.spaces[i].title,
+                    title: spacefinder.spaces[i].title,
                     icon: getSVGIcon( 'space-marker' )
                 });
                 spacefinder.markergroup.addLayer(spacefinder.spaces[i].marker);
