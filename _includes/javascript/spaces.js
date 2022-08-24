@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         checkOpeningHours();
         setInterval( checkOpeningHours, (30*1000) );
         activateSort(true, 'alpha');
-        sortSpaces( 'sortalpha', true );
+        //sortSpaces( 'sortalpha', true );
     });
     loadSpaces();
     /* event listener for search + filter changes */
@@ -386,7 +386,17 @@ function loadSpaces() {
                 spacefinder.spaces[index] = space;
                 spacefinder.spaces[index].link = '#/space/' + space.slug;
                 spacefinder.spaces[index].classes = getClassList( space );
+                spacefinder.spaces[index].sortKey = space.title.replace( /[^0-9a-zA-Z]/g, '').toLowerCase();
             });
+            spacefinder.spaces.sort( (a, b) => {
+                if ( a.sortKey < b.sortKey ) {
+                    return -1;
+                }
+                if ( a.sortKey > b.sortKey ) {
+                    return 1;
+                }
+                return 0;
+            } );
             spacefinder.spacesLoaded = true;
             /* fire the spacesloaded event */
             document.getElementById('list').dispatchEvent( new Event( 'spacesloaded', {
@@ -403,14 +413,14 @@ function loadSpaces() {
  */
 function renderList() {
     splog( 'renderList', 'spaces.js' );
-    let listContainer = document.getElementById('listcontent');
+    let listContainer = document.getElementById( 'listcontent' );
     let spacetotal = 0;
     spacefinder.spaces.forEach( space => {
         spacetotal++;
         spaceContainer = document.createElement('div');
-        spaceContainer.setAttribute('data-id', space.id );
-        spaceContainer.setAttribute('data-sortalpha', space.title.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() );
-        spaceContainer.setAttribute('class', space.classes );
+        spaceContainer.setAttribute( 'data-id', space.id );
+        spaceContainer.setAttribute( 'data-sortalpha', space.sortKey );
+        spaceContainer.setAttribute( 'class', space.classes );
         let spaceHTML = '<div class="space-summary"><h2><a href="' + space.link + '" class="space-title load-info" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">' + space.title + '</a><button class="info-closebutton icon-close" data-spaceid="' + space.id + '"><span class="visuallyhidden">Close</span></button></h2>';
         spaceHTML += '<p class="info"><span class="space-type space-type-' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + '">' + space.space_type + '</span>';
         spaceHTML += '<span class="distance">(1,353 metres)</span>';
@@ -435,8 +445,10 @@ function renderList() {
         spaceContainer.innerHTML = spaceHTML;
         listContainer.append( spaceContainer );
     });
+    document.getElementById('searchResultsSummary').setAttribute( 'aria-busy', true );
     document.getElementById('listshowingcount').textContent = spacetotal;
     document.getElementById('listtotalcount').textContent = spacetotal;
+    document.getElementById('searchResultsSummary').setAttribute( 'aria-busy', false );
 }
 
 /**
