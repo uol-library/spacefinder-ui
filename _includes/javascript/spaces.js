@@ -36,15 +36,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             } ) );
         /**
-         * Event listener to display space detail
+         * Event listener to show/hide space detail
          * Added to load-info class which is on space headings
          */
         } else if ( event.target.classList.contains( 'load-info' ) ) {
             event.preventDefault();
-            let spaceID = event.target.getAttribute( 'data-spaceid' );
-            let spacenode = document.querySelector( '[data-id="' + spaceID + '"]' );
-            if ( ! spacenode.classList.contains( 'active' ) ) {
-                document.dispatchEvent( new CustomEvent( 'spaceSelected', { bubbles: true, detail: { id: spaceID, src: 'list' } } ) );
+            if ( event.target.getAttribute( 'aria-expanded' ) === 'true' ) {
+                let spaceID = event.target.getAttribute( 'data-spaceid' );
+                document.dispatchEvent( new CustomEvent( 'spaceDeselected', { bubbles: true, detail: spaceID } ) );
+                event.target.setAttribute( 'aria-expanded', 'false' );
+                window.location.hash = '';
+            } else {
+                let spaceID = event.target.getAttribute( 'data-spaceid' );
+                let spacenode = document.querySelector( '[data-id="' + spaceID + '"]' );
+                if ( ! spacenode.classList.contains( 'active' ) ) {
+                    document.dispatchEvent( new CustomEvent( 'spaceSelected', { bubbles: true, detail: { id: spaceID, src: 'list' } } ) );
+                }
+                event.target.setAttribute( 'aria-expanded', 'true' );
             }
         /**
          * Event listener to display space detail
@@ -56,14 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if ( ! isTextSelected ) {
                 event.target.closest('.load-info').click();
             }
-        /**
-         * Activate close buttons on expanded spaces
-         */
-        } else if ( event.target.classList.contains( 'info-closebutton' ) ) {
-            event.preventDefault();
-            let spaceID = event.target.getAttribute( 'data-spaceid' );
-            document.dispatchEvent( new CustomEvent( 'spaceDeselected', { bubbles: true, detail: spaceID } ) );
-            window.location.hash = '';
         /**
          * These remove search terms or filter terms when one of them is
          * clicked in the filter status message. Maybe need to refactor filter
@@ -421,7 +421,7 @@ function renderList() {
         spaceContainer.setAttribute( 'data-id', space.id );
         spaceContainer.setAttribute( 'data-sortalpha', space.sortKey );
         spaceContainer.setAttribute( 'class', space.classes );
-        let spaceHTML = '<div class="space-summary"><h2><a href="' + space.link + '" class="space-title load-info" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">' + space.title + '</a><button class="info-closebutton icon-close" data-spaceid="' + space.id + '"><span class="visuallyhidden">Close</span></button></h2>';
+        let spaceHTML = '<div class="space-summary"><h2><button data-slug="' + space.slug + '" class="accordion-trigger space-title load-info" aria-expanded="false" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">' + space.title + '</button></h2>';
         spaceHTML += '<p class="info"><span class="space-type space-type-' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + '">' + space.space_type + '</span>';
         spaceHTML += '<span class="distance">(1,353 metres)</span>';
         let loc = '';
@@ -448,7 +448,7 @@ function renderList() {
     document.getElementById('listshowingcount').textContent = spacetotal;
     document.getElementById('listtotalcount').textContent = spacetotal;
     document.getElementById('searchResultsSummary').setAttribute( 'aria-busy', false );
-    document.getElementById('listcontent').querySelector( 'h2>a' ).focus();
+    document.getElementById('listcontent').querySelector( 'h2' ).focus();
 }
 
 /**

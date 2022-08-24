@@ -20,7 +20,6 @@ class Accordion {
 
 	onButtonClick( event ) {
 		event.preventDefault();
-		console.log('click');
 		this.toggle(!this.open);
 	}
 

@@ -90,7 +90,7 @@ function renderFilters() {
                 fl.setAttribute( 'aria-hidden', ( filter.open ? 'false': 'true' ) );
                 fl.setAttribute( 'aria-labelledby', 'trigger-' + filter.key );
                 if ( ! filter.open ) {
-                    fl.setAttribute( 'hidden', true );
+                    fl.setAttribute( 'hidden', '' );
                 }
             }
             fs.appendChild( ld );

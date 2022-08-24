@@ -50,9 +50,6 @@
                     margin: 0 0 1em 0;
                 }
             }
-            .space-title {
-                cursor: default;
-            }
         }
         .space-summary {
             cursor: pointer;
@@ -94,10 +91,6 @@
         h2 {
             font-weight: normal;
             padding-bottom: .3rem;
-            display: flex;
-            a {
-                flex-grow: 1;
-            }
             &:focus {
                 outline: 1px dotted $spacesubheadborder;
             }

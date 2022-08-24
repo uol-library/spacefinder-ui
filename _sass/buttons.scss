@@ -74,6 +74,39 @@
         box-shadow: 0 3px 6px 0 rgba($button-shadow, 0.15), 0 2px 4px 0 rgba($button-shadow, 0.12);
     }
 }
+.space-title {
+    border: none;
+    position:relative;
+    font-size: inherit;
+    display: block;
+    background: $spacebg;
+    padding: 0 2em 0 0;
+    margin: 0;
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+    &::after {
+        content: "\E620";
+        position:absolute;
+        right: 0;
+        top: 0;
+        font-family: 'spacefinder-new';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        display: inline-block;
+        text-decoration: inherit;
+    }
+    .active & {
+        background: $activespacebg;
+		&::after {
+			content: "\E61E";
+		}
+    }
+}
 .info-closebutton {
     float: right;
     margin: 0 0 0 1em;
