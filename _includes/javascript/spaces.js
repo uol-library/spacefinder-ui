@@ -445,10 +445,10 @@ function renderList() {
         spaceContainer.innerHTML = spaceHTML;
         listContainer.append( spaceContainer );
     });
-    document.getElementById('searchResultsSummary').setAttribute( 'aria-busy', true );
     document.getElementById('listshowingcount').textContent = spacetotal;
     document.getElementById('listtotalcount').textContent = spacetotal;
     document.getElementById('searchResultsSummary').setAttribute( 'aria-busy', false );
+    document.getElementById('listcontent').setAttribute( 'aria-busy', false );
 }
 
 /**
