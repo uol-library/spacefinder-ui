@@ -445,10 +445,7 @@ function renderList() {
         spaceContainer.innerHTML = spaceHTML;
         listContainer.append( spaceContainer );
     });
-    document.getElementById('listshowingcount').textContent = spacetotal;
-    document.getElementById('listtotalcount').textContent = spacetotal;
-    document.getElementById('searchResultsSummary').setAttribute( 'aria-busy', false );
-    document.getElementById('listcontent').querySelector( 'h2' ).focus();
+    document.getElementById('searchResultsSummary').innerHTML = 'Showing <span id="listshowingcount">' + spacetotal + '</span> of <span id="listtotalcount">' + spacetotal + '</span> spaces';
 }
 
 /**
