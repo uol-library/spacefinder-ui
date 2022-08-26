@@ -55,14 +55,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 event.target.setAttribute( 'aria-expanded', 'true' );
             }
         /**
-         * Event listener to display space detail
-         * Added to space-summary class which is on the space summary text
+         * Event listener to display space detail when info (type, address) or details
+         * (description and image) are clicked
          */
-        } else if ( event.target.classList.contains( 'space-summary' ) ) {
+        } else if ( event.target.parentElement.classList.contains( 'space-details' ) || event.target.className == 'space-info' ) {
             const isTextSelected = window.getSelection().toString();
+            const titleButton = event.target.closest( '.space-summary' ).querySelector( '.load-info' );
             /* prevent action is text is selected */
-            if ( ! isTextSelected ) {
-                event.target.closest('.load-info').click();
+            if ( ! isTextSelected && titleButton ) {
+                if ( titleButton.getAttribute( 'aria-expanded' ) !== 'true' ) {
+                    titleButton.click();
+                }
             }
         /**
          * These remove search terms or filter terms when one of them is
@@ -206,10 +209,11 @@ function updateListFilterMessage() {
         });
     }
     /* get count of spaces */
-    let spacesShowing = document.querySelectorAll('.list-space').length;
+    let spacetotal = document.querySelectorAll('.list-space').length;
+    let spacesShowing = spacetotal;
     /* decrease spaces count if some are hidden */
-    if (document.querySelectorAll('.list-space.hidden') != null ) {
-        spacesShowing = document.querySelectorAll('.list-space').length - document.querySelectorAll('.list-space.hidden').length;
+    if ( document.querySelectorAll( '.list-space.hidden' ) != null ) {
+        spacesShowing -= document.querySelectorAll('.list-space.hidden').length;
         /* show zero results message */
         if ( spacesShowing == 0 ) {
             resultsmessage = '<p class="noresults">Sorry, your search has found no results - try removing some of your search criteria.</p>';
@@ -221,7 +225,7 @@ function updateListFilterMessage() {
         container.removeAttribute('hidden');
     }
     /* update spaces showing count */
-    document.getElementById('listshowingcount').textContent = spacesShowing;
+    document.getElementById( 'searchResultsSummary' ).textContent = 'Showing ' + spacesShowing + ' of ' + spacetotal + ' spaces';
 }
 
 /**
@@ -252,14 +256,7 @@ function selectSpace( spaceid, source ) {
     let listContainer = document.getElementById('listcontent');
     let listFilters = document.getElementById('listfilters');
     let totop = ( spacenode.offsetTop + listFilters.offsetHeight ) - listContainer.offsetTop;
-    /* scroll into view */
-    /* scrollTo seems to be affected by leaflet if behavior is set to smooth */
-    //if ( scrollingElement.scrollTo ) {
-        //scrollingElement.scrollTo({top: totop, left: 0, behavior: 'instant'});
-    //} else {
-        scrollingElement.scrollTop = totop;
-    //}
-    spacenode.querySelector( 'h2>a' ).focus();
+    scrollingElement.scrollTop = totop;
 }
 
 /**
@@ -277,13 +274,11 @@ function deselectSpaces( spaceid ) {
             sp.classList.remove('active');
         });
         let deselectedSpace = document.querySelector('.space-title[data-spaceid="' + parseInt( spaceid ) + '"]');
-        console.log( deselectedSpace, spaceid );
         if ( deselectedSpace ) {
-            deselectedSpace.focus();
+            //deselectedSpace.focus();
         }
     }
     window.location.hash = '';
-    //document.getElementById('listcontainer').scrollTop = 0;
 }
 
 /**
@@ -341,7 +336,7 @@ function sortSpaces( sortby, dir ) {
         listcontainer.appendChild( el );
     });
     document.dispatchEvent( new Event( 'spaceDeselected' ) );
-    listcontainer.querySelector( 'h2' ).focus();
+    //listcontainer.querySelector( 'h2' ).focus();
 }
 
 /**
@@ -414,15 +409,14 @@ function loadSpaces() {
 function renderList() {
     splog( 'renderList', 'spaces.js' );
     let listContainer = document.getElementById( 'listcontent' );
-    let spacetotal = 0;
+    let spacetotal = spacefinder.spaces.length;
     spacefinder.spaces.forEach( space => {
-        spacetotal++;
         spaceContainer = document.createElement('div');
         spaceContainer.setAttribute( 'data-id', space.id );
         spaceContainer.setAttribute( 'data-sortalpha', space.sortKey );
         spaceContainer.setAttribute( 'class', space.classes );
         let spaceHTML = '<div class="space-summary"><h2><button data-slug="' + space.slug + '" class="accordion-trigger space-title load-info" aria-expanded="false" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">' + space.title + '</button></h2>';
-        spaceHTML += '<p class="info"><span class="space-type space-type-' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + '">' + space.space_type + '</span>';
+        spaceHTML += '<p class="space-info"><span class="space-type space-type-' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + '">' + space.space_type + '</span>';
         spaceHTML += '<span class="distance">(1,353 metres)</span>';
         let loc = '';
         if ( space.floor !== "" ) {
@@ -445,7 +439,9 @@ function renderList() {
         spaceContainer.innerHTML = spaceHTML;
         listContainer.append( spaceContainer );
     });
-    document.getElementById('searchResultsSummary').innerHTML = 'Showing <span id="listshowingcount">' + spacetotal + '</span> of <span id="listtotalcount">' + spacetotal + '</span> spaces';
+    document.getElementById( 'searchResultsSummary' ).innerHTML = 'Showing ' + spacetotal + ' of ' + spacetotal + ' spaces';
+    document.getElementById( 'listcontent' ).setAttribute( 'tabindex', '-1' );
+    document.getElementById( 'listcontent' ).focus();
 }
 
 /**
@@ -542,7 +538,7 @@ function renderAdditionalInfo( spaceid ) {
             }
         }
         spacenode.querySelector('.additionalInfo').innerHTML = spaceHTML;
-        spacenode.querySelector( 'h2' ).focus();
+        //spacenode.querySelector( 'h2' ).focus();
     }
 }
 /**

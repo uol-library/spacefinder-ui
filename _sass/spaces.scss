@@ -73,21 +73,6 @@
                 margin: 0 1em 1em 0;
             }
         }
-        a {
-            &.button {
-                display: inline-block;
-                min-width: 3em;
-                padding: .5em;
-                margin: 1em 0;
-                color: $buttoncolor;
-                background: $buttonbg;
-                &:hover, &:visited, &:active {
-                    color: $buttoncolor-active;
-                    background: $buttonbg-active;
-                }
-    
-            }
-        }
         h2 {
             font-weight: normal;
             padding-bottom: .3rem;
@@ -95,7 +80,7 @@
                 outline: 1px dotted $spacesubheadborder;
             }
         }
-        p.info {
+        p.space-info {
             font-weight: normal;
             font-size: 1.2rem;
             padding-bottom: .3rem;
