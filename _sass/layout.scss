@@ -60,6 +60,9 @@ body {
             .panel-content {
                 max-height: calc(100vh - (#{$topbarheight} + #{$footerheight} + #{$controlsheight}));
             }
+            &:focus {
+                outline:none;
+            }
         }
         #list {
             .top-controls {
@@ -68,9 +71,15 @@ body {
             .panel-content {
                 max-height: calc(100vh - (#{$topbarheight} + #{$footerheight} + #{$listcontrolsheight}));
             }
+            #listcontent:focus {
+                outline:none;
+            }
         }
         #map {
             height: calc(100vh - (#{$topbarheight} + #{$footerheight}));
+            &:focus {
+                outline:none;
+            }
         }
         @media screen and (min-width: #{$breakpoint-large}) {
             .switch-view {
