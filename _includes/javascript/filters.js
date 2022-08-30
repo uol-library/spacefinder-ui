@@ -67,6 +67,8 @@ function renderFilters() {
     if ( spacefinder.filters.length ) {
         let filterForm = document.createElement( 'form' );
         filterForm.setAttribute( 'id', 'filter-options-form' );
+        filterForm.setAttribute( 'role', 'search' );
+        filterForm.setAttribute( 'aria-label', 'Search and filter spaces' );
         let controlsContainer = document.createElement( 'div' );
         controlsContainer.classList.add( 'top-controls' );
         controlsContainer.innerHTML = '<div><label for="search-input" class="visuallyhidden">Search</label><input id="search-input" type="search" placeholder="Search"></div><div class="searchbuttons"><button type="reset" id="search-reset" class="btn" disabled>Reset</button><button type="submit" id="search-submit" class="btn" aria-controls="searchResultsSummary" disabled>Search</button></div></div>';

@@ -13,7 +13,7 @@
             fill: $topbarcolor;
         }
     }
-    ul.nav {
+    nav>ul {
         list-style: none;
         display: flex;
         column-gap: $topbarpadding;
