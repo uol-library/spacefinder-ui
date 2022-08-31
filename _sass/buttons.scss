@@ -100,7 +100,7 @@
         display: inline-block;
         text-decoration: inherit;
     }
-    .active & {
+    .list-space.active & {
         background: $activespacebg;
 		&::after {
 			content: "\E61E";

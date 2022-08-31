@@ -29,7 +29,7 @@ const spacefinder = {
     geoActive: false,
     watchID: false,
     permission: false,
-   
+
     /* space related config */
     spaces: [],
     spacesLoaded: false,
@@ -40,5 +40,4 @@ const spacefinder = {
     filters: [],
     filtersLoaded: false,
     filtersurl: '{{ site.url }}/filters.json'
-};    
-
+};
