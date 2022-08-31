@@ -4,16 +4,16 @@
  * @param {string} type (localStorage or sessionStorage)
  * @returns {boolean}
  */
-function storageAvailable(type) {
+function storageAvailable( type ) {
     if ( ! canUseLocalStorage() ) {
         return false;
     }
     var storage;
     try {
-        storage = window[type];
+        storage = window[ type ];
         var x = '__storage_test__';
-        storage.setItem(x, x);
-        storage.removeItem(x);
+        storage.setItem( x, x );
+        storage.removeItem( x );
         return true;
     }
     catch(e) {
@@ -28,7 +28,7 @@ function storageAvailable(type) {
             // Firefox
             e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
             // acknowledge QuotaExceededError only if there's something already stored
-            (storage && storage.length !== 0);
+            ( storage && storage.length !== 0 );
     }
 }
 
@@ -39,13 +39,13 @@ function storageAvailable(type) {
  * @param {string} value to set
  * @param {int} ttl Time to live (in hours)
  */
-function setWithExpiry(key, value, ttl) {
+function setWithExpiry( key, value, ttl ) {
     const now = new Date()
     const item = {
         value: value,
-        expiry: now.getTime() + (ttl*60*60*1000),
+        expiry: now.getTime() + ( ttl * 60 * 60 * 1000 ),
     }
-    localStorage.setItem(key, JSON.stringify(item))
+    localStorage.setItem( key, JSON.stringify( item ) )
 }
 
 /**
@@ -55,15 +55,15 @@ function setWithExpiry(key, value, ttl) {
  * 
  * @param {string} key localStorage key
  */
-function getWithExpiry(key) {
-    const itemStr = localStorage.getItem(key)
-    if (!itemStr) {
+function getWithExpiry( key ) {
+    const itemStr = localStorage.getItem( key )
+    if ( ! itemStr ) {
         return null;
     }
-    const item = JSON.parse(itemStr)
+    const item = JSON.parse( itemStr )
     const now = new Date()
-    if (now.getTime() > item.expiry) {
-        localStorage.removeItem(key)
+    if ( now.getTime() > item.expiry ) {
+        localStorage.removeItem( key )
         return null
     }
     return item.value;
@@ -77,14 +77,14 @@ function getWithExpiry(key) {
  * @param {{lat: float, lng: float}} mk2 point 2
  * @returns {Float} distance between mk1 and mk2 in metres
  */
-function haversine_distance(mk1, mk2) {
+function haversine_distance( mk1, mk2 ) {
     var R = 6371071; // Radius of the Earth in metres
-    var rlat1 = mk1.lat * (Math.PI/180); // Convert degrees to radians
-    var rlat2 = mk2.lat * (Math.PI/180); // Convert degrees to radians
-    var difflat = rlat2-rlat1; // Radian difference (latitudes)
-    var difflon = (mk2.lng-mk1.lng) * (Math.PI/180); // Radian difference (longitudes)
-    var d = 2 * R * Math.asin(Math.sqrt(Math.sin(difflat/2)*Math.sin(difflat/2)+Math.cos(rlat1)*Math.cos(rlat2)*Math.sin(difflon/2)*Math.sin(difflon/2)));
-    return Math.round(d);
+    var rlat1 = mk1.lat * ( Math.PI / 180 ); // Convert degrees to radians
+    var rlat2 = mk2.lat * ( Math.PI / 180 ); // Convert degrees to radians
+    var difflat = rlat2 - rlat1; // Radian difference (latitudes)
+    var difflon = ( mk2.lng - mk1.lng ) * ( Math.PI / 180 ); // Radian difference (longitudes)
+    var d = 2 * R * Math.asin( Math.sqrt( Math.sin( difflat / 2 ) * Math.sin( difflat / 2 ) + Math.cos( rlat1 ) * Math.cos( rlat2 ) * Math.sin( difflon / 2 ) * Math.sin( difflon / 2 ) ) );
+    return Math.round( d );
 }
 
 /**
@@ -96,14 +96,14 @@ function haversine_distance(mk1, mk2) {
  * @param {Integer} options.expiry How long to cache the results (in hours) default: 24
  * @param {Function} options.callback callback function with one parameter (JSON parsed response)
  */
-function getJSON(options) {
+function getJSON( options ) {
     if ( ! options.hasOwnProperty( 'key' ) || ! options.hasOwnProperty( 'url' ) ) {
         return;
     }
     if ( ! options.hasOwnProperty( 'expires' ) ) {
         options.expires = 24;
     }
-    if ( storageAvailable('localStorage') && getWithExpiry(options.key) ) {
+    if ( storageAvailable( 'localStorage' ) && getWithExpiry( options.key ) ) {
         splog( "getting data '"+options.key+"' from local storage", "utilities.js" );
         if ( options.hasOwnProperty( 'callback' ) && typeof options.callback == 'function' ) {
             options.callback( JSON.parse( getWithExpiry( options.key ) ) );
@@ -111,11 +111,11 @@ function getJSON(options) {
     } else {
         splog( "getting data '"+options.key+"' from "+options.url, "utilities.js" );
         var oReq = new XMLHttpRequest();
-        oReq.addEventListener("load", function(){
-            if ( storageAvailable('localStorage') ) {
-                var expires = new Date().getTime() + (options.expires*60*60*1000);
-                splog( "storing data '"+options.key+"' in localstorage - expires "+expires, "utilities.js" );
-                setWithExpiry(options.key, this.responseText, options.expires);
+        oReq.addEventListener( 'load', function(){
+            if ( storageAvailable( 'localStorage' ) ) {
+                var expires = new Date().getTime() + ( options.expires * 60 * 60 * 1000 );
+                splog( "storing data '" + options.key + "' in localstorage - expires " + expires, "utilities.js" );
+                setWithExpiry( options.key, this.responseText, options.expires );
             }
             if ( options.hasOwnProperty( 'callback' ) && typeof options.callback == 'function' ) {
                 options.callback( JSON.parse( this.responseText ) );
@@ -145,7 +145,7 @@ function getSpaceById( id ) {
  * @param {string} optionkey
  * @return {Object} filter option object
  */
-function getFilterData( filterkey, optionkey) {
+function getFilterData( filterkey, optionkey ) {
     for (let i = 0; i < spacefinder.filters.length; i++ ) {
         if ( spacefinder.filters[i].key == filterkey ) {
             if ( typeof optionkey !== 'undefined' ) {
@@ -181,7 +181,7 @@ function getFilterData( filterkey, optionkey) {
  * @returns {Object} DOM node
  */
 function getSpaceNodeById( id ) {
-    return document.querySelector('[data-id="'+id+'"]');
+    return document.querySelector( '[data-id="' + id + '"]' );
 }
 
 /**

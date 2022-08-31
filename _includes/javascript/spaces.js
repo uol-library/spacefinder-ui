@@ -1,13 +1,12 @@
 /* setup */
-document.addEventListener('DOMContentLoaded', () => {
-    document.addEventListener('spacesloaded', () => {
+document.addEventListener( 'DOMContentLoaded', () => {
+    document.addEventListener( 'spacesloaded', () => {
         renderList();
         lazyLoadSpaceImages();
         updateDistances();
         checkOpeningHours();
         setInterval( checkOpeningHours, (30*1000) );
         activateSort(true, 'alpha');
-        //sortSpaces( 'sortalpha', true );
     });
     loadSpaces();
     /* event listener for search + filter changes */
@@ -74,20 +73,20 @@ document.addEventListener('DOMContentLoaded', () => {
          */
         } else if ( event.target.classList.contains( 'search-term' ) ) {
             event.preventDefault();
-            let searchtext = event.target.getAttribute('data-searchtext');
-            let searchinput = document.getElementById('search-input').value.trim();
-            let searchterms = searchinput.split(' ');
+            let searchtext = event.target.getAttribute( 'data-searchtext' );
+            let searchinput = document.getElementById( 'search-input' ).value.trim();
+            let searchterms = searchinput.split( ' ' );
             let newsearchterms = [];
             searchterms.forEach( term => {
                 if ( term != searchtext ) {
                     newsearchterms.push( term );
                 }
             });
-            document.getElementById('search-input').value = newsearchterms.join(' ');
+            document.getElementById( 'search-input' ).value = newsearchterms.join(' ');
             document.dispatchEvent( new Event( 'viewfilter', { bubbles: true } ) );
         } else if ( event.target.classList.contains( 'filter-term' ) ) {
             event.preventDefault();
-            let termid = event.target.getAttribute('data-termid');
+            let termid = event.target.getAttribute( 'data-termid' );
             document.getElementById( termid ).checked = false;
             document.dispatchEvent( new Event( 'viewfilter', { bubbles: true } ) );
         }
@@ -100,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function applyFilters() {
     splog( 'applyFilters', 'spaces.js' );
     const activeFilters = getFilterStatus();
-    document.getElementById('listcontainer').scrollTop = 0;
+    document.getElementById( 'listcontainer' ).scrollTop = 0;
     let searchcondition = '';
     if ( activeFilters.length ) {
         activeFilters.forEach( filtergroup => {
@@ -114,8 +113,8 @@ function applyFilters() {
                 }));
             }
         });
-        document.querySelectorAll('.list-space').forEach( el => {
-            el.classList.remove('hidden');
+        document.querySelectorAll( '.list-space' ).forEach( el => {
+            el.classList.remove( 'hidden' );
             let showEl = true;
             activeFilters.forEach( filtergroup => {
                 if ( filtergroup.name == 'search' ) {
@@ -129,7 +128,7 @@ function applyFilters() {
                         showEl = false;
                     }
                 } else if ( filtergroup.name == 'open' ) {
-                    if ( el.getAttribute('data-openclass') != 'open' ) {
+                    if ( el.getAttribute( 'data-openclass' ) != 'open' ) {
                         showEl = false;
                     }
                 } else {
@@ -155,12 +154,12 @@ function applyFilters() {
                 }
             });
             if ( ! showEl ) {
-                el.classList.add('hidden');
+                el.classList.add('hidden' );
             }
         });
     } else {
-        document.querySelectorAll('.list-space').forEach( el => {
-            el.classList.remove('hidden');
+        document.querySelectorAll( '.list-space' ).forEach( el => {
+            el.classList.remove( 'hidden' );
         });
     }
     document.dispatchEvent( new CustomEvent( 'spaceDeselected', { bubbles: true, detail: false } ) );
@@ -174,7 +173,7 @@ function applyFilters() {
 function updateListFilterMessage() {
     splog( 'updateListFilterMessage', 'spaces.js' );
     let activeFilters = getFilterStatus();
-    let container = document.getElementById('listfilters');
+    let container = document.getElementById( 'listfilters' );
     /* empty any existing messages and hide */
     container.textContent = '';
     container.setAttribute( 'hidden', '' );
@@ -187,9 +186,9 @@ function updateListFilterMessage() {
                 searchmessage = '<p>Searching spaces which contain text: ';
                 let termlist = [];
                 f.value.forEach( term => {
-                    termlist.push('<button class="search-term icon-remove" data-searchtext="' + term + '">' + term + '</button>');
+                    termlist.push( '<button class="search-term icon-remove" data-searchtext="' + term + '">' + term + '</button>' );
                 });
-                searchmessage += termlist.join(' or ') + '</p>';
+                searchmessage += termlist.join( ' or ' ) + '</p>';
             } else {
                 let filterdata = getFilterData( f.name );
                 if ( filterdata.options.length === 1 ) {
@@ -200,20 +199,20 @@ function updateListFilterMessage() {
                     f.value.forEach( term => {
                         let termdata = getFilterData( f.name, term );
                         if ( termdata ) {
-                            termlist.push('<button class="filter-term icon-remove" data-termid="' + f.name + '_' + term + '">' + termdata.label + '</button>');
+                            termlist.push( '<button class="filter-term icon-remove" data-termid="' + f.name + '_' + term + '">' + termdata.label + '</button>' );
                         }
                     });
-                    filtermessage += termlist.join(filterdata.additive? ' and ': ' or ') + '</p>';
+                    filtermessage += termlist.join( filterdata.additive ? ' and ': ' or ' ) + '</p>';
                 }
             }
         });
     }
     /* get count of spaces */
-    let spacetotal = document.querySelectorAll('.list-space').length;
+    let spacetotal = document.querySelectorAll( '.list-space' ).length;
     let spacesShowing = spacetotal;
     /* decrease spaces count if some are hidden */
     if ( document.querySelectorAll( '.list-space.hidden' ) != null ) {
-        spacesShowing -= document.querySelectorAll('.list-space.hidden').length;
+        spacesShowing -= document.querySelectorAll( '.list-space.hidden' ).length;
         /* show zero results message */
         if ( spacesShowing == 0 ) {
             resultsmessage = '<p class="noresults">Sorry, your search has found no results - try removing some of your search criteria.</p>';
@@ -222,7 +221,7 @@ function updateListFilterMessage() {
     /* add filter, search and results messages */
     if ( ( searchmessage + filtermessage + resultsmessage ) != '' ) {
         container.innerHTML = searchmessage + filtermessage + resultsmessage;
-        container.removeAttribute('hidden');
+        container.removeAttribute( 'hidden' );
     }
     /* update spaces showing count */
     document.getElementById( 'searchResultsSummary' ).textContent = 'Showing ' + spacesShowing + ' of ' + spacetotal + ' spaces';
@@ -236,8 +235,8 @@ function updateListFilterMessage() {
 function selectSpace( spaceid, source ) {
     splog( 'selectSpace', 'spaces.js' );
     let space = getSpaceById( spaceid );
-    window.location.hash = '/space/'+space.slug;
-    document.dispatchEvent(new CustomEvent('sfanalytics', {
+    window.location.hash = '/space/' + space.slug;
+    document.dispatchEvent(new CustomEvent( 'sfanalytics', {
         detail: {
             type: 'select',
             id: spaceid,
@@ -252,9 +251,9 @@ function selectSpace( spaceid, source ) {
     });
     spacenode.classList.add( 'active' );
     /* find distance from top of listcontainer */
-    let scrollingElement = document.getElementById('listcontainer');
-    let listContainer = document.getElementById('listcontent');
-    let listFilters = document.getElementById('listfilters');
+    let scrollingElement = document.getElementById( 'listcontainer' );
+    let listContainer = document.getElementById( 'listcontent' );
+    let listFilters = document.getElementById( 'listfilters' );
     let totop = ( spacenode.offsetTop + listFilters.offsetHeight ) - listContainer.offsetTop;
     scrollingElement.scrollTop = totop;
 }
@@ -266,17 +265,14 @@ function selectSpace( spaceid, source ) {
  */
 function deselectSpaces( spaceid ) {
     splog( 'deselectSpaces', 'spaces.js' );
-    if ( document.querySelector('.list-space.active') ) {
-        document.querySelectorAll('.additionalInfo').forEach( el => {
+    if ( document.querySelector( '.list-space.active' ) ) {
+        document.querySelectorAll( '.additionalInfo' ).forEach( el => {
             el.textContent = '';
         });
-        document.querySelectorAll('.list-space').forEach( sp => {
-            sp.classList.remove('active');
+        document.querySelectorAll( '.list-space' ).forEach( sp => {
+            sp.classList.remove( 'active' );
         });
-        let deselectedSpace = document.querySelector('.space-title[data-spaceid="' + parseInt( spaceid ) + '"]');
-        if ( deselectedSpace ) {
-            //deselectedSpace.focus();
-        }
+        let deselectedSpace = document.querySelector( '.space-title[data-spaceid="' + parseInt( spaceid ) + '"]' );
     }
     window.location.hash = '';
 }
@@ -288,14 +284,13 @@ function deselectSpaces( spaceid ) {
  */
 function activateSort( activate, sorttype ) {
     splog( 'activateSort', 'spaces.js' );
-    const sortbutton = document.getElementById( 'sort'+sorttype );
+    const sortbutton = document.getElementById( 'sort' + sorttype );
     if ( ! activate ) {
         sortbutton.disabled = true;
-        sortbutton.removeEventListener('click', sortSpacesListener);
+        sortbutton.removeEventListener( 'click', sortSpacesListener );
     } else {
         sortbutton.disabled = false;
-        sortbutton.addEventListener('click', sortSpacesListener);
-        //sortbutton.dispatchEvent(new Event('click'));
+        sortbutton.addEventListener( 'click', sortSpacesListener );
     }
 }
 /**
@@ -306,8 +301,8 @@ function sortSpacesListener( event ) {
     splog( 'sortSpacesListener', 'spaces.js' );
     event.preventDefault();
     /* get all the data we need to perform the sort */
-    let sortdir = event.target.getAttribute('data-sortdir');
-    let sortby = event.target.getAttribute('id');
+    let sortdir = event.target.getAttribute( 'data-sortdir' );
+    let sortby = event.target.getAttribute( 'id' );
     /* determine direction from current attribute value */
     let dir = ( sortdir == 'desc' || sortdir == '' ) ? true: false;
     /* perform the sort */
@@ -330,13 +325,12 @@ function sortSpaces( sortby, dir ) {
     let listcontainer = document.getElementById( 'listcontent' );
     let listitems = document.querySelectorAll( '#listcontent>div' );
     /* sort the list items */
-    let listitemsArray = Array.prototype.slice.call(listitems).sort( comparer( dir, 'data-'+sortby ) );
+    let listitemsArray = Array.prototype.slice.call(listitems).sort( comparer( dir, 'data-' + sortby ) );
     /* add back to the DOM */
     listitemsArray.forEach( el => {
         listcontainer.appendChild( el );
     });
     document.dispatchEvent( new Event( 'spaceDeselected' ) );
-    //listcontainer.querySelector( 'h2' ).focus();
 }
 
 /**
@@ -353,7 +347,7 @@ function comparer( asc, attr ) {
      * @param {(integer|string)} b second value to sort
      * @returns {integer} -1, 0 or 1
      */
-    return function (a, b) {
+    return function ( a, b ) {
         /**
          * Main comparison function. Uses isNaN to distinguish between
          * numeric and alphabetic sorting modes, and localeCompare() to
@@ -381,7 +375,7 @@ function loadSpaces() {
                 spacefinder.spaces[index] = space;
                 spacefinder.spaces[index].link = '#/space/' + space.slug;
                 spacefinder.spaces[index].classes = getClassList( space );
-                spacefinder.spaces[index].sortKey = space.title.replace( /[^0-9a-zA-Z]/g, '').toLowerCase();
+                spacefinder.spaces[index].sortKey = space.title.replace( /[^0-9a-zA-Z]/g, '' ).toLowerCase();
             });
             spacefinder.spaces.sort( (a, b) => {
                 if ( a.sortKey < b.sortKey ) {
@@ -394,7 +388,7 @@ function loadSpaces() {
             } );
             spacefinder.spacesLoaded = true;
             /* fire the spacesloaded event */
-            document.getElementById('list').dispatchEvent( new Event( 'spacesloaded', {
+            document.getElementById( 'list' ).dispatchEvent( new Event( 'spacesloaded', {
                 bubbles: true,
                 cancelable: true,
                 composed: false,
@@ -419,13 +413,13 @@ function renderList() {
         spaceHTML += '<p class="space-info"><span class="space-type space-type-' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + '">' + space.space_type + '</span>';
         spaceHTML += '<span class="distance">(1,353 metres)</span>';
         let loc = '';
-        if ( space.floor !== "" ) {
+        if ( space.floor !== '' ) {
             loc += '<span class="address-floor">' + space.floor + '</span>, ';
         }
-        if ( space.building !== "" ) {
+        if ( space.building !== '' ) {
             loc += '<span class="address-building">' + space.building + '</span>, ';
         }
-        if ( space.address !== "" ) {
+        if ( space.address !== '' ) {
             loc += '<span class="address-location">' + space.address + '</span>';
         }
         spaceHTML += '<span class="address">' + loc + '</span></p>';
@@ -453,7 +447,7 @@ function renderList() {
 function renderAdditionalInfo( spaceid ) {
     splog( 'renderAdditionalInfo', 'spaces.js' );
     /* clear any additional data currently displayed */
-    document.querySelectorAll('.additionalInfo').forEach( el => {
+    document.querySelectorAll( '.additionalInfo' ).forEach( el => {
         el.textContent = '';
     });
 
@@ -467,23 +461,23 @@ function renderAdditionalInfo( spaceid ) {
         }*/
         spaceHTML += '<section class="section-facts"><h3>Key Facts</h3><ul class="bulleticons"><li class="icon-marker switch-view"><a class="show-map" href="#">Show on map</a></li>';
         let loc = '';
-        if ( space.floor !== "" ) {
+        if ( space.floor !== '' ) {
             loc += space.floor + ', ';
         }
-        if ( space.building !== "" ) {
+        if ( space.building !== '' ) {
             loc += space.building + ', ';
         }
-        if ( space.address !== "" ) {
+        if ( space.address !== '' ) {
             loc += space.address;
         }
-        loc += ' (<a target="googlemaps" href="https://www.google.com/maps/dir/?api=1&amp;destination='+space.lat+'%2c' + space.lng + '&amp;travelmode=walking">get directions</a>)';
-        spaceHTML += '<li class="icon-address">'+loc+'</li>';
+        loc += ' (<a target="googlemaps" href="https://www.google.com/maps/dir/?api=1&amp;destination=' + space.lat + '%2c' + space.lng + '&amp;travelmode=walking">get directions</a>)';
+        spaceHTML += '<li class="icon-address">' + loc + '</li>';
         if ( space.url != "" ) {
-            spaceHTML += '<li class="icon-link"><a target="spaceurl" href="'+space.url+'">'+space.url+'</a></li>';
+            spaceHTML += '<li class="icon-link"><a target="spaceurl" href="' + space.url + '">' + space.url + '</a></li>';
         }
-        if ( space.campusmap_url != "" ) {
-            let campusmap_ref = space.campusmap_ref !== "" ? " (map reference "+space.campusmap_ref+")": "";
-            spaceHTML += '<li class="icon-uol-logo-mark"><a target="campusmap" href="'+space.campusmap_url+'">View on campus map</a>' + campusmap_ref + '<li>';
+        if ( space.campusmap_url != '' ) {
+            let campusmap_ref = space.campusmap_ref !== '' ? ' (map reference ' + space.campusmap_ref + ')': '';
+            spaceHTML += '<li class="icon-uol-logo-mark"><a target="campusmap" href="' + space.campusmap_url + '">View on campus map</a>' + campusmap_ref + '<li>';
         }
         if ( space.restricted ) {
             spaceHTML += '<li class="icon-public">Open to ' + space.access;
@@ -492,35 +486,35 @@ function renderAdditionalInfo( spaceid ) {
             }
             spaceHTML += '</li>';
         } else {
-            spaceHTML += '<li class="icon-public">Open to '+space.access+'<li>';
+            spaceHTML += '<li class="icon-public">Open to ' + space.access + '<li>';
         }
         spaceHTML += '</ul></section>';
 
         spaceHTML += '<section class="section-opening"><h3>Opening Times</h3>';
-        spaceHTML += '<p class="icon-time-short" data-openmsg-id="' + space.id + '">' + spacenode.getAttribute('data-openmsg') + '</p>';
+        spaceHTML += '<p class="icon-time-short" data-openmsg-id="' + space.id + '">' + spacenode.getAttribute( 'data-openmsg' ) + '</p>';
         spaceHTML += '<ul class="opening-times">';
-        ["monday","tuesday","wednesday","thursday","friday","saturday","sunday"].forEach( (day, idx) => {
+        [ 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday' ].forEach( (day, idx) => {
             let today = new Date().getDay();
             let todayidx = ( ( idx + 1 ) < 7 ) ? ( idx + 1 ): 0;
             let istodayclass = ( todayidx === today ) ? ' class="today"': '';
             if ( space.opening_hours[day].open ) {
-                spaceHTML += '<li'+istodayclass+'><span class="dayname">'+ day.charAt(0).toUpperCase() + day.slice(1) + '</span> <span class="opening">' + space.opening_hours[day].from + ' - ' + space.opening_hours[day].to +'</span></li>';
+                spaceHTML += '<li' + istodayclass + '><span class="dayname">' + day.charAt(0).toUpperCase() + day.slice(1) + '</span> <span class="opening">' + space.opening_hours[ day ].from + ' - ' + space.opening_hours[ day ].to +'</span></li>';
             } else {
-                spaceHTML += '<li'+istodayclass+'><span class="dayname">'+ day.charAt(0).toUpperCase() + day.slice(1) + '</span> <span class="opening">Closed</span></li>';
+                spaceHTML += '<li' + istodayclass + '><span class="dayname">' + day.charAt(0).toUpperCase() + day.slice(1) + '</span> <span class="opening">Closed</span></li>';
             }
         });
         spaceHTML += '</ul></section>';
-        if ( space.phone_number !== "" || space.twitter_screen_name !== "" || space.facebook_url !== "" ) {
+        if ( space.phone_number !== '' || space.twitter_screen_name !== '' || space.facebook_url !== '' ) {
             spaceHTML += '<section class="section-contact"><h3>Contact</h3><ul class="bulleticons">';
-            if ( space.phone_number !== "" ) {
-                let phoneattr = space.phone_number.replace(/[^0-9]+/g, '').replace(/^0/, '+44');
-                spaceHTML += '<li class="icon-phone"><a href="tel:'+phoneattr+'">'+space.phone_number+'</a></li>';
+            if ( space.phone_number !== '' ) {
+                let phoneattr = space.phone_number.replace( /[^0-9]+/g, '' ).replace( /^0/, '+44' );
+                spaceHTML += '<li class="icon-phone"><a href="tel:' + phoneattr + '">' + space.phone_number + '</a></li>';
             }
-            if ( space.twitter_screen_name !== "" ) {
-                spaceHTML += '<li class="icon-twitter"><a href="https://twitter.com/'+space.twitter_screen_name+'">'+space.twitter_screen_name+'</a></li>';
+            if ( space.twitter_screen_name !== '' ) {
+                spaceHTML += '<li class="icon-twitter"><a href="https://twitter.com/' + space.twitter_screen_name + '">' + space.twitter_screen_name + '</a></li>';
             }
-            if ( space.facebook_url !== "" ) {
-                spaceHTML += '<li class="icon-facebook-squared"><a href="'+space.facebook_url+'">'+space.facebook_url+'</a></li>';
+            if ( space.facebook_url !== '' ) {
+                spaceHTML += '<li class="icon-facebook-squared"><a href="' + space.facebook_url + '">' + space.facebook_url + '</a></li>';
             }
             spaceHTML += '</ul></section>'
         }
@@ -528,7 +522,7 @@ function renderAdditionalInfo( spaceid ) {
         if ( space.facilities.length ) {
             let facilitieslist = '';
             space.facilities.forEach( fac => {
-                let filterData = getFilterData('facilities', fac);
+                let filterData = getFilterData( 'facilities', fac );
                 if ( filterData ) {
                     facilitieslist += '<li class="' + filterData.icon  + '">' + filterData.label + '</li>';
                 }
@@ -537,10 +531,10 @@ function renderAdditionalInfo( spaceid ) {
                 spaceHTML += '<section class="section-facilities"><h3>Facilities</h3><ul class="bulleticons">' + facilitieslist + '</ul></section>';
             }
         }
-        spacenode.querySelector('.additionalInfo').innerHTML = spaceHTML;
-        //spacenode.querySelector( 'h2' ).focus();
+        spacenode.querySelector( '.additionalInfo' ).innerHTML = spaceHTML;
     }
 }
+
 /**
  * Gets a list of classes for a space container to facilitate filtering
  * @param {Object} space Space data
@@ -549,19 +543,19 @@ function renderAdditionalInfo( spaceid ) {
 function getClassList( space ) {
     var classList = 'list-space ';
     if ( space.space_type ) {
-        classList += 'space_type_' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + ' ';
+        classList += 'space_type_' + space.space_type.replace( /[^0-9a-zA-Z]/g, '' ).toLowerCase() + ' ';
     }
-    if (space.work.length){
-        classList += 'work_'+space.work.join(' work_')+' ';
+    if ( space.work.length ){
+        classList += 'work_' + space.work.join( ' work_' ) + ' ';
     }
-    if (space.facilities.length){
-        classList += 'facilities_'+space.facilities.join(' facilities_')+' ';
+    if ( space.facilities.length ){
+        classList += 'facilities_' + space.facilities.join( ' facilities_' ) + ' ';
     }
-    if (space.atmosphere.length){
-        classList += 'atmosphere_'+space.atmosphere.join(' atmosphere_')+' ';
+    if ( space.atmosphere.length ){
+        classList += 'atmosphere_' + space.atmosphere.join( ' atmosphere_' ) + ' ';
     }
-    if (space.noise) {
-        classList += 'noise_'+space.noise.replace(/\W/g, '').toLowerCase();
+    if ( space.noise ) {
+        classList += 'noise_' + space.noise.replace( /\W/g, '' ).toLowerCase();
     }
     return classList;
 }
@@ -573,17 +567,17 @@ function getClassList( space ) {
 function checkOpeningHours() {
     splog( 'checkOpeningHours', 'spaces.js' );
     let today = new Date();
-    let daynames = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+    let daynames = [ 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday' ];
     let todaysday = daynames[ today.getDay() ];
     let timenow = ( today.getHours() * 100 ) + today.getMinutes();
-    spacefinder.spaces.forEach( (space, index) => {
+    spacefinder.spaces.forEach( ( space, index ) => {
         let openmsg = '';
         let openclass = 'currently-closed';
-        let currentClass = document.querySelector('[data-id="' + space.id + '"]').getAttribute( 'data-openclass' );
+        let currentClass = document.querySelector( '[data-id="' + space.id + '"]' ).getAttribute( 'data-openclass' );
         if ( space.opening_hours ) {
-            if ( space.opening_hours[todaysday].open ) {
-                let open_from = getTimeFromString( space.opening_hours[todaysday].from );
-                let open_to = getTimeFromString( space.opening_hours[todaysday].to );
+            if ( space.opening_hours[ todaysday ].open ) {
+                let open_from = getTimeFromString( space.opening_hours[ todaysday ].from );
+                let open_to = getTimeFromString( space.opening_hours[ todaysday ].to );
                 if ( open_from > timenow ) {
                     let openingin = '';
                     let openinmins = ( open_from - timenow ) % 60;
@@ -597,26 +591,26 @@ function checkOpeningHours() {
                     if ( openinmins > 0 ) {
                         openingin += openinmins + 'min' + pl;
                     }
-                    openmsg = "Currently closed (opens in "+openingin+")";
+                    openmsg = 'Currently closed (opens in ' + openingin + ')';
                     openclass = 'opening-later';
                 } else if ( open_to < timenow ) {
                     openclass = 'closed';
-                    openmsg = "Currently closed";
+                    openmsg = 'Currently closed';
                 } else {
                     openclass = 'open';
-                    openmsg = "Currently open";
+                    openmsg = 'Currently open';
                 }
             } else {
-                openmsg = "Closed all day";
+                openmsg = 'Closed all day';
             }
         }
-        document.querySelector('[data-id="' + space.id + '"]').setAttribute('data-openmsg', openmsg );
-        document.querySelector('[data-id="' + space.id + '"]').setAttribute('data-openclass', openclass );
+        document.querySelector( '[data-id="' + space.id + '"]' ).setAttribute( 'data-openmsg', openmsg );
+        document.querySelector( '[data-id="' + space.id + '"]' ).setAttribute( 'data-openclass', openclass );
         /* change message in any spaces showing additional info */
-        if ( document.querySelector('[data-openmsg-id="' + space.id + '"]') != null ) {
-            document.querySelector('[data-openmsg-id="' + space.id + '"]').textContent = openmsg;
-            document.querySelector('[data-openmsg-id="' + space.id + '"]').classList.remove(currentClass);
-            document.querySelector('[data-openmsg-id="' + space.id + '"]').classList.add(openclass);
+        if ( document.querySelector( '[data-openmsg-id="' + space.id + '"]' ) != null ) {
+            document.querySelector( '[data-openmsg-id="' + space.id + '"]' ).textContent = openmsg;
+            document.querySelector( '[data-openmsg-id="' + space.id + '"]' ).classList.remove( currentClass );
+            document.querySelector( '[data-openmsg-id="' + space.id + '"]' ).classList.add( openclass );
             
         }
     });
@@ -628,7 +622,7 @@ function checkOpeningHours() {
  * @returns {integer}
  */
 function getTimeFromString( str ) {
-    let parts = str.split(':');
+    let parts = str.split( ':' );
     return ( parseInt( parts[0] ) * 100 ) + parseInt( parts[1] );
 }
 
@@ -643,13 +637,13 @@ function lazyLoadSpaceImages() {
     var lazyloadImages, lazyloadThrottleTimeout;
 
     if ( "IntersectionObserver" in window ) {
-        lazyloadImages = document.querySelectorAll( ".lazy" );
+        lazyloadImages = document.querySelectorAll( '.lazy');
         const imageObserver = new IntersectionObserver( function( entries, observer ) {
             entries.forEach( function( entry ) {
                 if ( entry.isIntersecting ) {
                     var image = entry.target;
                     image.classList.remove( 'lazy' );
-                    image.setAttribute('style', 'background-image:url(' + spacefinder.imageBaseURL + image.getAttribute('data-imgsrc') + ')');
+                    image.setAttribute( 'style', 'background-image:url(' + spacefinder.imageBaseURL + image.getAttribute('data-imgsrc') + ')');
                     imageObserver.unobserve( image );
                 }
             });

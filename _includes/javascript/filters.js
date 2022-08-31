@@ -9,20 +9,23 @@ document.addEventListener( 'spacesloaded', () => {
     loadFilters();
 });
 
-/* gets the current status of all filters */
+/**
+ * Gets the current status of all filters
+ * @return {Object} activeFilters
+ */
 function getFilterStatus() {
     splog( 'getFilterStatus', 'filters.js' );
-    const filters = document.querySelectorAll('#filters input[type=checkbox]');
+    const filters = document.querySelectorAll( '#filters input[type=checkbox]' );
     const activeFilters = [];
     for (const cbx of filters) {
         if (cbx.checked) {
-            const filterName = cbx.getAttribute('data-filterkey');
-            const filterValue = cbx.getAttribute('data-optionkey');
+            const filterName = cbx.getAttribute( 'data-filterkey' );
+            const filterValue = cbx.getAttribute( 'data-optionkey' );
             let appended = false;
             if ( activeFilters.length ) {
                 for ( let i = 0; i < activeFilters.length; i++ ) {
-                    if ( activeFilters[i].name == filterName && activeFilters[i].value.indexOf(filterValue) == -1 ) {
-                        activeFilters[i].value.push(filterValue);
+                    if ( activeFilters[i].name == filterName && activeFilters[i].value.indexOf( filterValue ) == -1 ) {
+                        activeFilters[i].value.push( filterValue );
                         appended = true;
                     }
                 }
@@ -35,11 +38,11 @@ function getFilterStatus() {
             }
         }
     }
-    let inputvalue = document.getElementById('search-input').value.trim();
+    let inputvalue = document.getElementById( 'search-input' ).value.trim();
     if ( inputvalue.length > 1 ) {
         activeFilters.push({
             name: 'search',
-            value: inputvalue.split(" ")
+            value: inputvalue.split( ' ' )
         });
     }
     return activeFilters;
@@ -64,6 +67,7 @@ function loadFilters() {
  * Builds the filters panel
  */
 function renderFilters() {
+    splog( 'renderFilters', 'filters.js' );
     if ( spacefinder.filters.length ) {
         let filterForm = document.createElement( 'form' );
         filterForm.setAttribute( 'id', 'filter-options-form' );
@@ -116,56 +120,56 @@ function renderFilters() {
     }
 }
 
-/* setup */
+/**
+ * Set up event listeners on filters
+ */
 function setupFilters() {
     splog( 'setupFilters', 'filters.js' );
     /* event listener for filter changes */
-    document.addEventListener('filtersapplied', event => {
+    document.addEventListener( 'filtersapplied', event => {
         const activeFilters = getFilterStatus();
         if ( activeFilters.length ) {
-            document.getElementById('search-reset').removeAttribute('disabled');
-            document.getElementById('search-submit').removeAttribute('disabled');
+            document.getElementById( 'search-reset' ).removeAttribute( 'disabled' );
+            document.getElementById( 'search-submit' ).removeAttribute( 'disabled' );
         } else {
-            let inputvalue = document.getElementById('search-input').value.trim();
+            let inputvalue = document.getElementById( 'search-input' ).value.trim();
             if ( inputvalue.length < 2 ) {
-                document.getElementById('search-reset').setAttribute('disabled', '');
-                document.getElementById('search-submit').setAttribute('disabled', '');
+                document.getElementById( 'search-reset' ).setAttribute( 'disabled', '' );
+                document.getElementById( 'search-submit' ).setAttribute( 'disabled', '' );
             }
         }
     });
 
     /* add radio button behaviour to checkboxes with exclusive attribute */
-    const filters = document.querySelectorAll('#filters input[type=checkbox]');
+    const filters = document.querySelectorAll( '#filters input[type=checkbox]' );
     for (const cbx of filters) {
-        cbx.addEventListener('focus', eventElement => {
-            eventElement.target.closest('li').classList.add('focus');
+        /* add/remove visible focus styles to list items when a checkbox is focussed */
+        cbx.addEventListener( 'focus', eventElement => {
+            eventElement.target.closest( 'li' ).classList.add( 'focus' );
         });
-        cbx.addEventListener('blur', eventElement => {
-            document.querySelectorAll('#filters li').forEach( el => el.classList.remove('focus') );
+        cbx.addEventListener( 'blur', eventElement => {
+            document.querySelectorAll( '#filters li' ).forEach( el => el.classList.remove( 'focus' ) );
         });
 
-        cbx.addEventListener('change', eventElement => {
+        cbx.addEventListener( 'change', eventElement => {
             const item = eventElement.target;
-            if (item.matches('.exclusive')) {
+            if (item.matches( '.exclusive' ) ) {
                 const itemStatus = item.checked;
-                const sibs = item.closest('ul').querySelectorAll('input[type=checkbox].exclusive');
+                const sibs = item.closest( 'ul' ).querySelectorAll( 'input[type=checkbox].exclusive' );
                 for (const sib of sibs) {
                     sib.checked = false;
                 }
                 item.checked = itemStatus;
-            }
-            if ( ! item.checked ) {
-                //item.closest('li').classList.remove('focus');
             }
             /* trigger the viewfilter event */
             item.dispatchEvent( new Event( 'viewfilter', { bubbles: true } ) );
         })
     }
     /* reset button */
-    document.getElementById('search-reset').addEventListener('click', event => {
+    document.getElementById( 'search-reset' ).addEventListener( 'click', event => {
         event.preventDefault();
-        document.getElementById('filter-options-form').reset();
-        const filters = document.querySelectorAll('#filters input[type=checkbox]');
+        document.getElementById( 'filter-options-form' ).reset();
+        const filters = document.querySelectorAll( '#filters input[type=checkbox]' );
         for (const cbx of filters) {
             cbx.checked = false;
         }
@@ -173,16 +177,16 @@ function setupFilters() {
         event.target.dispatchEvent( new Event( 'viewfilter', { bubbles: true }  ) );
     });
     /* search, reset and view results buttons activation */
-    document.getElementById('search-input').addEventListener('input', event => {
-        let inputvalue = document.getElementById('search-input').value.trim();
+    document.getElementById( 'search-input' ).addEventListener( 'input', event => {
+        let inputvalue = document.getElementById( 'search-input' ).value.trim();
         if ( inputvalue.length > 1 ) {
-            document.getElementById('search-reset').removeAttribute('disabled');
-            document.getElementById('search-submit').removeAttribute('disabled');
+            document.getElementById( 'search-reset' ).removeAttribute( 'disabled' );
+            document.getElementById( 'search-submit' ).removeAttribute( 'disabled' );
         } else {
-            const checkedfilters = document.querySelectorAll('#filters input[type=checkbox]:checked');
+            const checkedfilters = document.querySelectorAll( '#filters input[type=checkbox]:checked' );
             if ( checkedfilters == null ) {
-                document.getElementById('search-reset').setAttribute('disabled', '');
-                document.getElementById('search-submit').setAttribute('disabled', '');
+                document.getElementById( 'search-reset' ).setAttribute( 'disabled', '' );
+                document.getElementById( 'search-submit' ).setAttribute( 'disabled', '' );
             }
             if ( inputvalue.length == 0 ) {
                 /* search has been cleared */
@@ -191,15 +195,15 @@ function setupFilters() {
         }
     });
     /* search action */
-    document.getElementById('search-submit').addEventListener('click', event => {
+    document.getElementById( 'search-submit' ).addEventListener( 'click', event => {
         event.preventDefault();
-        let inputvalue = document.getElementById('search-input').value.replace(/[^a-zA-Z0-9 ]/g, '').trim();
+        let inputvalue = document.getElementById( 'search-input' ).value.replace( /[^a-zA-Z0-9 ]/g, '' ).trim();
         splog( inputvalue, 'filters.js' );
         if ( inputvalue.length > 1 ) {
-            document.getElementById('search-input').value = inputvalue;
+            document.getElementById( 'search-input' ).value = inputvalue;
             /* trigger the viewfilter event */
             event.target.dispatchEvent( new Event( 'viewfilter', { bubbles: true } ) );
-            document.dispatchEvent(new CustomEvent('sfanalytics', {
+            document.dispatchEvent( new CustomEvent( 'sfanalytics', {
                 detail: {
                     type: 'search',
                     terms: inputvalue
@@ -208,7 +212,7 @@ function setupFilters() {
 
         }
         /* switch to list view */
-        document.getElementById('top-bar').dispatchEvent( new CustomEvent( 'viewchange', {
+        document.getElementById( 'top-bar' ).dispatchEvent( new CustomEvent( 'viewchange', {
             bubbles: true,
             cancelable: true,
             composed: false,
@@ -217,10 +221,10 @@ function setupFilters() {
             }
         } ) );
     });
-    // init accordions
-	const accordions = document.querySelectorAll('.accordion');
-	accordions.forEach((accordionEl) => {
-		new Accordion(accordionEl);
+    /* init accordions */
+	const accordions = document.querySelectorAll( '.accordion' );
+	accordions.forEach( accordionEl => {
+		new Accordion( accordionEl );
 	});
 }
 
