@@ -2,7 +2,7 @@
  * SpaceFinder configuration
  */
 const spacefinder = {
-    debug: true,
+    debug: false,
 
     /* CSS breakpoints */
     breakpoints: {
