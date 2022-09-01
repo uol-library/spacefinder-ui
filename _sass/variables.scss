@@ -163,6 +163,8 @@ $buttoncolor-secondary: $color-brand-2--dark;
 $buttonborder-secondary: $color-brand-2--dark;
 $buttonbg-secondary: $color-white;
 $button-shadow: $color-black;
+$buttonfocusbg: $color-brand--dark;
+$buttonfocuscolor: $color-white;
 
 /* cookie consent */
 $cc-bg: $color-white;
@@ -186,3 +188,7 @@ $cc-cookie-table-border: $color-grey--faded;
 $cc-overlay-bg: rgba(4, 6, 8, .85);
 $cc-webkit-scrollbar-bg: $color-warmgrey--light;
 $cc-webkit-scrollbar-bg-hover: $color-warmgrey;
+
+/* map */
+$space-icon-fill: $color-brand;
+$space-icon-stroke: $color-brand--dark;

@@ -1,31 +1,90 @@
 #map {
+    position:relative;
     .geo-button {
         margin-right: 10px;
-        width: 40px;
-        height: 40px;
-        border: none;
-        box-shadow: 0px 1px 4px -1px $buttoncolor;
-        border-radius: 2px;
+        width: 34px;
+        height: 34px;
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        cursor: pointer;
+        &:hover {
+            background: #f4f4f4;
+        }
+    }
+    .maptype-button {
+        margin-right: 10px;
+        color: transparent;
+        width: 34px;
+        height: 34px;
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        background-size: cover;
+        &.maptype-satellite {
+            background-image:url('../images/satellite.png');
+        }
+        &.maptype-street {
+            background-image:url('../images/street.png');
+        }
     }
     .spaceInfoWindow {
         max-width:300px;
-    }
-    button.show-list {
-        margin-right: 0;
-        margin-left: auto;
-        margin-top: .25em;
-        display: none;
-        border: none;
-        color: $linkcolor;
-        cursor: pointer;
-        &:hover {
-            color: $linkcolor-hover;
+        h3 {
+            margin: 0 0 .5em 0;
         }
-        background: $color-white;
-    }
-    &.active {
+        p.info {
+            margin: .5em 0;
+            font-weight: bold;
+            color:#633;
+        }
+        p.description {
+            margin: .5em 0;
+        }
         button.show-list {
-            display:block;
+            display: block;
+            margin: 0 0 0 auto;
+            display: none;
+            border: none;
+            color: $linkcolor;
+            cursor: pointer;
+            &:hover {
+                color: $linkcolor-hover;
+            }
+            background: $color-white;
+        }
+    }
+    &.active .spaceInfoWindow button.show-list {
+        display:block;
+    }
+    .space-marker {
+        circle {
+            stroke: $space-icon-stroke;
+            fill: $space-icon-fill;
+        }
+    }
+    .marker-cluster-small,
+    .marker-cluster-medium,
+    .marker-cluster-large {
+        background-color: rgba($space-icon-stroke, 0.6);
+        div {
+            background-color: rgba($space-icon-fill, 0.8);
+            color: $color-white;
+        }
+    }
+    .marker-cluster {
+        background-clip: padding-box;
+        border-radius: 20px;
+        div {
+            width: 30px;
+            height: 30px;
+            margin-left: 5px;
+            margin-top: 5px;
+            text-align: center;
+            border-radius: 15px;
+        }
+        span {
+            line-height: 30px;
         }
     }
 }
