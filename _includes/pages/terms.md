@@ -4,7 +4,7 @@
 
 #### 1.1
 
-These terms and conditions of use (‘Terms’) refer to your use of the official website of the <a href="https://www.leeds.ac.uk/">University of Leeds</a> (‘University’, ‘our’, ‘we’, ‘us’) and all other websites either within the leeds.ac.uk domain or owned and/or operated and/or contributed to by the University of Leeds regardless of the domain (‘website(s)’) unless specifically excluded or modified by the terms and conditions on any specific website. By using, or contributing to, our websites you agree to these Terms. If you do not agree to be legally bound by these Terms please stop using our websites immediately.
+These terms and conditions of use (‘Terms’) refer to your use of the official website of the <a target="external" href="https://www.leeds.ac.uk/">University of Leeds</a> (‘University’, ‘our’, ‘we’, ‘us’) and all other websites either within the leeds.ac.uk domain or owned and/or operated and/or contributed to by the University of Leeds regardless of the domain (‘website(s)’) unless specifically excluded or modified by the terms and conditions on any specific website. By using, or contributing to, our websites you agree to these Terms. If you do not agree to be legally bound by these Terms please stop using our websites immediately.
 
 #### 1.2
 
@@ -74,7 +74,7 @@ Where Content has been provided for the purposes of learning you may use that Co
 
 #### 4.1
 
-Where you are providing material (‘Contribution’) as a member of staff or a student of the University or otherwise employed by or contracted to the University to provide such a Contribution the University will generally own this content in accordance with the <a href="http://www.leeds.ac.uk/secretariat/documents/ipr_policy.pdf">University’s Policy on Intellectual Property Rights (PDF)</a>. None of the Terms in this section below supersede any part of that Policy.
+Where you are providing material (‘Contribution’) as a member of staff or a student of the University or otherwise employed by or contracted to the University to provide such a Contribution the University will generally own this content in accordance with the <a target="external" href="http://www.leeds.ac.uk/secretariat/documents/ipr_policy.pdf">University’s Policy on Intellectual Property Rights (PDF)</a>. None of the Terms in this section below supersede any part of that Policy.
 
 #### 4.2
 
@@ -157,7 +157,7 @@ We may disable access to the material in question while we assess your objection
 
 #### 8.1
 
-Your right to privacy is important to us. The ways in which your personal information may be used when you provide it to us is defined in the Privacy Notice associated with each of our websites which we own and/or operate that you may visit. Please review the relevant Privacy Notice which will be clearly marked on each of our websites in line with our <a href="https://comms.leeds.ac.uk/websites/policy-on-privacy-and-cookie-notices/">Policy on Privacy and Cookie Notices</a>.
+Your right to privacy is important to us. The ways in which your personal information may be used when you provide it to us is defined in the Privacy Notice associated with each of our websites which we own and/or operate that you may visit. Please review the relevant Privacy Notice which will be clearly marked on each of our websites in line with our <a target="external" href="https://comms.leeds.ac.uk/websites/policy-on-privacy-and-cookie-notices/">Policy on Privacy and Cookie Notices</a>.
 
 #### 8.2
 
@@ -165,7 +165,7 @@ Should you find that any of our websites has no Privacy Notice or the Notice is 
 
 #### 8.3
 
-The University complies with the General Data Protection Regulation 2018 and Data Protection Act 1998. Please see our <a href="https://dataprotection.leeds.ac.uk/wp-content/uploads/sites/48/2019/05/Data-protection-CoP.pdf">Code of Practice on Data Protection (PDF)</a>.
+The University complies with the General Data Protection Regulation 2018 and Data Protection Act 1998. Please see our <a target="external" href="https://dataprotection.leeds.ac.uk/wp-content/uploads/sites/48/2019/05/Data-protection-CoP.pdf">Code of Practice on Data Protection (PDF)</a>.
 
 ### 9. Usernames and passwords
 
@@ -175,7 +175,7 @@ You are solely responsible in all respects for all use of and for protecting the
 
 #### 9.2
 
-Where access credentials have been provided to you as a member of staff or a student of the University use of these is covered by the <a href="https://it.leeds.ac.uk/it?id=kb_category&amp;kb_category=7950ab68db7ffbc48b6583305b9619e0">University’s Information Security Policies</a>.
+Where access credentials have been provided to you as a member of staff or a student of the University use of these is covered by the <a target="external" href="https://it.leeds.ac.uk/it?id=kb_category&amp;kb_category=7950ab68db7ffbc48b6583305b9619e0">University’s Information Security Policies</a>.
 
 #### 9.3
 
@@ -197,7 +197,7 @@ We reserve the right to withdraw linking permission without notice.
 
 #### 10.4
 
-Nothing in this agreement requires us to maintain the existence of, or the content within, any URL you may link to. The only permanent URL which we provide is <a href="https://www.leeds.ac.uk">www.leeds.ac.uk</a>.
+Nothing in this agreement requires us to maintain the existence of, or the content within, any URL you may link to. The only permanent URL which we provide is <a target="external" href="https://www.leeds.ac.uk">www.leeds.ac.uk</a>.
 
 ### 11. General
 
