@@ -66,7 +66,7 @@ These cookies help our website function
     <dt>Further Information</dt>
     <dd>
         <ul>
-            <li><a href="https://en.wikipedia.org/wiki/Web_storage">Web storage (Wikipedia)</a></li>
+            <li><a target="external" href="https://en.wikipedia.org/wiki/Web_storage">Web storage (Wikipedia)</a></li>
         </ul>
     </dd>
 </dl>
@@ -81,11 +81,11 @@ These cookies help our website function
     <dt>Further Information</dt>
     <dd>
         <ul>
-            <li><a href="https://policies.google.com/privacy?hl=en-GB&amp;gl=uk#infocollect">Google privacy policy</a></li>
-            <li><a href="http://www.google.com/analytics/learn/privacy.html">Google analytics</a></li>
-            <li><a href="http://www.google.com/intl/en_uk/analytics/tos.html">Google analytics terms of service</a></li>
-            <li><a href="https://www.google.com/analytics/tag-manager/use-policy/">Google tag manager terms of service</a></li>
-            <li><a href="https://tools.google.com/dlpage/gaoptout">Universal Analytics opt-out browser add-on</a></li>
+            <li><a target="external" href="https://policies.google.com/privacy?hl=en-GB&amp;gl=uk#infocollect">Google privacy policy</a></li>
+            <li><a target="external" href="http://www.google.com/analytics/learn/privacy.html">Google analytics</a></li>
+            <li><a target="external" href="http://www.google.com/intl/en_uk/analytics/tos.html">Google analytics terms of service</a></li>
+            <li><a target="external" href="https://www.google.com/analytics/tag-manager/use-policy/">Google tag manager terms of service</a></li>
+            <li><a target="external" href="https://tools.google.com/dlpage/gaoptout">Universal Analytics opt-out browser add-on</a></li>
         </ul>
     </dd>
 </dl> 
@@ -94,7 +94,7 @@ If you share content from our website through other websites, for example Facebo
 
 You can manage your privacy settings, including cookies, through your browser settings.
 
-Further information about cookies can be found on the <a href="https://ico.org.uk/">Information Commissioner’s Office website</a>.
+Further information about cookies can be found on the <a target="external" href="https://ico.org.uk/">Information Commissioner’s Office website</a>.
 
 ### Anything you are not clear about
 
@@ -116,10 +116,10 @@ Under the GDPR, in certain circumstances, you have the right to:
 
 ### Queries and complaints
 
-If you have any queries or concerns relating to this privacy notice or the way your data is being processed through this website then please contact the University’s Data Protection Officer, David Wardle on <a href="mailto:d.wardle@adm.leeds.ac.uk">d.wardle@adm.leeds.ac.uk</a> or by post to University of Leeds, 11.72 EC Stoner Building, Leeds LS2 9JT, UK.
+If you have any queries or concerns relating to this privacy notice or the way your data is being processed through this website then please contact the University’s Data Protection Officer, David Wardle on <a href="mailto:d.wardle@adm.leeds.ac.uk" title="Email David Wardle">d.wardle@adm.leeds.ac.uk</a> or by post to University of Leeds, 11.72 EC Stoner Building, Leeds LS2 9JT, UK.
 
 The University’s main telephone number is +44 (0) 113 2431751.
 
 The UK’s regulator for the DPA and GDPR is the Information Commissioner’s Office (ICO). The University is registered as a Data Controller with the ICO
 
-Should you be dissatisfied with our handling of your concerns you have the right to complain to a supervisory authority. In the case of the UK this is the Information Commissioner’s Office and details can be found at <a href="https://ico.org.uk/make-a-complaint/">https://ico.org.uk/make-a-complaint/</a>.
+Should you be dissatisfied with our handling of your concerns you have the right to complain to a supervisory authority. In the case of the UK this is the Information Commissioner’s Office and details can be found at <a target="external" href="https://ico.org.uk/make-a-complaint/">https://ico.org.uk/make-a-complaint/</a>.

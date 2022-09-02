@@ -1,33 +1,6 @@
 #map {
     position:relative;
-    .geo-button {
-        margin-right: 10px;
-        width: 34px;
-        height: 34px;
-        border: 2px solid rgba(0, 0, 0, 0.2);
-        border-radius: 4px;
-        cursor: pointer;
-        &:hover {
-            background: #f4f4f4;
-        }
-    }
-    .maptype-button {
-        margin-right: 10px;
-        color: transparent;
-        width: 34px;
-        height: 34px;
-        border: 2px solid rgba(0, 0, 0, 0.2);
-        border-radius: 4px;
-        cursor: pointer;
-        position: relative;
-        background-size: cover;
-        &.maptype-satellite {
-            background-image:url('../images/satellite.png');
-        }
-        &.maptype-street {
-            background-image:url('../images/street.png');
-        }
-    }
+
     .spaceInfoWindow {
         max-width:300px;
         h3 {

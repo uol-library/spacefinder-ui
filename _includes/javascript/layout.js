@@ -50,6 +50,9 @@ function setupLayout() {
 			if ( event.detail.view == 'list' ) {
 				document.getElementById( 'listcontent' ).setAttribute( 'tabindex', '-1' );
 				document.getElementById( 'listcontent' ).focus();
+			} else if ( event.detail.view == 'filters' ) {
+				document.getElementById( 'filter-options-form' ).setAttribute( 'tabindex', '-1' );
+				document.getElementById( 'filter-options-form' ).focus();
 			}
 		}
 	});
