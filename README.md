@@ -10,6 +10,13 @@ For more information about the project, [please visit the Spacefinder UI wiki](h
 Changelog
 ---------
 
+### v0.2.1 (2/9/2022)
+
+* Bundled PT Sans font rather than using version from Google
+* Fixed instances where PT Sans was not being used
+* Added focus to filters panel when activated
+* Updated Privacy, Accessibility and About pages to reflect recent changes
+
 ### v0.2.0 (31/8/2022)
 
 * Changed map to use [Leaflet](https://leafletjs.com/) with tiles from [OpenStreetMap](https://www.openstreetmap.org/) and [ESRI](https://www.esri.com/)
