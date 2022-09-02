@@ -51,7 +51,6 @@ function setupLayout() {
 				document.getElementById( 'listcontent' ).setAttribute( 'tabindex', '-1' );
 				document.getElementById( 'listcontent' ).focus();
 			} else if ( event.detail.view == 'filters' ) {
-				console.log('setting focus on form');
 				document.getElementById( 'filter-options-form' ).setAttribute( 'tabindex', '-1' );
 				document.getElementById( 'filter-options-form' ).focus();
 			}
