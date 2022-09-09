@@ -185,6 +185,16 @@ function getSpaceNodeById( id ) {
 }
 
 /**
+ * Sets focus on an element
+ */
+ function setElementFocus( id ) {
+	if ( document.getElementById( id ) !== null ) {
+		document.getElementById( id ).setAttribute( 'tabindex', '-1' );
+		document.getElementById( id ).focus();
+	}
+}
+
+/**
  * Logs messages to console if debug flag is set
  * @param {string} message
  * @param {string} filename

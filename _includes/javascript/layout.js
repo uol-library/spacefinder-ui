@@ -38,8 +38,7 @@ function setupLayout() {
 			document.getElementById( 'filters' ).classList.remove( 'active' );
 			document.querySelector( '#top-bar .navbutton[data-view="list"]' ).classList.add( 'active' );
 			document.getElementById( 'list' ).classList.add( 'active' );
-			document.getElementById( 'listcontent' ).setAttribute( 'tabindex', '-1' );
-			document.getElementById( 'listcontent' ).focus();
+			setElementFocus( 'listcontent' );
 		} else {
 			views.forEach(view => {
 				document.getElementById( view ).classList.remove( 'active' );
@@ -48,11 +47,9 @@ function setupLayout() {
 			changedview.classList.add( 'active' );
 			document.querySelector( '#top-bar .navbutton[data-view="'+event.detail.view+'"]' ).classList.add( 'active' );
 			if ( event.detail.view == 'list' ) {
-				document.getElementById( 'listcontent' ).setAttribute( 'tabindex', '-1' );
-				document.getElementById( 'listcontent' ).focus();
+				setElementFocus( 'listcontent' );
 			} else if ( event.detail.view == 'filters' ) {
-				document.getElementById( 'filter-options-form' ).setAttribute( 'tabindex', '-1' );
-				document.getElementById( 'filter-options-form' ).focus();
+				setElementFocus( 'filter-options-form' );
 			}
 		}
 	});
