@@ -5,7 +5,7 @@ description: >-
   the University of Cambridge
   https://spacefinder.lib.cam.ac.uk/
 baseurl: ""
-url: "https://https://spacefinder.leeds.ac.uk/"
+url: "https://spacefinder.leeds.ac.uk"
 host: "localhost"
 google_analytics: "G-6LHKST5028"
 photo_dir: "/assets/photos/"
