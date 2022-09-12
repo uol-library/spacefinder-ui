@@ -49,7 +49,9 @@ function setupLayout() {
 			if ( event.detail.view == 'list' ) {
 				setElementFocus( 'listcontent' );
 			} else if ( event.detail.view == 'filters' ) {
-				setElementFocus( 'filter-options-form' );
+				setElementFocus( 'filters' );
+			} else if ( event.detail.view == 'map' ) {
+				setElementFocus( 'map' );
 			}
 		}
 	});

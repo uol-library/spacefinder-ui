@@ -9,7 +9,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
  * Initialise map and set listeners to set up markers when loaded
  */
 function initMap() {
-    splog( 'initMap', 'map-leaflet.js' );
+    splog( 'initMap', 'map.js' );
     document.addEventListener( 'sfmaploaded', checkGeo );
     document.addEventListener( 'filtersapplied', filterMarkers );
     document.addEventListener( 'spacesloaded', maybeSetupMap );
@@ -73,14 +73,14 @@ function initMap() {
     window.addEventListener( 'resize', () => {
         clearTimeout( spacefinder.resizeTimeout );
         spacefinder.resizeTimeout = setTimeout( () => {
-            splog( 'invalidating map size - resize event', 'map-leaflet.js' );
+            splog( 'invalidating map size - resize event', 'map.js' );
             spacefinder.map.invalidateSize( true );
         }, 200);
     });
     document.addEventListener( 'viewchange', () => {
-        splog( 'view changed', 'map-leaflet.js' );
+        splog( 'view changed', 'map.js' );
         window.setTimeout( () => {
-            splog( 'invalidating map size - viewchange event', 'map-leaflet.js' );
+            splog( 'invalidating map size - viewchange event', 'map.js' );
             spacefinder.map.invalidateSize( true );
         }, 500);
     });
@@ -91,7 +91,7 @@ function initMap() {
  * the map is fully loaded and the space data is fully loaded.
  */
 function maybeSetupMap() {
-    splog( 'maybeSetupMap', 'map-leaflet.js' );
+    splog( 'maybeSetupMap', 'map.js' );
     if ( spacefinder.mapLoaded && spacefinder.spacesLoaded && spacefinder.filtersLoaded ) {
 
         /* collect latLng coordinates here to define map bounds */
@@ -246,7 +246,7 @@ function getSVGIcon( c ) {
  * Not currently used (written to enable recentring like in a google maps <recentre> button)
  */
 function recentreMap() {
-    splog( 'recentreMap', 'map-leaflet.js' );
+    splog( 'recentreMap', 'map.js' );
     let newCenter = geolocationActive() ? spacefinder.personLoc: spacefinder.currentLoc;
     spacefinder.map.panTo( newCenter );
     spacefinder.map.fitBounds( spacefinder.mapBounds );
@@ -257,7 +257,7 @@ function recentreMap() {
  * @param {Object} space
  */
 function zoomMapToSpace( spaceid ) {
-    splog( 'zoomMapToSpace', 'map-leaflet.js' );
+    splog( 'zoomMapToSpace', 'map.js' );
     let space = getSpaceById( spaceid );
     let newCenter = L.latLng( space.lat, space.lng );
     space.popup.setLatLng( newCenter ).openOn( spacefinder.map );
@@ -269,7 +269,7 @@ function zoomMapToSpace( spaceid ) {
  * Resets the map after a space has been selected
  */
  function deselectSpacesFromMap() {
-    splog( 'deselectSpacesFromMap', 'map-leaflet.js' );
+    splog( 'deselectSpacesFromMap', 'map.js' );
     spacefinder.map.closePopup();
 }
 
@@ -277,7 +277,7 @@ function zoomMapToSpace( spaceid ) {
  * Filters the markers on the map
  */
 function filterMarkers() {
-    splog( 'filterMarkers', 'map-leaflet.js' );
+    splog( 'filterMarkers', 'map.js' );
     let markersToAdd = [];
     document.querySelectorAll( '.list-space' ).forEach( element => {
         let space = getSpaceById( element.getAttribute( 'data-id' ) );
@@ -298,7 +298,7 @@ function filterMarkers() {
  * @param {boolean} enable which way to toggle
  */
 function toggleGeolocation( enable ) {
-    splog( 'toggleGeolocation', 'map-leaflet.js' );
+    splog( 'toggleGeolocation', 'map.js' );
     if ( enable ) {
         document.querySelectorAll( '.geo-button' ).forEach( element => element.disabled = false );
     } else {
@@ -313,7 +313,7 @@ function toggleGeolocation( enable ) {
  * @param {boolean} activate which way to toggle
  */
 function activateGeolocation( activate ) {
-    splog( 'activateGeolocation', 'map-leaflet.js' );
+    splog( 'activateGeolocation', 'map.js' );
     if ( activate ) {
         document.querySelectorAll( '.geo-button' ).forEach( element => {
             element.classList.add( 'active' );
@@ -355,7 +355,7 @@ function activateGeolocation( activate ) {
  * @see getUserPosition()
  */
 function movePersonMarker() {
-    splog( 'movePersonMarker', 'map-leaflet.js' );
+    splog( 'movePersonMarker', 'map.js' );
     /* move person marker */
     if ( spacefinder.personMarker ) {
         spacefinder.personMarker.setPosition( spacefinder.personLoc );
@@ -380,7 +380,7 @@ function movePersonMarker() {
  * @returns {boolean}
  */
 function geolocationEnabled() {
-    splog( 'geolocationEnabled', 'map-leaflet.js' );
+    splog( 'geolocationEnabled', 'map.js' );
     const btn = document.querySelector( '.geo-button' );
     if ( btn !== null ) {
         return btn.disabled == false;
@@ -393,7 +393,7 @@ function geolocationEnabled() {
  * @returns {boolean}
  */
 function geolocationActive() {
-    splog( 'geolocationActive', 'map-leaflet.js' );
+    splog( 'geolocationActive', 'map.js' );
     return ( document.querySelector( '.geo-button.active' ) !== null ? true: false );
 }
 
@@ -401,7 +401,7 @@ function geolocationActive() {
  * Performs checks for geolocation permissions and services when the map has loaded
  */
 function checkGeo() {
-    splog( 'checkGeo', 'map-leaflet.js' );
+    splog( 'checkGeo', 'map.js' );
     /* first see if geolocation is available on the device */
     checkGeoAvailable();
     /* check to see if it is enabled to determine initial button states */
@@ -414,7 +414,7 @@ function checkGeo() {
  * watches for updates to permissions.
  */
 function checkGeoPermissions() {
-    splog( 'checkGeoPermissions', 'map-leaflet.js' );
+    splog( 'checkGeoPermissions', 'map.js' );
     /* check for permissions query */
     if ( 'permissions' in navigator && navigator.permissions.query ) {
         /* query geolocation permissions */
@@ -447,7 +447,7 @@ function checkGeoPermissions() {
  * adds buttons to activate it and adds listeners to buttons.
  */
 function checkGeoAvailable() {
-    splog( 'checkGeoAvailable', 'map-leaflet.js' );
+    splog( 'checkGeoAvailable', 'map.js' );
     if ( 'geolocation' in navigator ) {
         /* make button for map to let user activate geolocation */
         L.Control.geoControl = L.Control.extend({
@@ -494,7 +494,7 @@ function checkGeoAvailable() {
  * and deactivates geolocation controls.
  */
 function forgetUserPosition() {
-    splog( 'forgetUserPosition', 'map-leaflet.js' );
+    splog( 'forgetUserPosition', 'map.js' );
     /* stop watching user position */
     navigator.geolocation.clearWatch( spacefinder.watchID );
     /* remove person marker from map */
@@ -514,7 +514,7 @@ function forgetUserPosition() {
  * button to recentre? (but not moving the marker)
  */
 function getUserPosition() {
-    splog( 'getUserPosition', 'map-leaflet.js' );
+    splog( 'getUserPosition', 'map.js' );
 	navigator.geolocation.getCurrentPosition( position => {
         /* centre the map on the user coordinates */
 		spacefinder.personLoc.lat = position.coords.latitude;
@@ -561,7 +561,7 @@ function getUserPosition() {
  * to the user position.
  */
 function updateDistances() {
-    splog( 'updateDistances', 'map-leaflet.js' );
+    splog( 'updateDistances', 'map.js' );
     if ( geolocationActive() ) {
         spacefinder.spaces.forEach( (space, index) => {
             spacefinder.spaces[index].distancefromcentre = haversine_distance( spacefinder.personLoc, { lat: space.lat, lng: space.lng } );

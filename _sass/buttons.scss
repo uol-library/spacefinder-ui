@@ -80,7 +80,7 @@
     border-radius: 6px;
     cursor: pointer;
     text-decoration: none;
-    border: 2px solid $buttonborder;
+    border: 4px solid $buttonborder;
     color: $buttoncolor;
     background: $buttonbg;
     &-primary {
@@ -96,6 +96,11 @@
     &:hover, &:active {
         text-decoration: none;
         box-shadow: 0 3px 6px 0 rgba($button-shadow, 0.15), 0 2px 4px 0 rgba($button-shadow, 0.12);
+    }
+    &:focus {
+        color: $buttoncolor-active;
+        background: $buttonbg-active;
+        border-color: $buttoncolor-active;
     }
 }
 .space-title {

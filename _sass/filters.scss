@@ -39,27 +39,28 @@
             li.filter-option {
                 position: relative;
                 margin: 0;
-                padding:.8rem .5rem;
+                
                 list-style: none;
                 background: $filterlabelbg;
                 color: $filterlabelcolor;
-                margin-bottom: 2px;
+                margin-bottom: .2rem;
+                border-radius: 3px;
                 border: 1px solid $filterbuttonborder;
                 &.focus {
                     border: 1px solid $filterbuttonborder-focus;
-                    border-radius: 3px;
                 }
                 label {
                     position: relative;
                     user-select: none;
                     cursor: pointer;
-                    padding-left: 2.3rem;
                     display: block;
+                    padding:.8rem .5rem .8rem 2.3rem;
                 }
                 span {
                     position: absolute;
                     opacity: 0.2;
                     font-size: 1rem;
+                    top: .8rem;
                     width: 1.8rem;
                     text-align: center;
                 }

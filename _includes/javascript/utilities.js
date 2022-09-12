@@ -187,7 +187,8 @@ function getSpaceNodeById( id ) {
 /**
  * Sets focus on an element
  */
- function setElementFocus( id ) {
+function setElementFocus( id ) {
+    splog( "Setting element focus on #" + id, "utilities.js" );
 	if ( document.getElementById( id ) !== null ) {
 		document.getElementById( id ).setAttribute( 'tabindex', '-1' );
 		document.getElementById( id ).focus();
