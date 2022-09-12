@@ -52,7 +52,9 @@ function setupLayout() {
 			if ( event.detail.view == 'list' ) {
 				//setElementFocus( 'listcontent' );
 			} else if ( event.detail.view == 'filters' ) {
-				window.setTimeout( function() { document.getElementById( 'search-input' ).focus(); }, 1000 );
+				window.setTimeout( function() { 
+					document.getElementById( 'search-input' ).focus(); 
+				}, 1000 );
 				//setElementFocus( 'search-input' );
 			} else if ( event.detail.view == 'map' ) {
 				//setElementFocus( 'map' );
