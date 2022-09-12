@@ -21,7 +21,7 @@ function checkInitialPageLoad() {
                         let dialog = new A11yDialog( pagedialog );
                         dialog.show();
                         dialog.on('hide', (element, event) => {
-                            window.location.hash = '';
+                            setHash( '' );
                         });
                     }
                 }

@@ -196,6 +196,21 @@ function setElementFocus( id ) {
 }
 
 /**
+ * Sets the hash in the URL
+ */
+function setHash( val ) {
+    if ( val !== '' ) {
+        window.location.hash = val;
+    } else {
+        if ( 'pushState' in history ) {
+            history.pushState('', document.title, window.location.pathname );
+        } else {
+            window.location.hash = val;
+        }
+    }
+}
+
+/**
  * Logs messages to console if debug flag is set
  * @param {string} message
  * @param {string} filename

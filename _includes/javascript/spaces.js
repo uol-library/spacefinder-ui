@@ -44,7 +44,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
                 let spaceID = event.target.getAttribute( 'data-spaceid' );
                 document.dispatchEvent( new CustomEvent( 'spaceDeselected', { bubbles: true, detail: spaceID } ) );
                 event.target.setAttribute( 'aria-expanded', 'false' );
-                window.location.hash = '';
+                setHash( '' );
             } else {
                 let spaceID = event.target.getAttribute( 'data-spaceid' );
                 let spacenode = document.querySelector( '[data-id="' + spaceID + '"]' );
@@ -235,7 +235,7 @@ function updateListFilterMessage() {
 function selectSpace( spaceid, source ) {
     splog( 'selectSpace', 'spaces.js' );
     let space = getSpaceById( spaceid );
-    window.location.hash = '/space/' + space.slug;
+    setHash( '/space/' + space.slug );
     document.dispatchEvent(new CustomEvent( 'sfanalytics', {
         detail: {
             type: 'select',
@@ -273,9 +273,12 @@ function deselectSpaces( spaceid ) {
         document.querySelectorAll( '.list-space' ).forEach( sp => {
             sp.classList.remove( 'active' );
         });
+        document.querySelectorAll( 'button.space-title' ).forEach( st => {
+            stsetAttribute( 'aria-expanded', false );
+        });
         let deselectedSpace = document.querySelector( '.space-title[data-spaceid="' + parseInt( spaceid ) + '"]' );
     }
-    window.location.hash = '';
+    setHash( '' );
 }
 
 /**
