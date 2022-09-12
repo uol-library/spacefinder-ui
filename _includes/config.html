@@ -1,8 +1,9 @@
+<script type="text/javascript">
 /**
  * SpaceFinder configuration
  */
 const spacefinder = {
-    debug: true,
+    debug: {% if site.environment == "development" %}true{% else %}false{% endif %},
 
     /* CSS breakpoints */
     breakpoints: {
@@ -41,3 +42,4 @@ const spacefinder = {
     filtersLoaded: false,
     filtersurl: '{{ site.url }}/filters.json'
 };
+</script>
