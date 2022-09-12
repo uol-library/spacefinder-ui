@@ -51,12 +51,6 @@
                 }
             }
         }
-        .space-summary {
-            cursor: pointer;
-        }
-        &.active .space-summary {
-            cursor: default;
-        }
         .space-details {
             &:after {
                 content: "";

@@ -274,7 +274,7 @@ function deselectSpaces( spaceid ) {
             sp.classList.remove( 'active' );
         });
         document.querySelectorAll( 'button.space-title' ).forEach( st => {
-            stsetAttribute( 'aria-expanded', false );
+            st.setAttribute( 'aria-expanded', false );
         });
         let deselectedSpace = document.querySelector( '.space-title[data-spaceid="' + parseInt( spaceid ) + '"]' );
     }

@@ -1,6 +1,19 @@
 #map {
     position:relative;
-
+    overflow: hidden;
+    .leaflet-control-attribution > a {
+        color: $linkcolor;
+        background: $bg;
+        &:hover {
+            color: $linkcolor-hover;
+        }
+        &:visited {
+            color: $linkcolor-visited;
+        }
+        &:active {
+            color: $linkcolor-active;
+        }
+    }
     .spaceInfoWindow {
         max-width:300px;
         h3 {
