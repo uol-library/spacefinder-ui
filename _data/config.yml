@@ -1,3 +1,7 @@
+map:
+  startLat: 53.806529
+  startLng: -1.555291
+  startZoom: 16
 filters:
   - key: "open"
     label: "Spaces currently open"
