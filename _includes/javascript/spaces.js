@@ -250,6 +250,7 @@ function selectSpace( spaceid, source ) {
         sp.classList.remove( 'active' );
     });
     spacenode.classList.add( 'active' );
+    spacenode.querySelector( 'button.space-title' ).setAttribute( 'aria-expanded', true );
     /* find distance from top of listcontainer */
     let scrollingElement = document.getElementById( 'listcontainer' );
     let listContainer = document.getElementById( 'listcontent' );
