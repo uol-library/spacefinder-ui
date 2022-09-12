@@ -79,15 +79,18 @@ function setupLayout() {
  * Sets the initial view of the app
  */
 function setView() {
-	//return;
 	if ( spacefinder.mapReady && spacefinder.spacesLoaded && spacefinder.filtersLoaded ) {
 		splog('Setting view', 'layout.js' );
 		if ( window.innerWidth >= spacefinder.breakpoints.large ) {
 			splog('Showing filters panel', 'layout.js' );
 			document.querySelector( '#top-bar .navbutton[data-view="filters"]' ).classList.add( 'active' );
+			document.querySelector( '#top-bar .navbutton[data-view="filters"]' ).classList.remove( 'inactive' );
 			document.getElementById( 'filters' ).classList.add( 'active' );
+			document.getElementById( 'filters' ).classList.remove( 'inactive' );
 		} else {
 			splog('Hiding filters panel', 'layout.js' );
+			document.querySelector( '#top-bar .navbutton[data-view="filters"]' ).classList.remove( 'active' );
+			document.getElementById( 'filters' ).classList.remove( 'active' );
 			document.querySelector( '#top-bar .navbutton[data-view="filters"]' ).classList.remove( 'active' );
 			document.getElementById( 'filters' ).classList.remove( 'active' );
 		}
