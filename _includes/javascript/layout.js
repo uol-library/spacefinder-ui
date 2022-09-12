@@ -4,9 +4,17 @@
  */
 document.addEventListener( 'DOMContentLoaded', () => {
 	setupLayout();
-    //document.addEventListener( 'spacesloaded', maybeShowFilters );
-    //document.addEventListener( 'sfmaploaded', maybeShowFilters );
-    //document.addEventListener( 'filtersloaded', maybeShowFilters );
+    document.addEventListener( 'spacesloaded', setView );
+    document.addEventListener( 'sfmapready', setView );
+    document.addEventListener( 'filtersloaded', setView );
+	document.addEventListener( 'sfresize', setView );
+    window.addEventListener( 'resize', () => {
+        clearTimeout( spacefinder.resizeTimeout );
+        spacefinder.resizeTimeout = setTimeout( () => {
+            splog( 'Resize event', 'layout.js' );
+			document.dispatchEvent( new Event( 'sfresize' ) );
+        }, 200);
+    });
 });
 
 /**
@@ -35,6 +43,7 @@ function setupLayout() {
 		/* special case for closing filters view */
 		if ( event.detail.view == 'filters' && document.querySelector( '#top-bar .navbutton[data-view="filters"]' ).classList.contains( 'active' ) ) {
 			document.querySelector( '#top-bar .navbutton[data-view="filters"]' ).classList.remove( 'active' );
+			document.querySelector( '#top-bar .navbutton[data-view="filters"]' ).classList.add( 'inactive' );
 			document.getElementById( 'filters' ).classList.remove( 'active' );
 			document.getElementById( 'filters' ).classList.add( 'inactive' );
 			document.querySelector( '#top-bar .navbutton[data-view="list"]' ).classList.add( 'active' );
@@ -45,10 +54,13 @@ function setupLayout() {
 				document.getElementById( view ).classList.remove( 'active' );
 				document.getElementById( view ).classList.add( 'inactive' );
 				document.querySelector( '#top-bar .navbutton[data-view="'+view+'"]' ).classList.remove( 'active' );
+				document.querySelector( '#top-bar .navbutton[data-view="'+view+'"]' ).classList.add( 'inactive' );
+
 			});
-			changedview.classList.remove( 'inactive' );
 			changedview.classList.add( 'active' );
+			changedview.classList.remove( 'inactive' );
 			document.querySelector( '#top-bar .navbutton[data-view="'+event.detail.view+'"]' ).classList.add( 'active' );
+			document.querySelector( '#top-bar .navbutton[data-view="'+event.detail.view+'"]' ).classList.remove( 'inactive' );
 			if ( event.detail.view == 'list' ) {
 				//setElementFocus( 'listcontent' );
 			} else if ( event.detail.view == 'filters' ) {
@@ -64,19 +76,25 @@ function setupLayout() {
 }
 
 /**
- * Shows the filter/search panel if the screen big enough
+ * Sets the initial view of the app
  */
-function maybeShowFilters() {
+function setView() {
 	//return;
-	if ( spacefinder.mapLoaded && spacefinder.spacesLoaded && spacefinder.filtersLoaded && window.innerWidth >= spacefinder.breakpoints.large ) {
-		splog('Showing filters panel on load', 'layout.js' );
-		document.dispatchEvent( new CustomEvent( 'viewchange', {
-			bubbles: true,
-			cancelable: true,
-			composed: false,
-			detail: {
-				view: 'filters'
-			}
-		} ) );
+	if ( spacefinder.mapReady && spacefinder.spacesLoaded && spacefinder.filtersLoaded ) {
+		splog('Setting view', 'layout.js' );
+		if ( window.innerWidth >= spacefinder.breakpoints.large ) {
+			splog('Showing filters panel', 'layout.js' );
+			document.querySelector( '#top-bar .navbutton[data-view="filters"]' ).classList.add( 'active' );
+			document.getElementById( 'filters' ).classList.add( 'active' );
+		} else {
+			splog('Hiding filters panel', 'layout.js' );
+			document.querySelector( '#top-bar .navbutton[data-view="filters"]' ).classList.remove( 'active' );
+			document.getElementById( 'filters' ).classList.remove( 'active' );
+		}
+		if ( window.innerWidth >= spacefinder.breakpoints.small ) {
+			splog('Showing list panel', 'layout.js' );
+			document.querySelector( '#top-bar .navbutton[data-view="list"]' ).classList.add( 'active' );
+			document.getElementById( 'list' ).classList.add( 'active' );
+		}
 	}
 }

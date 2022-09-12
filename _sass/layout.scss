@@ -83,21 +83,24 @@ body {
                 outline:none;
             }
         }
+        @media screen and (min-width: #{$breakpoint-med}) {
+        }
         @media screen and (min-width: #{$breakpoint-large}) {
             .switch-view {
                 display: none;
             }
             #filters, #list, #map {
                 visibility: visible;
-                transition: all .5s;
             }
             #filters {
                 position: relative;
                 width: $filterswidth;
                 visibility: hidden;
-                transition: all .5s;
                 flex: 0 0 $filterswidth;
-                margin-left: -$filterswidth;
+                margin-left: 0;
+                &.inactive {
+                    margin-left: -$filterswidth;
+                }
                 &.active {
                     margin-left: 0;
                     visibility: visible;

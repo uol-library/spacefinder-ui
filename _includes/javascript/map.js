@@ -70,12 +70,8 @@ function initMap() {
      * window, and when a change in view happens (which may reduce
      * the area taken up by the map component)
      */
-    window.addEventListener( 'resize', () => {
-        clearTimeout( spacefinder.resizeTimeout );
-        spacefinder.resizeTimeout = setTimeout( () => {
-            splog( 'invalidating map size - resize event', 'map.js' );
-            spacefinder.map.invalidateSize( true );
-        }, 200);
+    document.addEventListener( 'sfresize', () => {
+        spacefinder.map.invalidateSize( true );
     });
     document.addEventListener( 'viewchange', () => {
         splog( 'view changed', 'map.js' );
@@ -202,6 +198,7 @@ function maybeSetupMap() {
         });
         
         /* let eveyone know we are ready */
+        spacefinder.mapReady = true;
         document.dispatchEvent( new Event( 'sfmapready' ) );
     }
 }
