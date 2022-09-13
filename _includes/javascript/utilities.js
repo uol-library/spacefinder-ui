@@ -196,6 +196,20 @@ function setElementFocus( id ) {
 }
 
 /**
+ * Acticvates / deactivates a panel in the view
+ */
+function togglePanel( panel, active ) {
+    if ( [ 'filters', 'list', 'map' ].indexOf( panel ) !== -1 ) {
+        let activeclass = active ? 'active': 'inactive';
+        let inactiveclass = active ? 'inactive': 'active';
+        document.querySelector( '#top-bar .navbutton[data-view="' + panel + '"]' ).classList.remove( inactiveclass );
+        document.querySelector( '#top-bar .navbutton[data-view="' + panel + '"]' ).classList.add( activeclass );
+        document.getElementById( panel ).classList.remove( inactiveclass );
+        document.getElementById( panel ).classList.add( activeclass );
+    }
+}
+
+/**
  * Sets the hash in the URL
  */
 function setHash( val ) {

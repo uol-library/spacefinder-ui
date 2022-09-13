@@ -42,34 +42,17 @@ function setupLayout() {
 		let changedview = document.getElementById( event.detail.view );
 		/* special case for closing filters view */
 		if ( event.detail.view == 'filters' && document.querySelector( '#top-bar .navbutton[data-view="filters"]' ).classList.contains( 'active' ) ) {
-			document.querySelector( '#top-bar .navbutton[data-view="filters"]' ).classList.remove( 'active' );
-			document.querySelector( '#top-bar .navbutton[data-view="filters"]' ).classList.add( 'inactive' );
-			document.getElementById( 'filters' ).classList.remove( 'active' );
-			document.getElementById( 'filters' ).classList.add( 'inactive' );
-			document.querySelector( '#top-bar .navbutton[data-view="list"]' ).classList.add( 'active' );
-			document.getElementById( 'list' ).classList.add( 'active' );
-			//setElementFocus( 'listcontent' );
+			togglePanel( 'filters', false );
+			togglePanel( 'list', true );
 		} else {
 			views.forEach(view => {
-				document.getElementById( view ).classList.remove( 'active' );
-				document.getElementById( view ).classList.add( 'inactive' );
-				document.querySelector( '#top-bar .navbutton[data-view="'+view+'"]' ).classList.remove( 'active' );
-				document.querySelector( '#top-bar .navbutton[data-view="'+view+'"]' ).classList.add( 'inactive' );
-
+				togglePanel( view, false );
 			});
-			changedview.classList.add( 'active' );
-			changedview.classList.remove( 'inactive' );
-			document.querySelector( '#top-bar .navbutton[data-view="'+event.detail.view+'"]' ).classList.add( 'active' );
-			document.querySelector( '#top-bar .navbutton[data-view="'+event.detail.view+'"]' ).classList.remove( 'inactive' );
-			if ( event.detail.view == 'list' ) {
-				//setElementFocus( 'listcontent' );
-			} else if ( event.detail.view == 'filters' ) {
+			togglePanel( event.detail.view, true );
+			if ( event.detail.view == 'filters' ) {
 				window.setTimeout( function() { 
 					document.getElementById( 'search-input' ).focus(); 
 				}, 1000 );
-				//setElementFocus( 'search-input' );
-			} else if ( event.detail.view == 'map' ) {
-				//setElementFocus( 'map' );
 			}
 		}
 	});
@@ -83,21 +66,14 @@ function setView() {
 		splog('Setting view', 'layout.js' );
 		if ( window.innerWidth >= spacefinder.breakpoints.large ) {
 			splog('Showing filters panel', 'layout.js' );
-			document.querySelector( '#top-bar .navbutton[data-view="filters"]' ).classList.add( 'active' );
-			document.querySelector( '#top-bar .navbutton[data-view="filters"]' ).classList.remove( 'inactive' );
-			document.getElementById( 'filters' ).classList.add( 'active' );
-			document.getElementById( 'filters' ).classList.remove( 'inactive' );
+			togglePanel( 'filters', true );
 		} else {
 			splog('Hiding filters panel', 'layout.js' );
-			document.querySelector( '#top-bar .navbutton[data-view="filters"]' ).classList.remove( 'active' );
-			document.getElementById( 'filters' ).classList.remove( 'active' );
-			document.querySelector( '#top-bar .navbutton[data-view="filters"]' ).classList.remove( 'active' );
-			document.getElementById( 'filters' ).classList.remove( 'active' );
+			togglePanel( 'filters', false );
 		}
 		if ( window.innerWidth >= spacefinder.breakpoints.small ) {
 			splog('Showing list panel', 'layout.js' );
-			document.querySelector( '#top-bar .navbutton[data-view="list"]' ).classList.add( 'active' );
-			document.getElementById( 'list' ).classList.add( 'active' );
+			togglePanel( 'list', true );
 		}
 	}
 }
