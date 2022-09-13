@@ -54,19 +54,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
                 event.target.setAttribute( 'aria-expanded', 'true' );
             }
         /**
-         * Event listener to display space detail when info (type, address) or details
-         * (description and image) are clicked
-         */
-        } else if ( event.target.parentElement.classList.contains( 'space-details' ) || event.target.className == 'space-info' ) {
-            const isTextSelected = window.getSelection().toString();
-            const titleButton = event.target.closest( '.space-summary' ).querySelector( '.load-info' );
-            /* prevent action is text is selected */
-            if ( ! isTextSelected && titleButton ) {
-                if ( titleButton.getAttribute( 'aria-expanded' ) !== 'true' ) {
-                    titleButton.click();
-                }
-            }
-        /**
          * These remove search terms or filter terms when one of them is
          * clicked in the filter status message. Maybe need to refactor filter
          * status message and these events to filters.js?
@@ -307,8 +294,18 @@ function sortSpacesListener( event ) {
     /* get all the data we need to perform the sort */
     let sortdir = event.target.getAttribute( 'data-sortdir' );
     let sortby = event.target.getAttribute( 'id' );
-    /* determine direction from current attribute value */
+    /* determine direction from current attribute value */)
     let dir = ( sortdir == 'desc' || sortdir == '' ) ? true: false;
+	if ( 'sortalpha' === sortby ) {
+		let sortmsg = dir? 'Sort alphabetically (ascending, a-z)': 'Sort alphabetically (descending, z-a)';
+		let addbtnclass = dir? 'icon-sort-name-down': 'icon-sort-name-up';
+		let rembtnclass = dir? 'icon-sort-name-up': 'icon-sort-name-down';
+		event.target.setAttribute( 'aria-title', sortmsg );
+		event.target.setAttribute( 'aria-label', sortmsg );
+		event.target.querySelector( 'span' ).innerText = sortmsg;
+		event.target.classList.remove( rembtnclass );
+		event.target.classList.add( addbtnclass );
+	}
     /* perform the sort */
     sortSpaces( sortby, dir );
 }

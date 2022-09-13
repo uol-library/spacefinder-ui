@@ -53,6 +53,8 @@
 .icon-hearing-loop:before { content: '\e90a'; } /* '' */
 .icon-my-location:before { content: '\e90b'; } /* '' */
 .icon-link:before { content: '\f07b'; } /* '' */
+.icon-sort-name-up:before { content: '\f15d'; } /* '' */
+.icon-sort-name-down:before { content: '\f15e'; } /* '' */
 .icon-universal-access:before { content: '\f29a'; } /* '' */
 .icon-twitter:before { content: '\f309'; } /* '' */
 .icon-facebook-squared:before { content: '\f30e'; } /* '' */
