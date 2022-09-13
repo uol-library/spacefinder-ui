@@ -294,13 +294,13 @@ function sortSpacesListener( event ) {
     /* get all the data we need to perform the sort */
     let sortdir = event.target.getAttribute( 'data-sortdir' );
     let sortby = event.target.getAttribute( 'id' );
-    /* determine direction from current attribute value */)
+    /* determine direction from current attribute value */
     let dir = ( sortdir == 'desc' || sortdir == '' ) ? true: false;
 	if ( 'sortalpha' === sortby ) {
-		let sortmsg = dir? 'Sort alphabetically (ascending, a-z)': 'Sort alphabetically (descending, z-a)';
+		let sortmsg = dir? 'Sort alphabetically (descending, z-a)': 'Sort alphabetically (ascending, a-z)';
 		let addbtnclass = dir? 'icon-sort-name-down': 'icon-sort-name-up';
 		let rembtnclass = dir? 'icon-sort-name-up': 'icon-sort-name-down';
-		event.target.setAttribute( 'aria-title', sortmsg );
+		event.target.setAttribute( 'title', sortmsg );
 		event.target.setAttribute( 'aria-label', sortmsg );
 		event.target.querySelector( 'span' ).innerText = sortmsg;
 		event.target.classList.remove( rembtnclass );

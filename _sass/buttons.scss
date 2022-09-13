@@ -180,21 +180,6 @@
         padding: 0;
         position:relative;
         border: 1px solid $filterbuttonborder-focus;
-        &#sortalpha {
-            &:after {
-                position: absolute;
-                top:.1em;
-                right:.1em;
-                font-size:1.5em;
-                font-weight: bold;
-            }
-            &[data-sortdir="asc"]:after {
-                content: '\2191';
-            }
-            &[data-sortdir="desc"]:after {
-                content: '\2193';
-            }
-        }
         &#sortdistance {
             &:after, &:before {
                 margin:0;
