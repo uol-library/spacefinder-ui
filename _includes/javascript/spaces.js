@@ -44,7 +44,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
                 let spaceID = event.target.getAttribute( 'data-spaceid' );
                 document.dispatchEvent( new CustomEvent( 'spaceDeselected', { bubbles: true, detail: spaceID } ) );
                 event.target.setAttribute( 'aria-expanded', 'false' );
-                window.location.hash = '';
+                setHash( '' );
             } else {
                 let spaceID = event.target.getAttribute( 'data-spaceid' );
                 let spacenode = document.querySelector( '[data-id="' + spaceID + '"]' );
@@ -52,19 +52,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
                     document.dispatchEvent( new CustomEvent( 'spaceSelected', { bubbles: true, detail: { id: spaceID, src: 'list' } } ) );
                 }
                 event.target.setAttribute( 'aria-expanded', 'true' );
-            }
-        /**
-         * Event listener to display space detail when info (type, address) or details
-         * (description and image) are clicked
-         */
-        } else if ( event.target.parentElement.classList.contains( 'space-details' ) || event.target.className == 'space-info' ) {
-            const isTextSelected = window.getSelection().toString();
-            const titleButton = event.target.closest( '.space-summary' ).querySelector( '.load-info' );
-            /* prevent action is text is selected */
-            if ( ! isTextSelected && titleButton ) {
-                if ( titleButton.getAttribute( 'aria-expanded' ) !== 'true' ) {
-                    titleButton.click();
-                }
             }
         /**
          * These remove search terms or filter terms when one of them is
@@ -235,7 +222,7 @@ function updateListFilterMessage() {
 function selectSpace( spaceid, source ) {
     splog( 'selectSpace', 'spaces.js' );
     let space = getSpaceById( spaceid );
-    window.location.hash = '/space/' + space.slug;
+    setHash( '/space/' + space.slug );
     document.dispatchEvent(new CustomEvent( 'sfanalytics', {
         detail: {
             type: 'select',
@@ -250,6 +237,7 @@ function selectSpace( spaceid, source ) {
         sp.classList.remove( 'active' );
     });
     spacenode.classList.add( 'active' );
+    spacenode.querySelector( 'button.space-title' ).setAttribute( 'aria-expanded', true );
     /* find distance from top of listcontainer */
     let scrollingElement = document.getElementById( 'listcontainer' );
     let listContainer = document.getElementById( 'listcontent' );
@@ -272,9 +260,12 @@ function deselectSpaces( spaceid ) {
         document.querySelectorAll( '.list-space' ).forEach( sp => {
             sp.classList.remove( 'active' );
         });
+        document.querySelectorAll( 'button.space-title' ).forEach( st => {
+            st.setAttribute( 'aria-expanded', false );
+        });
         let deselectedSpace = document.querySelector( '.space-title[data-spaceid="' + parseInt( spaceid ) + '"]' );
     }
-    window.location.hash = '';
+    setHash( '' );
 }
 
 /**
@@ -305,6 +296,16 @@ function sortSpacesListener( event ) {
     let sortby = event.target.getAttribute( 'id' );
     /* determine direction from current attribute value */
     let dir = ( sortdir == 'desc' || sortdir == '' ) ? true: false;
+	if ( 'sortalpha' === sortby ) {
+		let sortmsg = dir? 'Sort alphabetically (descending, z-a)': 'Sort alphabetically (ascending, a-z)';
+		let addbtnclass = dir? 'icon-sort-name-down': 'icon-sort-name-up';
+		let rembtnclass = dir? 'icon-sort-name-up': 'icon-sort-name-down';
+		event.target.setAttribute( 'title', sortmsg );
+		event.target.setAttribute( 'aria-label', sortmsg );
+		event.target.querySelector( 'span' ).innerText = sortmsg;
+		event.target.classList.remove( rembtnclass );
+		event.target.classList.add( addbtnclass );
+	}
     /* perform the sort */
     sortSpaces( sortby, dir );
 }
@@ -434,8 +435,7 @@ function renderList() {
         listContainer.append( spaceContainer );
     });
     document.getElementById( 'searchResultsSummary' ).innerHTML = 'Showing ' + spacetotal + ' of ' + spacetotal + ' spaces';
-    document.getElementById( 'listcontent' ).setAttribute( 'tabindex', '-1' );
-    document.getElementById( 'listcontent' ).focus();
+    //setElementFocus( 'listcontent' );
 }
 
 /**

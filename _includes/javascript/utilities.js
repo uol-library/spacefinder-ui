@@ -187,11 +187,41 @@ function getSpaceNodeById( id ) {
 /**
  * Sets focus on an element
  */
- function setElementFocus( id ) {
+function setElementFocus( id ) {
+    splog( "Setting element focus on #" + id, "utilities.js" );
 	if ( document.getElementById( id ) !== null ) {
 		document.getElementById( id ).setAttribute( 'tabindex', '-1' );
 		document.getElementById( id ).focus();
 	}
+}
+
+/**
+ * Acticvates / deactivates a panel in the view
+ */
+function togglePanel( panel, active ) {
+    if ( [ 'filters', 'list', 'map' ].indexOf( panel ) !== -1 ) {
+        let activeclass = active ? 'active': 'inactive';
+        let inactiveclass = active ? 'inactive': 'active';
+        document.querySelector( '#top-bar .navbutton[data-view="' + panel + '"]' ).classList.remove( inactiveclass );
+        document.querySelector( '#top-bar .navbutton[data-view="' + panel + '"]' ).classList.add( activeclass );
+        document.getElementById( panel ).classList.remove( inactiveclass );
+        document.getElementById( panel ).classList.add( activeclass );
+    }
+}
+
+/**
+ * Sets the hash in the URL
+ */
+function setHash( val ) {
+    if ( val !== '' ) {
+        window.location.hash = val;
+    } else {
+        if ( 'pushState' in history ) {
+            history.pushState('', document.title, window.location.pathname );
+        } else {
+            window.location.hash = val;
+        }
+    }
 }
 
 /**

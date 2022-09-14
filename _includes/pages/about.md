@@ -1,3 +1,11 @@
+Spacefinder is a tool which allows students to find study spaces around a University Campus by identifying them on a map, listing them, and providing search and filtering tools to allow students to:
+
+* list spaces which are currently open
+* identify the spaces which are nearest to their current location
+* list spaces which have certain characteristics (noise levels, availability of equipment, etc.)
+
+### History
+
 Spacefinder was originally developed by the University of Cambridge in 2015 as part of the futurelib innovation programme, which explored the future role of academic libraries within the University.
 
 <a target="external" href="https://spacefinder.lib.cam.ac.uk/">https://spacefinder.lib.cam.ac.uk/</a>

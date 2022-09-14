@@ -80,7 +80,7 @@
     border-radius: 6px;
     cursor: pointer;
     text-decoration: none;
-    border: 2px solid $buttonborder;
+    border: 4px solid $buttonborder;
     color: $buttoncolor;
     background: $buttonbg;
     &-primary {
@@ -96,6 +96,11 @@
     &:hover, &:active {
         text-decoration: none;
         box-shadow: 0 3px 6px 0 rgba($button-shadow, 0.15), 0 2px 4px 0 rgba($button-shadow, 0.12);
+    }
+    &:focus {
+        color: $buttoncolor-active;
+        background: $buttonbg-active;
+        border-color: $buttoncolor-active;
     }
 }
 .space-title {
@@ -175,21 +180,6 @@
         padding: 0;
         position:relative;
         border: 1px solid $filterbuttonborder-focus;
-        &#sortalpha {
-            &:after {
-                position: absolute;
-                top:.1em;
-                right:.1em;
-                font-size:1.5em;
-                font-weight: bold;
-            }
-            &[data-sortdir="asc"]:after {
-                content: '\2191';
-            }
-            &[data-sortdir="desc"]:after {
-                content: '\2193';
-            }
-        }
         &#sortdistance {
             &:after, &:before {
                 margin:0;

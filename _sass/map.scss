@@ -1,15 +1,27 @@
 #map {
-    position:relative;
-
+    position: relative;
+    overflow: hidden;
+    .leaflet-control-attribution > a {
+        color: $linkcolor;
+        background: $bg;
+        &:hover {
+            color: $linkcolor-hover;
+        }
+        &:visited {
+            color: $linkcolor-visited;
+        }
+        &:active {
+            color: $linkcolor-active;
+        }
+    }
     .spaceInfoWindow {
-        max-width:300px;
+        max-width: 300px;
         h3 {
-            margin: 0 0 .5em 0;
+            margin: 0 0 .5rem 0;
         }
         p.info {
-            margin: .5em 0;
+            margin: .5rem 0;
             font-weight: bold;
-            color:#633;
         }
         p.description {
             margin: .5em 0;
@@ -28,7 +40,7 @@
         }
     }
     &.active .spaceInfoWindow button.show-list {
-        display:block;
+        display: block;
     }
     .space-marker {
         circle {
