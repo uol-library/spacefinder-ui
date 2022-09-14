@@ -10,6 +10,15 @@ For more information about the project, [please visit the Spacefinder UI wiki](h
 Changelog
 ---------
 
+### 0.2.3 (14/9/2022)
+
+* Fixed some UI inconsistencies to improve accessibility
+* Improved performance in different accessibility testing tools
+
+### 0.2.2 (9/9/2022)
+
+* Bugfix release for a javascript error
+
 ### v0.2.1 (2/9/2022)
 
 * Bundled PT Sans font rather than using version from Google
