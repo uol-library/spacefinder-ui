@@ -10,6 +10,11 @@ For more information about the project, [please visit the Spacefinder UI wiki](h
 Changelog
 ---------
 
+### 0.2.4 (16/9/2022)
+
+* Added skip link to meet WCAG 2.1 - 2.4.1 Bypass Blocks
+* Managed focus from cookie consent dialog
+
 ### 0.2.3 (14/9/2022)
 
 * Fixed some UI inconsistencies to improve accessibility

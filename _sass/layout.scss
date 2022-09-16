@@ -18,6 +18,22 @@ body {
     background: $bg;
     color: $fg;
 }
+#skip {
+    background: $topbarbg;
+    color: $topbarcolor;
+    a {
+        background: $topbarbg;
+        color: $topbarcolor;
+        margin: .5rem 1rem;
+        display: inline-block;
+        position:absolute;
+        left:-10000px;
+        overflow:hidden;
+        &:focus {
+            position:static;
+        }
+    }
+}
 #maincontainer {
     max-height: 100vh;
     display: flex;
