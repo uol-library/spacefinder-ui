@@ -435,7 +435,6 @@ function renderList() {
         listContainer.append( spaceContainer );
     });
     document.getElementById( 'searchResultsSummary' ).innerHTML = 'Showing ' + spacetotal + ' of ' + spacetotal + ' spaces';
-    //setElementFocus( 'listcontent' );
 }
 
 /**

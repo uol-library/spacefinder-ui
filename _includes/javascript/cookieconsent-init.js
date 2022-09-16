@@ -20,6 +20,9 @@ cc.run({
             transition: 'slide'
         }
     },
+    onAccept: focusOnMain,
+    onChange: focusOnMain,
+    onFirstAction: focusOnMain,
     languages: {
         'en': {
             consent_modal: {
@@ -82,4 +85,7 @@ function canUseLocalStorage(){
 }
 function showCookieSettings() {
     cc.showSettings();
+}
+function focusOnMain() {
+    setElementFocus( 'maincontainer' );
 }
