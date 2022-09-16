@@ -87,5 +87,6 @@ function showCookieSettings() {
     cc.showSettings();
 }
 function focusOnMain() {
-    setElementFocus( 'maincontainer' );
+    document.getElementById( 'maincontainer' ).setAttribute( 'tabindex', '-1' );
+    document.getElementById( 'maincontainer' ).focus();
 }
