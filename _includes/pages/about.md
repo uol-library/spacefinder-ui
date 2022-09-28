@@ -37,6 +37,8 @@ The icon font used on this site was created using <a target="external" href="htt
   <dd>Copyright &copy; 2016 by Dave Gandy (<a target="external" href="http://scripts.sil.org/OFL">SIL Open Font License</a>)</dd>
   <dt><a target="external" href="http://www.entypo.com">Entypo</a></dt>
   <dd>Copyright &copy; by Daniel Bruce (<a target="external" href="http://scripts.sil.org/OFL">SIL Open Font License</a>)</dd>
+  <dt><a target="external" href="http://somerandomdude.com/work/iconic/">Iconic</a></dt>
+  <dd>Copyright &copy; 2012 by P.J. Onori (<a target="external" href="http://scripts.sil.org/OFL">SIL Open Font License</a>)</dd>
   <dt><a target="external" href="http://www.mfglabs.com/">MFG Labs</a></dt>
   <dd>Copyright &copy; by Daniel Bruce (<a target="external" href="http://scripts.sil.org/OFL">SIL Open Font License</a>)</dd>
 </dl>
