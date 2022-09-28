@@ -2,7 +2,6 @@
 document.addEventListener( 'DOMContentLoaded', () => {
     document.addEventListener( 'spacesloaded', () => {
         renderList();
-        lazyLoadSpaceImages();
         updateDistances();
         checkOpeningHours();
         setInterval( checkOpeningHours, (30*1000) );
