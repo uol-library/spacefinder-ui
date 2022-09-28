@@ -87,5 +87,7 @@
     "image": "/assets/photos/Loma-Express-Dentistry.jpg",
     "imagealt": "Interior photograph of the serving hatch in Loma Express Dentistry, with a customer weraing a headscarf being served by a member of staff, and two customers partially seen in the foreground",
     "slug": "loma-express-dentistry",
-    "published": true
+    "published": true,
+    "url_text": "Visit the Loma Express Dentistry web site",
+    "phone_text": ""
 }

@@ -88,5 +88,7 @@
     "id": 1,
     "image": "/assets/photos/Baines-Wing-Cafe.jpg",
     "description": "Situated between the School of Healthcare and the Great Hall, Baines Wing Café has a large seating area including its own secluded courtyard which is perfect to enjoy the sunny weather.\n\nMixture of group seating around tables, sofas and some high level desking with 6 workstations.",
-    "published": true
+    "published": true,
+    "url_text": "Visit the Baines Wing Café web site",
+    "phone_text": ""
 }

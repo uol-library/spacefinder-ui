@@ -88,5 +88,7 @@
     "image": "/assets/photos/Loma-Cafe.jpg",
     "imagealt": "Interior photograph of the Loma Café showing the overhead lighting rig for the main seating area with the service area in the background",
     "slug": "loma-cafe",
-    "published": true
+    "published": true,
+    "url_text": "Visit the Loma Café web site",
+    "phone_text": ""
 }

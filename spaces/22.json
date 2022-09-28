@@ -37,7 +37,7 @@
     "restriction": "",
     "disabled_access": true,
     "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",
-    "phone_number": "113343555",
+    "phone_number": "0113 343 5555",
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17512",
@@ -84,5 +84,7 @@
     "image": "",
     "imagealt": "Michael Sadler Building - 1.19",
     "slug": "michael-sadler-building-119",
-    "published": false
+    "published": false,
+    "url_text": "",
+    "phone_text": "Contact the Estates Helpdesk"
 }

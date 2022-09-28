@@ -43,7 +43,7 @@
     "restriction": "",
     "disabled_access": true,
     "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202223!location!6856E1BEE4EE6ABF22261FF5840C4FDB",
-    "phone_number": "1133435724",
+    "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17579",
@@ -90,5 +90,7 @@
     "image": "",
     "imagealt": "Psychology (37 and 41 University Road) - 1.45",
     "slug": "psychology-37-and-41-university-road-145",
-    "published": true
+    "published": true,
+    "url_text": "View timetable for Psychology (37 and 41 University Road) - 1.45",
+    "phone_text": ""
 }

@@ -76,9 +76,11 @@
     "title": "Worsley Building - 8.049P (Fourman)",
     "tags": [],
     "noise": "Whispers",
-    "phone_number": "01132440111",
+    "phone_number": "",
     "restricted": true,
     "id": 70,
     "image": "",
-    "description": "Large room with computers available. 50 seat capacity."
+    "description": "Large room with computers available. 50 seat capacity.",
+    "url_text": "View timetable for Worsley Building - 8.049P (Fourman)",
+    "phone_text": ""
 }

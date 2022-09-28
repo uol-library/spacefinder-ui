@@ -58,7 +58,7 @@
         }
     },
     "slug": "clarendon-building-g07",
-    "floor": "Ground",
+    "floor": "Ground floor",
     "restriction": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17385",
     "published": false,
@@ -82,5 +82,7 @@
     "restricted": true,
     "id": 48,
     "image": "",
-    "description": "Classroom with 4 computer rows. Comfortable chairs. 100 seat capacity"
+    "description": "Classroom with 4 computer rows. Comfortable chairs. 100 seat capacity",
+    "url_text": "View timetable for Clarendon Building - G07",
+    "phone_text": ""
 }

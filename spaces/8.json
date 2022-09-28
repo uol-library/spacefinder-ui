@@ -83,5 +83,7 @@
     "image": "/assets/photos/Cafe-Seven.jpg",
     "imagealt": "Interior photograph showing part of the Café Seven logo and part of the service and self-service areas",
     "slug": "cafe-seven",
-    "published": true
+    "published": true,
+    "url_text": "Visit the Café Seven web site",
+    "phone_text": ""
 }

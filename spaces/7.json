@@ -58,7 +58,7 @@
             "to": "14:00"
         }
     },
-    "floor": "Ground and mezzanine floor",
+    "floor": "Ground floor and mezzanine",
     "restriction": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17536",
     "url": "https://gfal.leeds.ac.uk/where-to-eat/refectory/",
@@ -85,5 +85,7 @@
     "image": "/assets/photos/Refectory4.jpg",
     "imagealt": "Overhead, interior photograph of the Refectory, full of customers, taken from the balcony above the main dining area",
     "slug": "refectory",
-    "published": true
+    "published": true,
+    "url_text": "Visit the Refectory  web site",
+    "phone_text": ""
 }
