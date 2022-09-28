@@ -1,0 +1,16 @@
+title: Space Finder - University of Leeds
+email: p.l.edwards@leeds.ac.uk
+description: >-
+  Map-driven application originally developed by
+  the University of Cambridge
+  https://spacefinder.lib.cam.ac.uk/
+environment: development
+baseurl: ""
+url: "https://ambitious-plant-087320403.1.azurestaticapps.net"
+host: "localhost"
+photo_dir: "/assets/photos/"
+sass:
+  style: compressed
+plugins:
+  - jekyll-feed
+
