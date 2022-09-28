@@ -426,7 +426,8 @@ function renderList() {
         spaceHTML += '<span class="address">' + loc + '</span></p>';
         spaceHTML += '<div class="space-details">';
         if ( space.image != '' ) {
-            spaceHTML += '<div data-imgsrc="' + space.image + '" class="space-image lazy" role="img" aria-label="' + space.imagealt + '"></div>';
+            //spaceHTML += '<div data-imgsrc="' + space.image + '" class="space-image lazy" role="img" aria-label="' + space.imagealt + '"></div>';
+            spaceHTML += '<img src="' + space.image + '" class="space-image" loading="lazy" alt="' + space.imagealt + '">';
         }
         spaceHTML += '<p class="description">' + space.description + '</p></div></div>';
         spaceHTML += '<div class="additionalInfo" id="additionalInfo' + space.id + '"></div>';
@@ -623,60 +624,4 @@ function checkOpeningHours() {
 function getTimeFromString( str ) {
     let parts = str.split( ':' );
     return ( parseInt( parts[0] ) * 100 ) + parseInt( parts[1] );
-}
-
-
-/**
- * Lazy loads images (i.e. only retrieves them from their URLs when they are
- * in the viewport). Uses IntersectionObserver API if available, and falls
- * back to listening for scroll events and testing scrollTop/offsetTop.
- */
-function lazyLoadSpaceImages() {
-    splog( 'lazyLoadSpaceImages', 'spaces.js' );
-    var lazyloadImages, lazyloadThrottleTimeout;
-
-    if ( "IntersectionObserver" in window ) {
-        lazyloadImages = document.querySelectorAll( '.lazy');
-        const imageObserver = new IntersectionObserver( function( entries, observer ) {
-            entries.forEach( function( entry ) {
-                if ( entry.isIntersecting ) {
-                    var image = entry.target;
-                    image.classList.remove( 'lazy' );
-                    image.setAttribute( 'style', 'background-image:url(' + spacefinder.imageBaseURL + image.getAttribute('data-imgsrc') + ')');
-                    imageObserver.unobserve( image );
-                }
-            });
-        });
-
-        lazyloadImages.forEach( function( image ) {
-            imageObserver.observe( image );
-        });
-    } else {
-        lazyloadImages = document.querySelectorAll( '.lazy' );
-
-        function lazyload() {
-            if ( lazyloadThrottleTimeout ) {
-                clearTimeout( lazyloadThrottleTimeout) ;
-            }    
-
-            lazyloadThrottleTimeout = setTimeout( function() {
-                lazyloadImages.forEach( function( img ) {
-                    if ( img.offsetTop < ( window.innerHeight + window.pageYOffset ) ) {
-                        img.src = img.dataset.src;
-                        img.classList.remove( 'lazy' );
-                        image.setAttribute( 'style', 'background-image:url(' + spacefinder.imageBaseURL + image.getAttribute('data-imgsrc') + ')');
-                    }
-                });
-                if ( lazyloadImages.length == 0 ) { 
-                    document.removeEventListener( 'scroll', lazyload );
-                    window.removeEventListener( 'resize', lazyload );
-                    window.removeEventListener( 'orientationChange', lazyload );
-                }
-            }, 20);
-        }
-
-        document.addEventListener( 'scroll', lazyload );
-        window.addEventListener( 'resize', lazyload );
-        window.addEventListener( 'orientationChange', lazyload );
-    }
 }
