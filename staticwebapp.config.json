@@ -15,7 +15,7 @@
   },
   "globalHeaders": {
     "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-    "content-security-policy": "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net/npm/a11y-dialog@7/dist/a11y-dialog.min.js https://unpkg.com/leaflet@1.8.0/dist/leaflet.js; style-src 'self' https://unpkg.com; object-src 'none'; base-uri 'self'; connect-src 'self'; font-src 'self'; frame-src 'self'; img-src 'self' data: https://a.tile.openstreetmap.org https://api.mapbox.com https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; manifest-src 'self'; media-src 'self'; worker-src 'none';",
+    "content-security-policy": "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net/npm/a11y-dialog@7/dist/a11y-dialog.min.js https://unpkg.com/leaflet@1.8.0/dist/leaflet.js https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.0/dist/cookieconsent.js https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js; style-src 'self' https://unpkg.com; object-src 'none'; base-uri 'self'; connect-src 'self'; font-src 'self'; frame-src 'self'; img-src 'self' data: https://a.tile.openstreetmap.org https://api.mapbox.com https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; manifest-src 'self'; media-src 'self'; worker-src 'none';",
     "x-frame-options": "SAMEORIGIN"
   },
   "mimeTypes": {
