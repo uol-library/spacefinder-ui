@@ -102,6 +102,10 @@ collections:
         name: 'url'
         widget: 'string'
         required: false
+      - label: 'Website URL link text'
+        name: 'url_text'
+        widget: 'string'
+        required: false
       - label: 'Campus Map URL'
         name: 'campusmap_url'
         widget: 'string'
@@ -340,6 +344,10 @@ collections:
         required: false
       - label: 'Phone number'
         name: 'phone_number'
+        widget: 'string'
+        required: false
+      - label: 'Phone link text (will appended with number)'
+        name: 'phone_text'
         widget: 'string'
         required: false
       - label: 'Email address'
