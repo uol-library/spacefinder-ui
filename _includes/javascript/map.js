@@ -253,12 +253,13 @@ function recentreMap() {
  * Zooms the map to show a particular space
  * @param {Object} space
  */
-function zoomMapToSpace( spaceid ) {
+ function zoomMapToSpace( spaceid ) {
     splog( 'zoomMapToSpace', 'map.js' );
     let space = getSpaceById( spaceid );
-    let newCenter = L.latLng( space.lat, space.lng );
-    space.popup.setLatLng( newCenter ).openOn( spacefinder.map );
-    spacefinder.map.setView( newCenter, 18 );
+    spacefinder.markergroup.zoomToShowLayer( space.marker, function(){
+        let newCenter = L.latLng( space.lat, space.lng );
+        space.popup.setLatLng( newCenter ).openOn( spacefinder.map );
+    });
 }
 
 
