@@ -8,6 +8,7 @@
     "concat": "node _scripts/concat.js",
     "updateOpening": "node _scripts/updateLibraryOpening.js",
     "crontab": "node _scripts/cron.js",
+    "process": "node _scripts/processJSON.js",
     "minify": "node _scripts/minify.js",
     "build": "node _scripts/minify.js && bundle exec jekyll build",
     "serve": "bundle exec jekyll serve --config _config_dev.yml"

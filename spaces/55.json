@@ -35,12 +35,12 @@
     "space_type": "IT Cluster",
     "address": "University of Leeds, LS2 9JT",
     "building": "Fine Art Building",
-    "floor": "Ground",
+    "floor": "Ground floor",
     "restricted": true,
     "restriction": "",
     "disabled_access": true,
     "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202223!location!6856E1BEE4EE6ABF22261FF5840C4F6F",
-    "phone_number": "1133435260",
+    "phone_number": "0113 343 5260",
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17451",
@@ -87,5 +87,7 @@
     "image": "",
     "imagealt": "Fine Art, History of Art and Cultural Studies - G29 (West Teaching Labs)",
     "slug": "fine-art-history-of-art-and-cultural-studies-g29-west-teaching-labs",
-    "published": true
+    "published": true,
+    "url_text": "View timetable for Fine Art, History of Art and Cultural Studies - G29 (West Teaching Labs)",
+    "phone_text": "Contact the School of Fine Art, History of Art and Cultural Studies"
 }

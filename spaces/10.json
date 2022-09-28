@@ -86,5 +86,7 @@
     "id": 10,
     "image": "/assets/photos/1915.jpg",
     "description": "1915 is based in the Sir William Henry Bragg Building on Woodhouse Lane, its relaxed and informal menu has been carefully created to offer a mix of both classic and on-trend options.",
-    "published": true
+    "published": true,
+    "url_text": "Visit the 1915 web site",
+    "phone_text": ""
 }

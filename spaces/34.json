@@ -37,7 +37,7 @@
     "restriction": "",
     "disabled_access": true,
     "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",
-    "phone_number": "1133432444",
+    "phone_number": "0113 343 2444",
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17381",
@@ -84,5 +84,7 @@
     "image": "",
     "imagealt": "Chemistry - Chaston Chapman Lounge (room G20)",
     "slug": "chemistry-chaston-chapman-lounge-room-g20",
-    "published": true
+    "published": true,
+    "url_text": "",
+    "phone_text": "Contact the School of Chemical and Process Engineering"
 }
