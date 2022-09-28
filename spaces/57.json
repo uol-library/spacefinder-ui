@@ -42,7 +42,7 @@
     "restriction": "",
     "disabled_access": true,
     "url": "https://mytimetable.leeds.ac.uk/link?timetable.id=202223!location!6856E1BEE4EE6ABF22261FF5840C4F61",
-    "phone_number": "1132431751",
+    "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17462",
@@ -89,5 +89,7 @@
     "image": "",
     "imagealt": "Irene Manton Building - 7.96",
     "slug": "irene-manton-building-796",
-    "published": true
+    "published": true,
+    "url_text": "View timetable for Irene Manton Building - 7.96",
+    "phone_text": ""
 }

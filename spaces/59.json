@@ -39,7 +39,7 @@
     "restriction": "",
     "disabled_access": true,
     "url": "",
-    "phone_number": "1133432186",
+    "phone_number": "0113 343 2186",
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17507",
@@ -86,5 +86,7 @@
     "image": "",
     "imagealt": "Mechanical Engineering - 5.34d",
     "slug": "mechanical-engineering-534d",
-    "published": false
+    "published": false,
+    "url_text": "",
+    "phone_text": "Contact the School of Mechanical Engineering"
 }

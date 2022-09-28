@@ -86,5 +86,7 @@
     "image": "/assets/photos/Affine.jpg",
     "imagealt": "Interior photograph of the Affine Café showing the service counter and seating, with multiple customers seated around tables  and two customers at the counter",
     "slug": "affine-cafe",
-    "published": true
+    "published": true,
+    "url_text": "Visit the Affine Café web site",
+    "phone_text": ""
 }

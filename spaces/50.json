@@ -58,7 +58,7 @@
         }
     },
     "slug": "clothworkers-building-link-g34",
-    "floor": "Ground",
+    "floor": "Ground floor",
     "restriction": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17389",
     "published": true,
@@ -82,5 +82,7 @@
     "restricted": true,
     "id": 50,
     "image": "",
-    "description": "Cluster room with a variety of desks for individual or group study. 12 seat capacity."
+    "description": "Cluster room with a variety of desks for individual or group study. 12 seat capacity.",
+    "url_text": "View timetable for Clothworkers' Building Link - G.34",
+    "phone_text": ""
 }

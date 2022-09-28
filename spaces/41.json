@@ -31,7 +31,7 @@
     "space_type": "General Seating Area",
     "address": "University of Leeds, LS2 9JT",
     "building": "Charles Thackrah Building",
-    "floor": "Ground",
+    "floor": "Ground floor",
     "restricted": false,
     "restriction": "",
     "disabled_access": true,
@@ -83,5 +83,7 @@
     "image": "/assets/photos/Charles-Thackrah.jpg",
     "imagealt": "Interior photograph of five students in discussion in the Atrium of the Charles Thackrah building on the Ground Floor",
     "slug": "charles-thackrah-atrium-ground-floor",
-    "published": true
+    "published": true,
+    "url_text": "",
+    "phone_text": ""
 }

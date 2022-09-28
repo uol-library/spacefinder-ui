@@ -36,7 +36,7 @@
     "space_type": "Café",
     "address": "University of Leeds, LS2 9JT",
     "building": "Maurice Keyworth Building",
-    "floor": "Ground Floor",
+    "floor": "Ground floor",
     "restricted": false,
     "restriction": "",
     "disabled_access": true,
@@ -88,5 +88,7 @@
     "image": "/assets/photos/Caffe-Nero-Business-School.jpg",
     "imagealt": "Interior photograph of the main service area in the Caffè Nero at Business School, showing its distinctive lighting, chiller cabinets and coffee machine",
     "slug": "caffe-nero-at-business-school",
-    "published": true
+    "published": true,
+    "url_text": "Visit the Caffè Nero at Business School web site",
+    "phone_text": ""
 }

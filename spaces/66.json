@@ -32,7 +32,7 @@
     "restriction": "",
     "disabled_access": true,
     "url": "",
-    "phone_number": "1132440111",
+    "phone_number": "",
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17591",
@@ -79,5 +79,7 @@
     "image": "",
     "imagealt": "Worsley Building - 8.039",
     "slug": "worsley-building-8039",
-    "published": true
+    "published": true,
+    "url_text": "",
+    "phone_text": ""
 }

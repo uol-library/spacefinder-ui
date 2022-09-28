@@ -471,8 +471,8 @@ function renderAdditionalInfo( spaceid ) {
         }
         loc += ' (<a target="googlemaps" href="https://www.google.com/maps/dir/?api=1&amp;destination=' + space.lat + '%2c' + space.lng + '&amp;travelmode=walking">get directions</a>)';
         spaceHTML += '<li class="icon-address">' + loc + '</li>';
-        if ( space.url != "" ) {
-            spaceHTML += '<li class="icon-link"><a target="spaceurl" href="' + space.url + '">Visit the ' + space.title + ' web site</a></li>';
+        if ( space.url !== "" && space.url_text !== '' ) {
+            spaceHTML += '<li class="icon-link"><a target="spaceurl" href="' + space.url + '">' + space.url_text + '</a></li>';
         }
         if ( space.campusmap_url != '' ) {
             let campusmap_ref = space.campusmap_ref !== '' ? ' (map reference ' + space.campusmap_ref + ')': '';
@@ -507,14 +507,14 @@ function renderAdditionalInfo( spaceid ) {
             spaceHTML += '<section class="section-contact"><h3>Contact</h3><ul class="bulleticons">';
             if ( space.phone_number !== '' ) {
                 let phoneattr = space.phone_number.replace( /[^0-9]+/g, '' ).replace( /^0/, '+44' );
-                spaceHTML += '<li class="icon-phone"><a href="tel:' + phoneattr + '">Call ' +space.title + ' on ' + space.phone_number + '</a></li>';
+                spaceHTML += '<li class="icon-phone"><a href="tel:' + phoneattr + '">' +space.phone_text + ' on ' + space.phone_number + '</a></li>';
             }
             if ( space.twitter_screen_name !== '' ) {
-                spaceHTML += '<li class="icon-twitter"><a href="https://twitter.com/' + space.twitter_screen_name + '">Visit ' + space.twitter_screen_name + ' on twitter</a></li>';
+                spaceHTML += '<li class="icon-twitter"><a href="https://twitter.com/' + space.twitter_screen_name + '">Follow ' + space.twitter_screen_name + ' on twitter</a></li>';
             }
             if ( space.facebook_url !== '' ) {
                 let facebookName = space.facebook_url.replace( 'https://www.facebook.com/', '' );
-                spaceHTML += '<li class="icon-facebook-squared"><a href="' + space.facebook_url + '">Visit ' + facebookName + ' on facebook</a></li>';
+                spaceHTML += '<li class="icon-facebook-squared"><a href="' + space.facebook_url + '">Follow ' + facebookName + ' on facebook</a></li>';
             }
             spaceHTML += '</ul></section>'
         }

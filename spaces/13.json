@@ -84,5 +84,7 @@
     "id": 13,
     "image": "",
     "description": "Outdoor seating situated outside the Edward Boyle Library",
-    "published": true
+    "published": true,
+    "url_text": "",
+    "phone_text": ""
 }

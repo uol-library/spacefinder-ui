@@ -33,7 +33,7 @@
     "restriction": "",
     "disabled_access": true,
     "url": "",
-    "phone_number": "113343644",
+    "phone_number": "0113 343 6543",
     "twitter_screen_name": "",
     "facebook_url": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17382",
@@ -80,5 +80,7 @@
     "image": "",
     "imagealt": "Chemistry and Chemistry West Block - 1.44",
     "slug": "chemistry-and-chemistry-west-block-144",
-    "published": true
+    "published": true,
+    "url_text": "",
+    "phone_text": "Contact the School of Chemistry"
 }

@@ -81,5 +81,7 @@
     "id": 11,
     "image": "/assets/photos/Hugo-Camionette-Cafe1.jpg",
     "description": "Hugo, the Camionnette Café, is one of the more unique members of the Great Food at Leeds team and sells a range of hot drinks, pastries and brownies.",
-    "published": true
+    "published": true,
+    "url_text": "Visit the Hugo, the Camionnette Café web site",
+    "phone_text": ""
 }

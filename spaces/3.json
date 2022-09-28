@@ -86,5 +86,7 @@
     "id": 3,
     "image": "/assets/photos/Edit-Room.jpg",
     "description": "Situated on the ground floor of the Edward Boyle Library, the cafe provides an eclectic mix of grab and go food and drinks for everyone to enjoy at any time of the day.",
-    "published": true
+    "published": true,
+    "url_text": "Visit the Edit Room Café in Edward Boyle Library web site",
+    "phone_text": ""
 }
