@@ -75,7 +75,7 @@ function renderFilters() {
         filterForm.setAttribute( 'aria-label', 'Search and filter spaces' );
         let controlsContainer = document.createElement( 'div' );
         controlsContainer.classList.add( 'top-controls' );
-        controlsContainer.innerHTML = '<div><label for="search-input" class="visuallyhidden">Search</label><input id="search-input" type="search" placeholder="Search"></div><div class="searchbuttons"><button type="reset" id="search-reset" class="btn" disabled>Reset</button><button type="submit" id="search-submit" class="btn" aria-controls="searchResultsSummary" disabled>Search</button></div></div>';
+        controlsContainer.innerHTML = '<div><label for="search-input" class="visuallyhidden">Search University spaces</label><input id="search-input" type="search" placeholder="Search"></div><div class="searchbuttons"><button type="reset" id="search-reset" class="btn" disabled>Reset<span class="visuallyhidden"> University spaces search and filters</span></button><button type="submit" id="search-submit" class="btn" aria-controls="searchResultsSummary" disabled>Search<span class="visuallyhidden"> University spaces</span></button></div></div>';
         filterForm.appendChild( controlsContainer );
         let panelContainer = document.createElement( 'div' );
         panelContainer.classList.add( 'panel-content' );

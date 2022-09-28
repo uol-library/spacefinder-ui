@@ -297,7 +297,7 @@ function sortSpacesListener( event ) {
     /* determine direction from current attribute value */
     let dir = ( sortdir == 'desc' || sortdir == '' ) ? true: false;
 	if ( 'sortalpha' === sortby ) {
-		let sortmsg = dir? 'Sort alphabetically (descending, z-a)': 'Sort alphabetically (ascending, a-z)';
+		let sortmsg = dir? 'Sort alphabetically (descending, z to a)': 'Sort alphabetically (ascending, a to z)';
 		let addbtnclass = dir? 'icon-sort-name-down': 'icon-sort-name-up';
 		let rembtnclass = dir? 'icon-sort-name-up': 'icon-sort-name-down';
 		event.target.setAttribute( 'title', sortmsg );
