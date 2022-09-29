@@ -4,7 +4,7 @@ description: >-
   Map-driven application originally developed by
   the University of Cambridge
   https://spacefinder.lib.cam.ac.uk/
-environment: development
+environment: production
 baseurl: ""
 url: "https://ambitious-plant-087320403.1.azurestaticapps.net"
 host: "localhost"

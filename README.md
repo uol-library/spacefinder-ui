@@ -10,6 +10,16 @@ For more information about the project, [please visit the Spacefinder UI wiki](h
 Changelog
 ---------
 
+### 0.2.5 (29/9/2022)
+
+* Fixed accessibility issues in space details, including reformatting links and adding more detail to image alt text
+* Added a heading in each of the three application panes to help navigation in screen readers
+* Upgraded Javascript libraries to include accessibility fixes
+* Rewrite of map fullscreen control to make it into a button
+* Updated multiple labels to add more descriptive text for screen readers
+* Fixed focus bug in filters list
+* Fixed bugs in selection of space on page load when an anchor is present in the URL
+
 ### 0.2.4 (16/9/2022)
 
 * Added skip link to meet WCAG 2.1 - 2.4.1 Bypass Blocks
