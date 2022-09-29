@@ -2,7 +2,6 @@
 document.addEventListener( 'DOMContentLoaded', () => {
     document.addEventListener( 'spacesloaded', () => {
         renderList();
-        lazyLoadSpaceImages();
         updateDistances();
         checkOpeningHours();
         setInterval( checkOpeningHours, (30*1000) );
@@ -297,13 +296,12 @@ function sortSpacesListener( event ) {
     /* determine direction from current attribute value */
     let dir = ( sortdir == 'desc' || sortdir == '' ) ? true: false;
 	if ( 'sortalpha' === sortby ) {
-		let sortmsg = dir? 'Sort alphabetically (descending, z-a)': 'Sort alphabetically (ascending, a-z)';
+		let sortmsg = dir? 'Sort alphabetically (descending, z to a)': 'Sort alphabetically (ascending, a to z)';
 		let addbtnclass = dir? 'icon-sort-name-down': 'icon-sort-name-up';
-		let rembtnclass = dir? 'icon-sort-name-up': 'icon-sort-name-down';
+		let delbtnclass = dir? 'icon-sort-name-up': 'icon-sort-name-down';
 		event.target.setAttribute( 'title', sortmsg );
 		event.target.setAttribute( 'aria-label', sortmsg );
-		event.target.querySelector( 'span' ).innerText = sortmsg;
-		event.target.classList.remove( rembtnclass );
+		event.target.classList.remove( delbtnclass );
 		event.target.classList.add( addbtnclass );
 	}
     /* perform the sort */
@@ -408,9 +406,10 @@ function renderList() {
     spacefinder.spaces.forEach( space => {
         spaceContainer = document.createElement('div');
         spaceContainer.setAttribute( 'data-id', space.id );
+        spaceContainer.setAttribute( 'id', 'space' + space.id );
         spaceContainer.setAttribute( 'data-sortalpha', space.sortKey );
         spaceContainer.setAttribute( 'class', space.classes );
-        let spaceHTML = '<div class="space-summary"><h2><button data-slug="' + space.slug + '" class="accordion-trigger space-title load-info" aria-expanded="false" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">' + space.title + '</button></h2>';
+        let spaceHTML = '<div class="space-summary"><h3><button data-slug="' + space.slug + '" class="accordion-trigger space-title load-info" aria-expanded="false" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">' + space.title + '</button></h3>';
         spaceHTML += '<p class="space-info"><span class="space-type space-type-' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + '">' + space.space_type + '</span>';
         spaceHTML += '<span class="distance">(1,353 metres)</span>';
         let loc = '';
@@ -426,7 +425,8 @@ function renderList() {
         spaceHTML += '<span class="address">' + loc + '</span></p>';
         spaceHTML += '<div class="space-details">';
         if ( space.image != '' ) {
-            spaceHTML += '<div data-imgsrc="' + space.image + '" class="space-image lazy" role="img" aria-label="' + space.imagealt + '"></div>';
+            //spaceHTML += '<div data-imgsrc="' + space.image + '" class="space-image lazy" role="img" aria-label="' + space.imagealt + '"></div>';
+            spaceHTML += '<img src="' + space.image + '" class="space-image" loading="lazy" alt="' + space.imagealt + '">';
         }
         spaceHTML += '<p class="description">' + space.description + '</p></div></div>';
         spaceHTML += '<div class="additionalInfo" id="additionalInfo' + space.id + '"></div>';
@@ -458,7 +458,7 @@ function renderAdditionalInfo( spaceid ) {
         /*if ( space.booking_url ) {
             spaceHTML += '<p><a target="booking" class="button" href="'+space.booking_url+'">Book a space</a></p>';
         }*/
-        spaceHTML += '<section class="section-facts"><h3>Key Facts</h3><ul class="bulleticons"><li class="icon-marker switch-view"><a class="show-map" href="#">Show on map</a></li>';
+        spaceHTML += '<section class="section-facts"><h4>Key Facts</h4><ul class="bulleticons"><li class="icon-marker switch-view"><a class="show-map" href="#">Show on map</a></li>';
         let loc = '';
         if ( space.floor !== '' ) {
             loc += space.floor + ', ';
@@ -471,12 +471,12 @@ function renderAdditionalInfo( spaceid ) {
         }
         loc += ' (<a target="googlemaps" href="https://www.google.com/maps/dir/?api=1&amp;destination=' + space.lat + '%2c' + space.lng + '&amp;travelmode=walking">get directions</a>)';
         spaceHTML += '<li class="icon-address">' + loc + '</li>';
-        if ( space.url != "" ) {
-            spaceHTML += '<li class="icon-link"><a target="spaceurl" href="' + space.url + '">' + space.url + '</a></li>';
+        if ( space.url !== "" && space.url_text !== '' ) {
+            spaceHTML += '<li class="icon-link"><a target="spaceurl" href="' + space.url + '">' + space.url_text + '</a></li>';
         }
         if ( space.campusmap_url != '' ) {
             let campusmap_ref = space.campusmap_ref !== '' ? ' (map reference ' + space.campusmap_ref + ')': '';
-            spaceHTML += '<li class="icon-uol-logo-mark"><a target="campusmap" href="' + space.campusmap_url + '">View on campus map</a>' + campusmap_ref + '<li>';
+            spaceHTML += '<li class="icon-uol-logo-mark"><a target="campusmap" href="' + space.campusmap_url + '">View on the University campus map</a>' + campusmap_ref + '<li>';
         }
         if ( space.restricted ) {
             spaceHTML += '<li class="icon-public">Open to ' + space.access;
@@ -489,7 +489,7 @@ function renderAdditionalInfo( spaceid ) {
         }
         spaceHTML += '</ul></section>';
 
-        spaceHTML += '<section class="section-opening"><h3>Opening Times</h3>';
+        spaceHTML += '<section class="section-opening"><h4>Opening Times</h4>';
         spaceHTML += '<p class="icon-time-short" data-openmsg-id="' + space.id + '">' + spacenode.getAttribute( 'data-openmsg' ) + '</p>';
         spaceHTML += '<ul class="opening-times">';
         [ 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday' ].forEach( (day, idx) => {
@@ -504,16 +504,17 @@ function renderAdditionalInfo( spaceid ) {
         });
         spaceHTML += '</ul></section>';
         if ( space.phone_number !== '' || space.twitter_screen_name !== '' || space.facebook_url !== '' ) {
-            spaceHTML += '<section class="section-contact"><h3>Contact</h3><ul class="bulleticons">';
+            spaceHTML += '<section class="section-contact"><h4>Contact</h4><ul class="bulleticons">';
             if ( space.phone_number !== '' ) {
                 let phoneattr = space.phone_number.replace( /[^0-9]+/g, '' ).replace( /^0/, '+44' );
-                spaceHTML += '<li class="icon-phone"><a href="tel:' + phoneattr + '">' + space.phone_number + '</a></li>';
+                spaceHTML += '<li class="icon-phone"><a href="tel:' + phoneattr + '">' +space.phone_text + ' on ' + space.phone_number + '</a></li>';
             }
             if ( space.twitter_screen_name !== '' ) {
-                spaceHTML += '<li class="icon-twitter"><a href="https://twitter.com/' + space.twitter_screen_name + '">' + space.twitter_screen_name + '</a></li>';
+                spaceHTML += '<li class="icon-twitter"><a href="https://twitter.com/' + space.twitter_screen_name + '">Follow ' + space.twitter_screen_name + ' on twitter</a></li>';
             }
             if ( space.facebook_url !== '' ) {
-                spaceHTML += '<li class="icon-facebook-squared"><a href="' + space.facebook_url + '">' + space.facebook_url + '</a></li>';
+                let facebookName = space.facebook_url.replace( 'https://www.facebook.com/', '' );
+                spaceHTML += '<li class="icon-facebook-squared"><a href="' + space.facebook_url + '">Follow ' + facebookName + ' on facebook</a></li>';
             }
             spaceHTML += '</ul></section>'
         }
@@ -527,7 +528,7 @@ function renderAdditionalInfo( spaceid ) {
                 }
             });
             if ( facilitieslist != '' ) {
-                spaceHTML += '<section class="section-facilities"><h3>Facilities</h3><ul class="bulleticons">' + facilitieslist + '</ul></section>';
+                spaceHTML += '<section class="section-facilities"><h4>Facilities Available</h4><ul class="bulleticons">' + facilitieslist + '</ul></section>';
             }
         }
         spacenode.querySelector( '.additionalInfo' ).innerHTML = spaceHTML;
@@ -623,60 +624,4 @@ function checkOpeningHours() {
 function getTimeFromString( str ) {
     let parts = str.split( ':' );
     return ( parseInt( parts[0] ) * 100 ) + parseInt( parts[1] );
-}
-
-
-/**
- * Lazy loads images (i.e. only retrieves them from their URLs when they are
- * in the viewport). Uses IntersectionObserver API if available, and falls
- * back to listening for scroll events and testing scrollTop/offsetTop.
- */
-function lazyLoadSpaceImages() {
-    splog( 'lazyLoadSpaceImages', 'spaces.js' );
-    var lazyloadImages, lazyloadThrottleTimeout;
-
-    if ( "IntersectionObserver" in window ) {
-        lazyloadImages = document.querySelectorAll( '.lazy');
-        const imageObserver = new IntersectionObserver( function( entries, observer ) {
-            entries.forEach( function( entry ) {
-                if ( entry.isIntersecting ) {
-                    var image = entry.target;
-                    image.classList.remove( 'lazy' );
-                    image.setAttribute( 'style', 'background-image:url(' + spacefinder.imageBaseURL + image.getAttribute('data-imgsrc') + ')');
-                    imageObserver.unobserve( image );
-                }
-            });
-        });
-
-        lazyloadImages.forEach( function( image ) {
-            imageObserver.observe( image );
-        });
-    } else {
-        lazyloadImages = document.querySelectorAll( '.lazy' );
-
-        function lazyload() {
-            if ( lazyloadThrottleTimeout ) {
-                clearTimeout( lazyloadThrottleTimeout) ;
-            }    
-
-            lazyloadThrottleTimeout = setTimeout( function() {
-                lazyloadImages.forEach( function( img ) {
-                    if ( img.offsetTop < ( window.innerHeight + window.pageYOffset ) ) {
-                        img.src = img.dataset.src;
-                        img.classList.remove( 'lazy' );
-                        image.setAttribute( 'style', 'background-image:url(' + spacefinder.imageBaseURL + image.getAttribute('data-imgsrc') + ')');
-                    }
-                });
-                if ( lazyloadImages.length == 0 ) { 
-                    document.removeEventListener( 'scroll', lazyload );
-                    window.removeEventListener( 'resize', lazyload );
-                    window.removeEventListener( 'orientationChange', lazyload );
-                }
-            }, 20);
-        }
-
-        document.addEventListener( 'scroll', lazyload );
-        window.addEventListener( 'resize', lazyload );
-        window.addEventListener( 'orientationChange', lazyload );
-    }
 }

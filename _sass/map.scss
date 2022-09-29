@@ -1,6 +1,9 @@
 #map {
     position: relative;
     overflow: hidden;
+    &:focus {
+        border: 4px solid rgba($space-icon-stroke, 0.6);
+    }
     .leaflet-control-attribution > a {
         color: $linkcolor;
         background: $bg;
@@ -71,5 +74,13 @@
         span {
             line-height: 30px;
         }
+    }
+    .leaflet-container:-webkit-full-screen {
+        width:100%!important;
+        height:100%!important;
+    }
+    .leaflet-container.leaflet-fullscreen-on {
+        width:100%!important;
+        height:100%!important;
     }
 }

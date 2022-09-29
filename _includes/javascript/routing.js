@@ -14,6 +14,7 @@ function checkInitialPageLoad() {
                 if ( hp[1] == 'space' ) {
                     let space = getSpaceBySlug( hp[2] );
                     document.dispatchEvent( new CustomEvent( 'spaceSelected', { bubbles: true, detail: { id: space.id, src: 'load' } } ) );
+                    setElementFocus( 'space' + space.id );
                 }
                 if ( hp[1] == 'page' ) {
                     let pagedialog = document.getElementById( hp[2] + '-page' );

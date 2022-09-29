@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path');
 
 /* what3words */
+/*
 const what3words = require("@what3words/api");
 const apiKey = '3EZMJ4IE';
 const config = {
@@ -12,7 +13,7 @@ const config = {
   apiVersion: 'v3',
 }
 const client = what3words.ConvertTo3waClient.init(apiKey, config);
-
+*/
 
 const spacefiles = fs.readdirSync( path.resolve( __dirname, '../spaces' ), { encoding: 'utf8' } );
 spacefiles.forEach( filename => {
@@ -20,6 +21,17 @@ spacefiles.forEach( filename => {
         let spaceData = fs.readFileSync( path.resolve( __dirname, '../spaces/', filename ) );
         const spaceJSON = JSON.parse( spaceData );
         let geoJSON = JSON.parse( spaceJSON.location );
+        if ( spaceJSON.url == '' || spaceJSON.url == 'https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus' ) {
+            spaceJSON.url == '';
+            spaceJSON.url_text = '';
+        } else if ( spaceJSON.url.match( 'mytimetable.leeds.ac.uk' ) ) {
+            spaceJSON.url_text = 'View timetable for ' + spaceJSON.title;
+        } else if ( spaceJSON.url == 'https://library.leeds.ac.uk/' ) {
+            spaceJSON.url_text = 'Visit the Library website';
+        } else {
+            spaceJSON.url_text = 'Visit the ' + spaceJSON.title + ' web site';
+        }
+        
         /*
         selectively publish / unpublish spaces
         if ( ['title 1', 'title 2'].indexOf( spaceJSON.title ) != -1 ) {
@@ -46,15 +58,14 @@ spacefiles.forEach( filename => {
                 spaceJSON.facilities.push('facility');
             }
         }
-
-        write results to file
-        fs.writeFile( path.resolve( __dirname, '../_data/leeds/processed/'+spaceJSON.id+'.json' ), JSON.stringify( spaceJSON, null, '    ' ), err => {
+        */
+        // write results to file
+        fs.writeFile( path.resolve( __dirname, '../spaces/'+spaceJSON.id+'.json' ), JSON.stringify( spaceJSON, null, '    ' ), err => {
             if (err) {
                 console.error( err );
                 return;
             }
         });
-        */
     }
 });
 

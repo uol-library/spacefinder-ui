@@ -37,7 +37,9 @@
 .icon-access:before { content: '\e802'; } /* '' */
 .icon-user:before { content: '\e803'; } /* '' */
 .icon-address:before { content: '\e804'; } /* '' */
+.icon-resize-full:before { content: '\e805'; } /* '' */
 .icon-info-circled:before { content: '\e806'; } /* '' */
+.icon-resize-small:before { content: '\e807'; } /* '' */
 .icon-bench:before { content: '\e822'; } /* '' */
 .icon-uol-logo-mark:before { content: '\e831'; } /* '' */
 .icon-public:before { content: '\e900'; } /* '' */

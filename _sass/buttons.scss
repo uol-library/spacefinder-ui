@@ -25,7 +25,7 @@
 }
 .geo-button {
     padding: 0;
-    font-size: 26px;
+    font-size: 1.5rem;
     background: $geobuttonbg;
     color: $geobuttoncolor;
     user-select: none;
@@ -47,19 +47,16 @@
         color: $geobuttoncolor-disabled;
     }
     #map & {
-        margin-right: 10px;
-        width: 34px;
-        height: 34px;
-        border: 2px solid rgba(0, 0, 0, 0.2);
+        width: 2.2rem;
+        height: 2.2rem;
         border-radius: 4px;
     }
 }
 .maptype-button {
-    margin-right: 10px;
     color: transparent;
-    width: 34px;
-    height: 34px;
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    width: 2.2rem;
+    height: 2.2rem;
+    padding: 0;
     border-radius: 4px;
     cursor: pointer;
     position: relative;
@@ -69,6 +66,24 @@
     }
     &.maptype-street {
         background-image:url('../images/street.png');
+    }
+}
+.mapfullscreen-button {
+    color: transparent;
+    width: 2.2rem;
+    height: 2.2rem;
+    padding: 0;
+    border-radius: 4px;
+    background: $geobuttonbg;
+    color: $geobuttoncolor;
+    cursor: pointer;
+    &:hover {
+        background: $geobuttonbg-hover;
+        color: $geobuttoncolor-hover;
+    }
+    &::before {
+        margin: 0;
+        font-size: 1.5rem;
     }
 }
 .button {
