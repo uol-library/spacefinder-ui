@@ -298,11 +298,10 @@ function sortSpacesListener( event ) {
 	if ( 'sortalpha' === sortby ) {
 		let sortmsg = dir? 'Sort alphabetically (descending, z to a)': 'Sort alphabetically (ascending, a to z)';
 		let addbtnclass = dir? 'icon-sort-name-down': 'icon-sort-name-up';
-		let rembtnclass = dir? 'icon-sort-name-up': 'icon-sort-name-down';
+		let delbtnclass = dir? 'icon-sort-name-up': 'icon-sort-name-down';
 		event.target.setAttribute( 'title', sortmsg );
 		event.target.setAttribute( 'aria-label', sortmsg );
-		event.target.querySelector( 'span' ).innerText = sortmsg;
-		event.target.classList.remove( rembtnclass );
+		event.target.classList.remove( delbtnclass );
 		event.target.classList.add( addbtnclass );
 	}
     /* perform the sort */

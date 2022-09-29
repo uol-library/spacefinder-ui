@@ -146,6 +146,8 @@ function setupFilters() {
         /* add/remove visible focus styles to list items when a checkbox is focussed */
         cbx.addEventListener( 'focus', eventElement => {
             eventElement.target.closest( 'li' ).classList.add( 'focus' );
+            /* make elements scroll into view when focussed */
+            eventElement.target.closest( 'li' ).scrollIntoView(false);
         });
         cbx.addEventListener( 'blur', eventElement => {
             document.querySelectorAll( '#filters li' ).forEach( el => el.classList.remove( 'focus' ) );
