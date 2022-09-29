@@ -406,6 +406,7 @@ function renderList() {
     spacefinder.spaces.forEach( space => {
         spaceContainer = document.createElement('div');
         spaceContainer.setAttribute( 'data-id', space.id );
+        spaceContainer.setAttribute( 'id', 'space' + space.id );
         spaceContainer.setAttribute( 'data-sortalpha', space.sortKey );
         spaceContainer.setAttribute( 'class', space.classes );
         let spaceHTML = '<div class="space-summary"><h2><button data-slug="' + space.slug + '" class="accordion-trigger space-title load-info" aria-expanded="false" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">' + space.title + '</button></h2>';
