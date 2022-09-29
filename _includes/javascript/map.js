@@ -257,7 +257,7 @@ function recentreMap() {
  * Zooms the map to show a particular space
  * @param {Object} space
  */
-function zoomMapToSpace( spaceid ) {
+ function zoomMapToSpace( spaceid ) {
     splog( 'zoomMapToSpace', 'map.js' );
     let space = getSpaceById( spaceid );
     spacefinder.markergroup.zoomToShowLayer( space.marker, function(){
