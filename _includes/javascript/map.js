@@ -16,6 +16,8 @@ function initMap() {
     document.addEventListener( 'filtersloaded', maybeSetupMap );
     document.addEventListener( 'sfmaploaded', maybeSetupMap );
     spacefinder.map = L.map( 'map' ).setView([spacefinder.currentLoc.lat, spacefinder.currentLoc.lng], spacefinder.startZoom );
+    /* change leaflet attribution */
+    spacefinder.map.attributionControl.setPrefix( '<a href="https://leafletjs.com" target="external" title="A JavaScript library for interactive maps" aria-label="Leaflet - a JavaScript library for interactive maps"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8"><path fill="#4C7BE1" d="M0 0h12v4H0z"></path><path fill="#FFD500" d="M0 4h12v3H0z"></path><path fill="#E0BC00" d="M0 7h12v1H0z"></path></svg> Leaflet</a>' );
     spacefinder.osm = L.tileLayer( 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© <a target="external" href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
