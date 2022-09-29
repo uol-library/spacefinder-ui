@@ -6,7 +6,7 @@ description: >-
   https://spacefinder.lib.cam.ac.uk/
 environment: development
 baseurl: ""
-url: "https://lively-coast-02f6b8403.1.azurestaticapps.net"
+url: "https://dev.spacefinder.leeds.ac.uk"
 host: "localhost"
 photo_dir: "/assets/photos/"
 sass:
