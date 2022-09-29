@@ -409,7 +409,7 @@ function renderList() {
         spaceContainer.setAttribute( 'id', 'space' + space.id );
         spaceContainer.setAttribute( 'data-sortalpha', space.sortKey );
         spaceContainer.setAttribute( 'class', space.classes );
-        let spaceHTML = '<div class="space-summary"><h2><button data-slug="' + space.slug + '" class="accordion-trigger space-title load-info" aria-expanded="false" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">' + space.title + '</button></h2>';
+        let spaceHTML = '<div class="space-summary"><h3><button data-slug="' + space.slug + '" class="accordion-trigger space-title load-info" aria-expanded="false" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">' + space.title + '</button></h3>';
         spaceHTML += '<p class="space-info"><span class="space-type space-type-' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + '">' + space.space_type + '</span>';
         spaceHTML += '<span class="distance">(1,353 metres)</span>';
         let loc = '';
@@ -458,7 +458,7 @@ function renderAdditionalInfo( spaceid ) {
         /*if ( space.booking_url ) {
             spaceHTML += '<p><a target="booking" class="button" href="'+space.booking_url+'">Book a space</a></p>';
         }*/
-        spaceHTML += '<section class="section-facts"><h3>Key Facts</h3><ul class="bulleticons"><li class="icon-marker switch-view"><a class="show-map" href="#">Show on map</a></li>';
+        spaceHTML += '<section class="section-facts"><h4>Key Facts</h4><ul class="bulleticons"><li class="icon-marker switch-view"><a class="show-map" href="#">Show on map</a></li>';
         let loc = '';
         if ( space.floor !== '' ) {
             loc += space.floor + ', ';
@@ -489,7 +489,7 @@ function renderAdditionalInfo( spaceid ) {
         }
         spaceHTML += '</ul></section>';
 
-        spaceHTML += '<section class="section-opening"><h3>Opening Times</h3>';
+        spaceHTML += '<section class="section-opening"><h4>Opening Times</h4>';
         spaceHTML += '<p class="icon-time-short" data-openmsg-id="' + space.id + '">' + spacenode.getAttribute( 'data-openmsg' ) + '</p>';
         spaceHTML += '<ul class="opening-times">';
         [ 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday' ].forEach( (day, idx) => {
@@ -504,7 +504,7 @@ function renderAdditionalInfo( spaceid ) {
         });
         spaceHTML += '</ul></section>';
         if ( space.phone_number !== '' || space.twitter_screen_name !== '' || space.facebook_url !== '' ) {
-            spaceHTML += '<section class="section-contact"><h3>Contact</h3><ul class="bulleticons">';
+            spaceHTML += '<section class="section-contact"><h4>Contact</h4><ul class="bulleticons">';
             if ( space.phone_number !== '' ) {
                 let phoneattr = space.phone_number.replace( /[^0-9]+/g, '' ).replace( /^0/, '+44' );
                 spaceHTML += '<li class="icon-phone"><a href="tel:' + phoneattr + '">' +space.phone_text + ' on ' + space.phone_number + '</a></li>';
@@ -528,7 +528,7 @@ function renderAdditionalInfo( spaceid ) {
                 }
             });
             if ( facilitieslist != '' ) {
-                spaceHTML += '<section class="section-facilities"><h3>Facilities Available</h3><ul class="bulleticons">' + facilitieslist + '</ul></section>';
+                spaceHTML += '<section class="section-facilities"><h4>Facilities Available</h4><ul class="bulleticons">' + facilitieslist + '</ul></section>';
             }
         }
         spacenode.querySelector( '.additionalInfo' ).innerHTML = spaceHTML;

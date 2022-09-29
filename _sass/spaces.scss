@@ -61,7 +61,8 @@
                 margin: 0 1rem 1rem 0;
             }
         }
-        h2 {
+        h3 {
+            font-size: 1.4rem;
             font-weight: normal;
             padding-bottom: .3rem;
             &:focus {
@@ -95,7 +96,8 @@
                 }
             }
         }
-        h3 {
+        h4 {
+            font-size: 1.1rem;
             font-weight: normal;
             padding-bottom: .5rem 0;
             background: $spacesubheadbg;
