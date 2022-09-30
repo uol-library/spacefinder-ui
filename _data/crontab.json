@@ -1,27 +1,3 @@
 {
-    "jobs": [
-        {
-            "date": "30-9-2022",
-            "updates": [
-                {
-                    "match": "title",
-                    "term": "Café Maia",
-                    "field": "published",
-                    "value": true
-                },
-                {
-                    "match": "title",
-                    "term": "Michael Sadler Building - Behind Rupert Beckett Lecture Theatre",
-                    "field": "published",
-                    "value": true
-                },
-                {
-                    "match": "title",
-                    "term": "Worsley Building - Airport Lounge seating (level 7)",
-                    "field": "published",
-                    "value": true
-                }
-            ]
-        }
-    ]
+    "jobs": []
 }
