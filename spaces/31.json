@@ -64,7 +64,7 @@
     "floor": "Ground floor",
     "restriction": "",
     "campusmap_url": "https://www.leeds.ac.uk/campusmap?location=17512",
-    "published": false,
+    "published": true,
     "imagealt": "Michael Sadler Building - Behind Rupert Beckett Lecture Theatre",
     "url": "https://students.leeds.ac.uk/info/10109/study_support/1419/where_to_study_on_campus",
     "campusmap_ref": "78",
