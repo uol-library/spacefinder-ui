@@ -10,6 +10,10 @@ For more information about the project, [please visit the Spacefinder UI wiki](h
 Changelog
 ---------
 
+### 0.2.6 (4/10/2022)
+
+* Fixed an issue with the geolocation marker
+
 ### 0.2.5 (29/9/2022)
 
 * Fixed accessibility issues in space details, including reformatting links and adding more detail to image alt text
