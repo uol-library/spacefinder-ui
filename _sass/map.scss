@@ -51,6 +51,12 @@
             fill: $space-icon-fill;
         }
     }
+    .person-marker {
+        circle {
+            stroke: $person-icon-stroke;
+            fill: $person-icon-fill;
+        }
+    }
     .marker-cluster-small,
     .marker-cluster-medium,
     .marker-cluster-large {

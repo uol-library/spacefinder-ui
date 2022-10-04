@@ -360,7 +360,7 @@ function movePersonMarker() {
     splog( 'movePersonMarker', 'map.js' );
     /* move person marker */
     if ( spacefinder.personMarker ) {
-        spacefinder.personMarker.setPosition( spacefinder.personLoc );
+        spacefinder.personMarker.setLatLng( spacefinder.personLoc );
     }
     /* update distances to each space */
     updateDistances();
@@ -531,7 +531,11 @@ function getUserPosition() {
         /* centre the map on the user position */
 		spacefinder.map.panTo( spacefinder.personLoc );
         /* add a person marker */
-		spacefinder.personMarker = L.marker( spacefinder.personLoc, { alt: 'Your location' } ).addTo( spacefinder.map );
+		spacefinder.personMarker = L.marker( spacefinder.personLoc, {
+            alt:   'Your location',
+            title: 'Your location',
+            icon:  getSVGIcon( 'person-marker' )
+        } ).addTo( spacefinder.map );
         activateGeolocation( true );
         /* watch for changes in the user position and update the map by firing an event */
 		spacefinder.watchID = navigator.geolocation.watchPosition( position => {
