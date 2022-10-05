@@ -783,6 +783,12 @@
       "css": "resize-small",
       "code": 59399,
       "src": "iconic"
+    },
+    {
+      "uid": "921e3974e54ff9e8b7cd906a3dc74636",
+      "css": "direction",
+      "code": 61732,
+      "src": "fontawesome"
     }
   ]
 }

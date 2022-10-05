@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'spacefinder-new';
-  src: url('../font/spacefinder-new.eot?99713067');
-  src: url('../font/spacefinder-new.eot?99713067#iefix') format('embedded-opentype'),
-       url('../font/spacefinder-new.woff2?99713067') format('woff2'),
-       url('../font/spacefinder-new.woff?99713067') format('woff'),
-       url('../font/spacefinder-new.ttf?99713067') format('truetype'),
-       url('../font/spacefinder-new.svg?99713067#spacefinder-new') format('svg');
+  src: url('../font/spacefinder-new.eot?13009277');
+  src: url('../font/spacefinder-new.eot?13009277#iefix') format('embedded-opentype'),
+       url('../font/spacefinder-new.woff2?13009277') format('woff2'),
+       url('../font/spacefinder-new.woff?13009277') format('woff'),
+       url('../font/spacefinder-new.ttf?13009277') format('truetype'),
+       url('../font/spacefinder-new.svg?13009277#spacefinder-new') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'spacefinder-new';
-    src: url('../font/spacefinder-new.svg?99713067#spacefinder-new') format('svg');
+    src: url('../font/spacefinder-new.svg?13009277#spacefinder-new') format('svg');
   }
 }
 */
@@ -110,6 +110,7 @@
 .icon-hearing-loop:before { content: '\e90a'; } /* '' */
 .icon-my-location:before { content: '\e90b'; } /* '' */
 .icon-link:before { content: '\f07b'; } /* '' */
+.icon-direction:before { content: '\f124'; } /* '' */
 .icon-sort-name-up:before { content: '\f15d'; } /* '' */
 .icon-sort-name-down:before { content: '\f15e'; } /* '' */
 .icon-universal-access:before { content: '\f29a'; } /* '' */
