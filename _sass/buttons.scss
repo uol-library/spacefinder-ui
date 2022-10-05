@@ -86,6 +86,20 @@
         font-size: 1.5rem;
     }
 }
+.maprecentre-button {
+    color: $recentrebuttoncolor;
+    font-weight: bold;
+    padding: .5rem;
+    border-color: $recentrebuttonbordercolor;
+    border-radius: 4px;
+    background: $recentrebuttonbg;
+    cursor: pointer;
+    &:hover {
+        background: $recentrebuttonbg-hover;
+        color: $recentrebuttoncolor-hover;
+        border-color: $recentrebuttonbordercolor-hover;
+    }
+}
 .button {
     line-height: 1;
     min-width: 10rem;
@@ -211,7 +225,7 @@
                 content: '\e609';
                 font-size: 14px;
             }
-            &[data-sortdir="asc"] {
+            &[data-sortdir="desc"] {
                 &:after {
                     font-size: 12px;
                 }
@@ -220,7 +234,7 @@
                     font-size: 24px;
                 }
             }
-            &[data-sortdir="desc"] {
+            &[data-sortdir="asc"] {
                 &:after {
                     font-size: 24px;
                 }
