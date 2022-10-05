@@ -10,6 +10,13 @@ For more information about the project, [please visit the Spacefinder UI wiki](h
 Changelog
 ---------
 
+### 0.2.7 (5/10/2022)
+
+* Added a button to allow users to recentre the map if they have geolocation active and drag the map
+* Refactored geolocation button to follow the same pattern as the recentre button
+* Added more descriptive labels to distance sorting button
+* Reinstated feedback modal
+
 ### 0.2.6 (4/10/2022)
 
 * Fixed an issue with the geolocation marker
