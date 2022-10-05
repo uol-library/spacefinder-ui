@@ -119,6 +119,14 @@ $geobuttonbg-disabled: $filterbuttonbg-disabled;
 $geobuttoncolor-active: $color-white;
 $geobuttonbg-active: $color-blue;
 
+/* recentre button */
+$recentrebuttoncolor: $color-blue;
+$recentrebuttonbg: $color-white;
+$recentrebuttoncolor-hover: $color-blue--bright;
+$recentrebuttonbg-hover: $color-white;;
+$recentrebuttonbordercolor: $color-blue;
+$recentrebuttonbordercolor-hover: $color-blue--bright;
+
 /* List panel */
 $lighttextcolor: $color-font--light;
 $highlighttextcolor: $color-blue;

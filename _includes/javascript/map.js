@@ -62,7 +62,7 @@ function initMap() {
             } ) );
         }
         /* prevents the close button on popups changing the anchor */
-        if ( event.target.classList.contains( 'leaflet-popup-close-button' ) || event.target.parentNode.classList.contains( 'leaflet-popup-close-button' ) ) {
+        if ( event.target.classList.contains( 'leaflet-popup-close-button' ) || ( event.target.parentNode && event.target.parentNode.classList && event.target.parentNode.classList.contains( 'leaflet-popup-close-button' ) ) ) {
             event.preventDefault();
         }
     });
@@ -151,55 +151,91 @@ function maybeSetupMap() {
         /* save the map bounds and zoom to enable resetting */
         spacefinder.mapBounds = spacefinder.map.getBounds();
         spacefinder.mapZoom = parseInt( spacefinder.map.getZoom() );
+
+        /**
+         * Create a button to recentre the map when geolocation is active and the user
+         * drags the map off centre (the map should be centred on the user position)
+         */
+        L.Control.RecentreControl = L.Control.extend({
+            onAdd: function(map) {
+                var container = L.DomUtil.create( 'div', 'leaflet-control-recentre' );
+                this._recentreButton = L.DomUtil.create( 'button', 'maprecentre-button icon-direction', container );
+                this._recentreButton.innerHTML = 'Recentre';
+                this._recentreButton.setAttribute( 'aria-label', 'Recentre map on my location' );
+                this._recentreButton.setAttribute( 'title', 'Recentre map on my location' );
+                L.DomEvent.on( this._recentreButton, 'mousedown dblclick', L.DomEvent.stopPropagation )
+                    .on( this._recentreButton, 'click', L.DomEvent.stop )
+                    .on( this._recentreButton, 'click', this._recentreMap, this );
+                return container;
+            },
+            onRemove: function( map ) {
+                splog( 'removing recentre control', 'map.js' );
+                L.DomEvent.off( this._recentreButton, 'click mousedown dblclick' );
+            },
+            _recentreMap: function() {
+                let newCenter = geolocationActive() ? spacefinder.personLoc: spacefinder.currentLoc;
+                spacefinder.map.panTo( newCenter );
+                spacefinder.recentreControl = null;
+                this.remove();
+            }
+        });
+
+        /* constructor */
+        L.control.recentreControl = function( opts ) {
+            return new L.Control.RecentreControl( opts );
+        }
+
+        /* add recentre button when map is moved */
+        spacefinder.map.on( 'dragend', event => {
+            if ( geolocationActive() && ! spacefinder.recentreControl ) {
+                splog( 'adding recentre control as map was dragged by user', 'map.js' );
+                spacefinder.recentreControl = L.control.recentreControl( { position: 'bottomleft' } ).addTo( spacefinder.map );
+            }
+        });
         
         /**
          * Create a button to switch base layers between streets (OpenStreetMap)
          * and satellite (ESRI).
          */
-        L.Control.mapTypeControl = L.Control.extend({
+        L.Control.MapTypeControl = L.Control.extend({
             onAdd: function(map) {
                 let sd = spacefinder.viewdata.satellite;
                 var container = L.DomUtil.create('div', 'leaflet-control-maptype');
+                this._mapTypeButton = L.DomUtil.create( 'button', 'maptype-button ' + sd.btnClass, container );
                 const mapTypeButton = document.createElement( 'button' );
-                mapTypeButton.innerHTML = sd.btnText;
-                mapTypeButton.classList.add( 'maptype-button' );
-                mapTypeButton.classList.add( sd.btnClass );
-                mapTypeButton.setAttribute( 'aria-label', sd.btnLabel );
-                mapTypeButton.setAttribute( 'title', sd.btnLabel );
-                mapTypeButton.setAttribute( 'data-currentType', 'street' );
-                container.appendChild( mapTypeButton );
+                this._mapTypeButton.innerHTML = sd.btnText;
+                this._mapTypeButton.setAttribute( 'aria-label', sd.btnLabel );
+                this._mapTypeButton.setAttribute( 'title', sd.btnLabel );
+                this._mapTypeButton.setAttribute( 'data-currentType', 'street' );
+                L.DomEvent.on( this._mapTypeButton, 'mousedown dblclick', L.DomEvent.stopPropagation )
+                    .on( this._mapTypeButton, 'click', L.DomEvent.stop )
+                    .on( this._mapTypeButton, 'click', this._switchType, this );
                 return container;
             },
-            onRemove: function(map) {
-                // Nothing to do here
+            onRemove: function( map ) {
+                L.DomEvent.off( this._mapTypeButton, 'click mousedown dblclick' );
+            },
+            _switchType: function() {
+                let currentType = this._mapTypeButton.getAttribute( 'data-currentType' );
+                let newType = currentType == 'street' ? 'satellite': 'street';
+                this._mapTypeButton.classList.replace( spacefinder.viewdata[ newType ].btnClass, spacefinder.viewdata[ currentType ].btnClass );
+                this._mapTypeButton.innerHTML = spacefinder.viewdata[ currentType ].btnText;
+                this._mapTypeButton.setAttribute( 'aria-label', spacefinder.viewdata[ currentType ].btnLabel );
+                this._mapTypeButton.setAttribute( 'title', spacefinder.viewdata[ currentType ].btnLabel );
+                this._mapTypeButton.setAttribute( 'data-currentType', newType );
+                spacefinder.viewdata[currentType].tileLayer.removeFrom( spacefinder.map );
+                spacefinder.viewdata[newType].tileLayer.addTo( spacefinder.map );
             }
         });
 
         /* constructor */
         L.control.mapTypeControl = function( opts ) {
-            return new L.Control.mapTypeControl( opts );
+            return new L.Control.MapTypeControl( opts );
         }
 
         /* add to map */
         L.control.mapTypeControl( { position: 'topright' } ).addTo( spacefinder.map );
 
-        /* add listener to map type button to toggle base layer */
-        document.addEventListener('click', event => {
-            if ( event.target.matches( '.maptype-button' ) ) {
-                let currentType = event.target.getAttribute( 'data-currentType' );
-                let newType = currentType == 'street' ? 'satellite': 'street';
-                let mapTypeButton = document.querySelector( 'button.maptype-button' );
-                if ( mapTypeButton ) {
-                    mapTypeButton.classList.replace( spacefinder.viewdata[ newType ].btnClass, spacefinder.viewdata[ currentType ].btnClass );
-                    mapTypeButton.innerHTML = spacefinder.viewdata[ currentType ].btnText;
-                    mapTypeButton.setAttribute( 'aria-label', spacefinder.viewdata[ currentType ].btnLabel );
-                    mapTypeButton.setAttribute( 'title', spacefinder.viewdata[ currentType ].btnLabel );
-                    mapTypeButton.setAttribute( 'data-currentType', newType );
-                    spacefinder.viewdata[currentType].tileLayer.removeFrom( spacefinder.map );
-                    spacefinder.viewdata[newType].tileLayer.addTo( spacefinder.map );
-                }
-            }
-        });
         
         /* let eveyone know we are ready */
         spacefinder.mapReady = true;
@@ -244,13 +280,11 @@ function getSVGIcon( c ) {
 
 /**
  * Re-centres map
- * Not currently used (written to enable recentring like in a google maps <recentre> button)
  */
 function recentreMap() {
     splog( 'recentreMap', 'map.js' );
     let newCenter = geolocationActive() ? spacefinder.personLoc: spacefinder.currentLoc;
     spacefinder.map.panTo( newCenter );
-    spacefinder.map.fitBounds( spacefinder.mapBounds );
 }
 
 /**
@@ -503,6 +537,11 @@ function forgetUserPosition() {
     navigator.geolocation.clearWatch( spacefinder.watchID );
     /* remove person marker from map */
     spacefinder.personMarker.remove();
+    /* remove recentre control if it is on the map */
+    if ( spacefinder.recentreControl ) {
+        spacefinder.recentreControl.remove();
+        spacefinder.recentreControl = null;
+    }
     /* make location buttons inactive */
     activateGeolocation( false );
     /* re-centre map */
@@ -572,8 +611,10 @@ function updateDistances() {
     splog( 'updateDistances', 'map.js' );
     if ( geolocationActive() ) {
         spacefinder.spaces.forEach( (space, index) => {
-            spacefinder.spaces[index].distancefromcentre = haversine_distance( spacefinder.personLoc, { lat: space.lat, lng: space.lng } );
-            document.querySelector( '[data-id="' + space.id + '"]').setAttribute( 'data-sortdistance', spacefinder.spaces[index].distancefromcentre );
+            let d = haversine_distance( spacefinder.personLoc, { lat: space.lat, lng: space.lng } );
+            document.querySelector( '[data-id="' + space.id + '"]').setAttribute( 'data-sortdistance', d );
+            var dist = ( d > 1000 ) ? ( ( d / 1000 ).toFixed(2) + 'km  away' ) : ( d > 1 ? d + ' metres away': ( d === 1 ? d + ' metre away': 'You are here!' ) );
+            document.getElementById( 'distance' + space.id ).innerHTML = dist;
         });
     } else {
         let spacenodes = document.querySelectorAll( '.list-space' );

@@ -273,11 +273,15 @@ function deselectSpaces( spaceid ) {
  * @param {string} sorttype either alpha or distance.
  */
 function activateSort( activate, sorttype ) {
-    splog( 'activateSort', 'spaces.js' );
+    splog( 'activateSort - sorting spaces by ' + sorttype + ' ' + ( activate? 'activated': 'deactivated' ), 'spaces.js' );
     const sortbutton = document.getElementById( 'sort' + sorttype );
     if ( ! activate ) {
         sortbutton.disabled = true;
         sortbutton.removeEventListener( 'click', sortSpacesListener );
+        if ( 'distance' === sorttype ) {
+            sortbutton.setAttribute( 'title', 'Sort by distance (nearest to farthest)' );
+            sortbutton.setAttribute( 'aria-label', 'Sort by distance (nearest to farthest)' );
+        }
     } else {
         sortbutton.disabled = false;
         sortbutton.addEventListener( 'click', sortSpacesListener );
@@ -303,7 +307,17 @@ function sortSpacesListener( event ) {
 		event.target.setAttribute( 'aria-label', sortmsg );
 		event.target.classList.remove( delbtnclass );
 		event.target.classList.add( addbtnclass );
-	}
+	} else if ( 'sortdistance' === sortby ) {
+		let sortmsg = dir? 'Sort by distance (farthest to nearest)': 'Sort by distance (nearest to farthest)';
+		event.target.setAttribute( 'title', sortmsg );
+		event.target.setAttribute( 'aria-label', sortmsg );
+        let sortAlphaButton = document.getElementById( 'sortalpha' );
+		sortAlphaButton.setAttribute( 'title', 'Sort alphabetically (ascending, a to z)' );
+		sortAlphaButton.setAttribute( 'aria-label', 'Sort alphabetically (ascending, a to z)' );
+		sortAlphaButton.classList.remove( 'icon-sort-name-down' );
+		sortAlphaButton.classList.add( 'icon-sort-name-up' );
+        sortAlphaButton.setAttribute( 'data-sortdir', 'desc' );
+    }
     /* perform the sort */
     sortSpaces( sortby, dir );
 }
@@ -410,8 +424,8 @@ function renderList() {
         spaceContainer.setAttribute( 'data-sortalpha', space.sortKey );
         spaceContainer.setAttribute( 'class', space.classes );
         let spaceHTML = '<div class="space-summary"><h3><button data-slug="' + space.slug + '" class="accordion-trigger space-title load-info" aria-expanded="false" aria-controls="additionalInfo' + space.id + '" data-spaceid="' + space.id + '">' + space.title + '</button></h3>';
-        spaceHTML += '<p class="space-info"><span class="space-type space-type-' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + '">' + space.space_type + '</span>';
-        spaceHTML += '<span class="distance">(1,353 metres)</span>';
+        spaceHTML += '<p class="space-info"><span class="space-type space-type-' + space.space_type.replace( /[^0-9a-zA-Z]/g, '').toLowerCase() + '">' + space.space_type + '<span class="distance" id="distance' + space.id +'">SHITFACE</span></span>';
+        spaceHTML += '';
         let loc = '';
         if ( space.floor !== '' ) {
             loc += '<span class="address-floor">' + space.floor + '</span>, ';

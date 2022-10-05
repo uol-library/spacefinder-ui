@@ -71,7 +71,6 @@
         }
         p.space-info {
             font-weight: normal;
-            font-size: 1.2rem;
             padding-bottom: .3rem;
             display: flex;
             flex-direction: row;
@@ -80,21 +79,25 @@
             > span {
                 flex: 1;
                 &.space-type {
+                    font-size: 1.2rem;
+                    display: block;
                     color: $highlighttextcolor;
+                    span.distance {
+                        display: block;
+                        color: $lighttextcolor;
+                        font-size: .9rem;
+                    }
                 }
                 &.address {
-                    min-width: 60%;
+                    max-width: 70%;
                     color: $lighttextcolor;
                     text-align: right;
                     font-size: .9rem;
                 }
-                &.distance {
-                    display: none;
-                    color: $lighttextcolor;
-                    text-align: center;
-                    font-size: .9rem;
-                }
             }
+        }
+        &[data-sortdistance=""] p.space-info > span.space-type span.distance {
+            display: none;
         }
         h4 {
             font-size: 1.1rem;

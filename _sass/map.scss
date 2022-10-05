@@ -1,8 +1,9 @@
 #map {
     position: relative;
     overflow: hidden;
-    &:focus {
-        border: 4px solid rgba($space-icon-stroke, 0.6);
+    border: 1px solid transparent;
+    &:focus-visible {
+        border: 1px solid rgba( $space-icon-stroke, 0.6 );
     }
     .leaflet-control-attribution > a {
         color: $linkcolor;
