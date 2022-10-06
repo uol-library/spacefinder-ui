@@ -10,6 +10,11 @@ For more information about the project, [please visit the Spacefinder UI wiki](h
 Changelog
 ---------
 
+### 0.2.8 (6/10/2022)
+
+* Fixed an issue with calculation of opening times
+* updated robots.txt
+
 ### 0.2.7 (5/10/2022)
 
 * Added a button to allow users to recentre the map if they have geolocation active and drag the map

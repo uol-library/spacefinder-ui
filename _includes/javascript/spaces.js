@@ -583,7 +583,7 @@ function checkOpeningHours() {
     let today = new Date();
     let daynames = [ 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday' ];
     let todaysday = daynames[ today.getDay() ];
-    let timenow = ( today.getHours() * 100 ) + today.getMinutes();
+    let timenow = ( today.getHours() * 60 ) + today.getMinutes();
     spacefinder.spaces.forEach( ( space, index ) => {
         let openmsg = '';
         let openclass = 'currently-closed';
@@ -607,6 +607,15 @@ function checkOpeningHours() {
                     }
                     openmsg = 'Currently closed (opens in ' + openingin + ')';
                     openclass = 'opening-later';
+                } else if ( open_to < ( timenow + 60 ) ) {
+                    let closingin = '';
+                    let closinginmins = ( open_to - timenow ) % 60;
+                    let pl = ( closinginmins == 1 ) ? '': 's';
+                    if ( closinginmins > 0 ) {
+                        closingin += closinginmins + ' min' + pl;
+                    }
+                    openmsg = 'Currently open (closes in ' + closingin + ')';
+                    openclass = 'open';
                 } else if ( open_to < timenow ) {
                     openclass = 'closed';
                     openmsg = 'Currently closed';
@@ -637,5 +646,5 @@ function checkOpeningHours() {
  */
 function getTimeFromString( str ) {
     let parts = str.split( ':' );
-    return ( parseInt( parts[0] ) * 100 ) + parseInt( parts[1] );
+    return ( parseInt( parts[0] ) * 60 ) + parseInt( parts[1] );
 }
