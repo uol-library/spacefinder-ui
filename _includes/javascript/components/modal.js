@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let dialog = new A11yDialog( document.getElementById( 'sfalertdialog' ) );
             dialog.hide();
         });
-    }, 20000)
+    }, 20000);
 });
 
 /**
