@@ -10,6 +10,11 @@ For more information about the project, [please visit the Spacefinder UI wiki](h
 Changelog
 ---------
 
+### 0.2.9 (13/10/2022)
+
+* Fixed an issue with the search button on smaller screens
+* Added Dublin Core metadata and meta description element
+
 ### 0.2.8 (6/10/2022)
 
 * Fixed an issue with calculation of opening times
