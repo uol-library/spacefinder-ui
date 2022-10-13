@@ -399,6 +399,7 @@ function loadSpaces() {
                 }
                 return 0;
             } );
+            adjustSpacesForClosures();
             spacefinder.spacesLoaded = true;
             /* fire the spacesloaded event */
             document.getElementById( 'list' ).dispatchEvent( new Event( 'spacesloaded', {
@@ -637,6 +638,36 @@ function checkOpeningHours() {
             
         }
     });
+}
+
+/**
+ * Adjusts spaces opening times to take University closures into account
+ * Closures affect all spaces and are stored in the spacefinder object
+ * defined in config.js
+ */
+function adjustSpacesForClosures() {
+    if ( spacefinder.closureDates ) {
+        let today = new Date();
+        let lastMonday = new Date();
+        lastMonday.setDate( today.getDate() - ( ( today.getDay() + 6 ) % 7 ) );
+        let daynames = [ 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday' ];
+        let updateDays = [];
+        for ( let i = 0; i < 7; i++ ) {
+            let toCheck = new Date();
+            toCheck.setDate( lastMonday.getDate() + i );
+            let toCheckStr = toCheck.getDate() + '-' + ( toCheck.getMonth() + 1 ) + '-' + toCheck.getFullYear();
+            if ( spacefinder.closureDates.indexOf( toCheckStr ) !== -1 ) {
+                updateDays.push( daynames[i] );
+            }
+        }
+        if ( updateDays.length ) {
+            for ( let i = 0; i < spacefinder.spaces.length; i++ ) {
+                updateDays.forEach( function( day ) {
+                    spacefinder.spaces[i].opening_hours[day].open = false;
+                });
+            }
+        }
+    }
 }
 
 /**
