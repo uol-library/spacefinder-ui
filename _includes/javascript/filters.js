@@ -213,15 +213,17 @@ function setupFilters() {
             }));
 
         }
-        /* switch to list view */
-        document.getElementById( 'top-bar' ).dispatchEvent( new CustomEvent( 'viewchange', {
-            bubbles: true,
-            cancelable: true,
-            composed: false,
-            detail: {
-                view: 'list'
-            }
-        } ) );
+        /* switch to list view on mobile / tablet */
+        if ( window.innerWidth < spacefinder.breakpoints.large ) {
+            document.getElementById( 'top-bar' ).dispatchEvent( new CustomEvent( 'viewchange', {
+                bubbles: true,
+                cancelable: true,
+                composed: false,
+                detail: {
+                    view: 'list'
+                }
+            } ) );
+        }
     });
     /* init accordions */
 	const accordions = document.querySelectorAll( '.accordion' );
