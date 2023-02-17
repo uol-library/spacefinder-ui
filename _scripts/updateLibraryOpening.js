@@ -108,6 +108,8 @@ function getOpeningHours( data, datestr ) {
             let hours = d.open.match( regex );
             if ( hours != null && hours.length >= 2 ) {
                 opening = { 'open': true, 'from': hours[0].replace(/^0/g,''), 'to': hours[1].replace(/^0/g,'') };
+            } else if ( d.open.toLowerCase().includes( '24 hour' ) ) {
+                opening = { 'open': true, 'from': '0:00', 'to': '24:00' };
             }
         }
     });
