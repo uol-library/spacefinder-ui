@@ -23,6 +23,15 @@ dc:
   subjects:
     - "Digital mapping"
     - "College Campuses"
+terms:
+  url: "https://www.leeds.ac.uk/termsandconditions"
+  text: "Terms &amp; Conditions"
+  shorttext: "Terms"
+foi:
+  url: "https://www.leeds.ac.uk/freedom-of-information"
+  text: "Freedom of Information"
+  shorttext: "FOI"
+copyright: "University of Leeds"
 sass:
   style: compressed
 plugins:
