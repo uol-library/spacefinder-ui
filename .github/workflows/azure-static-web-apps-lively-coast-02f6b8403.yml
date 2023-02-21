@@ -21,7 +21,7 @@ jobs:
       # This part is taken from a discussion on https://github.com/Azure/static-web-apps/issues/253
       # It runs the jekyll build manually - then skip_app_build is set to true in builddeploy step
       - name: Set up Ruby
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7
       - name: Install Bundler
