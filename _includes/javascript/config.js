@@ -3,7 +3,11 @@
  */
 const spacefinder = {
     debug: {% if site.environment == "development" %}true{% else %}false{% endif %},
-    closureDates: ["23-12-2022", "24-12-2022", "25-12-2022", "26-12-2022", "27-12-2022", "28-12-2022", "29-12-2022", "30-12-2022", "31-12-2022", "1-1-2023", "2-1-2023", "6-4-2023", "7-4-2023", "8-4-2023", "9-4-2023", "10-4-2023", "11-4-2023", "1-5-2023" ],
+    /**
+     * global closure dates - these will affect ALL spaces
+     * Dates should be in the format DD-MM-YYYY
+     */
+    closureDates: ["6-4-2023", "7-4-2023", "8-4-2023", "9-4-2023", "10-4-2023", "11-4-2023", "1-5-2023" ],
 
     /* CSS breakpoints */
     breakpoints: {
@@ -35,11 +39,11 @@ const spacefinder = {
     /* space related config */
     spaces: [],
     spacesLoaded: false,
-    spacesurl: '{{ site.url }}/spaces.json',
-    imageBaseURL: '{{ site.url }}',
+    spacesurl: '{{ site.url }}{{ site.baseurl }}/spaces.json',
+    imageBaseURL: '{{ site.url }}{{ site.baseurl }}',
 
     /* filter related config */
     filters: [],
     filtersLoaded: false,
-    filtersurl: '{{ site.url }}/filters.json'
+    filtersurl: '{{ site.url }}{{ site.baseurl }}/filters.json'
 };

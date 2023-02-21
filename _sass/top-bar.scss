@@ -23,7 +23,7 @@
             padding: 0;
             margin: 0;
             &.site-logo {
-                #uol-logo {
+                #site-logo {
                     display: none;
                 }
                 margin-left: auto;
@@ -33,10 +33,10 @@
                 }
                 @media screen and (min-width: 1000px) {
                     flex: 0 0 183px;
-                    #uol-logo-mark {
+                    #site-logo-mark {
                         display:none;
                     }
-                    #uol-logo {
+                    #site-logo {
                         display: block;
                     }
                 }
