@@ -1,3 +1,1022 @@
 {
-    "jobs": []
+    "jobs": [
+        {
+            "date": "1-5-2023",
+            "updates": [
+                {
+                    "match": "id",
+                    "term": 7,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": true,
+                            "from": "10:00",
+                            "to": "14:00"
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "18:30"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "18:30"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "18:30"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "18:30"
+                        },
+                        "saturday": {
+                            "true": false,
+                            "from": "10:00",
+                            "to": "14:00"
+                        },
+                        "sunday": {
+                            "true": false,
+                            "from": "10:00",
+                            "to": "14:00"
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 85,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "14:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "14:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "14:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "14:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 10,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 84,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 1,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 8,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 3,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 4,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 2,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 11,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "15:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "15:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "15:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "15:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 9,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "16:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "16:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "16:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "16:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 6,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "16:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "16:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "16:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "16:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "date": "15-5-2023",
+            "updates": [
+                {
+                    "match": "id",
+                    "term": 7,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "18:30"
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "18:30"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "18:30"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "18:30"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "18:30"
+                        },
+                        "saturday": {
+                            "true": false,
+                            "from": "10:00",
+                            "to": "14:00"
+                        },
+                        "sunday": {
+                            "true": false,
+                            "from": "10:00",
+                            "to": "14:00"
+                        }
+                    }                   
+                },
+                {
+                    "match": "id",
+                    "term": 85,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "14:00"
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "14:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "14:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "14:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "14:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 10,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 84,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 1,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 8,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 3,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "17:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 4,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 2,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "15:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 11,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "15:00"
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "15:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "15:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "15:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:00",
+                            "to": "15:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 9,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "16:00"
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "16:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "16:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "16:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "16:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                },
+                {
+                    "match": "id",
+                    "term": 6,
+                    "field": "opening_hours",
+                    "value": {
+                        "monday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "16:00"
+                        },
+                        "tuesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "16:00"
+                        },
+                        "wednesday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "16:00"
+                        },
+                        "thursday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "16:00"
+                        },
+                        "friday": {
+                            "open": true,
+                            "from": "8:30",
+                            "to": "16:00"
+                        },
+                        "saturday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        },
+                        "sunday": {
+                            "open": false,
+                            "from": "",
+                            "to": ""
+                        }
+                    }
+                }
+            ]
+        }
+    ]
 }
