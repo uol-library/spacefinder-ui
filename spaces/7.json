@@ -25,37 +25,37 @@
         "monday": {
             "open": true,
             "from": "8:00",
-            "to": "18:30"
+            "to": "14:30"
         },
         "tuesday": {
             "open": true,
             "from": "8:00",
-            "to": "18:30"
+            "to": "14:30"
         },
         "wednesday": {
             "open": true,
             "from": "8:00",
-            "to": "18:30"
+            "to": "14:30"
         },
         "thursday": {
             "open": true,
             "from": "8:00",
-            "to": "18:30"
+            "to": "14:30"
         },
         "friday": {
             "open": true,
             "from": "8:00",
-            "to": "18:30"
+            "to": "14:30"
         },
         "saturday": {
             "true": false,
             "from": "10:00",
-            "to": "14:00"
+            "to": "14:30"
         },
         "sunday": {
             "true": false,
             "from": "10:00",
-            "to": "14:00"
+            "to": "14:30"
         }
     },
     "floor": "Ground floor and mezzanine",
@@ -75,7 +75,7 @@
     "address": "University of Leeds, LS2 9JT",
     "location": "{\"type\":\"Point\",\"coordinates\":[-1.55657117,53.80685681]}",
     "facebook_url": "https://www.facebook.com/greatfoodleeds",
-    "title": "Refectory ",
+    "title": "Refectory",
     "tags": [],
     "noise": "Animated discussion",
     "phone_number": "",
