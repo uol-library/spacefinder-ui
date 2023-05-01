@@ -24,38 +24,38 @@
     "opening_hours": {
         "monday": {
             "open": true,
-            "from": "8:00",
-            "to": "14:30"
+            "from": "10:00",
+            "to": "14:00"
         },
         "tuesday": {
             "open": true,
             "from": "8:00",
-            "to": "14:30"
+            "to": "18:30"
         },
         "wednesday": {
             "open": true,
             "from": "8:00",
-            "to": "14:30"
+            "to": "18:30"
         },
         "thursday": {
             "open": true,
             "from": "8:00",
-            "to": "14:30"
+            "to": "18:30"
         },
         "friday": {
             "open": true,
             "from": "8:00",
-            "to": "14:30"
+            "to": "18:30"
         },
         "saturday": {
             "true": false,
             "from": "10:00",
-            "to": "14:30"
+            "to": "14:00"
         },
         "sunday": {
             "true": false,
             "from": "10:00",
-            "to": "14:30"
+            "to": "14:00"
         }
     },
     "floor": "Ground floor and mezzanine",

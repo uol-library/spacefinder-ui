@@ -21,29 +21,29 @@
     "disabled_access": true,
     "opening_hours": {
         "monday": {
-            "open": true,
-            "from": "8:00",
-            "to": "11:00"
+            "open": false,
+            "from": "",
+            "to": ""
         },
         "tuesday": {
             "open": true,
             "from": "8:00",
-            "to": "11:00"
+            "to": "15:00"
         },
         "wednesday": {
             "open": true,
             "from": "8:00",
-            "to": "11:00"
+            "to": "15:00"
         },
         "thursday": {
             "open": true,
             "from": "8:00",
-            "to": "11:00"
+            "to": "15:00"
         },
         "friday": {
             "open": true,
             "from": "8:00",
-            "to": "11:00"
+            "to": "15:00"
         },
         "saturday": {
             "open": false,
