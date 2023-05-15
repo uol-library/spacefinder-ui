@@ -27,9 +27,9 @@
     "disabled_access": true,
     "opening_hours": {
         "monday": {
-            "open": false,
-            "from": "",
-            "to": ""
+            "open": true,
+            "from": "8:30",
+            "to": "16:00"
         },
         "tuesday": {
             "open": true,

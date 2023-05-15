@@ -45,9 +45,9 @@
     "tags": [],
     "opening_hours": {
         "monday": {
-            "open": false,
-            "from": "",
-            "to": ""
+            "open": true,
+            "from": "8:30",
+            "to": "17:00"
         },
         "tuesday": {
             "open": true,

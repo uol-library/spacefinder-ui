@@ -24,8 +24,8 @@
     "opening_hours": {
         "monday": {
             "open": true,
-            "from": "10:00",
-            "to": "14:00"
+            "from": "8:00",
+            "to": "18:30"
         },
         "tuesday": {
             "open": true,
