@@ -22,61 +22,68 @@ const fs = require('fs');
 const path = require('path');
 fs.readFile( path.resolve( __dirname, '../_data/leeds/opening-hours.json' ), (err, data) => {
     if (err) throw err;
-    let openingJSON = JSON.parse( data );
-    let opening = {};
-    // get opening hours for each library using keys
-    ['edward','brotherton','health','laidlaw'].forEach( lib => {
-        opening[lib] = {};
-        let weekdates = getWeekDates();
-        weekdates.forEach( dates => {
-            opening[lib][dates.day] = getOpeningHours( openingJSON.library[ lib ], dates.datestring );
+    var openingJSON = null;
+    try {
+        openingJSON = JSON.parse( data );
+    } catch (e) {
+        throw e;
+    }
+    if ( openingJSON && openingJSON.library ) {
+        let opening = {};
+        // get opening hours for each library using keys
+        ['edward','brotherton','health','laidlaw'].forEach( lib => {
+            opening[lib] = {};
+            let weekdates = getWeekDates();
+            weekdates.forEach( dates => {
+                opening[lib][dates.day] = getOpeningHours( openingJSON.library[ lib ], dates.datestring );
+            });
         });
-    });
-    const spacefiles = fs.readdirSync( path.resolve( __dirname, '../spaces' ), { encoding: 'utf8' } );
-    spacefiles.forEach( filename => {
-        if ( filename !== '.' && filename !== '..' ) {
-            var spaceData = fs.readFileSync( path.resolve( __dirname, '../spaces/', filename ) );
-            const spaceJSON = JSON.parse( spaceData );
-            if ( spaceJSON.space_type == 'Library' ) {
-                let update = false;
-                switch ( spaceJSON.building ) {
-                    case "Edward Boyle library":
-                        if ( openingHoursDiffer( spaceJSON.opening_hours, opening.edward ) ) {
-                            spaceJSON.opening_hours = opening.edward;
-                            update = true;
-                        }
-                        break;
-                    case "Worsley building":
-                        if ( openingHoursDiffer( spaceJSON.opening_hours, opening.health ) ) {
-                            spaceJSON.opening_hours = opening.health;
-                            update = true;
-                        }
-                        break;
-                    case "Laidlaw library":
-                        if ( openingHoursDiffer( spaceJSON.opening_hours, opening.laidlaw ) ) {
-                            spaceJSON.opening_hours = opening.laidlaw;
-                            update = true;
-                        }
-                        break;
-                    case "Brotherton Library":
-                        if ( openingHoursDiffer( spaceJSON.opening_hours, opening.brotherton ) ) {
-                            spaceJSON.opening_hours = opening.brotherton;
-                            update = true;
-                        }
-                        break;
-                }
-                // check the flag to see if an update has been performed
-                if ( update ) {
-                    fs.writeFileSync(path.resolve( __dirname, '../spaces/', filename ), JSON.stringify(spaceJSON), err => {
-                        if (err) {
-                            console.error(err);
-                            return;
-                        }
-                    });
+        const spacefiles = fs.readdirSync( path.resolve( __dirname, '../spaces' ), { encoding: 'utf8' } );
+        spacefiles.forEach( filename => {
+            if ( filename !== '.' && filename !== '..' ) {
+                var spaceData = fs.readFileSync( path.resolve( __dirname, '../spaces/', filename ) );
+                const spaceJSON = JSON.parse( spaceData );
+                if ( spaceJSON.space_type == 'Library' ) {
+                    let update = false;
+                    switch ( spaceJSON.building ) {
+                        case "Edward Boyle library":
+                            if ( openingHoursDiffer( spaceJSON.opening_hours, opening.edward ) ) {
+                                spaceJSON.opening_hours = opening.edward;
+                                update = true;
+                            }
+                            break;
+                        case "Worsley building":
+                            if ( openingHoursDiffer( spaceJSON.opening_hours, opening.health ) ) {
+                                spaceJSON.opening_hours = opening.health;
+                                update = true;
+                            }
+                            break;
+                        case "Laidlaw library":
+                            if ( openingHoursDiffer( spaceJSON.opening_hours, opening.laidlaw ) ) {
+                                spaceJSON.opening_hours = opening.laidlaw;
+                                update = true;
+                            }
+                            break;
+                        case "Brotherton Library":
+                            if ( openingHoursDiffer( spaceJSON.opening_hours, opening.brotherton ) ) {
+                                spaceJSON.opening_hours = opening.brotherton;
+                                update = true;
+                            }
+                            break;
+                    }
+                    // check the flag to see if an update has been performed
+                    if ( update ) {
+                        fs.writeFileSync(path.resolve( __dirname, '../spaces/', filename ), JSON.stringify(spaceJSON), err => {
+                            if (err) {
+                                console.error(err);
+                                return;
+                            }
+                        });
+                    }
                 }
             }
-        }
-    });
+        });
+    }
 } );
 
  
